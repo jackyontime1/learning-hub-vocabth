@@ -61,6 +61,10 @@ Updated: June 17, 2026
 - GitHub Actions repository secrets are configured:
   `CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID`
 - The workflow now runs a no-audio preflight build before the real Reading audio build and Cloudflare Pages deploy.
+- First manual GitHub Actions run succeeded on June 17, 2026:
+  `https://github.com/jackyontime1/learning-hub-vocabth/actions/runs/27692710821`
+- The successful run generated and persisted six free Reading audio files for `2026-06-17`, then deployed the combined Learning Hub to Cloudflare Pages.
+- The successful run did not use Google Cloud TTS and did not consume the Podcast monthly TTS safety cap.
 
 ## Oxford Category Distribution
 
