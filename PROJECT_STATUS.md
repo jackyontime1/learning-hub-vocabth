@@ -51,12 +51,16 @@ Updated: June 17, 2026
 - Daily Reading automation has been configured for GitHub Actions -> Cloudflare Pages.
 - Automation schedule:
   `05:00 America/Toronto`
+- GitHub Actions uses UTC cron entries `09:00` and `10:00` with an `America/Toronto` time guard because GitHub schedule cron itself is UTC-based.
 - Automation deploy target:
   `https://learning-hub-vocabth.pages.dev/`
 - Automation uses free Reading audio generation (`pyttsx3` / `espeak-ng` + `ffmpeg`) and does not consume the Podcast Google Cloud TTS monthly safety cap.
 - Automation uses the existing free image chain: source media, Unsplash, Openverse, Wikimedia Commons, fallback.
-- GitHub Actions still requires repository secrets before the first real run:
+- GitHub repository:
+  `https://github.com/jackyontime1/learning-hub-vocabth`
+- GitHub Actions repository secrets are configured:
   `CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID`
+- The workflow now runs a no-audio preflight build before the real Reading audio build and Cloudflare Pages deploy.
 
 ## Oxford Category Distribution
 
