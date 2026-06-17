@@ -10,9 +10,11 @@ import update_site as site
 
 
 class FakeResponse:
-    def __init__(self, status, payload=None):
+    def __init__(self, status, payload=None, text=""):
         self.status_code = status
         self._payload = payload or {}
+        self.text = text
+        self.content = text.encode("utf-8")
 
     def json(self):
         return self._payload
@@ -116,7 +118,8 @@ class DailyReaderTests(unittest.TestCase):
         fallback = site.demo_articles()
         config = {"demo": False}
         quota = object()
-        with patch.object(site, "fetch_currents", side_effect=site.ProviderError("currents", "rate_limit", "429")), \
+        with patch.object(site, "fetch_rss", return_value=[]), \
+             patch.object(site, "fetch_currents", side_effect=site.ProviderError("currents", "rate_limit", "429")), \
              patch.object(site, "fetch_guardian", return_value=fallback), \
              patch.object(site, "fetch_nasa", return_value=[]), \
              patch.object(site, "fetch_nws", return_value=[]), \
@@ -124,6 +127,32 @@ class DailyReaderTests(unittest.TestCase):
              patch.object(site, "fetch_arxiv", return_value=[]):
             rows = site.collect_candidates(object(), quota, config)
         self.assertEqual(len(rows), 6)
+
+    def test_rss_provider_parses_real_feed_items(self):
+        xml = """<?xml version="1.0"?>
+        <rss><channel>
+          <item>
+            <title>Scientists report new ocean heat record</title>
+            <description>Researchers said ocean temperatures reached a new record after months of unusual heat. The report explains that warmer water can affect storms, coral reefs, and coastal communities.</description>
+            <link>https://example.test/ocean-heat</link>
+            <pubDate>Wed, 17 Jun 2026 10:00:00 GMT</pubDate>
+            <media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://example.test/ocean.jpg" />
+          </item>
+        </channel></rss>"""
+        with tempfile.TemporaryDirectory() as temp:
+            with patch.object(site, "QUOTA_DIR", Path(temp)), \
+                 patch.object(site, "RSS_FEEDS", [("Example News", "Science", "https://example.test/rss")]):
+                rows = site.fetch_rss(FakeSession([FakeResponse(200, text=xml)]), site.QuotaManager({"rss_example-news-science": 3}), {"timeout": 5})
+        self.assertEqual(len(rows), 1)
+        self.assertEqual(rows[0]["provider"], "Example News")
+        self.assertEqual(rows[0]["category"], "Science")
+        self.assertEqual(rows[0]["image_url"], "https://example.test/ocean.jpg")
+
+    def test_demo_edition_detection_requires_all_demo(self):
+        rows = site.demo_articles()
+        self.assertTrue(site.is_demo_edition(rows))
+        mixed = [dict(rows[0], provider="BBC News"), *rows[1:]]
+        self.assertFalse(site.is_demo_edition(mixed))
 
     def test_quota_file_is_scoped_to_current_day(self):
         with tempfile.TemporaryDirectory() as temp:

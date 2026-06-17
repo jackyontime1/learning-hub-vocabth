@@ -65,6 +65,8 @@ Updated: June 17, 2026
   `https://github.com/jackyontime1/learning-hub-vocabth/actions/runs/27692710821`
 - The successful run generated and persisted six free Reading audio files for `2026-06-17`, then deployed the combined Learning Hub to Cloudflare Pages.
 - The successful run did not use Google Cloud TTS and did not consume the Podcast monthly TTS safety cap.
+- Issue found after first run: `2026-06-17` repeated the demo/fallback stories from `2026-06-14` because no free news API keys were configured and production allowed `demo_articles()` as fallback.
+- Fix in progress: production Daily Reading now pulls real RSS news from free sources first, demo content is limited to `DEMO_MODE=1`, and demo-only editions are removed once a real edition is generated.
 
 ## Oxford Category Distribution
 

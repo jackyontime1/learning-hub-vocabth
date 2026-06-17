@@ -14,22 +14,25 @@ import shutil
 import subprocess
 import tempfile
 import time
+import warnings
 import wave
 import xml.etree.ElementTree as ET
 from collections import Counter
 from datetime import datetime, timedelta, timezone
+from email.utils import parsedate_to_datetime
 from pathlib import Path
 from typing import Any, Callable
 from urllib.parse import parse_qsl, urlencode, urlparse, urlunparse
 
 import pyttsx3
 import requests
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup, MarkupResemblesLocatorWarning
 from dotenv import load_dotenv
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 from markupsafe import Markup
 from summa.summarizer import summarize as textrank_summarize
 
+warnings.filterwarnings("ignore", category=MarkupResemblesLocatorWarning)
 
 ROOT = Path(__file__).resolve().parent
 DATA_DIR = ROOT / "data"
@@ -59,6 +62,15 @@ USER_AGENT = "DailyEnglishReader/2.0 (personal educational project; contact=loca
 SCHEMA_VERSION = 2
 LEVELS = ("A2", "B1", "B2")
 TARGET_PER_LEVEL = 2
+
+RSS_FEEDS = [
+    ("BBC News", "World", "https://feeds.bbci.co.uk/news/world/rss.xml"),
+    ("BBC News", "Technology", "https://feeds.bbci.co.uk/news/technology/rss.xml"),
+    ("BBC News", "Science", "https://feeds.bbci.co.uk/news/science_and_environment/rss.xml"),
+    ("NPR", "World", "https://feeds.npr.org/1004/rss.xml"),
+    ("NPR", "Business", "https://feeds.npr.org/1006/rss.xml"),
+    ("NPR", "Health", "https://feeds.npr.org/1128/rss.xml"),
+]
 
 DEMO_IMAGE_MAP = {
     "City library adds solar panels to cut energy costs": "demo-solar-library.png",
@@ -143,7 +155,8 @@ def load_json(path: Path, fallback: Any) -> Any:
 
 
 def normalize(value: str) -> str:
-    text = BeautifulSoup(value or "", "html.parser").get_text(" ")
+    raw = str(value or "")
+    text = BeautifulSoup(raw, "html.parser").get_text(" ") if "<" in raw and ">" in raw else html.unescape(raw)
     return re.sub(r"\s+", " ", text).strip()
 
 
@@ -163,11 +176,36 @@ def parse_date(value: str | None) -> datetime:
         parsed = datetime.fromisoformat(value.replace("Z", "+00:00"))
         return (parsed if parsed.tzinfo else parsed.replace(tzinfo=timezone.utc)).astimezone(timezone.utc)
     except ValueError:
-        return utc_now()
+        try:
+            parsed = parsedate_to_datetime(value)
+            return (parsed if parsed.tzinfo else parsed.replace(tzinfo=timezone.utc)).astimezone(timezone.utc)
+        except (TypeError, ValueError, IndexError):
+            return utc_now()
 
 
 def stable_id(provider: str, url: str, title: str) -> str:
     return hashlib.sha256(f"{provider}|{url}|{title}".encode()).hexdigest()[:18]
+
+
+def xml_name(tag: str) -> str:
+    return tag.rsplit("}", 1)[-1].lower()
+
+
+def child_text(node: ET.Element, *names: str) -> str:
+    wanted = {name.lower() for name in names}
+    for child in node:
+        if xml_name(child.tag) in wanted:
+            return normalize(" ".join(child.itertext()))
+    return ""
+
+
+def child_attr(node: ET.Element, child_name: str, attr_name: str) -> str:
+    for child in node:
+        if xml_name(child.tag) == child_name.lower():
+            for key, value in child.attrib.items():
+                if key.rsplit("}", 1)[-1].lower() == attr_name.lower():
+                    return value
+    return ""
 
 
 def add_query(url: str, values: dict[str, str]) -> str:
@@ -345,6 +383,48 @@ def fetch_guardian(session: requests.Session, quota: QuotaManager, config: dict[
     return articles
 
 
+def fetch_rss(session: requests.Session, quota: QuotaManager, config: dict[str, Any]) -> list[dict[str, Any]]:
+    articles: list[dict[str, Any]] = []
+    for provider, category, url in RSS_FEEDS:
+        quota_name = f"rss_{slugify(provider + '-' + category, 24)}"
+        if not quota.available(quota_name):
+            continue
+        quota.requested(quota_name)
+        try:
+            response = session.get(url, headers={"User-Agent": USER_AGENT}, timeout=config["timeout"])
+            response.raise_for_status()
+            root = ET.fromstring(response.content)
+        except (requests.RequestException, ET.ParseError) as error:
+            quota.failed(quota_name, "network", str(error))
+            logging.warning("%s RSS unavailable: %s", provider, error)
+            continue
+
+        for node in root.iter():
+            if xml_name(node.tag) not in {"item", "entry"}:
+                continue
+            title = child_text(node, "title")
+            description = (
+                child_text(node, "description", "summary", "content", "encoded")
+                or child_text(node, "subtitle")
+            )
+            link = child_text(node, "link")
+            if not link:
+                link = child_attr(node, "link", "href")
+            published = child_text(node, "pubDate", "published", "updated", "dc:date")
+            image_url = (
+                child_attr(node, "thumbnail", "url")
+                or child_attr(node, "content", "url")
+                or child_attr(node, "enclosure", "url")
+            )
+            item = normalized_article(
+                provider, title, description, link, category, published,
+                author=provider, content_type="rss news summary", image_url=image_url,
+            )
+            if item:
+                articles.append(item)
+    return articles
+
+
 def fetch_nasa(session: requests.Session, quota: QuotaManager, config: dict[str, Any]) -> list[dict[str, Any]]:
     payload = request_json(session, quota, "nasa", NASA_APOD_URL, params={
         "api_key": config["nasa_key"], "count": 3,
@@ -429,7 +509,7 @@ def collect_candidates(session: requests.Session, quota: QuotaManager, config: d
     if config["demo"]:
         return demo_articles()
     providers: list[tuple[str, Callable[..., list[dict[str, Any]]]]] = [
-        ("currents", fetch_currents), ("guardian", fetch_guardian), ("nasa", fetch_nasa),
+        ("rss", fetch_rss), ("currents", fetch_currents), ("guardian", fetch_guardian), ("nasa", fetch_nasa),
         ("nws", fetch_nws), ("usgs", fetch_usgs), ("arxiv", fetch_arxiv),
     ]
     results: list[dict[str, Any]] = []
@@ -946,6 +1026,27 @@ def cleanup(retention_days: int) -> None:
                 shutil.rmtree(path) if path.is_dir() else path.unlink(missing_ok=True)
 
 
+def is_demo_edition(articles: list[dict[str, Any]]) -> bool:
+    return bool(articles) and all(row.get("provider") == "demo" for row in articles)
+
+
+def purge_demo_editions() -> None:
+    for output_dir in PROCESSED_DIR.iterdir() if PROCESSED_DIR.exists() else []:
+        if not output_dir.is_dir():
+            continue
+        rows = [load_json(path, None) for path in output_dir.glob("*.json")]
+        articles = [row for row in rows if isinstance(row, dict)]
+        if is_demo_edition(articles):
+            date_text = output_dir.name
+            logging.info("Removing demo-only Reading edition for %s", date_text)
+            shutil.rmtree(output_dir)
+            audio_dir = AUDIO_CACHE_DIR / date_text
+            if audio_dir.exists():
+                shutil.rmtree(audio_dir)
+            raw_file = RAW_DIR / f"{date_text}-providers.json"
+            raw_file.unlink(missing_ok=True)
+
+
 def config_from_env() -> dict[str, Any]:
     if not env_bool("FREE_ONLY", True):
         raise RuntimeError("This build only supports FREE_ONLY=1")
@@ -993,7 +1094,12 @@ def main() -> int:
         row for row in load_articles(config["retention_days"])
         if row["published_date"] == today
     ]
-    if len(existing_today) != 6:
+    should_rebuild_today = (
+        len(existing_today) != 6
+        or (not config["demo"] and is_demo_edition(existing_today))
+        or env_bool("REFRESH_TODAY", False)
+    )
+    if should_rebuild_today:
         candidates = collect_candidates(session, quota, config)
         atomic_json(RAW_DIR / f"{today}-providers.json", {
             "fetched_at": utc_now().isoformat(), "candidates": candidates,
@@ -1016,6 +1122,8 @@ def main() -> int:
         if output_dir.exists():
             shutil.rmtree(output_dir)
         temporary.replace(output_dir)
+        if not config["demo"]:
+            purge_demo_editions()
     articles = load_articles(config["retention_days"])
     render_site(articles, quota)
     logging.info("Published %d retained article(s).", len(articles))
