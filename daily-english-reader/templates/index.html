@@ -1,0 +1,107 @@
+{% extends "base.html" %}
+{% block content %}
+  <div class="app-layout">
+    <aside class="sidebar">
+      <section class="side-panel date-panel">
+        <h2><i class="fa-regular fa-calendar-days"></i> Daily Reading</h2>
+        <p>Choose a day (latest 7 days)</p>
+        <div class="date-picker" id="homeDateFilters">
+          {% for day in home_days %}
+            <button class="{% if loop.first %}active{% endif %}" data-home-date="{{ day.date }}" type="button">
+              <i class="fa-regular fa-calendar-check"></i>
+              <span><strong>{{ day.label }}</strong><small>{{ day.date_display }}</small></span>
+              <i class="fa-solid fa-chevron-right"></i>
+            </button>
+          {% endfor %}
+        </div>
+      </section>
+
+      <section class="side-panel">
+        <h2>Categories</h2>
+        <div class="filter-list" id="categoryFilters">
+          <button class="active" data-category="all" type="button"><i class="fa-solid fa-border-all"></i> All</button>
+          {% for category in ["World", "Technology", "Health", "Business", "Science", "Environment"] %}
+            <button data-category="{{ category | lower }}" type="button"><i class="fa-regular fa-circle"></i> {{ category }}</button>
+          {% endfor %}
+        </div>
+      </section>
+
+      <section class="side-panel">
+        <h2>Levels</h2>
+        <p>Choose a news level</p>
+        <div class="level-filter-list" id="homeLevelFilters">
+          <button class="active" data-home-level="all" type="button"><b>All</b><span>Every level</span></button>
+          {% for level, label in [("A1", "Starter"), ("A2", "Beginner"), ("B1", "Intermediate"), ("B2", "Upper Intermediate"), ("C1", "Advanced")] %}
+            <button class="{{ level | lower }}{% if level not in available_levels %} unavailable{% endif %}" data-home-level="{{ level }}" type="button"{% if level not in available_levels %} disabled title="No {{ level }} stories are generated yet"{% endif %}>
+              <b>{{ level }}</b><span>{{ label }}</span>{% if level not in available_levels %}<small>Soon</small>{% endif %}
+            </button>
+          {% endfor %}
+        </div>
+      </section>
+
+      <section class="side-panel status-panel">
+        <h2>Free-only mode</h2>
+        <p>The previous edition stays online if free sources cannot complete a new one.</p>
+        <a href="provider-status.json">Provider status</a>
+      </section>
+    </aside>
+
+    <div class="dashboard" id="homeDashboard">
+      <section class="mobile-home-filters" aria-label="Home filters">
+        <label><span>Date</span><select id="mobileHomeDate">{% for day in home_days %}<option value="{{ day.date }}">{{ day.label }} · {{ day.date_display }}</option>{% endfor %}</select></label>
+        <label><span>Level</span><select id="mobileHomeLevel"><option value="all">All levels</option><option value="A2">A2</option><option value="B1">B1</option><option value="B2">B2</option></select></label>
+        <label><span>Category</span><select id="mobileHomeCategory"><option value="all">All categories</option>{% for category in ["World", "Technology", "Health", "Business", "Science", "Environment"] %}<option value="{{ category | lower }}">{{ category }}</option>{% endfor %}</select></label>
+      </section>
+      {% for day in home_days %}
+        <div class="home-day-panel{% if loop.first %} active{% endif %}" data-home-day="{{ day.date }}">
+          {% set featured = day.featured %}
+          {% if featured %}
+            <section class="featured-story" data-article-id="{{ featured.id }}" data-category="{{ featured.category | lower }}" data-level="{{ featured.level }}">
+              {% if featured.image_url %}<img src="{{ featured.image_url }}" alt="" fetchpriority="high">{% endif %}
+              <div class="hero-shade"></div>
+              <div class="featured-label">TOP STORY · {{ featured.level }}</div>
+              <div class="featured-copy">
+                <div class="story-kicker"><span>{{ featured.category }}</span> {{ featured.published_display }}</div>
+                <h1>{{ featured.title }}</h1>
+                <p>{{ featured.description }}</p>
+              </div>
+              <div class="featured-actions">
+                <div class="story-stats">
+                  <span><i class="fa-regular fa-clock"></i> 5 min read</span>
+                  <span><i class="fa-solid fa-signal"></i> {{ featured.level }}</span>
+                </div>
+                <div>
+                  <button class="star-button" data-save-article data-id="{{ featured.id }}" data-title="{{ featured.title }}" data-url="{{ featured.page_url }}" data-level="{{ featured.level }}" data-category="{{ featured.category }}" data-date="{{ featured.published_date }}" data-image="{{ featured.image_url }}" type="button"><i class="fa-regular fa-bookmark"></i> <span>Save</span></button>
+                  <a class="primary-button" href="{{ featured.page_url }}"><i class="fa-solid fa-book-open-reader"></i> Start Reading <i class="fa-solid fa-chevron-right"></i></a>
+                </div>
+              </div>
+            </section>
+          {% endif %}
+
+          {% for level in ["A2", "B1", "B2"] %}
+            <section class="level-section home-level-section" data-section-level="{{ level }}">
+              <header><h2>{{ level }} Daily Stories</h2><p>{% if level == "A2" %}Short sentences and common words.{% elif level == "B1" %}Everyday news English with more detail.{% else %}Closer to standard news style.{% endif %}</p></header>
+              <div class="story-grid level-story-grid">
+                {% for article in day.level_groups[level] %}
+                  <article class="story-card" data-article-id="{{ article.id }}" data-category="{{ article.category | lower }}" data-level="{{ article.level }}">
+                    <a class="story-image" href="{{ article.page_url }}"><img src="{{ article.image_url }}" alt="" loading="lazy"></a>
+                    <div class="story-content">
+                      <div class="story-meta"><span>{{ article.category }}</span><b class="level-chip {{ level | lower }}">{{ level }}</b></div>
+                      <h3><a href="{{ article.page_url }}">{{ article.title }}</a></h3>
+                      <p>{{ article.text[:180] }}{% if article.text|length > 180 %}...{% endif %}</p>
+                      <div class="card-actions">
+                        <button class="star-button" data-save-article data-id="{{ article.id }}" data-title="{{ article.title }}" data-url="{{ article.page_url }}" data-level="{{ article.level }}" data-category="{{ article.category }}" data-date="{{ article.published_date }}" data-image="{{ article.image_url }}" type="button"><i class="fa-regular fa-bookmark"></i> <span>Save</span></button>
+                        <a href="{{ article.page_url }}">Read story</a>
+                      </div>
+                    </div>
+                  </article>
+                {% endfor %}
+              </div>
+            </section>
+          {% endfor %}
+          <div class="home-filter-empty" hidden><i class="fa-regular fa-newspaper"></i><h2>No matching stories</h2><p>Choose another category or level.</p></div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+  <section class="library-page">
+    <header class="page-heading">
+      <div><p class="eyebrow">Your collection</p><h1>Vocabulary</h1><p>Words you saved while reading.</p></div>
+      <input id="wordSearch" type="search" placeholder="Search saved words" aria-label="Search saved words">
+    </header>
+    <div class="saved-word-grid" id="savedWordList"></div>
+    <div class="empty-library" id="emptyWords" hidden>
+      <i class="fa-regular fa-star"></i><h2>No saved words yet</h2><p>Open a story and select “เรียน” in a word popup.</p>
+    </div>
+  </section>
+{% endblock %}

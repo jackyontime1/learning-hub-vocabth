@@ -1,0 +1,83 @@
+{
+  "fetched_at": "2026-06-14T04:03:51.569230+00:00",
+  "candidates": [
+    {
+      "id": "b3d73a6219339415a6",
+      "provider": "demo",
+      "title": "City library adds solar panels to cut energy costs",
+      "description": "A public library has installed new solar panels on its roof. Officials say the project will lower electricity costs and teach visitors about clean energy. The library expects the panels to provide about one third of the building's annual power.",
+      "url": "https://example.com/demo-library",
+      "category": "Environment",
+      "published": "2026-06-14T04:03:51.553607+00:00",
+      "author": "Demo Learning Desk",
+      "content_type": "educational demo",
+      "image_url": "",
+      "thai_demo": "ห้องสมุดของเมืองติดตั้งแผงโซลาร์เซลล์บนหลังคา โครงการนี้ช่วยลดค่าไฟและสอนผู้มาเยือนเรื่องพลังงานสะอาด"
+    },
+    {
+      "id": "ca59703a91bbf68a69",
+      "provider": "demo",
+      "title": "Short walking breaks may help office workers focus",
+      "description": "A workplace study found that short walking breaks helped workers feel more alert. Participants walked for five minutes every hour. Researchers said larger studies are still needed.",
+      "url": "https://example.com/demo-walking",
+      "category": "Health",
+      "published": "2026-06-14T04:03:51.553607+00:00",
+      "author": "Demo Learning Desk",
+      "content_type": "educational demo",
+      "image_url": "",
+      "thai_demo": "งานวิจัยในที่ทำงานพบว่าการเดินพักสั้น ๆ อาจช่วยให้พนักงานตื่นตัวและมีสมาธิมากขึ้น"
+    },
+    {
+      "id": "e9ea84960c99c32c9f",
+      "provider": "demo",
+      "title": "Scientists map a large coral nursery in the Pacific",
+      "description": "Marine scientists have mapped a large coral nursery in the Pacific Ocean. The team used underwater cameras to count young coral and study water conditions. The findings may help future conservation work.",
+      "url": "https://example.com/demo-ocean",
+      "category": "Science",
+      "published": "2026-06-14T04:03:51.553607+00:00",
+      "author": "Demo Learning Desk",
+      "content_type": "educational demo",
+      "image_url": "",
+      "thai_demo": "นักวิทยาศาสตร์ทางทะเลทำแผนที่แหล่งอนุบาลปะการังขนาดใหญ่ในมหาสมุทรแปซิฟิก"
+    },
+    {
+      "id": "2fe911882f14a58a5a",
+      "provider": "demo",
+      "title": "Small robots help farmers check crops",
+      "description": "Engineers have tested small robots that move between farm rows and photograph crops. Software checks the images for signs of disease and dry soil. Farmers can use the reports to respond earlier.",
+      "url": "https://example.com/demo-robots",
+      "category": "Technology",
+      "published": "2026-06-14T04:03:51.553607+00:00",
+      "author": "Demo Learning Desk",
+      "content_type": "educational demo",
+      "image_url": "",
+      "thai_demo": "วิศวกรทดสอบหุ่นยนต์ขนาดเล็กที่ช่วยตรวจพืชและค้นหาสัญญาณของโรคหรือดินแห้ง"
+    },
+    {
+      "id": "455187d958cd9dda7e",
+      "provider": "demo",
+      "title": "New sensors improve early earthquake reports",
+      "description": "A network of new ground sensors is improving early earthquake reports. The devices send movement data to researchers within seconds. Faster information can help emergency teams understand where damage may be strongest.",
+      "url": "https://example.com/demo-quake",
+      "category": "World",
+      "published": "2026-06-14T04:03:51.553607+00:00",
+      "author": "Demo Learning Desk",
+      "content_type": "educational demo",
+      "image_url": "",
+      "thai_demo": "เครือข่ายเซนเซอร์ภาคพื้นดินชุดใหม่ช่วยให้รายงานแผ่นดินไหวเบื้องต้นรวดเร็วขึ้น"
+    },
+    {
+      "id": "035abeb710776d2809",
+      "provider": "demo",
+      "title": "Researchers extend the life of reusable batteries",
+      "description": "Researchers have developed a charging method that may extend the useful life of reusable batteries. The method carefully changes the electrical current during charging. Longer battery life could reduce waste and operating costs.",
+      "url": "https://example.com/demo-battery",
+      "category": "Business",
+      "published": "2026-06-14T04:03:51.553607+00:00",
+      "author": "Demo Learning Desk",
+      "content_type": "educational demo",
+      "image_url": "",
+      "thai_demo": "นักวิจัยพัฒนาวิธีชาร์จที่อาจยืดอายุแบตเตอรี่แบบใช้ซ้ำและช่วยลดขยะกับค่าใช้จ่าย"
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "version": 1,
+  "app": "VocabTH / Oxford Audio Vocabulary",
+  "scope": "pilot",
+  "lessons": [
+    {
+      "id": "job-interview-qanda__day-001",
+      "category": "Job Interview Q&A",
+      "categorySlug": "job-interview-qanda",
+      "day": 1,
+      "batchSize": 10,
+      "audioFile": "audio/lessons/job-interview-qanda/day-001.mp3",
+      "items": [
+        {
+          "word": "strength",
+          "meaning": "จุดแข็ง",
+          "example": "My strength is solving problems under pressure.",
+          "exampleTh": "จุดแข็งของผมคือแก้ปัญหาได้ดี แม้ตอนที่งานกดดัน",
+          "mode": "full"
+        },
+        {
+          "word": "weakness",
+          "meaning": "จุดอ่อน",
+          "example": "My weakness is that I sometimes focus too much on details.",
+          "exampleTh": "จุดที่ผมยังต้องพัฒนาคือ บางทีผมใส่ใจกับรายละเอียดมากเกินไป",
+          "mode": "full"
+        },
+        {
+          "word": "experience",
+          "meaning": "ประสบการณ์",
+          "example": "I have experience working with site teams.",
+          "exampleTh": "ผมมีประสบการณ์ทำงานร่วมกับทีมหน้างาน",
+          "mode": "full"
+        },
+        {
+          "word": "responsibility",
+          "meaning": "ความรับผิดชอบ",
+          "example": "My main responsibility was checking daily progress.",
+          "exampleTh": "หน้าที่หลักของผมคือคอยเช็กความคืบหน้าของงานทุกวัน",
+          "mode": "full"
+        },
+        {
+          "word": "achievement",
+          "meaning": "ความสำเร็จ",
+          "example": "My biggest achievement was finishing a project ahead of schedule.",
+          "exampleTh": "ผลงานที่ผมภูมิใจที่สุดคือทำโครงการเสร็จก่อนกำหนด",
+          "mode": "full"
+        },
+        {
+          "word": "challenge",
+          "meaning": "ความท้าทาย",
+          "example": "I handled a challenge by communicating early with the team.",
+          "exampleTh": "เวลาเจอปัญหา ผมจะรีบคุยกับทีมตั้งแต่เนิ่นๆ เพื่อช่วยกันจัดการ",
+          "mode": "full"
+        },
+        {
+          "word": "deadline",
+          "meaning": "กำหนดส่งงาน",
+          "example": "I can work carefully under a tight deadline.",
+          "exampleTh": "ผมทำงานอย่างรอบคอบได้ ถึงเวลาส่งงานจะค่อนข้างกระชั้น",
+          "mode": "full"
+        },
+        {
+          "word": "teamwork",
+          "meaning": "การทำงานเป็นทีม",
+          "example": "Good teamwork keeps a construction project safe.",
+          "exampleTh": "การทำงานเป็นทีมที่ดีช่วยให้งานก่อสร้างปลอดภัยขึ้น",
+          "mode": "full"
+        },
+        {
+          "word": "communication",
+          "meaning": "การสื่อสาร",
+          "example": "Clear communication prevents mistakes on site.",
+          "exampleTh": "คุยกันให้ชัดเจนช่วยลดข้อผิดพลาดในหน้างานได้",
+          "mode": "full"
+        },
+        {
+          "word": "leadership",
+          "meaning": "ภาวะผู้นำ",
+          "example": "Leadership means helping the team make good decisions.",
+          "exampleTh": "ภาวะผู้นำคือการช่วยให้ทีมตัดสินใจได้ดี",
+          "mode": "full"
+        }
+      ]
+    }
+  ]
+}

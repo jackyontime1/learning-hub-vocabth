@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+  <section class="library-page">
+    <header class="page-heading">
+      <div><p class="eyebrow">Read later</p><h1>Saved News</h1><p>Stories saved in this browser.</p></div>
+    </header>
+    <div class="story-grid" id="savedArticleList"></div>
+    <div class="empty-library" id="emptySaved" hidden>
+      <i class="fa-regular fa-bookmark"></i><h2>No saved stories yet</h2><p>Use the Save button on Home or inside a story.</p>
+    </div>
+  </section>
+{% endblock %}

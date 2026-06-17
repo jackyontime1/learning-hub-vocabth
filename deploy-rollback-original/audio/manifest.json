@@ -1,0 +1,2648 @@
+{
+  "version": 2,
+  "generatedBy": "cloud-tts-batch",
+  "monthCapChars": 900000,
+  "monthBucket": "2026-06",
+  "lessons": {
+    "job-interview-qanda__day-001": {
+      "category": "Job Interview Q&A",
+      "categorySlug": "job-interview-qanda",
+      "day": 1,
+      "provider": "google-cloud-tts",
+      "playbackMode": "item-sequence",
+      "recallPauseMs": 3000,
+      "itemCount": 10,
+      "monthBucket": "2026-06",
+      "voice": {
+        "en": {
+          "languageCode": "en-US",
+          "name": "en-US-Chirp3-HD-Puck",
+          "speakingRate": 0.98,
+          "pitch": 0
+        },
+        "th": {
+          "languageCode": "th-TH",
+          "name": "th-TH-Chirp3-HD-Puck",
+          "speakingRate": 1.08,
+          "pitch": 0
+        }
+      },
+      "status": "generated",
+      "generatedAt": "2026-06-11T14:26:07.920Z",
+      "variants": {
+        "withSpelling": {
+          "type": "item-sequence",
+          "estimatedChars": 5060,
+          "fileCount": 10
+        },
+        "withoutSpelling": {
+          "type": "item-sequence",
+          "estimatedChars": 4413,
+          "fileCount": 10
+        }
+      },
+      "items": [
+        {
+          "word": "strength",
+          "order": 0,
+          "fileWithSpelling": "audio/words/job-interview-qanda/day-001/001-strength.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/day-001/001-strength-no-spelling.mp3"
+        },
+        {
+          "word": "weakness",
+          "order": 1,
+          "fileWithSpelling": "audio/words/job-interview-qanda/day-001/002-weakness.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/day-001/002-weakness-no-spelling.mp3"
+        },
+        {
+          "word": "experience",
+          "order": 2,
+          "fileWithSpelling": "audio/words/job-interview-qanda/day-001/003-experience.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/day-001/003-experience-no-spelling.mp3"
+        },
+        {
+          "word": "responsibility",
+          "order": 3,
+          "fileWithSpelling": "audio/words/job-interview-qanda/day-001/004-responsibility.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/day-001/004-responsibility-no-spelling.mp3"
+        },
+        {
+          "word": "achievement",
+          "order": 4,
+          "fileWithSpelling": "audio/words/job-interview-qanda/day-001/005-achievement.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/day-001/005-achievement-no-spelling.mp3"
+        },
+        {
+          "word": "challenge",
+          "order": 5,
+          "fileWithSpelling": "audio/words/job-interview-qanda/day-001/006-challenge.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/day-001/006-challenge-no-spelling.mp3"
+        },
+        {
+          "word": "deadline",
+          "order": 6,
+          "fileWithSpelling": "audio/words/job-interview-qanda/day-001/007-deadline.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/day-001/007-deadline-no-spelling.mp3"
+        },
+        {
+          "word": "teamwork",
+          "order": 7,
+          "fileWithSpelling": "audio/words/job-interview-qanda/day-001/008-teamwork.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/day-001/008-teamwork-no-spelling.mp3"
+        },
+        {
+          "word": "communication",
+          "order": 8,
+          "fileWithSpelling": "audio/words/job-interview-qanda/day-001/009-communication.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/day-001/009-communication-no-spelling.mp3"
+        },
+        {
+          "word": "leadership",
+          "order": 9,
+          "fileWithSpelling": "audio/words/job-interview-qanda/day-001/010-leadership.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/day-001/010-leadership-no-spelling.mp3"
+        }
+      ]
+    },
+    "job-interview-qanda__day-002": {
+      "category": "Job Interview Q&A",
+      "categorySlug": "job-interview-qanda",
+      "day": 2,
+      "provider": "google-cloud-tts",
+      "playbackMode": "item-sequence",
+      "recallPauseMs": 3000,
+      "itemCount": 20,
+      "monthBucket": "2026-06",
+      "voice": {
+        "en": {
+          "languageCode": "en-US",
+          "name": "en-US-Chirp3-HD-Puck",
+          "speakingRate": 0.98,
+          "pitch": 0
+        },
+        "th": {
+          "languageCode": "th-TH",
+          "name": "th-TH-Chirp3-HD-Puck",
+          "speakingRate": 1.08,
+          "pitch": 0
+        }
+      },
+      "variants": {
+        "withSpelling": {
+          "type": "item-sequence",
+          "estimatedChars": 6695,
+          "fileCount": 20
+        },
+        "withoutSpelling": {
+          "type": "item-sequence",
+          "estimatedChars": 4394,
+          "fileCount": 10
+        }
+      },
+      "items": [
+        {
+          "word": "strength",
+          "order": 0,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/profiles/english-balanced-v2/review/strength.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/profiles/english-balanced-v2/review/strength.mp3"
+        },
+        {
+          "word": "weakness",
+          "order": 1,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/profiles/english-balanced-v2/review/weakness.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/profiles/english-balanced-v2/review/weakness.mp3"
+        },
+        {
+          "word": "experience",
+          "order": 2,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/profiles/english-balanced-v2/review/experience.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/profiles/english-balanced-v2/review/experience.mp3"
+        },
+        {
+          "word": "responsibility",
+          "order": 3,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/profiles/english-balanced-v2/review/responsibility.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/profiles/english-balanced-v2/review/responsibility.mp3"
+        },
+        {
+          "word": "achievement",
+          "order": 4,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/profiles/english-balanced-v2/review/achievement.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/profiles/english-balanced-v2/review/achievement.mp3"
+        },
+        {
+          "word": "challenge",
+          "order": 5,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/profiles/english-balanced-v2/review/challenge.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/profiles/english-balanced-v2/review/challenge.mp3"
+        },
+        {
+          "word": "deadline",
+          "order": 6,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/profiles/english-balanced-v2/review/deadline.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/profiles/english-balanced-v2/review/deadline.mp3"
+        },
+        {
+          "word": "teamwork",
+          "order": 7,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/profiles/english-balanced-v2/review/teamwork.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/profiles/english-balanced-v2/review/teamwork.mp3"
+        },
+        {
+          "word": "communication",
+          "order": 8,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/profiles/english-balanced-v2/review/communication.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/profiles/english-balanced-v2/review/communication.mp3"
+        },
+        {
+          "word": "leadership",
+          "order": 9,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/profiles/english-balanced-v2/review/leadership.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/profiles/english-balanced-v2/review/leadership.mp3"
+        },
+        {
+          "word": "salary expectation",
+          "order": 10,
+          "mode": "full",
+          "fileWithSpelling": "audio/words/job-interview-qanda/profiles/english-balanced-v2/day-002/011-salary-expectation.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/profiles/english-balanced-v2/day-002/011-salary-expectation-no-spelling.mp3"
+        },
+        {
+          "word": "availability",
+          "order": 11,
+          "mode": "full",
+          "fileWithSpelling": "audio/words/job-interview-qanda/profiles/english-balanced-v2/day-002/012-availability.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/profiles/english-balanced-v2/day-002/012-availability-no-spelling.mp3"
+        },
+        {
+          "word": "position",
+          "order": 12,
+          "mode": "full",
+          "fileWithSpelling": "audio/words/job-interview-qanda/profiles/english-balanced-v2/day-002/013-position.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/profiles/english-balanced-v2/day-002/013-position-no-spelling.mp3"
+        },
+        {
+          "word": "qualification",
+          "order": 13,
+          "mode": "full",
+          "fileWithSpelling": "audio/words/job-interview-qanda/profiles/english-balanced-v2/day-002/014-qualification.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/profiles/english-balanced-v2/day-002/014-qualification-no-spelling.mp3"
+        },
+        {
+          "word": "resume",
+          "order": 14,
+          "mode": "full",
+          "fileWithSpelling": "audio/words/job-interview-qanda/profiles/english-balanced-v2/day-002/015-resume.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/profiles/english-balanced-v2/day-002/015-resume-no-spelling.mp3"
+        },
+        {
+          "word": "reference",
+          "order": 15,
+          "mode": "full",
+          "fileWithSpelling": "audio/words/job-interview-qanda/profiles/english-balanced-v2/day-002/016-reference.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/profiles/english-balanced-v2/day-002/016-reference-no-spelling.mp3"
+        },
+        {
+          "word": "motivation",
+          "order": 16,
+          "mode": "full",
+          "fileWithSpelling": "audio/words/job-interview-qanda/profiles/english-balanced-v2/day-002/017-motivation.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/profiles/english-balanced-v2/day-002/017-motivation-no-spelling.mp3"
+        },
+        {
+          "word": "problem-solving",
+          "order": 17,
+          "mode": "full",
+          "fileWithSpelling": "audio/words/job-interview-qanda/profiles/english-balanced-v2/day-002/018-problem-solving.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/profiles/english-balanced-v2/day-002/018-problem-solving-no-spelling.mp3"
+        },
+        {
+          "word": "reliable",
+          "order": 18,
+          "mode": "full",
+          "fileWithSpelling": "audio/words/job-interview-qanda/profiles/english-balanced-v2/day-002/019-reliable.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/profiles/english-balanced-v2/day-002/019-reliable-no-spelling.mp3"
+        },
+        {
+          "word": "adaptable",
+          "order": 19,
+          "mode": "full",
+          "fileWithSpelling": "audio/words/job-interview-qanda/profiles/english-balanced-v2/day-002/020-adaptable.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/profiles/english-balanced-v2/day-002/020-adaptable-no-spelling.mp3"
+        }
+      ],
+      "status": "generated",
+      "generatedAt": "2026-06-12T04:20:51.721Z",
+      "audioProfile": "english-balanced-v2",
+      "profileSettings": {
+        "englishVolumeGainDb": 5,
+        "englishWordSpeakingRate": 0.98,
+        "englishExampleSpeakingRate": 0.88
+      }
+    },
+    "job-interview-qanda__day-003": {
+      "category": "Job Interview Q&A",
+      "categorySlug": "job-interview-qanda",
+      "day": 3,
+      "provider": "google-cloud-tts",
+      "playbackMode": "item-sequence",
+      "recallPauseMs": 3000,
+      "itemCount": 30,
+      "monthBucket": "2026-06",
+      "voice": {
+        "en": {
+          "languageCode": "en-US",
+          "name": "en-US-Chirp3-HD-Puck",
+          "speakingRate": 0.98,
+          "pitch": 0
+        },
+        "th": {
+          "languageCode": "th-TH",
+          "name": "th-TH-Chirp3-HD-Puck",
+          "speakingRate": 1.08,
+          "pitch": 0
+        }
+      },
+      "variants": {
+        "withSpelling": {
+          "type": "item-sequence",
+          "estimatedChars": 6926,
+          "fileCount": 20
+        },
+        "withoutSpelling": {
+          "type": "item-sequence",
+          "estimatedChars": 4535,
+          "fileCount": 10
+        }
+      },
+      "items": [
+        {
+          "word": "strength",
+          "order": 0,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/strength.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/strength.mp3"
+        },
+        {
+          "word": "weakness",
+          "order": 1,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/weakness.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/weakness.mp3"
+        },
+        {
+          "word": "experience",
+          "order": 2,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/experience.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/experience.mp3"
+        },
+        {
+          "word": "responsibility",
+          "order": 3,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/responsibility.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/responsibility.mp3"
+        },
+        {
+          "word": "achievement",
+          "order": 4,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/achievement.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/achievement.mp3"
+        },
+        {
+          "word": "challenge",
+          "order": 5,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/challenge.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/challenge.mp3"
+        },
+        {
+          "word": "deadline",
+          "order": 6,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/deadline.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/deadline.mp3"
+        },
+        {
+          "word": "teamwork",
+          "order": 7,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/teamwork.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/teamwork.mp3"
+        },
+        {
+          "word": "communication",
+          "order": 8,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/communication.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/communication.mp3"
+        },
+        {
+          "word": "leadership",
+          "order": 9,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/leadership.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/leadership.mp3"
+        },
+        {
+          "word": "salary expectation",
+          "order": 10,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/salary-expectation.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/salary-expectation.mp3"
+        },
+        {
+          "word": "availability",
+          "order": 11,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/availability.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/availability.mp3"
+        },
+        {
+          "word": "position",
+          "order": 12,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/position.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/position.mp3"
+        },
+        {
+          "word": "qualification",
+          "order": 13,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/qualification.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/qualification.mp3"
+        },
+        {
+          "word": "resume",
+          "order": 14,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/resume.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/resume.mp3"
+        },
+        {
+          "word": "reference",
+          "order": 15,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/reference.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/reference.mp3"
+        },
+        {
+          "word": "motivation",
+          "order": 16,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/motivation.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/motivation.mp3"
+        },
+        {
+          "word": "problem-solving",
+          "order": 17,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/problem-solving.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/problem-solving.mp3"
+        },
+        {
+          "word": "reliable",
+          "order": 18,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/reliable.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/reliable.mp3"
+        },
+        {
+          "word": "adaptable",
+          "order": 19,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/adaptable.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/adaptable.mp3"
+        },
+        {
+          "word": "supervisor",
+          "order": 20,
+          "mode": "full",
+          "fileWithSpelling": "audio/words/job-interview-qanda/day-003/021-supervisor.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/day-003/021-supervisor-no-spelling.mp3"
+        },
+        {
+          "word": "work permit",
+          "order": 21,
+          "mode": "full",
+          "fileWithSpelling": "audio/words/job-interview-qanda/day-003/022-work-permit.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/day-003/022-work-permit-no-spelling.mp3"
+        },
+        {
+          "word": "career goal",
+          "order": 22,
+          "mode": "full",
+          "fileWithSpelling": "audio/words/job-interview-qanda/day-003/023-career-goal.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/day-003/023-career-goal-no-spelling.mp3"
+        },
+        {
+          "word": "why should we hire you",
+          "order": 23,
+          "mode": "full",
+          "fileWithSpelling": "audio/words/job-interview-qanda/day-003/024-why-should-we-hire-you.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/day-003/024-why-should-we-hire-you-no-spelling.mp3"
+        },
+        {
+          "word": "tell me about yourself",
+          "order": 24,
+          "mode": "full",
+          "fileWithSpelling": "audio/words/job-interview-qanda/day-003/025-tell-me-about-yourself.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/day-003/025-tell-me-about-yourself-no-spelling.mp3"
+        },
+        {
+          "word": "background",
+          "order": 25,
+          "mode": "full",
+          "fileWithSpelling": "audio/words/job-interview-qanda/day-003/026-background.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/day-003/026-background-no-spelling.mp3"
+        },
+        {
+          "word": "previous job",
+          "order": 26,
+          "mode": "full",
+          "fileWithSpelling": "audio/words/job-interview-qanda/day-003/027-previous-job.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/day-003/027-previous-job-no-spelling.mp3"
+        },
+        {
+          "word": "current role",
+          "order": 27,
+          "mode": "full",
+          "fileWithSpelling": "audio/words/job-interview-qanda/day-003/028-current-role.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/day-003/028-current-role-no-spelling.mp3"
+        },
+        {
+          "word": "expected salary",
+          "order": 28,
+          "mode": "full",
+          "fileWithSpelling": "audio/words/job-interview-qanda/day-003/029-expected-salary.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/day-003/029-expected-salary-no-spelling.mp3"
+        },
+        {
+          "word": "notice period",
+          "order": 29,
+          "mode": "full",
+          "fileWithSpelling": "audio/words/job-interview-qanda/day-003/030-notice-period.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/day-003/030-notice-period-no-spelling.mp3"
+        }
+      ],
+      "status": "generated",
+      "generatedAt": "2026-06-11T14:55:37.581Z"
+    },
+    "job-interview-qanda__day-004": {
+      "category": "Job Interview Q&A",
+      "categorySlug": "job-interview-qanda",
+      "day": 4,
+      "provider": "google-cloud-tts",
+      "playbackMode": "item-sequence",
+      "recallPauseMs": 3000,
+      "itemCount": 40,
+      "monthBucket": "2026-06",
+      "voice": {
+        "en": {
+          "languageCode": "en-US",
+          "name": "en-US-Chirp3-HD-Puck",
+          "speakingRate": 0.98,
+          "pitch": 0
+        },
+        "th": {
+          "languageCode": "th-TH",
+          "name": "th-TH-Chirp3-HD-Puck",
+          "speakingRate": 1.08,
+          "pitch": 0
+        }
+      },
+      "variants": {
+        "withSpelling": {
+          "type": "item-sequence",
+          "estimatedChars": 6961,
+          "fileCount": 20
+        },
+        "withoutSpelling": {
+          "type": "item-sequence",
+          "estimatedChars": 4441,
+          "fileCount": 10
+        }
+      },
+      "items": [
+        {
+          "word": "strength",
+          "order": 0,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/strength.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/strength.mp3"
+        },
+        {
+          "word": "weakness",
+          "order": 1,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/weakness.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/weakness.mp3"
+        },
+        {
+          "word": "experience",
+          "order": 2,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/experience.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/experience.mp3"
+        },
+        {
+          "word": "responsibility",
+          "order": 3,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/responsibility.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/responsibility.mp3"
+        },
+        {
+          "word": "achievement",
+          "order": 4,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/achievement.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/achievement.mp3"
+        },
+        {
+          "word": "challenge",
+          "order": 5,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/challenge.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/challenge.mp3"
+        },
+        {
+          "word": "deadline",
+          "order": 6,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/deadline.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/deadline.mp3"
+        },
+        {
+          "word": "teamwork",
+          "order": 7,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/teamwork.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/teamwork.mp3"
+        },
+        {
+          "word": "communication",
+          "order": 8,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/communication.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/communication.mp3"
+        },
+        {
+          "word": "leadership",
+          "order": 9,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/leadership.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/leadership.mp3"
+        },
+        {
+          "word": "salary expectation",
+          "order": 10,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/salary-expectation.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/salary-expectation.mp3"
+        },
+        {
+          "word": "availability",
+          "order": 11,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/availability.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/availability.mp3"
+        },
+        {
+          "word": "position",
+          "order": 12,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/position.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/position.mp3"
+        },
+        {
+          "word": "qualification",
+          "order": 13,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/qualification.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/qualification.mp3"
+        },
+        {
+          "word": "resume",
+          "order": 14,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/resume.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/resume.mp3"
+        },
+        {
+          "word": "reference",
+          "order": 15,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/reference.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/reference.mp3"
+        },
+        {
+          "word": "motivation",
+          "order": 16,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/motivation.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/motivation.mp3"
+        },
+        {
+          "word": "problem-solving",
+          "order": 17,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/problem-solving.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/problem-solving.mp3"
+        },
+        {
+          "word": "reliable",
+          "order": 18,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/reliable.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/reliable.mp3"
+        },
+        {
+          "word": "adaptable",
+          "order": 19,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/adaptable.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/adaptable.mp3"
+        },
+        {
+          "word": "supervisor",
+          "order": 20,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/supervisor.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/supervisor.mp3"
+        },
+        {
+          "word": "work permit",
+          "order": 21,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/work-permit.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/work-permit.mp3"
+        },
+        {
+          "word": "career goal",
+          "order": 22,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/career-goal.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/career-goal.mp3"
+        },
+        {
+          "word": "why should we hire you",
+          "order": 23,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/why-should-we-hire-you.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/why-should-we-hire-you.mp3"
+        },
+        {
+          "word": "tell me about yourself",
+          "order": 24,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/tell-me-about-yourself.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/tell-me-about-yourself.mp3"
+        },
+        {
+          "word": "background",
+          "order": 25,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/background.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/background.mp3"
+        },
+        {
+          "word": "previous job",
+          "order": 26,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/previous-job.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/previous-job.mp3"
+        },
+        {
+          "word": "current role",
+          "order": 27,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/current-role.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/current-role.mp3"
+        },
+        {
+          "word": "expected salary",
+          "order": 28,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/expected-salary.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/expected-salary.mp3"
+        },
+        {
+          "word": "notice period",
+          "order": 29,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/notice-period.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/notice-period.mp3"
+        },
+        {
+          "word": "relocate",
+          "order": 30,
+          "mode": "full",
+          "fileWithSpelling": "audio/words/job-interview-qanda/day-004/031-relocate.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/day-004/031-relocate-no-spelling.mp3"
+        },
+        {
+          "word": "overtime",
+          "order": 31,
+          "mode": "full",
+          "fileWithSpelling": "audio/words/job-interview-qanda/day-004/032-overtime.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/day-004/032-overtime-no-spelling.mp3"
+        },
+        {
+          "word": "shift work",
+          "order": 32,
+          "mode": "full",
+          "fileWithSpelling": "audio/words/job-interview-qanda/day-004/033-shift-work.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/day-004/033-shift-work-no-spelling.mp3"
+        },
+        {
+          "word": "work under pressure",
+          "order": 33,
+          "mode": "full",
+          "fileWithSpelling": "audio/words/job-interview-qanda/day-004/034-work-under-pressure.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/day-004/034-work-under-pressure-no-spelling.mp3"
+        },
+        {
+          "word": "handle conflict",
+          "order": 34,
+          "mode": "full",
+          "fileWithSpelling": "audio/words/job-interview-qanda/day-004/035-handle-conflict.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/day-004/035-handle-conflict-no-spelling.mp3"
+        },
+        {
+          "word": "decision-making",
+          "order": 35,
+          "mode": "full",
+          "fileWithSpelling": "audio/words/job-interview-qanda/day-004/036-decision-making.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/day-004/036-decision-making-no-spelling.mp3"
+        },
+        {
+          "word": "time management",
+          "order": 36,
+          "mode": "full",
+          "fileWithSpelling": "audio/words/job-interview-qanda/day-004/037-time-management.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/day-004/037-time-management-no-spelling.mp3"
+        },
+        {
+          "word": "attention to detail",
+          "order": 37,
+          "mode": "full",
+          "fileWithSpelling": "audio/words/job-interview-qanda/day-004/038-attention-to-detail.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/day-004/038-attention-to-detail-no-spelling.mp3"
+        },
+        {
+          "word": "initiative",
+          "order": 38,
+          "mode": "full",
+          "fileWithSpelling": "audio/words/job-interview-qanda/day-004/039-initiative.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/day-004/039-initiative-no-spelling.mp3"
+        },
+        {
+          "word": "independent",
+          "order": 39,
+          "mode": "full",
+          "fileWithSpelling": "audio/words/job-interview-qanda/day-004/040-independent.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/day-004/040-independent-no-spelling.mp3"
+        }
+      ],
+      "status": "generated",
+      "generatedAt": "2026-06-11T14:56:20.593Z"
+    },
+    "job-interview-qanda__day-005": {
+      "category": "Job Interview Q&A",
+      "categorySlug": "job-interview-qanda",
+      "day": 5,
+      "provider": "google-cloud-tts",
+      "playbackMode": "item-sequence",
+      "recallPauseMs": 3000,
+      "itemCount": 50,
+      "monthBucket": "2026-06",
+      "voice": {
+        "en": {
+          "languageCode": "en-US",
+          "name": "en-US-Chirp3-HD-Puck",
+          "speakingRate": 0.98,
+          "pitch": 0
+        },
+        "th": {
+          "languageCode": "th-TH",
+          "name": "th-TH-Chirp3-HD-Puck",
+          "speakingRate": 1.08,
+          "pitch": 0
+        }
+      },
+      "variants": {
+        "withSpelling": {
+          "type": "item-sequence",
+          "estimatedChars": 6939,
+          "fileCount": 20
+        },
+        "withoutSpelling": {
+          "type": "item-sequence",
+          "estimatedChars": 4456,
+          "fileCount": 10
+        }
+      },
+      "items": [
+        {
+          "word": "strength",
+          "order": 0,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/strength.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/strength.mp3"
+        },
+        {
+          "word": "weakness",
+          "order": 1,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/weakness.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/weakness.mp3"
+        },
+        {
+          "word": "experience",
+          "order": 2,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/experience.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/experience.mp3"
+        },
+        {
+          "word": "responsibility",
+          "order": 3,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/responsibility.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/responsibility.mp3"
+        },
+        {
+          "word": "achievement",
+          "order": 4,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/achievement.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/achievement.mp3"
+        },
+        {
+          "word": "challenge",
+          "order": 5,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/challenge.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/challenge.mp3"
+        },
+        {
+          "word": "deadline",
+          "order": 6,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/deadline.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/deadline.mp3"
+        },
+        {
+          "word": "teamwork",
+          "order": 7,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/teamwork.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/teamwork.mp3"
+        },
+        {
+          "word": "communication",
+          "order": 8,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/communication.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/communication.mp3"
+        },
+        {
+          "word": "leadership",
+          "order": 9,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/leadership.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/leadership.mp3"
+        },
+        {
+          "word": "salary expectation",
+          "order": 10,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/salary-expectation.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/salary-expectation.mp3"
+        },
+        {
+          "word": "availability",
+          "order": 11,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/availability.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/availability.mp3"
+        },
+        {
+          "word": "position",
+          "order": 12,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/position.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/position.mp3"
+        },
+        {
+          "word": "qualification",
+          "order": 13,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/qualification.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/qualification.mp3"
+        },
+        {
+          "word": "resume",
+          "order": 14,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/resume.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/resume.mp3"
+        },
+        {
+          "word": "reference",
+          "order": 15,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/reference.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/reference.mp3"
+        },
+        {
+          "word": "motivation",
+          "order": 16,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/motivation.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/motivation.mp3"
+        },
+        {
+          "word": "problem-solving",
+          "order": 17,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/problem-solving.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/problem-solving.mp3"
+        },
+        {
+          "word": "reliable",
+          "order": 18,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/reliable.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/reliable.mp3"
+        },
+        {
+          "word": "adaptable",
+          "order": 19,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/adaptable.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/adaptable.mp3"
+        },
+        {
+          "word": "supervisor",
+          "order": 20,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/supervisor.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/supervisor.mp3"
+        },
+        {
+          "word": "work permit",
+          "order": 21,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/work-permit.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/work-permit.mp3"
+        },
+        {
+          "word": "career goal",
+          "order": 22,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/career-goal.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/career-goal.mp3"
+        },
+        {
+          "word": "why should we hire you",
+          "order": 23,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/why-should-we-hire-you.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/why-should-we-hire-you.mp3"
+        },
+        {
+          "word": "tell me about yourself",
+          "order": 24,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/tell-me-about-yourself.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/tell-me-about-yourself.mp3"
+        },
+        {
+          "word": "background",
+          "order": 25,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/background.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/background.mp3"
+        },
+        {
+          "word": "previous job",
+          "order": 26,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/previous-job.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/previous-job.mp3"
+        },
+        {
+          "word": "current role",
+          "order": 27,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/current-role.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/current-role.mp3"
+        },
+        {
+          "word": "expected salary",
+          "order": 28,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/expected-salary.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/expected-salary.mp3"
+        },
+        {
+          "word": "notice period",
+          "order": 29,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/notice-period.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/notice-period.mp3"
+        },
+        {
+          "word": "relocate",
+          "order": 30,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/relocate.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/relocate.mp3"
+        },
+        {
+          "word": "overtime",
+          "order": 31,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/overtime.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/overtime.mp3"
+        },
+        {
+          "word": "shift work",
+          "order": 32,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/shift-work.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/shift-work.mp3"
+        },
+        {
+          "word": "work under pressure",
+          "order": 33,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/work-under-pressure.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/work-under-pressure.mp3"
+        },
+        {
+          "word": "handle conflict",
+          "order": 34,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/handle-conflict.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/handle-conflict.mp3"
+        },
+        {
+          "word": "decision-making",
+          "order": 35,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/decision-making.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/decision-making.mp3"
+        },
+        {
+          "word": "time management",
+          "order": 36,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/time-management.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/time-management.mp3"
+        },
+        {
+          "word": "attention to detail",
+          "order": 37,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/attention-to-detail.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/attention-to-detail.mp3"
+        },
+        {
+          "word": "initiative",
+          "order": 38,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/initiative.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/initiative.mp3"
+        },
+        {
+          "word": "independent",
+          "order": 39,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/independent.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/independent.mp3"
+        },
+        {
+          "word": "collaborate",
+          "order": 40,
+          "mode": "full",
+          "fileWithSpelling": "audio/words/job-interview-qanda/day-005/041-collaborate.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/day-005/041-collaborate-no-spelling.mp3"
+        },
+        {
+          "word": "coordinate",
+          "order": 41,
+          "mode": "full",
+          "fileWithSpelling": "audio/words/job-interview-qanda/day-005/042-coordinate.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/day-005/042-coordinate-no-spelling.mp3"
+        },
+        {
+          "word": "negotiate",
+          "order": 42,
+          "mode": "full",
+          "fileWithSpelling": "audio/words/job-interview-qanda/day-005/043-negotiate.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/day-005/043-negotiate-no-spelling.mp3"
+        },
+        {
+          "word": "follow up",
+          "order": 43,
+          "mode": "full",
+          "fileWithSpelling": "audio/words/job-interview-qanda/day-005/044-follow-up.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/day-005/044-follow-up-no-spelling.mp3"
+        },
+        {
+          "word": "reporting",
+          "order": 44,
+          "mode": "full",
+          "fileWithSpelling": "audio/words/job-interview-qanda/day-005/045-reporting.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/day-005/045-reporting-no-spelling.mp3"
+        },
+        {
+          "word": "documentation",
+          "order": 45,
+          "mode": "full",
+          "fileWithSpelling": "audio/words/job-interview-qanda/day-005/046-documentation.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/day-005/046-documentation-no-spelling.mp3"
+        },
+        {
+          "word": "computer skills",
+          "order": 46,
+          "mode": "full",
+          "fileWithSpelling": "audio/words/job-interview-qanda/day-005/047-computer-skills.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/day-005/047-computer-skills-no-spelling.mp3"
+        },
+        {
+          "word": "English communication",
+          "order": 47,
+          "mode": "full",
+          "fileWithSpelling": "audio/words/job-interview-qanda/day-005/048-english-communication.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/day-005/048-english-communication-no-spelling.mp3"
+        },
+        {
+          "word": "safety awareness",
+          "order": 48,
+          "mode": "full",
+          "fileWithSpelling": "audio/words/job-interview-qanda/day-005/049-safety-awareness.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/day-005/049-safety-awareness-no-spelling.mp3"
+        },
+        {
+          "word": "site experience",
+          "order": 49,
+          "mode": "full",
+          "fileWithSpelling": "audio/words/job-interview-qanda/day-005/050-site-experience.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/day-005/050-site-experience-no-spelling.mp3"
+        }
+      ],
+      "status": "generated",
+      "generatedAt": "2026-06-11T14:57:04.062Z"
+    },
+    "job-interview-qanda__day-006": {
+      "category": "Job Interview Q&A",
+      "categorySlug": "job-interview-qanda",
+      "day": 6,
+      "provider": "google-cloud-tts",
+      "playbackMode": "item-sequence",
+      "recallPauseMs": 3000,
+      "itemCount": 50,
+      "monthBucket": "2026-06",
+      "voice": {
+        "en": {
+          "languageCode": "en-US",
+          "name": "en-US-Chirp3-HD-Puck",
+          "speakingRate": 0.98,
+          "pitch": 0
+        },
+        "th": {
+          "languageCode": "th-TH",
+          "name": "th-TH-Chirp3-HD-Puck",
+          "speakingRate": 1.08,
+          "pitch": 0
+        }
+      },
+      "variants": {
+        "withSpelling": {
+          "type": "item-sequence",
+          "estimatedChars": 6873,
+          "fileCount": 20
+        },
+        "withoutSpelling": {
+          "type": "item-sequence",
+          "estimatedChars": 4429,
+          "fileCount": 10
+        }
+      },
+      "items": [
+        {
+          "word": "salary expectation",
+          "order": 0,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/salary-expectation.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/salary-expectation.mp3"
+        },
+        {
+          "word": "availability",
+          "order": 1,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/availability.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/availability.mp3"
+        },
+        {
+          "word": "position",
+          "order": 2,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/position.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/position.mp3"
+        },
+        {
+          "word": "qualification",
+          "order": 3,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/qualification.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/qualification.mp3"
+        },
+        {
+          "word": "resume",
+          "order": 4,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/resume.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/resume.mp3"
+        },
+        {
+          "word": "reference",
+          "order": 5,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/reference.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/reference.mp3"
+        },
+        {
+          "word": "motivation",
+          "order": 6,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/motivation.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/motivation.mp3"
+        },
+        {
+          "word": "problem-solving",
+          "order": 7,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/problem-solving.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/problem-solving.mp3"
+        },
+        {
+          "word": "reliable",
+          "order": 8,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/reliable.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/reliable.mp3"
+        },
+        {
+          "word": "adaptable",
+          "order": 9,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/adaptable.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/adaptable.mp3"
+        },
+        {
+          "word": "supervisor",
+          "order": 10,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/supervisor.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/supervisor.mp3"
+        },
+        {
+          "word": "work permit",
+          "order": 11,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/work-permit.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/work-permit.mp3"
+        },
+        {
+          "word": "career goal",
+          "order": 12,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/career-goal.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/career-goal.mp3"
+        },
+        {
+          "word": "why should we hire you",
+          "order": 13,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/why-should-we-hire-you.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/why-should-we-hire-you.mp3"
+        },
+        {
+          "word": "tell me about yourself",
+          "order": 14,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/tell-me-about-yourself.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/tell-me-about-yourself.mp3"
+        },
+        {
+          "word": "background",
+          "order": 15,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/background.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/background.mp3"
+        },
+        {
+          "word": "previous job",
+          "order": 16,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/previous-job.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/previous-job.mp3"
+        },
+        {
+          "word": "current role",
+          "order": 17,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/current-role.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/current-role.mp3"
+        },
+        {
+          "word": "expected salary",
+          "order": 18,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/expected-salary.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/expected-salary.mp3"
+        },
+        {
+          "word": "notice period",
+          "order": 19,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/notice-period.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/notice-period.mp3"
+        },
+        {
+          "word": "relocate",
+          "order": 20,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/relocate.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/relocate.mp3"
+        },
+        {
+          "word": "overtime",
+          "order": 21,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/overtime.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/overtime.mp3"
+        },
+        {
+          "word": "shift work",
+          "order": 22,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/shift-work.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/shift-work.mp3"
+        },
+        {
+          "word": "work under pressure",
+          "order": 23,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/work-under-pressure.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/work-under-pressure.mp3"
+        },
+        {
+          "word": "handle conflict",
+          "order": 24,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/handle-conflict.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/handle-conflict.mp3"
+        },
+        {
+          "word": "decision-making",
+          "order": 25,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/decision-making.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/decision-making.mp3"
+        },
+        {
+          "word": "time management",
+          "order": 26,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/time-management.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/time-management.mp3"
+        },
+        {
+          "word": "attention to detail",
+          "order": 27,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/attention-to-detail.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/attention-to-detail.mp3"
+        },
+        {
+          "word": "initiative",
+          "order": 28,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/initiative.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/initiative.mp3"
+        },
+        {
+          "word": "independent",
+          "order": 29,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/independent.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/independent.mp3"
+        },
+        {
+          "word": "collaborate",
+          "order": 30,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/collaborate.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/collaborate.mp3"
+        },
+        {
+          "word": "coordinate",
+          "order": 31,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/coordinate.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/coordinate.mp3"
+        },
+        {
+          "word": "negotiate",
+          "order": 32,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/negotiate.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/negotiate.mp3"
+        },
+        {
+          "word": "follow up",
+          "order": 33,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/follow-up.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/follow-up.mp3"
+        },
+        {
+          "word": "reporting",
+          "order": 34,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/reporting.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/reporting.mp3"
+        },
+        {
+          "word": "documentation",
+          "order": 35,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/documentation.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/documentation.mp3"
+        },
+        {
+          "word": "computer skills",
+          "order": 36,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/computer-skills.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/computer-skills.mp3"
+        },
+        {
+          "word": "English communication",
+          "order": 37,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/english-communication.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/english-communication.mp3"
+        },
+        {
+          "word": "safety awareness",
+          "order": 38,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/safety-awareness.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/safety-awareness.mp3"
+        },
+        {
+          "word": "site experience",
+          "order": 39,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/site-experience.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/site-experience.mp3"
+        },
+        {
+          "word": "technical knowledge",
+          "order": 40,
+          "mode": "full",
+          "fileWithSpelling": "audio/words/job-interview-qanda/day-006/041-technical-knowledge.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/day-006/041-technical-knowledge-no-spelling.mp3"
+        },
+        {
+          "word": "training",
+          "order": 41,
+          "mode": "full",
+          "fileWithSpelling": "audio/words/job-interview-qanda/day-006/042-training.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/day-006/042-training-no-spelling.mp3"
+        },
+        {
+          "word": "certificate",
+          "order": 42,
+          "mode": "full",
+          "fileWithSpelling": "audio/words/job-interview-qanda/day-006/043-certificate.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/day-006/043-certificate-no-spelling.mp3"
+        },
+        {
+          "word": "portfolio",
+          "order": 43,
+          "mode": "full",
+          "fileWithSpelling": "audio/words/job-interview-qanda/day-006/044-portfolio.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/day-006/044-portfolio-no-spelling.mp3"
+        },
+        {
+          "word": "career path",
+          "order": 44,
+          "mode": "full",
+          "fileWithSpelling": "audio/words/job-interview-qanda/day-006/045-career-path.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/day-006/045-career-path-no-spelling.mp3"
+        },
+        {
+          "word": "long-term goal",
+          "order": 45,
+          "mode": "full",
+          "fileWithSpelling": "audio/words/job-interview-qanda/day-006/046-long-term-goal.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/day-006/046-long-term-goal-no-spelling.mp3"
+        },
+        {
+          "word": "short-term goal",
+          "order": 46,
+          "mode": "full",
+          "fileWithSpelling": "audio/words/job-interview-qanda/day-006/047-short-term-goal.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/day-006/047-short-term-goal-no-spelling.mp3"
+        },
+        {
+          "word": "company culture",
+          "order": 47,
+          "mode": "full",
+          "fileWithSpelling": "audio/words/job-interview-qanda/day-006/048-company-culture.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/day-006/048-company-culture-no-spelling.mp3"
+        },
+        {
+          "word": "job description",
+          "order": 48,
+          "mode": "full",
+          "fileWithSpelling": "audio/words/job-interview-qanda/day-006/049-job-description.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/day-006/049-job-description-no-spelling.mp3"
+        },
+        {
+          "word": "requirement",
+          "order": 49,
+          "mode": "full",
+          "fileWithSpelling": "audio/words/job-interview-qanda/day-006/050-requirement.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/day-006/050-requirement-no-spelling.mp3"
+        }
+      ],
+      "status": "generated",
+      "generatedAt": "2026-06-11T14:57:48.796Z"
+    },
+    "job-interview-qanda__day-007": {
+      "category": "Job Interview Q&A",
+      "categorySlug": "job-interview-qanda",
+      "day": 7,
+      "provider": "google-cloud-tts",
+      "playbackMode": "item-sequence",
+      "recallPauseMs": 3000,
+      "itemCount": 50,
+      "monthBucket": "2026-06",
+      "voice": {
+        "en": {
+          "languageCode": "en-US",
+          "name": "en-US-Chirp3-HD-Puck",
+          "speakingRate": 0.98,
+          "pitch": 0
+        },
+        "th": {
+          "languageCode": "th-TH",
+          "name": "th-TH-Chirp3-HD-Puck",
+          "speakingRate": 1.08,
+          "pitch": 0
+        }
+      },
+      "variants": {
+        "withSpelling": {
+          "type": "item-sequence",
+          "estimatedChars": 6986,
+          "fileCount": 20
+        },
+        "withoutSpelling": {
+          "type": "item-sequence",
+          "estimatedChars": 4512,
+          "fileCount": 10
+        }
+      },
+      "items": [
+        {
+          "word": "supervisor",
+          "order": 0,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/supervisor.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/supervisor.mp3"
+        },
+        {
+          "word": "work permit",
+          "order": 1,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/work-permit.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/work-permit.mp3"
+        },
+        {
+          "word": "career goal",
+          "order": 2,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/career-goal.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/career-goal.mp3"
+        },
+        {
+          "word": "why should we hire you",
+          "order": 3,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/why-should-we-hire-you.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/why-should-we-hire-you.mp3"
+        },
+        {
+          "word": "tell me about yourself",
+          "order": 4,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/tell-me-about-yourself.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/tell-me-about-yourself.mp3"
+        },
+        {
+          "word": "background",
+          "order": 5,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/background.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/background.mp3"
+        },
+        {
+          "word": "previous job",
+          "order": 6,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/previous-job.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/previous-job.mp3"
+        },
+        {
+          "word": "current role",
+          "order": 7,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/current-role.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/current-role.mp3"
+        },
+        {
+          "word": "expected salary",
+          "order": 8,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/expected-salary.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/expected-salary.mp3"
+        },
+        {
+          "word": "notice period",
+          "order": 9,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/notice-period.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/notice-period.mp3"
+        },
+        {
+          "word": "relocate",
+          "order": 10,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/relocate.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/relocate.mp3"
+        },
+        {
+          "word": "overtime",
+          "order": 11,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/overtime.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/overtime.mp3"
+        },
+        {
+          "word": "shift work",
+          "order": 12,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/shift-work.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/shift-work.mp3"
+        },
+        {
+          "word": "work under pressure",
+          "order": 13,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/work-under-pressure.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/work-under-pressure.mp3"
+        },
+        {
+          "word": "handle conflict",
+          "order": 14,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/handle-conflict.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/handle-conflict.mp3"
+        },
+        {
+          "word": "decision-making",
+          "order": 15,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/decision-making.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/decision-making.mp3"
+        },
+        {
+          "word": "time management",
+          "order": 16,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/time-management.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/time-management.mp3"
+        },
+        {
+          "word": "attention to detail",
+          "order": 17,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/attention-to-detail.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/attention-to-detail.mp3"
+        },
+        {
+          "word": "initiative",
+          "order": 18,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/initiative.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/initiative.mp3"
+        },
+        {
+          "word": "independent",
+          "order": 19,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/independent.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/independent.mp3"
+        },
+        {
+          "word": "collaborate",
+          "order": 20,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/collaborate.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/collaborate.mp3"
+        },
+        {
+          "word": "coordinate",
+          "order": 21,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/coordinate.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/coordinate.mp3"
+        },
+        {
+          "word": "negotiate",
+          "order": 22,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/negotiate.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/negotiate.mp3"
+        },
+        {
+          "word": "follow up",
+          "order": 23,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/follow-up.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/follow-up.mp3"
+        },
+        {
+          "word": "reporting",
+          "order": 24,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/reporting.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/reporting.mp3"
+        },
+        {
+          "word": "documentation",
+          "order": 25,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/documentation.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/documentation.mp3"
+        },
+        {
+          "word": "computer skills",
+          "order": 26,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/computer-skills.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/computer-skills.mp3"
+        },
+        {
+          "word": "English communication",
+          "order": 27,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/english-communication.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/english-communication.mp3"
+        },
+        {
+          "word": "safety awareness",
+          "order": 28,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/safety-awareness.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/safety-awareness.mp3"
+        },
+        {
+          "word": "site experience",
+          "order": 29,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/site-experience.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/site-experience.mp3"
+        },
+        {
+          "word": "technical knowledge",
+          "order": 30,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/technical-knowledge.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/technical-knowledge.mp3"
+        },
+        {
+          "word": "training",
+          "order": 31,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/training.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/training.mp3"
+        },
+        {
+          "word": "certificate",
+          "order": 32,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/certificate.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/certificate.mp3"
+        },
+        {
+          "word": "portfolio",
+          "order": 33,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/portfolio.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/portfolio.mp3"
+        },
+        {
+          "word": "career path",
+          "order": 34,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/career-path.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/career-path.mp3"
+        },
+        {
+          "word": "long-term goal",
+          "order": 35,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/long-term-goal.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/long-term-goal.mp3"
+        },
+        {
+          "word": "short-term goal",
+          "order": 36,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/short-term-goal.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/short-term-goal.mp3"
+        },
+        {
+          "word": "company culture",
+          "order": 37,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/company-culture.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/company-culture.mp3"
+        },
+        {
+          "word": "job description",
+          "order": 38,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/job-description.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/job-description.mp3"
+        },
+        {
+          "word": "requirement",
+          "order": 39,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/requirement.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/requirement.mp3"
+        },
+        {
+          "word": "interviewer",
+          "order": 40,
+          "mode": "full",
+          "fileWithSpelling": "audio/words/job-interview-qanda/day-007/041-interviewer.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/day-007/041-interviewer-no-spelling.mp3"
+        },
+        {
+          "word": "candidate",
+          "order": 41,
+          "mode": "full",
+          "fileWithSpelling": "audio/words/job-interview-qanda/day-007/042-candidate.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/day-007/042-candidate-no-spelling.mp3"
+        },
+        {
+          "word": "hire",
+          "order": 42,
+          "mode": "full",
+          "fileWithSpelling": "audio/words/job-interview-qanda/day-007/043-hire.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/day-007/043-hire-no-spelling.mp3"
+        },
+        {
+          "word": "onboarding",
+          "order": 43,
+          "mode": "full",
+          "fileWithSpelling": "audio/words/job-interview-qanda/day-007/044-onboarding.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/day-007/044-onboarding-no-spelling.mp3"
+        },
+        {
+          "word": "probation",
+          "order": 44,
+          "mode": "full",
+          "fileWithSpelling": "audio/words/job-interview-qanda/day-007/045-probation.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/day-007/045-probation-no-spelling.mp3"
+        },
+        {
+          "word": "benefits",
+          "order": 45,
+          "mode": "full",
+          "fileWithSpelling": "audio/words/job-interview-qanda/day-007/046-benefits.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/day-007/046-benefits-no-spelling.mp3"
+        },
+        {
+          "word": "work environment",
+          "order": 46,
+          "mode": "full",
+          "fileWithSpelling": "audio/words/job-interview-qanda/day-007/047-work-environment.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/day-007/047-work-environment-no-spelling.mp3"
+        },
+        {
+          "word": "why did you leave your last job",
+          "order": 47,
+          "mode": "full",
+          "fileWithSpelling": "audio/words/job-interview-qanda/day-007/048-why-did-you-leave-your-last-job.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/day-007/048-why-did-you-leave-your-last-job-no-spelling.mp3"
+        },
+        {
+          "word": "what are your strengths",
+          "order": 48,
+          "mode": "full",
+          "fileWithSpelling": "audio/words/job-interview-qanda/day-007/049-what-are-your-strengths.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/day-007/049-what-are-your-strengths-no-spelling.mp3"
+        },
+        {
+          "word": "what are your weaknesses",
+          "order": 49,
+          "mode": "full",
+          "fileWithSpelling": "audio/words/job-interview-qanda/day-007/050-what-are-your-weaknesses.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/day-007/050-what-are-your-weaknesses-no-spelling.mp3"
+        }
+      ],
+      "status": "generated",
+      "generatedAt": "2026-06-11T14:58:33.792Z"
+    },
+    "job-interview-qanda__day-008": {
+      "category": "Job Interview Q&A",
+      "categorySlug": "job-interview-qanda",
+      "day": 8,
+      "provider": "google-cloud-tts",
+      "playbackMode": "item-sequence",
+      "recallPauseMs": 3000,
+      "itemCount": 50,
+      "monthBucket": "2026-06",
+      "voice": {
+        "en": {
+          "languageCode": "en-US",
+          "name": "en-US-Chirp3-HD-Puck",
+          "speakingRate": 0.98,
+          "pitch": 0
+        },
+        "th": {
+          "languageCode": "th-TH",
+          "name": "th-TH-Chirp3-HD-Puck",
+          "speakingRate": 1.08,
+          "pitch": 0
+        }
+      },
+      "variants": {
+        "withSpelling": {
+          "type": "item-sequence",
+          "estimatedChars": 2339,
+          "fileCount": 11
+        },
+        "withoutSpelling": {
+          "type": "item-sequence",
+          "estimatedChars": 474,
+          "fileCount": 1
+        }
+      },
+      "items": [
+        {
+          "word": "work permit",
+          "order": 0,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/work-permit.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/work-permit.mp3"
+        },
+        {
+          "word": "career goal",
+          "order": 1,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/career-goal.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/career-goal.mp3"
+        },
+        {
+          "word": "why should we hire you",
+          "order": 2,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/why-should-we-hire-you.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/why-should-we-hire-you.mp3"
+        },
+        {
+          "word": "tell me about yourself",
+          "order": 3,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/tell-me-about-yourself.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/tell-me-about-yourself.mp3"
+        },
+        {
+          "word": "background",
+          "order": 4,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/background.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/background.mp3"
+        },
+        {
+          "word": "previous job",
+          "order": 5,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/previous-job.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/previous-job.mp3"
+        },
+        {
+          "word": "current role",
+          "order": 6,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/current-role.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/current-role.mp3"
+        },
+        {
+          "word": "expected salary",
+          "order": 7,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/expected-salary.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/expected-salary.mp3"
+        },
+        {
+          "word": "notice period",
+          "order": 8,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/notice-period.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/notice-period.mp3"
+        },
+        {
+          "word": "relocate",
+          "order": 9,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/relocate.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/relocate.mp3"
+        },
+        {
+          "word": "overtime",
+          "order": 10,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/overtime.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/overtime.mp3"
+        },
+        {
+          "word": "shift work",
+          "order": 11,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/shift-work.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/shift-work.mp3"
+        },
+        {
+          "word": "work under pressure",
+          "order": 12,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/work-under-pressure.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/work-under-pressure.mp3"
+        },
+        {
+          "word": "handle conflict",
+          "order": 13,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/handle-conflict.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/handle-conflict.mp3"
+        },
+        {
+          "word": "decision-making",
+          "order": 14,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/decision-making.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/decision-making.mp3"
+        },
+        {
+          "word": "time management",
+          "order": 15,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/time-management.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/time-management.mp3"
+        },
+        {
+          "word": "attention to detail",
+          "order": 16,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/attention-to-detail.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/attention-to-detail.mp3"
+        },
+        {
+          "word": "initiative",
+          "order": 17,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/initiative.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/initiative.mp3"
+        },
+        {
+          "word": "independent",
+          "order": 18,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/independent.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/independent.mp3"
+        },
+        {
+          "word": "collaborate",
+          "order": 19,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/collaborate.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/collaborate.mp3"
+        },
+        {
+          "word": "coordinate",
+          "order": 20,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/coordinate.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/coordinate.mp3"
+        },
+        {
+          "word": "negotiate",
+          "order": 21,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/negotiate.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/negotiate.mp3"
+        },
+        {
+          "word": "follow up",
+          "order": 22,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/follow-up.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/follow-up.mp3"
+        },
+        {
+          "word": "reporting",
+          "order": 23,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/reporting.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/reporting.mp3"
+        },
+        {
+          "word": "documentation",
+          "order": 24,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/documentation.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/documentation.mp3"
+        },
+        {
+          "word": "computer skills",
+          "order": 25,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/computer-skills.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/computer-skills.mp3"
+        },
+        {
+          "word": "English communication",
+          "order": 26,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/english-communication.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/english-communication.mp3"
+        },
+        {
+          "word": "safety awareness",
+          "order": 27,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/safety-awareness.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/safety-awareness.mp3"
+        },
+        {
+          "word": "site experience",
+          "order": 28,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/site-experience.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/site-experience.mp3"
+        },
+        {
+          "word": "technical knowledge",
+          "order": 29,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/technical-knowledge.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/technical-knowledge.mp3"
+        },
+        {
+          "word": "training",
+          "order": 30,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/training.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/training.mp3"
+        },
+        {
+          "word": "certificate",
+          "order": 31,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/certificate.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/certificate.mp3"
+        },
+        {
+          "word": "portfolio",
+          "order": 32,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/portfolio.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/portfolio.mp3"
+        },
+        {
+          "word": "career path",
+          "order": 33,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/career-path.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/career-path.mp3"
+        },
+        {
+          "word": "long-term goal",
+          "order": 34,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/long-term-goal.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/long-term-goal.mp3"
+        },
+        {
+          "word": "short-term goal",
+          "order": 35,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/short-term-goal.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/short-term-goal.mp3"
+        },
+        {
+          "word": "company culture",
+          "order": 36,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/company-culture.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/company-culture.mp3"
+        },
+        {
+          "word": "job description",
+          "order": 37,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/job-description.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/job-description.mp3"
+        },
+        {
+          "word": "requirement",
+          "order": 38,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/requirement.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/requirement.mp3"
+        },
+        {
+          "word": "interviewer",
+          "order": 39,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/interviewer.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/interviewer.mp3"
+        },
+        {
+          "word": "candidate",
+          "order": 40,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/candidate.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/candidate.mp3"
+        },
+        {
+          "word": "hire",
+          "order": 41,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/hire.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/hire.mp3"
+        },
+        {
+          "word": "onboarding",
+          "order": 42,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/onboarding.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/onboarding.mp3"
+        },
+        {
+          "word": "probation",
+          "order": 43,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/probation.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/probation.mp3"
+        },
+        {
+          "word": "benefits",
+          "order": 44,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/benefits.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/benefits.mp3"
+        },
+        {
+          "word": "work environment",
+          "order": 45,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/work-environment.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/work-environment.mp3"
+        },
+        {
+          "word": "why did you leave your last job",
+          "order": 46,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/why-did-you-leave-your-last-job.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/why-did-you-leave-your-last-job.mp3"
+        },
+        {
+          "word": "what are your strengths",
+          "order": 47,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/what-are-your-strengths.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/what-are-your-strengths.mp3"
+        },
+        {
+          "word": "what are your weaknesses",
+          "order": 48,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/job-interview-qanda/review/what-are-your-weaknesses.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/review/what-are-your-weaknesses.mp3"
+        },
+        {
+          "word": "do you have any questions",
+          "order": 49,
+          "mode": "full",
+          "fileWithSpelling": "audio/words/job-interview-qanda/day-008/050-do-you-have-any-questions.mp3",
+          "fileWithoutSpelling": "audio/words/job-interview-qanda/day-008/050-do-you-have-any-questions-no-spelling.mp3"
+        }
+      ],
+      "status": "generated",
+      "generatedAt": "2026-06-11T14:59:16.456Z"
+    }
+  },
+  "usage": [
+    {
+      "lessonId": "job-interview-qanda__day-001",
+      "provider": "google-cloud-tts",
+      "monthBucket": "2026-06",
+      "usedChars": 5208,
+      "generatedAt": "2026-06-11T04:44:38.869Z"
+    },
+    {
+      "lessonId": "job-interview-qanda__day-001",
+      "provider": "google-cloud-tts",
+      "monthBucket": "2026-06",
+      "usedChars": 4561,
+      "generatedAt": "2026-06-11T04:46:28.099Z"
+    },
+    {
+      "lessonId": "job-interview-qanda__day-001",
+      "provider": "google-cloud-tts",
+      "monthBucket": "2026-06",
+      "usedChars": 5208,
+      "generatedAt": "2026-06-11T05:18:39.933Z"
+    },
+    {
+      "lessonId": "job-interview-qanda__day-001",
+      "provider": "google-cloud-tts",
+      "monthBucket": "2026-06",
+      "usedChars": 4561,
+      "generatedAt": "2026-06-11T13:01:55.567Z"
+    },
+    {
+      "lessonId": "job-interview-qanda__day-001",
+      "provider": "google-cloud-tts",
+      "monthBucket": "2026-06",
+      "usedChars": 5222,
+      "generatedAt": "2026-06-11T14:10:27.597Z"
+    },
+    {
+      "lessonId": "job-interview-qanda__day-001",
+      "provider": "google-cloud-tts",
+      "monthBucket": "2026-06",
+      "usedChars": 4575,
+      "generatedAt": "2026-06-11T14:11:30.064Z"
+    },
+    {
+      "lessonId": "job-interview-qanda__day-001",
+      "variant": "withSpelling",
+      "playbackMode": "item-sequence",
+      "provider": "google-cloud-tts",
+      "monthBucket": "2026-06",
+      "usedChars": 5060,
+      "generatedAt": "2026-06-11T14:25:02.361Z"
+    },
+    {
+      "lessonId": "job-interview-qanda__day-001",
+      "variant": "withoutSpelling",
+      "playbackMode": "item-sequence",
+      "provider": "google-cloud-tts",
+      "monthBucket": "2026-06",
+      "usedChars": 4413,
+      "generatedAt": "2026-06-11T14:26:07.920Z"
+    },
+    {
+      "lessonId": "job-interview-qanda__day-002",
+      "variant": "withSpelling",
+      "playbackMode": "item-sequence",
+      "provider": "google-cloud-tts",
+      "monthBucket": "2026-06",
+      "usedChars": 6695,
+      "generatedAt": "2026-06-11T14:45:30.817Z"
+    },
+    {
+      "lessonId": "job-interview-qanda__day-003",
+      "variant": "withSpelling",
+      "playbackMode": "item-sequence",
+      "provider": "google-cloud-tts",
+      "monthBucket": "2026-06",
+      "usedChars": 6926,
+      "generatedAt": "2026-06-11T14:46:38.358Z"
+    },
+    {
+      "lessonId": "job-interview-qanda__day-004",
+      "variant": "withSpelling",
+      "playbackMode": "item-sequence",
+      "provider": "google-cloud-tts",
+      "monthBucket": "2026-06",
+      "usedChars": 6961,
+      "generatedAt": "2026-06-11T14:47:48.188Z"
+    },
+    {
+      "lessonId": "job-interview-qanda__day-005",
+      "variant": "withSpelling",
+      "playbackMode": "item-sequence",
+      "provider": "google-cloud-tts",
+      "monthBucket": "2026-06",
+      "usedChars": 6939,
+      "generatedAt": "2026-06-11T14:48:59.413Z"
+    },
+    {
+      "lessonId": "job-interview-qanda__day-006",
+      "variant": "withSpelling",
+      "playbackMode": "item-sequence",
+      "provider": "google-cloud-tts",
+      "monthBucket": "2026-06",
+      "usedChars": 6873,
+      "generatedAt": "2026-06-11T14:51:40.102Z"
+    },
+    {
+      "lessonId": "job-interview-qanda__day-007",
+      "variant": "withSpelling",
+      "playbackMode": "item-sequence",
+      "provider": "google-cloud-tts",
+      "monthBucket": "2026-06",
+      "usedChars": 6986,
+      "generatedAt": "2026-06-11T14:52:53.975Z"
+    },
+    {
+      "lessonId": "job-interview-qanda__day-008",
+      "variant": "withSpelling",
+      "playbackMode": "item-sequence",
+      "provider": "google-cloud-tts",
+      "monthBucket": "2026-06",
+      "usedChars": 2339,
+      "generatedAt": "2026-06-11T14:54:07.692Z"
+    },
+    {
+      "lessonId": "job-interview-qanda__day-002",
+      "variant": "withoutSpelling",
+      "playbackMode": "item-sequence",
+      "provider": "google-cloud-tts",
+      "monthBucket": "2026-06",
+      "usedChars": 4394,
+      "generatedAt": "2026-06-11T14:54:53.968Z"
+    },
+    {
+      "lessonId": "job-interview-qanda__day-003",
+      "variant": "withoutSpelling",
+      "playbackMode": "item-sequence",
+      "provider": "google-cloud-tts",
+      "monthBucket": "2026-06",
+      "usedChars": 4535,
+      "generatedAt": "2026-06-11T14:55:37.581Z"
+    },
+    {
+      "lessonId": "job-interview-qanda__day-004",
+      "variant": "withoutSpelling",
+      "playbackMode": "item-sequence",
+      "provider": "google-cloud-tts",
+      "monthBucket": "2026-06",
+      "usedChars": 4441,
+      "generatedAt": "2026-06-11T14:56:20.593Z"
+    },
+    {
+      "lessonId": "job-interview-qanda__day-005",
+      "variant": "withoutSpelling",
+      "playbackMode": "item-sequence",
+      "provider": "google-cloud-tts",
+      "monthBucket": "2026-06",
+      "usedChars": 4456,
+      "generatedAt": "2026-06-11T14:57:04.062Z"
+    },
+    {
+      "lessonId": "job-interview-qanda__day-006",
+      "variant": "withoutSpelling",
+      "playbackMode": "item-sequence",
+      "provider": "google-cloud-tts",
+      "monthBucket": "2026-06",
+      "usedChars": 4429,
+      "generatedAt": "2026-06-11T14:57:48.796Z"
+    },
+    {
+      "lessonId": "job-interview-qanda__day-007",
+      "variant": "withoutSpelling",
+      "playbackMode": "item-sequence",
+      "provider": "google-cloud-tts",
+      "monthBucket": "2026-06",
+      "usedChars": 4512,
+      "generatedAt": "2026-06-11T14:58:33.792Z"
+    },
+    {
+      "lessonId": "job-interview-qanda__day-008",
+      "variant": "withoutSpelling",
+      "playbackMode": "item-sequence",
+      "provider": "google-cloud-tts",
+      "monthBucket": "2026-06",
+      "usedChars": 474,
+      "generatedAt": "2026-06-11T14:59:16.456Z"
+    },
+    {
+      "lessonId": "job-interview-qanda__day-002",
+      "variant": "withSpelling",
+      "playbackMode": "item-sequence",
+      "provider": "google-cloud-tts",
+      "monthBucket": "2026-06",
+      "usedChars": 6695,
+      "generatedAt": "2026-06-12T03:51:56.053Z"
+    },
+    {
+      "lessonId": "job-interview-qanda__day-002",
+      "variant": "withoutSpelling",
+      "playbackMode": "item-sequence",
+      "provider": "google-cloud-tts",
+      "monthBucket": "2026-06",
+      "usedChars": 4394,
+      "generatedAt": "2026-06-12T03:53:19.847Z"
+    },
+    {
+      "lessonId": "job-interview-qanda__day-002",
+      "variant": "withSpelling",
+      "playbackMode": "item-sequence",
+      "provider": "google-cloud-tts",
+      "monthBucket": "2026-06",
+      "usedChars": 6695,
+      "generatedAt": "2026-06-12T04:19:30.638Z"
+    },
+    {
+      "lessonId": "job-interview-qanda__day-002",
+      "variant": "withoutSpelling",
+      "playbackMode": "item-sequence",
+      "provider": "google-cloud-tts",
+      "monthBucket": "2026-06",
+      "usedChars": 4394,
+      "generatedAt": "2026-06-12T04:20:51.721Z"
+    }
+  ]
+}

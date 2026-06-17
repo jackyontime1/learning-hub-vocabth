@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block content %}
+  <section class="flashcards-page">
+    <header class="page-heading flashcards-heading">
+      <div>
+        <p class="eyebrow">Podcast memory deck</p>
+        <h1>Flashcards</h1>
+        <p>Practice podcast vocabulary with Anki-style spaced repetition.</p>
+      </div>
+      <div class="flashcard-stats" id="flashcardStats">
+        <span><b>0</b><small>Due</small></span>
+        <span><b>0</b><small>New</small></span>
+        <span><b>0</b><small>Total</small></span>
+      </div>
+    </header>
+
+    <section class="flashcard-controls" aria-label="Flashcard filters">
+      <label><span>Podcast category</span><select id="flashcardCategory"></select></label>
+      <label><span>Day</span><select id="flashcardDay"><option value="all">All days</option></select></label>
+      <label><span>Card type</span><select id="flashcardType"><option value="en-th">EN to TH</option><option value="th-en">TH to EN</option><option value="cloze">Example Cloze</option></select></label>
+      <label><span>Status</span><select id="flashcardStatus"><option value="due">Due + New</option><option value="new">New only</option><option value="learning">Learning</option><option value="mastered">Mastered</option><option value="all">All cards</option></select></label>
+    </section>
+
+    <section class="flashcard-stage" id="flashcardStage" aria-live="polite">
+      <div class="flashcard-empty">
+        <i class="fa-regular fa-clone"></i>
+        <h2>Loading podcast flashcards</h2>
+        <p>Cards come from the podcast categories and stay on this device.</p>
+      </div>
+    </section>
+  </section>
+{% endblock %}

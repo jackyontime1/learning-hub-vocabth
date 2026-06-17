@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{{ description }}">
+    <title>{{ page_title }}</title>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="{{ base_prefix }}static/css/styles.css">
+  </head>
+  <body data-page="{{ page_type }}" data-base-prefix="{{ base_prefix }}">
+    <header class="site-header">
+      <a class="brand" href="{{ base_prefix }}index.html">
+        <span class="brand-mark"><i class="fa-solid fa-book-open"></i></span>
+        <span><strong>Read English Daily</strong><small>English Reading Practice</small></span>
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a class="{% if page_type == 'index' %}active{% endif %}" href="{{ base_prefix }}index.html"><i class="fa-solid fa-house"></i><span>Home</span></a>
+        <a class="{% if page_type == 'daily' %}active{% endif %}" href="{{ base_prefix }}daily.html"><i class="fa-regular fa-calendar"></i><span>Daily Reading</span></a>
+        <a class="{% if page_type == 'vocabulary' %}active{% endif %}" href="{{ base_prefix }}vocabulary.html"><i class="fa-solid fa-cube"></i><span>Vocabulary</span></a>
+        <a class="{% if page_type == 'podcast' %}active {% endif %}podcast-nav" href="{{ base_prefix }}podcast/index.html"><i class="fa-solid fa-microphone-lines"></i><span>Podcast</span></a>
+        <a class="{% if page_type == 'flashcards' %}active{% endif %}" href="{{ base_prefix }}flashcards.html"><i class="fa-regular fa-clone"></i><span>Flashcards</span></a>
+        <a class="{% if page_type == 'saved' %}active{% endif %}" href="{{ base_prefix }}saved.html"><i class="fa-regular fa-bookmark"></i><span>Saved</span></a>
+      </nav>
+      <span class="profile-button" aria-hidden="true"><i class="fa-solid fa-user"></i></span>
+    </header>
+    <main>{% block content %}{% endblock %}</main>
+    <footer class="site-footer">
+      <span>Updated {{ updated_at }}</span>
+      <span>Free-only sources. No paid API fallback.</span>
+    </footer>
+    <script src="{{ base_prefix }}static/js/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+{% block content %}
+  <div class="article-shell">
+    <aside class="article-side">
+      <a class="back-link" href="../../../daily.html"><i class="fa-solid fa-arrow-left"></i> Daily Reading</a>
+      <section class="side-panel">
+        <h2>Story level</h2>
+        <div class="side-levels"><span class="{{ article.level | lower }}"><b>{{ article.level }}</b> {% if article.level == "A2" %}Beginner{% elif article.level == "B1" %}Intermediate{% else %}Upper Intermediate{% endif %}</span></div>
+      </section>
+      <section class="side-panel status-panel"><h2>{{ article.content_type | title }}</h2><p>Source: {{ article.provider }}</p><a href="{{ article.source_url }}" rel="noopener">Open source</a></section>
+    </aside>
+
+    <article class="reader" data-article-id="{{ article.id }}">
+      <section class="article-hero">
+        <img src="{{ article.image_url }}" alt="" fetchpriority="high">
+        <div class="hero-shade"></div>
+        <div class="featured-label">{{ article.level }} DAILY STORY</div>
+        <div class="article-hero-copy">
+          <div class="story-kicker"><span>{{ article.category }}</span> {{ article.published_display }}</div>
+          <h1>{{ article.title }}</h1>
+          <p>{{ article.description }}</p>
+        </div>
+      </section>
+      <div class="article-action-bar">
+        <div><span><i class="fa-regular fa-clock"></i> 5 min read</span><span><i class="fa-solid fa-signal"></i> {{ article.level }}</span></div>
+        <button class="star-button" data-save-article data-id="{{ article.id }}" data-title="{{ article.title }}" data-url="{{ article.page_url }}" data-level="{{ article.level }}" data-category="{{ article.category }}" data-date="{{ article.published_date }}" data-image="{{ article.image_url }}" type="button"><i class="fa-regular fa-bookmark"></i> <span>Save</span></button>
+      </div>
+
+      <section class="reader-card" id="reader">
+        <header class="reader-toolbar">
+          <div><h2>{{ article.level }} Version</h2><p>Click any word for its Thai meaning.</p></div>
+          <div class="reading-actions">
+            <button class="translate-toggle" type="button"><i class="fa-solid fa-language"></i> Translate to Thai</button>
+            <button class="font-button" data-font-action="decrease" type="button">A-</button>
+            <button class="font-button" data-font-action="increase" type="button">A+</button>
+          </div>
+        </header>
+        <div class="audio-player">
+          <button id="audioToggle" type="button" aria-label="Play audio"><i class="fa-solid fa-play"></i></button>
+          <span id="audioCurrent">0:00</span>
+          <input id="audioProgress" type="range" min="0" max="100" value="0" aria-label="Audio progress">
+          <span id="audioDuration">0:00</span>
+          <div class="speed-control" aria-label="Playback speed">
+            {% for speed in ["0.75", "1", "1.25"] %}<button class="{% if speed == '1' %}active{% endif %}" data-speed="{{ speed }}" type="button">{{ speed }}x</button>{% endfor %}
+          </div>
+          <audio id="storyAudio" preload="metadata" src="{{ article.audio_url }}"></audio>
+        </div>
+        <div class="reading-text">{{ article.word_html }}</div>
+        <section class="full-translation" id="fullTranslation" hidden>
+          <h3>คำแปลภาษาไทย</h3><p>{{ article.thai_text }}</p>
+        </section>
+      </section>
+
+      <section class="learning-grid">
+        <section class="vocabulary-section">
+          <header><div><h2>Save & Review</h2><p>Only words saved from this story appear here.</p></div></header>
+          <div class="saved-article-words" id="articleSavedWords"></div>
+        </section>
+        <aside class="review-card">
+          <i class="fa-solid fa-star"></i><h2>Your vocabulary</h2>
+          <p>Saved words remain in this browser for later review.</p>
+          <a class="primary-button" href="../../../vocabulary.html">Open Vocabulary</a>
+        </aside>
+      </section>
+    </article>
+  </div>
+
+  <div class="vocab-popover" id="vocabPopover" hidden role="dialog" aria-label="Vocabulary translation">
+    <button class="popover-close" id="closeVocabPopover" type="button" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+    <button class="word-sound" id="speakPopoverWord" type="button"><i class="fa-solid fa-volume-high"></i></button>
+    <strong id="popoverWord"></strong><span class="pronunciation" id="popoverPronunciation"></span>
+    <span class="thai-translation" id="popoverTranslation"></span>
+    <div class="vocab-actions">
+      <button class="known-word" id="knownWord" type="button"><i class="fa-solid fa-check"></i> รู้แล้ว</button>
+      <button class="learn-word" id="learnWord" type="button"><i class="fa-solid fa-star"></i> เรียน</button>
+    </div>
+  </div>
+{% endblock %}

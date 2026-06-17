@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block content %}
+  <section class="library-page">
+    <header class="page-heading">
+      <div><p class="eyebrow">Last 7 days</p><h1>Daily Reading</h1><p>Browse recent stories by level and category.</p></div>
+      <div class="page-filters">
+        <select id="levelFilter" aria-label="Filter by level"><option value="all">All levels</option><option>A2</option><option>B1</option><option>B2</option></select>
+        <select id="dailyCategoryFilter" aria-label="Filter by category"><option value="all">All categories</option>{% for category in ["World", "Technology", "Health", "Business", "Science", "Environment"] %}<option>{{ category }}</option>{% endfor %}</select>
+      </div>
+    </header>
+    <div class="daily-list" id="dailyList">
+      {% for group in articles | groupby("published_date") %}
+        <section class="date-group">
+          <h2>{{ group.grouper }}</h2>
+          <div class="story-grid">
+            {% for article in group.list %}
+              <article class="story-card" data-level="{{ article.level }}" data-category="{{ article.category | lower }}">
+                <a class="story-image" href="{{ article.page_url }}"><img src="{{ article.image_url }}" alt="" loading="lazy"></a>
+                <div class="story-content">
+                  <div class="story-meta"><span>{{ article.category }}</span><b class="level-chip {{ article.level | lower }}">{{ article.level }}</b></div>
+                  <h3><a href="{{ article.page_url }}">{{ article.title }}</a></h3>
+                  <p>{{ article.text[:160] }}...</p>
+                  <div class="card-actions">
+                    <button class="star-button" data-save-article data-id="{{ article.id }}" data-title="{{ article.title }}" data-url="{{ article.page_url }}" data-level="{{ article.level }}" data-category="{{ article.category }}" data-date="{{ article.published_date }}" data-image="{{ article.image_url }}" type="button"><i class="fa-regular fa-bookmark"></i> <span>Save</span></button>
+                    <a href="{{ article.page_url }}">Read</a>
+                  </div>
+                </div>
+              </article>
+            {% endfor %}
+          </div>
+        </section>
+      {% endfor %}
+    </div>
+  </section>
+{% endblock %}

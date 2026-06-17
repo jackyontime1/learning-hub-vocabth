@@ -1,0 +1,8 @@
+.env
+.venv/
+.wrangler/
+__pycache__/
+*.pyc
+site/
+.site-staging/
+.site-backup/

@@ -1,0 +1,2101 @@
+{
+  "version": 1,
+  "app": "VocabTH / Oxford Audio Vocabulary",
+  "scope": "job-interview-days-2-8",
+  "lessons": [
+    {
+      "id": "job-interview-qanda__day-002",
+      "category": "Job Interview Q&A",
+      "categorySlug": "job-interview-qanda",
+      "day": 2,
+      "audioProfile": "english-balanced-v2",
+      "batchSize": 10,
+      "items": [
+        {
+          "word": "strength",
+          "meaning": "จุดแข็ง",
+          "example": "My strength is solving problems under pressure.",
+          "exampleTh": "จุดแข็งของผมคือแก้ปัญหาได้ดี แม้ตอนที่งานกดดัน",
+          "mode": "review"
+        },
+        {
+          "word": "weakness",
+          "meaning": "จุดอ่อน",
+          "example": "My weakness is that I sometimes focus too much on details.",
+          "exampleTh": "จุดที่ผมยังต้องพัฒนาคือ บางทีผมใส่ใจกับรายละเอียดมากเกินไป",
+          "mode": "review"
+        },
+        {
+          "word": "experience",
+          "meaning": "ประสบการณ์",
+          "example": "I have experience working with site teams.",
+          "exampleTh": "ผมมีประสบการณ์ทำงานร่วมกับทีมหน้างาน",
+          "mode": "review"
+        },
+        {
+          "word": "responsibility",
+          "meaning": "ความรับผิดชอบ",
+          "example": "My main responsibility was checking daily progress.",
+          "exampleTh": "หน้าที่หลักของผมคือคอยเช็กความคืบหน้าของงานทุกวัน",
+          "mode": "review"
+        },
+        {
+          "word": "achievement",
+          "meaning": "ความสำเร็จ",
+          "example": "My biggest achievement was finishing a project ahead of schedule.",
+          "exampleTh": "ผลงานที่ผมภูมิใจที่สุดคือทำโครงการเสร็จก่อนกำหนด",
+          "mode": "review"
+        },
+        {
+          "word": "challenge",
+          "meaning": "ความท้าทาย",
+          "example": "I handled a challenge by communicating early with the team.",
+          "exampleTh": "เวลาเจอปัญหา ผมจะรีบคุยกับทีมตั้งแต่เนิ่นๆ เพื่อช่วยกันจัดการ",
+          "mode": "review"
+        },
+        {
+          "word": "deadline",
+          "meaning": "กำหนดส่งงาน",
+          "example": "I can work carefully under a tight deadline.",
+          "exampleTh": "ผมทำงานอย่างรอบคอบได้ ถึงเวลาส่งงานจะค่อนข้างกระชั้น",
+          "mode": "review"
+        },
+        {
+          "word": "teamwork",
+          "meaning": "การทำงานเป็นทีม",
+          "example": "Good teamwork keeps a construction project safe.",
+          "exampleTh": "การทำงานเป็นทีมที่ดีช่วยให้งานก่อสร้างปลอดภัยขึ้น",
+          "mode": "review"
+        },
+        {
+          "word": "communication",
+          "meaning": "การสื่อสาร",
+          "example": "Clear communication prevents mistakes on site.",
+          "exampleTh": "คุยกันให้ชัดเจนช่วยลดข้อผิดพลาดในหน้างานได้",
+          "mode": "review"
+        },
+        {
+          "word": "leadership",
+          "meaning": "ภาวะผู้นำ",
+          "example": "Leadership means helping the team make good decisions.",
+          "exampleTh": "ภาวะผู้นำคือการช่วยให้ทีมตัดสินใจได้ดี",
+          "mode": "review"
+        },
+        {
+          "word": "salary expectation",
+          "meaning": "เงินเดือนที่คาดหวัง",
+          "example": "My salary expectation is flexible based on the role.",
+          "exampleTh": "เงินเดือนที่ฉันคาดหวังยืดหยุ่นตามหน้าที่งาน",
+          "mode": "full"
+        },
+        {
+          "word": "availability",
+          "meaning": "วันที่เริ่มงานได้",
+          "example": "My availability is two weeks after confirmation.",
+          "exampleTh": "ฉันสามารถเริ่มงานได้ภายในสองสัปดาห์หลังยืนยัน",
+          "mode": "full"
+        },
+        {
+          "word": "position",
+          "meaning": "ตำแหน่งงาน",
+          "example": "I am interested in this position because it matches my experience.",
+          "exampleTh": "ฉันสนใจตำแหน่งนี้เพราะตรงกับประสบการณ์ของฉัน",
+          "mode": "full"
+        },
+        {
+          "word": "qualification",
+          "meaning": "คุณสมบัติ",
+          "example": "My qualification includes safety training and site experience.",
+          "exampleTh": "คุณสมบัติของฉันรวมถึงการอบรมความปลอดภัยและประสบการณ์หน้างาน",
+          "mode": "full"
+        },
+        {
+          "word": "resume",
+          "meaning": "ประวัติย่อ",
+          "example": "My resume shows my project history.",
+          "exampleTh": "เรซูเม่ของฉันแสดงประวัติโครงการที่เคยทำ",
+          "mode": "full"
+        },
+        {
+          "word": "reference",
+          "meaning": "ผู้รับรอง",
+          "example": "I can provide a reference from my previous supervisor.",
+          "exampleTh": "ฉันสามารถให้ผู้รับรองจากหัวหน้างานเดิมได้",
+          "mode": "full"
+        },
+        {
+          "word": "motivation",
+          "meaning": "แรงจูงใจ",
+          "example": "My motivation is to grow in construction management.",
+          "exampleTh": "แรงจูงใจของฉันคือการเติบโตในงานบริหารก่อสร้าง",
+          "mode": "full"
+        },
+        {
+          "word": "problem-solving",
+          "meaning": "การแก้ปัญหา",
+          "example": "Problem-solving is important when site conditions change.",
+          "exampleTh": "การแก้ปัญหาสำคัญเมื่อสภาพหน้างานเปลี่ยน",
+          "mode": "full"
+        },
+        {
+          "word": "reliable",
+          "meaning": "น่าเชื่อถือ",
+          "example": "I am reliable and I follow through on commitments.",
+          "exampleTh": "ฉันเป็นคนที่เชื่อถือได้และทำตามสิ่งที่รับปาก",
+          "mode": "full"
+        },
+        {
+          "word": "adaptable",
+          "meaning": "ปรับตัวได้",
+          "example": "I am adaptable when plans change.",
+          "exampleTh": "ฉันปรับตัวได้เมื่อแผนเปลี่ยน",
+          "mode": "full"
+        }
+      ]
+    },
+    {
+      "id": "job-interview-qanda__day-003",
+      "category": "Job Interview Q&A",
+      "categorySlug": "job-interview-qanda",
+      "day": 3,
+      "batchSize": 10,
+      "items": [
+        {
+          "word": "strength",
+          "meaning": "จุดแข็ง",
+          "example": "My strength is solving problems under pressure.",
+          "exampleTh": "จุดแข็งของผมคือแก้ปัญหาได้ดี แม้ตอนที่งานกดดัน",
+          "mode": "review"
+        },
+        {
+          "word": "weakness",
+          "meaning": "จุดอ่อน",
+          "example": "My weakness is that I sometimes focus too much on details.",
+          "exampleTh": "จุดที่ผมยังต้องพัฒนาคือ บางทีผมใส่ใจกับรายละเอียดมากเกินไป",
+          "mode": "review"
+        },
+        {
+          "word": "experience",
+          "meaning": "ประสบการณ์",
+          "example": "I have experience working with site teams.",
+          "exampleTh": "ผมมีประสบการณ์ทำงานร่วมกับทีมหน้างาน",
+          "mode": "review"
+        },
+        {
+          "word": "responsibility",
+          "meaning": "ความรับผิดชอบ",
+          "example": "My main responsibility was checking daily progress.",
+          "exampleTh": "หน้าที่หลักของผมคือคอยเช็กความคืบหน้าของงานทุกวัน",
+          "mode": "review"
+        },
+        {
+          "word": "achievement",
+          "meaning": "ความสำเร็จ",
+          "example": "My biggest achievement was finishing a project ahead of schedule.",
+          "exampleTh": "ผลงานที่ผมภูมิใจที่สุดคือทำโครงการเสร็จก่อนกำหนด",
+          "mode": "review"
+        },
+        {
+          "word": "challenge",
+          "meaning": "ความท้าทาย",
+          "example": "I handled a challenge by communicating early with the team.",
+          "exampleTh": "เวลาเจอปัญหา ผมจะรีบคุยกับทีมตั้งแต่เนิ่นๆ เพื่อช่วยกันจัดการ",
+          "mode": "review"
+        },
+        {
+          "word": "deadline",
+          "meaning": "กำหนดส่งงาน",
+          "example": "I can work carefully under a tight deadline.",
+          "exampleTh": "ผมทำงานอย่างรอบคอบได้ ถึงเวลาส่งงานจะค่อนข้างกระชั้น",
+          "mode": "review"
+        },
+        {
+          "word": "teamwork",
+          "meaning": "การทำงานเป็นทีม",
+          "example": "Good teamwork keeps a construction project safe.",
+          "exampleTh": "การทำงานเป็นทีมที่ดีช่วยให้งานก่อสร้างปลอดภัยขึ้น",
+          "mode": "review"
+        },
+        {
+          "word": "communication",
+          "meaning": "การสื่อสาร",
+          "example": "Clear communication prevents mistakes on site.",
+          "exampleTh": "คุยกันให้ชัดเจนช่วยลดข้อผิดพลาดในหน้างานได้",
+          "mode": "review"
+        },
+        {
+          "word": "leadership",
+          "meaning": "ภาวะผู้นำ",
+          "example": "Leadership means helping the team make good decisions.",
+          "exampleTh": "ภาวะผู้นำคือการช่วยให้ทีมตัดสินใจได้ดี",
+          "mode": "review"
+        },
+        {
+          "word": "salary expectation",
+          "meaning": "เงินเดือนที่คาดหวัง",
+          "example": "My salary expectation is flexible based on the role.",
+          "exampleTh": "เงินเดือนที่ฉันคาดหวังยืดหยุ่นตามหน้าที่งาน",
+          "mode": "review"
+        },
+        {
+          "word": "availability",
+          "meaning": "วันที่เริ่มงานได้",
+          "example": "My availability is two weeks after confirmation.",
+          "exampleTh": "ฉันสามารถเริ่มงานได้ภายในสองสัปดาห์หลังยืนยัน",
+          "mode": "review"
+        },
+        {
+          "word": "position",
+          "meaning": "ตำแหน่งงาน",
+          "example": "I am interested in this position because it matches my experience.",
+          "exampleTh": "ฉันสนใจตำแหน่งนี้เพราะตรงกับประสบการณ์ของฉัน",
+          "mode": "review"
+        },
+        {
+          "word": "qualification",
+          "meaning": "คุณสมบัติ",
+          "example": "My qualification includes safety training and site experience.",
+          "exampleTh": "คุณสมบัติของฉันรวมถึงการอบรมความปลอดภัยและประสบการณ์หน้างาน",
+          "mode": "review"
+        },
+        {
+          "word": "resume",
+          "meaning": "ประวัติย่อ",
+          "example": "My resume shows my project history.",
+          "exampleTh": "เรซูเม่ของฉันแสดงประวัติโครงการที่เคยทำ",
+          "mode": "review"
+        },
+        {
+          "word": "reference",
+          "meaning": "ผู้รับรอง",
+          "example": "I can provide a reference from my previous supervisor.",
+          "exampleTh": "ฉันสามารถให้ผู้รับรองจากหัวหน้างานเดิมได้",
+          "mode": "review"
+        },
+        {
+          "word": "motivation",
+          "meaning": "แรงจูงใจ",
+          "example": "My motivation is to grow in construction management.",
+          "exampleTh": "แรงจูงใจของฉันคือการเติบโตในงานบริหารก่อสร้าง",
+          "mode": "review"
+        },
+        {
+          "word": "problem-solving",
+          "meaning": "การแก้ปัญหา",
+          "example": "Problem-solving is important when site conditions change.",
+          "exampleTh": "การแก้ปัญหาสำคัญเมื่อสภาพหน้างานเปลี่ยน",
+          "mode": "review"
+        },
+        {
+          "word": "reliable",
+          "meaning": "น่าเชื่อถือ",
+          "example": "I am reliable and I follow through on commitments.",
+          "exampleTh": "ฉันเป็นคนที่เชื่อถือได้และทำตามสิ่งที่รับปาก",
+          "mode": "review"
+        },
+        {
+          "word": "adaptable",
+          "meaning": "ปรับตัวได้",
+          "example": "I am adaptable when plans change.",
+          "exampleTh": "ฉันปรับตัวได้เมื่อแผนเปลี่ยน",
+          "mode": "review"
+        },
+        {
+          "word": "supervisor",
+          "meaning": "หัวหน้างาน",
+          "example": "My supervisor trusted me to coordinate the work.",
+          "exampleTh": "หัวหน้างานไว้วางใจให้ฉันประสานงาน",
+          "mode": "full"
+        },
+        {
+          "word": "work permit",
+          "meaning": "ใบอนุญาตทำงาน",
+          "example": "I can prepare the required work permit documents.",
+          "exampleTh": "ฉันสามารถเตรียมเอกสารใบอนุญาตทำงานที่จำเป็นได้",
+          "mode": "full"
+        },
+        {
+          "word": "career goal",
+          "meaning": "เป้าหมายอาชีพ",
+          "example": "My career goal is to become a strong site manager.",
+          "exampleTh": "เป้าหมายอาชีพของฉันคือการเป็นผู้จัดการหน้างานที่แข็งแกร่ง",
+          "mode": "full"
+        },
+        {
+          "word": "why should we hire you",
+          "meaning": "ทำไมเราควรจ้างคุณ",
+          "example": "You should hire me because I am careful, practical, and responsible.",
+          "exampleTh": "คุณควรจ้างฉันเพราะฉันรอบคอบ ทำงานได้จริง และรับผิดชอบ",
+          "mode": "full"
+        },
+        {
+          "word": "tell me about yourself",
+          "meaning": "เล่าเกี่ยวกับตัวคุณให้ฟังหน่อย",
+          "example": "Tell me about yourself and your work experience.",
+          "exampleTh": "ช่วยเล่าเกี่ยวกับตัวคุณและประสบการณ์ทำงานของคุณ",
+          "mode": "full"
+        },
+        {
+          "word": "background",
+          "meaning": "พื้นฐานประวัติ/ประสบการณ์",
+          "example": "My background is in construction supervision.",
+          "exampleTh": "พื้นฐานประสบการณ์ของฉันอยู่ในงานควบคุมก่อสร้าง",
+          "mode": "full"
+        },
+        {
+          "word": "previous job",
+          "meaning": "งานก่อนหน้า",
+          "example": "In my previous job, I coordinated with subcontractors.",
+          "exampleTh": "ในงานก่อนหน้า ฉันประสานงานกับผู้รับเหมาช่วง",
+          "mode": "full"
+        },
+        {
+          "word": "current role",
+          "meaning": "บทบาทปัจจุบัน",
+          "example": "My current role is site coordination.",
+          "exampleTh": "บทบาทปัจจุบันของฉันคือการประสานงานหน้างาน",
+          "mode": "full"
+        },
+        {
+          "word": "expected salary",
+          "meaning": "เงินเดือนที่คาดหวัง",
+          "example": "My expected salary depends on the full benefits package.",
+          "exampleTh": "เงินเดือนที่คาดหวังขึ้นอยู่กับสวัสดิการโดยรวม",
+          "mode": "full"
+        },
+        {
+          "word": "notice period",
+          "meaning": "ระยะเวลาแจ้งลาออก",
+          "example": "My notice period is thirty days.",
+          "exampleTh": "ระยะเวลาแจ้งลาออกของฉันคือสามสิบวัน",
+          "mode": "full"
+        }
+      ]
+    },
+    {
+      "id": "job-interview-qanda__day-004",
+      "category": "Job Interview Q&A",
+      "categorySlug": "job-interview-qanda",
+      "day": 4,
+      "batchSize": 10,
+      "items": [
+        {
+          "word": "strength",
+          "meaning": "จุดแข็ง",
+          "example": "My strength is solving problems under pressure.",
+          "exampleTh": "จุดแข็งของผมคือแก้ปัญหาได้ดี แม้ตอนที่งานกดดัน",
+          "mode": "review"
+        },
+        {
+          "word": "weakness",
+          "meaning": "จุดอ่อน",
+          "example": "My weakness is that I sometimes focus too much on details.",
+          "exampleTh": "จุดที่ผมยังต้องพัฒนาคือ บางทีผมใส่ใจกับรายละเอียดมากเกินไป",
+          "mode": "review"
+        },
+        {
+          "word": "experience",
+          "meaning": "ประสบการณ์",
+          "example": "I have experience working with site teams.",
+          "exampleTh": "ผมมีประสบการณ์ทำงานร่วมกับทีมหน้างาน",
+          "mode": "review"
+        },
+        {
+          "word": "responsibility",
+          "meaning": "ความรับผิดชอบ",
+          "example": "My main responsibility was checking daily progress.",
+          "exampleTh": "หน้าที่หลักของผมคือคอยเช็กความคืบหน้าของงานทุกวัน",
+          "mode": "review"
+        },
+        {
+          "word": "achievement",
+          "meaning": "ความสำเร็จ",
+          "example": "My biggest achievement was finishing a project ahead of schedule.",
+          "exampleTh": "ผลงานที่ผมภูมิใจที่สุดคือทำโครงการเสร็จก่อนกำหนด",
+          "mode": "review"
+        },
+        {
+          "word": "challenge",
+          "meaning": "ความท้าทาย",
+          "example": "I handled a challenge by communicating early with the team.",
+          "exampleTh": "เวลาเจอปัญหา ผมจะรีบคุยกับทีมตั้งแต่เนิ่นๆ เพื่อช่วยกันจัดการ",
+          "mode": "review"
+        },
+        {
+          "word": "deadline",
+          "meaning": "กำหนดส่งงาน",
+          "example": "I can work carefully under a tight deadline.",
+          "exampleTh": "ผมทำงานอย่างรอบคอบได้ ถึงเวลาส่งงานจะค่อนข้างกระชั้น",
+          "mode": "review"
+        },
+        {
+          "word": "teamwork",
+          "meaning": "การทำงานเป็นทีม",
+          "example": "Good teamwork keeps a construction project safe.",
+          "exampleTh": "การทำงานเป็นทีมที่ดีช่วยให้งานก่อสร้างปลอดภัยขึ้น",
+          "mode": "review"
+        },
+        {
+          "word": "communication",
+          "meaning": "การสื่อสาร",
+          "example": "Clear communication prevents mistakes on site.",
+          "exampleTh": "คุยกันให้ชัดเจนช่วยลดข้อผิดพลาดในหน้างานได้",
+          "mode": "review"
+        },
+        {
+          "word": "leadership",
+          "meaning": "ภาวะผู้นำ",
+          "example": "Leadership means helping the team make good decisions.",
+          "exampleTh": "ภาวะผู้นำคือการช่วยให้ทีมตัดสินใจได้ดี",
+          "mode": "review"
+        },
+        {
+          "word": "salary expectation",
+          "meaning": "เงินเดือนที่คาดหวัง",
+          "example": "My salary expectation is flexible based on the role.",
+          "exampleTh": "เงินเดือนที่ฉันคาดหวังยืดหยุ่นตามหน้าที่งาน",
+          "mode": "review"
+        },
+        {
+          "word": "availability",
+          "meaning": "วันที่เริ่มงานได้",
+          "example": "My availability is two weeks after confirmation.",
+          "exampleTh": "ฉันสามารถเริ่มงานได้ภายในสองสัปดาห์หลังยืนยัน",
+          "mode": "review"
+        },
+        {
+          "word": "position",
+          "meaning": "ตำแหน่งงาน",
+          "example": "I am interested in this position because it matches my experience.",
+          "exampleTh": "ฉันสนใจตำแหน่งนี้เพราะตรงกับประสบการณ์ของฉัน",
+          "mode": "review"
+        },
+        {
+          "word": "qualification",
+          "meaning": "คุณสมบัติ",
+          "example": "My qualification includes safety training and site experience.",
+          "exampleTh": "คุณสมบัติของฉันรวมถึงการอบรมความปลอดภัยและประสบการณ์หน้างาน",
+          "mode": "review"
+        },
+        {
+          "word": "resume",
+          "meaning": "ประวัติย่อ",
+          "example": "My resume shows my project history.",
+          "exampleTh": "เรซูเม่ของฉันแสดงประวัติโครงการที่เคยทำ",
+          "mode": "review"
+        },
+        {
+          "word": "reference",
+          "meaning": "ผู้รับรอง",
+          "example": "I can provide a reference from my previous supervisor.",
+          "exampleTh": "ฉันสามารถให้ผู้รับรองจากหัวหน้างานเดิมได้",
+          "mode": "review"
+        },
+        {
+          "word": "motivation",
+          "meaning": "แรงจูงใจ",
+          "example": "My motivation is to grow in construction management.",
+          "exampleTh": "แรงจูงใจของฉันคือการเติบโตในงานบริหารก่อสร้าง",
+          "mode": "review"
+        },
+        {
+          "word": "problem-solving",
+          "meaning": "การแก้ปัญหา",
+          "example": "Problem-solving is important when site conditions change.",
+          "exampleTh": "การแก้ปัญหาสำคัญเมื่อสภาพหน้างานเปลี่ยน",
+          "mode": "review"
+        },
+        {
+          "word": "reliable",
+          "meaning": "น่าเชื่อถือ",
+          "example": "I am reliable and I follow through on commitments.",
+          "exampleTh": "ฉันเป็นคนที่เชื่อถือได้และทำตามสิ่งที่รับปาก",
+          "mode": "review"
+        },
+        {
+          "word": "adaptable",
+          "meaning": "ปรับตัวได้",
+          "example": "I am adaptable when plans change.",
+          "exampleTh": "ฉันปรับตัวได้เมื่อแผนเปลี่ยน",
+          "mode": "review"
+        },
+        {
+          "word": "supervisor",
+          "meaning": "หัวหน้างาน",
+          "example": "My supervisor trusted me to coordinate the work.",
+          "exampleTh": "หัวหน้างานไว้วางใจให้ฉันประสานงาน",
+          "mode": "review"
+        },
+        {
+          "word": "work permit",
+          "meaning": "ใบอนุญาตทำงาน",
+          "example": "I can prepare the required work permit documents.",
+          "exampleTh": "ฉันสามารถเตรียมเอกสารใบอนุญาตทำงานที่จำเป็นได้",
+          "mode": "review"
+        },
+        {
+          "word": "career goal",
+          "meaning": "เป้าหมายอาชีพ",
+          "example": "My career goal is to become a strong site manager.",
+          "exampleTh": "เป้าหมายอาชีพของฉันคือการเป็นผู้จัดการหน้างานที่แข็งแกร่ง",
+          "mode": "review"
+        },
+        {
+          "word": "why should we hire you",
+          "meaning": "ทำไมเราควรจ้างคุณ",
+          "example": "You should hire me because I am careful, practical, and responsible.",
+          "exampleTh": "คุณควรจ้างฉันเพราะฉันรอบคอบ ทำงานได้จริง และรับผิดชอบ",
+          "mode": "review"
+        },
+        {
+          "word": "tell me about yourself",
+          "meaning": "เล่าเกี่ยวกับตัวคุณให้ฟังหน่อย",
+          "example": "Tell me about yourself and your work experience.",
+          "exampleTh": "ช่วยเล่าเกี่ยวกับตัวคุณและประสบการณ์ทำงานของคุณ",
+          "mode": "review"
+        },
+        {
+          "word": "background",
+          "meaning": "พื้นฐานประวัติ/ประสบการณ์",
+          "example": "My background is in construction supervision.",
+          "exampleTh": "พื้นฐานประสบการณ์ของฉันอยู่ในงานควบคุมก่อสร้าง",
+          "mode": "review"
+        },
+        {
+          "word": "previous job",
+          "meaning": "งานก่อนหน้า",
+          "example": "In my previous job, I coordinated with subcontractors.",
+          "exampleTh": "ในงานก่อนหน้า ฉันประสานงานกับผู้รับเหมาช่วง",
+          "mode": "review"
+        },
+        {
+          "word": "current role",
+          "meaning": "บทบาทปัจจุบัน",
+          "example": "My current role is site coordination.",
+          "exampleTh": "บทบาทปัจจุบันของฉันคือการประสานงานหน้างาน",
+          "mode": "review"
+        },
+        {
+          "word": "expected salary",
+          "meaning": "เงินเดือนที่คาดหวัง",
+          "example": "My expected salary depends on the full benefits package.",
+          "exampleTh": "เงินเดือนที่คาดหวังขึ้นอยู่กับสวัสดิการโดยรวม",
+          "mode": "review"
+        },
+        {
+          "word": "notice period",
+          "meaning": "ระยะเวลาแจ้งลาออก",
+          "example": "My notice period is thirty days.",
+          "exampleTh": "ระยะเวลาแจ้งลาออกของฉันคือสามสิบวัน",
+          "mode": "review"
+        },
+        {
+          "word": "relocate",
+          "meaning": "ย้ายที่ทำงาน/ย้ายถิ่น",
+          "example": "I am willing to relocate for the right opportunity.",
+          "exampleTh": "ฉันยินดีย้ายที่ทำงานถ้าเป็นโอกาสที่เหมาะสม",
+          "mode": "full"
+        },
+        {
+          "word": "overtime",
+          "meaning": "ทำงานล่วงเวลา",
+          "example": "I can work overtime when the project requires it.",
+          "exampleTh": "ฉันสามารถทำงานล่วงเวลาได้เมื่อโครงการจำเป็น",
+          "mode": "full"
+        },
+        {
+          "word": "shift work",
+          "meaning": "งานเป็นกะ",
+          "example": "I am comfortable with shift work if needed.",
+          "exampleTh": "ฉันทำงานเป็นกะได้ถ้าจำเป็น",
+          "mode": "full"
+        },
+        {
+          "word": "work under pressure",
+          "meaning": "ทำงานภายใต้ความกดดัน",
+          "example": "I can work under pressure and stay organized.",
+          "exampleTh": "ฉันสามารถทำงานภายใต้ความกดดันและยังจัดระบบงานได้",
+          "mode": "full"
+        },
+        {
+          "word": "handle conflict",
+          "meaning": "จัดการความขัดแย้ง",
+          "example": "I handle conflict by listening and finding practical solutions.",
+          "exampleTh": "ฉันจัดการความขัดแย้งโดยฟังและหาทางออกที่ใช้ได้จริง",
+          "mode": "full"
+        },
+        {
+          "word": "decision-making",
+          "meaning": "การตัดสินใจ",
+          "example": "Good decision-making is important on a busy site.",
+          "exampleTh": "การตัดสินใจที่ดีสำคัญในหน้างานที่ยุ่ง",
+          "mode": "full"
+        },
+        {
+          "word": "time management",
+          "meaning": "การบริหารเวลา",
+          "example": "Time management helps me meet deadlines.",
+          "exampleTh": "การบริหารเวลาช่วยให้ฉันทำงานทันกำหนด",
+          "mode": "full"
+        },
+        {
+          "word": "attention to detail",
+          "meaning": "ความใส่ใจรายละเอียด",
+          "example": "Attention to detail prevents costly mistakes.",
+          "exampleTh": "ความใส่ใจรายละเอียดช่วยป้องกันความผิดพลาดที่มีค่าใช้จ่ายสูง",
+          "mode": "full"
+        },
+        {
+          "word": "initiative",
+          "meaning": "ความริเริ่ม",
+          "example": "I take initiative when I see a problem.",
+          "exampleTh": "ฉันริเริ่มลงมือเมื่อเห็นปัญหา",
+          "mode": "full"
+        },
+        {
+          "word": "independent",
+          "meaning": "ทำงานด้วยตัวเองได้",
+          "example": "I can work independently and report clearly.",
+          "exampleTh": "ฉันทำงานด้วยตัวเองได้และรายงานอย่างชัดเจน",
+          "mode": "full"
+        }
+      ]
+    },
+    {
+      "id": "job-interview-qanda__day-005",
+      "category": "Job Interview Q&A",
+      "categorySlug": "job-interview-qanda",
+      "day": 5,
+      "batchSize": 10,
+      "items": [
+        {
+          "word": "strength",
+          "meaning": "จุดแข็ง",
+          "example": "My strength is solving problems under pressure.",
+          "exampleTh": "จุดแข็งของผมคือแก้ปัญหาได้ดี แม้ตอนที่งานกดดัน",
+          "mode": "review"
+        },
+        {
+          "word": "weakness",
+          "meaning": "จุดอ่อน",
+          "example": "My weakness is that I sometimes focus too much on details.",
+          "exampleTh": "จุดที่ผมยังต้องพัฒนาคือ บางทีผมใส่ใจกับรายละเอียดมากเกินไป",
+          "mode": "review"
+        },
+        {
+          "word": "experience",
+          "meaning": "ประสบการณ์",
+          "example": "I have experience working with site teams.",
+          "exampleTh": "ผมมีประสบการณ์ทำงานร่วมกับทีมหน้างาน",
+          "mode": "review"
+        },
+        {
+          "word": "responsibility",
+          "meaning": "ความรับผิดชอบ",
+          "example": "My main responsibility was checking daily progress.",
+          "exampleTh": "หน้าที่หลักของผมคือคอยเช็กความคืบหน้าของงานทุกวัน",
+          "mode": "review"
+        },
+        {
+          "word": "achievement",
+          "meaning": "ความสำเร็จ",
+          "example": "My biggest achievement was finishing a project ahead of schedule.",
+          "exampleTh": "ผลงานที่ผมภูมิใจที่สุดคือทำโครงการเสร็จก่อนกำหนด",
+          "mode": "review"
+        },
+        {
+          "word": "challenge",
+          "meaning": "ความท้าทาย",
+          "example": "I handled a challenge by communicating early with the team.",
+          "exampleTh": "เวลาเจอปัญหา ผมจะรีบคุยกับทีมตั้งแต่เนิ่นๆ เพื่อช่วยกันจัดการ",
+          "mode": "review"
+        },
+        {
+          "word": "deadline",
+          "meaning": "กำหนดส่งงาน",
+          "example": "I can work carefully under a tight deadline.",
+          "exampleTh": "ผมทำงานอย่างรอบคอบได้ ถึงเวลาส่งงานจะค่อนข้างกระชั้น",
+          "mode": "review"
+        },
+        {
+          "word": "teamwork",
+          "meaning": "การทำงานเป็นทีม",
+          "example": "Good teamwork keeps a construction project safe.",
+          "exampleTh": "การทำงานเป็นทีมที่ดีช่วยให้งานก่อสร้างปลอดภัยขึ้น",
+          "mode": "review"
+        },
+        {
+          "word": "communication",
+          "meaning": "การสื่อสาร",
+          "example": "Clear communication prevents mistakes on site.",
+          "exampleTh": "คุยกันให้ชัดเจนช่วยลดข้อผิดพลาดในหน้างานได้",
+          "mode": "review"
+        },
+        {
+          "word": "leadership",
+          "meaning": "ภาวะผู้นำ",
+          "example": "Leadership means helping the team make good decisions.",
+          "exampleTh": "ภาวะผู้นำคือการช่วยให้ทีมตัดสินใจได้ดี",
+          "mode": "review"
+        },
+        {
+          "word": "salary expectation",
+          "meaning": "เงินเดือนที่คาดหวัง",
+          "example": "My salary expectation is flexible based on the role.",
+          "exampleTh": "เงินเดือนที่ฉันคาดหวังยืดหยุ่นตามหน้าที่งาน",
+          "mode": "review"
+        },
+        {
+          "word": "availability",
+          "meaning": "วันที่เริ่มงานได้",
+          "example": "My availability is two weeks after confirmation.",
+          "exampleTh": "ฉันสามารถเริ่มงานได้ภายในสองสัปดาห์หลังยืนยัน",
+          "mode": "review"
+        },
+        {
+          "word": "position",
+          "meaning": "ตำแหน่งงาน",
+          "example": "I am interested in this position because it matches my experience.",
+          "exampleTh": "ฉันสนใจตำแหน่งนี้เพราะตรงกับประสบการณ์ของฉัน",
+          "mode": "review"
+        },
+        {
+          "word": "qualification",
+          "meaning": "คุณสมบัติ",
+          "example": "My qualification includes safety training and site experience.",
+          "exampleTh": "คุณสมบัติของฉันรวมถึงการอบรมความปลอดภัยและประสบการณ์หน้างาน",
+          "mode": "review"
+        },
+        {
+          "word": "resume",
+          "meaning": "ประวัติย่อ",
+          "example": "My resume shows my project history.",
+          "exampleTh": "เรซูเม่ของฉันแสดงประวัติโครงการที่เคยทำ",
+          "mode": "review"
+        },
+        {
+          "word": "reference",
+          "meaning": "ผู้รับรอง",
+          "example": "I can provide a reference from my previous supervisor.",
+          "exampleTh": "ฉันสามารถให้ผู้รับรองจากหัวหน้างานเดิมได้",
+          "mode": "review"
+        },
+        {
+          "word": "motivation",
+          "meaning": "แรงจูงใจ",
+          "example": "My motivation is to grow in construction management.",
+          "exampleTh": "แรงจูงใจของฉันคือการเติบโตในงานบริหารก่อสร้าง",
+          "mode": "review"
+        },
+        {
+          "word": "problem-solving",
+          "meaning": "การแก้ปัญหา",
+          "example": "Problem-solving is important when site conditions change.",
+          "exampleTh": "การแก้ปัญหาสำคัญเมื่อสภาพหน้างานเปลี่ยน",
+          "mode": "review"
+        },
+        {
+          "word": "reliable",
+          "meaning": "น่าเชื่อถือ",
+          "example": "I am reliable and I follow through on commitments.",
+          "exampleTh": "ฉันเป็นคนที่เชื่อถือได้และทำตามสิ่งที่รับปาก",
+          "mode": "review"
+        },
+        {
+          "word": "adaptable",
+          "meaning": "ปรับตัวได้",
+          "example": "I am adaptable when plans change.",
+          "exampleTh": "ฉันปรับตัวได้เมื่อแผนเปลี่ยน",
+          "mode": "review"
+        },
+        {
+          "word": "supervisor",
+          "meaning": "หัวหน้างาน",
+          "example": "My supervisor trusted me to coordinate the work.",
+          "exampleTh": "หัวหน้างานไว้วางใจให้ฉันประสานงาน",
+          "mode": "review"
+        },
+        {
+          "word": "work permit",
+          "meaning": "ใบอนุญาตทำงาน",
+          "example": "I can prepare the required work permit documents.",
+          "exampleTh": "ฉันสามารถเตรียมเอกสารใบอนุญาตทำงานที่จำเป็นได้",
+          "mode": "review"
+        },
+        {
+          "word": "career goal",
+          "meaning": "เป้าหมายอาชีพ",
+          "example": "My career goal is to become a strong site manager.",
+          "exampleTh": "เป้าหมายอาชีพของฉันคือการเป็นผู้จัดการหน้างานที่แข็งแกร่ง",
+          "mode": "review"
+        },
+        {
+          "word": "why should we hire you",
+          "meaning": "ทำไมเราควรจ้างคุณ",
+          "example": "You should hire me because I am careful, practical, and responsible.",
+          "exampleTh": "คุณควรจ้างฉันเพราะฉันรอบคอบ ทำงานได้จริง และรับผิดชอบ",
+          "mode": "review"
+        },
+        {
+          "word": "tell me about yourself",
+          "meaning": "เล่าเกี่ยวกับตัวคุณให้ฟังหน่อย",
+          "example": "Tell me about yourself and your work experience.",
+          "exampleTh": "ช่วยเล่าเกี่ยวกับตัวคุณและประสบการณ์ทำงานของคุณ",
+          "mode": "review"
+        },
+        {
+          "word": "background",
+          "meaning": "พื้นฐานประวัติ/ประสบการณ์",
+          "example": "My background is in construction supervision.",
+          "exampleTh": "พื้นฐานประสบการณ์ของฉันอยู่ในงานควบคุมก่อสร้าง",
+          "mode": "review"
+        },
+        {
+          "word": "previous job",
+          "meaning": "งานก่อนหน้า",
+          "example": "In my previous job, I coordinated with subcontractors.",
+          "exampleTh": "ในงานก่อนหน้า ฉันประสานงานกับผู้รับเหมาช่วง",
+          "mode": "review"
+        },
+        {
+          "word": "current role",
+          "meaning": "บทบาทปัจจุบัน",
+          "example": "My current role is site coordination.",
+          "exampleTh": "บทบาทปัจจุบันของฉันคือการประสานงานหน้างาน",
+          "mode": "review"
+        },
+        {
+          "word": "expected salary",
+          "meaning": "เงินเดือนที่คาดหวัง",
+          "example": "My expected salary depends on the full benefits package.",
+          "exampleTh": "เงินเดือนที่คาดหวังขึ้นอยู่กับสวัสดิการโดยรวม",
+          "mode": "review"
+        },
+        {
+          "word": "notice period",
+          "meaning": "ระยะเวลาแจ้งลาออก",
+          "example": "My notice period is thirty days.",
+          "exampleTh": "ระยะเวลาแจ้งลาออกของฉันคือสามสิบวัน",
+          "mode": "review"
+        },
+        {
+          "word": "relocate",
+          "meaning": "ย้ายที่ทำงาน/ย้ายถิ่น",
+          "example": "I am willing to relocate for the right opportunity.",
+          "exampleTh": "ฉันยินดีย้ายที่ทำงานถ้าเป็นโอกาสที่เหมาะสม",
+          "mode": "review"
+        },
+        {
+          "word": "overtime",
+          "meaning": "ทำงานล่วงเวลา",
+          "example": "I can work overtime when the project requires it.",
+          "exampleTh": "ฉันสามารถทำงานล่วงเวลาได้เมื่อโครงการจำเป็น",
+          "mode": "review"
+        },
+        {
+          "word": "shift work",
+          "meaning": "งานเป็นกะ",
+          "example": "I am comfortable with shift work if needed.",
+          "exampleTh": "ฉันทำงานเป็นกะได้ถ้าจำเป็น",
+          "mode": "review"
+        },
+        {
+          "word": "work under pressure",
+          "meaning": "ทำงานภายใต้ความกดดัน",
+          "example": "I can work under pressure and stay organized.",
+          "exampleTh": "ฉันสามารถทำงานภายใต้ความกดดันและยังจัดระบบงานได้",
+          "mode": "review"
+        },
+        {
+          "word": "handle conflict",
+          "meaning": "จัดการความขัดแย้ง",
+          "example": "I handle conflict by listening and finding practical solutions.",
+          "exampleTh": "ฉันจัดการความขัดแย้งโดยฟังและหาทางออกที่ใช้ได้จริง",
+          "mode": "review"
+        },
+        {
+          "word": "decision-making",
+          "meaning": "การตัดสินใจ",
+          "example": "Good decision-making is important on a busy site.",
+          "exampleTh": "การตัดสินใจที่ดีสำคัญในหน้างานที่ยุ่ง",
+          "mode": "review"
+        },
+        {
+          "word": "time management",
+          "meaning": "การบริหารเวลา",
+          "example": "Time management helps me meet deadlines.",
+          "exampleTh": "การบริหารเวลาช่วยให้ฉันทำงานทันกำหนด",
+          "mode": "review"
+        },
+        {
+          "word": "attention to detail",
+          "meaning": "ความใส่ใจรายละเอียด",
+          "example": "Attention to detail prevents costly mistakes.",
+          "exampleTh": "ความใส่ใจรายละเอียดช่วยป้องกันความผิดพลาดที่มีค่าใช้จ่ายสูง",
+          "mode": "review"
+        },
+        {
+          "word": "initiative",
+          "meaning": "ความริเริ่ม",
+          "example": "I take initiative when I see a problem.",
+          "exampleTh": "ฉันริเริ่มลงมือเมื่อเห็นปัญหา",
+          "mode": "review"
+        },
+        {
+          "word": "independent",
+          "meaning": "ทำงานด้วยตัวเองได้",
+          "example": "I can work independently and report clearly.",
+          "exampleTh": "ฉันทำงานด้วยตัวเองได้และรายงานอย่างชัดเจน",
+          "mode": "review"
+        },
+        {
+          "word": "collaborate",
+          "meaning": "ร่วมมือ",
+          "example": "I collaborate with engineers, workers, and suppliers.",
+          "exampleTh": "ฉันร่วมมือกับวิศวกร คนงาน และซัพพลายเออร์",
+          "mode": "full"
+        },
+        {
+          "word": "coordinate",
+          "meaning": "ประสานงาน",
+          "example": "I coordinate daily work between teams.",
+          "exampleTh": "ฉันประสานงานประจำวันระหว่างทีม",
+          "mode": "full"
+        },
+        {
+          "word": "negotiate",
+          "meaning": "เจรจาต่อรอง",
+          "example": "I negotiate with suppliers to solve delivery issues.",
+          "exampleTh": "ฉันเจรจากับซัพพลายเออร์เพื่อแก้ปัญหาการส่งของ",
+          "mode": "full"
+        },
+        {
+          "word": "follow up",
+          "meaning": "ติดตามงาน",
+          "example": "I follow up on issues until they are closed.",
+          "exampleTh": "ฉันติดตามปัญหาจนกว่าจะปิดงานได้",
+          "mode": "full"
+        },
+        {
+          "word": "reporting",
+          "meaning": "การรายงาน",
+          "example": "Daily reporting keeps management informed.",
+          "exampleTh": "การรายงานประจำวันทำให้ผู้บริหารรับทราบข้อมูล",
+          "mode": "full"
+        },
+        {
+          "word": "documentation",
+          "meaning": "การจัดทำเอกสาร",
+          "example": "Documentation is important for quality and safety.",
+          "exampleTh": "การจัดทำเอกสารสำคัญต่อคุณภาพและความปลอดภัย",
+          "mode": "full"
+        },
+        {
+          "word": "computer skills",
+          "meaning": "ทักษะคอมพิวเตอร์",
+          "example": "My computer skills include spreadsheets and project reports.",
+          "exampleTh": "ทักษะคอมพิวเตอร์ของฉันรวมถึงสเปรดชีตและรายงานโครงการ",
+          "mode": "full"
+        },
+        {
+          "word": "English communication",
+          "meaning": "การสื่อสารภาษาอังกฤษ",
+          "example": "I can use English for site communication and reports.",
+          "exampleTh": "ฉันใช้ภาษาอังกฤษในการสื่อสารหน้างานและรายงานได้",
+          "mode": "full"
+        },
+        {
+          "word": "safety awareness",
+          "meaning": "ความตระหนักด้านความปลอดภัย",
+          "example": "Safety awareness is part of my daily work.",
+          "exampleTh": "ความตระหนักด้านความปลอดภัยเป็นส่วนหนึ่งของงานประจำวัน",
+          "mode": "full"
+        },
+        {
+          "word": "site experience",
+          "meaning": "ประสบการณ์หน้างาน",
+          "example": "My site experience helps me understand real problems.",
+          "exampleTh": "ประสบการณ์หน้างานช่วยให้ฉันเข้าใจปัญหาจริง",
+          "mode": "full"
+        }
+      ]
+    },
+    {
+      "id": "job-interview-qanda__day-006",
+      "category": "Job Interview Q&A",
+      "categorySlug": "job-interview-qanda",
+      "day": 6,
+      "batchSize": 10,
+      "items": [
+        {
+          "word": "salary expectation",
+          "meaning": "เงินเดือนที่คาดหวัง",
+          "example": "My salary expectation is flexible based on the role.",
+          "exampleTh": "เงินเดือนที่ฉันคาดหวังยืดหยุ่นตามหน้าที่งาน",
+          "mode": "review"
+        },
+        {
+          "word": "availability",
+          "meaning": "วันที่เริ่มงานได้",
+          "example": "My availability is two weeks after confirmation.",
+          "exampleTh": "ฉันสามารถเริ่มงานได้ภายในสองสัปดาห์หลังยืนยัน",
+          "mode": "review"
+        },
+        {
+          "word": "position",
+          "meaning": "ตำแหน่งงาน",
+          "example": "I am interested in this position because it matches my experience.",
+          "exampleTh": "ฉันสนใจตำแหน่งนี้เพราะตรงกับประสบการณ์ของฉัน",
+          "mode": "review"
+        },
+        {
+          "word": "qualification",
+          "meaning": "คุณสมบัติ",
+          "example": "My qualification includes safety training and site experience.",
+          "exampleTh": "คุณสมบัติของฉันรวมถึงการอบรมความปลอดภัยและประสบการณ์หน้างาน",
+          "mode": "review"
+        },
+        {
+          "word": "resume",
+          "meaning": "ประวัติย่อ",
+          "example": "My resume shows my project history.",
+          "exampleTh": "เรซูเม่ของฉันแสดงประวัติโครงการที่เคยทำ",
+          "mode": "review"
+        },
+        {
+          "word": "reference",
+          "meaning": "ผู้รับรอง",
+          "example": "I can provide a reference from my previous supervisor.",
+          "exampleTh": "ฉันสามารถให้ผู้รับรองจากหัวหน้างานเดิมได้",
+          "mode": "review"
+        },
+        {
+          "word": "motivation",
+          "meaning": "แรงจูงใจ",
+          "example": "My motivation is to grow in construction management.",
+          "exampleTh": "แรงจูงใจของฉันคือการเติบโตในงานบริหารก่อสร้าง",
+          "mode": "review"
+        },
+        {
+          "word": "problem-solving",
+          "meaning": "การแก้ปัญหา",
+          "example": "Problem-solving is important when site conditions change.",
+          "exampleTh": "การแก้ปัญหาสำคัญเมื่อสภาพหน้างานเปลี่ยน",
+          "mode": "review"
+        },
+        {
+          "word": "reliable",
+          "meaning": "น่าเชื่อถือ",
+          "example": "I am reliable and I follow through on commitments.",
+          "exampleTh": "ฉันเป็นคนที่เชื่อถือได้และทำตามสิ่งที่รับปาก",
+          "mode": "review"
+        },
+        {
+          "word": "adaptable",
+          "meaning": "ปรับตัวได้",
+          "example": "I am adaptable when plans change.",
+          "exampleTh": "ฉันปรับตัวได้เมื่อแผนเปลี่ยน",
+          "mode": "review"
+        },
+        {
+          "word": "supervisor",
+          "meaning": "หัวหน้างาน",
+          "example": "My supervisor trusted me to coordinate the work.",
+          "exampleTh": "หัวหน้างานไว้วางใจให้ฉันประสานงาน",
+          "mode": "review"
+        },
+        {
+          "word": "work permit",
+          "meaning": "ใบอนุญาตทำงาน",
+          "example": "I can prepare the required work permit documents.",
+          "exampleTh": "ฉันสามารถเตรียมเอกสารใบอนุญาตทำงานที่จำเป็นได้",
+          "mode": "review"
+        },
+        {
+          "word": "career goal",
+          "meaning": "เป้าหมายอาชีพ",
+          "example": "My career goal is to become a strong site manager.",
+          "exampleTh": "เป้าหมายอาชีพของฉันคือการเป็นผู้จัดการหน้างานที่แข็งแกร่ง",
+          "mode": "review"
+        },
+        {
+          "word": "why should we hire you",
+          "meaning": "ทำไมเราควรจ้างคุณ",
+          "example": "You should hire me because I am careful, practical, and responsible.",
+          "exampleTh": "คุณควรจ้างฉันเพราะฉันรอบคอบ ทำงานได้จริง และรับผิดชอบ",
+          "mode": "review"
+        },
+        {
+          "word": "tell me about yourself",
+          "meaning": "เล่าเกี่ยวกับตัวคุณให้ฟังหน่อย",
+          "example": "Tell me about yourself and your work experience.",
+          "exampleTh": "ช่วยเล่าเกี่ยวกับตัวคุณและประสบการณ์ทำงานของคุณ",
+          "mode": "review"
+        },
+        {
+          "word": "background",
+          "meaning": "พื้นฐานประวัติ/ประสบการณ์",
+          "example": "My background is in construction supervision.",
+          "exampleTh": "พื้นฐานประสบการณ์ของฉันอยู่ในงานควบคุมก่อสร้าง",
+          "mode": "review"
+        },
+        {
+          "word": "previous job",
+          "meaning": "งานก่อนหน้า",
+          "example": "In my previous job, I coordinated with subcontractors.",
+          "exampleTh": "ในงานก่อนหน้า ฉันประสานงานกับผู้รับเหมาช่วง",
+          "mode": "review"
+        },
+        {
+          "word": "current role",
+          "meaning": "บทบาทปัจจุบัน",
+          "example": "My current role is site coordination.",
+          "exampleTh": "บทบาทปัจจุบันของฉันคือการประสานงานหน้างาน",
+          "mode": "review"
+        },
+        {
+          "word": "expected salary",
+          "meaning": "เงินเดือนที่คาดหวัง",
+          "example": "My expected salary depends on the full benefits package.",
+          "exampleTh": "เงินเดือนที่คาดหวังขึ้นอยู่กับสวัสดิการโดยรวม",
+          "mode": "review"
+        },
+        {
+          "word": "notice period",
+          "meaning": "ระยะเวลาแจ้งลาออก",
+          "example": "My notice period is thirty days.",
+          "exampleTh": "ระยะเวลาแจ้งลาออกของฉันคือสามสิบวัน",
+          "mode": "review"
+        },
+        {
+          "word": "relocate",
+          "meaning": "ย้ายที่ทำงาน/ย้ายถิ่น",
+          "example": "I am willing to relocate for the right opportunity.",
+          "exampleTh": "ฉันยินดีย้ายที่ทำงานถ้าเป็นโอกาสที่เหมาะสม",
+          "mode": "review"
+        },
+        {
+          "word": "overtime",
+          "meaning": "ทำงานล่วงเวลา",
+          "example": "I can work overtime when the project requires it.",
+          "exampleTh": "ฉันสามารถทำงานล่วงเวลาได้เมื่อโครงการจำเป็น",
+          "mode": "review"
+        },
+        {
+          "word": "shift work",
+          "meaning": "งานเป็นกะ",
+          "example": "I am comfortable with shift work if needed.",
+          "exampleTh": "ฉันทำงานเป็นกะได้ถ้าจำเป็น",
+          "mode": "review"
+        },
+        {
+          "word": "work under pressure",
+          "meaning": "ทำงานภายใต้ความกดดัน",
+          "example": "I can work under pressure and stay organized.",
+          "exampleTh": "ฉันสามารถทำงานภายใต้ความกดดันและยังจัดระบบงานได้",
+          "mode": "review"
+        },
+        {
+          "word": "handle conflict",
+          "meaning": "จัดการความขัดแย้ง",
+          "example": "I handle conflict by listening and finding practical solutions.",
+          "exampleTh": "ฉันจัดการความขัดแย้งโดยฟังและหาทางออกที่ใช้ได้จริง",
+          "mode": "review"
+        },
+        {
+          "word": "decision-making",
+          "meaning": "การตัดสินใจ",
+          "example": "Good decision-making is important on a busy site.",
+          "exampleTh": "การตัดสินใจที่ดีสำคัญในหน้างานที่ยุ่ง",
+          "mode": "review"
+        },
+        {
+          "word": "time management",
+          "meaning": "การบริหารเวลา",
+          "example": "Time management helps me meet deadlines.",
+          "exampleTh": "การบริหารเวลาช่วยให้ฉันทำงานทันกำหนด",
+          "mode": "review"
+        },
+        {
+          "word": "attention to detail",
+          "meaning": "ความใส่ใจรายละเอียด",
+          "example": "Attention to detail prevents costly mistakes.",
+          "exampleTh": "ความใส่ใจรายละเอียดช่วยป้องกันความผิดพลาดที่มีค่าใช้จ่ายสูง",
+          "mode": "review"
+        },
+        {
+          "word": "initiative",
+          "meaning": "ความริเริ่ม",
+          "example": "I take initiative when I see a problem.",
+          "exampleTh": "ฉันริเริ่มลงมือเมื่อเห็นปัญหา",
+          "mode": "review"
+        },
+        {
+          "word": "independent",
+          "meaning": "ทำงานด้วยตัวเองได้",
+          "example": "I can work independently and report clearly.",
+          "exampleTh": "ฉันทำงานด้วยตัวเองได้และรายงานอย่างชัดเจน",
+          "mode": "review"
+        },
+        {
+          "word": "collaborate",
+          "meaning": "ร่วมมือ",
+          "example": "I collaborate with engineers, workers, and suppliers.",
+          "exampleTh": "ฉันร่วมมือกับวิศวกร คนงาน และซัพพลายเออร์",
+          "mode": "review"
+        },
+        {
+          "word": "coordinate",
+          "meaning": "ประสานงาน",
+          "example": "I coordinate daily work between teams.",
+          "exampleTh": "ฉันประสานงานประจำวันระหว่างทีม",
+          "mode": "review"
+        },
+        {
+          "word": "negotiate",
+          "meaning": "เจรจาต่อรอง",
+          "example": "I negotiate with suppliers to solve delivery issues.",
+          "exampleTh": "ฉันเจรจากับซัพพลายเออร์เพื่อแก้ปัญหาการส่งของ",
+          "mode": "review"
+        },
+        {
+          "word": "follow up",
+          "meaning": "ติดตามงาน",
+          "example": "I follow up on issues until they are closed.",
+          "exampleTh": "ฉันติดตามปัญหาจนกว่าจะปิดงานได้",
+          "mode": "review"
+        },
+        {
+          "word": "reporting",
+          "meaning": "การรายงาน",
+          "example": "Daily reporting keeps management informed.",
+          "exampleTh": "การรายงานประจำวันทำให้ผู้บริหารรับทราบข้อมูล",
+          "mode": "review"
+        },
+        {
+          "word": "documentation",
+          "meaning": "การจัดทำเอกสาร",
+          "example": "Documentation is important for quality and safety.",
+          "exampleTh": "การจัดทำเอกสารสำคัญต่อคุณภาพและความปลอดภัย",
+          "mode": "review"
+        },
+        {
+          "word": "computer skills",
+          "meaning": "ทักษะคอมพิวเตอร์",
+          "example": "My computer skills include spreadsheets and project reports.",
+          "exampleTh": "ทักษะคอมพิวเตอร์ของฉันรวมถึงสเปรดชีตและรายงานโครงการ",
+          "mode": "review"
+        },
+        {
+          "word": "English communication",
+          "meaning": "การสื่อสารภาษาอังกฤษ",
+          "example": "I can use English for site communication and reports.",
+          "exampleTh": "ฉันใช้ภาษาอังกฤษในการสื่อสารหน้างานและรายงานได้",
+          "mode": "review"
+        },
+        {
+          "word": "safety awareness",
+          "meaning": "ความตระหนักด้านความปลอดภัย",
+          "example": "Safety awareness is part of my daily work.",
+          "exampleTh": "ความตระหนักด้านความปลอดภัยเป็นส่วนหนึ่งของงานประจำวัน",
+          "mode": "review"
+        },
+        {
+          "word": "site experience",
+          "meaning": "ประสบการณ์หน้างาน",
+          "example": "My site experience helps me understand real problems.",
+          "exampleTh": "ประสบการณ์หน้างานช่วยให้ฉันเข้าใจปัญหาจริง",
+          "mode": "review"
+        },
+        {
+          "word": "technical knowledge",
+          "meaning": "ความรู้เชิงเทคนิค",
+          "example": "Technical knowledge helps me communicate with engineers.",
+          "exampleTh": "ความรู้เชิงเทคนิคช่วยให้ฉันสื่อสารกับวิศวกรได้",
+          "mode": "full"
+        },
+        {
+          "word": "training",
+          "meaning": "การอบรม",
+          "example": "I have completed basic safety training.",
+          "exampleTh": "ฉันผ่านการอบรมความปลอดภัยพื้นฐานแล้ว",
+          "mode": "full"
+        },
+        {
+          "word": "certificate",
+          "meaning": "ใบรับรอง",
+          "example": "I can provide my training certificate.",
+          "exampleTh": "ฉันสามารถให้ใบรับรองการอบรมได้",
+          "mode": "full"
+        },
+        {
+          "word": "portfolio",
+          "meaning": "ผลงาน",
+          "example": "My portfolio includes photos from previous projects.",
+          "exampleTh": "แฟ้มผลงานของฉันมีรูปจากโครงการก่อนหน้า",
+          "mode": "full"
+        },
+        {
+          "word": "career path",
+          "meaning": "เส้นทางอาชีพ",
+          "example": "I want a career path with more responsibility.",
+          "exampleTh": "ฉันต้องการเส้นทางอาชีพที่มีความรับผิดชอบมากขึ้น",
+          "mode": "full"
+        },
+        {
+          "word": "long-term goal",
+          "meaning": "เป้าหมายระยะยาว",
+          "example": "My long-term goal is to manage larger projects.",
+          "exampleTh": "เป้าหมายระยะยาวของฉันคือการบริหารโครงการที่ใหญ่ขึ้น",
+          "mode": "full"
+        },
+        {
+          "word": "short-term goal",
+          "meaning": "เป้าหมายระยะสั้น",
+          "example": "My short-term goal is to learn your system quickly.",
+          "exampleTh": "เป้าหมายระยะสั้นของฉันคือเรียนรู้ระบบของคุณให้เร็ว",
+          "mode": "full"
+        },
+        {
+          "word": "company culture",
+          "meaning": "วัฒนธรรมองค์กร",
+          "example": "I value a company culture that supports safety and teamwork.",
+          "exampleTh": "ฉันให้คุณค่ากับวัฒนธรรมองค์กรที่สนับสนุนความปลอดภัยและทีมเวิร์ก",
+          "mode": "full"
+        },
+        {
+          "word": "job description",
+          "meaning": "รายละเอียดงาน",
+          "example": "I read the job description carefully.",
+          "exampleTh": "ฉันอ่านรายละเอียดงานอย่างรอบคอบ",
+          "mode": "full"
+        },
+        {
+          "word": "requirement",
+          "meaning": "ข้อกำหนด/คุณสมบัติที่ต้องการ",
+          "example": "This requirement matches my experience.",
+          "exampleTh": "ข้อกำหนดนี้ตรงกับประสบการณ์ของฉัน",
+          "mode": "full"
+        }
+      ]
+    },
+    {
+      "id": "job-interview-qanda__day-007",
+      "category": "Job Interview Q&A",
+      "categorySlug": "job-interview-qanda",
+      "day": 7,
+      "batchSize": 10,
+      "items": [
+        {
+          "word": "supervisor",
+          "meaning": "หัวหน้างาน",
+          "example": "My supervisor trusted me to coordinate the work.",
+          "exampleTh": "หัวหน้างานไว้วางใจให้ฉันประสานงาน",
+          "mode": "review"
+        },
+        {
+          "word": "work permit",
+          "meaning": "ใบอนุญาตทำงาน",
+          "example": "I can prepare the required work permit documents.",
+          "exampleTh": "ฉันสามารถเตรียมเอกสารใบอนุญาตทำงานที่จำเป็นได้",
+          "mode": "review"
+        },
+        {
+          "word": "career goal",
+          "meaning": "เป้าหมายอาชีพ",
+          "example": "My career goal is to become a strong site manager.",
+          "exampleTh": "เป้าหมายอาชีพของฉันคือการเป็นผู้จัดการหน้างานที่แข็งแกร่ง",
+          "mode": "review"
+        },
+        {
+          "word": "why should we hire you",
+          "meaning": "ทำไมเราควรจ้างคุณ",
+          "example": "You should hire me because I am careful, practical, and responsible.",
+          "exampleTh": "คุณควรจ้างฉันเพราะฉันรอบคอบ ทำงานได้จริง และรับผิดชอบ",
+          "mode": "review"
+        },
+        {
+          "word": "tell me about yourself",
+          "meaning": "เล่าเกี่ยวกับตัวคุณให้ฟังหน่อย",
+          "example": "Tell me about yourself and your work experience.",
+          "exampleTh": "ช่วยเล่าเกี่ยวกับตัวคุณและประสบการณ์ทำงานของคุณ",
+          "mode": "review"
+        },
+        {
+          "word": "background",
+          "meaning": "พื้นฐานประวัติ/ประสบการณ์",
+          "example": "My background is in construction supervision.",
+          "exampleTh": "พื้นฐานประสบการณ์ของฉันอยู่ในงานควบคุมก่อสร้าง",
+          "mode": "review"
+        },
+        {
+          "word": "previous job",
+          "meaning": "งานก่อนหน้า",
+          "example": "In my previous job, I coordinated with subcontractors.",
+          "exampleTh": "ในงานก่อนหน้า ฉันประสานงานกับผู้รับเหมาช่วง",
+          "mode": "review"
+        },
+        {
+          "word": "current role",
+          "meaning": "บทบาทปัจจุบัน",
+          "example": "My current role is site coordination.",
+          "exampleTh": "บทบาทปัจจุบันของฉันคือการประสานงานหน้างาน",
+          "mode": "review"
+        },
+        {
+          "word": "expected salary",
+          "meaning": "เงินเดือนที่คาดหวัง",
+          "example": "My expected salary depends on the full benefits package.",
+          "exampleTh": "เงินเดือนที่คาดหวังขึ้นอยู่กับสวัสดิการโดยรวม",
+          "mode": "review"
+        },
+        {
+          "word": "notice period",
+          "meaning": "ระยะเวลาแจ้งลาออก",
+          "example": "My notice period is thirty days.",
+          "exampleTh": "ระยะเวลาแจ้งลาออกของฉันคือสามสิบวัน",
+          "mode": "review"
+        },
+        {
+          "word": "relocate",
+          "meaning": "ย้ายที่ทำงาน/ย้ายถิ่น",
+          "example": "I am willing to relocate for the right opportunity.",
+          "exampleTh": "ฉันยินดีย้ายที่ทำงานถ้าเป็นโอกาสที่เหมาะสม",
+          "mode": "review"
+        },
+        {
+          "word": "overtime",
+          "meaning": "ทำงานล่วงเวลา",
+          "example": "I can work overtime when the project requires it.",
+          "exampleTh": "ฉันสามารถทำงานล่วงเวลาได้เมื่อโครงการจำเป็น",
+          "mode": "review"
+        },
+        {
+          "word": "shift work",
+          "meaning": "งานเป็นกะ",
+          "example": "I am comfortable with shift work if needed.",
+          "exampleTh": "ฉันทำงานเป็นกะได้ถ้าจำเป็น",
+          "mode": "review"
+        },
+        {
+          "word": "work under pressure",
+          "meaning": "ทำงานภายใต้ความกดดัน",
+          "example": "I can work under pressure and stay organized.",
+          "exampleTh": "ฉันสามารถทำงานภายใต้ความกดดันและยังจัดระบบงานได้",
+          "mode": "review"
+        },
+        {
+          "word": "handle conflict",
+          "meaning": "จัดการความขัดแย้ง",
+          "example": "I handle conflict by listening and finding practical solutions.",
+          "exampleTh": "ฉันจัดการความขัดแย้งโดยฟังและหาทางออกที่ใช้ได้จริง",
+          "mode": "review"
+        },
+        {
+          "word": "decision-making",
+          "meaning": "การตัดสินใจ",
+          "example": "Good decision-making is important on a busy site.",
+          "exampleTh": "การตัดสินใจที่ดีสำคัญในหน้างานที่ยุ่ง",
+          "mode": "review"
+        },
+        {
+          "word": "time management",
+          "meaning": "การบริหารเวลา",
+          "example": "Time management helps me meet deadlines.",
+          "exampleTh": "การบริหารเวลาช่วยให้ฉันทำงานทันกำหนด",
+          "mode": "review"
+        },
+        {
+          "word": "attention to detail",
+          "meaning": "ความใส่ใจรายละเอียด",
+          "example": "Attention to detail prevents costly mistakes.",
+          "exampleTh": "ความใส่ใจรายละเอียดช่วยป้องกันความผิดพลาดที่มีค่าใช้จ่ายสูง",
+          "mode": "review"
+        },
+        {
+          "word": "initiative",
+          "meaning": "ความริเริ่ม",
+          "example": "I take initiative when I see a problem.",
+          "exampleTh": "ฉันริเริ่มลงมือเมื่อเห็นปัญหา",
+          "mode": "review"
+        },
+        {
+          "word": "independent",
+          "meaning": "ทำงานด้วยตัวเองได้",
+          "example": "I can work independently and report clearly.",
+          "exampleTh": "ฉันทำงานด้วยตัวเองได้และรายงานอย่างชัดเจน",
+          "mode": "review"
+        },
+        {
+          "word": "collaborate",
+          "meaning": "ร่วมมือ",
+          "example": "I collaborate with engineers, workers, and suppliers.",
+          "exampleTh": "ฉันร่วมมือกับวิศวกร คนงาน และซัพพลายเออร์",
+          "mode": "review"
+        },
+        {
+          "word": "coordinate",
+          "meaning": "ประสานงาน",
+          "example": "I coordinate daily work between teams.",
+          "exampleTh": "ฉันประสานงานประจำวันระหว่างทีม",
+          "mode": "review"
+        },
+        {
+          "word": "negotiate",
+          "meaning": "เจรจาต่อรอง",
+          "example": "I negotiate with suppliers to solve delivery issues.",
+          "exampleTh": "ฉันเจรจากับซัพพลายเออร์เพื่อแก้ปัญหาการส่งของ",
+          "mode": "review"
+        },
+        {
+          "word": "follow up",
+          "meaning": "ติดตามงาน",
+          "example": "I follow up on issues until they are closed.",
+          "exampleTh": "ฉันติดตามปัญหาจนกว่าจะปิดงานได้",
+          "mode": "review"
+        },
+        {
+          "word": "reporting",
+          "meaning": "การรายงาน",
+          "example": "Daily reporting keeps management informed.",
+          "exampleTh": "การรายงานประจำวันทำให้ผู้บริหารรับทราบข้อมูล",
+          "mode": "review"
+        },
+        {
+          "word": "documentation",
+          "meaning": "การจัดทำเอกสาร",
+          "example": "Documentation is important for quality and safety.",
+          "exampleTh": "การจัดทำเอกสารสำคัญต่อคุณภาพและความปลอดภัย",
+          "mode": "review"
+        },
+        {
+          "word": "computer skills",
+          "meaning": "ทักษะคอมพิวเตอร์",
+          "example": "My computer skills include spreadsheets and project reports.",
+          "exampleTh": "ทักษะคอมพิวเตอร์ของฉันรวมถึงสเปรดชีตและรายงานโครงการ",
+          "mode": "review"
+        },
+        {
+          "word": "English communication",
+          "meaning": "การสื่อสารภาษาอังกฤษ",
+          "example": "I can use English for site communication and reports.",
+          "exampleTh": "ฉันใช้ภาษาอังกฤษในการสื่อสารหน้างานและรายงานได้",
+          "mode": "review"
+        },
+        {
+          "word": "safety awareness",
+          "meaning": "ความตระหนักด้านความปลอดภัย",
+          "example": "Safety awareness is part of my daily work.",
+          "exampleTh": "ความตระหนักด้านความปลอดภัยเป็นส่วนหนึ่งของงานประจำวัน",
+          "mode": "review"
+        },
+        {
+          "word": "site experience",
+          "meaning": "ประสบการณ์หน้างาน",
+          "example": "My site experience helps me understand real problems.",
+          "exampleTh": "ประสบการณ์หน้างานช่วยให้ฉันเข้าใจปัญหาจริง",
+          "mode": "review"
+        },
+        {
+          "word": "technical knowledge",
+          "meaning": "ความรู้เชิงเทคนิค",
+          "example": "Technical knowledge helps me communicate with engineers.",
+          "exampleTh": "ความรู้เชิงเทคนิคช่วยให้ฉันสื่อสารกับวิศวกรได้",
+          "mode": "review"
+        },
+        {
+          "word": "training",
+          "meaning": "การอบรม",
+          "example": "I have completed basic safety training.",
+          "exampleTh": "ฉันผ่านการอบรมความปลอดภัยพื้นฐานแล้ว",
+          "mode": "review"
+        },
+        {
+          "word": "certificate",
+          "meaning": "ใบรับรอง",
+          "example": "I can provide my training certificate.",
+          "exampleTh": "ฉันสามารถให้ใบรับรองการอบรมได้",
+          "mode": "review"
+        },
+        {
+          "word": "portfolio",
+          "meaning": "ผลงาน",
+          "example": "My portfolio includes photos from previous projects.",
+          "exampleTh": "แฟ้มผลงานของฉันมีรูปจากโครงการก่อนหน้า",
+          "mode": "review"
+        },
+        {
+          "word": "career path",
+          "meaning": "เส้นทางอาชีพ",
+          "example": "I want a career path with more responsibility.",
+          "exampleTh": "ฉันต้องการเส้นทางอาชีพที่มีความรับผิดชอบมากขึ้น",
+          "mode": "review"
+        },
+        {
+          "word": "long-term goal",
+          "meaning": "เป้าหมายระยะยาว",
+          "example": "My long-term goal is to manage larger projects.",
+          "exampleTh": "เป้าหมายระยะยาวของฉันคือการบริหารโครงการที่ใหญ่ขึ้น",
+          "mode": "review"
+        },
+        {
+          "word": "short-term goal",
+          "meaning": "เป้าหมายระยะสั้น",
+          "example": "My short-term goal is to learn your system quickly.",
+          "exampleTh": "เป้าหมายระยะสั้นของฉันคือเรียนรู้ระบบของคุณให้เร็ว",
+          "mode": "review"
+        },
+        {
+          "word": "company culture",
+          "meaning": "วัฒนธรรมองค์กร",
+          "example": "I value a company culture that supports safety and teamwork.",
+          "exampleTh": "ฉันให้คุณค่ากับวัฒนธรรมองค์กรที่สนับสนุนความปลอดภัยและทีมเวิร์ก",
+          "mode": "review"
+        },
+        {
+          "word": "job description",
+          "meaning": "รายละเอียดงาน",
+          "example": "I read the job description carefully.",
+          "exampleTh": "ฉันอ่านรายละเอียดงานอย่างรอบคอบ",
+          "mode": "review"
+        },
+        {
+          "word": "requirement",
+          "meaning": "ข้อกำหนด/คุณสมบัติที่ต้องการ",
+          "example": "This requirement matches my experience.",
+          "exampleTh": "ข้อกำหนดนี้ตรงกับประสบการณ์ของฉัน",
+          "mode": "review"
+        },
+        {
+          "word": "interviewer",
+          "meaning": "ผู้สัมภาษณ์",
+          "example": "I asked the interviewer about the project team.",
+          "exampleTh": "ฉันถามผู้สัมภาษณ์เกี่ยวกับทีมโครงการ",
+          "mode": "full"
+        },
+        {
+          "word": "candidate",
+          "meaning": "ผู้สมัคร",
+          "example": "A good candidate should be honest and prepared.",
+          "exampleTh": "ผู้สมัครที่ดีควรซื่อสัตย์และเตรียมตัวพร้อม",
+          "mode": "full"
+        },
+        {
+          "word": "hire",
+          "meaning": "จ้างงาน",
+          "example": "I hope you will consider hiring me for this position.",
+          "exampleTh": "ฉันหวังว่าคุณจะพิจารณาจ้างฉันในตำแหน่งนี้",
+          "mode": "full"
+        },
+        {
+          "word": "onboarding",
+          "meaning": "การเริ่มงาน/ปฐมนิเทศ",
+          "example": "Good onboarding helps new staff work faster.",
+          "exampleTh": "การเริ่มงานที่ดีช่วยให้พนักงานใหม่ทำงานได้เร็วขึ้น",
+          "mode": "full"
+        },
+        {
+          "word": "probation",
+          "meaning": "ช่วงทดลองงาน",
+          "example": "I understand the probation period.",
+          "exampleTh": "ฉันเข้าใจช่วงทดลองงาน",
+          "mode": "full"
+        },
+        {
+          "word": "benefits",
+          "meaning": "สวัสดิการ",
+          "example": "Could you explain the benefits for this role?",
+          "exampleTh": "ช่วยอธิบายสวัสดิการของตำแหน่งนี้ได้ไหม",
+          "mode": "full"
+        },
+        {
+          "word": "work environment",
+          "meaning": "สภาพแวดล้อมการทำงาน",
+          "example": "I prefer a safe and organized work environment.",
+          "exampleTh": "ฉันชอบสภาพแวดล้อมการทำงานที่ปลอดภัยและเป็นระบบ",
+          "mode": "full"
+        },
+        {
+          "word": "why did you leave your last job",
+          "meaning": "ทำไมถึงออกจากงานเดิม",
+          "example": "I left my last job to look for more growth opportunities.",
+          "exampleTh": "ฉันออกจากงานเดิมเพื่อหาโอกาสเติบโตมากขึ้น",
+          "mode": "full"
+        },
+        {
+          "word": "what are your strengths",
+          "meaning": "จุดแข็งของคุณคืออะไร",
+          "example": "My strengths are communication, responsibility, and site coordination.",
+          "exampleTh": "จุดแข็งของฉันคือการสื่อสาร ความรับผิดชอบ และการประสานงานหน้างาน",
+          "mode": "full"
+        },
+        {
+          "word": "what are your weaknesses",
+          "meaning": "จุดอ่อนของคุณคืออะไร",
+          "example": "I am improving my English by practicing every day.",
+          "exampleTh": "ฉันกำลังพัฒนาภาษาอังกฤษด้วยการฝึกทุกวัน",
+          "mode": "full"
+        }
+      ]
+    },
+    {
+      "id": "job-interview-qanda__day-008",
+      "category": "Job Interview Q&A",
+      "categorySlug": "job-interview-qanda",
+      "day": 8,
+      "batchSize": 10,
+      "items": [
+        {
+          "word": "work permit",
+          "meaning": "ใบอนุญาตทำงาน",
+          "example": "I can prepare the required work permit documents.",
+          "exampleTh": "ฉันสามารถเตรียมเอกสารใบอนุญาตทำงานที่จำเป็นได้",
+          "mode": "review"
+        },
+        {
+          "word": "career goal",
+          "meaning": "เป้าหมายอาชีพ",
+          "example": "My career goal is to become a strong site manager.",
+          "exampleTh": "เป้าหมายอาชีพของฉันคือการเป็นผู้จัดการหน้างานที่แข็งแกร่ง",
+          "mode": "review"
+        },
+        {
+          "word": "why should we hire you",
+          "meaning": "ทำไมเราควรจ้างคุณ",
+          "example": "You should hire me because I am careful, practical, and responsible.",
+          "exampleTh": "คุณควรจ้างฉันเพราะฉันรอบคอบ ทำงานได้จริง และรับผิดชอบ",
+          "mode": "review"
+        },
+        {
+          "word": "tell me about yourself",
+          "meaning": "เล่าเกี่ยวกับตัวคุณให้ฟังหน่อย",
+          "example": "Tell me about yourself and your work experience.",
+          "exampleTh": "ช่วยเล่าเกี่ยวกับตัวคุณและประสบการณ์ทำงานของคุณ",
+          "mode": "review"
+        },
+        {
+          "word": "background",
+          "meaning": "พื้นฐานประวัติ/ประสบการณ์",
+          "example": "My background is in construction supervision.",
+          "exampleTh": "พื้นฐานประสบการณ์ของฉันอยู่ในงานควบคุมก่อสร้าง",
+          "mode": "review"
+        },
+        {
+          "word": "previous job",
+          "meaning": "งานก่อนหน้า",
+          "example": "In my previous job, I coordinated with subcontractors.",
+          "exampleTh": "ในงานก่อนหน้า ฉันประสานงานกับผู้รับเหมาช่วง",
+          "mode": "review"
+        },
+        {
+          "word": "current role",
+          "meaning": "บทบาทปัจจุบัน",
+          "example": "My current role is site coordination.",
+          "exampleTh": "บทบาทปัจจุบันของฉันคือการประสานงานหน้างาน",
+          "mode": "review"
+        },
+        {
+          "word": "expected salary",
+          "meaning": "เงินเดือนที่คาดหวัง",
+          "example": "My expected salary depends on the full benefits package.",
+          "exampleTh": "เงินเดือนที่คาดหวังขึ้นอยู่กับสวัสดิการโดยรวม",
+          "mode": "review"
+        },
+        {
+          "word": "notice period",
+          "meaning": "ระยะเวลาแจ้งลาออก",
+          "example": "My notice period is thirty days.",
+          "exampleTh": "ระยะเวลาแจ้งลาออกของฉันคือสามสิบวัน",
+          "mode": "review"
+        },
+        {
+          "word": "relocate",
+          "meaning": "ย้ายที่ทำงาน/ย้ายถิ่น",
+          "example": "I am willing to relocate for the right opportunity.",
+          "exampleTh": "ฉันยินดีย้ายที่ทำงานถ้าเป็นโอกาสที่เหมาะสม",
+          "mode": "review"
+        },
+        {
+          "word": "overtime",
+          "meaning": "ทำงานล่วงเวลา",
+          "example": "I can work overtime when the project requires it.",
+          "exampleTh": "ฉันสามารถทำงานล่วงเวลาได้เมื่อโครงการจำเป็น",
+          "mode": "review"
+        },
+        {
+          "word": "shift work",
+          "meaning": "งานเป็นกะ",
+          "example": "I am comfortable with shift work if needed.",
+          "exampleTh": "ฉันทำงานเป็นกะได้ถ้าจำเป็น",
+          "mode": "review"
+        },
+        {
+          "word": "work under pressure",
+          "meaning": "ทำงานภายใต้ความกดดัน",
+          "example": "I can work under pressure and stay organized.",
+          "exampleTh": "ฉันสามารถทำงานภายใต้ความกดดันและยังจัดระบบงานได้",
+          "mode": "review"
+        },
+        {
+          "word": "handle conflict",
+          "meaning": "จัดการความขัดแย้ง",
+          "example": "I handle conflict by listening and finding practical solutions.",
+          "exampleTh": "ฉันจัดการความขัดแย้งโดยฟังและหาทางออกที่ใช้ได้จริง",
+          "mode": "review"
+        },
+        {
+          "word": "decision-making",
+          "meaning": "การตัดสินใจ",
+          "example": "Good decision-making is important on a busy site.",
+          "exampleTh": "การตัดสินใจที่ดีสำคัญในหน้างานที่ยุ่ง",
+          "mode": "review"
+        },
+        {
+          "word": "time management",
+          "meaning": "การบริหารเวลา",
+          "example": "Time management helps me meet deadlines.",
+          "exampleTh": "การบริหารเวลาช่วยให้ฉันทำงานทันกำหนด",
+          "mode": "review"
+        },
+        {
+          "word": "attention to detail",
+          "meaning": "ความใส่ใจรายละเอียด",
+          "example": "Attention to detail prevents costly mistakes.",
+          "exampleTh": "ความใส่ใจรายละเอียดช่วยป้องกันความผิดพลาดที่มีค่าใช้จ่ายสูง",
+          "mode": "review"
+        },
+        {
+          "word": "initiative",
+          "meaning": "ความริเริ่ม",
+          "example": "I take initiative when I see a problem.",
+          "exampleTh": "ฉันริเริ่มลงมือเมื่อเห็นปัญหา",
+          "mode": "review"
+        },
+        {
+          "word": "independent",
+          "meaning": "ทำงานด้วยตัวเองได้",
+          "example": "I can work independently and report clearly.",
+          "exampleTh": "ฉันทำงานด้วยตัวเองได้และรายงานอย่างชัดเจน",
+          "mode": "review"
+        },
+        {
+          "word": "collaborate",
+          "meaning": "ร่วมมือ",
+          "example": "I collaborate with engineers, workers, and suppliers.",
+          "exampleTh": "ฉันร่วมมือกับวิศวกร คนงาน และซัพพลายเออร์",
+          "mode": "review"
+        },
+        {
+          "word": "coordinate",
+          "meaning": "ประสานงาน",
+          "example": "I coordinate daily work between teams.",
+          "exampleTh": "ฉันประสานงานประจำวันระหว่างทีม",
+          "mode": "review"
+        },
+        {
+          "word": "negotiate",
+          "meaning": "เจรจาต่อรอง",
+          "example": "I negotiate with suppliers to solve delivery issues.",
+          "exampleTh": "ฉันเจรจากับซัพพลายเออร์เพื่อแก้ปัญหาการส่งของ",
+          "mode": "review"
+        },
+        {
+          "word": "follow up",
+          "meaning": "ติดตามงาน",
+          "example": "I follow up on issues until they are closed.",
+          "exampleTh": "ฉันติดตามปัญหาจนกว่าจะปิดงานได้",
+          "mode": "review"
+        },
+        {
+          "word": "reporting",
+          "meaning": "การรายงาน",
+          "example": "Daily reporting keeps management informed.",
+          "exampleTh": "การรายงานประจำวันทำให้ผู้บริหารรับทราบข้อมูล",
+          "mode": "review"
+        },
+        {
+          "word": "documentation",
+          "meaning": "การจัดทำเอกสาร",
+          "example": "Documentation is important for quality and safety.",
+          "exampleTh": "การจัดทำเอกสารสำคัญต่อคุณภาพและความปลอดภัย",
+          "mode": "review"
+        },
+        {
+          "word": "computer skills",
+          "meaning": "ทักษะคอมพิวเตอร์",
+          "example": "My computer skills include spreadsheets and project reports.",
+          "exampleTh": "ทักษะคอมพิวเตอร์ของฉันรวมถึงสเปรดชีตและรายงานโครงการ",
+          "mode": "review"
+        },
+        {
+          "word": "English communication",
+          "meaning": "การสื่อสารภาษาอังกฤษ",
+          "example": "I can use English for site communication and reports.",
+          "exampleTh": "ฉันใช้ภาษาอังกฤษในการสื่อสารหน้างานและรายงานได้",
+          "mode": "review"
+        },
+        {
+          "word": "safety awareness",
+          "meaning": "ความตระหนักด้านความปลอดภัย",
+          "example": "Safety awareness is part of my daily work.",
+          "exampleTh": "ความตระหนักด้านความปลอดภัยเป็นส่วนหนึ่งของงานประจำวัน",
+          "mode": "review"
+        },
+        {
+          "word": "site experience",
+          "meaning": "ประสบการณ์หน้างาน",
+          "example": "My site experience helps me understand real problems.",
+          "exampleTh": "ประสบการณ์หน้างานช่วยให้ฉันเข้าใจปัญหาจริง",
+          "mode": "review"
+        },
+        {
+          "word": "technical knowledge",
+          "meaning": "ความรู้เชิงเทคนิค",
+          "example": "Technical knowledge helps me communicate with engineers.",
+          "exampleTh": "ความรู้เชิงเทคนิคช่วยให้ฉันสื่อสารกับวิศวกรได้",
+          "mode": "review"
+        },
+        {
+          "word": "training",
+          "meaning": "การอบรม",
+          "example": "I have completed basic safety training.",
+          "exampleTh": "ฉันผ่านการอบรมความปลอดภัยพื้นฐานแล้ว",
+          "mode": "review"
+        },
+        {
+          "word": "certificate",
+          "meaning": "ใบรับรอง",
+          "example": "I can provide my training certificate.",
+          "exampleTh": "ฉันสามารถให้ใบรับรองการอบรมได้",
+          "mode": "review"
+        },
+        {
+          "word": "portfolio",
+          "meaning": "ผลงาน",
+          "example": "My portfolio includes photos from previous projects.",
+          "exampleTh": "แฟ้มผลงานของฉันมีรูปจากโครงการก่อนหน้า",
+          "mode": "review"
+        },
+        {
+          "word": "career path",
+          "meaning": "เส้นทางอาชีพ",
+          "example": "I want a career path with more responsibility.",
+          "exampleTh": "ฉันต้องการเส้นทางอาชีพที่มีความรับผิดชอบมากขึ้น",
+          "mode": "review"
+        },
+        {
+          "word": "long-term goal",
+          "meaning": "เป้าหมายระยะยาว",
+          "example": "My long-term goal is to manage larger projects.",
+          "exampleTh": "เป้าหมายระยะยาวของฉันคือการบริหารโครงการที่ใหญ่ขึ้น",
+          "mode": "review"
+        },
+        {
+          "word": "short-term goal",
+          "meaning": "เป้าหมายระยะสั้น",
+          "example": "My short-term goal is to learn your system quickly.",
+          "exampleTh": "เป้าหมายระยะสั้นของฉันคือเรียนรู้ระบบของคุณให้เร็ว",
+          "mode": "review"
+        },
+        {
+          "word": "company culture",
+          "meaning": "วัฒนธรรมองค์กร",
+          "example": "I value a company culture that supports safety and teamwork.",
+          "exampleTh": "ฉันให้คุณค่ากับวัฒนธรรมองค์กรที่สนับสนุนความปลอดภัยและทีมเวิร์ก",
+          "mode": "review"
+        },
+        {
+          "word": "job description",
+          "meaning": "รายละเอียดงาน",
+          "example": "I read the job description carefully.",
+          "exampleTh": "ฉันอ่านรายละเอียดงานอย่างรอบคอบ",
+          "mode": "review"
+        },
+        {
+          "word": "requirement",
+          "meaning": "ข้อกำหนด/คุณสมบัติที่ต้องการ",
+          "example": "This requirement matches my experience.",
+          "exampleTh": "ข้อกำหนดนี้ตรงกับประสบการณ์ของฉัน",
+          "mode": "review"
+        },
+        {
+          "word": "interviewer",
+          "meaning": "ผู้สัมภาษณ์",
+          "example": "I asked the interviewer about the project team.",
+          "exampleTh": "ฉันถามผู้สัมภาษณ์เกี่ยวกับทีมโครงการ",
+          "mode": "review"
+        },
+        {
+          "word": "candidate",
+          "meaning": "ผู้สมัคร",
+          "example": "A good candidate should be honest and prepared.",
+          "exampleTh": "ผู้สมัครที่ดีควรซื่อสัตย์และเตรียมตัวพร้อม",
+          "mode": "review"
+        },
+        {
+          "word": "hire",
+          "meaning": "จ้างงาน",
+          "example": "I hope you will consider hiring me for this position.",
+          "exampleTh": "ฉันหวังว่าคุณจะพิจารณาจ้างฉันในตำแหน่งนี้",
+          "mode": "review"
+        },
+        {
+          "word": "onboarding",
+          "meaning": "การเริ่มงาน/ปฐมนิเทศ",
+          "example": "Good onboarding helps new staff work faster.",
+          "exampleTh": "การเริ่มงานที่ดีช่วยให้พนักงานใหม่ทำงานได้เร็วขึ้น",
+          "mode": "review"
+        },
+        {
+          "word": "probation",
+          "meaning": "ช่วงทดลองงาน",
+          "example": "I understand the probation period.",
+          "exampleTh": "ฉันเข้าใจช่วงทดลองงาน",
+          "mode": "review"
+        },
+        {
+          "word": "benefits",
+          "meaning": "สวัสดิการ",
+          "example": "Could you explain the benefits for this role?",
+          "exampleTh": "ช่วยอธิบายสวัสดิการของตำแหน่งนี้ได้ไหม",
+          "mode": "review"
+        },
+        {
+          "word": "work environment",
+          "meaning": "สภาพแวดล้อมการทำงาน",
+          "example": "I prefer a safe and organized work environment.",
+          "exampleTh": "ฉันชอบสภาพแวดล้อมการทำงานที่ปลอดภัยและเป็นระบบ",
+          "mode": "review"
+        },
+        {
+          "word": "why did you leave your last job",
+          "meaning": "ทำไมถึงออกจากงานเดิม",
+          "example": "I left my last job to look for more growth opportunities.",
+          "exampleTh": "ฉันออกจากงานเดิมเพื่อหาโอกาสเติบโตมากขึ้น",
+          "mode": "review"
+        },
+        {
+          "word": "what are your strengths",
+          "meaning": "จุดแข็งของคุณคืออะไร",
+          "example": "My strengths are communication, responsibility, and site coordination.",
+          "exampleTh": "จุดแข็งของฉันคือการสื่อสาร ความรับผิดชอบ และการประสานงานหน้างาน",
+          "mode": "review"
+        },
+        {
+          "word": "what are your weaknesses",
+          "meaning": "จุดอ่อนของคุณคืออะไร",
+          "example": "I am improving my English by practicing every day.",
+          "exampleTh": "ฉันกำลังพัฒนาภาษาอังกฤษด้วยการฝึกทุกวัน",
+          "mode": "review"
+        },
+        {
+          "word": "do you have any questions",
+          "meaning": "คุณมีคำถามไหม",
+          "example": "Do you have any questions about my experience?",
+          "exampleTh": "คุณมีคำถามเกี่ยวกับประสบการณ์ของฉันไหม",
+          "mode": "full"
+        }
+      ]
+    }
+  ]
+}
