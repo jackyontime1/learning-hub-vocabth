@@ -1,12 +1,12 @@
 {
-  "schema_version": 7,
+  "schema_version": 8,
   "id": "58e91077f2194603d7",
   "slug": "pakistan-ends-luxury-tax-on-menstrual-products-contraceptives-will-price-58e91077",
   "level": "A1",
   "title": "Pakistan ends 'luxury tax' on menstrual products, contraceptives. Will prices drop?",
   "description": "In Pakistan, taxes on menstrual products can add up. Activists have long worked to change this. Now a new budget wipes out the 18% sales tax. But questions remain about the impact on prices.",
   "text": "Menstrual products have been subject to an 18%. Sales tax in Pakistan, prompting protests. Huizeng Hu/Moment RF/ The budget for next fiscal. Year has the sales tax on these products. Dropping from 18% to zero. For decades, sanitary napkins and. Other menstrual items have been taxed as \"luxury goods\" and. The price has put these products out of. Reach for many in Pakistan.",
-  "thai_text": "ข่าวนี้มาจาก NPR อยู่ในหมวดสุขภาพ และถูกเรียบเรียงเป็นระดับ A1. หัวข้อข่าวคือ “Pakistan ends 'luxury tax' on menstrual products, contraceptives. Will prices drop?”. แปลใจความได้ว่า ใจความของประโยคนี้เกี่ยวกับ drop = หยด / ends = จบ / products = ผลิตภัณฑ์ / tax = ภาษี. ใจความของประโยคนี้เกี่ยวกับ add = เพิ่ม / budget = งบประมาณ / change = เปลี่ยน / impact = ผลกระทบ ใจความของประโยคนี้เกี่ยวกับ products = ผลิตภัณฑ์ / subject = เรื่อง ใจความของประโยคนี้เกี่ยวกับ prompting = พร้อมท์ / protests = ประท้วง / tax = ภาษี ใจความของประโยคนี้เกี่ยวกับ budget = งบประมาณ / moment = ช่วงเวลานั้น / next = ต่อไป ตัวเลขที่ควรสังเกตในข่าวนี้คือ 18, 18. คำสำคัญที่ควรรู้: add = เพิ่ม / budget = งบประมาณ / change = เปลี่ยน / drop = หยด / ends = จบ.",
+  "thai_text": "ข่าวนี้มาจาก NPR อยู่ในหมวดสุขภาพ และถูกเรียบเรียงเป็นระดับ A1. เนื้อหาข่าวคือ ปากีสถานยกเลิกภาษีสินค้าฟุ่มเฟือยสำหรับผลิตภัณฑ์ประจำเดือนและยาคุมกำเนิด คำถามคือราคาจะลดลงหรือไม่ ในปากีสถาน ภาษีผลิตภัณฑ์ประจำเดือนทำให้ราคาสูงขึ้น นักเคลื่อนไหวพยายามผลักดันให้เปลี่ยนเรื่องนี้มานาน ตอนนี้งบประมาณใหม่ยกเลิกภาษีขาย 18% แล้ว แต่ยังมีคำถามว่าราคาสินค้าจะลดลงจริงแค่ไหน",
   "word_translations": {
     "an": "เป็น",
     "and": "และ",
@@ -114,5 +114,5 @@
     "credit_url": ""
   },
   "audio_cache_path": "data/audio/2026-06-18/58e91077f2194603d7-a1.wav",
-  "generated_at": "2026-06-18T17:05:18.281326+00:00"
+  "generated_at": "2026-06-18T17:47:27.549192+00:00"
 }

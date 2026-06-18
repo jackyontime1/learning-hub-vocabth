@@ -1,12 +1,12 @@
 {
-  "schema_version": 7,
+  "schema_version": 8,
   "id": "ded3274fa42a98c73c",
   "slug": "their-goal-was-use-as-much-ai-as-possible-now-some-companies-are-pulling-ded3274f",
   "level": "B1",
   "title": "Their goal was: use as much AI as possible. Now some companies are pulling back",
   "description": "Prominent tech businesses pushing to use AI intensively have been stung by sky high AI costs, especially for agentic chain-of-thought purposes. Now, they're looking at getting beyond experimentation to tokenomics: really breaking down the return on investment for big AI spending.",
   "text": "Tech companies that went all in on using AI internally are now clamping down in the wake of. Soaring costs for intensive AI use. Last month, Uber acknowledged it had spent its entire 2026 AI budget in the first four months of. The year, with the company's COO saying it was becoming \" harder to justify \" internal AI costs. OpenAI CEO Sam Altman said earlier this month that AI costs have become a \"huge issue\" for its customers. At a recent conference, leaders from Canadian startups said they're feeling the costs of growing internal AI expenses, Betakit reports. The new focus is on finding ways to track costs and use AI more strategically. If tech companies rein in spending, though, what does that mean for the massive valuations of AI companies?",
-  "thai_text": "ข่าวนี้มาจาก CBC News อยู่ในหมวดธุรกิจและเศรษฐกิจ และถูกเรียบเรียงเป็นระดับ B1. หัวข้อข่าวคือ “Their goal was: use as much AI as possible. Now some companies are pulling back”. แปลใจความได้ว่า ใจความของประโยคนี้เกี่ยวกับ ai = ปัญญาประดิษฐ์ / back = หลัง, กลับ / goal = เป้าหมาย / much = มาก. ใจความของประโยคนี้เกี่ยวกับ ai = ปัญญาประดิษฐ์ / beyond = เกิน / big = ใหญ่ / breaking = หยุดพัก ใจความของประโยคนี้เกี่ยวกับ ai = ปัญญาประดิษฐ์ / clamping = แคลมป์/ตัวจับยึด / internally = อย่างภายใน / now = ตอนนี้ ใจความของประโยคนี้เกี่ยวกับ ai = ปัญญาประดิษฐ์ / costs = ค่าใช้จ่าย / use = ใช้ ใจความของประโยคนี้เกี่ยวกับ ai = ปัญญาประดิษฐ์ / budget = งบประมาณ / entire = ทั้งหมด / first = อันดับแรก ตัวเลขที่ควรสังเกตในข่าวนี้คือ 2026. คำสำคัญที่ควรรู้: ai = ปัญญาประดิษฐ์ / back = หลัง, กลับ / become = กลายเป็น / beyond = เกิน / big = ใหญ่.",
+  "thai_text": "ข่าวนี้มาจาก CBC News อยู่ในหมวดธุรกิจและเศรษฐกิจ และถูกเรียบเรียงเป็นระดับ B1. เนื้อหาข่าวคือ เนื้อหาข่าวพูดถึงเหตุการณ์สำคัญและผลกระทบที่ผู้อ่านควรติดตามต่อ โดยควรอ่านจากย่อหน้าภาษาอังกฤษด้านบนประกอบด้วย",
   "word_translations": {
     "a": "",
     "acknowledged": "",
@@ -204,5 +204,5 @@
     "credit_url": ""
   },
   "audio_cache_path": "data/audio/2026-06-17/ded3274fa42a98c73c-b1.wav",
-  "generated_at": "2026-06-18T17:05:22.111151+00:00"
+  "generated_at": "2026-06-18T17:47:31.113353+00:00"
 }

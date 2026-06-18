@@ -1,12 +1,12 @@
 {
-  "schema_version": 7,
+  "schema_version": 8,
   "id": "9888062066f1ddd487",
   "slug": "competition-bureau-to-examine-canada-s-food-supply-chain-98880620",
   "level": "B1",
   "title": "Competition Bureau to examine Canada's food supply chain",
   "description": "The Competition Bureau is looking to investigate how competition along the food supply chain affects grocery prices for Canadian consumers.",
   "text": "The Competition Bureau is looking to investigate how competition along the food supply chain affects grocery prices for Canadian consumers. The bureau says it will look for potential issues in three key areas. production and processing, transportation and distribution, and. Retail pricing practices. It says the examination is a broad approach to understanding where the bureau is needed and. Actions policy-makers can take to improve affordability. Jeanne Pratt, interim commissioner of competition, says the cost of food matters to all Canadians and. Strong competition can help keep prices in check. She's also asking industry stakeholders to share their experiences. Fixing Canada's grocery prices problem. the Competition Bureau's plan | About That The latest investigation will build on. The findings of the bureau's 2023 retail grocery market study, which found greater competition could help lower prices and spur innovation.",
-  "thai_text": "ข่าวนี้มาจาก CBC News อยู่ในหมวดธุรกิจและเศรษฐกิจ และถูกเรียบเรียงเป็นระดับ B1. หัวข้อข่าวคือ “Competition Bureau to examine Canada's food supply chain”. แปลใจความได้ว่า ใจความของประโยคนี้เกี่ยวกับ chain = โซ่ / competition = การแข่งขัน / examine = พิจารณา / food = อาหาร. ใจความของประโยคนี้เกี่ยวกับ affects = ส่งผลกระทบ / along = ตาม / canadian = ชาวแคนาดา / chain = โซ่ ใจความของประโยคนี้เกี่ยวกับ areas = พื้นที่ / distribution = การกระจาย / key = สำคัญ / look = ดู ใจความของประโยคนี้เกี่ยวกับ approach = เข้าใกล้ / broad = กว้างๆ / examination = การตรวจสอบ / needed = ต้องการ ใจความของประโยคนี้เกี่ยวกับ actions = การกระทำ / improve = ทำให้ดีขึ้น / take = เอา ตัวเลขที่ควรสังเกตในข่าวนี้คือ 2023. คำสำคัญที่ควรรู้: actions = การกระทำ / affects = ส่งผลกระทบ / along = ตาม / approach = เข้าใกล้ / areas = พื้นที่.",
+  "thai_text": "ข่าวนี้มาจาก CBC News อยู่ในหมวดธุรกิจและเศรษฐกิจ และถูกเรียบเรียงเป็นระดับ B1. เนื้อหาข่าวคือ เนื้อหาข่าวพูดถึงเหตุการณ์สำคัญและผลกระทบที่ผู้อ่านควรติดตามต่อ โดยควรอ่านจากย่อหน้าภาษาอังกฤษด้านบนประกอบด้วย",
   "word_translations": {
     "a": "",
     "about": "เกี่ยวกับ",
@@ -74,7 +74,7 @@
     "potential": "ศักยภาพ",
     "practices": "",
     "pratt": "",
-    "prices": "",
+    "prices": "ราคา",
     "pricing": "",
     "problem": "ปัญหา",
     "processing": "กระบวนการ",
@@ -206,5 +206,5 @@
     "credit_url": ""
   },
   "audio_cache_path": "data/audio/2026-06-18/9888062066f1ddd487-b1.wav",
-  "generated_at": "2026-06-18T17:05:19.364250+00:00"
+  "generated_at": "2026-06-18T17:47:28.583864+00:00"
 }

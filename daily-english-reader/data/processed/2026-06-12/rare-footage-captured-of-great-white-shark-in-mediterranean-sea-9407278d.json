@@ -1,12 +1,12 @@
 {
-  "schema_version": 7,
+  "schema_version": 8,
   "id": "9407278d0fcda19249",
   "slug": "rare-footage-captured-of-great-white-shark-in-mediterranean-sea-9407278d",
   "level": "C1",
   "title": "Rare footage captured of Great White shark in Mediterranean Sea",
   "description": "A volunteer diver has described shaking as he filmed his encounter with an endangered Great White shark between Tunisia and Sicily.",
   "text": "A diver who filmed an incredibly rare encounter with a Great White shark in the Mediterranean Sea in May has described the moment as \"pretty special\". \"The shark was pretty close to us [...] And in fact my fingers were trembling when I was trying to get the camera operating,\" volunteer diver Derk Remmers told the BBC. Scientists say people should not be concerned as the shark, believed to be an adult male, was spotted many miles offshore between Tunisia and Sicily. Conservationists said they hoped the sighting may encourage governments to create marine protected areas in Mediterranean waters. Divers working for the NGO Healthy Seas captured the footage whilst diving to highlight the problem of so-called \"ghost fishing nets\". Science correspondent Pallab Ghosh explains why the explosion is a setback for space exploration. A Blue Origin New Glenn rocket exploded on a launch pad at Cape Canaveral in Florida on Thursday night. Newly released video shows the moment the hatch of Artemis II's Orion capsule is unlocked to a joyful reunion with the four astronauts. Steve Backshall spotted two of the UK's last surviving orcas which he described as one of his \"greatest British wildlife moments\". The 98m tall Space Launch System (SLS) and Orion spacecraft made a four mile journey from their assembly building to Pad 39B at the Kennedy Space Center in Florida.",
-  "thai_text": "ข่าวนี้มาจาก BBC News อยู่ในหมวดวิทยาศาสตร์ และถูกเรียบเรียงเป็นระดับ C1. หัวข้อข่าวคือ “Rare footage captured of Great White shark in Mediterranean Sea”. แปลใจความได้ว่า มีการบันทึกภาพฉลามขาวใหญ่ที่พบได้ยากในทะเลเมดิเตอร์เรเนียน. นักดำน้ำอาสาคนหนึ่งเล่าว่าเขามือสั่นตอนถ่ายวิดีโอ ขณะพบฉลามขาวใหญ่ที่ใกล้สูญพันธุ์บริเวณระหว่างตูนิเซียกับซิซิลี ใจความของประโยคนี้เกี่ยวกับ described = เล่าว่า / diver = นักดำน้ำ / encounter = การพบเจอ / filmed = ถ่ายวิดีโอ ฉลามว่ายเข้ามาใกล้พวกเขามาก นักวิทยาศาสตร์บอกว่าผู้คนไม่จำเป็นต้องกังวล คำสำคัญที่ควรรู้: adult = ผู้ใหญ่ / areas = พื้นที่ / bbc = บีบีซี / blue = สีฟ้า, สีน้ำเงิน.",
+  "thai_text": "ข่าวนี้มาจาก BBC News อยู่ในหมวดวิทยาศาสตร์ และถูกเรียบเรียงเป็นระดับ C1. เนื้อหาข่าวคือ มีการบันทึกภาพฉลามขาวใหญ่ที่พบได้ยากในทะเลเมดิเตอร์เรเนียน นักดำน้ำอาสาคนหนึ่งเล่าว่าเขามือสั่นตอนถ่ายวิดีโอ ขณะพบฉลามขาวใหญ่ที่ใกล้สูญพันธุ์บริเวณระหว่างตูนิเซียกับซิซิลี ฉลามว่ายเข้ามาใกล้พวกเขามาก นักวิทยาศาสตร์บอกว่าผู้คนไม่จำเป็นต้องกังวล",
   "word_translations": {
     "a": "",
     "adult": "ผู้ใหญ่",
@@ -340,5 +340,5 @@
     "credit_url": "https://www.bbc.com/news/videos/cd6p6zqzj6do?at_medium=RSS&at_campaign=rss"
   },
   "audio_cache_path": "data/audio/2026-06-12/9407278d0fcda19249-c1.wav",
-  "generated_at": "2026-06-18T17:05:34.911506+00:00"
+  "generated_at": "2026-06-18T17:47:39.207493+00:00"
 }

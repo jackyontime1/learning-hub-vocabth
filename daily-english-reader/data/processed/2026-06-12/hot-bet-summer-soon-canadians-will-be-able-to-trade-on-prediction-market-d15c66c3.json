@@ -1,12 +1,12 @@
 {
-  "schema_version": 7,
+  "schema_version": 8,
   "id": "d15c66c3b664492f27",
   "slug": "hot-bet-summer-soon-canadians-will-be-able-to-trade-on-prediction-market-d15c66c3",
   "level": "A1",
   "title": "Hot bet summer? Soon Canadians will be able to trade on prediction markets",
   "description": "Canadian retail investors will be able to access prediction markets through a Canadian company this summer, after the platforms had been banned for years. Prediction markets are experiencing explosive growth, and seen as both a financial vehicle and as gambling.",
   "text": "Prediction markets, a fast-growing corner of financial technology. That lets users wager on real-world events, are. Coming to Canadian retail investors through Wealthsimple this summer. The Toronto-based online financial services company says it. Is beta testing a new app, Wealthsimple Predict. That will offer clients access to event contracts. Through the U.S. prediction market Kalshi. The launch follows limited approval from Canadian regulators.",
-  "thai_text": "ข่าวนี้มาจาก CBC News อยู่ในหมวดข่าวแคนาดา และถูกเรียบเรียงเป็นระดับ A1. หัวข้อข่าวคือ “Hot bet summer? Soon Canadians will be able to trade on prediction markets”. แปลใจความได้ว่า ใจความของประโยคนี้เกี่ยวกับ able = ทำได้ / bet = เดิมพัน / canadians = ชาวแคนาดา / hot = ร้อน. ใจความของประโยคนี้เกี่ยวกับ able = ทำได้ / access = เข้าถึง / canadian = ชาวแคนาดา / company = บริษัท ใจความของประโยคนี้เกี่ยวกับ corner = มุม / financial = การเงิน / markets = ตลาด / technology = เทคโนโลยี ใจความของประโยคนี้เกี่ยวกับ events = เหตุการณ์ / lets = อนุญาต / users = ผู้ใช้ ใจความของประโยคนี้เกี่ยวกับ canadian = ชาวแคนาดา / summer = ฤดูร้อน คำสำคัญที่ควรรู้: able = ทำได้ / access = เข้าถึง / approval = การอนุมัติ / bet = เดิมพัน / canadian = ชาวแคนาดา.",
+  "thai_text": "ข่าวนี้มาจาก CBC News อยู่ในหมวดข่าวแคนาดา และถูกเรียบเรียงเป็นระดับ A1. เนื้อหาข่าวคือ เนื้อหาข่าวพูดถึงเหตุการณ์สำคัญและผลกระทบที่ผู้อ่านควรติดตามต่อ โดยควรอ่านจากย่อหน้าภาษาอังกฤษด้านบนประกอบด้วย",
   "word_translations": {
     "a": "",
     "access": "เข้าถึง",
@@ -132,5 +132,5 @@
     "credit_url": ""
   },
   "audio_cache_path": "data/audio/2026-06-12/d15c66c3b664492f27-a1.wav",
-  "generated_at": "2026-06-18T17:05:33.515727+00:00"
+  "generated_at": "2026-06-18T17:47:38.286573+00:00"
 }

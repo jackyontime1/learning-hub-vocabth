@@ -1,12 +1,12 @@
 {
-  "schema_version": 7,
+  "schema_version": 8,
   "id": "f28e2c35d5fecc9bb3",
   "slug": "live-with-a-partner-you-may-be-sharing-more-microbes-than-you-think-f28e2c35",
   "level": "A1",
   "title": "Live with a partner? You may be sharing more microbes than you think",
   "description": "A large study finds you may share about a quarter of your oral and gut microbes with the people you live with. Should you worry? We asked the experts.",
   "text": "A lot changes when you move in with. Your partner. when you go to bed, what. You eat for breakfast, and. Possibly your microbiome. the mishmash of bacteria that live in and. On you. A study published this week in Cell Press. Blue finds that cohabitating romantic partners share about. 44% of their oral microbiome and 19% of their gut microbiome. First author and computational biologist Vitor Heidrich of.",
-  "thai_text": "ข่าวนี้มาจาก NPR อยู่ในหมวดสุขภาพ และถูกเรียบเรียงเป็นระดับ A1. หัวข้อข่าวคือ “Live with a partner? You may be sharing more microbes than you think”. แปลใจความได้ว่า ใจความของประโยคนี้เกี่ยวกับ live = สด / may = อาจ / partner = พันธมิตร / think = คิด. ใจความของประโยคนี้เกี่ยวกับ asked = ถาม / experts = ผู้เชี่ยวชาญ / finds = พบ / large = ใหญ่ ใจความของประโยคนี้เกี่ยวกับ lot = มาก / move = ย้าย ใจความของประโยคนี้เกี่ยวกับ bed = เตียง / go = ไป / partner = พันธมิตร ใจความของประโยคนี้เกี่ยวกับ breakfast = อาหารเช้า / eat = กิน ตัวเลขที่ควรสังเกตในข่าวนี้คือ 44, 19. คำสำคัญที่ควรรู้: asked = ถาม / author = ผู้เขียน / bacteria = แบคทีเรีย / bed = เตียง / blue = สีฟ้า, สีน้ำเงิน.",
+  "thai_text": "ข่าวนี้มาจาก NPR อยู่ในหมวดสุขภาพ และถูกเรียบเรียงเป็นระดับ A1. เนื้อหาข่าวคือ เนื้อหาข่าวพูดถึงเหตุการณ์สำคัญและผลกระทบที่ผู้อ่านควรติดตามต่อ โดยควรอ่านจากย่อหน้าภาษาอังกฤษด้านบนประกอบด้วย",
   "word_translations": {
     "a": "คือ",
     "about": "เกี่ยวกับ",
@@ -122,5 +122,5 @@
     "credit_url": ""
   },
   "audio_cache_path": "data/audio/2026-06-18/f28e2c35d5fecc9bb3-a1.wav",
-  "generated_at": "2026-06-18T17:05:17.838220+00:00"
+  "generated_at": "2026-06-18T17:47:27.447848+00:00"
 }

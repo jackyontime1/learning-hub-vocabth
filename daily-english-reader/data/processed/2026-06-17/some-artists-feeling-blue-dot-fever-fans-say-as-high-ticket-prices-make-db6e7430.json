@@ -1,12 +1,12 @@
 {
-  "schema_version": 7,
+  "schema_version": 8,
   "id": "db6e74307e1aba8f38",
   "slug": "some-artists-feeling-blue-dot-fever-fans-say-as-high-ticket-prices-make-db6e7430",
   "level": "A2",
   "title": "Some artists feeling 'blue dot fever,' fans say, as high ticket prices make concertgoers more selective",
   "description": "The name \"blue dot fever\" comes from the blue dots on Ticketmaster's website, indicating unsold seats. Some fans say they're going to fewer shows because of the high price tag.",
   "text": "Fans are diagnosing big musical acts with \"blue dot fever\". with some. Saying it's due to high ticket prices. Some upcoming concerts have lots of them, as fans have been quick. To point out.. they speculate has led to cancellations of concerts or. Whole tours in extreme cases. Post Malone, Meghan Trainor and the Pussy Cat Dolls have all cancelled. Shows or entire tours in recent months. and. some of them have. Cited other reasons for doing so, fans have still pointed to their. Tours as part of the trend. The problem comes down to the cost, said Eric Alper, a music publicist and.",
-  "thai_text": "ข่าวนี้มาจาก CBC News อยู่ในหมวดข่าวแคนาดา และถูกเรียบเรียงเป็นระดับ A2. หัวข้อข่าวคือ “Some artists feeling 'blue dot fever,' fans say, as high ticket prices make concertgoers more selective”. แปลใจความได้ว่า ใจความของประโยคนี้เกี่ยวกับ artists = ศิลปิน / blue = สีฟ้า, สีน้ำเงิน / dot = จุด / fans = พัดลม. ใจความของประโยคนี้เกี่ยวกับ blue = สีฟ้า, สีน้ำเงิน / dot = จุด / dots = จุด / fans = พัดลม ใจความของประโยคนี้เกี่ยวกับ acts = กระทำ, แสดง / big = ใหญ่ / blue = สีฟ้า, สีน้ำเงิน / dot = จุด ใจความของประโยคนี้เกี่ยวกับ due = เนื่องจาก / high = สูง / saying = พูด / ticket = ตั๋ว ใจความของประโยคนี้เกี่ยวกับ concerts = คอนเสิร์ต / fans = พัดลม / lots = มาก / quick = เร็ว คำสำคัญที่ควรรู้: acts = กระทำ, แสดง / artists = ศิลปิน / big = ใหญ่ / blue = สีฟ้า, สีน้ำเงิน / cat = แมว.",
+  "thai_text": "ข่าวนี้มาจาก CBC News อยู่ในหมวดข่าวแคนาดา และถูกเรียบเรียงเป็นระดับ A2. เนื้อหาข่าวคือ เนื้อหาข่าวพูดถึงเหตุการณ์สำคัญและผลกระทบที่ผู้อ่านควรติดตามต่อ โดยควรอ่านจากย่อหน้าภาษาอังกฤษด้านบนประกอบด้วย",
   "word_translations": {
     "a": "",
     "acts": "กระทำ, แสดง",
@@ -58,7 +58,7 @@
     "point": "จุด",
     "pointed": "ชี้",
     "post": "โพสต์",
-    "prices": "",
+    "prices": "ราคา",
     "problem": "ปัญหา",
     "publicist": "",
     "pussy": "",
@@ -176,5 +176,5 @@
     "credit_url": ""
   },
   "audio_cache_path": "data/audio/2026-06-17/db6e74307e1aba8f38-a2.wav",
-  "generated_at": "2026-06-18T17:05:21.758756+00:00"
+  "generated_at": "2026-06-18T17:47:30.058977+00:00"
 }

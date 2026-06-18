@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-06-18T17:05:17.445801+00:00",
+  "fetched_at": "2026-06-18T17:47:27.054563+00:00",
   "candidates": [
     {
       "id": "1dc94853ff973fcd0b",
@@ -9,6 +9,19 @@
       "url": "https://www.cbc.ca/news/canada/edmonton/alberta-smith-first-nations-chiefs-separation-9.7240147?cmp=rss",
       "category": "Canada",
       "published": "2026-06-18T16:24:01+00:00",
+      "author": "CBC News",
+      "content_type": "rss news summary",
+      "image_url": "",
+      "thai_demo": ""
+    },
+    {
+      "id": "b689fab02569551a5b",
+      "provider": "CBC News",
+      "title": "After top court ruling, Quebec to prioritize long-term residents for subsidized daycare",
+      "description": "The Quebec government will be prioritizing families who \"live and work in Quebec permanently\" over asylum seekers for subsidized spots in daycares, according to the province's families minister.",
+      "url": "https://www.cbc.ca/news/canada/montreal/quebec-subsidized-daycare-spot-9.7239932?cmp=rss",
+      "category": "Canada",
+      "published": "2026-06-18T16:22:55+00:00",
       "author": "CBC News",
       "content_type": "rss news summary",
       "image_url": "",
@@ -28,19 +41,6 @@
       "thai_demo": ""
     },
     {
-      "id": "0fe4b7e19bef004aeb",
-      "provider": "CBC News",
-      "title": "An estimated 20,000 Alberta kids face waiting years to get therapy for disabilities",
-      "description": "An estimated 20,000 children are stuck on Alberta’s Family Support for Children with Disabilities (FSCD) waiting list, facing years of delays to get speech, behavioural and other treatment or therapy for autism and various disabilities.",
-      "url": "https://www.cbc.ca/news/canada/calgary/alberta-fscd-waitlist-disabilities-9.7236261?cmp=rss",
-      "category": "Canada",
-      "published": "2026-06-18T11:00:00+00:00",
-      "author": "CBC News",
-      "content_type": "rss news summary",
-      "image_url": "",
-      "thai_demo": ""
-    },
-    {
       "id": "e5ee07ebdd8e2e6c63",
       "provider": "CBC News",
       "title": "Innu Nation accuses N.L. government of capping group’s history at 300 years — an 'erasure,' say Innu leaders",
@@ -54,6 +54,19 @@
       "thai_demo": ""
     },
     {
+      "id": "5eee51814913d997ff",
+      "provider": "CBC News",
+      "title": "Eligible doctors in Alberta can work in both public, private systems starting this fall",
+      "description": "In order to be eligible for dual practice, doctors must do a minimum number of hours in the public system first. The province says those hour requirements along with other safeguards will protect the public system.",
+      "url": "https://www.cbc.ca/news/canada/edmonton/eligible-doctors-in-alberta-can-work-in-both-public-private-systems-starting-this-fall-9.7240331?cmp=rss",
+      "category": "Canada",
+      "published": "2026-06-18T17:10:39+00:00",
+      "author": "CBC News",
+      "content_type": "rss news summary",
+      "image_url": "",
+      "thai_demo": ""
+    },
+    {
       "id": "5ac524522d72cb22d0",
       "provider": "CBC News",
       "title": "19-year-old arrested in connection with U.S. Consulate shooting in Toronto",
@@ -61,6 +74,32 @@
       "url": "https://www.cbc.ca/news/canada/toronto/zara-jabbi-arrest-us-consulate-shooting-9.7239836?cmp=rss",
       "category": "Canada",
       "published": "2026-06-18T13:24:58+00:00",
+      "author": "CBC News",
+      "content_type": "rss news summary",
+      "image_url": "",
+      "thai_demo": ""
+    },
+    {
+      "id": "8e7b9ea5659fa0b5bb",
+      "provider": "CBC News",
+      "title": "'No plans right now' for grizzly hunting season in Alberta, minister says as rural residents call for hunt",
+      "description": "Amid calls from rural municipalities for the first grizzly bear hunting season in two decades to be opened in Alberta, Forestry and Parks Minister Todd Loewen says it's not currently on the table. He says the province is focused on helping the threatened species' population recover through conservation and non-lethal wildlife management.",
+      "url": "https://www.cbc.ca/news/canada/calgary/grizzly-bear-hunt-alberta-todd-loewen-9.7237851?cmp=rss",
+      "category": "Canada",
+      "published": "2026-06-18T16:32:21+00:00",
+      "author": "CBC News",
+      "content_type": "rss news summary",
+      "image_url": "",
+      "thai_demo": ""
+    },
+    {
+      "id": "0fe4b7e19bef004aeb",
+      "provider": "CBC News",
+      "title": "An estimated 20,000 Alberta kids face waiting years to get therapy for disabilities",
+      "description": "An estimated 20,000 children are stuck on Alberta’s Family Support for Children with Disabilities (FSCD) waiting list, facing years of delays to get speech, behavioural and other treatment or therapy for autism and various disabilities.",
+      "url": "https://www.cbc.ca/news/canada/calgary/alberta-fscd-waitlist-disabilities-9.7236261?cmp=rss",
+      "category": "Canada",
+      "published": "2026-06-18T11:00:00+00:00",
       "author": "CBC News",
       "content_type": "rss news summary",
       "image_url": "",
@@ -197,45 +236,6 @@
       "thai_demo": ""
     },
     {
-      "id": "a8d8ff8a6bf8931433",
-      "provider": "CBC News",
-      "title": "'This is happening every day': Experts raise alarm after recent human trafficking arrests in Sask.",
-      "description": "Two men tied to a trucking business in the RM of Edenwold are facing human trafficking charges after a months-long RCMP investigation. Expert are speaking out about the need for education about labour trafficking and how to spot red flags.",
-      "url": "https://www.cbc.ca/news/canada/saskatchewan/human-trafficking-experts-rcmp-investigation-9.7239017?cmp=rss",
-      "category": "Canada",
-      "published": "2026-06-17T20:24:05+00:00",
-      "author": "CBC News",
-      "content_type": "rss news summary",
-      "image_url": "",
-      "thai_demo": ""
-    },
-    {
-      "id": "ce3107ffd026d2d57b",
-      "provider": "CBC News",
-      "title": "Remember the heat dome? It changed everything",
-      "description": "Five years after the historic heat dome over British Columbia, CBC’s Johanna Wagstaffe checks in on the ecosystems that were pushed past their breaking point. From the intertidal zones of the Strait of Georgia to the forest canopy, the latest data reveals a reshuffling of nature’s 'winners and losers.' While some species are locked in a slow-motion collapse, others are showing surprising resilience, providing a critical blueprint for who survives the next extreme heat event.",
-      "url": "https://www.cbc.ca/player/play/9.7239351?cmp=rss",
-      "category": "Canada",
-      "published": "2026-06-17T22:23:53+00:00",
-      "author": "CBC News",
-      "content_type": "rss news summary",
-      "image_url": "",
-      "thai_demo": ""
-    },
-    {
-      "id": "fd285aa49dd6061bf1",
-      "provider": "CBC News",
-      "title": "Canadian government should 'indefinitely exclude' people with mental illness from MAID, committee recommends",
-      "description": "A special parliamentary committee is recommending that the federal government \"indefinitely exclude\" people whose sole underlying condition is a mental illness from applying for medical assistance in dying (MAID).",
-      "url": "https://www.cbc.ca/news/health/maid-mental-disorder-committee-report-government-9.7238589?cmp=rss",
-      "category": "Canada",
-      "published": "2026-06-17T20:16:31+00:00",
-      "author": "CBC News",
-      "content_type": "rss news summary",
-      "image_url": "",
-      "thai_demo": ""
-    },
-    {
       "id": "34f2c02610c55b5f22",
       "provider": "CBC News",
       "title": "Israeli military publishes new, expanded Lebanon occupation map despite U.S.-Iran deal",
@@ -249,6 +249,19 @@
       "thai_demo": ""
     },
     {
+      "id": "3bf80f30e68403485d",
+      "provider": "CBC News",
+      "title": "Canadian killed in South Africa wildlife park",
+      "description": "A Canadian tourist has been shot and killed at the Kruger National Park in South Africa, according to officials there.",
+      "url": "https://www.cbc.ca/news/canada/canadian-killed-south-africa-park-9.7240391?cmp=rss",
+      "category": "World",
+      "published": "2026-06-18T17:37:49+00:00",
+      "author": "CBC News",
+      "content_type": "rss news summary",
+      "image_url": "",
+      "thai_demo": ""
+    },
+    {
       "id": "6c8ff4cf8757b088e5",
       "provider": "CBC News",
       "title": "Ukraine hits Moscow oil refinery again, part of massive drone wave inside Russia",
@@ -256,6 +269,19 @@
       "url": "https://www.cbc.ca/news/world/drone-attack-moscow-refinery-9.7239717?cmp=rss",
       "category": "World",
       "published": "2026-06-18T10:25:11+00:00",
+      "author": "CBC News",
+      "content_type": "rss news summary",
+      "image_url": "",
+      "thai_demo": ""
+    },
+    {
+      "id": "a1f3fe4ed47106f2ce",
+      "provider": "CBC News",
+      "title": "IN PHOTOS | Knicks championship celebration",
+      "description": "New Yorkers held a ticker-tape parade and victory rally on Thursday for the Knicks men's basketball team that brought home the NBA championship after a 53-year drought.",
+      "url": "https://www.cbc.ca/sports/in-photos-knicks-championship-celebration-9.7239921?cmp=rss",
+      "category": "World",
+      "published": "2026-06-18T17:31:23+00:00",
       "author": "CBC News",
       "content_type": "rss news summary",
       "image_url": "",
@@ -464,32 +490,6 @@
       "url": "https://www.cbc.ca/radio/donald-trump-maga-coalition-9.7238320?cmp=rss",
       "category": "World",
       "published": "2026-06-17T13:54:41+00:00",
-      "author": "CBC News",
-      "content_type": "rss news summary",
-      "image_url": "",
-      "thai_demo": ""
-    },
-    {
-      "id": "6ad7cd6aa3c39451c5",
-      "provider": "CBC News",
-      "title": "Luigi Mangione seeks 'extreme emotional disturbance' defence in CEO killing case",
-      "description": "Luigi Mangione, the man accused of gunning down a health insurance executive in Manhattan, plans to argue at trial that he was in a state of \"extreme emotional disturbance\" when he allegedly committed the crime, a judge revealed at a court hearing Wednesday.",
-      "url": "https://www.cbc.ca/news/world/luigi-mangione-united-healthcare-ceo-killing-court-hearing-9.7238525?cmp=rss",
-      "category": "World",
-      "published": "2026-06-17T14:45:13+00:00",
-      "author": "CBC News",
-      "content_type": "rss news summary",
-      "image_url": "",
-      "thai_demo": ""
-    },
-    {
-      "id": "724b66a2517c8f2dd1",
-      "provider": "CBC News",
-      "title": "Lawsuit against Costco's popular rotisserie chicken 'fatally flawed,' company's lawyers say",
-      "description": "A proposed class-action lawsuit that says Costco \"systematically cheated\" customers by advertising its hugely popular Kirkland Signature seasoned rotisserie chicken as containing no preservatives is \"fatally flawed\" and should be thrown out, lawyers for the company say.",
-      "url": "https://www.cbc.ca/news/world/costco-chicken-9.7237331?cmp=rss",
-      "category": "World",
-      "published": "2026-06-17T13:32:20+00:00",
       "author": "CBC News",
       "content_type": "rss news summary",
       "image_url": "",
@@ -717,13 +717,13 @@
       "thai_demo": ""
     },
     {
-      "id": "28e97b0fe186e7fc1c",
+      "id": "615a87475cc275e251",
       "provider": "BBC News",
-      "title": "Gunmen attack Niger's biggest airport for second time in months",
+      "title": "Thirty-five killed as gunmen attack Niger's biggest airport",
       "description": "Niger has been fighting a militant Islamist insurgency for a decade and in January suspected jihadists attacked the same airport.",
       "url": "https://www.bbc.com/news/articles/cdx7krkdqeno?at_medium=RSS&at_campaign=rss",
       "category": "World",
-      "published": "2026-06-18T16:01:07+00:00",
+      "published": "2026-06-18T17:28:32+00:00",
       "author": "BBC News",
       "content_type": "rss news summary",
       "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/252c/live/b6de6170-fcdb-11f0-9c97-69939b61e7c7.jpg",
@@ -1130,19 +1130,6 @@
       "author": "BBC News",
       "content_type": "rss news summary",
       "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/3618/live/7fc188c0-6676-11f1-b1db-af71d47507d6.jpg",
-      "thai_demo": ""
-    },
-    {
-      "id": "a350fdc2841132f523",
-      "provider": "BBC News",
-      "title": "What is the super new Moon?",
-      "description": "A super new Moon is coming. While you won’t be able to see it, it's still going to have an impact. But, what exactly is it and what does it have to do with the tide?",
-      "url": "https://www.bbc.com/news/videos/cpwe2p4zywwo?at_medium=RSS&at_campaign=rss",
-      "category": "Science",
-      "published": "2026-06-12T15:30:35+00:00",
-      "author": "BBC News",
-      "content_type": "rss news summary",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/fb2e/live/38571140-666b-11f1-b68a-af11ef3c7f8c.jpg",
       "thai_demo": ""
     },
     {

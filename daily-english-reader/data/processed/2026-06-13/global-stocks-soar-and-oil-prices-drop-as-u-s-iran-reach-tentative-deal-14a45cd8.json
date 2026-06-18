@@ -1,12 +1,12 @@
 {
-  "schema_version": 7,
+  "schema_version": 8,
   "id": "14a45cd88c6d4f14ae",
   "slug": "global-stocks-soar-and-oil-prices-drop-as-u-s-iran-reach-tentative-deal-14a45cd8",
   "level": "A1",
   "title": "Global stocks soar and oil prices drop as U.S., Iran reach tentative deal to end war",
   "description": "Oil prices fell more than $4 US a barrel on news of a deal to end the fighting, as world markets responded positively to the developments. The S&P 500, Dow Jones Industrial Average and Nasdaq Composite all rose in early trading on Monday.",
   "text": "Stock markets rallied worldwide on Monday and. Oil prices eased after the United States and. Iran reached a tentative deal to extend their ceasefire and. Reopen the Strait of Hormuz to get the. Global flow of crude going again. The S&P 500 rose 1.7 per cent early. Monday on hopes that this time, the announcement. Of an Iran-U.S. agreement will mean a long-term.",
-  "thai_text": "ข่าวนี้มาจาก CBC News อยู่ในหมวดธุรกิจและเศรษฐกิจ และถูกเรียบเรียงเป็นระดับ A1. หัวข้อข่าวคือ “Global stocks soar and oil prices drop as U.S., Iran reach tentative deal to end war”. แปลใจความได้ว่า ใจความของประโยคนี้เกี่ยวกับ deal = ข้อตกลง / drop = หยด / end = จบ / global = ระดับโลก. ใจความของประโยคนี้เกี่ยวกับ average = เฉลี่ย / deal = ข้อตกลง / developments = การพัฒนา / early = เร็วขึ้น ใจความของประโยคนี้เกี่ยวกับ markets = ตลาด / monday = วันจันทร์ / stock = คลังสินค้า ใจความของประโยคนี้เกี่ยวกับ oil = น้ำมัน / united = สห ใจความของประโยคนี้เกี่ยวกับ deal = ข้อตกลง / extend = ขยาย / reached = เข้าถึง ตัวเลขที่ควรสังเกตในข่าวนี้คือ 500, 1.7 per cent. คำสำคัญที่ควรรู้: agreement = ข้อตกลง / average = เฉลี่ย / cent = ร้อยละ / deal = ข้อตกลง / developments = การพัฒนา.",
+  "thai_text": "ข่าวนี้มาจาก CBC News อยู่ในหมวดธุรกิจและเศรษฐกิจ และถูกเรียบเรียงเป็นระดับ A1. เนื้อหาข่าวคือ เนื้อหาข่าวพูดถึงเหตุการณ์สำคัญและผลกระทบที่ผู้อ่านควรติดตามต่อ โดยควรอ่านจากย่อหน้าภาษาอังกฤษด้านบนประกอบด้วย",
   "word_translations": {
     "a": "คำว่า a",
     "after": "หลังจาก",
@@ -124,5 +124,5 @@
     "credit_url": ""
   },
   "audio_cache_path": "data/audio/2026-06-13/14a45cd88c6d4f14ae-a1.wav",
-  "generated_at": "2026-06-18T17:05:31.560423+00:00"
+  "generated_at": "2026-06-18T17:47:36.910545+00:00"
 }

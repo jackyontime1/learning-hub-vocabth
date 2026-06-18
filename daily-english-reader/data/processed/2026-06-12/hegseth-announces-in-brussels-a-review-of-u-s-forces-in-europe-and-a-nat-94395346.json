@@ -1,12 +1,12 @@
 {
-  "schema_version": 7,
+  "schema_version": 8,
   "id": "94395346a8958303fd",
   "slug": "hegseth-announces-in-brussels-a-review-of-u-s-forces-in-europe-and-a-nat-94395346",
   "level": "B2",
   "title": "Hegseth announces in Brussels a review of U.S. forces in Europe, and a 'NATO 3.0'",
   "description": "U.S. Defense Secretary Pete Hegseth lashed out at NATO allies on Thursday, announcing a review of American forces in Europe, and calling for a reboot of the organization to turn it into a \"NATO 3.0.\"",
   "text": "United States Defense Secretary Pete Hegseth speaks during a press statement on arrival for a meeting of NATO defense ministers at NATO headquarters in Brussels, Thursday, June 18, 2026. BRUSSELS — U.S. Defense Secretary Pete Hegseth lashed out at NATO allies on Thursday, announcing a six-month Pentagon review of American forces in Europe whose outcome will depend on how fast the Europeans take responsibility for their own security. It will be designed to ensure that NATO is moving fast and irreversibly toward Europe leading, stepping up to take primary responsibility for the defense of Europe,\" he told his NATO counterparts in Brussels. Hegseth lambasted European allies for failing to provide U.S. forces access to bases in Europe to launch attacks on Iran, calling it \"shameful.\" \"These allies, they put America's sons and daughters, our sons and daughters, at risk by denying them the predictable access, basing and overflight that never should have been in question at all,\" he said.",
-  "thai_text": "ข่าวนี้มาจาก NPR อยู่ในหมวดข่าวต่างประเทศ และถูกเรียบเรียงเป็นระดับ B2. หัวข้อข่าวคือ “Hegseth announces in Brussels a review of U.S. forces in Europe, and a 'NATO 3.0'”. แปลใจความได้ว่า ใจความของประโยคนี้เกี่ยวกับ review = ทบทวน. ใจความของประโยคนี้เกี่ยวกับ calling = เรียก / organization = องค์กร / review = ทบทวน / secretary = เลขานุการ ใจความของประโยคนี้เกี่ยวกับ arrival = การมาถึง / june = มิถุนายน / meeting = การประชุม / ministers = รัฐมนตรี ใจความของประโยคนี้เกี่ยวกับ depend = ขึ้นอยู่กับ / fast = เร็ว / own = เป็นเจ้าของ / responsibility = ความรับผิดชอบ ใจความของประโยคนี้เกี่ยวกับ designed = ออกแบบ / ensure = ทำให้มั่นใจ / fast = เร็ว / leading = ชั้นนำ ตัวเลขที่ควรสังเกตในข่าวนี้คือ 18, 2026. คำสำคัญที่ควรรู้: access = เข้าถึง / arrival = การมาถึง / attacks = โจมตี.",
+  "thai_text": "ข่าวนี้มาจาก NPR อยู่ในหมวดข่าวต่างประเทศ และถูกเรียบเรียงเป็นระดับ B2. เนื้อหาข่าวคือ เนื้อหาข่าวพูดถึงเหตุการณ์สำคัญและผลกระทบที่ผู้อ่านควรติดตามต่อ โดยควรอ่านจากย่อหน้าภาษาอังกฤษด้านบนประกอบด้วย",
   "word_translations": {
     "a": "",
     "access": "เข้าถึง",
@@ -224,5 +224,5 @@
     "credit_url": ""
   },
   "audio_cache_path": "data/audio/2026-06-12/94395346a8958303fd-b2.wav",
-  "generated_at": "2026-06-18T17:05:34.728225+00:00"
+  "generated_at": "2026-06-18T17:47:38.876150+00:00"
 }

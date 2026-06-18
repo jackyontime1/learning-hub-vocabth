@@ -1,12 +1,12 @@
 {
-  "schema_version": 7,
+  "schema_version": 8,
   "id": "d7c0977181920b4db2",
   "slug": "you-re-probably-using-too-many-skin-care-products-here-are-the-3-essenti-d7c09771",
   "level": "B2",
   "title": "You're probably using too many skin care products. Here are the 3 essentials",
   "description": "We asked half a dozen skin care experts: Which products do you really need to keep your skin healthy and attractive? Here's what they said.",
   "text": "Do we really need all this stuff to achieve healthy, attractive skin? Beck Harlan for NPR My bathroom vanity holds an array of different products that are supposed to help my skin. To find out, I spoke with half a dozen skin care experts — dermatologists, researchers and cosmetic chemists. Some of them also do consulting work for companies that make skin care products. Beyond the must-haves for well-functioning skin (which we'll get to below), everything else is optional. \"I would consider them as nice-to-haves,\" says Dr. Saranya Wyles, a dermatologist and researcher who specializes in skin longevity. This includes products designed to help brighten, smooth and refresh your skin — like many of the jars and bottles lining my vanity. And while some ingredients can improve skin's appearance, there are limits to what any topical nonprescription product can do — like turn back the hands of time.",
-  "thai_text": "ข่าวนี้มาจาก NPR อยู่ในหมวดสุขภาพ และถูกเรียบเรียงเป็นระดับ B2. หัวข้อข่าวคือ “You're probably using too many skin care products. Here are the 3 essentials”. แปลใจความได้ว่า ใจความของประโยคนี้เกี่ยวกับ care = การดูแล / essentials = จำเป็น / many = มากมาย / probably = อาจจะ. ใจความของประโยคนี้เกี่ยวกับ asked = ถาม / attractive = มีเสน่ห์ / care = การดูแล / dozen = โหล ใจความของประโยคนี้เกี่ยวกับ achieve = บรรลุ, ทำสำเร็จ / attractive = มีเสน่ห์ / healthy = สุขภาพดี / need = ต้องการ ใจความของประโยคนี้เกี่ยวกับ bathroom = ห้องน้ำ / different = แตกต่าง / help = ช่วย / holds = ถือ ใจความของประโยคนี้เกี่ยวกับ care = การดูแล / chemists = นักเคมี / dozen = โหล / experts = ผู้เชี่ยวชาญ คำสำคัญที่ควรรู้: achieve = บรรลุ, ทำสำเร็จ / appearance = รูปร่าง / asked = ถาม / attractive = มีเสน่ห์ / back = หลัง, กลับ.",
+  "thai_text": "ข่าวนี้มาจาก NPR อยู่ในหมวดสุขภาพ และถูกเรียบเรียงเป็นระดับ B2. เนื้อหาข่าวคือ เนื้อหาข่าวพูดถึงเหตุการณ์สำคัญและผลกระทบที่ผู้อ่านควรติดตามต่อ โดยควรอ่านจากย่อหน้าภาษาอังกฤษด้านบนประกอบด้วย",
   "word_translations": {
     "a": "",
     "achieve": "บรรลุ, ทำสำเร็จ",
@@ -71,7 +71,7 @@
     "need": "ต้องการ",
     "nice-to-haves": "",
     "nonprescription": "",
-    "npr": "",
+    "npr": "เอ็นพีอาร์",
     "of": "ของ",
     "optional": "",
     "out": "ออก",
@@ -234,5 +234,5 @@
     "credit_url": ""
   },
   "audio_cache_path": "data/audio/2026-06-14/d7c0977181920b4db2-b2.wav",
-  "generated_at": "2026-06-18T17:05:30.588410+00:00"
+  "generated_at": "2026-06-18T17:47:35.945523+00:00"
 }

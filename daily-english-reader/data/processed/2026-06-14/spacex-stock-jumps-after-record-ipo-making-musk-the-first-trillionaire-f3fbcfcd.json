@@ -1,12 +1,12 @@
 {
-  "schema_version": 7,
+  "schema_version": 8,
   "id": "f3fbcfcd915d214ee0",
   "slug": "spacex-stock-jumps-after-record-ipo-making-musk-the-first-trillionaire-f3fbcfcd",
   "level": "C1",
   "title": "SpaceX stock jumps after record IPO, making Musk the first trillionaire",
   "description": "SpaceX soared in its Nasdaq debut on Friday, making the company worth more than $2 trillion US. It's expected to be included in the Nasdaq 100 within weeks, making it a major holding for passive funds and ETFs that track the index.",
   "text": "SpaceX soared in its Nasdaq debut on Friday, sending its value past $2 trillion US, as investors jumped at the chance to get a piece of Elon Musk's sprawling empire spanning rockets, internet service and AI after a record-setting IPO. Shares ended the day at about $161 a share, up 19 per cent, making SpaceX the sixth-largest U.S. company, though the final settlement price had yet to be determined. The trading, which surpassed 500 million shares, or about $80 billion US in volume, capped off a lead-up fraught with anxiety over the exchange's ability to handle the launch, particularly after a recent swoon in technology shares that raised ​concerns about the massive gains in AI-linked names. With mega-listings from AI heavyweights Anthropic and OpenAI waiting in the wings, market ​watchers worried that a flood of new IPOs could hurt market performance following a long period with a relative dearth of offerings. But investors across the spectrum, from large institutions to retail fans of Musk, ended the day euphoric. SpaceX kicks off wave of monster IPOs: What to know about companies going public OpenAI files for IPO as AI firms look to make Wall Street debut \"SpaceX is not only a record breaker in terms of money raised at a stock market debut, but ​it has also left other big names for dust.",
-  "thai_text": "ข่าวนี้มาจาก CBC News อยู่ในหมวดธุรกิจและเศรษฐกิจ และถูกเรียบเรียงเป็นระดับ C1. หัวข้อข่าวคือ “SpaceX stock jumps after record IPO, making Musk the first trillionaire”. แปลใจความได้ว่า ใจความของประโยคนี้เกี่ยวกับ first = อันดับแรก / jumps = กระโดด / record = บันทึก / stock = คลังสินค้า. ใจความของประโยคนี้เกี่ยวกับ company = บริษัท / expected = ที่คาดหวัง / friday = วันศุกร์ / funds = กองทุน ใจความของประโยคนี้เกี่ยวกับ ai = ปัญญาประดิษฐ์ / chance = โอกาส / empire = จักรวรรดิ / friday = วันศุกร์ ใจความของประโยคนี้เกี่ยวกับ cent = ร้อยละ / company = บริษัท / day = วัน / determined = มุ่งมั่น ใจความของประโยคนี้เกี่ยวกับ ability = ความสามารถ / anxiety = ความวิตกกังวล / billion = พันล้าน / concerns = ความกังวล ตัวเลขที่ควรสังเกตในข่าวนี้คือ 2, 161, 19 per cent, 500 million. คำสำคัญที่ควรรู้: ability = ความสามารถ / across = ข้าม / ai = ปัญญาประดิษฐ์ / anxiety = ความวิตกกังวล / big = ใหญ่.",
+  "thai_text": "ข่าวนี้มาจาก CBC News อยู่ในหมวดธุรกิจและเศรษฐกิจ และถูกเรียบเรียงเป็นระดับ C1. เนื้อหาข่าวคือ เนื้อหาข่าวพูดถึงเหตุการณ์สำคัญและผลกระทบที่ผู้อ่านควรติดตามต่อ โดยควรอ่านจากย่อหน้าภาษาอังกฤษด้านบนประกอบด้วย",
   "word_translations": {
     "a": "",
     "ability": "ความสามารถ",
@@ -320,5 +320,5 @@
     "credit_url": ""
   },
   "audio_cache_path": "data/audio/2026-06-14/f3fbcfcd915d214ee0-c1.wav",
-  "generated_at": "2026-06-18T17:05:31.115613+00:00"
+  "generated_at": "2026-06-18T17:47:36.547179+00:00"
 }

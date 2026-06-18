@@ -1,12 +1,12 @@
 {
-  "schema_version": 7,
+  "schema_version": 8,
   "id": "3532b53943056d5b11",
   "slug": "trump-says-he-ll-delay-nomination-for-clayton-to-be-his-next-intel-chief-3532b539",
   "level": "B1",
   "title": "Trump says he'll delay nomination for Clayton to be his next intel chief",
   "description": "U.S. President Donald Trump on Wednesday derailed the confirmation process of his own nominee to head the nation's intelligence agencies, an extraordinary move that upended Senate efforts to renew a crucial surveillance program that expired last week and fuelled fresh tensions with fellow Republicans on Capitol Hill.",
   "text": "U.S. President Donald Trump on Wednesday derailed the confirmation process of his own nominee to head the country's intelligence. Agencies, an extraordinary move that upended Senate efforts to renew a crucial surveillance program and. Fuelled fresh tensions with fellow Republicans on Capitol Hill. In an overnight social media post from the Group of Seven summit in France, Trump declared he was. Delaying the nomination of federal prosecutor Jay Clayton as director of national intelligence just hours ahead of his. Scheduled hearing, despite bipartisan praise for the nominee and Republican efforts to speed him through the confirmation process this week. Senate Intelligence Committee chair Tom Cotton said Republicans would go ahead with the Clayton hearing anyway, \"unless the. President directs him not to appear or withdraws his nomination.\" But Cotton later postponed it, saying it was. \"regrettable\" that Trump had directed Clayton not to appear.",
-  "thai_text": "ข่าวนี้มาจาก CBC News อยู่ในหมวดข่าวต่างประเทศ และถูกเรียบเรียงเป็นระดับ B1. หัวข้อข่าวคือ “Trump says he'll delay nomination for Clayton to be his next intel chief”. แปลใจความได้ว่า ใจความของประโยคนี้เกี่ยวกับ chief = หัวหน้า / delay = ความล่าช้า / next = ต่อไป / says = พูด. ใจความของประโยคนี้เกี่ยวกับ crucial = สำคัญ / efforts = ความพยายาม / extraordinary = พิเศษ / fellow = เพื่อน ใจความของประโยคนี้เกี่ยวกับ head = ศีรษะ / intelligence = ปัญญา / own = เป็นเจ้าของ / president = ประธาน ใจความของประโยคนี้เกี่ยวกับ crucial = สำคัญ / efforts = ความพยายาม / extraordinary = พิเศษ / move = ย้าย ใจความของประโยคนี้เกี่ยวกับ fellow = เพื่อน / fresh = สด / hill = เนินเขา / tensions = ความเครียด คำสำคัญที่ควรรู้: ahead = ข้างหน้า / anyway = ถึงอย่างไร / appear = ปรากฏ / chair = เก้าอี้ / chief = หัวหน้า.",
+  "thai_text": "ข่าวนี้มาจาก CBC News อยู่ในหมวดข่าวต่างประเทศ และถูกเรียบเรียงเป็นระดับ B1. เนื้อหาข่าวคือ เนื้อหาข่าวพูดถึงเหตุการณ์สำคัญและผลกระทบที่ผู้อ่านควรติดตามต่อ โดยควรอ่านจากย่อหน้าภาษาอังกฤษด้านบนประกอบด้วย",
   "word_translations": {
     "a": "คำว่า a",
     "agencies": "คำว่า agencies",
@@ -224,5 +224,5 @@
     "credit_url": ""
   },
   "audio_cache_path": "data/audio/2026-06-16/3532b53943056d5b11-b1.wav",
-  "generated_at": "2026-06-18T17:05:24.462387+00:00"
+  "generated_at": "2026-06-18T17:47:32.396883+00:00"
 }

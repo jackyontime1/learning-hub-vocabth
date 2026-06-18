@@ -1,12 +1,12 @@
 {
-  "schema_version": 7,
+  "schema_version": 8,
   "id": "0056a21c82e9a8acf2",
   "slug": "survey-confirms-the-struggle-of-working-parents-no-way-to-be-two-things-0056a21c",
   "level": "C1",
   "title": "Survey confirms the struggle of working parents: 'No way to be two things at once'",
   "description": "A new Pew survey finds many working parents feel they cannot give 100% at either work or home. Benefits like paid sick leave and more affordable childcare could help.",
   "text": "Cliff Jette for NPR Amber Petersen's struggles are likely familiar to any working parent. Some days at work, she finds herself diverted to family matters. She needs to leave work immediately. Other days, she wishes she could be chaperoning a field trip instead of scheduling meetings and putting together files at the small law firm in Mason City, Iowa, where she works as a legal assistant. \"I feel like that tug of war is constantly on my mind of where I need to be — if I am missing out as a mom, or if I am disappointing somebody at work,\" she says. \"There's just no way to be two things at once and give 100% at both.\" A new survey from the Pew Research Center finds that struggle widespread, with two-thirds of working mothers reporting that they can't give 100% at home and just over half saying they can't give their all at work. A smaller but sizable share of fathers agree, with half reporting they can't give 100% at home, and about a third saying they can't give their all at work. The survey focused primarily on families with both a mother and a father who work full time. Petersen works as a legal assistant at a small firm in Mason City, Iowa.",
-  "thai_text": "ข่าวนี้มาจาก NPR อยู่ในหมวดธุรกิจและเศรษฐกิจ และถูกเรียบเรียงเป็นระดับ C1. หัวข้อข่าวคือ “Survey confirms the struggle of working parents: 'No way to be two things at once'”. แปลใจความได้ว่า ใจความของประโยคนี้เกี่ยวกับ confirms = ยืนยัน / once = ครั้งหนึ่ง / parents = บริษัทแม่ / struggle = การต่อสู้. ใจความของประโยคนี้เกี่ยวกับ benefits = สวัสดิการ / cannot = ไม่สามารถ / either = ทั้ง / feel = รู้สึก ใจความของประโยคนี้เกี่ยวกับ familiar = คุ้นเคย / likely = มีแนวโน้ม / parent = บริษัทแม่ / working = การทำงาน ใจความของประโยคนี้เกี่ยวกับ days = วัน / family = ครอบครัว / finds = พบ / herself = ตัวเธอเอง ใจความของประโยคนี้เกี่ยวกับ immediately = โดยทันที / leave = ออกจาก / needs = ต้องการ / work = งาน ตัวเลขที่ควรสังเกตในข่าวนี้คือ 100, 100, 100. คำสำคัญที่ควรรู้: agree = เห็นด้วย / assistant = ผู้ช่วย / benefits = สวัสดิการ / cannot = ไม่สามารถ.",
+  "thai_text": "ข่าวนี้มาจาก NPR อยู่ในหมวดธุรกิจและเศรษฐกิจ และถูกเรียบเรียงเป็นระดับ C1. เนื้อหาข่าวคือ เนื้อหาข่าวพูดถึงเหตุการณ์สำคัญและผลกระทบที่ผู้อ่านควรติดตามต่อ โดยควรอ่านจากย่อหน้าภาษาอังกฤษด้านบนประกอบด้วย",
   "word_translations": {
     "a": "",
     "about": "เกี่ยวกับ",
@@ -78,7 +78,7 @@
     "needs": "ต้องการ",
     "new": "ใหม่",
     "no": "เลขที่",
-    "npr": "",
+    "npr": "เอ็นพีอาร์",
     "of": "ของ",
     "on": "บน",
     "once": "ครั้งหนึ่ง",
@@ -270,5 +270,5 @@
     "credit_url": ""
   },
   "audio_cache_path": "data/audio/2026-06-17/0056a21c82e9a8acf2-c1.wav",
-  "generated_at": "2026-06-18T17:05:23.313208+00:00"
+  "generated_at": "2026-06-18T17:47:31.531248+00:00"
 }

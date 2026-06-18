@@ -1,12 +1,12 @@
 {
-  "schema_version": 7,
+  "schema_version": 8,
   "id": "73829b7e771529e592",
   "slug": "new-microplastics-research-examines-river-thames-73829b7e",
   "level": "A2",
   "title": "New microplastics research examines River Thames",
   "description": "Water samples are assessed for pollution levels and any impact climate pressures may be having on the river system.",
   "text": "A new study into microplastic pollution in the River Thames has been. Launched by researchers at the University of East London (UEL) in an. Attempt to influence environmental policy and water quality. The samples will be assessed to see how pollution levels are changing and. What impact climate pressures may be having on the river system. Some of the highest levels of microplastics for any river in the. World have previously been recorded from the Thames. Devereux said. \"The River Thames is one of the most internationally recognised urban rivers. In the world, yet we are still learning about the scale and.",
-  "thai_text": "ข่าวนี้มาจาก BBC News อยู่ในหมวดวิทยาศาสตร์ และถูกเรียบเรียงเป็นระดับ A2. หัวข้อข่าวคือ “New microplastics research examines River Thames”. แปลใจความได้ว่า ใจความของประโยคนี้เกี่ยวกับ new = ใหม่ / research = งานวิจัย / river = แม่น้ำ. ใจความของประโยคนี้เกี่ยวกับ climate = สภาพภูมิอากาศ / impact = ผลกระทบ / levels = ระดับ / may = อาจ ใจความของประโยคนี้เกี่ยวกับ new = ใหม่ / pollution = มลพิษ / river = แม่น้ำ / study = การศึกษา ใจความของประโยคนี้เกี่ยวกับ east = ทิศตะวันออก / launched = ปล่อย / researchers = นักวิจัย / university = มหาวิทยาลัย ใจความของประโยคนี้เกี่ยวกับ attempt = พยายาม / environmental = ด้านสิ่งแวดล้อม / influence = อิทธิพล / policy = นโยบาย คำสำคัญที่ควรรู้: attempt = พยายาม / climate = สภาพภูมิอากาศ / east = ทิศตะวันออก / environmental = ด้านสิ่งแวดล้อม.",
+  "thai_text": "ข่าวนี้มาจาก BBC News อยู่ในหมวดวิทยาศาสตร์ และถูกเรียบเรียงเป็นระดับ A2. เนื้อหาข่าวคือ เนื้อหาข่าวพูดถึงเหตุการณ์สำคัญและผลกระทบที่ผู้อ่านควรติดตามต่อ โดยควรอ่านจากย่อหน้าภาษาอังกฤษด้านบนประกอบด้วย",
   "word_translations": {
     "a": "",
     "about": "เกี่ยวกับ",
@@ -168,5 +168,5 @@
     "credit_url": "https://www.bbc.com/news/articles/cq81qvdknv3o?at_medium=RSS&at_campaign=rss"
   },
   "audio_cache_path": "data/audio/2026-06-14/73829b7e771529e592-a2.wav",
-  "generated_at": "2026-06-18T17:05:29.159014+00:00"
+  "generated_at": "2026-06-18T17:47:35.380111+00:00"
 }

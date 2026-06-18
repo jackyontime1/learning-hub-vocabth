@@ -1,12 +1,12 @@
 {
-  "schema_version": 7,
+  "schema_version": 8,
   "id": "3d2834c4fc69e1fc7b",
   "slug": "what-is-helium-3-and-could-we-get-it-from-the-moon-3d2834c4",
   "level": "A1",
   "title": "What is Helium-3 and could we get it from the moon?",
   "description": "Helium-3 is expensive and demand is forecast to soar, so some are planning to mine it on the moon.",
   "text": "One of the most valuable assets owned by. Lancaster University is stored in beer kegs. In a carefully locked laboratory rows of metal. Kegs are arranged on shelves and linked together with spindly copper pipework. The containers aren't loaded with prize beer but. Rather a gas called helium-3, one of the. Most expensive materials in the world. Back then, the helium was quite cheap,\" says Dima Zmeev, senior lecturer.",
-  "thai_text": "ข่าวนี้มาจาก BBC News อยู่ในหมวดเทคโนโลยี และถูกเรียบเรียงเป็นระดับ A1. หัวข้อข่าวคือ “What is Helium-3 and could we get it from the moon?”. แปลใจความได้ว่า ใจความของประโยคนี้เกี่ยวกับ get = รับ / moon = ดวงจันทร์. ใจความของประโยคนี้เกี่ยวกับ demand = ความต้องการ / expensive = แพง / forecast = พยากรณ์ / mine = ของฉัน ใจความของประโยคนี้เกี่ยวกับ one = หนึ่ง / owned = เป็นเจ้าของ / valuable = มีค่า ใจความของประโยคนี้เกี่ยวกับ beer = เบียร์ / university = มหาวิทยาลัย ใจความของประโยคนี้เกี่ยวกับ carefully = อย่างระมัดระวัง / laboratory = ห้องปฏิบัติการ / locked = ล็อค / metal = โลหะ ตัวเลขที่ควรสังเกตในข่าวนี้คือ 3. คำสำคัญที่ควรรู้: back = หลัง, กลับ / beer = เบียร์ / called = เรียกว่า / carefully = อย่างระมัดระวัง / cheap = ราคาถูก.",
+  "thai_text": "ข่าวนี้มาจาก BBC News อยู่ในหมวดเทคโนโลยี และถูกเรียบเรียงเป็นระดับ A1. เนื้อหาข่าวคือ เนื้อหาข่าวพูดถึงเหตุการณ์สำคัญและผลกระทบที่ผู้อ่านควรติดตามต่อ โดยควรอ่านจากย่อหน้าภาษาอังกฤษด้านบนประกอบด้วย",
   "word_translations": {
     "a": "",
     "and": "และ",
@@ -134,5 +134,5 @@
     "credit_url": "https://www.bbc.com/news/articles/ce8jmg2e4kro?at_medium=RSS&at_campaign=rss"
   },
   "audio_cache_path": "data/audio/2026-06-14/3d2834c4fc69e1fc7b-a1.wav",
-  "generated_at": "2026-06-18T17:05:28.944186+00:00"
+  "generated_at": "2026-06-18T17:47:35.233756+00:00"
 }

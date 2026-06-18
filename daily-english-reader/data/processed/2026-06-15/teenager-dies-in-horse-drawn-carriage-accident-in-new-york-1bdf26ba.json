@@ -1,12 +1,12 @@
 {
-  "schema_version": 7,
+  "schema_version": 8,
   "id": "1bdf26baca361108bd",
   "slug": "teenager-dies-in-horse-drawn-carriage-accident-in-new-york-1bdf26ba",
   "level": "A2",
   "title": "Teenager dies in horse-drawn carriage accident in New York",
   "description": "The horse bolted and toppled over after the carriage driver stepped down to take a picture of the passengers.",
   "text": "An 18-year-old man has died after falling from a horse-drawn carriage in. New York City, police have said. The teenager, identified locally as a tourist from India, was riding on. The carriage in Central Park with three others when the driver stepped. Away to take a picture of the group, police told US media. The horse then bolted, before clipping another carriage and toppling over, footage showed. \"It appears the driver was at least at arm's length from his. Horse,\" Alexander Kemp, a vice president of the union, Transport Workers Union. Local 100, said in a statement to local media.",
-  "thai_text": "ข่าวนี้มาจาก BBC News อยู่ในหมวดข่าวต่างประเทศ และถูกเรียบเรียงเป็นระดับ A2. หัวข้อข่าวคือ “Teenager dies in horse-drawn carriage accident in New York”. แปลใจความได้ว่า ใจความของประโยคนี้เกี่ยวกับ accident = อุบัติเหตุ / new = ใหม่. ใจความของประโยคนี้เกี่ยวกับ driver = คนขับ / horse = ม้า / passengers = ผู้โดยสาร / picture = รูปภาพ ใจความของประโยคนี้เกี่ยวกับ falling = ตก / man = ผู้ชาย ใจความของประโยคนี้เกี่ยวกับ city = เมือง / new = ใหม่ / police = ตำรวจ ใจความของประโยคนี้เกี่ยวกับ locally = ในท้องถิ่น / riding = ขี่ / tourist = นักท่องเที่ยว ตัวเลขที่ควรสังเกตในข่าวนี้คือ 18, 100. คำสำคัญที่ควรรู้: accident = อุบัติเหตุ / another = อื่น / appears = ปรากฏ / away = ห่างออกไป / central = ศูนย์กลาง.",
+  "thai_text": "ข่าวนี้มาจาก BBC News อยู่ในหมวดข่าวต่างประเทศ และถูกเรียบเรียงเป็นระดับ A2. เนื้อหาข่าวคือ เนื้อหาข่าวพูดถึงเหตุการณ์สำคัญและผลกระทบที่ผู้อ่านควรติดตามต่อ โดยควรอ่านจากย่อหน้าภาษาอังกฤษด้านบนประกอบด้วย",
   "word_translations": {
     "a": "",
     "after": "หลังจาก",
@@ -168,5 +168,5 @@
     "credit_url": "https://www.bbc.com/news/articles/c20yxwjn873o?at_medium=RSS&at_campaign=rss"
   },
   "audio_cache_path": "data/audio/2026-06-15/1bdf26baca361108bd-a2.wav",
-  "generated_at": "2026-06-18T17:05:26.452145+00:00"
+  "generated_at": "2026-06-18T17:47:33.919813+00:00"
 }

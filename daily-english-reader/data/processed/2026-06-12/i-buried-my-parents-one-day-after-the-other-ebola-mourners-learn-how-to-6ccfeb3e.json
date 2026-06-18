@@ -1,12 +1,12 @@
 {
-  "schema_version": 7,
+  "schema_version": 8,
   "id": "6ccfeb3ef88494eaa2",
   "slug": "i-buried-my-parents-one-day-after-the-other-ebola-mourners-learn-how-to-6ccfeb3e",
   "level": "A2",
   "title": "'I buried my parents one day after the other' - Ebola mourners learn how to grieve safely",
   "description": "A cemetery at the epicentre of the outbreak is rapidly filling up, however large traditional funerals have been scrapped.",
   "text": "Nyamurongo cemetery in Bunia, a city in north-eastern Democratic Republic of Congo. That is the epicentre of the current Ebola outbreak, is much busier than usual. \"Today is the sixth time I have come to the cemetery,\" says. Joel Lonza Makumbu as he explains how the virus has devastated his family and community. Today I have come to say goodbye to my mother.\" As he. Fills the grave with soil, he says he has also lost three sisters and. A brother-in-law to Ebola. \"I want to say for all people [to hear] that Ebola is.",
-  "thai_text": "ข่าวนี้มาจาก BBC News อยู่ในหมวดข่าวต่างประเทศ และถูกเรียบเรียงเป็นระดับ A2. หัวข้อข่าวคือ “'I buried my parents one day after the other' - Ebola mourners learn how to grieve safely”. แปลใจความได้ว่า ใจความของประโยคนี้เกี่ยวกับ day = วัน / i = ฉัน / learn = เรียนรู้ / my = ของฉัน. ใจความของประโยคนี้เกี่ยวกับ filling = เติม / funerals = งานศพ / however = อย่างไรก็ตาม / large = ใหญ่ ใจความของประโยคนี้เกี่ยวกับ city = เมือง ใจความของประโยคนี้เกี่ยวกับ current = ปัจจุบัน / much = มาก / usual = ตามปกติ ใจความของประโยคนี้เกี่ยวกับ come = มา / i = ฉัน / says = พูด / sixth = ที่หก คำสำคัญที่ควรรู้: city = เมือง / come = มา / community = ชุมชน / current = ปัจจุบัน.",
+  "thai_text": "ข่าวนี้มาจาก BBC News อยู่ในหมวดข่าวต่างประเทศ และถูกเรียบเรียงเป็นระดับ A2. เนื้อหาข่าวคือ เนื้อหาข่าวพูดถึงเหตุการณ์สำคัญและผลกระทบที่ผู้อ่านควรติดตามต่อ โดยควรอ่านจากย่อหน้าภาษาอังกฤษด้านบนประกอบด้วย",
   "word_translations": {
     "a": "คำว่า a",
     "all": "คำว่า all",
@@ -148,5 +148,5 @@
     "credit_url": "https://www.bbc.com/news/articles/cj3gx8jl6d5o?at_medium=RSS&at_campaign=rss"
   },
   "audio_cache_path": "data/audio/2026-06-12/6ccfeb3ef88494eaa2-a2.wav",
-  "generated_at": "2026-06-18T17:05:33.642435+00:00"
+  "generated_at": "2026-06-18T17:47:38.460150+00:00"
 }

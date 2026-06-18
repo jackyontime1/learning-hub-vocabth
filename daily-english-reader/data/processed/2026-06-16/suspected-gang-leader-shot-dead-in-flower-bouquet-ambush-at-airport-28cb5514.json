@@ -1,12 +1,12 @@
 {
-  "schema_version": 7,
+  "schema_version": 8,
   "id": "28cb5514fb55ae1474",
   "slug": "suspected-gang-leader-shot-dead-in-flower-bouquet-ambush-at-airport-28cb5514",
   "level": "A2",
   "title": "Suspected gang leader shot dead in flower bouquet ambush at airport",
   "description": "The gunmen concealed their weapons behind flowers and stuffed toys while waiting for the victim outside Guayaquil airport.",
   "text": "An Ecuadorean man. police accuse of leading a faction of one of. The country's most feared criminal gangs, has been shot dead as he. Was leaving the airport in Ecuador's largest city, Guayaquil. Security footage shows two young men waiting outside the arrivals terminal holding stuffed toys and. Flowers before one of them approaches the victim, pulls his gun from. Behind a teddy and shoots him point-blank. Police have detained two teenagers in connection with the crime, the latest. In a widespread wave of gang violence. This latest deadly shooting came just a day after Ecuador's president declared.",
-  "thai_text": "ข่าวนี้มาจาก BBC News อยู่ในหมวดข่าวต่างประเทศ และถูกเรียบเรียงเป็นระดับ A2. หัวข้อข่าวคือ “Suspected gang leader shot dead in flower bouquet ambush at airport”. แปลใจความได้ว่า ใจความของประโยคนี้เกี่ยวกับ airport = สนามบิน / dead = ตาย / flower = ดอกไม้ / leader = ผู้นำ. ใจความของประโยคนี้เกี่ยวกับ airport = สนามบิน / behind = ด้านหลัง / flowers = ดอกไม้ / outside = ข้างนอก ใจความของประโยคนี้เกี่ยวกับ accuse = กล่าวโทษ / leading = ชั้นนำ / man = ผู้ชาย / one = หนึ่ง ใจความของประโยคนี้เกี่ยวกับ criminal = อาชญากร / dead = ตาย / feared = กลัว / shot = ยิง ใจความของประโยคนี้เกี่ยวกับ airport = สนามบิน / city = เมือง คำสำคัญที่ควรรู้: accuse = กล่าวโทษ / airport = สนามบิน / approaches = เข้าใกล้ / arrivals = การมาถึง / behind = ด้านหลัง.",
+  "thai_text": "ข่าวนี้มาจาก BBC News อยู่ในหมวดข่าวต่างประเทศ และถูกเรียบเรียงเป็นระดับ A2. เนื้อหาข่าวคือ เนื้อหาข่าวพูดถึงเหตุการณ์สำคัญและผลกระทบที่ผู้อ่านควรติดตามต่อ โดยควรอ่านจากย่อหน้าภาษาอังกฤษด้านบนประกอบด้วย",
   "word_translations": {
     "a": "",
     "accuse": "กล่าวโทษ",
@@ -180,5 +180,5 @@
     "credit_url": "https://www.bbc.com/news/articles/c4gy2l30dd0o?at_medium=RSS&at_campaign=rss"
   },
   "audio_cache_path": "data/audio/2026-06-16/28cb5514fb55ae1474-a2.wav",
-  "generated_at": "2026-06-18T17:05:24.218588+00:00"
+  "generated_at": "2026-06-18T17:47:31.964945+00:00"
 }

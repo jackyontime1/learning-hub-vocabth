@@ -1,12 +1,12 @@
 {
-  "schema_version": 7,
+  "schema_version": 8,
   "id": "e107041fc5e79d09b2",
   "slug": "social-media-ban-bold-and-blunt-but-no-silver-bullet-e107041f",
   "level": "A2",
   "title": "Social media ban - bold and blunt, but no silver bullet",
   "description": "The BBC's technology editor Zoe Kleinman on the big changes coming down the line for young people online.",
   "text": "When I arrived at 10 Downing Street this morning to hear the. Prime minister announce the UK's social media ban for under-16s, I had. To hand in my phone for security reasons. Sir Keir Starmer's news was bold and blunt. yes there will be. A ban, yes it will follow Australia's model and. Yes, there will be additional curbs. will impact older children, aged 16 and 17, as well. A night-time curfew is expected to be part of this. The UK's plan had been dubbed \"Australia Plus\" and now we know why. But Australia's ban has faced well-documented problems, not least because.",
-  "thai_text": "ข่าวนี้มาจาก BBC News อยู่ในหมวดเทคโนโลยี และถูกเรียบเรียงเป็นระดับ A2. หัวข้อข่าวคือ “Social media ban - bold and blunt, but no silver bullet”. แปลใจความได้ว่า ใจความของประโยคนี้เกี่ยวกับ ban = ห้าม / bullet = หัวข้อย่อย / media = สื่อ / silver = เงิน. ใจความของประโยคนี้เกี่ยวกับ big = ใหญ่ / editor = บรรณาธิการ / line = เส้น / online = ออนไลน์ ใจความของประโยคนี้เกี่ยวกับ downing = ลง / hear = ได้ยิน / i = ฉัน / morning = เช้า ใจความของประโยคนี้เกี่ยวกับ announce = ประกาศ / ban = ห้าม / i = ฉัน / media = สื่อ ใจความของประโยคนี้เกี่ยวกับ hand = มือ / my = ของฉัน / phone = โทรศัพท์ / reasons = เหตุผล ตัวเลขที่ควรสังเกตในข่าวนี้คือ 10, 16, 17. คำสำคัญที่ควรรู้: additional = เพิ่มเติม / aged = อายุ / announce = ประกาศ / ban = ห้าม / big = ใหญ่.",
+  "thai_text": "ข่าวนี้มาจาก BBC News อยู่ในหมวดเทคโนโลยี และถูกเรียบเรียงเป็นระดับ A2. เนื้อหาข่าวคือ เนื้อหาข่าวพูดถึงเหตุการณ์สำคัญและผลกระทบที่ผู้อ่านควรติดตามต่อ โดยควรอ่านจากย่อหน้าภาษาอังกฤษด้านบนประกอบด้วย",
   "word_translations": {
     "a": "",
     "additional": "เพิ่มเติม",
@@ -174,5 +174,5 @@
     "credit_url": "https://www.bbc.com/news/articles/cddl65dp0rdo?at_medium=RSS&at_campaign=rss"
   },
   "audio_cache_path": "data/audio/2026-06-15/e107041fc5e79d09b2-a2.wav",
-  "generated_at": "2026-06-18T17:05:26.554736+00:00"
+  "generated_at": "2026-06-18T17:47:33.988472+00:00"
 }
