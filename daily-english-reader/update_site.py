@@ -261,7 +261,8 @@ class QuotaManager:
 
     def available(self, provider: str) -> bool:
         record = self.record(provider)
-        if record["disabled"] or record["requests"] >= self.limits.get(provider, 1):
+        limit = self.limits.get(provider, 30 if provider.startswith("rss_") else 1)
+        if record["disabled"] or record["requests"] >= limit:
             return False
         cooldown = parse_date(record["cooldown_until"]) if record["cooldown_until"] else None
         return not cooldown or cooldown <= utc_now()
@@ -293,7 +294,7 @@ class QuotaManager:
             "providers": {
                 name: {
                     "requests": row["requests"],
-                    "soft_limit": self.limits.get(name, 0),
+                    "soft_limit": self.limits.get(name, 30 if name.startswith("rss_") else 0),
                     "available": self.available(name),
                     "cooldown_until": row["cooldown_until"],
                     "last_error": row["last_error"],
@@ -992,7 +993,7 @@ def generate_audio(text: str, article_id: str, level: str, date: str, config: di
             rate = {"A1": "-18%", "A2": "-12%", "B1": "-6%", "B2": "+0%", "C1": "+4%"}[level]
             subprocess.run([
                 sys.executable, "-m", "edge_tts",
-                "--voice", voice, "--rate", rate, "--text", text,
+                "--voice", voice, f"--rate={rate}", "--text", text,
                 "--write-media", str(output),
             ], check=True, capture_output=True, timeout=90)
             if output.exists() and output.stat().st_size > 1000:
@@ -1000,9 +1001,10 @@ def generate_audio(text: str, article_id: str, level: str, date: str, config: di
         except (subprocess.SubprocessError, OSError) as error:
             logging.warning("edge-tts unavailable; falling back to local TTS: %s", error)
     wav = output.with_suffix(".wav")
+    local_rates = {"A1": 132, "A2": 145, "B1": 160, "B2": 172, "C1": 182}
     try:
         engine = pyttsx3.init()
-        engine.setProperty("rate", {"A2": 145, "B1": 160, "B2": 172}[level])
+        engine.setProperty("rate", local_rates[level])
         engine.save_to_file(text, str(wav))
         engine.runAndWait()
         engine.stop()
@@ -1012,7 +1014,7 @@ def generate_audio(text: str, article_id: str, level: str, date: str, config: di
         espeak = shutil.which("espeak-ng") or shutil.which("espeak")
         if not espeak:
             raise RuntimeError("pyttsx3 and espeak-ng both failed")
-        subprocess.run([espeak, "-s", {"A2": "145", "B1": "160", "B2": "172"}[level], "-w", str(wav), text],
+        subprocess.run([espeak, "-s", str(local_rates[level]), "-w", str(wav), text],
                        check=True, capture_output=True)
     subprocess.run([ffmpeg, "-y", "-loglevel", "error", "-i", str(wav), "-codec:a", "libmp3lame", "-q:a", "5", str(output)],
                    check=True)
