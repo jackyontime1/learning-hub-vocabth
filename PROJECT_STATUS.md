@@ -268,6 +268,25 @@ node "D:\podcast voice\daily-english-reader\scripts\build-learning-hub.mjs"
   Production article audio uses `.mp3` with `audio/mpeg` and MP3 `ID3` signature.
   Browser popup verification passed: word `prices` displays `n.` and Thai translation `ราคา`.
 
+## Reading Quality Fix - June 18, 2026
+
+- Deployed via GitHub Actions run:
+  `https://github.com/jackyontime1/learning-hub-vocabth/actions/runs/27739671954`
+- Production URL:
+  `https://learning-hub-vocabth.pages.dev/`
+- Production now keeps the latest 7 days: 70 stories total, with 10 stories per day.
+- Each day has A1/A2/B1/B2/C1, two stories per level.
+- Reading playback uses browser/iPhone Web Speech first for smoother English audio; generated `.wav` files are static fallback placeholders only.
+- Reading automation sets `SKIP_AUDIO=1` and no longer installs LibreTranslate/espeak/ffmpeg on GitHub Actions.
+- This does not use the Podcast Google Cloud TTS monthly safety cap.
+- Production article verification passed:
+  `data-reader-text` is present for Web Speech playback,
+  vocabulary popups include `data-translation` and `data-pos`,
+  article images return HTTP `200`,
+  Thai heading/buttons render as real Thai,
+  and the detected RSS text typo `2e published` is cleaned.
+- Saved Reading words are merged into Flashcards at runtime as category `Saved from Reading` from localStorage key `der.savedWords.v1`.
+
 ## Backups
 
 - Full Job Interview Days 1-8:
@@ -292,6 +311,8 @@ node "D:\podcast voice\daily-english-reader\scripts\build-learning-hub.mjs"
   `D:\podcast voice\backups\before-real-rss-reading-deploy-20260617-204634.zip`
 - Before Reading real-news audio/POS deploy:
   `D:\podcast voice\backups\before-reading-real-news-audio-pos-deploy-20260618-104819.zip`
+- Before Reading quality fix:
+  `D:\podcast voice\backups\before-reading-quality-fix-20260618-114424.zip`
 
 ## Next Action
 
