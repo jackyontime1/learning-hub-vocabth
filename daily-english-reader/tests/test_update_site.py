@@ -107,7 +107,28 @@ class DailyReaderTests(unittest.TestCase):
     def test_safe_word_translations_fills_missing_or_bad_values(self):
         result = site.safe_word_translations(["company", "unknown"], {"company": "เธเธฃเธดเธฉเธฑเธ—"})
         self.assertEqual(result["company"], "บริษัท")
-        self.assertTrue(result["unknown"].startswith("คำว่า "))
+        self.assertNotIn("คำว่า", result["unknown"])
+
+    def test_news_glossary_uses_real_thai_meanings(self):
+        result = site.safe_word_translations(["filmed", "diver", "shark", "rare"], {})
+        self.assertEqual(result["filmed"], "ถ่ายวิดีโอ")
+        self.assertEqual(result["diver"], "นักดำน้ำ")
+        self.assertEqual(result["shark"], "ฉลาม")
+        self.assertEqual(result["rare"], "หายาก")
+
+    def test_natural_thai_article_uses_story_content(self):
+        raw = {
+            "provider": "BBC News",
+            "category": "Science",
+            "level": "A1",
+            "title": "Rare footage captured of Great White shark in Mediterranean Sea",
+            "description": "A volunteer diver has described shaking as he filmed his encounter with an endangered Great White shark between Tunisia and Sicily.",
+        }
+        text = "A diver filmed an incredibly rare encounter with a Great White shark in the Mediterranean Sea."
+        thai = site.natural_thai_article(raw, text)
+        self.assertIn("ฉลามขาวใหญ่", thai)
+        self.assertIn("นักดำน้ำ", thai)
+        self.assertIn("ถ่ายวิดีโอ", thai)
 
     def test_rate_limit_pauses_provider(self):
         with tempfile.TemporaryDirectory() as temp:
