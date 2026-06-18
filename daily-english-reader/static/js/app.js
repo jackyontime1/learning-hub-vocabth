@@ -30,6 +30,7 @@ let preferences = readObject(PREF_KEY, { speed: 1, fontScale: 1 });
 let flashcardProgress = readObject(FLASHCARD_KEY);
 let flashcardDeck = { data: null, cards: [], index: 0, revealed: false };
 let flashcardAudio = null;
+let storySpeech = { utterance: null, words: [], index: 0, timer: null, startedAt: 0, elapsed: 0, duration: 0, playing: false };
 let activeWord = null;
 let activeWordTarget = null;
 let homeFilters = { date: "", category: "all", level: "all" };
@@ -66,6 +67,94 @@ function speakWord(word) {
   utterance.lang = "en-US";
   utterance.rate = 0.82;
   speechSynthesis.speak(utterance);
+}
+
+function storySpeechSupported() {
+  return "speechSynthesis" in window && "SpeechSynthesisUtterance" in window;
+}
+
+function storyWords(audio) {
+  return (audio?.dataset.readerText || "").trim().split(/\s+/).filter(Boolean);
+}
+
+function storyRate() {
+  const speed = Number(preferences.speed || 1);
+  return Math.max(0.75, Math.min(1.25, speed));
+}
+
+function stopStorySpeech(reset = false) {
+  if (storySpeech.timer) window.clearInterval(storySpeech.timer);
+  storySpeech.timer = null;
+  if (storySpeechSupported()) speechSynthesis.cancel();
+  storySpeech.playing = false;
+  if (reset) {
+    storySpeech.index = 0;
+    storySpeech.elapsed = 0;
+  }
+}
+
+function updateStorySpeechProgress() {
+  const current = document.querySelector("#audioCurrent");
+  const duration = document.querySelector("#audioDuration");
+  const progress = document.querySelector("#audioProgress");
+  if (!current || !duration || !progress) return;
+  const elapsed = storySpeech.playing
+    ? storySpeech.elapsed + ((Date.now() - storySpeech.startedAt) / 1000)
+    : storySpeech.elapsed;
+  current.textContent = formatTime(Math.min(elapsed, storySpeech.duration || 0));
+  duration.textContent = formatTime(storySpeech.duration || 0);
+  progress.value = storySpeech.duration ? String((elapsed / storySpeech.duration) * 100) : "0";
+}
+
+function playStorySpeech(audio, toggle) {
+  if (!storySpeechSupported()) return false;
+  const words = storyWords(audio);
+  if (!words.length) return false;
+  const text = words.slice(storySpeech.index).join(" ");
+  if (!text) {
+    storySpeech.index = 0;
+    return playStorySpeech(audio, toggle);
+  }
+  if (!storySpeech.duration) storySpeech.duration = Math.max(8, words.length / (2.35 * storyRate()));
+  storySpeech.words = words;
+  const startIndex = storySpeech.index;
+  storySpeech.utterance = new SpeechSynthesisUtterance(text);
+  storySpeech.utterance.lang = "en-US";
+  storySpeech.utterance.rate = storyRate();
+  storySpeech.utterance.pitch = 1;
+  storySpeech.utterance.onboundary = (event) => {
+    if (event.name === "word" || event.charIndex >= 0) {
+      const spoken = text.slice(0, event.charIndex).trim().split(/\s+/).filter(Boolean).length;
+      storySpeech.index = Math.min(words.length, startIndex + spoken);
+    }
+  };
+  storySpeech.utterance.onend = () => {
+    stopStorySpeech(false);
+    storySpeech.index = 0;
+    storySpeech.elapsed = 0;
+    updateStorySpeechProgress();
+    if (toggle) toggle.querySelector("i").className = "fa-solid fa-play";
+  };
+  storySpeech.utterance.onerror = () => {
+    stopStorySpeech(false);
+    if (toggle) toggle.querySelector("i").className = "fa-solid fa-play";
+  };
+  storySpeech.startedAt = Date.now();
+  storySpeech.playing = true;
+  storySpeech.timer = window.setInterval(updateStorySpeechProgress, 250);
+  speechSynthesis.cancel();
+  speechSynthesis.speak(storySpeech.utterance);
+  if (toggle) toggle.querySelector("i").className = "fa-solid fa-pause";
+  return true;
+}
+
+function pauseStorySpeech(toggle) {
+  if (!storySpeech.playing) return false;
+  storySpeech.elapsed += (Date.now() - storySpeech.startedAt) / 1000;
+  stopStorySpeech(false);
+  updateStorySpeechProgress();
+  if (toggle) toggle.querySelector("i").className = "fa-solid fa-play";
+  return true;
 }
 
 function positionPopover(target) {
@@ -223,6 +312,11 @@ function initializeAudio() {
   if (!audio) return;
   const toggle = document.querySelector("#audioToggle");
   const progress = document.querySelector("#audioProgress");
+  if (storySpeechSupported() && storyWords(audio).length) {
+    storySpeech.words = storyWords(audio);
+    storySpeech.duration = Math.max(8, storySpeech.words.length / (2.35 * storyRate()));
+    updateStorySpeechProgress();
+  }
   audio.playbackRate = Number(preferences.speed || 1);
   document.querySelectorAll("[data-speed]").forEach((button) => {
     button.classList.toggle("active", Number(button.dataset.speed) === audio.playbackRate);
@@ -238,7 +332,16 @@ function initializeAudio() {
     toggle.querySelector("i").className = "fa-solid fa-play";
   });
   progress.addEventListener("input", () => {
-    if (audio.duration) audio.currentTime = Number(progress.value) / 100 * audio.duration;
+    if (storySpeechSupported() && storySpeech.words.length) {
+      const ratio = Number(progress.value) / 100;
+      stopStorySpeech(false);
+      storySpeech.index = Math.max(0, Math.min(storySpeech.words.length - 1, Math.floor(storySpeech.words.length * ratio)));
+      storySpeech.elapsed = (storySpeech.duration || 0) * ratio;
+      updateStorySpeechProgress();
+      toggle.querySelector("i").className = "fa-solid fa-play";
+    } else if (audio.duration) {
+      audio.currentTime = Number(progress.value) / 100 * audio.duration;
+    }
   });
 }
 
@@ -597,7 +700,14 @@ document.addEventListener("click", (event) => {
   const audioToggle = event.target.closest("#audioToggle");
   if (audioToggle) {
     const audio = document.querySelector("#storyAudio");
-    if (audio.paused) {
+    if (storySpeechSupported() && storyWords(audio).length) {
+      if (storySpeech.playing) {
+        pauseStorySpeech(audioToggle);
+      } else {
+        audio.pause();
+        playStorySpeech(audio, audioToggle);
+      }
+    } else if (audio.paused) {
       audio.play().then(() => {
         audioToggle.querySelector("i").className = "fa-solid fa-pause";
       }).catch(() => {
@@ -617,6 +727,13 @@ document.addEventListener("click", (event) => {
     preferences.speed = audio.playbackRate;
     writeObject(PREF_KEY, preferences);
     document.querySelectorAll("[data-speed]").forEach((button) => button.classList.toggle("active", button === speed));
+    if (storySpeechSupported() && storySpeech.words.length) {
+      const wasPlaying = storySpeech.playing;
+      pauseStorySpeech(document.querySelector("#audioToggle"));
+      storySpeech.duration = Math.max(8, storySpeech.words.length / (2.35 * storyRate()));
+      updateStorySpeechProgress();
+      if (wasPlaying) playStorySpeech(audio, document.querySelector("#audioToggle"));
+    }
     return;
   }
 

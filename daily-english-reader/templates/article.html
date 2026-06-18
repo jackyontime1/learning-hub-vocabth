@@ -43,7 +43,7 @@
           <div class="speed-control" aria-label="Playback speed">
             {% for speed in ["0.75", "1", "1.25"] %}<button class="{% if speed == '1' %}active{% endif %}" data-speed="{{ speed }}" type="button">{{ speed }}x</button>{% endfor %}
           </div>
-          <audio id="storyAudio" preload="metadata" src="{{ article.audio_url }}"></audio>
+          <audio id="storyAudio" preload="metadata" src="{{ article.audio_url }}" data-reader-text="{{ article.text | e }}"></audio>
         </div>
         <div class="reading-text">{{ article.word_html }}</div>
         <section class="full-translation" id="fullTranslation" hidden>

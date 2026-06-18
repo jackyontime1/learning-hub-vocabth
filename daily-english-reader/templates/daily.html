@@ -4,7 +4,7 @@
     <header class="page-heading">
       <div><p class="eyebrow">Last 7 days</p><h1>Daily Reading</h1><p>Browse recent stories by level and category.</p></div>
       <div class="page-filters">
-        <select id="levelFilter" aria-label="Filter by level"><option value="all">All levels</option><option>A2</option><option>B1</option><option>B2</option></select>
+        <select id="levelFilter" aria-label="Filter by level"><option value="all">All levels</option>{% for level in available_levels %}<option>{{ level }}</option>{% endfor %}</select>
         <select id="dailyCategoryFilter" aria-label="Filter by category"><option value="all">All categories</option>{% for category in ["World", "Technology", "Health", "Business", "Science", "Environment"] %}<option>{{ category }}</option>{% endfor %}</select>
       </div>
     </header>

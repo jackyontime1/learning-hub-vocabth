@@ -93,6 +93,17 @@ class DailyReaderTests(unittest.TestCase):
         self.assertEqual(site.part_of_speech("disease"), "n.")
         self.assertEqual(site.part_of_speech("quickly"), "adv.")
 
+    def test_clean_story_text_removes_caption_noise(self):
+        text = "Ben Smith/Getty Images hide caption A lot changes when. you move in with your partner."
+        cleaned = site.clean_story_text(text)
+        self.assertNotIn("hide caption", cleaned)
+        self.assertIn("A lot changes when, you move", cleaned)
+
+    def test_safe_word_translations_fills_missing_or_bad_values(self):
+        result = site.safe_word_translations(["company", "unknown"], {"company": "เธเธฃเธดเธฉเธฑเธ—"})
+        self.assertEqual(result["company"], "บริษัท")
+        self.assertTrue(result["unknown"].startswith("คำว่า "))
+
     def test_rate_limit_pauses_provider(self):
         with tempfile.TemporaryDirectory() as temp:
             quota_path = Path(temp)

@@ -60,7 +60,7 @@ UNSPLASH_URL = "https://api.unsplash.com/search/photos"
 OPENVERSE_URL = "https://api.openverse.org/v1/images/"
 COMMONS_URL = "https://commons.wikimedia.org/w/api.php"
 USER_AGENT = "DailyEnglishReader/2.0 (personal educational project; contact=local)"
-SCHEMA_VERSION = 3
+SCHEMA_VERSION = 4
 LEVELS = ("A1", "A2", "B1", "B2", "C1")
 TARGET_PER_LEVEL = 2
 DAILY_ARTICLE_COUNT = len(LEVELS) * TARGET_PER_LEVEL
@@ -124,6 +124,61 @@ COMMON_ADJECTIVES = {
     "able", "active", "annual", "big", "clean", "clear", "daily", "different", "dry", "early",
     "fast", "free", "good", "great", "large", "local", "long", "new", "old", "public", "real",
     "short", "small", "strong", "young",
+}
+
+THAI_CATEGORY_LABELS = {
+    "business": "ธุรกิจและเศรษฐกิจ",
+    "canada": "ข่าวแคนาดา",
+    "environment": "สิ่งแวดล้อม",
+    "health": "สุขภาพ",
+    "science": "วิทยาศาสตร์",
+    "technology": "เทคโนโลยี",
+    "world": "ข่าวต่างประเทศ",
+}
+
+THAI_WORDS = {
+    "able": "ทำได้", "about": "เกี่ยวกับ", "access": "เข้าถึง", "according": "ตามข้อมูลจาก",
+    "active": "คล่องตัว", "add": "เพิ่ม", "after": "หลังจาก", "again": "อีกครั้ง",
+    "against": "ต่อต้าน", "agency": "หน่วยงาน", "agreement": "ข้อตกลง", "ai": "ปัญญาประดิษฐ์",
+    "air": "อากาศ", "allow": "อนุญาต", "also": "อีกด้วย", "announce": "ประกาศ",
+    "announced": "ประกาศ", "area": "พื้นที่", "around": "รอบ ๆ", "ask": "ถาม",
+    "attack": "โจมตี", "available": "มีให้ใช้", "bank": "ธนาคาร", "battery": "แบตเตอรี่",
+    "become": "กลายเป็น", "before": "ก่อน", "begin": "เริ่ม", "big": "ใหญ่",
+    "billion": "พันล้าน", "bring": "นำมา", "build": "สร้าง", "business": "ธุรกิจ",
+    "buy": "ซื้อ", "call": "เรียก", "called": "เรียกว่า", "canada": "แคนาดา",
+    "canadian": "ชาวแคนาดา", "care": "การดูแล", "case": "คดี", "cause": "เป็นสาเหตุ",
+    "change": "เปลี่ยน", "children": "เด็ก", "city": "เมือง", "claim": "กล่าวอ้าง",
+    "clean": "สะอาด", "climate": "สภาพภูมิอากาศ", "come": "มา", "community": "ชุมชน",
+    "company": "บริษัท", "concern": "ความกังวล", "confirmed": "ยืนยัน", "cost": "ค่าใช้จ่าย",
+    "country": "ประเทศ", "court": "ศาล", "create": "สร้าง", "cut": "ลด",
+    "data": "ข้อมูล", "day": "วัน", "deal": "ข้อตกลง", "decision": "การตัดสินใจ",
+    "demand": "ความต้องการ", "different": "แตกต่าง", "disease": "โรค", "early": "เร็วขึ้น",
+    "economic": "ทางเศรษฐกิจ", "economy": "เศรษฐกิจ", "education": "การศึกษา",
+    "effort": "ความพยายาม", "energy": "พลังงาน", "event": "เหตุการณ์", "expect": "คาดว่า",
+    "family": "ครอบครัว", "farm": "ฟาร์ม", "find": "พบ", "firm": "บริษัท",
+    "food": "อาหาร", "future": "อนาคต", "game": "เกม", "global": "ระดับโลก",
+    "government": "รัฐบาล", "group": "กลุ่ม", "grow": "เติบโต", "health": "สุขภาพ",
+    "help": "ช่วย", "home": "บ้าน", "include": "รวมถึง", "increase": "เพิ่มขึ้น",
+    "industry": "อุตสาหกรรม", "information": "ข้อมูล", "international": "ระหว่างประเทศ",
+    "job": "งาน", "jobs": "ตำแหน่งงาน", "keep": "รักษา", "large": "ใหญ่",
+    "law": "กฎหมาย", "leader": "ผู้นำ", "life": "ชีวิต", "local": "ท้องถิ่น",
+    "make": "ทำให้", "market": "ตลาด", "may": "อาจ", "million": "ล้าน",
+    "minister": "รัฐมนตรี", "money": "เงิน", "month": "เดือน", "move": "ย้าย",
+    "national": "ระดับประเทศ", "need": "ต้องการ", "new": "ใหม่", "news": "ข่าว",
+    "official": "เจ้าหน้าที่", "oil": "น้ำมัน", "old": "เก่า", "parent": "บริษัทแม่",
+    "people": "ผู้คน", "plan": "แผน", "policy": "นโยบาย", "power": "พลังงาน",
+    "price": "ราคา", "problem": "ปัญหา", "program": "โครงการ", "project": "โครงการ",
+    "public": "สาธารณะ", "rate": "อัตรา", "report": "รายงาน", "research": "งานวิจัย",
+    "researcher": "นักวิจัย", "risk": "ความเสี่ยง", "school": "โรงเรียน",
+    "science": "วิทยาศาสตร์", "scientist": "นักวิทยาศาสตร์", "security": "ความปลอดภัย",
+    "service": "บริการ", "share": "แบ่งปัน", "short": "สั้น", "show": "แสดงให้เห็น",
+    "small": "เล็ก", "social": "สังคม", "source": "แหล่งข้อมูล", "space": "อวกาศ",
+    "state": "รัฐ", "study": "การศึกษา", "system": "ระบบ", "tax": "ภาษี",
+    "team": "ทีม", "technology": "เทคโนโลยี", "test": "ทดสอบ", "time": "เวลา",
+    "today": "วันนี้", "tool": "เครื่องมือ", "use": "ใช้", "user": "ผู้ใช้",
+    "war": "สงคราม", "water": "น้ำ", "week": "สัปดาห์", "woman": "ผู้หญิง",
+    "women": "ผู้หญิง", "work": "งาน", "worker": "คนทำงาน", "workers": "พนักงาน",
+    "world": "โลก", "year": "ปี", "young": "อายุน้อย",
 }
 
 DEMO_TOPICS = [
@@ -192,6 +247,90 @@ def slugify(value: str, limit: int = 72) -> str:
 
 def sentence_split(text: str) -> list[str]:
     return [part.strip() for part in re.split(r"(?<=[.!?])\s+(?=[A-Z0-9\"'])", normalize(text)) if part.strip()]
+
+
+def clean_story_text(text: str) -> str:
+    text = normalize(text)
+    text = re.sub(r"\b[A-Z][a-z]+(?: [A-Z][a-z]+){0,3}/(?:iStockphoto|Getty Images|AP|Reuters)[^.!?]*hide caption\b", " ", text)
+    text = re.sub(r"\bhide caption\b", " ", text, flags=re.I)
+    text = re.sub(r"\b(?:SCOTT DETROW|A MARTÍNEZ|HOST|BYLINE|EDITOR'S NOTE):\s*", " ", text, flags=re.I)
+    text = re.sub(r"\b(?:Image source|Getty Images|Reuters|Associated Press|AP Photo)\b[^.!?]*(?:\.|$)", " ", text, flags=re.I)
+    text = re.sub(r"\s+([,.;:!?])", r"\1", text)
+    text = re.sub(r"\b([A-Z])\s*\.\s+([A-Z][a-z])", r"\1. \2", text)
+    text = re.sub(r"(?<!\b[A-Z])\.\s+(?=[a-z])", ", ", text)
+    text = re.sub(r"\s{2,}", " ", text)
+    return text.strip()
+
+
+def sentence_budget(level: str) -> tuple[int, int]:
+    return {
+        "A1": (8, 70),
+        "A2": (10, 105),
+        "B1": (12, 145),
+        "B2": (14, 190),
+        "C1": (16, 230),
+    }.get(level, (12, 145))
+
+
+def trim_to_word_budget(sentences: list[str], max_words: int) -> str:
+    output: list[str] = []
+    count = 0
+    for sentence in sentences:
+        words = sentence.split()
+        if not words:
+            continue
+        if output and count + len(words) > max_words:
+            break
+        output.append(sentence)
+        count += len(words)
+    return " ".join(output).strip()
+
+
+def english_label_for_category(category: str) -> str:
+    return THAI_CATEGORY_LABELS.get(category.lower(), category)
+
+
+def thai_gloss(word: str) -> str:
+    key = word.lower().strip("'")
+    if key in THAI_WORDS:
+        return THAI_WORDS[key]
+    stem = re.sub(r"(ing|ed|es|s)$", "", key)
+    if stem in THAI_WORDS:
+        return THAI_WORDS[stem]
+    if key.endswith("ly"):
+        return "อย่าง" + key[:-2]
+    if key.endswith(("tion", "sion", "ment", "ness", "ity")):
+        return "เรื่อง/ภาวะของ " + key
+    return f"คำว่า {word}"
+
+
+def safe_word_translations(words: list[str], translated: dict[str, str] | None = None) -> dict[str, str]:
+    output: dict[str, str] = {}
+    for word in words:
+        value = normalize((translated or {}).get(word, ""))
+        if not value or value.lower() == word.lower() or re.search(r"เธ|เน|โ€", value):
+            value = thai_gloss(word)
+        output[word] = value
+    return output
+
+
+def natural_thai_article(raw: dict[str, Any], text: str) -> str:
+    category = english_label_for_category(raw.get("category", "news"))
+    provider = raw.get("provider", "แหล่งข่าว")
+    title = raw.get("title", "")
+    sentences = sentence_split(clean_story_text(text))
+    facts = sentences[:4]
+    keywords = [word for word in vocabulary_words(" ".join([title, raw.get("description", ""), text])) if word not in STOPWORDS][:8]
+    keyword_text = " / ".join(f"{word} = {thai_gloss(word)}" for word in keywords[:5])
+    fact_text = " ".join(facts)
+    if len(fact_text) > 520:
+        fact_text = fact_text[:520].rsplit(" ", 1)[0] + "..."
+    return (
+        f"ข่าวนี้จาก {provider} อยู่ในหมวด{category} หัวข้อคือ “{title}”. "
+        f"ใจความหลักคือ {fact_text} "
+        f"สรุปง่าย ๆ คือข่าวนี้เล่าว่าเกิดอะไรขึ้น ใครเกี่ยวข้อง และทำไมเรื่องนี้จึงควรติดตามต่อ. "
+        f"คำสำคัญที่ควรรู้: {keyword_text}."
+    )
 
 
 def parse_date(value: str | None) -> datetime:
@@ -612,6 +751,7 @@ def choose_daily_articles(candidates: list[dict[str, Any]], offset: int = 0) -> 
 
 
 def summarize(text: str) -> str:
+    text = clean_story_text(text)
     sentences = sentence_split(text)
     if len(sentences) <= 6 or len(text.split()) < 120:
         return " ".join(sentences[:6])
@@ -667,22 +807,23 @@ def adapt_level(text: str, level: str, config: dict[str, Any], session: requests
             response.raise_for_status()
             generated = normalize(response.json().get("response", ""))
             if len(generated.split()) >= 35:
-                return generated
+                return clean_story_text(generated)
         except requests.RequestException:
             logging.warning("Ollama unavailable; using deterministic level adapter")
-    sentences = sentence_split(summary)
+    sentences = sentence_split(clean_story_text(summary))
+    _, max_words = sentence_budget(level)
     if level == "A1":
         parts = [part for sentence in sentences[:5] for part in simplify_sentence(sentence, 8, True)]
-        return " ".join(parts[:10])
+        return trim_to_word_budget(parts[:10], max_words)
     if level == "A2":
         parts = [part for sentence in sentences[:6] for part in simplify_sentence(sentence, 12, True)]
-        return " ".join(parts[:12])
+        return trim_to_word_budget(parts[:12], max_words)
     if level == "B1":
         parts = [part for sentence in sentences[:8] for part in simplify_sentence(sentence, 18, False)]
-        return " ".join(parts[:12])
+        return trim_to_word_budget(parts[:12], max_words)
     if level == "B2":
-        return " ".join(sentences[:9])
-    return " ".join(sentences[:11])
+        return trim_to_word_budget(sentences[:9], max_words)
+    return trim_to_word_budget(sentences[:11], max_words)
 
 
 def vocabulary_words(text: str) -> list[str]:
@@ -728,9 +869,10 @@ class Translator:
         key = hashlib.sha256(text.encode()).hexdigest()
         if key in self.cache and all(word in self.cache[key].get("words", {}) for word in words):
             row = self.cache[key]
-            return row["thai_text"], row["words"]
+            if not re.search(r"เธ|เน|โ€", row.get("thai_text", "")):
+                return row["thai_text"], safe_word_translations(words, row.get("words", {}))
         if self.config["demo"]:
-            dictionary = {word: f"ความหมายของ {word}" for word in words}
+            dictionary = safe_word_translations(words)
             result = (demo_thai or "คำแปลภาษาไทยสำหรับบทความตัวอย่าง", dictionary)
             self.cache[key] = {"thai_text": result[0], "words": result[1]}
             atomic_json(TRANSLATION_CACHE_PATH, self.cache)
@@ -750,8 +892,12 @@ class Translator:
         except requests.RequestException:
             translated = self._argos([text, *words])
         if not translated or len(translated) != len(words) + 1:
-            raise RuntimeError("No free translation provider completed the article")
-        result = (normalize(translated[0]), {word: normalize(value) for word, value in zip(words, translated[1:])})
+            result = ("", safe_word_translations(words))
+        else:
+            result = (
+                normalize(translated[0]),
+                safe_word_translations(words, {word: normalize(value) for word, value in zip(words, translated[1:])}),
+            )
         self.cache[key] = {"thai_text": result[0], "words": result[1]}
         atomic_json(TRANSLATION_CACHE_PATH, self.cache)
         return result
@@ -1033,6 +1179,9 @@ def process_article(
     words = vocabulary_words(text)
     thai_text, translations = translator.translate(text, words, raw.get("thai_demo", ""))
     thai_text = naturalize_thai(thai_text)
+    if (not thai_text) or re.search(r"เธ|เน|โ€", thai_text) or len(thai_text.split()) > max(180, len(text.split()) * 4):
+        thai_text = natural_thai_article(raw, text)
+    translations = safe_word_translations(words, translations)
     word_pos = {word: part_of_speech(word) for word in words}
     audio_path = generate_audio(text, raw["id"], raw["level"], published_date, config)
     image = image_for(raw, session, quota, config)
@@ -1129,6 +1278,7 @@ def render_site(articles: list[dict[str, Any]], quota: QuotaManager) -> None:
     )
     daily = env.get_template("daily.html").render(
         **common, page_title="Daily Reading", page_type="daily", base_prefix="", articles=recent,
+        available_levels=LEVELS,
     )
     vocabulary = env.get_template("vocabulary.html").render(
         **common, page_title="Vocabulary", page_type="vocabulary", base_prefix="",
