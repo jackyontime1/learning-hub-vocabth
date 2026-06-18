@@ -1,5 +1,5 @@
 {
-  "schema_version": 5,
+  "schema_version": 6,
   "id": "274178f02c8265007b",
   "slug": "teen-dies-after-being-thrown-from-horse-drawn-carriage-in-new-york-s-cen-274178f0",
   "level": "B1",
@@ -210,5 +210,5 @@
     "credit_url": ""
   },
   "audio_cache_path": "data/audio/2026-06-17/274178f02c8265007b-b1.wav",
-  "generated_at": "2026-06-18T05:46:27.759764+00:00"
+  "generated_at": "2026-06-18T05:52:23.581038+00:00"
 }

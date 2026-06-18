@@ -1,5 +1,5 @@
 {
-  "schema_version": 5,
+  "schema_version": 6,
   "id": "c60dd5070481bfdf4f",
   "slug": "version-of-ai-tool-too-powerful-for-public-released-to-public-c60dd507",
   "level": "A2",
@@ -152,5 +152,5 @@
     "credit_url": "https://www.bbc.com/news/articles/ckg701v1dp6o?at_medium=RSS&at_campaign=rss"
   },
   "audio_cache_path": "data/audio/2026-06-12/c60dd5070481bfdf4f-a2.wav",
-  "generated_at": "2026-06-18T05:46:34.752212+00:00"
+  "generated_at": "2026-06-18T05:52:40.934261+00:00"
 }

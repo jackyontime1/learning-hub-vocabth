@@ -1,5 +1,5 @@
 {
-  "schema_version": 5,
+  "schema_version": 6,
   "id": "2b1d3786ec7d78d7a9",
   "slug": "ex-calgary-councillor-directed-use-of-personal-phone-over-freedom-of-inf-2b1d3786",
   "level": "C1",
@@ -296,5 +296,5 @@
     "credit_url": ""
   },
   "audio_cache_path": "data/audio/2026-06-18/2b1d3786ec7d78d7a9-c1.wav",
-  "generated_at": "2026-06-18T05:46:26.917713+00:00"
+  "generated_at": "2026-06-18T05:52:22.424046+00:00"
 }

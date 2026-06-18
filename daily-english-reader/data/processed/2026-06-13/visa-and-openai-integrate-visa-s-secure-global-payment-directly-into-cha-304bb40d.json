@@ -1,5 +1,5 @@
 {
-  "schema_version": 5,
+  "schema_version": 6,
   "id": "304bb40de23b80d4a4",
   "slug": "visa-and-openai-integrate-visa-s-secure-global-payment-directly-into-cha-304bb40d",
   "level": "B2",
@@ -256,5 +256,5 @@
     "credit_url": ""
   },
   "audio_cache_path": "data/audio/2026-06-13/304bb40de23b80d4a4-b2.wav",
-  "generated_at": "2026-06-18T05:46:33.776277+00:00"
+  "generated_at": "2026-06-18T05:52:40.264667+00:00"
 }

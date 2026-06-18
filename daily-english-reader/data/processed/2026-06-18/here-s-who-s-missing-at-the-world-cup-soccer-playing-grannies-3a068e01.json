@@ -1,11 +1,11 @@
 {
-  "schema_version": 5,
+  "schema_version": 6,
   "id": "3a068e01927d24b683",
   "slug": "here-s-who-s-missing-at-the-world-cup-soccer-playing-grannies-3a068e01",
   "level": "A2",
   "title": "Here's who's missing at the World Cup: Soccer-playing grannies!",
   "description": "The World Cup isn't the only global soccer event of note. Check out the Grannies International Football Tournament.",
-  "text": "As the World Cup kicks off, we just got some good news. About our coverage of another global soccer event. the Grannies International Football Tournament. Last year 2e published a story about this tournament. \"where you've never too old to play. But you may well be too young.\" (The youngest permissible age is. 50.) This week we learned that our story landed first prize for. Sports features reporting in the Society for Features Journalism awards! TZANEEN, SOUTH AFRICA. The stands of the soccer stadium buzzed with anticipation. The teams were about to take the pitch.",
+  "text": "As the World Cup kicks off, we just got some good news. About our coverage of another global soccer event. the Grannies International Football Tournament. Last year we published a story about this tournament. \"where you're never too old to play. But you may well be too young.\" (The youngest permissible age is. 50.) This week we learned that our story landed first prize for. Sports features reporting in the Society for Features Journalism awards! TZANEEN, SOUTH AFRICA. The stands of the soccer stadium buzzed with anticipation. The teams were about to take the pitch.",
   "thai_text": "ข่าวนี้มาจาก NPR อยู่ในหมวดสุขภาพ และถูกเรียบเรียงเป็นระดับ A2. หัวข้อข่าวคือ “Here's who's missing at the World Cup: Soccer-playing grannies!”. โดยรวมแล้ว ข่าวนี้พูดถึงประเด็นด้านสุขภาพ การแพทย์ หรือคุณภาพชีวิต ผู้อ่านควรจับใจความว่าเกิดอะไรขึ้น ใครได้รับผลกระทบ และเรื่องนี้อาจเปลี่ยนสถานการณ์ต่อไปอย่างไร. ตัวเลขที่ควรสังเกตในข่าวนี้คือ 50. คำสำคัญที่ควรรู้: africa = คำว่า africa / age = คำว่า age / another = คำว่า another / anticipation = เรื่อง/ภาวะของ anticipation / awards = คำว่า awards.",
   "word_translations": {
     "a": "คำว่า a",
@@ -78,7 +78,7 @@
     "world": "โลก",
     "year": "ปี",
     "you": "คำว่า you",
-    "you've": "คำว่า you've",
+    "you're": "คำว่า you're",
     "young": "อายุน้อย",
     "youngest": "คำว่า youngest"
   },
@@ -155,7 +155,7 @@
     "world": "n.",
     "year": "n.",
     "you": "pron.",
-    "you've": "n.",
+    "you're": "n.",
     "young": "adj.",
     "youngest": "n."
   },
@@ -170,5 +170,5 @@
     "credit_url": ""
   },
   "audio_cache_path": "data/audio/2026-06-18/3a068e01927d24b683-a2.wav",
-  "generated_at": "2026-06-18T05:46:25.973091+00:00"
+  "generated_at": "2026-06-18T05:52:21.241394+00:00"
 }

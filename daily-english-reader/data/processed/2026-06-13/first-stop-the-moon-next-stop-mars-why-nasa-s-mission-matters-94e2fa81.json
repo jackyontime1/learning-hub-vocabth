@@ -1,5 +1,5 @@
 {
-  "schema_version": 5,
+  "schema_version": 6,
   "id": "94e2fa81e4e66a7d39",
   "slug": "first-stop-the-moon-next-stop-mars-why-nasa-s-mission-matters-94e2fa81",
   "level": "A1",
@@ -132,5 +132,5 @@
     "credit_url": "https://www.bbc.com/news/articles/cd6wp6xenv0o?at_medium=RSS&at_campaign=rss"
   },
   "audio_cache_path": "data/audio/2026-06-13/94e2fa81e4e66a7d39-a1.wav",
-  "generated_at": "2026-06-18T05:46:33.124096+00:00"
+  "generated_at": "2026-06-18T05:52:39.458645+00:00"
 }

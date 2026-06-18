@@ -1,5 +1,5 @@
 {
-  "schema_version": 5,
+  "schema_version": 6,
   "id": "ad9caa05232e26b324",
   "slug": "el-ni-o-under-way-and-threatens-weather-extremes-scientists-say-ad9caa05",
   "level": "C1",
@@ -270,5 +270,5 @@
     "credit_url": "https://www.bbc.com/news/articles/c75ylx7g00xo?at_medium=RSS&at_campaign=rss"
   },
   "audio_cache_path": "data/audio/2026-06-14/ad9caa05232e26b324-c1.wav",
-  "generated_at": "2026-06-18T05:46:32.623991+00:00"
+  "generated_at": "2026-06-18T05:52:39.158255+00:00"
 }

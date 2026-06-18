@@ -1,5 +1,5 @@
 {
-  "schema_version": 5,
+  "schema_version": 6,
   "id": "e7504eb8e2095e09ce",
   "slug": "what-are-uv-levels-and-how-can-you-protect-yourself-e7504eb8",
   "level": "A2",
@@ -158,5 +158,5 @@
     "credit_url": "https://www.bbc.com/news/articles/ckmg1572e8ko?at_medium=RSS&at_campaign=rss"
   },
   "audio_cache_path": "data/audio/2026-06-14/e7504eb8e2095e09ce-a2.wav",
-  "generated_at": "2026-06-18T05:46:31.771943+00:00"
+  "generated_at": "2026-06-18T05:52:37.960037+00:00"
 }

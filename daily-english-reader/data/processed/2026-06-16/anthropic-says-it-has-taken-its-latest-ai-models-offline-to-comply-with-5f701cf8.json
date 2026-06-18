@@ -1,5 +1,5 @@
 {
-  "schema_version": 5,
+  "schema_version": 6,
   "id": "5f701cf87bcc55f54f",
   "slug": "anthropic-says-it-has-taken-its-latest-ai-models-offline-to-comply-with-5f701cf8",
   "level": "B2",
@@ -220,5 +220,5 @@
     "credit_url": ""
   },
   "audio_cache_path": "data/audio/2026-06-16/5f701cf87bcc55f54f-b2.wav",
-  "generated_at": "2026-06-18T05:46:29.981957+00:00"
+  "generated_at": "2026-06-18T05:52:35.761614+00:00"
 }

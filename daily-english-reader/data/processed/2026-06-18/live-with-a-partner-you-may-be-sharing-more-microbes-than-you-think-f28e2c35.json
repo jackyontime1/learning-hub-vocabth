@@ -1,5 +1,5 @@
 {
-  "schema_version": 5,
+  "schema_version": 6,
   "id": "f28e2c35d5fecc9bb3",
   "slug": "live-with-a-partner-you-may-be-sharing-more-microbes-than-you-think-f28e2c35",
   "level": "A1",
@@ -122,5 +122,5 @@
     "credit_url": ""
   },
   "audio_cache_path": "data/audio/2026-06-18/f28e2c35d5fecc9bb3-a1.wav",
-  "generated_at": "2026-06-18T05:46:25.066833+00:00"
+  "generated_at": "2026-06-18T05:52:20.318350+00:00"
 }

@@ -1,5 +1,5 @@
 {
-  "schema_version": 5,
+  "schema_version": 6,
   "id": "0056a21c82e9a8acf2",
   "slug": "survey-confirms-the-struggle-of-working-parents-no-way-to-be-two-things-0056a21c",
   "level": "A1",
@@ -136,5 +136,5 @@
     "credit_url": ""
   },
   "audio_cache_path": "data/audio/2026-06-17/0056a21c82e9a8acf2-a1.wav",
-  "generated_at": "2026-06-18T05:46:27.192293+00:00"
+  "generated_at": "2026-06-18T05:52:22.553654+00:00"
 }

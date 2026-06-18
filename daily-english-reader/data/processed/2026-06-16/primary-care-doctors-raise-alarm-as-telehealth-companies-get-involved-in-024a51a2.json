@@ -1,5 +1,5 @@
 {
-  "schema_version": 5,
+  "schema_version": 6,
   "id": "024a51a22b835d08bf",
   "slug": "primary-care-doctors-raise-alarm-as-telehealth-companies-get-involved-in-024a51a2",
   "level": "C1",
@@ -274,5 +274,5 @@
     "credit_url": ""
   },
   "audio_cache_path": "data/audio/2026-06-16/024a51a22b835d08bf-c1.wav",
-  "generated_at": "2026-06-18T05:46:30.220577+00:00"
+  "generated_at": "2026-06-18T05:52:36.236637+00:00"
 }

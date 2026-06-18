@@ -1,5 +1,5 @@
 {
-  "schema_version": 5,
+  "schema_version": 6,
   "id": "73829b7e771529e592",
   "slug": "new-microplastics-research-examines-river-thames-73829b7e",
   "level": "C1",
@@ -308,5 +308,5 @@
     "credit_url": "https://www.bbc.com/news/articles/cq81qvdknv3o?at_medium=RSS&at_campaign=rss"
   },
   "audio_cache_path": "data/audio/2026-06-14/73829b7e771529e592-c1.wav",
-  "generated_at": "2026-06-18T05:46:32.696481+00:00"
+  "generated_at": "2026-06-18T05:52:39.227989+00:00"
 }

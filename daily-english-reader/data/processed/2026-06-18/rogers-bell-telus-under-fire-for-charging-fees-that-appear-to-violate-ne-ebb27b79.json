@@ -1,5 +1,5 @@
 {
-  "schema_version": 5,
+  "schema_version": 6,
   "id": "ebb27b791a7ee3f803",
   "slug": "rogers-bell-telus-under-fire-for-charging-fees-that-appear-to-violate-ne-ebb27b79",
   "level": "B2",
@@ -222,5 +222,5 @@
     "credit_url": ""
   },
   "audio_cache_path": "data/audio/2026-06-18/ebb27b791a7ee3f803-b2.wav",
-  "generated_at": "2026-06-18T05:46:26.263688+00:00"
+  "generated_at": "2026-06-18T05:52:21.551396+00:00"
 }

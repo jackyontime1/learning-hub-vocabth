@@ -1,5 +1,5 @@
 {
-  "schema_version": 5,
+  "schema_version": 6,
   "id": "5a4f4379ace81bbde3",
   "slug": "delhi-s-temperature-showed-43-5c-why-did-it-feel-hotter-5a4f4379",
   "level": "A2",
@@ -164,5 +164,5 @@
     "credit_url": "https://www.bbc.com/news/articles/c62173jqd4wo?at_medium=RSS&at_campaign=rss"
   },
   "audio_cache_path": "data/audio/2026-06-15/5a4f4379ace81bbde3-a2.wav",
-  "generated_at": "2026-06-18T05:46:30.565741+00:00"
+  "generated_at": "2026-06-18T05:52:36.528764+00:00"
 }

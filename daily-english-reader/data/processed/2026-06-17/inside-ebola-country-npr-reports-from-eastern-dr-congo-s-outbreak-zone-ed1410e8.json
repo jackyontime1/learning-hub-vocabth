@@ -1,5 +1,5 @@
 {
-  "schema_version": 5,
+  "schema_version": 6,
   "id": "ed1410e810b86e16b4",
   "slug": "inside-ebola-country-npr-reports-from-eastern-dr-congo-s-outbreak-zone-ed1410e8",
   "level": "B2",
@@ -236,5 +236,5 @@
     "credit_url": ""
   },
   "audio_cache_path": "data/audio/2026-06-17/ed1410e810b86e16b4-b2.wav",
-  "generated_at": "2026-06-18T05:46:28.125756+00:00"
+  "generated_at": "2026-06-18T05:52:24.110487+00:00"
 }

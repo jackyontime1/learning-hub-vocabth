@@ -1,5 +1,5 @@
 {
-  "schema_version": 5,
+  "schema_version": 6,
   "id": "38d4b5cc01476e6807",
   "slug": "iran-sends-tankers-loaded-with-oil-past-us-military-blockade-38d4b5cc",
   "level": "C1",
@@ -312,5 +312,5 @@
     "credit_url": "https://www.bbc.com/news/articles/cpq37yxexd9o?at_medium=RSS&at_campaign=rss"
   },
   "audio_cache_path": "data/audio/2026-06-13/38d4b5cc01476e6807-c1.wav",
-  "generated_at": "2026-06-18T05:46:34.380919+00:00"
+  "generated_at": "2026-06-18T05:52:40.600840+00:00"
 }

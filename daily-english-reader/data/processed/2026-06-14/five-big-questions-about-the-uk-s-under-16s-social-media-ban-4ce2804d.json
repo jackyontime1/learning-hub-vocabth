@@ -1,5 +1,5 @@
 {
-  "schema_version": 5,
+  "schema_version": 6,
   "id": "4ce2804ddb784af004",
   "slug": "five-big-questions-about-the-uk-s-under-16s-social-media-ban-4ce2804d",
   "level": "A2",
@@ -162,5 +162,5 @@
     "credit_url": "https://www.bbc.com/news/articles/c9824zvpz9po?at_medium=RSS&at_campaign=rss"
   },
   "audio_cache_path": "data/audio/2026-06-14/4ce2804ddb784af004-a2.wav",
-  "generated_at": "2026-06-18T05:46:31.875524+00:00"
+  "generated_at": "2026-06-18T05:52:38.033151+00:00"
 }

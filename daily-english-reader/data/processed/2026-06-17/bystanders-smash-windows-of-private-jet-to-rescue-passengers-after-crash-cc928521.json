@@ -1,5 +1,5 @@
 {
-  "schema_version": 5,
+  "schema_version": 6,
   "id": "cc9285216993529205",
   "slug": "bystanders-smash-windows-of-private-jet-to-rescue-passengers-after-crash-cc928521",
   "level": "A2",
@@ -170,5 +170,5 @@
     "credit_url": "https://www.bbc.com/news/articles/cd7wv4144yvo?at_medium=RSS&at_campaign=rss"
   },
   "audio_cache_path": "data/audio/2026-06-17/cc9285216993529205-a2.wav",
-  "generated_at": "2026-06-18T05:46:27.570336+00:00"
+  "generated_at": "2026-06-18T05:52:23.099403+00:00"
 }

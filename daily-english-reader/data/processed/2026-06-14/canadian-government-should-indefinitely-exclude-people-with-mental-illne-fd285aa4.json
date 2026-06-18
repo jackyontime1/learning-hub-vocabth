@@ -1,5 +1,5 @@
 {
-  "schema_version": 5,
+  "schema_version": 6,
   "id": "fd285aa49dd6061bf1",
   "slug": "canadian-government-should-indefinitely-exclude-people-with-mental-illne-fd285aa4",
   "level": "B1",
@@ -192,5 +192,5 @@
     "credit_url": ""
   },
   "audio_cache_path": "data/audio/2026-06-14/fd285aa49dd6061bf1-b1.wav",
-  "generated_at": "2026-06-18T05:46:32.277310+00:00"
+  "generated_at": "2026-06-18T05:52:38.559429+00:00"
 }

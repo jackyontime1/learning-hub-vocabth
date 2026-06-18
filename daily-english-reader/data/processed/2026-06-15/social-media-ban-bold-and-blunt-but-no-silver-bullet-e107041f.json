@@ -1,5 +1,5 @@
 {
-  "schema_version": 5,
+  "schema_version": 6,
   "id": "e107041fc5e79d09b2",
   "slug": "social-media-ban-bold-and-blunt-but-no-silver-bullet-e107041f",
   "level": "C1",
@@ -292,5 +292,5 @@
     "credit_url": "https://www.bbc.com/news/articles/cddl65dp0rdo?at_medium=RSS&at_campaign=rss"
   },
   "audio_cache_path": "data/audio/2026-06-15/e107041fc5e79d09b2-c1.wav",
-  "generated_at": "2026-06-18T05:46:31.313283+00:00"
+  "generated_at": "2026-06-18T05:52:37.171382+00:00"
 }

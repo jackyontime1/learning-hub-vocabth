@@ -1,5 +1,5 @@
 {
-  "schema_version": 5,
+  "schema_version": 6,
   "id": "65d4040187c16bf640",
   "slug": "the-bikers-battling-extreme-heat-and-armed-conflict-to-smuggle-iranian-f-65d40401",
   "level": "A2",
@@ -174,5 +174,5 @@
     "credit_url": "https://www.bbc.com/news/articles/c621jr3yy09o?at_medium=RSS&at_campaign=rss"
   },
   "audio_cache_path": "data/audio/2026-06-13/65d4040187c16bf640-a2.wav",
-  "generated_at": "2026-06-18T05:46:33.291306+00:00"
+  "generated_at": "2026-06-18T05:52:39.607033+00:00"
 }

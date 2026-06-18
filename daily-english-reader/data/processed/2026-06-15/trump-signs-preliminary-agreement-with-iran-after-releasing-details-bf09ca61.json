@@ -1,5 +1,5 @@
 {
-  "schema_version": 5,
+  "schema_version": 6,
   "id": "bf09ca619eb2ccbcfa",
   "slug": "trump-signs-preliminary-agreement-with-iran-after-releasing-details-bf09ca61",
   "level": "C1",
@@ -284,5 +284,5 @@
     "credit_url": ""
   },
   "audio_cache_path": "data/audio/2026-06-15/bf09ca619eb2ccbcfa-c1.wav",
-  "generated_at": "2026-06-18T05:46:31.439413+00:00"
+  "generated_at": "2026-06-18T05:52:37.554849+00:00"
 }

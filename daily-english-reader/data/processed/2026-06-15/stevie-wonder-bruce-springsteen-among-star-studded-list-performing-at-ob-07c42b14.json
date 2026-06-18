@@ -1,5 +1,5 @@
 {
-  "schema_version": 5,
+  "schema_version": 6,
   "id": "07c42b14becd6ab626",
   "slug": "stevie-wonder-bruce-springsteen-among-star-studded-list-performing-at-ob-07c42b14",
   "level": "B2",
@@ -250,5 +250,5 @@
     "credit_url": ""
   },
   "audio_cache_path": "data/audio/2026-06-15/07c42b14becd6ab626-b2.wav",
-  "generated_at": "2026-06-18T05:46:31.239683+00:00"
+  "generated_at": "2026-06-18T05:52:37.101137+00:00"
 }

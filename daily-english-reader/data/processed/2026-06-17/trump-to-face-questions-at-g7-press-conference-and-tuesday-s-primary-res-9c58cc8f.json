@@ -1,5 +1,5 @@
 {
-  "schema_version": 5,
+  "schema_version": 6,
   "id": "9c58cc8fa1497ae90d",
   "slug": "trump-to-face-questions-at-g7-press-conference-and-tuesday-s-primary-res-9c58cc8f",
   "level": "C1",
@@ -330,5 +330,5 @@
     "credit_url": ""
   },
   "audio_cache_path": "data/audio/2026-06-17/9c58cc8fa1497ae90d-c1.wav",
-  "generated_at": "2026-06-18T05:46:28.239292+00:00"
+  "generated_at": "2026-06-18T05:52:24.249413+00:00"
 }

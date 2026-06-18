@@ -1,5 +1,5 @@
 {
-  "schema_version": 5,
+  "schema_version": 6,
   "id": "917aaa8c0faf9b6c87",
   "slug": "dealership-revoked-offer-to-buy-back-customer-s-bmw-blaming-wayward-ai-c-917aaa8c",
   "level": "B2",
@@ -222,5 +222,5 @@
     "credit_url": ""
   },
   "audio_cache_path": "data/audio/2026-06-17/917aaa8c0faf9b6c87-b2.wav",
-  "generated_at": "2026-06-18T05:46:27.939773+00:00"
+  "generated_at": "2026-06-18T05:52:23.840185+00:00"
 }

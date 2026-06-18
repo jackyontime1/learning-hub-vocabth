@@ -1,5 +1,5 @@
 {
-  "schema_version": 5,
+  "schema_version": 6,
   "id": "a350fdc2841132f523",
   "slug": "what-is-the-super-new-moon-a350fdc2",
   "level": "A2",
@@ -84,5 +84,5 @@
     "credit_url": "https://www.bbc.com/news/videos/cpwe2p4zywwo?at_medium=RSS&at_campaign=rss"
   },
   "audio_cache_path": "data/audio/2026-06-18/a350fdc2841132f523-a2.wav",
-  "generated_at": "2026-06-18T05:46:25.662595+00:00"
+  "generated_at": "2026-06-18T05:52:20.910725+00:00"
 }

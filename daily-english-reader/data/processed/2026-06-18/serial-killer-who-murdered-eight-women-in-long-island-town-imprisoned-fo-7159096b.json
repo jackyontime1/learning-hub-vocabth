@@ -1,5 +1,5 @@
 {
-  "schema_version": 5,
+  "schema_version": 6,
   "id": "7159096b84cb07cb78",
   "slug": "serial-killer-who-murdered-eight-women-in-long-island-town-imprisoned-fo-7159096b",
   "level": "B1",
@@ -238,5 +238,5 @@
     "credit_url": "https://www.bbc.com/news/articles/clyw29kvlydo?at_medium=RSS&at_campaign=rss"
   },
   "audio_cache_path": "data/audio/2026-06-18/7159096b84cb07cb78-b1.wav",
-  "generated_at": "2026-06-18T05:46:26.073969+00:00"
+  "generated_at": "2026-06-18T05:52:21.317313+00:00"
 }

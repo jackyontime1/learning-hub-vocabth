@@ -1,5 +1,5 @@
 {
-  "schema_version": 5,
+  "schema_version": 6,
   "id": "9407278d0fcda19249",
   "slug": "rare-footage-captured-of-great-white-shark-in-mediterranean-sea-9407278d",
   "level": "B1",
@@ -226,5 +226,5 @@
     "credit_url": "https://www.bbc.com/news/videos/cd6p6zqzj6do?at_medium=RSS&at_campaign=rss"
   },
   "audio_cache_path": "data/audio/2026-06-18/9407278d0fcda19249-b1.wav",
-  "generated_at": "2026-06-18T05:46:26.170846+00:00"
+  "generated_at": "2026-06-18T05:52:21.386177+00:00"
 }
