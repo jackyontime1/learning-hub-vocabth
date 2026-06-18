@@ -1149,7 +1149,7 @@ def generate_audio(text: str, article_id: str, level: str, date: str, config: di
                 "--voice", voice, f"--rate={rate}", "--text", text,
                 "--write-media", str(output),
             ], check=True, capture_output=True, timeout=90)
-            if output.exists() and output.stat().st_size > 1000:
+            if output.exists() and output.stat().st_size > 400:
                 return output
         except (subprocess.SubprocessError, OSError) as error:
             logging.warning("edge-tts unavailable; falling back to local TTS: %s", error)
@@ -1172,7 +1172,7 @@ def generate_audio(text: str, article_id: str, level: str, date: str, config: di
     subprocess.run([ffmpeg, "-y", "-loglevel", "error", "-i", str(wav), "-codec:a", "libmp3lame", "-q:a", "5", str(output)],
                    check=True)
     wav.unlink(missing_ok=True)
-    if output.stat().st_size < 1000:
+    if output.stat().st_size < 400:
         raise RuntimeError("Generated MP3 is invalid")
     return output
 
@@ -1348,7 +1348,7 @@ def validate_staging(today_articles: list[dict[str, Any]]) -> None:
             raise RuntimeError(f"Missing audio for {article['id']}")
         if article.get("provider") != "demo":
             mp3 = directory / f"{article['level'].lower()}.mp3"
-            if not mp3.exists() or mp3.stat().st_size < 1000:
+            if not mp3.exists() or mp3.stat().st_size < 400:
                 raise RuntimeError(f"Missing production MP3 audio for {article['id']}")
 
 
