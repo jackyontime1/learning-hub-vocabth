@@ -30,9 +30,9 @@
     "credit_url": ""
   },
   "f28e2c35d5fecc9bb3": {
-    "url": "https://upload.wikimedia.org/wikipedia/commons/c/c7/Private_parts_for_private_property_-_evolution_of_penis_size_with_more_valuable%2C_easily_stolen_shells.pdf",
-    "credit": "Wikimedia Commons contributor",
-    "credit_url": "https://commons.wikimedia.org/wiki/File:Private_parts_for_private_property_-_evolution_of_penis_size_with_more_valuable,_easily_stolen_shells.pdf"
+    "local_filename": "news-fallback.svg",
+    "credit": "Local fallback",
+    "credit_url": ""
   },
   "58e91077f2194603d7": {
     "local_filename": "demo-solar-library.png",
@@ -50,13 +50,313 @@
     "credit_url": "https://www.bbc.com/news/videos/cd6p6zqzj6do?at_medium=RSS&at_campaign=rss"
   },
   "750724740b3503cdfd": {
-    "url": "https://upload.wikimedia.org/wikipedia/commons/8/80/ENERGY_INDEPENDENCE_%28IA_gov.gpo.fdsys.CHRG-109shrg28000%29.pdf",
-    "credit": "Wikimedia Commons contributor",
-    "credit_url": "https://commons.wikimedia.org/wiki/File:ENERGY_INDEPENDENCE_(IA_gov.gpo.fdsys.CHRG-109shrg28000).pdf"
+    "local_filename": "news-fallback.svg",
+    "credit": "Local fallback",
+    "credit_url": ""
   },
   "2b1d3786ec7d78d7a9": {
-    "url": "https://upload.wikimedia.org/wikipedia/commons/c/c9/Report_of_His_Honour_Judge_L._Sherman_Turcotte-_The_City_of_Calgary_%28IA_reportofhishonou00hish%29.pdf",
-    "credit": "Wikimedia Commons contributor",
-    "credit_url": "https://commons.wikimedia.org/wiki/File:Report_of_His_Honour_Judge_L._Sherman_Turcotte-_The_City_of_Calgary_(IA_reportofhishonou00hish).pdf"
+    "local_filename": "demo-solar-library.png",
+    "credit": "Local fallback",
+    "credit_url": ""
+  },
+  "ac29d1b1266e3908cd": {
+    "local_filename": "demo-solar-library.png",
+    "credit": "Generated demo image",
+    "credit_url": ""
+  },
+  "e3787ab73cbb5068d2": {
+    "local_filename": "demo-solar-library.png",
+    "credit": "Generated demo image",
+    "credit_url": ""
+  },
+  "a428058af0878625b4": {
+    "local_filename": "demo-solar-library.png",
+    "credit": "Generated demo image",
+    "credit_url": ""
+  },
+  "79bfe52b822f8037d1": {
+    "local_filename": "demo-solar-library.png",
+    "credit": "Generated demo image",
+    "credit_url": ""
+  },
+  "a350fdc2841132f523": {
+    "local_filename": "news-a350fdc28411.jpg",
+    "credit": "BBC News",
+    "credit_url": "https://www.bbc.com/news/videos/cpwe2p4zywwo?at_medium=RSS&at_campaign=rss"
+  },
+  "3a068e01927d24b683": {
+    "local_filename": "demo-solar-library.png",
+    "credit": "Local fallback",
+    "credit_url": ""
+  },
+  "c60dd5070481bfdf4f": {
+    "local_filename": "news-c60dd5070481.jpg",
+    "credit": "BBC News",
+    "credit_url": "https://www.bbc.com/news/articles/ckg701v1dp6o?at_medium=RSS&at_campaign=rss"
+  },
+  "85e87fe78ff10d2f9d": {
+    "local_filename": "news-fallback.svg",
+    "credit": "Local fallback",
+    "credit_url": ""
+  },
+  "9f40aafb133b62a09d": {
+    "local_filename": "news-fallback.svg",
+    "credit": "Local fallback",
+    "credit_url": ""
+  },
+  "1bafc742cc2ee0ed40": {
+    "local_filename": "demo-solar-library.png",
+    "credit": "Local fallback",
+    "credit_url": ""
+  },
+  "0056a21c82e9a8acf2": {
+    "local_filename": "demo-solar-library.png",
+    "credit": "Local fallback",
+    "credit_url": ""
+  },
+  "6d09fed0388536baa9": {
+    "local_filename": "demo-solar-library.png",
+    "credit": "Local fallback",
+    "credit_url": ""
+  },
+  "94d9e839e8e8f835a1": {
+    "local_filename": "demo-solar-library.png",
+    "credit": "Local fallback",
+    "credit_url": ""
+  },
+  "cc9285216993529205": {
+    "local_filename": "news-cc9285216993.jpg",
+    "credit": "BBC News",
+    "credit_url": "https://www.bbc.com/news/articles/cd7wv4144yvo?at_medium=RSS&at_campaign=rss"
+  },
+  "703f3c14b50dd94f27": {
+    "local_filename": "demo-solar-library.png",
+    "credit": "Local fallback",
+    "credit_url": ""
+  },
+  "3e0a9463b4cc1678ec": {
+    "local_filename": "news-3e0a9463b4cc.jpg",
+    "credit": "BBC News",
+    "credit_url": "https://www.bbc.com/news/articles/cqx10xlje1lo?at_medium=RSS&at_campaign=rss"
+  },
+  "241c2cc5f042c79b7f": {
+    "local_filename": "news-241c2cc5f042.jpg",
+    "credit": "BBC News",
+    "credit_url": "https://www.bbc.com/news/videos/c8e8zzw30zyo?at_medium=RSS&at_campaign=rss"
+  },
+  "917aaa8c0faf9b6c87": {
+    "local_filename": "demo-solar-library.png",
+    "credit": "Local fallback",
+    "credit_url": ""
+  },
+  "9c58cc8fa1497ae90d": {
+    "local_filename": "demo-solar-library.png",
+    "credit": "Local fallback",
+    "credit_url": ""
+  },
+  "d3a773461cc9bcb1df": {
+    "local_filename": "demo-solar-library.png",
+    "credit": "Local fallback",
+    "credit_url": ""
+  },
+  "304bb40de23b80d4a4": {
+    "local_filename": "demo-solar-library.png",
+    "credit": "Local fallback",
+    "credit_url": ""
+  },
+  "7b0b3fbfed48d8fa80": {
+    "local_filename": "news-7b0b3fbfed48.jpg",
+    "credit": "NASA",
+    "credit_url": "https://apod.nasa.gov/apod/image/9710/ngc4261c_hst_big.jpg"
+  },
+  "29c8a7ff90a0cfb0e3": {
+    "local_filename": "demo-solar-library.png",
+    "credit": "Local fallback",
+    "credit_url": ""
+  },
+  "e5ba6155c10a1d4331": {
+    "local_filename": "demo-solar-library.png",
+    "credit": "Local fallback",
+    "credit_url": ""
+  },
+  "17562795626bbd5831": {
+    "local_filename": "demo-solar-library.png",
+    "credit": "Local fallback",
+    "credit_url": ""
+  },
+  "9e325c9adc1fc6b8c5": {
+    "local_filename": "news-9e325c9adc1f.jpg",
+    "credit": "BBC News",
+    "credit_url": "https://www.bbc.com/news/articles/cvgmqzr6p9mo?at_medium=RSS&at_campaign=rss"
+  },
+  "04a1b39942dce35fde": {
+    "local_filename": "demo-solar-library.png",
+    "credit": "Local fallback",
+    "credit_url": ""
+  },
+  "029085c1018f94e732": {
+    "local_filename": "demo-solar-library.png",
+    "credit": "Local fallback",
+    "credit_url": ""
+  },
+  "af470498b1988647de": {
+    "local_filename": "demo-solar-library.png",
+    "credit": "Local fallback",
+    "credit_url": ""
+  },
+  "db7d0f6c8c5803699e": {
+    "local_filename": "news-db7d0f6c8c58.jpg",
+    "credit": "BBC News",
+    "credit_url": "https://www.bbc.com/news/videos/cevldxgklxko?at_medium=RSS&at_campaign=rss"
+  },
+  "7ae1a4862c515c7345": {
+    "local_filename": "demo-solar-library.png",
+    "credit": "Local fallback",
+    "credit_url": ""
+  },
+  "56ad791d6cff7af48b": {
+    "local_filename": "demo-solar-library.png",
+    "credit": "Local fallback",
+    "credit_url": ""
+  },
+  "03a9189247c2481b6f": {
+    "local_filename": "demo-solar-library.png",
+    "credit": "Local fallback",
+    "credit_url": ""
+  },
+  "e107041fc5e79d09b2": {
+    "local_filename": "news-e107041fc5e7.jpg",
+    "credit": "BBC News",
+    "credit_url": "https://www.bbc.com/news/articles/cddl65dp0rdo?at_medium=RSS&at_campaign=rss"
+  },
+  "c6ba6203cf81c38f52": {
+    "local_filename": "demo-solar-library.png",
+    "credit": "Local fallback",
+    "credit_url": ""
+  },
+  "5083ed1e1872eb3b65": {
+    "local_filename": "demo-solar-library.png",
+    "credit": "Local fallback",
+    "credit_url": ""
+  },
+  "bcb0fae3c878001559": {
+    "local_filename": "demo-solar-library.png",
+    "credit": "Local fallback",
+    "credit_url": ""
+  },
+  "fff52bce5d8a31692e": {
+    "local_filename": "news-fff52bce5d8a.jpg",
+    "credit": "BBC News",
+    "credit_url": "https://www.bbc.com/news/articles/cly8qd4595eo?at_medium=RSS&at_campaign=rss"
+  },
+  "d3e334f6da6c9878f8": {
+    "local_filename": "demo-solar-library.png",
+    "credit": "Local fallback",
+    "credit_url": ""
+  },
+  "f3fbcfcd915d214ee0": {
+    "local_filename": "demo-solar-library.png",
+    "credit": "Local fallback",
+    "credit_url": ""
+  },
+  "3d2834c4fc69e1fc7b": {
+    "local_filename": "news-3d2834c4fc69.jpg",
+    "credit": "BBC News",
+    "credit_url": "https://www.bbc.com/news/articles/ce8jmg2e4kro?at_medium=RSS&at_campaign=rss"
+  },
+  "ad9caa05232e26b324": {
+    "local_filename": "news-ad9caa05232e.jpg",
+    "credit": "BBC News",
+    "credit_url": "https://www.bbc.com/news/articles/c75ylx7g00xo?at_medium=RSS&at_campaign=rss"
+  },
+  "73829b7e771529e592": {
+    "local_filename": "news-73829b7e7715.jpg",
+    "credit": "BBC News",
+    "credit_url": "https://www.bbc.com/news/articles/cq81qvdknv3o?at_medium=RSS&at_campaign=rss"
+  },
+  "f59af41f4afaa897f8": {
+    "local_filename": "demo-solar-library.png",
+    "credit": "Local fallback",
+    "credit_url": ""
+  },
+  "8bcb1062e784672765": {
+    "local_filename": "demo-solar-library.png",
+    "credit": "Local fallback",
+    "credit_url": ""
+  },
+  "59070498de05f01f8a": {
+    "local_filename": "news-59070498de05.jpg",
+    "credit": "BBC News",
+    "credit_url": "https://www.bbc.com/news/articles/cdejn0gj12go?at_medium=RSS&at_campaign=rss"
+  },
+  "24603c5d26d8752883": {
+    "local_filename": "news-24603c5d26d8.jpg",
+    "credit": "BBC News",
+    "credit_url": "https://www.bbc.com/news/articles/c7vyn17g832o?at_medium=RSS&at_campaign=rss"
+  },
+  "c2609c12cde571e735": {
+    "local_filename": "news-c2609c12cde5.jpg",
+    "credit": "BBC News",
+    "credit_url": "https://www.bbc.com/news/articles/ce8jgr3vggno?at_medium=RSS&at_campaign=rss"
+  },
+  "5ac31972fc0d60dc66": {
+    "local_filename": "news-5ac31972fc0d.jpg",
+    "credit": "NASA",
+    "credit_url": "https://apod.nasa.gov/apod/image/2306/M94_Brennan_1565.jpg"
+  },
+  "4d9bbcc689915d5781": {
+    "local_filename": "demo-solar-library.png",
+    "credit": "Local fallback",
+    "credit_url": ""
+  },
+  "a7ea2f9e558c8f1811": {
+    "local_filename": "demo-solar-library.png",
+    "credit": "Local fallback",
+    "credit_url": ""
+  },
+  "4ce2804ddb784af004": {
+    "local_filename": "news-4ce2804ddb78.jpg",
+    "credit": "BBC News",
+    "credit_url": "https://www.bbc.com/news/articles/c9824zvpz9po?at_medium=RSS&at_campaign=rss"
+  },
+  "b7071aea30671b0c84": {
+    "local_filename": "demo-solar-library.png",
+    "credit": "Local fallback",
+    "credit_url": ""
+  },
+  "b577ef077ab651bb4a": {
+    "local_filename": "news-b577ef077ab6.jpg",
+    "credit": "BBC News",
+    "credit_url": "https://www.bbc.com/news/articles/c1lym76jyymo?at_medium=RSS&at_campaign=rss"
+  },
+  "a8d8ff8a6bf8931433": {
+    "local_filename": "demo-solar-library.png",
+    "credit": "Local fallback",
+    "credit_url": ""
+  },
+  "cb4851af2a1da4d22d": {
+    "local_filename": "demo-solar-library.png",
+    "credit": "Local fallback",
+    "credit_url": ""
+  },
+  "ccb9934375f121dea5": {
+    "local_filename": "demo-solar-library.png",
+    "credit": "Local fallback",
+    "credit_url": ""
+  },
+  "d54451c73b6802d09b": {
+    "local_filename": "demo-solar-library.png",
+    "credit": "Local fallback",
+    "credit_url": ""
+  },
+  "5ee5bf76a81535f27c": {
+    "local_filename": "news-5ee5bf76a815.jpg",
+    "credit": "BBC News",
+    "credit_url": "https://www.bbc.com/news/articles/cd0m2mg949yo?at_medium=RSS&at_campaign=rss"
+  },
+  "65d4040187c16bf640": {
+    "local_filename": "news-65d4040187c1.jpg",
+    "credit": "BBC News",
+    "credit_url": "https://www.bbc.com/news/articles/c621jr3yy09o?at_medium=RSS&at_campaign=rss"
   }
 }

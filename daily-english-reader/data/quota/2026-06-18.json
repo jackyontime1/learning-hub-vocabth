@@ -2,105 +2,105 @@
   "date": "2026-06-18",
   "providers": {
     "rss_cbc-news-canada": {
-      "requests": 1,
+      "requests": 2,
       "errors": 0,
       "disabled": false,
       "cooldown_until": "",
       "last_error": ""
     },
     "rss_cbc-news-world": {
-      "requests": 1,
+      "requests": 2,
       "errors": 0,
       "disabled": false,
       "cooldown_until": "",
       "last_error": ""
     },
     "rss_cbc-news-business": {
-      "requests": 1,
+      "requests": 2,
       "errors": 0,
       "disabled": false,
       "cooldown_until": "",
       "last_error": ""
     },
     "rss_bbc-news-world": {
-      "requests": 1,
+      "requests": 2,
       "errors": 0,
       "disabled": false,
       "cooldown_until": "",
       "last_error": ""
     },
     "rss_bbc-news-technology": {
-      "requests": 1,
+      "requests": 2,
       "errors": 0,
       "disabled": false,
       "cooldown_until": "",
       "last_error": ""
     },
     "rss_bbc-news-science": {
-      "requests": 1,
+      "requests": 2,
       "errors": 0,
       "disabled": false,
       "cooldown_until": "",
       "last_error": ""
     },
     "rss_npr-world": {
-      "requests": 1,
+      "requests": 2,
       "errors": 0,
       "disabled": false,
       "cooldown_until": "",
       "last_error": ""
     },
     "rss_npr-business": {
-      "requests": 1,
+      "requests": 2,
       "errors": 0,
       "disabled": false,
       "cooldown_until": "",
       "last_error": ""
     },
     "rss_npr-health": {
-      "requests": 1,
+      "requests": 2,
       "errors": 0,
       "disabled": false,
       "cooldown_until": "",
       "last_error": ""
     },
     "nasa": {
-      "requests": 1,
+      "requests": 2,
       "errors": 0,
       "disabled": false,
       "cooldown_until": "",
       "last_error": ""
     },
     "nws": {
-      "requests": 1,
-      "errors": 1,
+      "requests": 2,
+      "errors": 2,
       "disabled": false,
       "cooldown_until": "",
       "last_error": "network: 400 Client Error: Bad Request for url: https://api.weather.gov/alerts/active?status=actual&limit=20"
     },
     "usgs": {
-      "requests": 1,
+      "requests": 2,
       "errors": 0,
       "disabled": false,
       "cooldown_until": "",
       "last_error": ""
     },
     "arxiv": {
-      "requests": 1,
+      "requests": 2,
       "errors": 1,
       "disabled": false,
       "cooldown_until": "",
       "last_error": "network: HTTPSConnectionPool(host='export.arxiv.org', port=443): Read timed out. (read timeout=25)"
     },
     "openverse": {
-      "requests": 4,
+      "requests": 10,
       "errors": 0,
       "disabled": false,
       "cooldown_until": "",
       "last_error": ""
     },
     "commons": {
-      "requests": 4,
+      "requests": 10,
       "errors": 0,
       "disabled": false,
       "cooldown_until": "",
