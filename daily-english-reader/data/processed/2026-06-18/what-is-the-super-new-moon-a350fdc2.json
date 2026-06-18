@@ -1,5 +1,5 @@
 {
-  "schema_version": 3,
+  "schema_version": 4,
   "id": "a350fdc2841132f523",
   "slug": "what-is-the-super-new-moon-a350fdc2",
   "level": "A2",
@@ -29,7 +29,7 @@
     "see": "ดู",
     "still": "ยังคง",
     "super": "สุดยอด",
-    "t": "t",
+    "t": "คำว่า t",
     "the": "คือ",
     "tide": "กระแสน้ํา",
     "to": "ถึง",
@@ -84,5 +84,5 @@
     "credit_url": "https://www.bbc.com/news/videos/cpwe2p4zywwo?at_medium=RSS&at_campaign=rss"
   },
   "audio_cache_path": "data/audio/2026-06-18/a350fdc2841132f523-a2.mp3",
-  "generated_at": "2026-06-18T04:26:58.703226+00:00"
+  "generated_at": "2026-06-18T05:06:06.060822+00:00"
 }

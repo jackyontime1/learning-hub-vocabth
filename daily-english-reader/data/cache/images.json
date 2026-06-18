@@ -40,12 +40,12 @@
     "credit_url": ""
   },
   "7159096b84cb07cb78": {
-    "url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/3647/live/5c383800-6a67-11f1-a1ef-fd29fb1a4751.jpg",
+    "local_filename": "news-7159096b84cb.jpg",
     "credit": "BBC News",
     "credit_url": "https://www.bbc.com/news/articles/clyw29kvlydo?at_medium=RSS&at_campaign=rss"
   },
   "9407278d0fcda19249": {
-    "url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/506c/live/b30cebe0-6309-11f1-89a3-d1f559421220.jpg",
+    "local_filename": "news-9407278d0fcd.jpg",
     "credit": "BBC News",
     "credit_url": "https://www.bbc.com/news/videos/cd6p6zqzj6do?at_medium=RSS&at_campaign=rss"
   },
@@ -358,5 +358,175 @@
     "local_filename": "news-65d4040187c1.jpg",
     "credit": "BBC News",
     "credit_url": "https://www.bbc.com/news/articles/c621jr3yy09o?at_medium=RSS&at_campaign=rss"
+  },
+  "9888062066f1ddd487": {
+    "local_filename": "demo-solar-library.png",
+    "credit": "Local fallback",
+    "credit_url": ""
+  },
+  "fb09faaa434ae162a9": {
+    "local_filename": "demo-solar-library.png",
+    "credit": "Local fallback",
+    "credit_url": ""
+  },
+  "f64f9f5a12aab4c009": {
+    "local_filename": "demo-solar-library.png",
+    "credit": "Local fallback",
+    "credit_url": ""
+  },
+  "274178f02c8265007b": {
+    "local_filename": "demo-solar-library.png",
+    "credit": "Local fallback",
+    "credit_url": ""
+  },
+  "4f12bab0dd28f1a8da": {
+    "local_filename": "news-4f12bab0dd28.jpg",
+    "credit": "BBC News",
+    "credit_url": "https://www.bbc.com/news/articles/cj0vyzmmy50o?at_medium=RSS&at_campaign=rss"
+  },
+  "bc0a83f67f2de83c62": {
+    "local_filename": "demo-solar-library.png",
+    "credit": "Local fallback",
+    "credit_url": ""
+  },
+  "2de4d587f18334480a": {
+    "local_filename": "demo-solar-library.png",
+    "credit": "Local fallback",
+    "credit_url": ""
+  },
+  "061bed18bda195b74c": {
+    "local_filename": "news-061bed18bda1.jpg",
+    "credit": "BBC News",
+    "credit_url": "https://www.bbc.com/news/articles/c0r1975ded7o?at_medium=RSS&at_campaign=rss"
+  },
+  "50519b5e0226ee194d": {
+    "local_filename": "news-50519b5e0226.jpg",
+    "credit": "BBC News",
+    "credit_url": "https://www.bbc.com/news/articles/cy73gx8px2eo?at_medium=RSS&at_campaign=rss"
+  },
+  "81a654512add66ddc2": {
+    "local_filename": "demo-solar-library.png",
+    "credit": "Local fallback",
+    "credit_url": ""
+  },
+  "3532b53943056d5b11": {
+    "local_filename": "demo-solar-library.png",
+    "credit": "Local fallback",
+    "credit_url": ""
+  },
+  "653fb27f187833bae8": {
+    "local_filename": "demo-solar-library.png",
+    "credit": "Local fallback",
+    "credit_url": ""
+  },
+  "5f701cf87bcc55f54f": {
+    "local_filename": "demo-solar-library.png",
+    "credit": "Local fallback",
+    "credit_url": ""
+  },
+  "024a51a22b835d08bf": {
+    "local_filename": "demo-solar-library.png",
+    "credit": "Local fallback",
+    "credit_url": ""
+  },
+  "693be4863ea87cad7b": {
+    "local_filename": "news-693be4863ea8.jpg",
+    "credit": "BBC News",
+    "credit_url": "https://www.bbc.com/news/articles/ceqdrw2yy3vo?at_medium=RSS&at_campaign=rss"
+  },
+  "5a4f4379ace81bbde3": {
+    "local_filename": "news-5a4f4379ace8.jpg",
+    "credit": "BBC News",
+    "credit_url": "https://www.bbc.com/news/articles/c62173jqd4wo?at_medium=RSS&at_campaign=rss"
+  },
+  "46ba24a9cf8259fd79": {
+    "local_filename": "demo-solar-library.png",
+    "credit": "Local fallback",
+    "credit_url": ""
+  },
+  "e78cdedcccf6219932": {
+    "local_filename": "news-e78cdedcccf6.jpg",
+    "credit": "BBC News",
+    "credit_url": "https://www.bbc.com/news/videos/cn0v8vg9d8xo?at_medium=RSS&at_campaign=rss"
+  },
+  "9a8fc518d61bc58b59": {
+    "local_filename": "demo-solar-library.png",
+    "credit": "Local fallback",
+    "credit_url": ""
+  },
+  "6ad7cd6aa3c39451c5": {
+    "local_filename": "demo-solar-library.png",
+    "credit": "Local fallback",
+    "credit_url": ""
+  },
+  "07c42b14becd6ab626": {
+    "local_filename": "demo-solar-library.png",
+    "credit": "Local fallback",
+    "credit_url": ""
+  },
+  "3800c512656536bf17": {
+    "local_filename": "demo-solar-library.png",
+    "credit": "Local fallback",
+    "credit_url": ""
+  },
+  "90f2dc3b442c39980b": {
+    "local_filename": "news-90f2dc3b442c.jpg",
+    "credit": "BBC News",
+    "credit_url": "https://www.bbc.com/news/articles/cn4pk07npvvo?at_medium=RSS&at_campaign=rss"
+  },
+  "e7504eb8e2095e09ce": {
+    "local_filename": "news-e7504eb8e209.jpg",
+    "credit": "BBC News",
+    "credit_url": "https://www.bbc.com/news/articles/ckmg1572e8ko?at_medium=RSS&at_campaign=rss"
+  },
+  "fd285aa49dd6061bf1": {
+    "local_filename": "demo-solar-library.png",
+    "credit": "Local fallback",
+    "credit_url": ""
+  },
+  "39b6d65da7041afcd1": {
+    "local_filename": "demo-solar-library.png",
+    "credit": "Local fallback",
+    "credit_url": ""
+  },
+  "9aa1ac964bdade94b8": {
+    "local_filename": "news-9aa1ac964bda.jpg",
+    "credit": "BBC News",
+    "credit_url": "https://www.bbc.com/news/articles/cgmd8dgklzzo?at_medium=RSS&at_campaign=rss"
+  },
+  "5bf9561b6dee0a6794": {
+    "local_filename": "demo-solar-library.png",
+    "credit": "Local fallback",
+    "credit_url": ""
+  },
+  "c31de017e70a595633": {
+    "local_filename": "demo-solar-library.png",
+    "credit": "Local fallback",
+    "credit_url": ""
+  },
+  "94e2fa81e4e66a7d39": {
+    "local_filename": "news-94e2fa81e4e6.jpg",
+    "credit": "BBC News",
+    "credit_url": "https://www.bbc.com/news/articles/cd6wp6xenv0o?at_medium=RSS&at_campaign=rss"
+  },
+  "40c228bb1dab5eedc7": {
+    "local_filename": "demo-solar-library.png",
+    "credit": "Local fallback",
+    "credit_url": ""
+  },
+  "38d4b5cc01476e6807": {
+    "local_filename": "news-38d4b5cc0147.png",
+    "credit": "BBC News",
+    "credit_url": "https://www.bbc.com/news/articles/cpq37yxexd9o?at_medium=RSS&at_campaign=rss"
+  },
+  "14a45cd88c6d4f14ae": {
+    "local_filename": "demo-solar-library.png",
+    "credit": "Local fallback",
+    "credit_url": ""
+  },
+  "6ccfeb3ef88494eaa2": {
+    "local_filename": "news-6ccfeb3ef884.jpg",
+    "credit": "BBC News",
+    "credit_url": "https://www.bbc.com/news/articles/cj3gx8jl6d5o?at_medium=RSS&at_campaign=rss"
   }
 }

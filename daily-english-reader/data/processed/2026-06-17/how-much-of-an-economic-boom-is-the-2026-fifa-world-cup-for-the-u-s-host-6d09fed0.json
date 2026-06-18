@@ -1,12 +1,12 @@
 {
-  "schema_version": 3,
+  "schema_version": 4,
   "id": "6d09fed0388536baa9",
   "slug": "how-much-of-an-economic-boom-is-the-2026-fifa-world-cup-for-the-u-s-host-6d09fed0",
   "level": "A1",
   "title": "How much of an economic boom is the 2026 FIFA World Cup for the U.S. hosting cities?",
   "description": "The FIFA World Cup is thought to bring an economic windfall to the cities and regions where games will be played during four weeks this summer. How true is that?",
-  "text": "The FIFA World Cup is thought to bring. An economic windfall to the cities and. Regions where games will be played during four weeks this summer. SCOTT DETROW, HOST. The United States, Canada and. Mexico are playing host to the soccer world. This month as the FIFA World Cup brings. The top 48 teams in the world to North America. DYLAN DUKE, BYLINE. Over the course of the World Cup, thousands.",
-  "thai_text": "คิดว่า FIFA World Cups จะนํามา ลมพัดทางเศรษฐกิจลงเมืองและ ภูมิภาคที่เกมจะเล่น ในช่วงสี่สัปดาห์ฤดูร้อนนี้ SCOT DET Harrow, HST. สหรัฐ แคนาดา และ เม็กซิโกเป็นพิธีกรให้กับโลกฟุตบอล เดือนนี้ FIFA World Cup นํามา ทีมที่ติดอันดับ 48 ของโลกไปอเมริกาเหนือ Dylan DUKE, Byline. กว่าหลักสูตรของฟุตบอลโลกนับพัน.",
+  "text": "The FIFA World Cup is thought to bring. An economic windfall to the cities and. Regions where games will be played during four weeks this summer. SCOTT DETROW, The United States, Canada and. Mexico are playing host to the soccer world. This month as the FIFA World Cup brings. The top 48 teams in the world to North America. DYLAN DUKE, Over the course of the World.",
+  "thai_text": "คิดว่า FIFA World Cups จะนํามา ลมพัดทางเศรษฐกิจลงเมืองและ ภูมิภาคที่เกมจะเล่น ในช่วงสี่สัปดาห์ฤดูร้อนนี้ SCOT DET Harward, สหรัฐ, แคนาดา และ ค.ศ. เม็กซิโกเป็นพิธีกรให้กับโลกฟุตบอล เดือนนี้ FIFA World Cup นํามา ทีมที่ติดอันดับ 48 ของโลกไปอเมริกาเหนือ Dylan DUKE ผ่านหลักสูตรของโลก.",
   "word_translations": {
     "america": "อเมริกา",
     "an": "เป็น",
@@ -16,7 +16,6 @@
     "be": "เป็น",
     "bring": "นํามา",
     "brings": "นํามา",
-    "byline": "ตามบรรทัด",
     "canada": "ภาษาแคนาดาname",
     "cities": "เมือง",
     "course": "แน่นอน",
@@ -48,7 +47,6 @@
     "the": "คือ",
     "this": "นี่",
     "thought": "คิด",
-    "thousands": "พัน",
     "to": "ถึง",
     "top": "บน",
     "united": "เอกภาพ",
@@ -69,7 +67,6 @@
     "be": "v.",
     "bring": "v.",
     "brings": "n.",
-    "byline": "n.",
     "canada": "n.",
     "cities": "n.",
     "course": "n.",
@@ -101,7 +98,6 @@
     "the": "det.",
     "this": "det.",
     "thought": "n.",
-    "thousands": "n.",
     "to": "prep.",
     "top": "n.",
     "united": "v.",
@@ -122,5 +118,5 @@
     "credit_url": ""
   },
   "audio_cache_path": "data/audio/2026-06-17/6d09fed0388536baa9-a1.mp3",
-  "generated_at": "2026-06-18T04:28:49.873971+00:00"
+  "generated_at": "2026-06-18T05:07:33.150283+00:00"
 }

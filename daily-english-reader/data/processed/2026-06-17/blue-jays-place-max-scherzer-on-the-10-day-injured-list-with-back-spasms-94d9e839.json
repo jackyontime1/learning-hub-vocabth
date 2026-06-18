@@ -1,5 +1,5 @@
 {
-  "schema_version": 3,
+  "schema_version": 4,
   "id": "94d9e839e8e8f835a1",
   "slug": "blue-jays-place-max-scherzer-on-the-10-day-injured-list-with-back-spasms-94d9e839",
   "level": "A2",
@@ -21,7 +21,7 @@
     "braydon": "บราดอน",
     "came": "มาแล้ว",
     "career": "อาชีพ",
-    "cy": "cy",
+    "cy": "คำว่า cy",
     "day": "วัน",
     "fanned": "พัดลม",
     "fisher": "ชาวประมง",
@@ -73,7 +73,7 @@
     "this": "นี่",
     "three-time": "สามครั้ง",
     "to": "ถึง",
-    "toronto": "toronto",
+    "toronto": "คำว่า toronto",
     "turns": "หมุน",
     "use": "ใช้",
     "was": "คือ",
@@ -178,5 +178,5 @@
     "credit_url": ""
   },
   "audio_cache_path": "data/audio/2026-06-17/94d9e839e8e8f835a1-a2.mp3",
-  "generated_at": "2026-06-18T04:28:57.509188+00:00"
+  "generated_at": "2026-06-18T05:07:33.385108+00:00"
 }
