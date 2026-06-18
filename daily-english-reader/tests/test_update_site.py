@@ -99,6 +99,11 @@ class DailyReaderTests(unittest.TestCase):
         self.assertNotIn("hide caption", cleaned)
         self.assertIn("A lot changes when, you move", cleaned)
 
+    def test_clean_story_text_repairs_common_source_typos(self):
+        cleaned = site.clean_story_text("Last year 2e published a story where you've never too old to play.")
+        self.assertIn("Last year we published", cleaned)
+        self.assertIn("where you're never too old", cleaned)
+
     def test_safe_word_translations_fills_missing_or_bad_values(self):
         result = site.safe_word_translations(["company", "unknown"], {"company": "เธเธฃเธดเธฉเธฑเธ—"})
         self.assertEqual(result["company"], "บริษัท")

@@ -59,7 +59,7 @@ UNSPLASH_URL = "https://api.unsplash.com/search/photos"
 OPENVERSE_URL = "https://api.openverse.org/v1/images/"
 COMMONS_URL = "https://commons.wikimedia.org/w/api.php"
 USER_AGENT = "DailyEnglishReader/2.0 (personal educational project; contact=local)"
-SCHEMA_VERSION = 5
+SCHEMA_VERSION = 6
 LEVELS = ("A1", "A2", "B1", "B2", "C1")
 TARGET_PER_LEVEL = 2
 DAILY_ARTICLE_COUNT = len(LEVELS) * TARGET_PER_LEVEL
@@ -254,6 +254,8 @@ def clean_story_text(text: str) -> str:
     text = re.sub(r"\bhide caption\b", " ", text, flags=re.I)
     text = re.sub(r"\b(?:SCOTT DETROW|A MARTÍNEZ|HOST|BYLINE|EDITOR'S NOTE):\s*", " ", text, flags=re.I)
     text = re.sub(r"\b(?:Image source|Getty Images|Reuters|Associated Press|AP Photo)\b[^.!?]*(?:\.|$)", " ", text, flags=re.I)
+    text = re.sub(r"\b2e\b", "we", text)
+    text = re.sub(r"\byou['’]ve never too old\b", "you're never too old", text, flags=re.I)
     text = re.sub(r"\s+([,.;:!?])", r"\1", text)
     text = re.sub(r"\b([A-Z])\s*\.\s+([A-Z][a-z])", r"\1. \2", text)
     text = re.sub(r"(?<!\b[A-Z])\.\s+(?=[a-z])", ", ", text)
