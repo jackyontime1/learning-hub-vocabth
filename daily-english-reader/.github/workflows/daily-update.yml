@@ -79,6 +79,11 @@ jobs:
           SKIP_AUDIO: "1"
         run: python update_site.py
 
+      - name: Clean preflight output
+        run: |
+          today="$(date -u +%F)"
+          rm -rf "data/processed/$today" "data/audio/$today" "data/raw/$today-providers.json" site .site-staging
+
       - name: Build atomically
         env:
           FREE_ONLY: "1"
@@ -90,6 +95,7 @@ jobs:
           RETENTION_DAYS: "30"
           DEMO_MODE: "0"
           SKIP_AUDIO: "0"
+          REFRESH_TODAY: "1"
         run: python update_site.py
 
       - name: Persist rolling cache

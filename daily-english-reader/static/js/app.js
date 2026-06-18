@@ -87,13 +87,14 @@ function openWord(target) {
   activeWordTarget = target;
   activeWord = {
     word: target.dataset.word,
+    pos: target.dataset.pos || "",
     translation: target.dataset.translation || "ยังไม่มีคำแปล",
     articleId: document.querySelector(".reader")?.dataset.articleId || "",
     articleTitle: document.querySelector(".article-hero h1")?.textContent || "",
     savedAt: new Date().toISOString(),
   };
   document.querySelector("#popoverWord").textContent = activeWord.word;
-  document.querySelector("#popoverPronunciation").textContent = `English: ${activeWord.word.toLowerCase()}`;
+  document.querySelector("#popoverPronunciation").textContent = `${activeWord.pos ? `${activeWord.pos} · ` : ""}English: ${activeWord.word.toLowerCase()}`;
   document.querySelector("#popoverTranslation").textContent = activeWord.translation;
   document.querySelector("#learnWord").classList.toggle("active", Boolean(savedWords[activeWord.word.toLowerCase()]));
   positionPopover(target);
@@ -107,7 +108,7 @@ function renderArticleSavedWords() {
   container.innerHTML = rows.length ? rows.map((row) => `
     <div class="saved-word-row">
       <button data-speak="${escapeHtml(row.word)}" type="button"><i class="fa-solid fa-volume-high"></i></button>
-      <span><strong>${escapeHtml(row.word)}</strong><small>${escapeHtml(row.translation || "")}</small></span>
+      <span><strong>${escapeHtml(row.word)}${row.pos ? ` <em>${escapeHtml(row.pos)}</em>` : ""}</strong><small>${escapeHtml(row.translation || "")}</small></span>
       <button data-remove-word="${escapeHtml(row.word.toLowerCase())}" type="button" aria-label="Remove ${escapeHtml(row.word)}"><i class="fa-solid fa-xmark"></i></button>
     </div>`).join("") : `<p class="inline-empty">Select a word and press “เรียน” to save it here.</p>`;
 }
@@ -127,7 +128,7 @@ function renderVocabularyPage(filter = "") {
   container.innerHTML = rows.map((row) => `
     <article class="saved-word-card">
       <button data-speak="${escapeHtml(row.word)}" type="button"><i class="fa-solid fa-volume-high"></i></button>
-      <div><h2>${escapeHtml(row.word)}</h2><p>${escapeHtml(row.translation || "")}</p><small>${escapeHtml(row.articleTitle || "")}</small></div>
+      <div><h2>${escapeHtml(row.word)}${row.pos ? ` <em>${escapeHtml(row.pos)}</em>` : ""}</h2><p>${escapeHtml(row.translation || "")}</p><small>${escapeHtml(row.articleTitle || "")}</small></div>
       <button data-remove-word="${escapeHtml((row.word || "").toLowerCase())}" type="button" aria-label="Remove word"><i class="fa-regular fa-trash-can"></i></button>
     </article>`).join("");
   const empty = document.querySelector("#emptyWords");

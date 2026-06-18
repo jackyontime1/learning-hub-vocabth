@@ -64,6 +64,9 @@ LEVELS = ("A2", "B1", "B2")
 TARGET_PER_LEVEL = 2
 
 RSS_FEEDS = [
+    ("CBC News", "Canada", "https://www.cbc.ca/webfeed/rss/rss-canada"),
+    ("CBC News", "World", "https://www.cbc.ca/webfeed/rss/rss-world"),
+    ("CBC News", "Business", "https://www.cbc.ca/webfeed/rss/rss-business"),
     ("BBC News", "World", "https://feeds.bbci.co.uk/news/world/rss.xml"),
     ("BBC News", "Technology", "https://feeds.bbci.co.uk/news/technology/rss.xml"),
     ("BBC News", "Science", "https://feeds.bbci.co.uk/news/science_and_environment/rss.xml"),
@@ -99,6 +102,26 @@ SIMPLE_REPLACEMENTS = {
     "difficulties": "problems", "numerous": "many", "obtain": "get",
     "purchase": "buy", "require": "need", "residents": "local people",
     "significant": "important", "subsequently": "later", "utilize": "use",
+}
+
+DETERMINERS = {"a", "an", "the", "this", "that", "these", "those", "each", "every", "some", "any"}
+PRONOUNS = {"i", "you", "he", "she", "it", "we", "they", "me", "him", "her", "us", "them", "who", "which", "that"}
+PREPOSITIONS = {
+    "about", "above", "after", "against", "around", "at", "before", "between", "by", "during",
+    "for", "from", "in", "into", "near", "of", "on", "over", "through", "to", "under", "with",
+}
+CONJUNCTIONS = {"and", "but", "or", "because", "if", "while", "although", "so"}
+COMMON_VERBS = {
+    "add", "affect", "allow", "ask", "be", "become", "begin", "bring", "build", "buy", "call",
+    "can", "change", "check", "come", "could", "cut", "do", "expect", "find", "get", "give",
+    "go", "have", "help", "include", "keep", "know", "lead", "learn", "make", "may", "move",
+    "need", "play", "provide", "reduce", "report", "respond", "run", "say", "see", "send",
+    "show", "start", "take", "test", "try", "use", "walk", "will", "work", "would",
+}
+COMMON_ADJECTIVES = {
+    "able", "active", "annual", "big", "clean", "clear", "daily", "different", "dry", "early",
+    "fast", "free", "good", "great", "large", "local", "long", "new", "old", "public", "real",
+    "short", "small", "strong", "young",
 }
 
 DEMO_TOPICS = [
@@ -634,6 +657,35 @@ def vocabulary_words(text: str) -> list[str]:
     return sorted({word for word in words if word})
 
 
+def part_of_speech(word: str) -> str:
+    key = word.lower().strip("'")
+    if key in DETERMINERS:
+        return "det."
+    if key in PRONOUNS:
+        return "pron."
+    if key in PREPOSITIONS:
+        return "prep."
+    if key in CONJUNCTIONS:
+        return "conj."
+    if key in COMMON_VERBS:
+        return "v."
+    if key in COMMON_ADJECTIVES:
+        return "adj."
+    if key.endswith("ly"):
+        return "adv."
+    if key.endswith(("tion", "sion", "ment", "ness", "ity", "ship", "er", "or", "ist")):
+        return "n."
+    if key.endswith(("able", "ible", "al", "ful", "ic", "ive", "less", "ous")):
+        return "adj."
+    if key.endswith(("ate", "en", "ify", "ise", "ize")):
+        return "v."
+    if key.endswith(("ed", "ing")):
+        return "v."
+    if key.endswith("s") and len(key) > 3:
+        return "n."
+    return "n."
+
+
 class Translator:
     def __init__(self, session: requests.Session, config: dict[str, Any]) -> None:
         self.session, self.config = session, config
@@ -841,6 +893,7 @@ def process_article(
     text = adapt_level(raw["description"], raw["level"], config, session)
     words = vocabulary_words(text)
     thai_text, translations = translator.translate(text, words, raw.get("thai_demo", ""))
+    word_pos = {word: part_of_speech(word) for word in words}
     published_date = utc_now().date().isoformat()
     audio_path = generate_audio(text, raw["id"], raw["level"], published_date, config)
     image = image_for(raw, session, quota, config)
@@ -849,6 +902,7 @@ def process_article(
         "schema_version": SCHEMA_VERSION, "id": raw["id"], "slug": slug, "level": raw["level"],
         "title": raw["title"], "description": raw["description"], "text": text, "thai_text": thai_text,
         "word_translations": translations, "category": raw["category"], "provider": raw["provider"],
+        "word_pos": word_pos,
         "content_type": raw["content_type"], "source_url": raw["url"], "author": raw["author"],
         "published": raw["published"], "published_date": published_date, "image": image,
         "audio_cache_path": str(audio_path.relative_to(ROOT)).replace("\\", "/"),
@@ -856,7 +910,7 @@ def process_article(
     }
 
 
-def word_spans(text: str, translations: dict[str, str]) -> Markup:
+def word_spans(text: str, translations: dict[str, str], word_pos: dict[str, str] | None = None) -> Markup:
     pieces = re.findall(r"[A-Za-z]+(?:['-][A-Za-z]+)*|[^A-Za-z]+", text)
     output = []
     for piece in pieces:
@@ -864,7 +918,9 @@ def word_spans(text: str, translations: dict[str, str]) -> Markup:
             key = piece.lower()
             output.append(
                 f'<span class="word" tabindex="0" role="button" data-word="{html.escape(piece, quote=True)}" '
-                f'data-translation="{html.escape(translations.get(key, ""), quote=True)}">{html.escape(piece)}</span>'
+                f'data-translation="{html.escape(translations.get(key, ""), quote=True)}" '
+                f'data-pos="{html.escape((word_pos or {}).get(key, part_of_speech(key)), quote=True)}">'
+                f'{html.escape(piece)}</span>'
             )
         else:
             output.append(html.escape(piece))
@@ -894,7 +950,7 @@ def article_view(article: dict[str, Any], base_prefix: str) -> dict[str, Any]:
         "page_url": f"{base_prefix}news/{article['published_date']}/{article['slug']}/index.html",
         "image_url": image_url,
         "published_display": parse_date(article["published"]).strftime("%d %b %Y"),
-        "word_html": word_spans(article["text"], article["word_translations"]),
+        "word_html": word_spans(article["text"], article["word_translations"], article.get("word_pos", {})),
         "audio_source": audio_source,
     }
 
@@ -992,8 +1048,13 @@ def validate_staging(today_articles: list[dict[str, Any]]) -> None:
         directory = STAGING_DIR / "news" / article["published_date"] / article["slug"]
         if not (directory / "index.html").exists() or not (directory / "article.json").exists():
             raise RuntimeError(f"Missing output for {article['id']}")
-        if not list(directory.glob(f"{article['level'].lower()}.*")):
+        audio_files = list(directory.glob(f"{article['level'].lower()}.*"))
+        if not audio_files:
             raise RuntimeError(f"Missing audio for {article['id']}")
+        if article.get("provider") != "demo":
+            mp3 = directory / f"{article['level'].lower()}.mp3"
+            if not mp3.exists() or mp3.stat().st_size < 1000:
+                raise RuntimeError(f"Missing production MP3 audio for {article['id']}")
 
 
 def atomic_publish() -> None:

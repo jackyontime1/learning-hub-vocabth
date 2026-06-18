@@ -81,6 +81,18 @@ class DailyReaderTests(unittest.TestCase):
         self.assertEqual(markup.count('class="word"'), 3)
         self.assertIn("พลังงาน", markup)
 
+    def test_word_spans_include_part_of_speech(self):
+        markup = str(site.word_spans("Clean energy works.", {
+            "clean": "สะอาด", "energy": "พลังงาน", "works": "ทำงาน",
+        }))
+        self.assertIn('data-pos="adj."', markup)
+
+    def test_part_of_speech_uses_common_labels(self):
+        self.assertEqual(site.part_of_speech("clean"), "adj.")
+        self.assertEqual(site.part_of_speech("respond"), "v.")
+        self.assertEqual(site.part_of_speech("disease"), "n.")
+        self.assertEqual(site.part_of_speech("quickly"), "adv.")
+
     def test_rate_limit_pauses_provider(self):
         with tempfile.TemporaryDirectory() as temp:
             quota_path = Path(temp)

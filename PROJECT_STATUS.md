@@ -67,6 +67,13 @@ Updated: June 17, 2026
 - The successful run did not use Google Cloud TTS and did not consume the Podcast monthly TTS safety cap.
 - Issue found after first run: `2026-06-17` repeated the demo/fallback stories from `2026-06-14` because no free news API keys were configured and production allowed `demo_articles()` as fallback.
 - Fix in progress: production Daily Reading now pulls real RSS news from free sources first, demo content is limited to `DEMO_MODE=1`, and demo-only editions are removed once a real edition is generated.
+- Reading fix prepared on June 18, 2026:
+  - GitHub Actions now cleans preflight no-audio output before the production build.
+  - Manual/production workflow runs set `REFRESH_TODAY=1` so stale demo/silent output is replaced.
+  - Production Reading validation now requires real `.mp3` files for non-demo articles.
+  - Vocabulary popups now include local part-of-speech labels such as `n.`, `v.`, `adj.`, and `adv.`.
+  - RSS source chain now includes CBC News, BBC News, and NPR before optional API-key providers.
+  - This does not use Google Cloud TTS and does not consume the Podcast monthly TTS safety cap.
 
 ## Oxford Category Distribution
 
@@ -245,6 +252,10 @@ node "D:\podcast voice\daily-english-reader\scripts\build-learning-hub.mjs"
   `D:\podcast voice\daily-english-reader\.github\workflows\daily-update.yml`
 - Daily Reading automation verification passed locally:
   JS syntax checks passed and unit tests passed 11/11.
+- Reading real-news/audio/POS patch verification passed locally on June 18, 2026:
+  Python unit tests passed 15/15.
+  Python syntax checks passed for `update_site.py` and `tests/test_update_site.py`.
+  JS syntax checks passed for `static/js/app.js` and `scripts/build-learning-hub.mjs`.
 
 ## Backups
 
@@ -266,6 +277,10 @@ node "D:\podcast voice\daily-english-reader\scripts\build-learning-hub.mjs"
   `D:\podcast voice\backups\before-cloudflare-pages-deploy-20260617-114149.zip`
 - Before Daily Reader Cloudflare automation changes:
   `D:\podcast voice\backups\before-daily-reader-cloudflare-auto-20260617-120401.zip`
+- Before real RSS Reading deploy:
+  `D:\podcast voice\backups\before-real-rss-reading-deploy-20260617-204634.zip`
+- Before Reading real-news audio/POS deploy:
+  `D:\podcast voice\backups\before-reading-real-news-audio-pos-deploy-20260618-104819.zip`
 
 ## Next Action
 
