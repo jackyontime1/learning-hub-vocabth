@@ -287,6 +287,18 @@ node "D:\podcast voice\daily-english-reader\scripts\build-learning-hub.mjs"
   and the detected RSS text typo `2e published` is cleaned.
 - Saved Reading words are merged into Flashcards at runtime as category `Saved from Reading` from localStorage key `der.savedWords.v1`.
 
+## Reading Translation Fix - June 18, 2026
+
+- Deployed via GitHub Actions run:
+  `https://github.com/jackyontime1/learning-hub-vocabth/actions/runs/27776083108`
+- Production URL checked:
+  `https://learning-hub-vocabth.pages.dev/news/2026-06-12/rare-footage-captured-of-great-white-shark-in-mediterranean-sea-9407278d/`
+- Reading vocabulary now uses Podcast/Oxford flashcard meanings before fallback.
+- The popup no longer fabricates labels like `คำว่า filmed`; verified examples:
+  `filmed = ถ่ายวิดีโอ`, `diver = นักดำน้ำ`, `shark = ฉลาม`.
+- Full Thai translation/summary now uses story-specific title/description/sentence cues instead of only generic category text.
+- Production still has 70 stories across the latest 7 days.
+
 ## Backups
 
 - Full Job Interview Days 1-8:
@@ -313,6 +325,8 @@ node "D:\podcast voice\daily-english-reader\scripts\build-learning-hub.mjs"
   `D:\podcast voice\backups\before-reading-real-news-audio-pos-deploy-20260618-104819.zip`
 - Before Reading quality fix:
   `D:\podcast voice\backups\before-reading-quality-fix-20260618-114424.zip`
+- Before Reading translation fix:
+  `D:\podcast voice\backups\before-reading-translation-fix-20260618-translation-fix.zip`
 
 ## Next Action
 
