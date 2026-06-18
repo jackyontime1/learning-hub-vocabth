@@ -1,12 +1,12 @@
 {
-  "schema_version": 4,
+  "schema_version": 5,
   "id": "e78cdedcccf6219932",
   "slug": "elon-musk-gets-public-trading-of-spacex-under-way-from-texas-e78cdedc",
   "level": "B1",
   "title": "Elon Musk gets public trading of SpaceX under way from Texas",
   "description": "SpaceX founder Elon Musk said he gave the company \"less than a 10% chance of succeeding at all\" when it first started, and it is now going public \"with the largest IPO ever\".",
   "text": "SpaceX founder Elon Musk said he gave the company \"less than a 10% chance of succeeding at all\". When it first started, and it is now going public \"with the largest IPO ever\". Musk made the remarks from the company's headquarters in southern Texas before it officially began trading on the US stock exchange. Company officials celebrated the ceremonial start of trading at twin ceremonies at the Nasdaq headquarters in New York City and. From the Texas headquarters. Video filmed by the BBC showed dozens of people walking out, some carrying signs expressing concern about the. Company's controversial work with the US government. New York's basketball team won the NBA championship for the first time in over 50 years after beating the Spurs in Texas. After more than a century of sharing the main entrance, Canadians were barred from using the library's US-side.",
-  "thai_text": "ผู้ก่อตั้ง SpaceX Elon Musk บอกว่าเขาให้บริษัท \"โดยไม่มีโอกาส 10% ที่จะสําเร็จ\" เมื่อมันเริ่มต้นและตอนนี้จะไปสาธารณะ \"กับ IPO ใหญ่ที่สุดที่เคย\". มุสก์ทําให้คําปราศรัยจากสํานักงานใหญ่ของ บริษัท ในภาคใต้ของเท็กซัส ก่อนที่จะเริ่มการซื้อขายอย่างเป็นทางการ เจ้า หน้าที่ ของ บริษัท ฉลอง การ เริ่ม การ ค้า ขาย ใน พิธี คู่ ณ สํานักงาน ใหญ่ ใน นคร นิวยอร์ก และ. จากสํานักงานใหญ่เท็กซัส วิดีโอ ที่ ถ่าย โดย บีบี ซี แสดง ให้ เห็น ผู้ คน หลาย สิบ คน เดิน ออก ไป บ้าง ก็ ถือ ป้าย แสดง ความ ห่วงใย. บริษัทกําลังโต้แย้งกับรัฐบาลสหรัฐ ทีมบาสเก็ตบอลของนิวยอร์กได้แชมป์เอ็นบีเอเป็นครั้งแรกในรอบ 50 กว่าปี หลังจากเอาชนะทีมสเปอร์ในเท็กซัส หลังจากมากกว่าศตวรรษของการแบ่งปันทางเข้าหลัก ชาวแคนาดาถูกปิดกั้นจากการใช้ห้องสมุดของสหรัฐอเมริกา.",
+  "thai_text": "ข่าวนี้มาจาก BBC News อยู่ในหมวดวิทยาศาสตร์ และถูกเรียบเรียงเป็นระดับ B1. หัวข้อข่าวคือ “Elon Musk gets public trading of SpaceX under way from Texas”. โดยรวมแล้ว ข่าวนี้พูดถึงการค้นพบ งานวิจัย หรือข้อมูลทางวิทยาศาสตร์ ผู้อ่านควรจับใจความว่าเกิดอะไรขึ้น ใครได้รับผลกระทบ และเรื่องนี้อาจเปลี่ยนสถานการณ์ต่อไปอย่างไร. ตัวเลขที่ควรสังเกตในข่าวนี้คือ 10, 50 years. คำสำคัญที่ควรรู้: barred = คำว่า barred / basketball = คำว่า basketball / bbc = คำว่า bbc / beating = คำว่า beating / began = คำว่า began.",
   "word_translations": {
     "a": "คือ",
     "about": "เกี่ยวกับ",
@@ -219,6 +219,6 @@
     "credit": "BBC News",
     "credit_url": "https://www.bbc.com/news/videos/cn0v8vg9d8xo?at_medium=RSS&at_campaign=rss"
   },
-  "audio_cache_path": "data/audio/2026-06-15/e78cdedcccf6219932-b1.mp3",
-  "generated_at": "2026-06-18T05:11:00.773672+00:00"
+  "audio_cache_path": "data/audio/2026-06-15/e78cdedcccf6219932-b1.wav",
+  "generated_at": "2026-06-18T05:46:30.980243+00:00"
 }

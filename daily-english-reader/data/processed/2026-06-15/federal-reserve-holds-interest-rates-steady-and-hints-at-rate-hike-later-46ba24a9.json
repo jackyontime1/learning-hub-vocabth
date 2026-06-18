@@ -1,12 +1,12 @@
 {
-  "schema_version": 4,
+  "schema_version": 5,
   "id": "46ba24a9cf8259fd79",
   "slug": "federal-reserve-holds-interest-rates-steady-and-hints-at-rate-hike-later-46ba24a9",
   "level": "A2",
   "title": "Federal Reserve holds interest rates steady and hints at rate hike later this year",
   "description": "The Federal Reserve left its benchmark interest rates unchanged Wednesday, and signaled its next move could be a rate increase. It's the first rate decision under the new Fed chairman, Kevin Warsh.",
   "text": "Kevin Warsh chaired his first meeting of the Federal Reserve's interest-rate setting committee this week. With inflation at a three-year high, the committee left its benchmark rate unchanged. Aaron Schwartz/AFP With inflation at its highest level in more than three. Years, the Federal Reserve held its benchmark interest rate steady Wednesday, and. Signaled its next move could be a rate increase. It was the first rate decision under the leadership of the new Fed chairman, Kevin Warsh. President Trump nominated Warsh to lead the central bank in hopes he. Would push for lower interest rates.",
-  "thai_text": "เควิน วอร์ช เป็นประธานประชุมครั้งแรก ของคณะกรรมการจัดการทรัพย์สินของรัฐบาลกลาง ด้วยอัตราเงินเฟ้อที่สูงมากสามปี คณะกรรมการทิ้งอัตราการเปลี่ยนสัดส่วนของม้านั่ง Aaron Schwartz/AFP ด้วยอัตราเงินเฟ้อที่สูงที่สุดในสาม หลายปี กรมอนุรักษ์ของรัฐบาลกลาง มีอัตราดอกเบี้ยคงที่วันพุธ และ ส่งสัญญาณการเคลื่อนไหวต่อไป อาจเพิ่มอัตรา เป็น การ ตัดสิน ใจ ครั้ง แรก ภาย ใต้ การ นํา ของ ประธาน คน ใหม่ คือ เควิน วอร์ช. ประธานาธิบดีทรัมเสนอชื่อ วอร์ช เพื่อนําธนาคารกลาง หวังว่าเขา จะผลักดันสําหรับอัตราดอกเบี้ยที่ต่ํากว่า.",
+  "thai_text": "ข่าวนี้มาจาก NPR อยู่ในหมวดธุรกิจและเศรษฐกิจ และถูกเรียบเรียงเป็นระดับ A2. หัวข้อข่าวคือ “Federal Reserve holds interest rates steady and hints at rate hike later this year”. โดยรวมแล้ว ข่าวนี้พูดถึงความเคลื่อนไหวด้านธุรกิจ เศรษฐกิจ หรือการจ้างงาน ผู้อ่านควรจับใจความว่าเกิดอะไรขึ้น ใครได้รับผลกระทบ และเรื่องนี้อาจเปลี่ยนสถานการณ์ต่อไปอย่างไร. คำสำคัญที่ควรรู้: aaron = คำว่า aaron / afp = คำว่า afp / bank = ธนาคาร / benchmark = คำว่า benchmark / central = คำว่า central.",
   "word_translations": {
     "a": "คือ",
     "aaron": "แอรอน",
@@ -163,6 +163,6 @@
     "credit": "Local fallback",
     "credit_url": ""
   },
-  "audio_cache_path": "data/audio/2026-06-15/46ba24a9cf8259fd79-a2.mp3",
-  "generated_at": "2026-06-18T05:10:43.057141+00:00"
+  "audio_cache_path": "data/audio/2026-06-15/46ba24a9cf8259fd79-a2.wav",
+  "generated_at": "2026-06-18T05:46:30.680032+00:00"
 }

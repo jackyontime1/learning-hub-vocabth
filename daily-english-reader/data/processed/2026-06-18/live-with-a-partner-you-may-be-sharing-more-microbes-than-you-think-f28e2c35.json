@@ -1,12 +1,12 @@
 {
-  "schema_version": 4,
+  "schema_version": 5,
   "id": "f28e2c35d5fecc9bb3",
   "slug": "live-with-a-partner-you-may-be-sharing-more-microbes-than-you-think-f28e2c35",
   "level": "A1",
   "title": "Live with a partner? You may be sharing more microbes than you think",
   "description": "A large study finds you may share about a quarter of your oral and gut microbes with the people you live with. Should you worry? We asked the experts.",
   "text": "A lot changes when you move in with. Your partner. when you go to bed, what. You eat for breakfast, and. Possibly your microbiome. the mishmash of bacteria that live in and. On you. A study published this week in Cell Press. Blue finds that cohabitating romantic partners share about. 44% of their oral microbiome and 19% of their gut microbiome. First author and computational biologist Vitor Heidrich of.",
-  "thai_text": "มีหลายอย่างเปลี่ยนไปเมื่อคุณย้ายมาอยู่ด้วย คู่หูของคุณ เมื่อคุณไปนอน อะไร คุณกินเป็นอาหารเช้า อาจจะเป็นไมโครไบอมของคุณ เชื้อ แบคทีเรีย ที่ อยู่ ใน และ ใน. กับคุณ การศึกษาที่ตีพิมพ์ในเซลส์เพรสในสัปดาห์นี้ สีน้ําเงินพบว่าการคบชู้ของคู่รัก 44% ของไมโครไบอมปาก และ 19% ของไส้พุงของพวกเขา นักเขียนและนักคณิตศาสตร์คนแรก วิตอร์ ไฮดริชแห่ง ค.ศ.",
+  "thai_text": "ข่าวนี้มาจาก NPR อยู่ในหมวดสุขภาพ และถูกเรียบเรียงเป็นระดับ A1. หัวข้อข่าวคือ “Live with a partner? You may be sharing more microbes than you think”. โดยรวมแล้ว ข่าวนี้พูดถึงประเด็นด้านสุขภาพ การแพทย์ หรือคุณภาพชีวิต ผู้อ่านควรจับใจความว่าเกิดอะไรขึ้น ใครได้รับผลกระทบ และเรื่องนี้อาจเปลี่ยนสถานการณ์ต่อไปอย่างไร. ตัวเลขที่ควรสังเกตในข่าวนี้คือ 44, 19. คำสำคัญที่ควรรู้: asked = ถาม / author = คำว่า author / bacteria = คำว่า bacteria / bed = คำว่า bed / biologist = คำว่า biologist.",
   "word_translations": {
     "a": "คือ",
     "about": "เกี่ยวกับ",
@@ -121,6 +121,6 @@
     "credit": "Local fallback",
     "credit_url": ""
   },
-  "audio_cache_path": "data/audio/2026-06-18/f28e2c35d5fecc9bb3-a1.mp3",
-  "generated_at": "2026-06-18T05:05:57.242875+00:00"
+  "audio_cache_path": "data/audio/2026-06-18/f28e2c35d5fecc9bb3-a1.wav",
+  "generated_at": "2026-06-18T05:46:25.066833+00:00"
 }

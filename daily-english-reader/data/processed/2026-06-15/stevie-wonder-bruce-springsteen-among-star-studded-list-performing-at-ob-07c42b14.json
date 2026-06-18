@@ -1,12 +1,12 @@
 {
-  "schema_version": 4,
+  "schema_version": 5,
   "id": "07c42b14becd6ab626",
   "slug": "stevie-wonder-bruce-springsteen-among-star-studded-list-performing-at-ob-07c42b14",
   "level": "B2",
   "title": "Stevie Wonder, Bruce Springsteen among star-studded list performing at Obama centre's opening",
   "description": "Christina Aguilera, Stevie Wonder, Jennifer Hudson, John Legend, U2's Bono and the Edge, Eddie Vedder and Bruce Springsteen are among the musicians scheduled to take the stage celebrating the opening of the Obama Presidential Center’s Grand Opening Ceremony in Chicago's South Side.",
   "text": "Former U.S. president Barack Obama has organized a phalanx of superstars to perform at the grand opening of his new cultural centre. Christina Aguilera, Stevie Wonder, Jennifer Hudson, John Legend, U2's Bono and the Edge, Eddie Vedder and Bruce Springsteen are among the musicians scheduled to take the stage celebrating the opening of the Obama Presidential Center’s grand opening ceremony in Chicago's South Side. The livestreamed grand opening for the centre — housing a museum, library, and athletic arena including an NBA-regulation court — is scheduled for June 18 at noon ET, one day before it opens to the public on the U.S. federal holiday of Juneteenth. U.S. President Donald Trump, however, will likely be absent. Earlier this year he dubbed the centre \"Obama's badly delayed, and tremendously over-budget, 'library.'\" Much of Trump's focus this summer has instead been on the administration's broader Freedom 250 programming, meant to commemorate the country's 250th birthday. It included a White House-hosted Freedom 250 UFC event on Trump's 80th birthday Sunday.",
-  "thai_text": "อดีตประธานาธิบดีสหรัฐอเมริกา บารัค โอบามา ได้จัดตั้งกลุ่มดาวเด่นขึ้น เพื่อแสดงในงานเปิดศูนย์วัฒนธรรมใหม่ของเขา คริสติน่า อะกูเลเลร่า สตีวี่ วันเดอร์ เจนนิเฟอร์ ฮัดสัน ตํานานของจอห์น อูทูส์ โบโน่ และเอดจ์ เอ็ดดี้ วีดเดอร์ และบรูซ สปริงสทีน เป็นหนึ่งในนักดนตรีที่มีกําหนดขึ้นบนเวที เฉลิม ฉลอง การ เปิด เฉลิม ฉลอง อัน ยิ่ง ใหญ่ สําหรับ ศูนย์ — เป็น ที่ พัก อาศัย ของ พิพิธภัณฑ์, ห้อง สมุด, และ สนาม กีฬา รวม ทั้ง สนาม กีฬา เอ็น บี เอ — มี กําหนด ไว้ สําหรับ วัน ที่ 18 มิถุนายน เวลา เที่ยง วัน วัน หนึ่ง ก่อน ที่ จะ เปิด ให้ สาธารณชน เข้า ชม ใน วัน หยุด พัก กลาง ปี. แต่ประธานาธิบดีสหรัฐอเมริกา โดนัลด์ ทรัมพ์ คงจะไม่อยู่ ก่อนหน้านี้ปีนี้ เขาตั้งชื่อศูนย์ว่า \"โอบามาล่าช้ามาก\" และใช้แรงเกินเหตุว่า \"ไลเบรรี่\" 2561. โฟกัสของทรัมในฤดูร้อนนี้แทนการเข้าชิงแชมป์ไทยไทยที่กว้างถึง 250 รายการ โดยหมายถึงการระลึกถึงวันเกิดครบ 250 ปีของประเทศ พ.ศ. 2550 มีเหตุการณ์ในวันเกิดครบรอบ 80 ปีของทรัมส์ พ.ศ.",
+  "thai_text": "ข่าวนี้มาจาก CBC News อยู่ในหมวดข่าวต่างประเทศ และถูกเรียบเรียงเป็นระดับ B2. หัวข้อข่าวคือ “Stevie Wonder, Bruce Springsteen among star-studded list performing at Obama centre's opening”. โดยรวมแล้ว ข่าวนี้พูดถึงเหตุการณ์สำคัญในต่างประเทศและผลกระทบที่ตามมา ผู้อ่านควรจับใจความว่าเกิดอะไรขึ้น ใครได้รับผลกระทบ และเรื่องนี้อาจเปลี่ยนสถานการณ์ต่อไปอย่างไร. ตัวเลขที่ควรสังเกตในข่าวนี้คือ 18, 250, 250. คำสำคัญที่ควรรู้: absent = คำว่า absent / administration's = คำว่า administration's / aguilera = คำว่า aguilera / among = คำว่า among / arena = คำว่า arena.",
   "word_translations": {
     "a": "คือ",
     "absent": "ไม่มี",
@@ -249,6 +249,6 @@
     "credit": "Local fallback",
     "credit_url": ""
   },
-  "audio_cache_path": "data/audio/2026-06-15/07c42b14becd6ab626-b2.mp3",
-  "generated_at": "2026-06-18T05:11:31.069002+00:00"
+  "audio_cache_path": "data/audio/2026-06-15/07c42b14becd6ab626-b2.wav",
+  "generated_at": "2026-06-18T05:46:31.239683+00:00"
 }

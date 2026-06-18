@@ -1,12 +1,12 @@
 {
-  "schema_version": 4,
+  "schema_version": 5,
   "id": "693be4863ea87cad7b",
   "slug": "ai-will-create-more-jobs-for-humans-not-replace-them-amazon-founder-bezo-693be486",
   "level": "A1",
   "title": "AI will create more jobs for humans, not replace them, Amazon founder Bezos says",
   "description": "The Amazon founder, who now has robotics and space travel companies, thinks AI will create a labour shortage.",
   "text": "AI will lead to more need for workers. Rather than make people redundant, Amazon founder Jeff. Bezos predicted during an appearance at a tech conference in Paris. Bezos pushed back against growing concerns that AI. Will replace large numbers of workers. Instead he argued that the tech will unlock new opportunities and. Increase demand for human labour. This is in contradiction to some other tech and.",
-  "thai_text": "AI จะนําไปสู่ความต้องการแรงงานมากขึ้น แทนที่จะทําให้คนซ้ําเติม เจฟผู้ก่อตั้งอเมซอน เบโซส์ทํานายระหว่างการปรากฏตัว ในการประชุมเทคโนโลยีที่ปารีส บีโซสผลักกลับไปต่อต้าน ความกังวลที่ AI เพิ่มขึ้น จะแทนที่คนงานจํานวนมาก แทน ที่ จะ เป็น เช่น นั้น เขา แย้ง ว่า เทคโนโลยี จะ ไข กุญแจ ไข โอกาส ใหม่ ๆ และ. เพิ่มความต้องการแรงงานมนุษย์ นี่มันขัดกับเทคโนโลยีอื่น.",
+  "thai_text": "ข่าวนี้มาจาก BBC News อยู่ในหมวดข่าวต่างประเทศ และถูกเรียบเรียงเป็นระดับ A1. หัวข้อข่าวคือ “AI will create more jobs for humans, not replace them, Amazon founder Bezos says”. โดยรวมแล้ว ข่าวนี้พูดถึงเหตุการณ์สำคัญในต่างประเทศและผลกระทบที่ตามมา ผู้อ่านควรจับใจความว่าเกิดอะไรขึ้น ใครได้รับผลกระทบ และเรื่องนี้อาจเปลี่ยนสถานการณ์ต่อไปอย่างไร. คำสำคัญที่ควรรู้: ai = ปัญญาประดิษฐ์ / amazon = คำว่า amazon / appearance = คำว่า appearance / argued = คำว่า argued / back = คำว่า back.",
   "word_translations": {
     "a": "คือ",
     "against": "กับ",
@@ -131,6 +131,6 @@
     "credit": "BBC News",
     "credit_url": "https://www.bbc.com/news/articles/ceqdrw2yy3vo?at_medium=RSS&at_campaign=rss"
   },
-  "audio_cache_path": "data/audio/2026-06-15/693be4863ea87cad7b-a1.mp3",
-  "generated_at": "2026-06-18T05:10:30.002174+00:00"
+  "audio_cache_path": "data/audio/2026-06-15/693be4863ea87cad7b-a1.wav",
+  "generated_at": "2026-06-18T05:46:30.431825+00:00"
 }

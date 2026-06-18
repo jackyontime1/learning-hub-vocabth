@@ -1,12 +1,12 @@
 {
-  "schema_version": 4,
+  "schema_version": 5,
   "id": "9888062066f1ddd487",
   "slug": "competition-bureau-to-examine-canada-s-food-supply-chain-98880620",
   "level": "A1",
   "title": "Competition Bureau to examine Canada's food supply chain",
   "description": "The Competition Bureau is looking to investigate how competition along the food supply chain affects grocery prices for Canadian consumers.",
   "text": "The Competition Bureau is looking to investigate how. Competition along the food supply chain affects grocery prices for Canadian consumers. The bureau says it will look for potential. Issues in three key areas. production and processing, transportation and. Distribution, and retail pricing practices. It says the examination is a broad approach. To understanding where the bureau is needed and. Actions policy-makers can take to improve affordability.",
-  "thai_text": "สํานักงานคู่แข่งกําลังสืบสวนอยู่ การ แข่งขัน กัน ตาม ลูก โซ่ ที่ ให้ อาหาร มี ผล ต่อ ราคา ของ ผู้ บริโภค ชาว แคนาดา. ทางสํานักงานบอกว่า มันจะมองหาศักยภาพ ประเด็นในสามประเด็นหลัก ผลิตและประมวลผล การขนส่ง และ การกระจายสินค้า และวิธีการขายปลีก มันบอกว่าการตรวจสอบเป็นวิธีกว้าง เพื่อทําความเข้าใจว่าหน่วยงานนั้นอยู่ที่ไหน ผู้สร้างนโยบายการกระทํา ทำได้ปรับปรุงความเสมอภาคได้.",
+  "thai_text": "ข่าวนี้มาจาก CBC News อยู่ในหมวดธุรกิจและเศรษฐกิจ และถูกเรียบเรียงเป็นระดับ A1. หัวข้อข่าวคือ “Competition Bureau to examine Canada's food supply chain”. โดยรวมแล้ว ข่าวนี้พูดถึงความเคลื่อนไหวด้านธุรกิจ เศรษฐกิจ หรือการจ้างงาน ผู้อ่านควรจับใจความว่าเกิดอะไรขึ้น ใครได้รับผลกระทบ และเรื่องนี้อาจเปลี่ยนสถานการณ์ต่อไปอย่างไร. คำสำคัญที่ควรรู้: actions = คำว่า actions / affects = คำว่า affects / affordability = เรื่อง/ภาวะของ affordability / along = คำว่า along / approach = คำว่า approach.",
   "word_translations": {
     "a": "คือ",
     "actions": "การกระทํา",
@@ -121,6 +121,6 @@
     "credit": "Local fallback",
     "credit_url": ""
   },
-  "audio_cache_path": "data/audio/2026-06-12/9888062066f1ddd487-a1.mp3",
-  "generated_at": "2026-06-18T05:15:21.456635+00:00"
+  "audio_cache_path": "data/audio/2026-06-12/9888062066f1ddd487-a1.wav",
+  "generated_at": "2026-06-18T05:46:34.585195+00:00"
 }

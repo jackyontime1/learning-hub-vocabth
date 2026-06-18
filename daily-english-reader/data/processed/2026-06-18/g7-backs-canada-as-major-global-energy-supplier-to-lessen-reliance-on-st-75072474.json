@@ -1,12 +1,12 @@
 {
-  "schema_version": 4,
+  "schema_version": 5,
   "id": "750724740b3503cdfd",
   "slug": "g7-backs-canada-as-major-global-energy-supplier-to-lessen-reliance-on-st-75072474",
   "level": "C1",
   "title": "G7 backs Canada as major global energy supplier to lessen reliance on Strait of Hormuz",
   "description": "Canada is poised to become a key and reliable supplier of energy to the G7 after leaders meeting in France embraced this country's potential to deliver \"significant additional capacity\" to global markets to reduce dependence on oil and gas coming through the Strait of Hormuz.",
   "text": "Canada is poised to become a key and reliable supplier of energy to the G7 after leaders meeting in France embraced this country's potential to deliver \"significant additional capacity\" to global markets to reduce dependence on oil and gas coming through the Strait of Hormuz. \"We commit to accelerate the diversification of energy supply routes in order to reduce global vulnerability to the Strait of Hormuz and to increase our energy stocks,\" said a joint statement by G7 leaders in Évian-les-Bains, France, on Wednesday. \"We welcome the potential for Canada to deliver significant additional capacity to global markets in the coming years.\" Prime Minister Mark Carney also announced new partnerships on critical minerals that his office said \"will unlock more than $5 billion in capital investment for projects across the Canadian critical minerals value chain.\" Canada can provide 'substantial' energy capacity to global partners amid uncertainty, Carney says In his closing news conference, Carney said it's critical for the global economy to diversify its energy supply routes away from the choke point at the Strait of Hormuz. Iranian attacks on ships carrying energy through the Strait of Hormuz essentially closed the access point to the Persian Gulf, halting most shipments of oil and driving up global energy prices. Carney said that Canada is already \"on the path\" to increasing its energy production, with several major liquefied natural gas projects underway.",
-  "thai_text": "แคนาดาได้เตรียมพร้อมที่จะ เป็นกุญแจสําคัญและน่าเชื่อถือ จัดหาพลังงานให้กับ G7 หลังจากที่ผู้นําพบในฝรั่งเศส รับศักยภาพของประเทศนี้ \"เรามุ่งมั่นที่จะเร่งความผันผวนของเส้นทางการจัดหาพลังงาน เพื่อลดความเปราะบางของโลก ไปยังช่องแคบของฮอร์มุซ และเพิ่มปริมาณพลังงานของเราขึ้น\" คําแถลงร่วมของผู้นํา G7 ในอีวี-เลสบานส์ ประเทศฝรั่งเศส วันพุธ ค.ศ. \"เรายินดีต้อนรับศักยภาพของแคนาดา เพื่อมอบความทำได้ที่สําคัญต่อตลาดโลก ในปีต่อมา\" นายกรัฐมนตรีมาร์ค คาร์นีย์ยังได้ประกาศความร่วมมือใหม่ เรื่องแร่ธาตุที่สําคัญ ที่สํานักงานของเขาบอกว่า \"จะปลดล็อค แคนาดาทำได้ให้ 'ความจุพลังงาน' แก่หุ้นส่วนระดับโลก ท่ามกลางความไม่แน่นอน คาร์นีย์บอกว่า ในการประชุมข่าวสุดท้ายของเขา คาร์นีย์บอกว่า มันสําคัญสําหรับเศรษฐกิจโลก ที่จะเปลี่ยนเส้นทางการจัดหาพลังงาน การจู่โจมของอิหร่านกับเรือบรรทุกพลังงานผ่านช่องแคบฮอร์มุซ โดยหลักแล้วเป็นการปิดทางเข้าอ่าวเปอร์เซีย คาร์นีย์บอกว่าแคนาดาได้ \"อยู่บนเส้นทาง\" แล้วเพื่อเพิ่มการผลิตพลังงาน โดยมีโครงการก๊าซธรรมชาติหลาย ๆ โครงการ.",
+  "thai_text": "ข่าวนี้มาจาก CBC News อยู่ในหมวดข่าวต่างประเทศ และถูกเรียบเรียงเป็นระดับ C1. หัวข้อข่าวคือ “G7 backs Canada as major global energy supplier to lessen reliance on Strait of Hormuz”. โดยรวมแล้ว ข่าวนี้พูดถึงเหตุการณ์สำคัญในต่างประเทศและผลกระทบที่ตามมา ผู้อ่านควรจับใจความว่าเกิดอะไรขึ้น ใครได้รับผลกระทบ และเรื่องนี้อาจเปลี่ยนสถานการณ์ต่อไปอย่างไร. ตัวเลขที่ควรสังเกตในข่าวนี้คือ 5 billion. คำสำคัญที่ควรรู้: accelerate = คำว่า accelerate / access = เข้าถึง / across = คำว่า across / additional = คำว่า additional / already = คำว่า already.",
   "word_translations": {
     "a": "คือ",
     "accelerate": "ความเร็ว",
@@ -275,6 +275,6 @@
     "credit": "Local fallback",
     "credit_url": ""
   },
-  "audio_cache_path": "data/audio/2026-06-18/750724740b3503cdfd-c1.mp3",
-  "generated_at": "2026-06-18T05:07:11.097765+00:00"
+  "audio_cache_path": "data/audio/2026-06-18/750724740b3503cdfd-c1.wav",
+  "generated_at": "2026-06-18T05:46:26.808728+00:00"
 }

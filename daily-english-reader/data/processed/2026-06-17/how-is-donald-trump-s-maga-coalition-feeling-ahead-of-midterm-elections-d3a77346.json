@@ -1,12 +1,12 @@
 {
-  "schema_version": 4,
+  "schema_version": 5,
   "id": "d3a773461cc9bcb1df",
   "slug": "how-is-donald-trump-s-maga-coalition-feeling-ahead-of-midterm-elections-d3a77346",
   "level": "C1",
   "title": "How is Donald Trump's MAGA coalition feeling ahead of midterm elections?",
   "description": "Ahead of the midterm elections in November, some of U.S. President Donald Trump's MAGA base is turning away. Some are citing the war in Iran, while others are growing frustrated with the cost of living in the United States.",
   "text": "Ahead of the midterm elections in November, some of U.S. President Donald Trump's MAGA base is turning away. This includes key groups, such as conservative voters at Turning Point USA Women’s Leadership Summit. Washington correspondents Katie Simpson, Willy Lowry and Louis Blouin ask: How are those groups feeling about the Republican Party after months of war and high gas prices? Louis Blouin: The impact on the wallet, it's going to be felt at the pump for months, and like there's some experts saying these days, before the output of oil comes back to regular levels, it is going to take months. It might even wait until 2027, and economy and prices and cost of living is still the priority to a lot of Americans, the national polls show it too. And I'm not sure when you're president like that — especially when traditionally, presidents that are in power don't do well in the midterms — then you add that layer, yeah, we'll see how it plays with independent voters. It's the independents that will sway the [midterms] so I think it's a non-negligible impact if you consider, even if we're months away, because it's still going to be felt. And people know how much it costs them to fill their car.",
-  "thai_text": "ก่อนหน้าการเลือกตั้งกลางภาค ในปี พ.ศ. ทั้ง นี้ รวม ถึง กลุ่ม หลัก ๆ เช่น ผู้ ลง คะแนน เสียง แบบ อนุรักษ์ นิยม ณ การ ประชุม สุด ยอด ผู้ นํา ผู้ หญิง ใน สหรัฐ. ผู้สื่อข่าววอชิงตัน เคที่ ซิมป์สัน วิลลี่ โลว์รี และหลุยส์ บลอริน ถามว่า กลุ่มเหล่านี้รู้สึกอย่างไรกับพรรครีพับลิกัน หลังจากเดือนของสงคราม และราคาแก๊สสูง Louis Buloin: ผลกระทบต่อกระเป๋าสตางค์ จะรู้สึกได้ที่ปั๊มเป็นเวลาหลายเดือน มันอาจจะรอจนถึงปี 2027 และเศรษฐกิจและราคาและค่าใช้จ่ายในการดํารงชีพ ยังคงมีความสําคัญต่อชาวอเมริกันจํานวนมาก ผลสํารวจแห่งชาติก็แสดงให้เห็นด้วยเช่นกัน และผมไม่แน่ใจว่าเมื่อไหร่คุณจะเป็นประธานาธิบดีแบบนั้น โดยเฉพาะเมื่อปกติแล้วประธานาธิบดีที่มีอํานาจไม่ดีในการสอบกลางภาค มันเป็นภาคอิสระที่แกว่งไปแกว่งมา [ระยะต่าง ๆ] ฉันคิดว่ามันเป็นผลกระทบที่ไม่อาจหลีกเลี่ยงได้ และผู้คนก็รู้ว่า พวกเขาต้องจ่ายไปเท่าไหร่ ในการเติมรถ.",
+  "thai_text": "ข่าวนี้มาจาก CBC News อยู่ในหมวดข่าวต่างประเทศ และถูกเรียบเรียงเป็นระดับ C1. หัวข้อข่าวคือ “How is Donald Trump's MAGA coalition feeling ahead of midterm elections?”. โดยรวมแล้ว ข่าวนี้พูดถึงเหตุการณ์สำคัญในต่างประเทศและผลกระทบที่ตามมา ผู้อ่านควรจับใจความว่าเกิดอะไรขึ้น ใครได้รับผลกระทบ และเรื่องนี้อาจเปลี่ยนสถานการณ์ต่อไปอย่างไร. ตัวเลขที่ควรสังเกตในข่าวนี้คือ 2027. คำสำคัญที่ควรรู้: add = เพิ่ม / ahead = คำว่า ahead / americans = คำว่า americans / ask = ถาม / away = คำว่า away.",
   "word_translations": {
     "a": "คือ",
     "about": "เกี่ยวกับ",
@@ -301,6 +301,6 @@
     "credit": "Local fallback",
     "credit_url": ""
   },
-  "audio_cache_path": "data/audio/2026-06-17/d3a773461cc9bcb1df-c1.mp3",
-  "generated_at": "2026-06-18T05:08:48.467238+00:00"
+  "audio_cache_path": "data/audio/2026-06-17/d3a773461cc9bcb1df-c1.wav",
+  "generated_at": "2026-06-18T05:46:28.321636+00:00"
 }

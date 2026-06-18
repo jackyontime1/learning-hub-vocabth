@@ -1,12 +1,12 @@
 {
-  "schema_version": 4,
+  "schema_version": 5,
   "id": "5f701cf87bcc55f54f",
   "slug": "anthropic-says-it-has-taken-its-latest-ai-models-offline-to-comply-with-5f701cf8",
   "level": "B2",
   "title": "Anthropic says it has taken its latest AI models offline to comply with U.S. directive",
   "description": "AI giant Anthropic said on Friday it has taken its latest artificial intelligence models, known as Fable 5 and Mythos 5, offline to comply with a directive from the Trump administration to prevent their use by foreign nationals.",
   "text": "AI giant Anthropic said on Friday it has taken its latest artificial intelligence models, known as Fable 5 and Mythos 5, offline to comply with a directive from the Trump administration to prevent their use by foreign nationals. The export controls mark the U.S. government's most significant step to date to restrict access to the most advanced AI models. That model is a limited version of the even more advanced Mythos, to which the company has tightly limited access due to cybersecurity fears. In a statement, Anthropic said it disagrees with the government's handling of the matter, saying it received the directive from the U.S. administration on Friday afternoon and that it did not specify the national security concerns. \"This action does not adhere to those principles.\" Anthropic called it a \"misunderstanding\" and said it hopes to restore access to the models \"as soon as possible.\" The Commerce Department did not immediately respond to a request for comment. The action comes 10 days after U.S.",
-  "thai_text": "AI ยักษ์แอนโทรปิก บอกว่าในวันศุกร์ มันได้นํารุ่นปัญญาประดิษฐ์ล่าสุดของ รู้จักกันในชื่อ Fable 5 และ Mythos 5, ตัดต่อด้วยคําสั่งจากคณะบริหารทรัม เพื่อป้องกันการใช้งานของพวกเขาโดยชาวต่างประเทศ เครื่องควบคุมการส่งออก ทําเครื่องหมายขั้นตอนที่สําคัญที่สุดของรัฐบาลสหรัฐฯ จนถึงปัจจุบัน เพื่อจํากัดการเข้าถึง โมเดลนี้เป็นรุ่นที่จํากัด ของ Mythos ที่ก้าวหน้ากว่า ซึ่งบริษัทมีการเข้าถึงอย่างแน่นหนา อานโทรปิกบอกว่ามันไม่เห็นด้วยกับการจัดการของรัฐบาลของ เรื่องที่บอกว่ามันได้รับคําสั่งจากสํานักงานบริหารของสหรัฐในช่วงบ่ายวันศุกร์และที่ไม่ได้ระบุความกังวลความมั่นคงแห่งชาติ การกระทํานี้ไม่สอดคล้องกับหลักการเหล่านั้น อานโทรปิกเรียกมันว่า \"ความเข้าใจผิด\" และบอกว่ามันหวังที่จะเรียกคืนการเข้าถึงแบบจําลอง \"เร็วที่สุดเท่าที่เป็นไปได้\". แผนก การ ค้า ไม่ ได้ ตอบ สนอง ทันที ต่อ คํา ขอ ให้ ออก ความ เห็น. การกระทํามา 10 วันหลังจาก ค.ศ.",
+  "thai_text": "ข่าวนี้มาจาก CBC News อยู่ในหมวดธุรกิจและเศรษฐกิจ และถูกเรียบเรียงเป็นระดับ B2. หัวข้อข่าวคือ “Anthropic says it has taken its latest AI models offline to comply with U.S. directive”. โดยรวมแล้ว ข่าวนี้พูดถึงความเคลื่อนไหวด้านธุรกิจ เศรษฐกิจ หรือการจ้างงาน ผู้อ่านควรจับใจความว่าเกิดอะไรขึ้น ใครได้รับผลกระทบ และเรื่องนี้อาจเปลี่ยนสถานการณ์ต่อไปอย่างไร. ตัวเลขที่ควรสังเกตในข่าวนี้คือ 5, 5, 10 days. คำสำคัญที่ควรรู้: access = เข้าถึง / action = เรื่อง/ภาวะของ action / adhere = คำว่า adhere / administration = เรื่อง/ภาวะของ administration / advanced = คำว่า advanced.",
   "word_translations": {
     "a": "คือ",
     "access": "เข้าใช้",
@@ -219,6 +219,6 @@
     "credit": "Local fallback",
     "credit_url": ""
   },
-  "audio_cache_path": "data/audio/2026-06-16/5f701cf87bcc55f54f-b2.mp3",
-  "generated_at": "2026-06-18T05:09:58.417626+00:00"
+  "audio_cache_path": "data/audio/2026-06-16/5f701cf87bcc55f54f-b2.wav",
+  "generated_at": "2026-06-18T05:46:29.981957+00:00"
 }

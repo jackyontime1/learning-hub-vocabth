@@ -1,12 +1,12 @@
 {
-  "schema_version": 4,
+  "schema_version": 5,
   "id": "65d4040187c16bf640",
   "slug": "the-bikers-battling-extreme-heat-and-armed-conflict-to-smuggle-iranian-f-65d40401",
   "level": "A2",
   "title": "The bikers battling extreme heat and armed conflict to smuggle Iranian fuel to Pakistan",
   "description": "It's so hot the fuel can catch fire - the bikers tell the BBC they must live with the risk of injury and death.",
   "text": "The fuel hangs precariously from the sides of his bike, strapped on with rope and string. He bought it at an open-air fuel market in Mastung, in Balochistan, Pakistan's biggest and. Poorest province, where he lives. Pick-up trucks loaded with plastic containers take fuel there to sell, having. Smuggled it across the border from Iran. While the illegal smuggling of petroleum products from Iran into Pakistan has. Been taking place for decades, there are signs it has been increasing. In recent months as a result of the US-Israeli war against Iran. With the war heavily disrupting flows of oil through the Strait of.",
-  "thai_text": "น้ํามัน เชื้อ เพลิง แขวน อยู่ ข้าง จักรยาน ของ เขา อย่าง ไม่ สะทก สะท้าน ผูก ติด กับ เชือก และ เชือก. เขาซื้อมันที่ตลาดน้ํามันเปิดอากาศในมาสต็อง ในบาโลชสถาน ที่ใหญ่ที่สุดและ จังหวัดที่ยากจนที่สุด ที่เขาอาศัยอยู่ รถบรรทุกขนของบรรจุพลาสติก เอาเชื้อเพลิงไปขาย ย้ายมันข้ามพรมแดนจากอิหร่าน ขณะที่การลักลอบนําเข้าสินค้าปิโตรเลียมผิดกฎหมาย จากอิหร่านเข้าไปในปากีสถาน มันเกิดขึ้นมาหลายทศวรรษแล้ว มันมีสัญญาณที่เพิ่มขึ้น ไม่กี่เดือนมานี้เป็นผลจากสงครามของสหรัฐ-อิสราเอลกับอิหร่าน กับสงครามที่รบกวนอย่างหนัก ของกระแสน้ํามันผ่านช่องแคบของ.",
+  "thai_text": "ข่าวนี้มาจาก BBC News อยู่ในหมวดข่าวต่างประเทศ และถูกเรียบเรียงเป็นระดับ A2. หัวข้อข่าวคือ “The bikers battling extreme heat and armed conflict to smuggle Iranian fuel to Pakistan”. โดยรวมแล้ว ข่าวนี้พูดถึงเหตุการณ์สำคัญในต่างประเทศและผลกระทบที่ตามมา ผู้อ่านควรจับใจความว่าเกิดอะไรขึ้น ใครได้รับผลกระทบ และเรื่องนี้อาจเปลี่ยนสถานการณ์ต่อไปอย่างไร. คำสำคัญที่ควรรู้: across = คำว่า across / armed = คำว่า armed / balochistan = คำว่า balochistan / battling = คำว่า battling / bbc = คำว่า bbc.",
   "word_translations": {
     "a": "คือ",
     "across": "ข้าม",
@@ -173,6 +173,6 @@
     "credit": "BBC News",
     "credit_url": "https://www.bbc.com/news/articles/c621jr3yy09o?at_medium=RSS&at_campaign=rss"
   },
-  "audio_cache_path": "data/audio/2026-06-13/65d4040187c16bf640-a2.mp3",
-  "generated_at": "2026-06-18T05:13:56.428528+00:00"
+  "audio_cache_path": "data/audio/2026-06-13/65d4040187c16bf640-a2.wav",
+  "generated_at": "2026-06-18T05:46:33.291306+00:00"
 }

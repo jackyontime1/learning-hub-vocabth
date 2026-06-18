@@ -1,12 +1,12 @@
 {
-  "schema_version": 4,
+  "schema_version": 5,
   "id": "73829b7e771529e592",
   "slug": "new-microplastics-research-examines-river-thames-73829b7e",
   "level": "C1",
   "title": "New microplastics research examines River Thames",
   "description": "Water samples are assessed for pollution levels and any impact climate pressures may be having on the river system.",
   "text": "A new study into microplastic pollution in the River Thames has been launched by researchers at the University of East London (UEL) in an attempt to influence environmental policy and water quality. The samples will be assessed to see how pollution levels are changing and what impact climate pressures may be having on the river system. Some of the highest levels of microplastics for any river in the world have previously been recorded from the Thames. Devereux said: \"The River Thames is one of the most internationally recognised urban rivers in the world, yet we are still learning about the scale and complexity of microplastic pollution within it. \"This project is about providing robust scientific evidence that can support better environmental decision-making and help policymakers understand where interventions may be needed most.\" The research should indicate whether pollution has gone up or down and if the water quality needs to improve. Three litres of surface water will be collected from seven publicly accessible riverside locations along the Thames - Teddington, Westminster, St Katharine Docks, Limehouse, North Woolwich, Tilbury and Southend - before being filtered at a laboratory to capture tiny particles. The filters are then examined under a microscope, where researchers look for suspected microplastics and record their size, colour and shape.",
-  "thai_text": "การ ศึกษา วิจัย ครั้ง ใหม่ ใน เรื่อง มลพิษ จุลินทรีย์ ใน แม่น้ํา เท มส์ ถูก ปล่อย โดย นัก วิจัย ที่ มหาวิทยาลัย อีส ต์ ลอนดอน (ยู เอล) ใน ความ พยายาม จะ ส่ง ผล กระทบ นโยบาย ด้าน สิ่ง แวด ล้อม และ คุณภาพ น้ํา. ตัว อย่าง เหล่า นี้ จะ มี การ ประเมิน เพื่อ ดู ว่า ระดับ มลพิษ กําลัง เปลี่ยน ไป อย่าง ไร และ ความ กดดัน จาก ภูมิ อากาศ อาจ มี ผล กระทบ อย่าง ไร ต่อ ระบบ แม่น้ํา. ก่อน หน้า นี้ เคย มี การ บันทึก เรื่อง แม่น้ํา เท มส์ ไว้ ใน ระดับ ที่ สูง ที่ สุด สําหรับ แม่น้ํา สาย ใด ๆ ใน โลก. Deverux บอกว่า \"แม่น้ําเทมเปสต์เป็นหนึ่งในแม่น้ําในเมืองที่ได้รับการยอมรับจากนานาชาติมากที่สุดในโลก \"โปรเจกต์นี้เกี่ยวกับการให้หลักฐานทางวิทยาศาสตร์อย่างทนทาน ที่ทำได้ส่งเสริมการตัดสินใจด้านสิ่งแวดล้อมที่ดีขึ้น และช่วยสร้างนโยบายที่เข้าใจว่าการแทรกแซงอาจจะจําเป็นมากที่สุด\" การ วิจัย น่า จะ บ่ง ชี้ ว่า มลพิษ ได้ เพิ่ม ขึ้น หรือ ลด ลง และ คุณภาพ ของ น้ํา จําเป็น ต้อง ปรับ ปรุง ไหม. จะ มี การ รวบ รวม น้ํา ขึ้น มา สาม ลิตร จาก เจ็ด แห่ง ที่ ทำได้ หา ได้ ทั่ว ไป ตาม แม่น้ํา เท มส์ - เทดดิง ตัน, เวสต์ มินส เตอร์, เซนต์ แค็ต รีน ท่าเรือ, ไลม์ เฮา ส์, นอร์ท วูล วิช, ทิล เบอร์ รี และ เซา เทิร์น - ก่อน จะ ถูก กรอง ที่ ห้อง ปฏิบัติ การ เพื่อ จับ อนุภาค เล็ก ๆ. จาก นั้น ก็ มี การ ตรวจ สอบ เครื่อง กรอง ด้วย กล้อง จุลทรรศน์ ซึ่ง นัก วิจัย ค้น หา ไมโคร ฟลู ออค และ บันทึก ขนาด, สี, และ รูป ทรง ของ มัน.",
+  "thai_text": "ข่าวนี้มาจาก BBC News อยู่ในหมวดวิทยาศาสตร์ และถูกเรียบเรียงเป็นระดับ C1. หัวข้อข่าวคือ “New microplastics research examines River Thames”. โดยรวมแล้ว ข่าวนี้พูดถึงการค้นพบ งานวิจัย หรือข้อมูลทางวิทยาศาสตร์ ผู้อ่านควรจับใจความว่าเกิดอะไรขึ้น ใครได้รับผลกระทบ และเรื่องนี้อาจเปลี่ยนสถานการณ์ต่อไปอย่างไร. คำสำคัญที่ควรรู้: accessible = คำว่า accessible / along = คำว่า along / assessed = คำว่า assessed / attempt = คำว่า attempt / better = คำว่า better.",
   "word_translations": {
     "a": "คือ",
     "about": "เกี่ยวกับ",
@@ -307,6 +307,6 @@
     "credit": "BBC News",
     "credit_url": "https://www.bbc.com/news/articles/cq81qvdknv3o?at_medium=RSS&at_campaign=rss"
   },
-  "audio_cache_path": "data/audio/2026-06-14/73829b7e771529e592-c1.mp3",
-  "generated_at": "2026-06-18T05:13:23.422234+00:00"
+  "audio_cache_path": "data/audio/2026-06-14/73829b7e771529e592-c1.wav",
+  "generated_at": "2026-06-18T05:46:32.696481+00:00"
 }

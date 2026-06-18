@@ -1,12 +1,12 @@
 {
-  "schema_version": 4,
+  "schema_version": 5,
   "id": "a350fdc2841132f523",
   "slug": "what-is-the-super-new-moon-a350fdc2",
   "level": "A2",
   "title": "What is the super new Moon?",
   "description": "A super new Moon is coming. While you won’t be able to see it, it's still going to have an impact. But, what exactly is it and what does it have to do with the tide?",
   "text": "A super new Moon is coming. While you won’t be able to see it, it's still going to have an impact. But, what exactly is it and what does it have to do with the tide?",
-  "thai_text": "พระจันทร์ใหม่กําลังมาแล้ว ขณะที่คุณมองไม่เห็นมัน มันก็ยังมีผลกระทบอยู่ แต่มันคืออะไรกันแน่ แล้วมันเกี่ยวอะไร กับกระแสน้ํา?",
+  "thai_text": "ข่าวนี้มาจาก BBC News อยู่ในหมวดวิทยาศาสตร์ และถูกเรียบเรียงเป็นระดับ A2. หัวข้อข่าวคือ “What is the super new Moon?”. โดยรวมแล้ว ข่าวนี้พูดถึงการค้นพบ งานวิจัย หรือข้อมูลทางวิทยาศาสตร์ ผู้อ่านควรจับใจความว่าเกิดอะไรขึ้น ใครได้รับผลกระทบ และเรื่องนี้อาจเปลี่ยนสถานการณ์ต่อไปอย่างไร. คำสำคัญที่ควรรู้: able = ทำได้ / coming = คำว่า coming / exactly = อย่างexact / going = คำว่า going / impact = คำว่า impact.",
   "word_translations": {
     "a": "คือ",
     "able": "สามารถ",
@@ -83,6 +83,6 @@
     "credit": "BBC News",
     "credit_url": "https://www.bbc.com/news/videos/cpwe2p4zywwo?at_medium=RSS&at_campaign=rss"
   },
-  "audio_cache_path": "data/audio/2026-06-18/a350fdc2841132f523-a2.mp3",
-  "generated_at": "2026-06-18T05:06:06.060822+00:00"
+  "audio_cache_path": "data/audio/2026-06-18/a350fdc2841132f523-a2.wav",
+  "generated_at": "2026-06-18T05:46:25.662595+00:00"
 }

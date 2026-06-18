@@ -1,6 +1,19 @@
 {
-  "fetched_at": "2026-06-18T05:05:51.001851+00:00",
+  "fetched_at": "2026-06-18T05:46:24.717729+00:00",
   "candidates": [
+    {
+      "id": "a34bbf25e39e975bc5",
+      "provider": "CBC News",
+      "title": "Vancouver bar nearly drank dry by FIFA fans as World Cup brings surge in business to Granville Street",
+      "description": "Vancouver bars are rushing beer and staff to the front line of the World Cup's war on thirst.",
+      "url": "https://www.cbc.ca/news/canada/british-columbia/vancouver-bars-world-cup-9.7238795?cmp=rss",
+      "category": "Canada",
+      "published": "2026-06-17T18:08:09+00:00",
+      "author": "CBC News",
+      "content_type": "rss news summary",
+      "image_url": "",
+      "thai_demo": ""
+    },
     {
       "id": "2b1d3786ec7d78d7a9",
       "provider": "CBC News",
@@ -191,19 +204,6 @@
       "url": "https://www.cbc.ca/sports/soccer/worldcup/fifa-canada-world-cup-richie-laryea-chris-jones-june-17-9.7238999?cmp=rss",
       "category": "Canada",
       "published": "2026-06-17T19:51:37+00:00",
-      "author": "CBC News",
-      "content_type": "rss news summary",
-      "image_url": "",
-      "thai_demo": ""
-    },
-    {
-      "id": "653fb27f187833bae8",
-      "provider": "CBC News",
-      "title": "Yellowknife hockey players say changes to team structure for girls are offside",
-      "description": "The Yellowknife Minor Hockey Association plans an overhaul to its structure, getting rid of female-only development teams, an option for more elite players, in favour of what it's calling a travel team model.",
-      "url": "https://www.cbc.ca/news/canada/north/yellowknife-hockey-players-say-changes-to-team-structure-for-girls-are-offside-9.7238601?cmp=rss",
-      "category": "Canada",
-      "published": "2026-06-17T18:56:10+00:00",
       "author": "CBC News",
       "content_type": "rss news summary",
       "image_url": "",
@@ -1068,19 +1068,6 @@
       "thai_demo": ""
     },
     {
-      "id": "50519b5e0226ee194d",
-      "provider": "BBC News",
-      "title": "Fears dogs to blame for drop in little tern numbers",
-      "description": "It has been the worst year for dogs getting too close to the nesting birds, a wildlife trust says.",
-      "url": "https://www.bbc.com/news/articles/cy73gx8px2eo?at_medium=RSS&at_campaign=rss",
-      "category": "Science",
-      "published": "2026-06-14T15:09:13+00:00",
-      "author": "BBC News",
-      "content_type": "rss news summary",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/69ae/live/4f86db10-6801-11f1-9446-05fff8c055e2.jpg",
-      "thai_demo": ""
-    },
-    {
       "id": "20e99473c39d1ee4be",
       "provider": "BBC News",
       "title": "Elon Musk becomes world's first trillionaire as SpaceX soars in stock market debut",
@@ -1276,10 +1263,10 @@
       "thai_demo": ""
     },
     {
-      "id": "61f58290a3f2d7f275",
+      "id": "bf09ca619eb2ccbcfa",
       "provider": "NPR",
-      "title": "Trump administration releases preliminary agreement with Iran",
-      "description": "The Trump administration shared the details of the preliminary agreement to end the war with Iran on Wednesday, as President Trump took questions at a press conference at the G7 summit.",
+      "title": "Trump signs preliminary agreement with Iran, after releasing details",
+      "description": "The Trump administration shared the details of the preliminary agreement to end the war with Iran on Wednesday. President Trump later said he had signed it, during a dinner with French President Emmanuel Macron.",
       "url": "https://www.npr.org/2026/06/17/nx-s1-5860782/trump-iran-agreement-g7",
       "category": "World",
       "published": "2026-06-17T09:00:00+00:00",

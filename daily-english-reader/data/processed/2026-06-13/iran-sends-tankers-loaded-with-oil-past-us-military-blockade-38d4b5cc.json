@@ -1,12 +1,12 @@
 {
-  "schema_version": 4,
+  "schema_version": 5,
   "id": "38d4b5cc01476e6807",
   "slug": "iran-sends-tankers-loaded-with-oil-past-us-military-blockade-38d4b5cc",
   "level": "C1",
   "title": "Iran sends tankers loaded with oil past US military blockade",
   "description": "Three Iranian tankers loaded with crude oil have passed the US blockade line in the Gulf of Oman, ship-tracking data shows.",
   "text": "Three Iranian tankers loaded with crude oil have passed the US blockade line in the Gulf of Oman, ship-tracking data shows. Despite President Donald Trump announcing on Sunday the \"immediate removal\" of the blockade of Iranian ports, US naval forces later confirmed it would remain in effect until the deal with Iran was signed. \"This a sign that Iran is confident the blockade is over, even if the US has insisted it will be in place until Friday,\" Michelle Wiese Bockman, senior analyst at Windward Maritime Intelligence, told BBC Verify. The three Iran-flagged tankers, Diona, Hero II and Sonia I, are all owned by the National Iranian Tanker Company which has been sanctioned by the US Treasury, as have the ships themselves. Data from MarineTraffic shows Hero II and Sonia I left Iran's Chabahar port on Tuesday, where several other Iranian tankers are currently anchored, and sailed past the US blockade line into the Arabian Sea in the early hours of Wednesday morning. Diona began broadcasting its location just past the US blockade line, which stretches from the eastern tip of Oman to the coast of Iran, yesterday. Maritime intelligence firm Windward says this is the first time any of these Iranian tankers have broadcast their locations since March and, if they make it to their destination, they will be Iran's first oil exports for two months, according to TankerTrackers.com.",
-  "thai_text": "รถถังชาวอิหร่าน 3 ลํา ที่บรรจุน้ํามันดิบ ได้ผ่านแนวปิดกั้นของสหรัฐ ในอ่าวโอมาน ข้อมูลติดตามเรือแสดง แม้ประธานาธิบดีโดนัลด์ ทรัมพ์ จะประกาศในวันอาทิตย์ เรื่อง \"การปลดประจําการอย่างรวดเร็ว\" ของการปิดล้อมท่าเรือของอิหร่าน กองเรือทหารเรือสหรัฐยืนยันในภายหลังว่ามันจะยังคงมีผลอยู่ จนกระทั่งข้อตกลงกับอิหร่านได้รับการลงนาม \"นี่เป็นสัญญาณว่าอิหร่านมั่นใจว่าการปิดล้อมยุติลง แม้ว่าสหรัฐฯจะยืนยันให้ตั้งตําแหน่งจนถึงวันศุกร์\" มิเชลล์ วิคแมน นักวิเคราะห์อาวุโสที่ Windward Martime Agency แจ้งกับบีบีซี รถถังสามคันของอิหร่าน ไดโอน่า เฮโรที่ 2 และซอนย่าที่ 1 เป็นเจ้าของทั้งหมด โดยบริษัทถังน้ํามันแห่งอิหร่านซึ่งได้รับการอนุมัติจากกรมพาณิชย์สหรัฐ ข้อมูลจากบริษัทมาราธอน Traffic แสดง Hero II และ ซอนย่า ผมออกจากท่าเรือชาบาฮาร์ของอิหร่านเมื่อวันอังคาร ที่ซึ่งรถถังชาวอิหร่านอื่น ๆ อีกหลายคนกําลังทอดสมออยู่ ไดโอน่าเริ่มออกอากาศสถานที่ของมัน ผ่านแนวปิดกั้นของสหรัฐ ซึ่งยืดออกจากปลายตะวันออกของโอมาน ไปยังชายฝั่งอิหร่านเมื่อวานนี้ Windwindward บอกว่านี่เป็นครั้งแรก ของรถถังอิหร่านเหล่านี้ได้ออกอากาศสถานที่ของพวกเขา ตั้งแต่เดือนมีนาคมและถ้าพวกเขาทําให้มันไปยังจุดหมายปลายทางของพวกเขา.",
+  "thai_text": "ข่าวนี้มาจาก BBC News อยู่ในหมวดข่าวต่างประเทศ และถูกเรียบเรียงเป็นระดับ C1. หัวข้อข่าวคือ “Iran sends tankers loaded with oil past US military blockade”. โดยรวมแล้ว ข่าวนี้พูดถึงเหตุการณ์สำคัญในต่างประเทศและผลกระทบที่ตามมา ผู้อ่านควรจับใจความว่าเกิดอะไรขึ้น ใครได้รับผลกระทบ และเรื่องนี้อาจเปลี่ยนสถานการณ์ต่อไปอย่างไร. คำสำคัญที่ควรรู้: according = ตามข้อมูลจาก / analyst = คำว่า analyst / anchored = คำว่า anchored / announcing = คำว่า announcing / arabian = คำว่า arabian.",
   "word_translations": {
     "a": "คือ",
     "according": "ตาม",
@@ -311,6 +311,6 @@
     "credit": "BBC News",
     "credit_url": "https://www.bbc.com/news/articles/cpq37yxexd9o?at_medium=RSS&at_campaign=rss"
   },
-  "audio_cache_path": "data/audio/2026-06-13/38d4b5cc01476e6807-c1.mp3",
-  "generated_at": "2026-06-18T05:15:02.328829+00:00"
+  "audio_cache_path": "data/audio/2026-06-13/38d4b5cc01476e6807-c1.wav",
+  "generated_at": "2026-06-18T05:46:34.380919+00:00"
 }

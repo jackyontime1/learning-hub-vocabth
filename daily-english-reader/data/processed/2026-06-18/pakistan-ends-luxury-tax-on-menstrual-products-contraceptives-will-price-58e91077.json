@@ -1,12 +1,12 @@
 {
-  "schema_version": 4,
+  "schema_version": 5,
   "id": "58e91077f2194603d7",
   "slug": "pakistan-ends-luxury-tax-on-menstrual-products-contraceptives-will-price-58e91077",
   "level": "A1",
   "title": "Pakistan ends 'luxury tax' on menstrual products, contraceptives. Will prices drop?",
   "description": "In Pakistan, taxes on menstrual products can add up. Activists have long worked to change this. Now a new budget wipes out the 18% sales tax. But questions remain about the impact on prices.",
   "text": "Menstrual products have been subject to an 18%. Sales tax in Pakistan, prompting protests. Huizeng Hu/Moment RF/ The budget for next fiscal. Year has the sales tax on these products. Dropping from 18% to zero. For decades, sanitary napkins and. Other menstrual items have been taxed as \"luxury goods\" and. The price has put these products out of. Reach for many in Pakistan.",
-  "thai_text": "ผลิตภัณฑ์ทางประสาท มีผลถึง 18% ขายภาษีในปากีสถาน กระตุ้นการประท้วง Hunch Huh/ Moment RF / งบประมาณสําหรับธุรกิจต่อไป ปีมีภาษียอดขายสินค้าเหล่านี้ ลดจาก 18% เหลือศูนย์ เป็นทศวรรษแล้วที่ผ้าเช็ดปากและ รายการประจําเดือนอื่น ๆ ได้รับการเก็บภาษีเป็น \"สินค้าที่ฟุ่มเฟือย\" และ ราคาทําให้ผลิตภัณฑ์เหล่านี้หมด ติดต่อกับหลายคนในปากีสถาน.",
+  "thai_text": "ข่าวนี้มาจาก NPR อยู่ในหมวดสุขภาพ และถูกเรียบเรียงเป็นระดับ A1. หัวข้อข่าวคือ “Pakistan ends 'luxury tax' on menstrual products, contraceptives. Will prices drop?”. โดยรวมแล้ว ข่าวนี้พูดถึงประเด็นด้านสุขภาพ การแพทย์ หรือคุณภาพชีวิต ผู้อ่านควรจับใจความว่าเกิดอะไรขึ้น ใครได้รับผลกระทบ และเรื่องนี้อาจเปลี่ยนสถานการณ์ต่อไปอย่างไร. ตัวเลขที่ควรสังเกตในข่าวนี้คือ 18, 18. คำสำคัญที่ควรรู้: activists = คำว่า activists / add = เพิ่ม / budget = คำว่า budget / change = เปลี่ยน / contraceptives = คำว่า contraceptives.",
   "word_translations": {
     "an": "เป็น",
     "and": "และ",
@@ -113,6 +113,6 @@
     "credit": "Local fallback",
     "credit_url": ""
   },
-  "audio_cache_path": "data/audio/2026-06-18/58e91077f2194603d7-a1.mp3",
-  "generated_at": "2026-06-18T05:06:04.602123+00:00"
+  "audio_cache_path": "data/audio/2026-06-18/58e91077f2194603d7-a1.wav",
+  "generated_at": "2026-06-18T05:46:25.230544+00:00"
 }

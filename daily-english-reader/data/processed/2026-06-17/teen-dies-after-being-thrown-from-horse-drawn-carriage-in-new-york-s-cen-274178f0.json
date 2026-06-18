@@ -1,12 +1,12 @@
 {
-  "schema_version": 4,
+  "schema_version": 5,
   "id": "274178f02c8265007b",
   "slug": "teen-dies-after-being-thrown-from-horse-drawn-carriage-in-new-york-s-cen-274178f0",
   "level": "B1",
   "title": "Teen dies after being thrown from horse-drawn carriage in New York's Central Park",
   "description": "A teenager thrown to the ground Wednesday when a Central Park carriage horse bolted away from its driver has died, according to police.",
   "text": "A teenager thrown to the ground Wednesday when a Central Park carriage horse bolted away from its driver. Has died, according to police. The 18-year-old was riding in the horse-drawn carriage with three other passengers when the accident happened just before. 3 p.m, local time, according to the New York Police Department. A representative for the Transport Workers Union, which represents carriage industry employees, said the driver had dismounted to. Take a photograph of his passengers, which they are not supposed to do. The horse had been in the park for only six weeks, according to Alexander Kemp, the administrative vice. President of the union's local chapter. \"Safety in the park has been a growing concern among many, and improvements are needed to be made. With respect to all vehicles, including e-bicycles, delivery vehicles, pedicabs, and horse-drawn carriages,\" he said in a statement.",
-  "thai_text": "วัย รุ่น คน หนึ่ง โยน ลง ไป บน พื้น ดิน ใน วัน พุธ เมื่อ ม้า ม้า พันธุ์ กลาง วนอุทยาน วิ่ง หนี จาก คน ขับ รถ. เสียชีวิตแล้ว ตามรายงานของตํารวจ เด็กอายุ 18 ขี่ม้ากับผู้โดยสารอีก 3 คน ตอนที่เกิดอุบัติเหตุ 3.00 น. เวลาท้องถิ่น ตามที่กรมตํารวจนิวยอร์กบอก ตัว แทน คน หนึ่ง ของ สหภาพ แรงงาน ขน ส่ง ซึ่ง หมาย ถึง ลูกจ้าง อุตสาหกรรม รถ เข็น บอก ว่า คน ขับ ไม่ ได้ ทํา เช่น นั้น. ถ่ายรูปผู้โดยสารของเขา ซึ่งพวกเขาไม่ควรทํา ม้า ตัว นั้น อยู่ ใน อุทยาน เพียง หก สัปดาห์ ตาม คํา กล่าว ของ อะเล็กซานเดอร์ เคม ป์ รอง ผู้ อํานวย การ. ประธานสหภาพ บทท้องถิ่น \"ความสบายในสวนสาธารณะเป็นความกังวลที่เพิ่มขึ้นในหมู่หลายๆ คน และจําเป็นต้องปรับปรุง ด้วยความเคารพของรถทั้งหมดรวมทั้ง e-จักรยาน, ยานพาหนะจัดส่ง, pidiabs และรถลากม้า\"เขาบอกว่าในคําแถลง.",
+  "thai_text": "ข่าวนี้มาจาก CBC News อยู่ในหมวดข่าวต่างประเทศ และถูกเรียบเรียงเป็นระดับ B1. หัวข้อข่าวคือ “Teen dies after being thrown from horse-drawn carriage in New York's Central Park”. โดยรวมแล้ว ข่าวนี้พูดถึงเหตุการณ์สำคัญในต่างประเทศและผลกระทบที่ตามมา ผู้อ่านควรจับใจความว่าเกิดอะไรขึ้น ใครได้รับผลกระทบ และเรื่องนี้อาจเปลี่ยนสถานการณ์ต่อไปอย่างไร. ตัวเลขที่ควรสังเกตในข่าวนี้คือ 18, 3. คำสำคัญที่ควรรู้: accident = คำว่า accident / according = ตามข้อมูลจาก / administrative = คำว่า administrative / alexander = คำว่า alexander / among = คำว่า among.",
   "word_translations": {
     "a": "คือ",
     "accident": "อุบัติเหตุ",
@@ -209,6 +209,6 @@
     "credit": "Local fallback",
     "credit_url": ""
   },
-  "audio_cache_path": "data/audio/2026-06-17/274178f02c8265007b-b1.mp3",
-  "generated_at": "2026-06-18T05:07:49.850392+00:00"
+  "audio_cache_path": "data/audio/2026-06-17/274178f02c8265007b-b1.wav",
+  "generated_at": "2026-06-18T05:46:27.759764+00:00"
 }

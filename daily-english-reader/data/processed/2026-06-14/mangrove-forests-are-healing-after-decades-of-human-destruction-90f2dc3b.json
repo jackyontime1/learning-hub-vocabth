@@ -1,12 +1,12 @@
 {
-  "schema_version": 4,
+  "schema_version": 5,
   "id": "90f2dc3b442c39980b",
   "slug": "mangrove-forests-are-healing-after-decades-of-human-destruction-90f2dc3b",
   "level": "A1",
   "title": "Mangrove forests are healing after decades of human destruction",
   "description": "Swampy mangrove forests are staging a surprise comeback - which is good news for coastal communities and the climate.",
   "text": "The world's coastal mangrove forests. protect millions of. People from storms - and. Soak up vast amounts of planet-warming gases -. Are staging an unexpected comeback, scientists find. But a new study shows that since 2010. The world has been gaining more mangroves than. It has been losing - driven by stronger legal protections and. Increased public awareness of their importance, sparked by.",
-  "thai_text": "ป่าชายเลนชายฝั่งของโลก ปกป้องเป็นล้าน คนจากพายุ - และ ระดมก๊าซโลกไว้มากมาย การกลับมาอย่างไม่คาดคิด นักวิทยาศาสตร์พบ แต่การศึกษาใหม่แสดงให้เห็นว่าตั้งแต่ปี 2010 โลกได้รับมากขึ้น ป่า ชาย เลน กว่า การ ทํา เช่น นี้ ได้ รับ การ กระตุ้น ให้ สูญ เสีย โดย การ คุ้มครอง ทาง กฎหมาย ที่ เข้ม แข็ง ขึ้น และ. ผมเพิ่มความตระหนักของผู้คน ถึงความสําคัญของมัน จุดประกายโดย.",
+  "thai_text": "ข่าวนี้มาจาก BBC News อยู่ในหมวดวิทยาศาสตร์ และถูกเรียบเรียงเป็นระดับ A1. หัวข้อข่าวคือ “Mangrove forests are healing after decades of human destruction”. โดยรวมแล้ว ข่าวนี้พูดถึงการค้นพบ งานวิจัย หรือข้อมูลทางวิทยาศาสตร์ ผู้อ่านควรจับใจความว่าเกิดอะไรขึ้น ใครได้รับผลกระทบ และเรื่องนี้อาจเปลี่ยนสถานการณ์ต่อไปอย่างไร. ตัวเลขที่ควรสังเกตในข่าวนี้คือ 2010. คำสำคัญที่ควรรู้: amounts = คำว่า amounts / awareness = เรื่อง/ภาวะของ awareness / climate = สภาพภูมิอากาศ / coastal = คำว่า coastal / comeback = คำว่า comeback.",
   "word_translations": {
     "a": "คือ",
     "amounts": "ปริมาณ",
@@ -127,6 +127,6 @@
     "credit": "BBC News",
     "credit_url": "https://www.bbc.com/news/articles/cn4pk07npvvo?at_medium=RSS&at_campaign=rss"
   },
-  "audio_cache_path": "data/audio/2026-06-14/90f2dc3b442c39980b-a1.mp3",
-  "generated_at": "2026-06-18T05:12:05.200209+00:00"
+  "audio_cache_path": "data/audio/2026-06-14/90f2dc3b442c39980b-a1.wav",
+  "generated_at": "2026-06-18T05:46:31.671820+00:00"
 }

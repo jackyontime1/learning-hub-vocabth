@@ -1,12 +1,12 @@
 {
-  "schema_version": 4,
+  "schema_version": 5,
   "id": "e107041fc5e79d09b2",
   "slug": "social-media-ban-bold-and-blunt-but-no-silver-bullet-e107041f",
   "level": "C1",
   "title": "Social media ban - bold and blunt, but no silver bullet",
   "description": "The BBC's technology editor Zoe Kleinman on the big changes coming down the line for young people online.",
   "text": "When I arrived at 10 Downing Street this morning to hear the prime minister announce the UK's social media ban for under-16s, I had to hand in my phone for security reasons. Sir Keir Starmer's news was bold and blunt: yes there will be a ban, yes it will follow Australia's model and yes, there will be additional curbs which will impact older children, aged 16 and 17, as well. A night-time curfew is expected to be part of this. The UK's plan had been dubbed \"Australia Plus\" and now we know why. But Australia's ban has faced well-documented problems, not least because the majority of children who had social media accounts before the ban was enforced in December, still have them. The response from the UK government is the same answer I hear every time there's an online safety intervention. There is talk that the ban will not be a \"silver bullet\" but will still make some difference. Sir Keir made several comparisons to laws about drinking alcohol: we know some teens under the age of 18 still drink, but we also know there are plenty of times when the law prevents it. But we also know that 16-year-olds can still legally have sex, join the armed forces, and in some parts of the UK get married and vote in some elections.",
-  "thai_text": "เมื่อผมมาถึงที่ 10 ถนนดาวน์นิงเช้านี้ เพื่อฟังนายกรัฐมนตรี ประกาศห้ามสื่อสังคมของสหราชอาณาจักร สําหรับช่วงอายุต่ํากว่า 16 ปี ผมต้องยื่นโทรศัพท์ของผมเพื่อเหตุผลความปลอดภัย ข่าวของเซอร์คีร์ สตาร์เมอร์เป็นข่าวที่แข็งกร้าวและแข็งกร้าว: ใช่ จะมีการสั่งห้าม ใช่ มันจะทําตามแบบจําลองของออสเตรเลีย การเคอร์ฟิวตอนกลางคืน คาดว่าจะเป็นส่วนหนึ่งของเรื่องนี้ แผนของสหราชอาณาจักรได้รับการตั้งชื่อว่า \"ออสเตรเลีย บวก\" และตอนนี้เราก็รู้ว่าทําไม แต่คําห้ามของออสเตรเลีย ต้องเผชิญกับปัญหาที่สําคัญ ไม่น้อยเพราะเด็กส่วนใหญ่มีบัญชีโซเชียลมีเดีย คําตอบจากรัฐบาลอังกฤษ เป็นคําตอบเดียวกับที่ได้ยิน ทุกครั้งที่มีการแทรกแซงความปลอดภัยออนไลน์ มีการพูดคุยที่ว่าการห้ามจะไม่เป็น \"กระสุนเงิน\" แต่ยังคงจะสร้างความแตกต่างบางอย่าง เซอร์ เคร์ เปรียบ เทียบ กฎหมาย หลาย ข้อ เกี่ยว กับ การ ดื่ม แอลกอฮอล์: เรา รู้ จัก วัย รุ่น บาง คน อายุ ต่ํา กว่า 18 ปี ที่ ยัง ดื่ม อยู่ แต่ เรา ก็ รู้ ด้วย ว่า มี หลาย ครั้ง ที่ กฎหมาย ห้าม ดื่ม. แต่เรารู้ว่าเด็กอายุ 16 ยังมีเซ็กส์ได้ตามกฎหมาย เข้าร่วมกองกําลังติดอาวุธ และในบางส่วนของสหราชอาณาจักร ก็แต่งงานและลงมติในบางการเลือกตั้ง.",
+  "thai_text": "ข่าวนี้มาจาก BBC News อยู่ในหมวดเทคโนโลยี และถูกเรียบเรียงเป็นระดับ C1. หัวข้อข่าวคือ “Social media ban - bold and blunt, but no silver bullet”. โดยรวมแล้ว ข่าวนี้พูดถึงเทคโนโลยี เครื่องมือดิจิทัล หรือผลกระทบของ AI ผู้อ่านควรจับใจความว่าเกิดอะไรขึ้น ใครได้รับผลกระทบ และเรื่องนี้อาจเปลี่ยนสถานการณ์ต่อไปอย่างไร. ตัวเลขที่ควรสังเกตในข่าวนี้คือ 10, 16, 17, 18. คำสำคัญที่ควรรู้: accounts = คำว่า accounts / additional = คำว่า additional / age = คำว่า age / aged = คำว่า aged / alcohol = คำว่า alcohol.",
   "word_translations": {
     "a": "คือ",
     "about": "เกี่ยวกับ",
@@ -291,6 +291,6 @@
     "credit": "BBC News",
     "credit_url": "https://www.bbc.com/news/articles/cddl65dp0rdo?at_medium=RSS&at_campaign=rss"
   },
-  "audio_cache_path": "data/audio/2026-06-15/e107041fc5e79d09b2-c1.mp3",
-  "generated_at": "2026-06-18T05:11:43.781070+00:00"
+  "audio_cache_path": "data/audio/2026-06-15/e107041fc5e79d09b2-c1.wav",
+  "generated_at": "2026-06-18T05:46:31.313283+00:00"
 }
