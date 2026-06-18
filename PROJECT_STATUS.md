@@ -299,6 +299,21 @@ node "D:\podcast voice\daily-english-reader\scripts\build-learning-hub.mjs"
 - Full Thai translation/summary now uses story-specific title/description/sentence cues instead of only generic category text.
 - Production still has 70 stories across the latest 7 days.
 
+## Reading Whole-Article Thai Fix - June 19, 2026
+
+- Deployed via GitHub Actions run:
+  `https://github.com/jackyontime1/learning-hub-vocabth/actions/runs/27778492460`
+- Production URL checked:
+  `https://learning-hub-vocabth.pages.dev/news/2026-06-18/pakistan-ends-luxury-tax-on-menstrual-products-contraceptives-will-price-58e91077/`
+- `สรุป/คำแปลไทย` now translates the article content as a whole, starting with the news source and `เนื้อหาข่าวคือ ...`.
+- Removed the old word-gloss fallback from the article summary box, so it no longer shows strings like `drop = ...`, `tax = ...`, or `ใจความของประโยคนี้เกี่ยวกับ ...`.
+- Production verification passed:
+  `schema_version` is `8`,
+  glossary-style summary strings are absent,
+  `content-index.json` still has 70 stories across 7 days,
+  and level distribution remains A1/A2/B1/B2/C1 = 14 each.
+- This change did not use Podcast Google Cloud TTS and did not consume the Podcast monthly TTS safety cap.
+
 ## Backups
 
 - Full Job Interview Days 1-8:
@@ -327,6 +342,8 @@ node "D:\podcast voice\daily-english-reader\scripts\build-learning-hub.mjs"
   `D:\podcast voice\backups\before-reading-quality-fix-20260618-114424.zip`
 - Before Reading translation fix:
   `D:\podcast voice\backups\before-reading-translation-fix-20260618-translation-fix.zip`
+- Before Reading whole-article Thai fix:
+  `D:\podcast voice\backups\before-20260619-reading-whole-thai-translation.zip`
 
 ## Next Action
 
