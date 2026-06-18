@@ -49,7 +49,7 @@
     <div class="dashboard" id="homeDashboard">
       <section class="mobile-home-filters" aria-label="Home filters">
         <label><span>Date</span><select id="mobileHomeDate">{% for day in home_days %}<option value="{{ day.date }}">{{ day.label }} · {{ day.date_display }}</option>{% endfor %}</select></label>
-        <label><span>Level</span><select id="mobileHomeLevel"><option value="all">All levels</option><option value="A2">A2</option><option value="B1">B1</option><option value="B2">B2</option></select></label>
+        <label><span>Level</span><select id="mobileHomeLevel"><option value="all">All levels</option>{% for level in available_levels %}<option value="{{ level }}">{{ level }}</option>{% endfor %}</select></label>
         <label><span>Category</span><select id="mobileHomeCategory"><option value="all">All categories</option>{% for category in ["World", "Technology", "Health", "Business", "Science", "Environment"] %}<option value="{{ category | lower }}">{{ category }}</option>{% endfor %}</select></label>
       </section>
       {% for day in home_days %}
@@ -78,9 +78,9 @@
             </section>
           {% endif %}
 
-          {% for level in ["A2", "B1", "B2"] %}
+          {% for level in available_levels %}
             <section class="level-section home-level-section" data-section-level="{{ level }}">
-              <header><h2>{{ level }} Daily Stories</h2><p>{% if level == "A2" %}Short sentences and common words.{% elif level == "B1" %}Everyday news English with more detail.{% else %}Closer to standard news style.{% endif %}</p></header>
+              <header><h2>{{ level }} Daily Stories</h2><p>{% if level == "A1" %}Very simple sentences for first-step reading.{% elif level == "A2" %}Short sentences and common words.{% elif level == "B1" %}Everyday news English with more detail.{% elif level == "B2" %}Closer to standard news style.{% else %}Advanced wording with fuller context.{% endif %}</p></header>
               <div class="story-grid level-story-grid">
                 {% for article in day.level_groups[level] %}
                   <article class="story-card" data-article-id="{{ article.id }}" data-category="{{ article.category | lower }}" data-level="{{ article.level }}">

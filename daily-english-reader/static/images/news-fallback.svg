@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 800" role="img" aria-label="Daily news illustration">
+  <defs>
+    <linearGradient id="sky" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#dbeafe"/>
+      <stop offset="0.48" stop-color="#f8fafc"/>
+      <stop offset="1" stop-color="#fee2c6"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" x2="1">
+      <stop offset="0" stop-color="#1d4ed8"/>
+      <stop offset="1" stop-color="#16a34a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1400" height="800" fill="url(#sky)"/>
+  <circle cx="1120" cy="170" r="130" fill="#ffffff" opacity=".55"/>
+  <circle cx="220" cy="640" r="190" fill="#ffffff" opacity=".45"/>
+  <g transform="translate(230 170)">
+    <rect width="940" height="460" rx="36" fill="#fff" opacity=".94"/>
+    <rect x="70" y="74" width="270" height="52" rx="18" fill="url(#card)"/>
+    <rect x="70" y="165" width="790" height="24" rx="12" fill="#1e293b" opacity=".82"/>
+    <rect x="70" y="220" width="710" height="20" rx="10" fill="#475569" opacity=".55"/>
+    <rect x="70" y="265" width="760" height="20" rx="10" fill="#475569" opacity=".45"/>
+    <rect x="70" y="310" width="560" height="20" rx="10" fill="#475569" opacity=".38"/>
+    <g transform="translate(680 295)">
+      <circle cx="72" cy="72" r="72" fill="#dbeafe"/>
+      <path d="M30 80h86M52 48h68M46 108h52" stroke="#1d4ed8" stroke-width="16" stroke-linecap="round"/>
+    </g>
+  </g>
+</svg>

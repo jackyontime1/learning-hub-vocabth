@@ -12,6 +12,7 @@ import os
 import re
 import shutil
 import subprocess
+import sys
 import tempfile
 import time
 import warnings
@@ -59,9 +60,10 @@ UNSPLASH_URL = "https://api.unsplash.com/search/photos"
 OPENVERSE_URL = "https://api.openverse.org/v1/images/"
 COMMONS_URL = "https://commons.wikimedia.org/w/api.php"
 USER_AGENT = "DailyEnglishReader/2.0 (personal educational project; contact=local)"
-SCHEMA_VERSION = 2
-LEVELS = ("A2", "B1", "B2")
+SCHEMA_VERSION = 3
+LEVELS = ("A1", "A2", "B1", "B2", "C1")
 TARGET_PER_LEVEL = 2
+DAILY_ARTICLE_COUNT = len(LEVELS) * TARGET_PER_LEVEL
 
 RSS_FEEDS = [
     ("CBC News", "Canada", "https://www.cbc.ca/webfeed/rss/rss-canada"),
@@ -362,13 +364,31 @@ def normalized_article(
 
 def demo_articles() -> list[dict[str, Any]]:
     now = utc_now().isoformat()
-    return [
+    rows = [
         normalized_article(
             "demo", title, description, f"https://example.com/{identifier}", category, now,
             author="Demo Learning Desk", content_type="educational demo", thai_demo=thai,
         )
         for identifier, title, category, description, thai in DEMO_TOPICS
     ]
+    extras = [
+        ("demo-food", "School kitchens test healthier lunch menus", "Health",
+         "Several schools are testing healthier lunch menus this month. The meals use more fresh vegetables and less added sugar. Teachers say students are trying new foods and talking about nutrition in class."),
+        ("demo-train", "City adds evening trains for busy commuters", "Business",
+         "The city is adding more evening trains on its busiest route. Transit staff say the change should reduce crowding after work. The schedule will be reviewed after three months."),
+        ("demo-forest", "Volunteers plant trees near a restored river", "Environment",
+         "Community volunteers planted new trees near a restored river. The trees will provide shade and help protect the soil. Local groups will water the young trees during dry weeks."),
+        ("demo-space", "New telescope images help students study stars", "Science",
+         "A new set of telescope images is helping students study stars and galaxies. Teachers can use the free images in science lessons. Researchers hope the project will make space science easier to understand."),
+    ]
+    for identifier, title, category, description in extras:
+        if len([row for row in rows if row]) >= DAILY_ARTICLE_COUNT:
+            break
+        rows.append(normalized_article(
+            "demo", title, description, f"https://example.com/{identifier}", category, now,
+            author="Demo Learning Desk", content_type="educational demo", thai_demo="คำแปลภาษาไทยสำหรับบทความตัวอย่าง",
+        ))
+    return [row for row in rows if row]
 
 
 def fetch_currents(session: requests.Session, quota: QuotaManager, config: dict[str, Any]) -> list[dict[str, Any]]:
@@ -556,14 +576,21 @@ def complexity(text: str) -> float:
     return len(words) / max(1, len(sentences)) + long_words / max(1, len(words)) * 20
 
 
-def choose_daily_articles(candidates: list[dict[str, Any]]) -> list[dict[str, Any]]:
+def choose_daily_articles(candidates: list[dict[str, Any]], offset: int = 0) -> list[dict[str, Any]]:
     candidates = sorted(candidates, key=lambda row: complexity(row["description"]))
-    if len(candidates) < 6:
+    if len(candidates) < DAILY_ARTICLE_COUNT:
         return []
+    if offset:
+        shift = offset % len(candidates)
+        candidates = candidates[shift:] + candidates[:shift]
+    midpoint = len(candidates) // 2
+    upper = max(midpoint + 2, int(len(candidates) * 0.72))
     indexes = {
-        "A2": [0, 1],
-        "B1": [max(2, len(candidates) // 2 - 1), len(candidates) // 2],
-        "B2": [len(candidates) - 2, len(candidates) - 1],
+        "A1": [0, 1],
+        "A2": [2, 3],
+        "B1": [max(4, midpoint - 1), midpoint],
+        "B2": [min(len(candidates) - 3, upper), min(len(candidates) - 2, upper + 1)],
+        "C1": [len(candidates) - 2, len(candidates) - 1],
     }
     chosen: list[dict[str, Any]] = []
     used: set[str] = set()
@@ -580,15 +607,15 @@ def choose_daily_articles(candidates: list[dict[str, Any]]) -> list[dict[str, An
             used.add(article["id"])
             if sum(item["level"] == level for item in chosen) == TARGET_PER_LEVEL:
                 break
-    return chosen if len(chosen) == 6 else []
+    return chosen if len(chosen) == DAILY_ARTICLE_COUNT else []
 
 
 def summarize(text: str) -> str:
     sentences = sentence_split(text)
-    if len(sentences) <= 4 or len(text.split()) < 80:
-        return " ".join(sentences[:4])
+    if len(sentences) <= 6 or len(text.split()) < 120:
+        return " ".join(sentences[:6])
     try:
-        result = normalize(textrank_summarize(text, ratio=0.4, words=220))
+        result = normalize(textrank_summarize(text, ratio=0.5, words=320))
     except ValueError:
         result = ""
     return result or " ".join(sentences[:5])
@@ -643,13 +670,18 @@ def adapt_level(text: str, level: str, config: dict[str, Any], session: requests
         except requests.RequestException:
             logging.warning("Ollama unavailable; using deterministic level adapter")
     sentences = sentence_split(summary)
+    if level == "A1":
+        parts = [part for sentence in sentences[:5] for part in simplify_sentence(sentence, 8, True)]
+        return " ".join(parts[:10])
     if level == "A2":
-        parts = [part for sentence in sentences[:5] for part in simplify_sentence(sentence, 12, True)]
-        return " ".join(parts[:8])
+        parts = [part for sentence in sentences[:6] for part in simplify_sentence(sentence, 12, True)]
+        return " ".join(parts[:12])
     if level == "B1":
-        parts = [part for sentence in sentences[:6] for part in simplify_sentence(sentence, 18, False)]
-        return " ".join(parts[:8])
-    return " ".join(sentences[:7])
+        parts = [part for sentence in sentences[:8] for part in simplify_sentence(sentence, 18, False)]
+        return " ".join(parts[:12])
+    if level == "B2":
+        return " ".join(sentences[:9])
+    return " ".join(sentences[:11])
 
 
 def vocabulary_words(text: str) -> list[str]:
@@ -741,7 +773,12 @@ def image_for(
 ) -> dict[str, str]:
     cache = load_json(IMAGE_CACHE_PATH, {})
     if article["id"] in cache:
-        return cache[article["id"]]
+        cached = cache[article["id"]]
+        local_name = cached.get("local_filename")
+        if local_name and (STATIC_DIR / "images" / local_name).exists():
+            return cached
+        if not cached.get("url"):
+            return {"local_filename": "news-fallback.svg", "credit": "Local fallback", "credit_url": ""}
     if config["demo"]:
         filename = DEMO_IMAGE_MAP.get(article["title"], "demo-solar-library.png")
         result = {"local_filename": filename, "credit": "Generated demo image", "credit_url": ""}
@@ -787,7 +824,10 @@ def image_for(
         except (requests.RequestException, ValueError, KeyError, IndexError, json.JSONDecodeError) as error:
             logging.warning("Local image generator unavailable for %s: %s", article["title"], error)
     if article.get("image_url"):
-        result = {"url": article["image_url"], "credit": article["provider"], "credit_url": article["url"]}
+        result = {
+            "url": article["image_url"], "credit": article["provider"], "credit_url": article["url"],
+        }
+        result = cache_image_or_fallback(article, result, session, config)
         cache[article["id"]] = result
         atomic_json(IMAGE_CACHE_PATH, cache)
         return result
@@ -840,9 +880,86 @@ def image_for(
             result = None
     if not result:
         result = {"local_filename": "demo-solar-library.png", "credit": "Local fallback", "credit_url": ""}
+    result = cache_image_or_fallback(article, result, session, config)
     cache[article["id"]] = result
     atomic_json(IMAGE_CACHE_PATH, cache)
     return result
+
+
+def cache_image_or_fallback(
+    article: dict[str, Any], result: dict[str, str], session: requests.Session, config: dict[str, Any],
+) -> dict[str, str]:
+    if result.get("local_filename"):
+        return result
+    url = result.get("url", "")
+    if not url:
+        return {"local_filename": "news-fallback.svg", "credit": "Local fallback", "credit_url": ""}
+    try:
+        response = session.get(url, headers={"User-Agent": USER_AGENT}, timeout=config["timeout"])
+        response.raise_for_status()
+        content_type = response.headers.get("content-type", "").lower()
+        if "image" not in content_type or len(response.content) < 1000:
+            raise ValueError("not a usable image")
+        suffix = ".png" if "png" in content_type else ".webp" if "webp" in content_type else ".jpg"
+        filename = f"news-{article['id'][:12]}{suffix}"
+        output = STATIC_DIR / "images" / filename
+        output.parent.mkdir(parents=True, exist_ok=True)
+        output.write_bytes(response.content)
+        return {
+            "local_filename": filename,
+            "credit": result.get("credit", article["provider"]),
+            "credit_url": result.get("credit_url", article["url"]),
+        }
+    except (requests.RequestException, ValueError, OSError) as error:
+        logging.info("Image cache failed for %s: %s", article["title"], error)
+        return {"local_filename": "news-fallback.svg", "credit": "Local fallback", "credit_url": ""}
+
+
+def source_material(raw: dict[str, Any], session: requests.Session, config: dict[str, Any]) -> str:
+    """Use source-page paragraphs when available, otherwise keep the feed summary."""
+    fallback = raw["description"]
+    if config["demo"]:
+        return fallback
+    try:
+        response = session.get(raw["url"], headers={"User-Agent": USER_AGENT}, timeout=config["timeout"])
+        response.raise_for_status()
+        soup = BeautifulSoup(response.text, "html.parser")
+        for selector in ("script", "style", "nav", "header", "footer", "aside", "form"):
+            for node in soup.select(selector):
+                node.decompose()
+        paragraphs = []
+        for node in soup.select("article p, main p, [role='main'] p, p"):
+            text = normalize(node.get_text(" "))
+            if len(text.split()) >= 8 and not re.search(r"\b(subscribe|sign up|cookie|newsletter)\b", text, re.I):
+                paragraphs.append(text)
+            if sum(len(row.split()) for row in paragraphs) >= 420:
+                break
+        material = " ".join(paragraphs)
+        if len(material.split()) >= 80:
+            return material
+    except requests.RequestException as error:
+        logging.info("Source-page text unavailable for %s: %s", raw["title"], error)
+    return fallback
+
+
+def naturalize_thai(text: str) -> str:
+    text = normalize(text)
+    replacements = {
+        "ได้กล่าวว่า": "บอกว่า",
+        "กล่าวว่า": "บอกว่า",
+        "ประชาชน": "ผู้คน",
+        "สามารถ": "ทำได้",
+        "เนื่องจาก": "เพราะ",
+        "อย่างไรก็ตาม": "แต่",
+        "ในขณะที่": "ขณะที่",
+        "ดังกล่าว": "นี้",
+        "รายงานว่า": "รายงานว่า",
+    }
+    for formal, natural in replacements.items():
+        text = text.replace(formal, natural)
+    text = re.sub(r"\s+([,.!?])", r"\1", text)
+    text = re.sub(r"\s{2,}", " ", text)
+    return text.strip()
 
 
 def generate_audio(text: str, article_id: str, level: str, date: str, config: dict[str, Any]) -> Path:
@@ -863,6 +980,25 @@ def generate_audio(text: str, article_id: str, level: str, date: str, config: di
     ffmpeg = shutil.which("ffmpeg")
     if not ffmpeg:
         raise RuntimeError("ffmpeg is required")
+    if config.get("tts_provider") == "edge":
+        try:
+            voice = {
+                "A1": "en-US-JennyNeural",
+                "A2": "en-US-JennyNeural",
+                "B1": "en-US-AriaNeural",
+                "B2": "en-US-GuyNeural",
+                "C1": "en-US-GuyNeural",
+            }[level]
+            rate = {"A1": "-18%", "A2": "-12%", "B1": "-6%", "B2": "+0%", "C1": "+4%"}[level]
+            subprocess.run([
+                sys.executable, "-m", "edge_tts",
+                "--voice", voice, "--rate", rate, "--text", text,
+                "--write-media", str(output),
+            ], check=True, capture_output=True, timeout=90)
+            if output.exists() and output.stat().st_size > 1000:
+                return output
+        except (subprocess.SubprocessError, OSError) as error:
+            logging.warning("edge-tts unavailable; falling back to local TTS: %s", error)
     wav = output.with_suffix(".wav")
     try:
         engine = pyttsx3.init()
@@ -888,13 +1024,14 @@ def generate_audio(text: str, article_id: str, level: str, date: str, config: di
 
 def process_article(
     raw: dict[str, Any], session: requests.Session, quota: QuotaManager,
-    translator: Translator, config: dict[str, Any],
+    translator: Translator, config: dict[str, Any], published_date: str,
 ) -> dict[str, Any]:
-    text = adapt_level(raw["description"], raw["level"], config, session)
+    material = source_material(raw, session, config)
+    text = adapt_level(material, raw["level"], config, session)
     words = vocabulary_words(text)
     thai_text, translations = translator.translate(text, words, raw.get("thai_demo", ""))
+    thai_text = naturalize_thai(thai_text)
     word_pos = {word: part_of_speech(word) for word in words}
-    published_date = utc_now().date().isoformat()
     audio_path = generate_audio(text, raw["id"], raw["level"], published_date, config)
     image = image_for(raw, session, quota, config)
     slug = f"{slugify(raw['title'])}-{raw['id'][:8]}"
@@ -1037,9 +1174,9 @@ def render_site(articles: list[dict[str, Any]], quota: QuotaManager) -> None:
 
 
 def validate_staging(today_articles: list[dict[str, Any]]) -> None:
-    if len(today_articles) != 6:
-        raise RuntimeError(f"Expected 6 current articles, got {len(today_articles)}")
-    if Counter(row["level"] for row in today_articles) != Counter({"A2": 2, "B1": 2, "B2": 2}):
+    if len(today_articles) != DAILY_ARTICLE_COUNT:
+        raise RuntimeError(f"Expected {DAILY_ARTICLE_COUNT} current articles, got {len(today_articles)}")
+    if Counter(row["level"] for row in today_articles) != Counter({level: TARGET_PER_LEVEL for level in LEVELS}):
         raise RuntimeError("Current articles are not split 2 per level")
     required = ["index.html", "daily.html", "vocabulary.html", "flashcards.html", "saved.html", "content-index.json"]
     if any(not (STAGING_DIR / name).exists() for name in required):
@@ -1125,6 +1262,8 @@ def config_from_env() -> dict[str, Any]:
         "ollama_url": os.getenv("OLLAMA_URL", "").strip(),
         "ollama_model": os.getenv("OLLAMA_MODEL", "llama3.2:3b").strip(),
         "retention_days": max(7, env_int("RETENTION_DAYS", 30)),
+        "backfill_days": max(1, min(7, env_int("BACKFILL_DAYS", 1))),
+        "tts_provider": os.getenv("READING_TTS_PROVIDER", "edge").strip().lower(),
         "timeout": max(5, env_int("REQUEST_TIMEOUT", 25)),
         "limits": {
             "currents": max(1, env_int("CURRENTS_DAILY_LIMIT", 2)),
@@ -1150,39 +1289,46 @@ def main() -> int:
     session = requests.Session()
     session.headers.update({"User-Agent": USER_AGENT})
     quota = QuotaManager(config["limits"])
-    today = utc_now().date().isoformat()
-    existing_today = [
-        row for row in load_articles(config["retention_days"])
-        if row["published_date"] == today
+    today_date = utc_now().date()
+    today = today_date.isoformat()
+    retained_articles = load_articles(config["retention_days"])
+    target_dates = [
+        (today_date - timedelta(days=days_ago)).isoformat()
+        for days_ago in range(config["backfill_days"])
     ]
-    should_rebuild_today = (
-        len(existing_today) != 6
-        or (not config["demo"] and is_demo_edition(existing_today))
-        or env_bool("REFRESH_TODAY", False)
-    )
-    if should_rebuild_today:
+    dates_to_build = []
+    for target_date in target_dates:
+        existing = [row for row in retained_articles if row["published_date"] == target_date]
+        if (
+            len(existing) != DAILY_ARTICLE_COUNT
+            or (not config["demo"] and is_demo_edition(existing))
+            or (target_date == today and env_bool("REFRESH_TODAY", False))
+        ):
+            dates_to_build.append(target_date)
+    if dates_to_build:
         candidates = collect_candidates(session, quota, config)
         atomic_json(RAW_DIR / f"{today}-providers.json", {
             "fetched_at": utc_now().isoformat(), "candidates": candidates,
         })
-        selected = choose_daily_articles(candidates)
-        if len(selected) != 6:
-            raise RuntimeError("Free providers did not supply six valid articles; existing site was preserved")
         translator = Translator(session, config)
-        processed: list[dict[str, Any]] = []
-        for index, raw in enumerate(selected, 1):
-            logging.info("[%d/6] Building %s: %s", index, raw["level"], raw["title"])
-            processed.append(process_article(raw, session, quota, translator, config))
-        output_dir = PROCESSED_DIR / today
-        temporary = PROCESSED_DIR / f".{today}-staging"
-        if temporary.exists():
-            shutil.rmtree(temporary)
-        temporary.mkdir(parents=True)
-        for article in processed:
-            atomic_json(temporary / f"{article['slug']}.json", article)
-        if output_dir.exists():
-            shutil.rmtree(output_dir)
-        temporary.replace(output_dir)
+        for date_index, target_date in enumerate(dates_to_build):
+            selected = choose_daily_articles(candidates, offset=date_index * DAILY_ARTICLE_COUNT)
+            if len(selected) != DAILY_ARTICLE_COUNT:
+                raise RuntimeError("Free providers did not supply enough valid articles; existing site was preserved")
+            processed: list[dict[str, Any]] = []
+            for index, raw in enumerate(selected, 1):
+                logging.info("[%s %d/%d] Building %s: %s", target_date, index, DAILY_ARTICLE_COUNT, raw["level"], raw["title"])
+                processed.append(process_article(raw, session, quota, translator, config, target_date))
+            output_dir = PROCESSED_DIR / target_date
+            temporary = PROCESSED_DIR / f".{target_date}-staging"
+            if temporary.exists():
+                shutil.rmtree(temporary)
+            temporary.mkdir(parents=True)
+            for article in processed:
+                atomic_json(temporary / f"{article['slug']}.json", article)
+            if output_dir.exists():
+                shutil.rmtree(output_dir)
+            temporary.replace(output_dir)
         if not config["demo"]:
             purge_demo_editions()
     articles = load_articles(config["retention_days"])

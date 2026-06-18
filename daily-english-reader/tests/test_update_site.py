@@ -70,9 +70,9 @@ class DailyReaderTests(unittest.TestCase):
     def test_daily_selection_has_two_per_level(self):
         candidates = site.demo_articles()
         selected = site.choose_daily_articles(candidates)
-        self.assertEqual(len(selected), 6)
+        self.assertEqual(len(selected), site.DAILY_ARTICLE_COUNT)
         self.assertEqual({level: sum(row["level"] == level for row in selected) for level in site.LEVELS},
-                         {"A2": 2, "B1": 2, "B2": 2})
+                         {level: site.TARGET_PER_LEVEL for level in site.LEVELS})
 
     def test_word_spans_wrap_every_english_word(self):
         markup = str(site.word_spans("Clean energy works.", {
@@ -138,7 +138,7 @@ class DailyReaderTests(unittest.TestCase):
              patch.object(site, "fetch_usgs", return_value=[]), \
              patch.object(site, "fetch_arxiv", return_value=[]):
             rows = site.collect_candidates(object(), quota, config)
-        self.assertEqual(len(rows), 6)
+        self.assertEqual(len(rows), site.DAILY_ARTICLE_COUNT)
 
     def test_rss_provider_parses_real_feed_items(self):
         xml = """<?xml version="1.0"?>

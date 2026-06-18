@@ -5,7 +5,7 @@
       <a class="back-link" href="../../../daily.html"><i class="fa-solid fa-arrow-left"></i> Daily Reading</a>
       <section class="side-panel">
         <h2>Story level</h2>
-        <div class="side-levels"><span class="{{ article.level | lower }}"><b>{{ article.level }}</b> {% if article.level == "A2" %}Beginner{% elif article.level == "B1" %}Intermediate{% else %}Upper Intermediate{% endif %}</span></div>
+        <div class="side-levels"><span class="{{ article.level | lower }}"><b>{{ article.level }}</b> {% if article.level == "A1" %}Starter{% elif article.level == "A2" %}Beginner{% elif article.level == "B1" %}Intermediate{% elif article.level == "B2" %}Upper Intermediate{% else %}Advanced{% endif %}</span></div>
       </section>
       <section class="side-panel status-panel"><h2>{{ article.content_type | title }}</h2><p>Source: {{ article.provider }}</p><a href="{{ article.source_url }}" rel="noopener">Open source</a></section>
     </aside>

@@ -93,9 +93,11 @@ jobs:
           UNSPLASH_ACCESS_KEY: ${{ secrets.UNSPLASH_ACCESS_KEY }}
           LIBRETRANSLATE_URL: http://127.0.0.1:5000
           RETENTION_DAYS: "30"
+          BACKFILL_DAYS: "7"
           DEMO_MODE: "0"
           SKIP_AUDIO: "0"
           REFRESH_TODAY: "1"
+          READING_TTS_PROVIDER: "edge"
         run: python update_site.py
 
       - name: Persist rolling cache

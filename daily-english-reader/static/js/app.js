@@ -135,6 +135,35 @@ function renderVocabularyPage(filter = "") {
   if (empty) empty.hidden = rows.length > 0;
 }
 
+function savedReadingCards() {
+  return Object.values(savedWords)
+    .filter((row) => row.word && row.translation)
+    .map((row, index) => ({
+      id: `Saved from Reading::${String(row.word).toLowerCase()}`,
+      word: row.word,
+      meaning: row.translation,
+      category: "Saved from Reading",
+      source: "reading",
+      day: null,
+      example: row.articleTitle || "",
+      exampleTh: "",
+      hasCuratedExample: Boolean(row.articleTitle),
+      order: index + 1,
+      frequencyRank: index + 1,
+      audioWithSpelling: "",
+      audioWithoutSpelling: "",
+      audioProvider: "web-speech",
+    }));
+}
+
+function mergeReadingCards(deck) {
+  const readingCards = savedReadingCards();
+  const cards = [...(deck.cards || []).filter((card) => card.category !== "Saved from Reading"), ...readingCards];
+  const categories = [...(deck.categories || []).filter((category) => category.name !== "Saved from Reading")];
+  if (readingCards.length) categories.push({ name: "Saved from Reading", count: readingCards.length });
+  return { ...deck, cards, categories };
+}
+
 function renderSavedPage() {
   const container = document.querySelector("#savedArticleList");
   if (!container) return;
@@ -435,7 +464,7 @@ async function initializeFlashcards() {
     const base = document.body.dataset.basePrefix || "";
     const response = await fetch(`${base}data/podcast-flashcards.json`, { cache: "no-store" });
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
-    flashcardDeck.data = await response.json();
+    flashcardDeck.data = mergeReadingCards(await response.json());
     const categorySelect = document.querySelector("#flashcardCategory");
     categorySelect.innerHTML = `<option value="all">All podcast categories</option>${(flashcardDeck.data.categories || []).map((category) =>
       `<option value="${escapeHtml(category.name)}">${escapeHtml(category.name)} (${category.count})</option>`).join("")}`;
