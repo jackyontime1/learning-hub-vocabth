@@ -60,7 +60,7 @@ UNSPLASH_URL = "https://api.unsplash.com/search/photos"
 OPENVERSE_URL = "https://api.openverse.org/v1/images/"
 COMMONS_URL = "https://commons.wikimedia.org/w/api.php"
 USER_AGENT = "DailyEnglishReader/2.0 (personal educational project; contact=local)"
-SCHEMA_VERSION = 4
+SCHEMA_VERSION = 5
 LEVELS = ("A1", "A2", "B1", "B2", "C1")
 TARGET_PER_LEVEL = 2
 DAILY_ARTICLE_COUNT = len(LEVELS) * TARGET_PER_LEVEL
@@ -318,18 +318,25 @@ def natural_thai_article(raw: dict[str, Any], text: str) -> str:
     category = english_label_for_category(raw.get("category", "news"))
     provider = raw.get("provider", "แหล่งข่าว")
     title = raw.get("title", "")
-    sentences = sentence_split(clean_story_text(text))
-    facts = sentences[:4]
+    numbers = re.findall(r"\b\d[\d,.]*(?:%| per cent| percent| million| billion| years?| days?)?\b", text, flags=re.I)[:4]
     keywords = [word for word in vocabulary_words(" ".join([title, raw.get("description", ""), text])) if word not in STOPWORDS][:8]
     keyword_text = " / ".join(f"{word} = {thai_gloss(word)}" for word in keywords[:5])
-    fact_text = " ".join(facts)
-    if len(fact_text) > 520:
-        fact_text = fact_text[:520].rsplit(" ", 1)[0] + "..."
+    number_text = f" ตัวเลขที่ควรสังเกตในข่าวนี้คือ {', '.join(numbers)}." if numbers else ""
+    level = raw.get("level", "")
+    focus = {
+        "business": "ความเคลื่อนไหวด้านธุรกิจ เศรษฐกิจ หรือการจ้างงาน",
+        "canada": "เหตุการณ์หรือการตัดสินใจที่เกี่ยวข้องกับแคนาดา",
+        "environment": "ผลกระทบต่อธรรมชาติ สิ่งแวดล้อม หรือสภาพอากาศ",
+        "health": "ประเด็นด้านสุขภาพ การแพทย์ หรือคุณภาพชีวิต",
+        "science": "การค้นพบ งานวิจัย หรือข้อมูลทางวิทยาศาสตร์",
+        "technology": "เทคโนโลยี เครื่องมือดิจิทัล หรือผลกระทบของ AI",
+        "world": "เหตุการณ์สำคัญในต่างประเทศและผลกระทบที่ตามมา",
+    }.get(raw.get("category", "").lower(), "ประเด็นสำคัญที่ควรติดตาม")
     return (
-        f"ข่าวนี้จาก {provider} อยู่ในหมวด{category} หัวข้อคือ “{title}”. "
-        f"ใจความหลักคือ {fact_text} "
-        f"สรุปง่าย ๆ คือข่าวนี้เล่าว่าเกิดอะไรขึ้น ใครเกี่ยวข้อง และทำไมเรื่องนี้จึงควรติดตามต่อ. "
-        f"คำสำคัญที่ควรรู้: {keyword_text}."
+        f"ข่าวนี้มาจาก {provider} อยู่ในหมวด{category} และถูกเรียบเรียงเป็นระดับ {level}. "
+        f"หัวข้อข่าวคือ “{title}”. โดยรวมแล้ว ข่าวนี้พูดถึง{focus} "
+        f"ผู้อ่านควรจับใจความว่าเกิดอะไรขึ้น ใครได้รับผลกระทบ และเรื่องนี้อาจเปลี่ยนสถานการณ์ต่อไปอย่างไร."
+        f"{number_text} คำสำคัญที่ควรรู้: {keyword_text}."
     )
 
 
@@ -1179,8 +1186,7 @@ def process_article(
     words = vocabulary_words(text)
     thai_text, translations = translator.translate(text, words, raw.get("thai_demo", ""))
     thai_text = naturalize_thai(thai_text)
-    if (not thai_text) or re.search(r"เธ|เน|โ€", thai_text) or len(thai_text.split()) > max(180, len(text.split()) * 4):
-        thai_text = natural_thai_article(raw, text)
+    thai_text = natural_thai_article(raw, text)
     translations = safe_word_translations(words, translations)
     word_pos = {word: part_of_speech(word) for word in words}
     audio_path = generate_audio(text, raw["id"], raw["level"], published_date, config)
