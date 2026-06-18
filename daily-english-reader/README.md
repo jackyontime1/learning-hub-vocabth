@@ -1,6 +1,6 @@
 # Daily English Reader
 
-A static, free-only English news reader for Thai learners. The daily build creates six stories: two A2, two B1, and two B2. It never calls a paid fallback or enables automatic billing.
+A static, free-only English news reader for Thai learners. The daily build creates ten stories: two each for A1, A2, B1, B2, and C1. It never calls a paid fallback or enables automatic billing.
 
 ## Free provider chain
 
@@ -9,8 +9,8 @@ A static, free-only English news reader for Thai learners. The daily build creat
 - Weather and environment: US National Weather Service.
 - World events and earthquakes: USGS.
 - Images: optional local Stable Diffusion, then source media, Unsplash, Openverse, Wikimedia Commons, and a bundled fallback.
-- Translation: self-hosted LibreTranslate, then an installed Argos Translate English-to-Thai model.
-- Speech: pyttsx3, then espeak-ng, converted to MP3 by ffmpeg.
+- Translation: local glossary plus deterministic Thai article summaries, with optional local translation services only when configured.
+- Speech: browser/iPhone Web Speech is used first for smoother playback; generated audio is optional fallback only.
 - Level adaptation: summa/TextRank and deterministic heuristics. Ollama is optional and local.
 
 The updater fetches providers in batches and selects content locally. Provider usage, errors, cooldowns, and soft limits are stored in `data/quota/YYYY-MM-DD.json`.
@@ -126,7 +126,7 @@ The generated deck is written to `static/data/podcast-flashcards.json` and `site
 
 ## GitHub Actions to Cloudflare Pages
 
-The included workflow runs at 05:00 in `America/Toronto`, starts LibreTranslate on the runner, runs unit tests, builds the daily reading site with free local TTS, merges the Podcast/Flashcards Learning Hub, persists the rolling data cache, and deploys `site/` to Cloudflare Pages project `learning-hub-vocabth`.
+The included workflow runs at 05:00 in `America/Toronto`, runs unit tests, builds the daily reading site from free news sources, merges the Podcast/Flashcards Learning Hub, persists the rolling data cache, and deploys `site/` to Cloudflare Pages project `learning-hub-vocabth`.
 
 Required secrets under **Settings > Secrets and variables > Actions**:
 
@@ -140,7 +140,7 @@ Optional free content/image provider keys:
 - `NASA_API_KEY` (optional; `DEMO_KEY` works with a smaller NASA limit)
 - `UNSPLASH_ACCESS_KEY`
 
-The workflow keeps `FREE_ONLY=1`, `DEMO_MODE=0`, and `SKIP_AUDIO=0`. Reading audio is generated with `pyttsx3` or `espeak-ng` plus `ffmpeg`; it does not use the Podcast Google Cloud TTS key or the Podcast monthly safety cap.
+The workflow keeps `FREE_ONLY=1`, `DEMO_MODE=0`, and `SKIP_AUDIO=1`. Reading playback uses browser/iPhone Web Speech first and keeps a tiny placeholder audio file only for static page compatibility. It does not use the Podcast Google Cloud TTS key or the Podcast monthly safety cap.
 
 If the GitHub repository root is the parent project folder, use `.github/workflows/daily-update.yml`. If the repository root is `daily-english-reader`, use `daily-english-reader/.github/workflows/daily-update.yml` and make sure the Podcast source folder is available at `../deploy-rollback-original` for the combined Learning Hub build.
 

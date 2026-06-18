@@ -12,7 +12,7 @@ permissions:
 
 concurrency:
   group: learning-hub-cloudflare-pages
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   should-run:
@@ -53,23 +53,10 @@ jobs:
         with:
           node-version: "22"
 
-      - name: Install free local services
+      - name: Install Python dependencies
         run: |
-          sudo apt-get update
-          sudo apt-get install -y espeak-ng ffmpeg libsndfile1
           python -m pip install --upgrade pip
           pip install -r requirements.txt
-          pip install libretranslate
-
-      - name: Start LibreTranslate
-        run: |
-          libretranslate --load-only en,th --disable-web-ui >/tmp/libretranslate.log 2>&1 &
-          for attempt in $(seq 1 60); do
-            curl --fail --silent http://127.0.0.1:5000/health >/dev/null && exit 0
-            sleep 5
-          done
-          cat /tmp/libretranslate.log
-          exit 1
 
       - name: Run tests
         run: python -m unittest discover -s tests -v
@@ -77,7 +64,6 @@ jobs:
       - name: Preflight no-audio build
         env:
           FREE_ONLY: "1"
-          LIBRETRANSLATE_URL: http://127.0.0.1:5000
           RETENTION_DAYS: "1"
           DEMO_MODE: "1"
           SKIP_AUDIO: "1"
@@ -99,9 +85,8 @@ jobs:
           RETENTION_DAYS: "30"
           BACKFILL_DAYS: "7"
           DEMO_MODE: "0"
-          SKIP_AUDIO: "0"
+          SKIP_AUDIO: "1"
           REFRESH_TODAY: "1"
-          READING_TTS_PROVIDER: "edge"
         run: python update_site.py
 
       - name: Persist rolling cache

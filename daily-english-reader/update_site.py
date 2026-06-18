@@ -25,7 +25,6 @@ from pathlib import Path
 from typing import Any, Callable
 from urllib.parse import parse_qsl, urlencode, urlparse, urlunparse
 
-import pyttsx3
 import requests
 from bs4 import BeautifulSoup, MarkupResemblesLocatorWarning
 from dotenv import load_dotenv
@@ -1156,6 +1155,8 @@ def generate_audio(text: str, article_id: str, level: str, date: str, config: di
     wav = output.with_suffix(".wav")
     local_rates = {"A1": 132, "A2": 145, "B1": 160, "B2": 172, "C1": 182}
     try:
+        import pyttsx3
+
         engine = pyttsx3.init()
         engine.setProperty("rate", local_rates[level])
         engine.save_to_file(text, str(wav))
