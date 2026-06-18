@@ -59,7 +59,7 @@ UNSPLASH_URL = "https://api.unsplash.com/search/photos"
 OPENVERSE_URL = "https://api.openverse.org/v1/images/"
 COMMONS_URL = "https://commons.wikimedia.org/w/api.php"
 USER_AGENT = "DailyEnglishReader/2.0 (personal educational project; contact=local)"
-SCHEMA_VERSION = 7
+SCHEMA_VERSION = 8
 LEVELS = ("A1", "A2", "B1", "B2", "C1")
 TARGET_PER_LEVEL = 2
 DAILY_ARTICLE_COUNT = len(LEVELS) * TARGET_PER_LEVEL
@@ -194,6 +194,18 @@ NEWS_WORDS = {
     "tournament": "การแข่งขัน", "world cup": "ฟุตบอลโลก",
 }
 
+NEWS_WORDS.update({
+    "activists": "นักเคลื่อนไหว", "budget": "งบประมาณ", "contraceptives": "ยาคุมกำเนิด",
+    "decades": "หลายสิบปี", "dropping": "ลดลง", "fiscal": "ปีงบประมาณ",
+    "goods": "สินค้า", "huizeng": "ฮุ่ยเจิง", "impact": "ผลกระทบ", "items": "สินค้า",
+    "luxury": "ฟุ่มเฟือย", "menstrual": "เกี่ยวกับประจำเดือน", "napkins": "ผ้าอนามัย",
+    "npr": "เอ็นพีอาร์", "pakistan": "ปากีสถาน", "price": "ราคา", "prices": "ราคา",
+    "products": "ผลิตภัณฑ์", "prompting": "ทำให้เกิด", "protests": "การประท้วง",
+    "reach": "เอื้อมถึง", "rf": "อาร์เอฟ", "sales": "ยอดขาย/ภาษีขาย",
+    "sanitary": "เกี่ยวกับสุขอนามัย", "subject": "อยู่ภายใต้", "taxed": "ถูกเก็บภาษี",
+    "zero": "ศูนย์",
+})
+
 PHRASE_TRANSLATIONS = [
     (
         "rare footage captured of great white shark in mediterranean sea",
@@ -220,6 +232,33 @@ PHRASE_TRANSLATIONS = [
         "นักวิทยาศาสตร์บอกว่าผู้คนไม่จำเป็นต้องกังวล",
     ),
 ]
+
+PHRASE_TRANSLATIONS.extend([
+    (
+        "pakistan ends luxury tax on menstrual products contraceptives will prices drop",
+        "ปากีสถานยกเลิกภาษีสินค้าฟุ่มเฟือยสำหรับผลิตภัณฑ์ประจำเดือนและยาคุมกำเนิด คำถามคือราคาจะลดลงหรือไม่",
+    ),
+    (
+        "in pakistan taxes on menstrual products can add up activists have long worked to change this now a new budget wipes out the 18% sales tax but questions remain about the impact on prices",
+        "ในปากีสถาน ภาษีผลิตภัณฑ์ประจำเดือนทำให้ราคาสูงขึ้น นักเคลื่อนไหวพยายามผลักดันให้เปลี่ยนเรื่องนี้มานาน ตอนนี้งบประมาณใหม่ยกเลิกภาษีขาย 18% แล้ว แต่ยังมีคำถามว่าราคาสินค้าจะลดลงจริงแค่ไหน",
+    ),
+    (
+        "menstrual products have been subject to an 18% sales tax in pakistan prompting protests",
+        "ผลิตภัณฑ์ประจำเดือนในปากีสถานเคยถูกเก็บภาษีขาย 18% จนทำให้เกิดการประท้วง",
+    ),
+    (
+        "the budget for next fiscal year has the sales tax on these products dropping from 18% to zero",
+        "งบประมาณปีถัดไปลดภาษีขายของสินค้ากลุ่มนี้จาก 18% เหลือศูนย์",
+    ),
+    (
+        "for decades sanitary napkins and other menstrual items have been taxed as luxury goods",
+        "เป็นเวลาหลายสิบปี ผ้าอนามัยและสินค้าสำหรับประจำเดือนอื่น ๆ ถูกเก็บภาษีเหมือนสินค้าฟุ่มเฟือย",
+    ),
+    (
+        "the price has put these products out of reach for many in pakistan",
+        "ราคาที่สูงทำให้หลายคนในปากีสถานซื้อสินค้าเหล่านี้ได้ยาก",
+    ),
+])
 
 DEMO_TOPICS = [
     ("demo-library", "City library adds solar panels to cut energy costs", "Environment",
@@ -426,10 +465,14 @@ def natural_thai_article(raw: dict[str, Any], text: str) -> str:
     )
 
 
+def phrase_key(text: str) -> str:
+    return re.sub(r"[^a-z0-9%]+", " ", normalize(text).lower()).strip()
+
+
 def translated_phrase(text: str) -> str:
-    key = normalize(text).lower().strip(" .!?\"'")
+    key = phrase_key(text)
     for phrase, thai in PHRASE_TRANSLATIONS:
-        if phrase in key:
+        if phrase_key(phrase) in key:
             return thai
     return ""
 
@@ -438,17 +481,11 @@ def sentence_to_thai(sentence: str) -> str:
     direct = translated_phrase(sentence)
     if direct:
         return direct
-    words = [word for word in vocabulary_words(sentence) if word not in STOPWORDS]
-    pairs = [(word, thai_gloss(word)) for word in words]
-    pairs = [(word, meaning) for word, meaning in pairs if meaning][:6]
-    if not pairs:
-        return ""
-    meaning_text = " / ".join(f"{word} = {meaning}" for word, meaning in pairs[:4])
-    return f"ใจความของประโยคนี้เกี่ยวกับ {meaning_text}"
+    return ""
 
 
 def article_thai_sentences(raw: dict[str, Any], text: str) -> list[str]:
-    candidates = [raw.get("description", ""), *sentence_split(text)[:5]]
+    candidates = [raw.get("title", ""), raw.get("description", ""), *sentence_split(text)[:6]]
     output: list[str] = []
     seen: set[str] = set()
     for sentence in candidates:
@@ -456,7 +493,7 @@ def article_thai_sentences(raw: dict[str, Any], text: str) -> list[str]:
         if thai and thai not in seen:
             output.append(thai)
             seen.add(thai)
-        if len(output) >= 4:
+        if len(output) >= 6:
             break
     return output
 
@@ -464,24 +501,14 @@ def article_thai_sentences(raw: dict[str, Any], text: str) -> list[str]:
 def natural_thai_article(raw: dict[str, Any], text: str) -> str:
     category = english_label_for_category(raw.get("category", "news"))
     provider = raw.get("provider", "แหล่งข่าว")
-    title = raw.get("title", "")
     level = raw.get("level", "")
-    title_thai = translated_phrase(title) or sentence_to_thai(title)
     detail_sentences = article_thai_sentences(raw, text)
-    details = " ".join(detail_sentences) or "เนื้อข่าวนี้ควรอ่านโดยจับว่าเกิดอะไรขึ้น ใครเกี่ยวข้อง และผลที่ตามมาคืออะไร"
-    numbers = re.findall(r"\b\d[\d,.]*(?:%| per cent| percent| million| billion| years?| days?)?\b", text, flags=re.I)[:4]
-    number_text = f" ตัวเลขที่ควรสังเกตในข่าวนี้คือ {', '.join(numbers)}." if numbers else ""
-    keywords = [word for word in vocabulary_words(" ".join([title, raw.get("description", ""), text])) if word not in STOPWORDS][:10]
-    keyword_pairs = [(word, thai_gloss(word)) for word in keywords]
-    keyword_pairs = [(word, meaning) for word, meaning in keyword_pairs if meaning][:5]
-    keyword_text = " / ".join(f"{word} = {meaning}" for word, meaning in keyword_pairs)
-    title_line = f"หัวข้อข่าวคือ “{title}”."
-    if title_thai:
-        title_line += f" แปลใจความได้ว่า {title_thai}."
+    details = " ".join(detail_sentences)
+    if not details:
+        details = "เนื้อหาข่าวพูดถึงเหตุการณ์สำคัญและผลกระทบที่ผู้อ่านควรติดตามต่อ โดยควรอ่านจากย่อหน้าภาษาอังกฤษด้านบนประกอบด้วย"
     return (
         f"ข่าวนี้มาจาก {provider} อยู่ในหมวด{category} และถูกเรียบเรียงเป็นระดับ {level}. "
-        f"{title_line} {details}{number_text} "
-        f"คำสำคัญที่ควรรู้: {keyword_text or 'ยังไม่มีคำสำคัญพอสำหรับสรุป'}."
+        f"เนื้อหาข่าวคือ {details}"
     )
 
 

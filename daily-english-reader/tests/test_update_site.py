@@ -130,6 +130,33 @@ class DailyReaderTests(unittest.TestCase):
         self.assertIn("นักดำน้ำ", thai)
         self.assertIn("ถ่ายวิดีโอ", thai)
 
+    def test_natural_thai_article_translates_whole_article_not_word_glosses(self):
+        raw = {
+            "provider": "NPR",
+            "category": "Health",
+            "level": "A1",
+            "title": "Pakistan ends 'luxury tax' on menstrual products, contraceptives. Will prices drop?",
+            "description": (
+                "In Pakistan, taxes on menstrual products can add up. Activists have long worked to change this. "
+                "Now a new budget wipes out the 18% sales tax. But questions remain about the impact on prices."
+            ),
+        }
+        text = (
+            "Menstrual products have been subject to an 18% Sales tax in Pakistan, prompting protests. "
+            "The budget for next fiscal year has the sales tax on these products dropping from 18% to zero. "
+            "For decades, sanitary napkins and other menstrual items have been taxed as luxury goods. "
+            "The price has put these products out of reach for many in Pakistan."
+        )
+        thai = site.natural_thai_article(raw, text)
+        self.assertIn("ข่าวนี้มาจาก NPR", thai)
+        self.assertIn("เนื้อหาข่าวคือ", thai)
+        self.assertIn("ปากีสถาน", thai)
+        self.assertIn("ภาษีขาย 18%", thai)
+        self.assertIn("ผ้าอนามัย", thai)
+        self.assertNotIn("drop =", thai)
+        self.assertNotIn("tax =", thai)
+        self.assertNotIn("ใจความของประโยคนี้เกี่ยวกับ", thai)
+
     def test_rate_limit_pauses_provider(self):
         with tempfile.TemporaryDirectory() as temp:
             quota_path = Path(temp)
