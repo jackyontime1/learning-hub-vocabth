@@ -74,6 +74,13 @@ Updated: June 17, 2026
   - Vocabulary popups now include local part-of-speech labels such as `n.`, `v.`, `adj.`, and `adv.`.
   - RSS source chain now includes CBC News, BBC News, and NPR before optional API-key providers.
   - This does not use Google Cloud TTS and does not consume the Podcast monthly TTS safety cap.
+- Reading fix deployed on June 18, 2026:
+  - GitHub Actions run:
+    `https://github.com/jackyontime1/learning-hub-vocabth/actions/runs/27735481088`
+  - Cloudflare preview deployment:
+    `https://75d17c08.learning-hub-vocabth.pages.dev`
+  - Production URL remains:
+    `https://learning-hub-vocabth.pages.dev/`
 
 ## Oxford Category Distribution
 
@@ -256,6 +263,10 @@ node "D:\podcast voice\daily-english-reader\scripts\build-learning-hub.mjs"
   Python unit tests passed 15/15.
   Python syntax checks passed for `update_site.py` and `tests/test_update_site.py`.
   JS syntax checks passed for `static/js/app.js` and `scripts/build-learning-hub.mjs`.
+- Reading production verification passed on June 18, 2026:
+  `content-index.json` shows six stories for `2026-06-18`, split A2 2 / B1 2 / B2 2.
+  Production article audio uses `.mp3` with `audio/mpeg` and MP3 `ID3` signature.
+  Browser popup verification passed: word `prices` displays `n.` and Thai translation `ราคา`.
 
 ## Backups
 
