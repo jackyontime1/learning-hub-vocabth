@@ -1,12 +1,12 @@
 {
-  "schema_version": 6,
+  "schema_version": 7,
   "id": "9aa1ac964bdade94b8",
   "slug": "us-iran-deal-leaves-core-sticking-points-unresolved-and-a-300bn-question-9aa1ac96",
   "level": "B2",
   "title": "US-Iran deal leaves core sticking points unresolved - and a $300bn question",
   "description": "Trump has insisted the deal ensures that Iran will never buy, develop or produce a nuclear weapon. But text of the agreement falls short of that.",
   "text": "The US-Iran memorandum of understanding announced on Wednesday amounts to a reopening of the Strait of Hormuz, and a deal to try to reach a final agreement on almost everything else. But new details released by US officials in a call with reporters confirm both countries still have a long way to go to reach a comprehensive final peace agreement that achieves Trump's primary goal of stopping Iran from ever developing nuclear weapons. Trump has insisted the deal ensures that Iran will never buy, develop or produce a nuclear weapon. It took the Obama administration 20 months of negotiations to reach the original Iran nuclear deal in 2015. Can the Trump administration do that in just two months? For now, the text of the deal only commits Iran to \"downblending\" its stockpile of highly enriched uranium, under the supervision of the International Atomic Energy Agency (IAEA). A senior US official on Wednesday called it a \"significant concession\" by Iran. Trump has also said the US will not provide any money to Iran.",
-  "thai_text": "ข่าวนี้มาจาก BBC News อยู่ในหมวดข่าวต่างประเทศ และถูกเรียบเรียงเป็นระดับ B2. หัวข้อข่าวคือ “US-Iran deal leaves core sticking points unresolved - and a $300bn question”. โดยรวมแล้ว ข่าวนี้พูดถึงเหตุการณ์สำคัญในต่างประเทศและผลกระทบที่ตามมา ผู้อ่านควรจับใจความว่าเกิดอะไรขึ้น ใครได้รับผลกระทบ และเรื่องนี้อาจเปลี่ยนสถานการณ์ต่อไปอย่างไร. ตัวเลขที่ควรสังเกตในข่าวนี้คือ 20, 2015. คำสำคัญที่ควรรู้: achieves = คำว่า achieves / administration = เรื่อง/ภาวะของ administration / agency = หน่วยงาน / agreement = ข้อตกลง / almost = คำว่า almost.",
+  "thai_text": "ข่าวนี้มาจาก BBC News อยู่ในหมวดข่าวต่างประเทศ และถูกเรียบเรียงเป็นระดับ B2. หัวข้อข่าวคือ “US-Iran deal leaves core sticking points unresolved - and a $300bn question”. แปลใจความได้ว่า ใจความของประโยคนี้เกี่ยวกับ core = แกนกลาง / deal = ข้อตกลง / points = จุด / question = คำถาม. ใจความของประโยคนี้เกี่ยวกับ agreement = ข้อตกลง / buy = ซื้อ / deal = ข้อตกลง / develop = พัฒนา ใจความของประโยคนี้เกี่ยวกับ agreement = ข้อตกลง / almost = เกือบ / amounts = จำนวน / announced = ประกาศ ใจความของประโยคนี้เกี่ยวกับ agreement = ข้อตกลง / call = เรียก / confirm = ยืนยัน / details = รายละเอียด ใจความของประโยคนี้เกี่ยวกับ buy = ซื้อ / deal = ข้อตกลง / develop = พัฒนา / insisted = ยืนกราน ตัวเลขที่ควรสังเกตในข่าวนี้คือ 20, 2015. คำสำคัญที่ควรรู้: agency = หน่วยงาน / agreement = ข้อตกลง / almost = เกือบ / amounts = จำนวน / announced = ประกาศ.",
   "word_translations": {
     "a": "คำว่า a",
     "achieves": "คำว่า achieves",
@@ -238,5 +238,5 @@
     "credit_url": "https://www.bbc.com/news/articles/cgmd8dgklzzo?at_medium=RSS&at_campaign=rss"
   },
   "audio_cache_path": "data/audio/2026-06-14/9aa1ac964bdade94b8-b2.wav",
-  "generated_at": "2026-06-18T05:52:38.627597+00:00"
+  "generated_at": "2026-06-18T17:05:30.376921+00:00"
 }

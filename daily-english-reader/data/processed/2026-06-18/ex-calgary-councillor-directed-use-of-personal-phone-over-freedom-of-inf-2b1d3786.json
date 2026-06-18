@@ -1,12 +1,12 @@
 {
-  "schema_version": 6,
+  "schema_version": 7,
   "id": "2b1d3786ec7d78d7a9",
   "slug": "ex-calgary-councillor-directed-use-of-personal-phone-over-freedom-of-inf-2b1d3786",
   "level": "C1",
   "title": "Ex-Calgary councillor directed use of personal phone over freedom of information concerns: docs",
   "description": "While investigating allegations of corruption at Calgary city hall, police say they uncovered text messages sent by former councillor Sean Chu to a man now accused of offering money for council votes in which Chu said to “keep conversations to his personal phone” because his work phone was “subject to Freedom of Information” disclosure.",
   "text": "While investigating allegations of corruption at Calgary city hall, police say they uncovered text messages sent by former councillor Sean Chu to a man now accused of offering money for council votes in which Chu said to “keep conversations to his personal phone” because his work phone was “subject to Freedom of Information” disclosure. The revelation comes from an affidavit sworn by Det. Matt White, who is leading the investigation, which was launched last summer following a council vote on July 16. Police have executed several search warrants in connection with the investigation and seized the cellphones and other electronic devices of a number of people. Calgary Police Service lawyer Doug Taylor filed an application asking Justice Allan Fradsham to allow investigators to keep the cellphones for an additional nine months. Three of the phones that remain inaccessible to police belong to Chu, former mayor Jyoti Gondek and Nathan Robb, co-founder of Oldstreet, the developer of the proposed Bankview project. The court documents filed as part of CPS’s application reveal the corruption investigation centres around text message conversations found on the cellphone of David White, the founder of CivicWorks, a planning consultant who was guiding Oldstreet through the land-use bylaw amendment application.",
-  "thai_text": "ข่าวนี้มาจาก CBC News อยู่ในหมวดข่าวแคนาดา และถูกเรียบเรียงเป็นระดับ C1. หัวข้อข่าวคือ “Ex-Calgary councillor directed use of personal phone over freedom of information concerns: docs”. โดยรวมแล้ว ข่าวนี้พูดถึงเหตุการณ์หรือการตัดสินใจที่เกี่ยวข้องกับแคนาดา ผู้อ่านควรจับใจความว่าเกิดอะไรขึ้น ใครได้รับผลกระทบ และเรื่องนี้อาจเปลี่ยนสถานการณ์ต่อไปอย่างไร. ตัวเลขที่ควรสังเกตในข่าวนี้คือ 16. คำสำคัญที่ควรรู้: accused = คำว่า accused / additional = คำว่า additional / affidavit = คำว่า affidavit / allan = คำว่า allan / allegations = คำว่า allegations.",
+  "thai_text": "ข่าวนี้มาจาก CBC News อยู่ในหมวดข่าวแคนาดา และถูกเรียบเรียงเป็นระดับ C1. หัวข้อข่าวคือ “Ex-Calgary councillor directed use of personal phone over freedom of information concerns: docs”. แปลใจความได้ว่า ใจความของประโยคนี้เกี่ยวกับ concerns = ความกังวล / directed = โดยตรง / freedom = เสรีภาพ / information = ข้อมูล. ใจความของประโยคนี้เกี่ยวกับ city = เมือง / conversations = บทสนทนา / council = สภา / former = อดีต ใจความของประโยคนี้เกี่ยวกับ council = สภา / following = กำลังติดตาม / investigation = การสืบสวน / july = กรกฎาคม ใจความของประโยคนี้เกี่ยวกับ connection = การเชื่อมต่อ / electronic = อิเล็กทรอนิกส์ / investigation = การสืบสวน / number = ตัวเลข ใจความของประโยคนี้เกี่ยวกับ additional = เพิ่มเติม / allow = อนุญาต / application = แอปพลิเคชัน / asking = ถาม ตัวเลขที่ควรสังเกตในข่าวนี้คือ 16. คำสำคัญที่ควรรู้: additional = เพิ่มเติม / allow = อนุญาต / application = แอปพลิเคชัน / around = รอบ ๆ / asking = ถาม.",
   "word_translations": {
     "a": "คำว่า a",
     "accused": "คำว่า accused",
@@ -296,5 +296,5 @@
     "credit_url": ""
   },
   "audio_cache_path": "data/audio/2026-06-18/2b1d3786ec7d78d7a9-c1.wav",
-  "generated_at": "2026-06-18T05:52:22.424046+00:00"
+  "generated_at": "2026-06-18T17:05:20.753360+00:00"
 }

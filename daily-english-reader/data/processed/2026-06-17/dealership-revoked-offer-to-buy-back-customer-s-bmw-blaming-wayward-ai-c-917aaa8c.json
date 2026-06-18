@@ -1,12 +1,12 @@
 {
-  "schema_version": 6,
+  "schema_version": 7,
   "id": "917aaa8c0faf9b6c87",
   "slug": "dealership-revoked-offer-to-buy-back-customer-s-bmw-blaming-wayward-ai-c-917aaa8c",
   "level": "B2",
   "title": "Dealership revoked offer to buy back customer's BMW, blaming wayward AI chatbot",
   "description": "A Toronto man says he was shocked and devastated when a BMW dealership revoked an offer to buy back his car, telling him an AI chatbot generated the offer by mistake. The dealership has since reinstated the deal, but as Canadian businesses rush to adopt artificial intelligence tools, they face a growing risk of customer backlash if those tools make mistakes.",
   "text": "After his 2021 BMW required major repairs, Zack Giacomelli decided last month he wanted to sell it back to BMW Toronto — the same dealership from which he bought the used car in 2023. After submitting an online inquiry, Giacomelli got a text from Quinn at BMW Toronto, who was eager to help. Quinn expressed sympathy for Giacomelli's car troubles and asked questions about the vehicle, which was still being repaired at the dealership. Later in the same text conversation, Quinn made a firm buy-back offer: $27,162.79. Giacomelli, a 31-year-old funeral director, was satisfied, as the offer was just enough to cover what he still owed on the car. \"I felt this Quinn person was finally hearing me out,\" he said. Moments later, Giacomelli said, a BMW Toronto sales consultant called to revoke the offer, explaining that Quinn wasn't a real person, but rather an artificial intelligence chatbot that had made the offer in error. \"He said the offer is not valid,\" recalled Giacomelli.",
-  "thai_text": "ข่าวนี้มาจาก CBC News อยู่ในหมวดธุรกิจและเศรษฐกิจ และถูกเรียบเรียงเป็นระดับ B2. หัวข้อข่าวคือ “Dealership revoked offer to buy back customer's BMW, blaming wayward AI chatbot”. โดยรวมแล้ว ข่าวนี้พูดถึงความเคลื่อนไหวด้านธุรกิจ เศรษฐกิจ หรือการจ้างงาน ผู้อ่านควรจับใจความว่าเกิดอะไรขึ้น ใครได้รับผลกระทบ และเรื่องนี้อาจเปลี่ยนสถานการณ์ต่อไปอย่างไร. ตัวเลขที่ควรสังเกตในข่าวนี้คือ 2021, 2023, 27,162.79, 31. คำสำคัญที่ควรรู้: adopt = คำว่า adopt / ai = ปัญญาประดิษฐ์ / artificial = คำว่า artificial / asked = ถาม / back = คำว่า back.",
+  "thai_text": "ข่าวนี้มาจาก CBC News อยู่ในหมวดธุรกิจและเศรษฐกิจ และถูกเรียบเรียงเป็นระดับ B2. หัวข้อข่าวคือ “Dealership revoked offer to buy back customer's BMW, blaming wayward AI chatbot”. แปลใจความได้ว่า ใจความของประโยคนี้เกี่ยวกับ ai = ปัญญาประดิษฐ์ / back = หลัง, กลับ / buy = ซื้อ / offer = เสนอ. ใจความของประโยคนี้เกี่ยวกับ adopt = รับเลี้ยง / ai = ปัญญาประดิษฐ์ / artificial = เทียม / back = หลัง, กลับ ใจความของประโยคนี้เกี่ยวกับ back = หลัง, กลับ / car = รถยนต์ / last = ล่าสุด / major = วิชาเอก ใจความของประโยคนี้เกี่ยวกับ help = ช่วย / online = ออนไลน์ / text = ข้อความ ใจความของประโยคนี้เกี่ยวกับ asked = ถาม / car = รถยนต์ / expressed = ด่วน / questions = คำถาม ตัวเลขที่ควรสังเกตในข่าวนี้คือ 2021, 2023, 27,162.79, 31. คำสำคัญที่ควรรู้: adopt = รับเลี้ยง / ai = ปัญญาประดิษฐ์ / artificial = เทียม / asked = ถาม / back = หลัง, กลับ.",
   "word_translations": {
     "a": "คำว่า a",
     "about": "เกี่ยวกับ",
@@ -222,5 +222,5 @@
     "credit_url": ""
   },
   "audio_cache_path": "data/audio/2026-06-17/917aaa8c0faf9b6c87-b2.wav",
-  "generated_at": "2026-06-18T05:52:23.840185+00:00"
+  "generated_at": "2026-06-18T17:05:22.721989+00:00"
 }

@@ -1,12 +1,12 @@
 {
-  "schema_version": 6,
+  "schema_version": 7,
   "id": "6ad7cd6aa3c39451c5",
   "slug": "luigi-mangione-seeks-extreme-emotional-disturbance-defence-in-ceo-killin-6ad7cd6a",
   "level": "B2",
   "title": "Luigi Mangione seeks 'extreme emotional disturbance' defence in CEO killing case",
   "description": "Luigi Mangione, the man accused of gunning down a health insurance executive in Manhattan, plans to argue at trial that he was in a state of \"extreme emotional disturbance\" when he allegedly committed the crime, a judge revealed at a court hearing Wednesday.",
   "text": "Luigi Mangione, the man accused of gunning down a health insurance executive in Manhattan, plans to argue at trial that he was in a state of \"extreme emotional disturbance\" when he allegedly committed the crime, a judge revealed at a court hearing Wednesday. The strategy poses steep legal hurdles but could lead to a jury convicting Mangione of the lesser crime of manslaughter, which carries significantly lighter sentences. Mangione, who appeared in court in a dark suit and white shirt, is accused of fatally shooting UnitedHealthcare CEO Brian Thompson outside a hotel in December 2024. Mangione pleaded not guilty after his arrest later that month to state murder, weapons and forgery charges brought by Manhattan District Attorney Alvin Bragg. His trial is set for September before Justice Gregory Carro in Manhattan. Under New York law, murder defendants can seek to convince a jury that their actions can be explained by an \"extreme emotional disturbance\" that reduces their criminal culpability. Carro will ultimately decide whether there is enough evidence for the murder charge to be reduced.",
-  "thai_text": "ข่าวนี้มาจาก CBC News อยู่ในหมวดข่าวต่างประเทศ และถูกเรียบเรียงเป็นระดับ B2. หัวข้อข่าวคือ “Luigi Mangione seeks 'extreme emotional disturbance' defence in CEO killing case”. โดยรวมแล้ว ข่าวนี้พูดถึงเหตุการณ์สำคัญในต่างประเทศและผลกระทบที่ตามมา ผู้อ่านควรจับใจความว่าเกิดอะไรขึ้น ใครได้รับผลกระทบ และเรื่องนี้อาจเปลี่ยนสถานการณ์ต่อไปอย่างไร. ตัวเลขที่ควรสังเกตในข่าวนี้คือ 2024. คำสำคัญที่ควรรู้: accused = คำว่า accused / actions = คำว่า actions / allegedly = อย่างalleged / alvin = คำว่า alvin / appeared = คำว่า appeared.",
+  "thai_text": "ข่าวนี้มาจาก CBC News อยู่ในหมวดข่าวต่างประเทศ และถูกเรียบเรียงเป็นระดับ B2. หัวข้อข่าวคือ “Luigi Mangione seeks 'extreme emotional disturbance' defence in CEO killing case”. แปลใจความได้ว่า ใจความของประโยคนี้เกี่ยวกับ case = คดี / defence = การป้องกัน / emotional = ทางอารมณ์ / extreme = สุดขีด. ใจความของประโยคนี้เกี่ยวกับ argue = โต้เถียง / court = ศาล / crime = อาชญากรรม / emotional = ทางอารมณ์ ใจความของประโยคนี้เกี่ยวกับ crime = อาชญากรรม / lead = ตะกั่ว / legal = ถูกกฎหมาย / significantly = อย่างมีนัยสำคัญ ใจความของประโยคนี้เกี่ยวกับ appeared = ปรากฏ / court = ศาล / dark = มืด / december = ธันวาคม ใจความของประโยคนี้เกี่ยวกับ arrest = จับกุม / attorney = ทนายความ / district = เขต / guilty = รู้สึกผิด ตัวเลขที่ควรสังเกตในข่าวนี้คือ 2024. คำสำคัญที่ควรรู้: actions = การกระทำ / appeared = ปรากฏ / argue = โต้เถียง / arrest = จับกุม / attorney = ทนายความ.",
   "word_translations": {
     "a": "คำว่า a",
     "accused": "คำว่า accused",
@@ -262,5 +262,5 @@
     "credit_url": ""
   },
   "audio_cache_path": "data/audio/2026-06-15/6ad7cd6aa3c39451c5-b2.wav",
-  "generated_at": "2026-06-18T05:52:36.970438+00:00"
+  "generated_at": "2026-06-18T17:05:28.151318+00:00"
 }

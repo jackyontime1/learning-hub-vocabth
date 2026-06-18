@@ -1,12 +1,12 @@
 {
-  "schema_version": 6,
+  "schema_version": 7,
   "id": "6d09fed0388536baa9",
   "slug": "how-much-of-an-economic-boom-is-the-2026-fifa-world-cup-for-the-u-s-host-6d09fed0",
   "level": "A1",
   "title": "How much of an economic boom is the 2026 FIFA World Cup for the U.S. hosting cities?",
   "description": "The FIFA World Cup is thought to bring an economic windfall to the cities and regions where games will be played during four weeks this summer. How true is that?",
   "text": "The FIFA World Cup is thought to bring. An economic windfall to the cities and. Regions where games will be played during four weeks this summer. SCOTT DETROW, The United States, Canada and. Mexico are playing host to the soccer world. This month as the FIFA World Cup brings. The top 48 teams in the world to North America. DYLAN DUKE, Over the course of the World.",
-  "thai_text": "ข่าวนี้มาจาก NPR อยู่ในหมวดธุรกิจและเศรษฐกิจ และถูกเรียบเรียงเป็นระดับ A1. หัวข้อข่าวคือ “How much of an economic boom is the 2026 FIFA World Cup for the U.S. hosting cities?”. โดยรวมแล้ว ข่าวนี้พูดถึงความเคลื่อนไหวด้านธุรกิจ เศรษฐกิจ หรือการจ้างงาน ผู้อ่านควรจับใจความว่าเกิดอะไรขึ้น ใครได้รับผลกระทบ และเรื่องนี้อาจเปลี่ยนสถานการณ์ต่อไปอย่างไร. ตัวเลขที่ควรสังเกตในข่าวนี้คือ 48. คำสำคัญที่ควรรู้: america = คำว่า america / boom = คำว่า boom / bring = นำมา / brings = นำมา / canada = แคนาดา.",
+  "thai_text": "ข่าวนี้มาจาก NPR อยู่ในหมวดธุรกิจและเศรษฐกิจ และถูกเรียบเรียงเป็นระดับ A1. หัวข้อข่าวคือ “How much of an economic boom is the 2026 FIFA World Cup for the U.S. hosting cities?”. แปลใจความได้ว่า ใจความของประโยคนี้เกี่ยวกับ cup = ถ้วย / economic = ทางเศรษฐกิจ / hosting = เจ้าภาพ / much = มาก. ใจความของประโยคนี้เกี่ยวกับ bring = นำมา / cup = ถ้วย / economic = ทางเศรษฐกิจ / four = สี่ ใจความของประโยคนี้เกี่ยวกับ bring = นำมา / cup = ถ้วย / thought = คิด / world = โลก ใจความของประโยคนี้เกี่ยวกับ economic = ทางเศรษฐกิจ ใจความของประโยคนี้เกี่ยวกับ four = สี่ / played = เล่น / regions = ภูมิภาค / summer = ฤดูร้อน ตัวเลขที่ควรสังเกตในข่าวนี้คือ 48. คำสำคัญที่ควรรู้: bring = นำมา / brings = นำมา / canada = แคนาดา / course = คอร์ส / cup = ถ้วย.",
   "word_translations": {
     "america": "อเมริกา",
     "an": "เป็น",
@@ -118,5 +118,5 @@
     "credit_url": ""
   },
   "audio_cache_path": "data/audio/2026-06-17/6d09fed0388536baa9-a1.wav",
-  "generated_at": "2026-06-18T05:52:22.868487+00:00"
+  "generated_at": "2026-06-18T17:05:21.332580+00:00"
 }

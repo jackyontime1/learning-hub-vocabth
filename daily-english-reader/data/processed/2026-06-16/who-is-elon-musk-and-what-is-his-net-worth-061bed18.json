@@ -1,12 +1,12 @@
 {
-  "schema_version": 6,
+  "schema_version": 7,
   "id": "061bed18bda195b74c",
   "slug": "who-is-elon-musk-and-what-is-his-net-worth-061bed18",
   "level": "A1",
   "title": "Who is Elon Musk and what is his net worth?",
   "description": "The boss of X, Tesla and SpaceX, already the world's richest person, is now also its first trillionaire.",
   "text": "Technology mogul Elon Musk, boss of SpaceX, Tesla and. X (formerly Twitter), has become the world's first trillionaire. For some time Musk has been, or at. Least never far from being, the world's richest person. He became the first person to achieve a. Net worth of more than half a trillion. Dollars (£370.9bn) in October 2025, according to Forbes. But in June 2026, Musk's net worth soared.",
-  "thai_text": "ข่าวนี้มาจาก BBC News อยู่ในหมวดเทคโนโลยี และถูกเรียบเรียงเป็นระดับ A1. หัวข้อข่าวคือ “Who is Elon Musk and what is his net worth?”. โดยรวมแล้ว ข่าวนี้พูดถึงเทคโนโลยี เครื่องมือดิจิทัล หรือผลกระทบของ AI ผู้อ่านควรจับใจความว่าเกิดอะไรขึ้น ใครได้รับผลกระทบ และเรื่องนี้อาจเปลี่ยนสถานการณ์ต่อไปอย่างไร. ตัวเลขที่ควรสังเกตในข่าวนี้คือ 370., 2025, 2026. คำสำคัญที่ควรรู้: according = ตามข้อมูลจาก / achieve = คำว่า achieve / already = คำว่า already / became = คำว่า became / become = กลายเป็น.",
+  "thai_text": "ข่าวนี้มาจาก BBC News อยู่ในหมวดเทคโนโลยี และถูกเรียบเรียงเป็นระดับ A1. หัวข้อข่าวคือ “Who is Elon Musk and what is his net worth?”. แปลใจความได้ว่า ใจความของประโยคนี้เกี่ยวกับ net = สุทธิ / worth = คุณค่า. ใจความของประโยคนี้เกี่ยวกับ already = แล้ว / boss = เจ้านาย / first = อันดับแรก / now = ตอนนี้ ใจความของประโยคนี้เกี่ยวกับ boss = เจ้านาย / technology = เทคโนโลยี ใจความของประโยคนี้เกี่ยวกับ become = กลายเป็น / first = อันดับแรก / formerly = เดิมที ใจความของประโยคนี้เกี่ยวกับ time = เวลา ตัวเลขที่ควรสังเกตในข่าวนี้คือ 370., 2025, 2026. คำสำคัญที่ควรรู้: according = ตามข้อมูลจาก / achieve = บรรลุ, ทำสำเร็จ / already = แล้ว / become = กลายเป็น / boss = เจ้านาย.",
   "word_translations": {
     "a": "คือ",
     "according": "ตาม",
@@ -126,5 +126,5 @@
     "credit_url": "https://www.bbc.com/news/articles/c0r1975ded7o?at_medium=RSS&at_campaign=rss"
   },
   "audio_cache_path": "data/audio/2026-06-16/061bed18bda195b74c-a1.wav",
-  "generated_at": "2026-06-18T05:52:34.929079+00:00"
+  "generated_at": "2026-06-18T17:05:23.755389+00:00"
 }

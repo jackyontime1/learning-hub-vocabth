@@ -1,12 +1,12 @@
 {
-  "schema_version": 6,
+  "schema_version": 7,
   "id": "cc9285216993529205",
   "slug": "bystanders-smash-windows-of-private-jet-to-rescue-passengers-after-crash-cc928521",
   "level": "A2",
   "title": "Bystanders smash windows of private jet to rescue passengers after crash",
   "description": "One of the six people on board died in the crash, a local official said. The five survivors were taken to hospital and are in a stable condition.",
   "text": "Nearly a dozen bystanders and first responders rushed to the scene of. A private jet crash on a Texas motorway on Tuesday to help free trapped passengers. Using what appeared to be a shovel and a sledgehammer, the passers-by and. Emergency officials helped several passengers escape through an opened door, video shows. The aircraft was flying from Los Cabos, Mexico, to Austin, Texas, when. It reported major mechanical issues to Laredo airport, Gilberto Sanchez, the airport's. Director, told the New York Times. One of the six people on board died in the crash, said police.",
-  "thai_text": "ข่าวนี้มาจาก BBC News อยู่ในหมวดข่าวต่างประเทศ และถูกเรียบเรียงเป็นระดับ A2. หัวข้อข่าวคือ “Bystanders smash windows of private jet to rescue passengers after crash”. โดยรวมแล้ว ข่าวนี้พูดถึงเหตุการณ์สำคัญในต่างประเทศและผลกระทบที่ตามมา ผู้อ่านควรจับใจความว่าเกิดอะไรขึ้น ใครได้รับผลกระทบ และเรื่องนี้อาจเปลี่ยนสถานการณ์ต่อไปอย่างไร. คำสำคัญที่ควรรู้: aircraft = คำว่า aircraft / airport = คำว่า airport / airport's = คำว่า airport's / appeared = คำว่า appeared / austin = คำว่า austin.",
+  "thai_text": "ข่าวนี้มาจาก BBC News อยู่ในหมวดข่าวต่างประเทศ และถูกเรียบเรียงเป็นระดับ A2. หัวข้อข่าวคือ “Bystanders smash windows of private jet to rescue passengers after crash”. แปลใจความได้ว่า ใจความของประโยคนี้เกี่ยวกับ crash = ชน / passengers = ผู้โดยสาร / private = ส่วนตัว / rescue = กู้ภัย. ใจความของประโยคนี้เกี่ยวกับ board = กระดาน / condition = เงื่อนไข / crash = ชน / five = ห้า ใจความของประโยคนี้เกี่ยวกับ dozen = โหล / first = อันดับแรก / nearly = เกือบ / rushed = รีบ ใจความของประโยคนี้เกี่ยวกับ crash = ชน / free = ฟรี / help = ช่วย / passengers = ผู้โดยสาร ใจความของประโยคนี้เกี่ยวกับ appeared = ปรากฏ / shovel = พลั่ว / using = เรา คำสำคัญที่ควรรู้: aircraft = อากาศยาน / airport = สนามบิน / appeared = ปรากฏ / board = กระดาน / condition = เงื่อนไข.",
   "word_translations": {
     "a": "คือ",
     "aircraft": "เครื่อง",
@@ -170,5 +170,5 @@
     "credit_url": "https://www.bbc.com/news/articles/cd7wv4144yvo?at_medium=RSS&at_campaign=rss"
   },
   "audio_cache_path": "data/audio/2026-06-17/cc9285216993529205-a2.wav",
-  "generated_at": "2026-06-18T05:52:23.099403+00:00"
+  "generated_at": "2026-06-18T17:05:21.551801+00:00"
 }

@@ -1,12 +1,12 @@
 {
-  "schema_version": 6,
+  "schema_version": 7,
   "id": "7159096b84cb07cb78",
   "slug": "serial-killer-who-murdered-eight-women-in-long-island-town-imprisoned-fo-7159096b",
   "level": "C1",
   "title": "Serial killer who murdered eight women in Long Island town imprisoned for life",
   "description": "In fiery exchange, judge sentenced him to three life sentences plus 25 years to life on four other charges, all running consecutively.",
   "text": "Rex Heuermann, known as the Gilgo Beach serial killer, who admitted to brutally murdering eight women, received the maximum sentence on Wednesday. The sentencing in New York followed a series of angry, poignant statements, as victims' family members described how the brutal losses created \"lifelong devastation\" for them. In April, Heuermann confirmed that he strangled and bound his victims before scattering their remains along Long Island's remote beaches. And you're a coward,\" said Judge Timothy Mazzei as he handed down the sentence in a Riverhead, Long Island courtroom. \"Get him out of here.\" Heuermann, who appeared in a dark suit, blue shirt and grey tie, gave a brief statement before the sentence, claiming responsibility, then acknowledged that at this point, his words had \"no meaning.\" When asked by the judge if he was \"a little bit sorry\", he replied, \"yes\". After initially pleading not guilty, Heuermann ultimately admitted to the murders of: Melissa Barthelemy, 24; Megan Waterman, 22; and Amber Costello, 27; Maureen Brainard-Barnes, 25; Jessica Taylor, 20; Valerie Mack, 24; Sandra Costilla, 28; and Karen Vergata, 34. After the hearing, Suffolk County District Attorney Ray Tierney praised the families of the victims. \"I want them to get their revenge by going on to have wonderful lives…now it's time for them to heal,\" he said.",
-  "thai_text": "ข่าวนี้มาจาก BBC News อยู่ในหมวดข่าวต่างประเทศ และถูกเรียบเรียงเป็นระดับ C1. หัวข้อข่าวคือ “Serial killer who murdered eight women in Long Island town imprisoned for life”. โดยรวมแล้ว ข่าวนี้พูดถึงเหตุการณ์สำคัญในต่างประเทศและผลกระทบที่ตามมา ผู้อ่านควรจับใจความว่าเกิดอะไรขึ้น ใครได้รับผลกระทบ และเรื่องนี้อาจเปลี่ยนสถานการณ์ต่อไปอย่างไร. ตัวเลขที่ควรสังเกตในข่าวนี้คือ 24, 22, 27, 25. คำสำคัญที่ควรรู้: acknowledged = คำว่า acknowledged / admitted = คำว่า admitted / along = คำว่า along / amber = คำว่า amber / angry = คำว่า angry.",
+  "thai_text": "ข่าวนี้มาจาก BBC News อยู่ในหมวดข่าวต่างประเทศ และถูกเรียบเรียงเป็นระดับ C1. หัวข้อข่าวคือ “Serial killer who murdered eight women in Long Island town imprisoned for life”. แปลใจความได้ว่า ใจความของประโยคนี้เกี่ยวกับ eight = แปด / island = เกาะ / life = ชีวิต / long = ยาว. ใจความของประโยคนี้เกี่ยวกับ exchange = แลกเปลี่ยน / four = สี่ / judge = ผู้พิพากษา / life = ชีวิต ใจความของประโยคนี้เกี่ยวกับ beach = ชายหาด / eight = แปด / maximum = สูงสุด / murdering = ฆาตกรรม ใจความของประโยคนี้เกี่ยวกับ angry = โกรธ / described = เล่าว่า / family = ครอบครัว / followed = ติดตาม ใจความของประโยคนี้เกี่ยวกับ along = ตาม / april = เมษายน / beaches = ชายหาด / bound = ผูกพัน ตัวเลขที่ควรสังเกตในข่าวนี้คือ 24, 22, 27, 25. คำสำคัญที่ควรรู้: along = ตาม / angry = โกรธ / appeared = ปรากฏ / april = เมษายน / asked = ถาม.",
   "word_translations": {
     "a": "คำว่า a",
     "acknowledged": "คำว่า acknowledged",
@@ -324,5 +324,5 @@
     "credit_url": "https://www.bbc.com/news/articles/clyw29kvlydo?at_medium=RSS&at_campaign=rss"
   },
   "audio_cache_path": "data/audio/2026-06-12/7159096b84cb07cb78-c1.wav",
-  "generated_at": "2026-06-18T05:52:41.831009+00:00"
+  "generated_at": "2026-06-18T17:05:34.802999+00:00"
 }

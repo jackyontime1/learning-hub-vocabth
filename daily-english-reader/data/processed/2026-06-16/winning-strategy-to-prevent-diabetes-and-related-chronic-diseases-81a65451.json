@@ -1,12 +1,12 @@
 {
-  "schema_version": 6,
+  "schema_version": 7,
   "id": "81a654512add66ddc2",
   "slug": "winning-strategy-to-prevent-diabetes-and-related-chronic-diseases-81a65451",
   "level": "A2",
   "title": "Winning strategy to prevent diabetes and related chronic diseases",
   "description": "In the U.S., 115 million adults have prediabetes, which is tied to heart disease and other health problems. A 20-year follow-up to a landmark diabetes study shows lifestyle interventions cut the risk.",
   "text": "A 20-year follow-up to a landmark diabetes study shows lifestyle interventions cut the risk. AILSA CHANG, There is encouraging news for the roughly 115 million adults. In the U.S. with prediabetes. Taking small steps to change your everyday habits, like tweaks to your diet and. Prioritizing movement, can help prevent both Type 2 diabetes and multiple chronic diseases, including heart disease. NPR's Allison Aubrey joins us now to talk about new research published. This week in the medical journal JAMA. ALLISON AUBREY, Hi. Great to be here.",
-  "thai_text": "ข่าวนี้มาจาก NPR อยู่ในหมวดสุขภาพ และถูกเรียบเรียงเป็นระดับ A2. หัวข้อข่าวคือ “Winning strategy to prevent diabetes and related chronic diseases”. โดยรวมแล้ว ข่าวนี้พูดถึงประเด็นด้านสุขภาพ การแพทย์ หรือคุณภาพชีวิต ผู้อ่านควรจับใจความว่าเกิดอะไรขึ้น ใครได้รับผลกระทบ และเรื่องนี้อาจเปลี่ยนสถานการณ์ต่อไปอย่างไร. ตัวเลขที่ควรสังเกตในข่าวนี้คือ 20, 115 million, 2. คำสำคัญที่ควรรู้: adults = คำว่า adults / ailsa = คำว่า ailsa / allison = คำว่า allison / aubrey = คำว่า aubrey / chang = คำว่า chang.",
+  "thai_text": "ข่าวนี้มาจาก NPR อยู่ในหมวดสุขภาพ และถูกเรียบเรียงเป็นระดับ A2. หัวข้อข่าวคือ “Winning strategy to prevent diabetes and related chronic diseases”. แปลใจความได้ว่า ใจความของประโยคนี้เกี่ยวกับ prevent = ป้องกัน / related = ที่เกี่ยวข้อง / strategy = กลยุทธ์ / winning = ชนะ. ใจความของประโยคนี้เกี่ยวกับ adults = ผู้ใหญ่ / cut = ลด / disease = โรค / health = สุขภาพ ใจความของประโยคนี้เกี่ยวกับ cut = ลด / risk = ความเสี่ยง / shows = แสดงให้เห็น / study = การศึกษา ใจความของประโยคนี้เกี่ยวกับ adults = ผู้ใหญ่ / million = ล้าน / news = ข่าว / roughly = ประมาณ ใจความของประโยคนี้เกี่ยวกับ change = เปลี่ยน / diet = อาหาร / habits = นิสัย / like = ชอบ ตัวเลขที่ควรสังเกตในข่าวนี้คือ 20, 115 million, 2. คำสำคัญที่ควรรู้: adults = ผู้ใหญ่ / change = เปลี่ยน / cut = ลด / diet = อาหาร.",
   "word_translations": {
     "a": "คำว่า a",
     "about": "เกี่ยวกับ",
@@ -168,5 +168,5 @@
     "credit_url": ""
   },
   "audio_cache_path": "data/audio/2026-06-16/81a654512add66ddc2-a2.wav",
-  "generated_at": "2026-06-18T05:52:35.165896+00:00"
+  "generated_at": "2026-06-18T17:05:23.947512+00:00"
 }

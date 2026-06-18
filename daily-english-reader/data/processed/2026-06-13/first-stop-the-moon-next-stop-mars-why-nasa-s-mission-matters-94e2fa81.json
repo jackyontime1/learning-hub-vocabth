@@ -1,12 +1,12 @@
 {
-  "schema_version": 6,
+  "schema_version": 7,
   "id": "94e2fa81e4e66a7d39",
   "slug": "first-stop-the-moon-next-stop-mars-why-nasa-s-mission-matters-94e2fa81",
   "level": "A1",
   "title": "First stop, the Moon. Next stop, Mars? Why Nasa's mission matters",
   "description": "Lunar discoveries and a space race with China is seeing the US invest time and money to get to the Moon - and beyond.",
   "text": "Nasa's Artemis II mission is sending four astronauts. On their way to the Moon. Their voyage around our nearest neighbour will pave. The way for a lunar landing and, eventually, a Moon base. More than 50 years ago, America's Apollo missions. Made history when the first people set foot on the lunar surface. With six landings in total, it felt like. The Moon had been well and.",
-  "thai_text": "ข่าวนี้มาจาก BBC News อยู่ในหมวดวิทยาศาสตร์ และถูกเรียบเรียงเป็นระดับ A1. หัวข้อข่าวคือ “First stop, the Moon. Next stop, Mars? Why Nasa's mission matters”. โดยรวมแล้ว ข่าวนี้พูดถึงการค้นพบ งานวิจัย หรือข้อมูลทางวิทยาศาสตร์ ผู้อ่านควรจับใจความว่าเกิดอะไรขึ้น ใครได้รับผลกระทบ และเรื่องนี้อาจเปลี่ยนสถานการณ์ต่อไปอย่างไร. ตัวเลขที่ควรสังเกตในข่าวนี้คือ 50 years. คำสำคัญที่ควรรู้: ago = คำว่า ago / america's = คำว่า america's / apollo = คำว่า apollo / around = รอบ ๆ / artemis = คำว่า artemis.",
+  "thai_text": "ข่าวนี้มาจาก BBC News อยู่ในหมวดวิทยาศาสตร์ และถูกเรียบเรียงเป็นระดับ A1. หัวข้อข่าวคือ “First stop, the Moon. Next stop, Mars? Why Nasa's mission matters”. แปลใจความได้ว่า ใจความของประโยคนี้เกี่ยวกับ first = อันดับแรก / matters = วัตถุ / moon = ดวงจันทร์ / next = ต่อไป. ใจความของประโยคนี้เกี่ยวกับ beyond = เกิน / get = รับ / invest = ลงทุน / money = เงิน ใจความของประโยคนี้เกี่ยวกับ four = สี่ / sending = ส่ง ใจความของประโยคนี้เกี่ยวกับ moon = ดวงจันทร์ / way = ทาง ใจความของประโยคนี้เกี่ยวกับ around = รอบ ๆ / neighbour = เพื่อนบ้าน ตัวเลขที่ควรสังเกตในข่าวนี้คือ 50 years. คำสำคัญที่ควรรู้: ago = ที่ผ่านมา / around = รอบ ๆ / base = ฐาน / beyond = เกิน.",
   "word_translations": {
     "a": "คือ",
     "ago": "ก่อนหน้านี้",
@@ -132,5 +132,5 @@
     "credit_url": "https://www.bbc.com/news/articles/cd6wp6xenv0o?at_medium=RSS&at_campaign=rss"
   },
   "audio_cache_path": "data/audio/2026-06-13/94e2fa81e4e66a7d39-a1.wav",
-  "generated_at": "2026-06-18T05:52:39.458645+00:00"
+  "generated_at": "2026-06-18T17:05:31.636727+00:00"
 }

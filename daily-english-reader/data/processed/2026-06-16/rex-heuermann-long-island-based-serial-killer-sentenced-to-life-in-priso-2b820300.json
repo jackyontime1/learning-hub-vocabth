@@ -1,12 +1,12 @@
 {
-  "schema_version": 6,
+  "schema_version": 7,
   "id": "2b82030088d2ad4cde",
   "slug": "rex-heuermann-long-island-based-serial-killer-sentenced-to-life-in-priso-2b820300",
   "level": "B2",
   "title": "Rex Heuermann, Long Island-based serial killer, sentenced to life in prison",
   "description": "Rex Heuermann, a New York architect who murdered women for at least 17 years until police realized their deaths were the work of a serial killer, was sentenced Wednesday to life in prison without parole.",
   "text": "Rex Heuermann, a New York architect who murdered women for at least 17 years until police realized their deaths were the work of a serial killer, was sentenced Wednesday to life in prison without parole. The sentencing caps an extraordinary investigation that solved one of New York's most perplexing mysteries — one that began as a series of seemingly unconnected and largely unmarked disappearances of young sex workers. Over time, it became the focus of true-crime documentaries, books and podcasts after police began discovering the victims' skeletal remains along a coastal parkway near Long Island's Gilgo Beach. \"You are disgusting — a despicable man, if you are a man at all,\" the judge said, his voice rising. His ex-wife and two grown children weren't at the sentencing, having said through their lawyers that they'd stay away out of respect for the victims' families. Heuermann, 62, pleaded guilty in April to charges that he murdered seven women: Barthelemy, Taylor, Valerie Mack, Megan Waterman, Amber Lynn Costello, Maureen Brainard-Barnes and Sandra Costilla. Heuermann also admitted in court to killing an eighth victim, Karen Vergata, although he was never charged in her death.",
-  "thai_text": "ข่าวนี้มาจาก CBC News อยู่ในหมวดข่าวต่างประเทศ และถูกเรียบเรียงเป็นระดับ B2. หัวข้อข่าวคือ “Rex Heuermann, Long Island-based serial killer, sentenced to life in prison”. โดยรวมแล้ว ข่าวนี้พูดถึงเหตุการณ์สำคัญในต่างประเทศและผลกระทบที่ตามมา ผู้อ่านควรจับใจความว่าเกิดอะไรขึ้น ใครได้รับผลกระทบ และเรื่องนี้อาจเปลี่ยนสถานการณ์ต่อไปอย่างไร. ตัวเลขที่ควรสังเกตในข่าวนี้คือ 17 years, 62. คำสำคัญที่ควรรู้: admitted = คำว่า admitted / along = คำว่า along / although = คำว่า although / amber = คำว่า amber / april = คำว่า april.",
+  "thai_text": "ข่าวนี้มาจาก CBC News อยู่ในหมวดข่าวต่างประเทศ และถูกเรียบเรียงเป็นระดับ B2. หัวข้อข่าวคือ “Rex Heuermann, Long Island-based serial killer, sentenced to life in prison”. แปลใจความได้ว่า ใจความของประโยคนี้เกี่ยวกับ life = ชีวิต / long = ยาว / prison = คุก. ใจความของประโยคนี้เกี่ยวกับ architect = สถาปนิก / deaths = ความตาย / least = น้อยที่สุด / life = ชีวิต ใจความของประโยคนี้เกี่ยวกับ caps = หมวก / extraordinary = พิเศษ / investigation = การสืบสวน / largely = ส่วนใหญ่ ใจความของประโยคนี้เกี่ยวกับ along = ตาม / beach = ชายหาด / books = หนังสือ / discovering = ค้นพบ ใจความของประโยคนี้เกี่ยวกับ disgusting = น่าขยะแขยง / judge = ผู้พิพากษา / man = ผู้ชาย / voice = เสียง ตัวเลขที่ควรสังเกตในข่าวนี้คือ 17 years, 62. คำสำคัญที่ควรรู้: along = ตาม / although = แม้ว่า / april = เมษายน / architect = สถาปนิก / away = ห่างออกไป.",
   "word_translations": {
     "a": "คำว่า a",
     "admitted": "คำว่า admitted",
@@ -298,5 +298,5 @@
     "credit_url": ""
   },
   "audio_cache_path": "data/audio/2026-06-16/2b82030088d2ad4cde-b2.wav",
-  "generated_at": "2026-06-18T05:52:35.641244+00:00"
+  "generated_at": "2026-06-18T17:05:24.915225+00:00"
 }

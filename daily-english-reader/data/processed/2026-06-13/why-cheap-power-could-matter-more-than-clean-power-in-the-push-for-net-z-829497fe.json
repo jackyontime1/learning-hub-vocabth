@@ -1,12 +1,12 @@
 {
-  "schema_version": 6,
+  "schema_version": 7,
   "id": "829497fea135d12a3f",
   "slug": "why-cheap-power-could-matter-more-than-clean-power-in-the-push-for-net-z-829497fe",
   "level": "C1",
   "title": "Why cheap power could matter more than clean power in the push for net zero",
   "description": "The question of how important making our electricity clean is to going green is coming under increasing scrutiny",
   "text": "\"I'm an early adopter of new technology,\" says Gavin Tait, a 69-year-old from Glasgow, with a hint of pride. So when he received a lump sum on retirement a decade or so ago, he invested in renewable energy: solar panels on the roof, a home battery and a heat pump. \"I noticed my electricity bills were going through the roof,\" he says. Gavin - who wrote in to BBC Your Voice about his experiences - says he knows what the problem was. At best gas delivers nearly one unit of heat for each unit of energy put in; his heat pump can deliver up to three or four units of heat for every unit of power. But as heat pumps run on electricity, he is now paying around 27p per kilowatt-hour, compared with less than 6p for gas that powers a boiler - more than four times as much. One of the issues affecting Gavin's bills is scale. Gavin bought his battery roughly 10 years ago and it is only 1.5 kWh - the best he could afford at the time, but too small to store enough electricity to make much difference. Gavin says he's happy to have the house at 19C or 20C but his wife sometimes turns up the thermostat to 23C.",
-  "thai_text": "ข่าวนี้มาจาก BBC News อยู่ในหมวดวิทยาศาสตร์ และถูกเรียบเรียงเป็นระดับ C1. หัวข้อข่าวคือ “Why cheap power could matter more than clean power in the push for net zero”. โดยรวมแล้ว ข่าวนี้พูดถึงการค้นพบ งานวิจัย หรือข้อมูลทางวิทยาศาสตร์ ผู้อ่านควรจับใจความว่าเกิดอะไรขึ้น ใครได้รับผลกระทบ และเรื่องนี้อาจเปลี่ยนสถานการณ์ต่อไปอย่างไร. ตัวเลขที่ควรสังเกตในข่าวนี้คือ 69, 10 years, 1.5. คำสำคัญที่ควรรู้: adopter = คำว่า adopter / affecting = คำว่า affecting / afford = คำว่า afford / ago = คำว่า ago / around = รอบ ๆ.",
+  "thai_text": "ข่าวนี้มาจาก BBC News อยู่ในหมวดวิทยาศาสตร์ และถูกเรียบเรียงเป็นระดับ C1. หัวข้อข่าวคือ “Why cheap power could matter more than clean power in the push for net zero”. แปลใจความได้ว่า ใจความของประโยคนี้เกี่ยวกับ cheap = ราคาถูก / clean = สะอาด / matter = วัตถุ / net = สุทธิ. ใจความของประโยคนี้เกี่ยวกับ clean = สะอาด / electricity = ไฟฟ้า / going = ไป / green = สีเขียว ใจความของประโยคนี้เกี่ยวกับ early = เร็วขึ้น / new = ใหม่ / pride = ความภาคภูมิใจ / says = พูด ใจความของประโยคนี้เกี่ยวกับ ago = ที่ผ่านมา / battery = แบตเตอรี่ / decade = ทศวรรษ / energy = พลังงาน ใจความของประโยคนี้เกี่ยวกับ bills = ใบแจ้งหนี้ / electricity = ไฟฟ้า / going = ไป / i = ฉัน ตัวเลขที่ควรสังเกตในข่าวนี้คือ 69, 10 years, 1.5. คำสำคัญที่ควรรู้: affecting = ส่งผลกระทบ / afford = จ่ายได้ / ago = ที่ผ่านมา / around = รอบ ๆ / battery = แบตเตอรี่.",
   "word_translations": {
     "a": "คำว่า a",
     "about": "เกี่ยวกับ",
@@ -276,5 +276,5 @@
     "credit_url": "https://www.bbc.com/news/articles/c86ey5n9vx9o?at_medium=RSS&at_campaign=rss"
   },
   "audio_cache_path": "data/audio/2026-06-13/829497fea135d12a3f-c1.wav",
-  "generated_at": "2026-06-18T05:52:40.538921+00:00"
+  "generated_at": "2026-06-18T17:05:33.087690+00:00"
 }

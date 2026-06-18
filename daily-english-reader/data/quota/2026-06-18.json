@@ -2,63 +2,63 @@
   "date": "2026-06-18",
   "providers": {
     "rss_cbc-news-canada": {
-      "requests": 5,
+      "requests": 6,
       "errors": 0,
       "disabled": false,
       "cooldown_until": "",
       "last_error": ""
     },
     "rss_cbc-news-world": {
-      "requests": 5,
+      "requests": 6,
       "errors": 0,
       "disabled": false,
       "cooldown_until": "",
       "last_error": ""
     },
     "rss_cbc-news-business": {
-      "requests": 5,
+      "requests": 6,
       "errors": 0,
       "disabled": false,
       "cooldown_until": "",
       "last_error": ""
     },
     "rss_bbc-news-world": {
-      "requests": 5,
+      "requests": 6,
       "errors": 0,
       "disabled": false,
       "cooldown_until": "",
       "last_error": ""
     },
     "rss_bbc-news-technology": {
-      "requests": 5,
+      "requests": 6,
       "errors": 0,
       "disabled": false,
       "cooldown_until": "",
       "last_error": ""
     },
     "rss_bbc-news-science": {
-      "requests": 5,
+      "requests": 6,
       "errors": 0,
       "disabled": false,
       "cooldown_until": "",
       "last_error": ""
     },
     "rss_npr-world": {
-      "requests": 5,
+      "requests": 6,
       "errors": 0,
       "disabled": false,
       "cooldown_until": "",
       "last_error": ""
     },
     "rss_npr-business": {
-      "requests": 5,
+      "requests": 6,
       "errors": 0,
       "disabled": false,
       "cooldown_until": "",
       "last_error": ""
     },
     "rss_npr-health": {
-      "requests": 5,
+      "requests": 6,
       "errors": 0,
       "disabled": false,
       "cooldown_until": "",
