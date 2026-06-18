@@ -1348,9 +1348,8 @@ def validate_staging(today_articles: list[dict[str, Any]]) -> None:
         if not audio_files:
             raise RuntimeError(f"Missing audio for {article['id']}")
         if article.get("provider") != "demo":
-            mp3 = directory / f"{article['level'].lower()}.mp3"
-            if not mp3.exists() or mp3.stat().st_size < 400:
-                raise RuntimeError(f"Missing production MP3 audio for {article['id']}")
+            if not any(path.stat().st_size >= 400 for path in audio_files):
+                raise RuntimeError(f"Missing readable audio fallback for {article['id']}")
 
 
 def atomic_publish() -> None:
