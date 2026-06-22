@@ -2,19 +2,19 @@ import json
 import base64
 import tempfile
 import unittest
-from datetime import datetime, timezone
 from pathlib import Path
-from unittest.mock import patch
+from unittest.mock import Mock, patch
 
 import update_site as site
 
 
 class FakeResponse:
-    def __init__(self, status, payload=None, text=""):
+    def __init__(self, status, payload=None, text="", headers=None, content=None):
         self.status_code = status
         self._payload = payload or {}
         self.text = text
-        self.content = text.encode("utf-8")
+        self.content = content if content is not None else text.encode("utf-8")
+        self.headers = headers or {}
 
     def json(self):
         return self._payload
@@ -53,19 +53,89 @@ class DailyReaderTests(unittest.TestCase):
             "local_image_url": "http://127.0.0.1:7860",
             "local_image_steps": 12,
             "local_image_timeout": 60,
+            "unsplash_key": "",
+            "timeout": 5,
         }
         with tempfile.TemporaryDirectory() as temp:
             root = Path(temp)
             with patch.object(site, "STATIC_DIR", root / "static"), \
-                 patch.object(site, "IMAGE_CACHE_PATH", root / "images.json"):
-                result = site.image_for(article, FakeSession([FakeResponse(200, payload)]), object(), config)
+                 patch.object(site, "IMAGE_CACHE_PATH", root / "images.json"), \
+                 patch.object(site, "source_page_image", return_value={}), \
+                 patch.object(site, "request_json", side_effect=site.ProviderError("images", "failed", "offline")):
+                result = site.image_for(article, FakeSession([FakeResponse(200, payload)]), Mock(), config)
                 self.assertTrue((root / "static" / "images" / result["local_filename"]).exists())
-                self.assertEqual(result["credit"], "Generated locally with Stable Diffusion")
+                self.assertEqual(result["image_source"], "Local Stable Diffusion")
+
+    def test_source_page_image_extracts_og_image_and_alt(self):
+        article = site.demo_articles()[0]
+        html = '<meta property="og:image" content="https://example.test/topic.jpg"><meta property="og:image:alt" content="Topic image">'
+        result = site.source_page_image(article, FakeSession([FakeResponse(200, text=html)]), {"timeout": 5})
+        self.assertEqual(result["url"], "https://example.test/topic.jpg")
+        self.assertEqual(result["alt"], "Topic image")
+
+    def test_source_media_requires_an_explicitly_allowed_provider(self):
+        article = site.demo_articles()[0]
+        self.assertEqual(site.source_media_license(dict(article, provider="BBC News")), "")
+        self.assertIn("public-domain", site.source_media_license(dict(article, provider="USGS")))
+
+    def test_image_query_uses_title_entities_and_category(self):
+        article = site.demo_articles()[0]
+        query = site.image_query(article)
+        self.assertIn(article["category"].lower(), query.lower())
+        self.assertIn("library", query.lower())
+
+    def test_unique_fallback_image_is_per_article_and_has_full_metadata(self):
+        first, second = site.demo_articles()[:2]
+        with tempfile.TemporaryDirectory() as temp:
+            with patch.object(site, "STATIC_DIR", Path(temp) / "static"):
+                a = site.unique_fallback_image(first, site.image_query(first), "test")
+                b = site.unique_fallback_image(second, site.image_query(second), "test")
+        self.assertNotEqual(a["local_filename"], b["local_filename"])
+        self.assertTrue(a["image_is_fallback"])
+        self.assertEqual(a["image_license"], "Project-owned local asset")
+        self.assertGreater(a["image_relevance_score"], 0)
+
+    def test_image_cache_version_rejects_old_shared_fallback(self):
+        self.assertEqual(site.IMAGE_CACHE_VERSION, 2)
+
+    def test_duplicate_source_image_is_rejected_with_unique_fallback(self):
+        first, second = [dict(row) for row in site.demo_articles()[:2]]
+        first["provider"] = second["provider"] = "USGS"
+        first["image_url"] = second["image_url"] = "https://example.test/shared.jpg"
+        config = {"demo": False, "timeout": 5, "unsplash_key": "", "local_image_url": "", "_used_image_urls": set()}
+        image_response = FakeResponse(200, headers={"content-type": "image/jpeg"}, content=b"x" * 2000)
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            with patch.object(site, "STATIC_DIR", root / "static"), \
+                 patch.object(site, "IMAGE_CACHE_PATH", root / "images.json"), \
+                 patch.object(site, "source_page_image", return_value={}), \
+                 patch.object(site, "request_json", side_effect=site.ProviderError("images", "failed", "offline")):
+                session = FakeSession([image_response])
+                quota = Mock()
+                selected = site.image_for(first, session, quota, config)
+                duplicate = site.image_for(second, session, quota, config)
+        self.assertFalse(selected["image_is_fallback"])
+        self.assertTrue(duplicate["image_is_fallback"])
+        self.assertNotEqual(selected["local_filename"], duplicate["local_filename"])
 
     def test_free_only_cannot_be_disabled(self):
         with patch.dict(site.os.environ, {"FREE_ONLY": "0"}, clear=False):
             with self.assertRaises(RuntimeError):
                 site.config_from_env()
+
+    def test_translation_schema_rebuilds_existing_editions(self):
+        self.assertEqual(site.SCHEMA_VERSION, 9)
+        self.assertEqual(site.TRANSLATION_CACHE_VERSION, 2)
+
+    def test_translation_cache_is_scoped_to_provider_and_model(self):
+        text = "A short article."
+        libre = site.translation_cache_key(text, {"demo": False, "translation_provider": "libre"})
+        nllb = site.translation_cache_key(text, {
+            "demo": False,
+            "translation_provider": "nllb",
+            "nllb_model": "facebook/nllb-200-distilled-600M",
+        })
+        self.assertNotEqual(libre, nllb)
 
     def test_daily_selection_has_two_per_level(self):
         candidates = site.demo_articles()
@@ -103,6 +173,18 @@ class DailyReaderTests(unittest.TestCase):
         cleaned = site.clean_story_text("Last year 2e published a story where you've never too old to play.")
         self.assertIn("Last year we published", cleaned)
         self.assertIn("where you're never too old", cleaned)
+
+    def test_clean_story_text_repairs_split_news_sentences(self):
+        raw = (
+            'For decades, sanitary napkins and. Other menstrual items have been taxed as "luxury goods" and. '
+            'The price has put these products out of. Reach for many in Pakistan.'
+        )
+        cleaned = site.clean_story_text(raw)
+        self.assertIn('sanitary napkins and other menstrual items', cleaned)
+        self.assertIn('"luxury goods". The price', cleaned)
+        self.assertIn('out of reach for many', cleaned)
+        self.assertIn("drained and refilled", site.clean_story_text("The pool was drained and. Refilled yesterday."))
+        self.assertIn("flew over the site", site.clean_story_text("The president flew over. The site on Sunday."))
 
     def test_safe_word_translations_fills_missing_or_bad_values(self):
         result = site.safe_word_translations(["company", "unknown"], {"company": "เธเธฃเธดเธฉเธฑเธ—"})
@@ -156,6 +238,99 @@ class DailyReaderTests(unittest.TestCase):
         self.assertNotIn("drop =", thai)
         self.assertNotIn("tax =", thai)
         self.assertNotIn("ใจความของประโยคนี้เกี่ยวกับ", thai)
+
+    def test_full_thai_article_uses_complete_service_translation(self):
+        raw = {
+            "provider": "BBC News",
+            "category": "World",
+            "level": "A2",
+        }
+        text = "A white cat eats a dog near the house while its owner watches from the garden."
+        translated = "แมวสีขาวกินสุนัขใกล้บ้าน ขณะที่เจ้าของมองดูเหตุการณ์จากในสวน"
+        thai = site.full_thai_article(raw, text, translated)
+        self.assertIn("ข่าวนี้มาจาก BBC News", thai)
+        self.assertIn("เนื้อหาข่าวคือ", thai)
+        self.assertIn(translated, thai)
+        self.assertNotIn("ควรอ่านจากย่อหน้าภาษาอังกฤษ", thai)
+
+    def test_full_thai_translation_rejects_placeholder_text(self):
+        source = "Researchers published a detailed report about changes in the national economy."
+        placeholder = "เนื้อหาข่าวพูดถึงเหตุการณ์สำคัญและผลกระทบที่ผู้อ่านควรติดตามต่อ"
+        self.assertFalse(site.is_useful_thai_translation(source, placeholder))
+        self.assertFalse(site.is_useful_thai_translation(source, ""))
+
+    def test_mojibake_detection_keeps_normal_thai_words(self):
+        self.assertFalse(site.looks_mojibake("เธอบอกว่าเนื้อหาข่าวนี้อ่านง่าย"))
+        self.assertTrue(site.looks_mojibake("เธ\x82เน\x88เธฒเธง"))
+
+    def test_translator_retries_an_empty_cached_article_translation(self):
+        text = "A white cat eats a dog near the house."
+        words = ["cat"]
+        response = FakeResponse(200, {
+            "translatedText": ["แมวสีขาวกินสุนัขใกล้บ้านหลังหนึ่ง", "แมว"],
+        })
+        config = {
+            "demo": False,
+            "translation_provider": "libre",
+            "libre_url": "http://127.0.0.1:5000",
+            "libre_key": "",
+            "timeout": 5,
+        }
+        key = site.translation_cache_key(text, config)
+        with tempfile.TemporaryDirectory() as temp:
+            cache_path = Path(temp) / "translations.json"
+            cache_path.write_text(json.dumps({key: {"thai_text": "", "words": {"cat": "แมว"}}}), encoding="utf-8")
+            with patch.object(site, "TRANSLATION_CACHE_PATH", cache_path):
+                translator = site.Translator(FakeSession([response]), config)
+                thai, translations = translator.translate(text, words)
+        self.assertEqual(thai, "แมวสีขาวกินสุนัขใกล้บ้านหลังหนึ่ง")
+        self.assertEqual(translations["cat"], "แมว")
+
+    def test_nllb_provider_translates_article_once_and_keeps_local_glossary(self):
+        text = "A white cat eats a dog near the house."
+        words = ["cat", "house"]
+        config = {
+            "demo": False,
+            "translation_provider": "nllb",
+            "nllb_model": "facebook/nllb-200-distilled-600M",
+        }
+        with tempfile.TemporaryDirectory() as temp:
+            cache_path = Path(temp) / "translations.json"
+            with patch.object(site, "TRANSLATION_CACHE_PATH", cache_path):
+                translator = site.Translator(FakeSession([]), config)
+                with patch.object(translator, "_nllb_translate", return_value="แมวสีขาวกินสุนัขใกล้บ้าน") as translate:
+                    thai, translations = translator.translate(text, words)
+        translate.assert_called_once_with(text)
+        self.assertEqual(thai, "แมวสีขาวกินสุนัขใกล้บ้าน")
+        self.assertEqual(translations["house"], "บ้าน")
+
+    def test_translation_chunks_preserve_all_sentences(self):
+        text = "One short sentence. Another short sentence. A final short sentence."
+        chunks = site.translation_chunks(text, max_words=5)
+        self.assertGreater(len(chunks), 1)
+        self.assertEqual(" ".join(chunks), text)
+
+    def test_translation_preprocessing_keeps_meaning_but_simplifies_idioms(self):
+        source = "Sanitary napkins have been subject to tax and are out of reach for many people."
+        simplified = site.simplify_translation_source(source)
+        self.assertIn("menstrual pads", simplified.lower())
+        self.assertIn("had tax", simplified.lower())
+        self.assertIn("too expensive for", simplified.lower())
+
+    def test_exact_curated_translation_is_used_only_for_the_whole_sentence(self):
+        sentence = "For decades, sanitary napkins and other menstrual items have been taxed as luxury goods."
+        self.assertEqual(
+            site.exact_translated_phrase(sentence),
+            "เป็นเวลาหลายสิบปี ผ้าอนามัยและสินค้าสำหรับประจำเดือนอื่น ๆ ถูกเก็บภาษีเหมือนสินค้าฟุ่มเฟือย",
+        )
+        self.assertEqual(site.exact_translated_phrase(sentence + " Prices stayed high."), "")
+
+    def test_naturalize_thai_repairs_common_model_spelling_and_terms(self):
+        raw = "กระดาษประจําเดือนแพงเกินไปสําหรับคนหลายคน และทําให้เกิดปัญหา"
+        result = site.naturalize_thai(raw)
+        self.assertIn("ผ้าอนามัย", result)
+        self.assertIn("สำหรับหลายคน", result)
+        self.assertIn("ทำให้", result)
 
     def test_rate_limit_pauses_provider(self):
         with tempfile.TemporaryDirectory() as temp:
@@ -224,6 +399,15 @@ class DailyReaderTests(unittest.TestCase):
         self.assertEqual(rows[0]["category"], "Science")
         self.assertEqual(rows[0]["image_url"], "https://example.test/ocean.jpg")
 
+    def test_nws_request_uses_supported_status_parameter_only(self):
+        session = Mock()
+        session.get.return_value = FakeResponse(200, {"features": []})
+        with tempfile.TemporaryDirectory() as temp:
+            with patch.object(site, "QUOTA_DIR", Path(temp)):
+                rows = site.fetch_nws(session, site.QuotaManager({"nws": 2}), {"timeout": 5})
+        self.assertEqual(rows, [])
+        self.assertEqual(session.get.call_args.kwargs["params"], {"status": "actual"})
+
     def test_demo_edition_detection_requires_all_demo(self):
         rows = site.demo_articles()
         self.assertTrue(site.is_demo_edition(rows))
@@ -236,8 +420,23 @@ class DailyReaderTests(unittest.TestCase):
                 quota = site.QuotaManager({"nasa": 2})
                 quota.requested("nasa")
                 saved = json.loads(quota.path.read_text(encoding="utf-8"))
-                self.assertEqual(saved["date"], datetime.now(timezone.utc).date().isoformat())
+                self.assertEqual(saved["date"], site.expected_edition_date())
                 self.assertEqual(saved["providers"]["nasa"]["requests"], 1)
+
+    def test_provider_status_explains_attempts_selection_and_skips(self):
+        with tempfile.TemporaryDirectory() as temp:
+            with patch.object(site, "QUOTA_DIR", Path(temp)):
+                quota = site.QuotaManager({"rss_example": 3})
+                quota.requested("rss_example")
+                quota.succeeded("rss_example")
+                quota.selected("rss_example", 2)
+                quota.skipped("rss_example", "duplicate article")
+                row = quota.public_status()["providers"]["rss_example"]
+        self.assertTrue(row["attempted"])
+        self.assertEqual(row["request_count"], 1)
+        self.assertEqual(row["success_count"], 1)
+        self.assertEqual(row["selected_count"], 2)
+        self.assertEqual(row["skip_reasons"]["duplicate article"], 1)
 
     def test_validation_rejects_incomplete_edition(self):
         with tempfile.TemporaryDirectory() as temp:

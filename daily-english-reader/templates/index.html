@@ -57,7 +57,7 @@
           {% set featured = day.featured %}
           {% if featured %}
             <section class="featured-story" data-article-id="{{ featured.id }}" data-category="{{ featured.category | lower }}" data-level="{{ featured.level }}">
-              {% if featured.image_url %}<img src="{{ featured.image_url }}" alt="" fetchpriority="high">{% endif %}
+              {% if featured.image_url %}<img src="{{ featured.image_url }}" alt="{{ featured.image_alt }}" fetchpriority="high">{% endif %}
               <div class="hero-shade"></div>
               <div class="featured-label">TOP STORY · {{ featured.level }}</div>
               <div class="featured-copy">
@@ -84,7 +84,7 @@
               <div class="story-grid level-story-grid">
                 {% for article in day.level_groups[level] %}
                   <article class="story-card" data-article-id="{{ article.id }}" data-category="{{ article.category | lower }}" data-level="{{ article.level }}">
-                    <a class="story-image" href="{{ article.page_url }}"><img src="{{ article.image_url }}" alt="" loading="lazy"></a>
+                    <a class="story-image" href="{{ article.page_url }}"><img src="{{ article.image_url }}" alt="{{ article.image_alt }}" loading="lazy"></a>
                     <div class="story-content">
                       <div class="story-meta"><span>{{ article.category }}</span><b class="level-chip {{ level | lower }}">{{ level }}</b></div>
                       <h3><a href="{{ article.page_url }}">{{ article.title }}</a></h3>

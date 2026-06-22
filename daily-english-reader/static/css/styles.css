@@ -315,6 +315,8 @@ main { width: min(1500px, calc(100% - 34px)); margin: 0 auto; padding: 20px 0 50
 .article-hero { position: relative; min-height: 420px; overflow: hidden; border-radius: 8px 8px 0 0; color: #fff; }
 .article-hero-copy { bottom: 28px; }
 .article-action-bar { min-height: 60px; display: flex; align-items: center; justify-content: space-between; padding: 9px 17px; border: 1px solid var(--line); border-top: 0; background: #fff; }
+.image-attribution { margin: 0; padding: 8px 17px; border: 1px solid var(--line); border-top: 0; color: #667085; background: #fff; font-size: 11px; }
+.image-attribution a { margin-left: 5px; }
 .reader-card { margin-top: 14px; overflow: visible; }
 .reader-toolbar {
   display: flex;

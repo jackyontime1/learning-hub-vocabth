@@ -8,8 +8,8 @@ A static, free-only English news reader for Thai learners. The daily build creat
 - Science and technology: NASA, then arXiv.
 - Weather and environment: US National Weather Service.
 - World events and earthquakes: USGS.
-- Images: optional local Stable Diffusion, then source media, Unsplash, Openverse, Wikimedia Commons, and a bundled fallback.
-- Translation: local glossary plus deterministic Thai article summaries, with optional local translation services only when configured.
+- Images: source media, Openverse, Wikimedia Commons, optional free Unsplash, optional local Stable Diffusion, then a unique local SVG fallback.
+- Translation: full-article Thai translation from the local `facebook/nllb-200-distilled-600M` model. Production fails safely instead of publishing a placeholder when translation is unavailable.
 - Speech: browser/iPhone Web Speech is used first for smoother playback; generated audio is optional fallback only.
 - Level adaptation: summa/TextRank and deterministic heuristics. Ollama is optional and local.
 
@@ -47,14 +47,11 @@ Python 3.11 is recommended.
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 pip install -r requirements.txt
-pip install libretranslate
+pip install torch --index-url https://download.pytorch.org/whl/cpu
+pip install transformers sentencepiece
 ```
 
-Install `ffmpeg` and either an English system voice or `espeak-ng`. Start the local translator:
-
-```powershell
-libretranslate --load-only en,th
-```
+Install `ffmpeg` and either an English system voice or `espeak-ng`. Set `READING_TRANSLATION_PROVIDER=nllb` to use the local English-to-Thai model. The model downloads to the Hugging Face cache on first use.
 
 Copy `.env.example` to `.env`. Add only the free API keys you have. Missing providers are skipped.
 
@@ -140,7 +137,7 @@ Optional free content/image provider keys:
 - `NASA_API_KEY` (optional; `DEMO_KEY` works with a smaller NASA limit)
 - `UNSPLASH_ACCESS_KEY`
 
-The workflow keeps `FREE_ONLY=1`, `DEMO_MODE=0`, and `SKIP_AUDIO=1`. Reading playback uses browser/iPhone Web Speech first and keeps a tiny placeholder audio file only for static page compatibility. It does not use the Podcast Google Cloud TTS key or the Podcast monthly safety cap.
+The workflow keeps `FREE_ONLY=1`, `DEMO_MODE=0`, `SKIP_AUDIO=1`, and `REQUIRE_FULL_TRANSLATION=1`. It runs the NLLB English-to-Thai model locally inside GitHub Actions and caches the model, so the article body must have a real Thai translation before deployment. Reading playback uses browser/iPhone Web Speech first and keeps a tiny placeholder audio file only for static page compatibility. It does not use the OpenAI API, Podcast Google Cloud TTS key, or Podcast monthly safety cap. The selected model is licensed CC-BY-NC-4.0 and is intended here for this personal, non-commercial learning project.
 
 If the GitHub repository root is the parent project folder, use `.github/workflows/daily-update.yml`. If the repository root is `daily-english-reader`, use `daily-english-reader/.github/workflows/daily-update.yml` and make sure the Podcast source folder is available at `../deploy-rollback-original` for the combined Learning Hub build.
 

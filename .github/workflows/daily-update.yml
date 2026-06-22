@@ -2,10 +2,12 @@ name: Update Learning Hub Daily Reader
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - main
   schedule:
-    # GitHub cron is UTC only. These two UTC hours cover 05:00 in
-    # America/Toronto across DST; the should-run job below keeps one real run.
-    - cron: "0 9,10 * * *"
+    - cron: "17 5 * * *"
+      timezone: "America/Toronto"
 
 permissions:
   contents: write
@@ -21,13 +23,13 @@ jobs:
       run: ${{ steps.toronto.outputs.run }}
     steps:
       - id: toronto
-        name: Confirm 05:00 America/Toronto
+        name: Confirm manual or Toronto schedule event
         run: |
-          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] || [ "${{ github.event_name }}" = "push" ]; then
             echo "run=true" >> "$GITHUB_OUTPUT"
             exit 0
           fi
-          if [ "$(TZ=America/Toronto date +%H)" = "05" ]; then
+          if [ "${{ github.event.schedule }}" = "17 5 * * *" ]; then
             echo "run=true" >> "$GITHUB_OUTPUT"
           else
             echo "run=false" >> "$GITHUB_OUTPUT"
@@ -37,6 +39,7 @@ jobs:
     needs: should-run
     if: needs.should-run.outputs.run == 'true'
     runs-on: ubuntu-latest
+    timeout-minutes: 180
     defaults:
       run:
         working-directory: daily-english-reader
@@ -53,26 +56,45 @@ jobs:
         with:
           node-version: "22"
 
+      - name: Set expected Ontario date
+        run: |
+          echo "EXPECTED_TORONTO_DATE=$(python -c 'from datetime import datetime; from zoneinfo import ZoneInfo; print(datetime.now(ZoneInfo("America/Toronto")).date())')" >> "$GITHUB_ENV"
+
       - name: Install Python dependencies
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
+          pip install torch==2.12.1 --index-url https://download.pytorch.org/whl/cpu
+          pip install transformers==5.12.1 sentencepiece==0.2.1
+
+      - name: Cache free translation model
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/huggingface
+          key: nllb-200-distilled-600m-v1
 
       - name: Run tests
         run: python -m unittest discover -s tests -v
 
       - name: Preflight no-audio build
-        env:
-          FREE_ONLY: "1"
-          RETENTION_DAYS: "1"
-          DEMO_MODE: "1"
-          SKIP_AUDIO: "1"
-        run: python update_site.py
-
-      - name: Clean preflight output
         run: |
-          today="$(date -u +%F)"
-          rm -rf "data/processed/$today" "data/audio/$today" "data/raw/$today-providers.json" site .site-staging
+          preflight="$(mktemp -d)"
+          cp update_site.py "$preflight/"
+          cp -R templates static "$preflight/"
+          (
+            cd "$preflight"
+            FREE_ONLY=1 RETENTION_DAYS=7 BACKFILL_DAYS=1 DEMO_MODE=1 SKIP_AUDIO=1 REFRESH_TODAY=1 python update_site.py
+          )
+          PREFLIGHT="$preflight" python - <<'PY'
+          import json, os
+          from collections import Counter
+          from pathlib import Path
+          root = Path(os.environ["PREFLIGHT"])
+          rows = json.loads((root / "site/content-index.json").read_text(encoding="utf-8"))
+          assert len(rows) == 10
+          assert Counter(row["level"] for row in rows) == Counter({level: 2 for level in ("A1", "A2", "B1", "B2", "C1")})
+          assert not list(root.rglob("*.mp3"))
+          PY
 
       - name: Build daily reader
         env:
@@ -81,7 +103,9 @@ jobs:
           GUARDIAN_API_KEY: ${{ secrets.GUARDIAN_API_KEY }}
           NASA_API_KEY: ${{ secrets.NASA_API_KEY }}
           UNSPLASH_ACCESS_KEY: ${{ secrets.UNSPLASH_ACCESS_KEY }}
-          LIBRETRANSLATE_URL: http://127.0.0.1:5000
+          READING_TRANSLATION_PROVIDER: nllb
+          READING_TRANSLATION_MODEL: facebook/nllb-200-distilled-600M
+          REQUIRE_FULL_TRANSLATION: "1"
           RETENTION_DAYS: "30"
           BACKFILL_DAYS: "7"
           DEMO_MODE: "0"
@@ -89,22 +113,28 @@ jobs:
           REFRESH_TODAY: "1"
         run: python update_site.py
 
-      - name: Persist rolling cache
-        working-directory: .
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add daily-english-reader/data daily-english-reader/static/images
-          if ! git diff --cached --quiet; then
-            git commit -m "chore: update free daily reader content"
-            git push
-          fi
-
       - name: Check Podcast source
         run: test -d ../deploy-rollback-original || (echo "Missing ../deploy-rollback-original; required for Podcast and Flashcards in the combined Learning Hub" && exit 1)
 
       - name: Build combined Learning Hub
         run: node scripts/build-learning-hub.mjs
+
+      - name: Verify built site before deploy
+        run: |
+          python - <<'PY'
+          import json, os
+          from collections import Counter
+          from pathlib import Path
+          site = Path("site")
+          rows = json.loads((site / "content-index.json").read_text(encoding="utf-8"))
+          expected = os.environ["EXPECTED_TORONTO_DATE"]
+          assert len(rows) == 70, len(rows)
+          assert max(row["date"] for row in rows) == expected
+          today = [row for row in rows if row["date"] == expected]
+          assert len(today) == 10
+          assert Counter(row["level"] for row in today) == Counter({level: 2 for level in ("A1", "A2", "B1", "B2", "C1")})
+          assert json.loads((site / "build-report.json").read_text(encoding="utf-8"))["status"] == "ready"
+          PY
 
       - name: Check Cloudflare secrets
         env:
@@ -114,8 +144,48 @@ jobs:
           test -n "$CLOUDFLARE_API_TOKEN" || (echo "Missing CLOUDFLARE_API_TOKEN secret" && exit 1)
           test -n "$CLOUDFLARE_ACCOUNT_ID" || (echo "Missing CLOUDFLARE_ACCOUNT_ID secret" && exit 1)
 
-      - name: Deploy to Cloudflare Pages
+      - id: preview
+        name: Deploy verification preview to Cloudflare Pages
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          set -o pipefail
+          npx --yes wrangler@latest pages deploy site --project-name learning-hub-vocabth --branch "verify-${GITHUB_RUN_ID}" 2>&1 | tee /tmp/wrangler-preview.log
+          preview_url="$(grep -Eo 'https://[^ ]+\.pages\.dev' /tmp/wrangler-preview.log | tail -1)"
+          test -n "$preview_url"
+          echo "url=$preview_url" >> "$GITHUB_OUTPUT"
+
+      - name: Verify Cloudflare preview
+        run: python scripts/verify-production.py --base-url "${{ steps.preview.outputs.url }}" --expected-date "$EXPECTED_TORONTO_DATE" --schema 9
+
+      - name: Deploy production to Cloudflare Pages
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
         run: npx --yes wrangler@latest pages deploy site --project-name learning-hub-vocabth --branch main
+
+      - name: Verify production
+        run: python scripts/verify-production.py --base-url "https://learning-hub-vocabth.pages.dev/" --expected-date "$EXPECTED_TORONTO_DATE" --schema 9
+
+      - name: Persist verified rolling cache
+        working-directory: .
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add daily-english-reader/data daily-english-reader/static/images
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: update verified daily reader content"
+            git push
+          fi
+
+      - name: Upload diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: daily-reader-diagnostics-${{ github.run_id }}
+          path: |
+            daily-english-reader/data/provider-status.json
+            daily-english-reader/data/build-report.json
+            daily-english-reader/data/raw/*-providers.json
+          if-no-files-found: warn

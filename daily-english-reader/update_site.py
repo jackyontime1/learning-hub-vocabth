@@ -15,6 +15,7 @@ import subprocess
 import sys
 import tempfile
 import time
+import unicodedata
 import warnings
 import wave
 import xml.etree.ElementTree as ET
@@ -23,7 +24,8 @@ from datetime import datetime, timedelta, timezone
 from email.utils import parsedate_to_datetime
 from pathlib import Path
 from typing import Any, Callable
-from urllib.parse import parse_qsl, urlencode, urlparse, urlunparse
+from urllib.parse import parse_qsl, unquote, urlencode, urlparse, urlunparse
+from zoneinfo import ZoneInfo
 
 import requests
 from bs4 import BeautifulSoup, MarkupResemblesLocatorWarning
@@ -43,6 +45,8 @@ QUOTA_DIR = DATA_DIR / "quota"
 AUDIO_CACHE_DIR = DATA_DIR / "audio"
 TRANSLATION_CACHE_PATH = CACHE_DIR / "translations.json"
 IMAGE_CACHE_PATH = CACHE_DIR / "images.json"
+BUILD_REPORT_PATH = DATA_DIR / "build-report.json"
+PROVIDER_STATUS_PATH = DATA_DIR / "provider-status.json"
 TEMPLATE_DIR = ROOT / "templates"
 STATIC_DIR = ROOT / "static"
 SITE_DIR = ROOT / "site"
@@ -59,7 +63,11 @@ UNSPLASH_URL = "https://api.unsplash.com/search/photos"
 OPENVERSE_URL = "https://api.openverse.org/v1/images/"
 COMMONS_URL = "https://commons.wikimedia.org/w/api.php"
 USER_AGENT = "DailyEnglishReader/2.0 (personal educational project; contact=local)"
-SCHEMA_VERSION = 8
+SCHEMA_VERSION = 9
+TRANSLATION_CACHE_VERSION = 2
+IMAGE_CACHE_VERSION = 2
+TORONTO_ZONE = ZoneInfo("America/Toronto")
+MAX_SOURCE_AGE_HOURS = 48
 LEVELS = ("A1", "A2", "B1", "B2", "C1")
 TARGET_PER_LEVEL = 2
 DAILY_ARTICLE_COUNT = len(LEVELS) * TARGET_PER_LEVEL
@@ -103,6 +111,17 @@ SIMPLE_REPLACEMENTS = {
     "difficulties": "problems", "numerous": "many", "obtain": "get",
     "purchase": "buy", "require": "need", "residents": "local people",
     "significant": "important", "subsequently": "later", "utilize": "use",
+}
+
+TRANSLATION_SIMPLIFICATIONS = {
+    "have been subject to": "had",
+    "has been subject to": "had",
+    "prompting": "causing",
+    "next fiscal year": "next budget year",
+    "sanitary napkins": "menstrual pads",
+    "menstrual items": "menstrual products",
+    "wipes out": "removes",
+    "out of reach for": "too expensive for",
 }
 
 DETERMINERS = {"a", "an", "the", "this", "that", "these", "those", "each", "every", "some", "any"}
@@ -298,6 +317,14 @@ def utc_now() -> datetime:
     return datetime.now(timezone.utc)
 
 
+def toronto_now() -> datetime:
+    return utc_now().astimezone(TORONTO_ZONE)
+
+
+def expected_edition_date() -> str:
+    return toronto_now().date().isoformat()
+
+
 def atomic_json(path: Path, value: Any) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     with tempfile.NamedTemporaryFile("w", encoding="utf-8", dir=path.parent, delete=False) as handle:
@@ -314,7 +341,7 @@ def load_json(path: Path, fallback: Any) -> Any:
 
 
 def normalize(value: str) -> str:
-    raw = str(value or "")
+    raw = unicodedata.normalize("NFC", str(value or ""))
     text = BeautifulSoup(raw, "html.parser").get_text(" ") if "<" in raw and ">" in raw else html.unescape(raw)
     return re.sub(r"\s+", " ", text).strip()
 
@@ -336,6 +363,14 @@ def clean_story_text(text: str) -> str:
     text = re.sub(r"\b(?:Image source|Getty Images|Reuters|Associated Press|AP Photo)\b[^.!?]*(?:\.|$)", " ", text, flags=re.I)
     text = re.sub(r"\b2e\b", "we", text)
     text = re.sub(r"\byou['’]ve never too old\b", "you're never too old", text, flags=re.I)
+    text = re.sub(r"\band\.\s+(Other\b)", lambda match: f"and {match.group(1).lower()}", text, flags=re.I)
+    text = re.sub(r"\band\.\s+(?=The\b)", ". ", text, flags=re.I)
+    text = re.sub(r"\band\.\s+([A-Z][a-z]+)", lambda match: f"and {match.group(1).lower()}", text)
+    text = re.sub(
+        r"\b(of|to|for|with|from|in|over|by)\.\s+([A-Z][a-z]+)",
+        lambda match: f"{match.group(1)} {match.group(2).lower()}",
+        text,
+    )
     text = re.sub(r"\s+([,.;:!?])", r"\1", text)
     text = re.sub(r"\b([A-Z])\s*\.\s+([A-Z][a-z])", r"\1. \2", text)
     text = re.sub(r"(?<!\b[A-Z])\.\s+(?=[a-z])", ", ", text)
@@ -429,40 +464,18 @@ def thai_gloss(word: str) -> str:
     return ""
 
 
+def looks_mojibake(value: str) -> bool:
+    return bool(re.search(r"[\u0080-\u009f\ufffd]|โ€|Ã.|Â.", str(value or "")))
+
+
 def safe_word_translations(words: list[str], translated: dict[str, str] | None = None) -> dict[str, str]:
     output: dict[str, str] = {}
     for word in words:
         value = normalize((translated or {}).get(word, ""))
-        if not value or value.lower() == word.lower() or re.search(r"เธ|เน|โ€", value):
+        if not value or value.lower() == word.lower() or looks_mojibake(value):
             value = thai_gloss(word)
         output[word] = value
     return output
-
-
-def natural_thai_article(raw: dict[str, Any], text: str) -> str:
-    category = english_label_for_category(raw.get("category", "news"))
-    provider = raw.get("provider", "แหล่งข่าว")
-    title = raw.get("title", "")
-    numbers = re.findall(r"\b\d[\d,.]*(?:%| per cent| percent| million| billion| years?| days?)?\b", text, flags=re.I)[:4]
-    keywords = [word for word in vocabulary_words(" ".join([title, raw.get("description", ""), text])) if word not in STOPWORDS][:8]
-    keyword_text = " / ".join(f"{word} = {thai_gloss(word)}" for word in keywords[:5])
-    number_text = f" ตัวเลขที่ควรสังเกตในข่าวนี้คือ {', '.join(numbers)}." if numbers else ""
-    level = raw.get("level", "")
-    focus = {
-        "business": "ความเคลื่อนไหวด้านธุรกิจ เศรษฐกิจ หรือการจ้างงาน",
-        "canada": "เหตุการณ์หรือการตัดสินใจที่เกี่ยวข้องกับแคนาดา",
-        "environment": "ผลกระทบต่อธรรมชาติ สิ่งแวดล้อม หรือสภาพอากาศ",
-        "health": "ประเด็นด้านสุขภาพ การแพทย์ หรือคุณภาพชีวิต",
-        "science": "การค้นพบ งานวิจัย หรือข้อมูลทางวิทยาศาสตร์",
-        "technology": "เทคโนโลยี เครื่องมือดิจิทัล หรือผลกระทบของ AI",
-        "world": "เหตุการณ์สำคัญในต่างประเทศและผลกระทบที่ตามมา",
-    }.get(raw.get("category", "").lower(), "ประเด็นสำคัญที่ควรติดตาม")
-    return (
-        f"ข่าวนี้มาจาก {provider} อยู่ในหมวด{category} และถูกเรียบเรียงเป็นระดับ {level}. "
-        f"หัวข้อข่าวคือ “{title}”. โดยรวมแล้ว ข่าวนี้พูดถึง{focus} "
-        f"ผู้อ่านควรจับใจความว่าเกิดอะไรขึ้น ใครได้รับผลกระทบ และเรื่องนี้อาจเปลี่ยนสถานการณ์ต่อไปอย่างไร."
-        f"{number_text} คำสำคัญที่ควรรู้: {keyword_text}."
-    )
 
 
 def phrase_key(text: str) -> str:
@@ -475,6 +488,21 @@ def translated_phrase(text: str) -> str:
         if phrase_key(phrase) in key:
             return thai
     return ""
+
+
+def exact_translated_phrase(text: str) -> str:
+    key = phrase_key(text)
+    for phrase, thai in PHRASE_TRANSLATIONS:
+        if phrase_key(phrase) == key:
+            return thai
+    return ""
+
+
+def simplify_translation_source(text: str) -> str:
+    output = text
+    for original, replacement in TRANSLATION_SIMPLIFICATIONS.items():
+        output = re.sub(rf"\b{re.escape(original)}\b", replacement, output, flags=re.I)
+    return output
 
 
 def sentence_to_thai(sentence: str) -> str:
@@ -498,6 +526,24 @@ def article_thai_sentences(raw: dict[str, Any], text: str) -> list[str]:
     return output
 
 
+def is_useful_thai_translation(source: str, translated: str) -> bool:
+    translated = normalize(translated)
+    if not translated or looks_mojibake(translated):
+        return False
+    if not re.search(r"[\u0e00-\u0e7f]", translated):
+        return False
+    blocked = (
+        "คำแปลภาษาไทยสำหรับบทความตัวอย่าง",
+        "เนื้อหาข่าวพูดถึงเหตุการณ์สำคัญ",
+        "ควรอ่านจากย่อหน้าภาษาอังกฤษ",
+    )
+    if any(placeholder in translated for placeholder in blocked):
+        return False
+    source_words = len(re.findall(r"[A-Za-z]+(?:['-][A-Za-z]+)*", source))
+    thai_characters = len(re.findall(r"[\u0e00-\u0e7f]", translated))
+    return thai_characters >= max(12, source_words * 2)
+
+
 def natural_thai_article(raw: dict[str, Any], text: str) -> str:
     category = english_label_for_category(raw.get("category", "news"))
     provider = raw.get("provider", "แหล่งข่าว")
@@ -509,6 +555,21 @@ def natural_thai_article(raw: dict[str, Any], text: str) -> str:
     return (
         f"ข่าวนี้มาจาก {provider} อยู่ในหมวด{category} และถูกเรียบเรียงเป็นระดับ {level}. "
         f"เนื้อหาข่าวคือ {details}"
+    )
+
+
+def full_thai_article(raw: dict[str, Any], text: str, translated: str) -> str:
+    translated = naturalize_thai(translated)
+    if not is_useful_thai_translation(text, translated):
+        return natural_thai_article(raw, text)
+    category = english_label_for_category(raw.get("category", "news"))
+    provider = raw.get("provider", "แหล่งข่าว")
+    level = raw.get("level", "")
+    if translated[-1] not in ".!?。！？":
+        translated += "."
+    return (
+        f"ข่าวนี้มาจาก {provider} อยู่ในหมวด{category} และถูกเรียบเรียงเป็นระดับ {level}. "
+        f"เนื้อหาข่าวคือ {translated}"
     )
 
 
@@ -567,15 +628,22 @@ class ProviderError(RuntimeError):
 
 class QuotaManager:
     def __init__(self, limits: dict[str, int]) -> None:
-        self.day = utc_now().date().isoformat()
+        self.day = expected_edition_date()
         self.path = QUOTA_DIR / f"{self.day}.json"
         self.limits = limits
         self.state = load_json(self.path, {"date": self.day, "providers": {}})
 
     def record(self, provider: str) -> dict[str, Any]:
-        return self.state["providers"].setdefault(provider, {
-            "requests": 0, "errors": 0, "disabled": False, "cooldown_until": "", "last_error": "",
-        })
+        row = self.state["providers"].setdefault(provider, {})
+        defaults = {
+            "enabled": True, "attempted": False, "selected_count": 0, "skipped_count": 0,
+            "request_count": 0, "success_count": 0, "error_count": 0,
+            "requests": 0, "errors": 0, "disabled": False, "disabled_reason": "",
+            "cooldown_until": "", "last_success": "", "last_error": "", "skip_reasons": {},
+        }
+        for key, value in defaults.items():
+            row.setdefault(key, value)
+        return row
 
     def available(self, provider: str) -> bool:
         record = self.record(provider)
@@ -586,15 +654,44 @@ class QuotaManager:
         return not cooldown or cooldown <= utc_now()
 
     def requested(self, provider: str) -> None:
-        self.record(provider)["requests"] += 1
+        record = self.record(provider)
+        record["attempted"] = True
+        record["requests"] += 1
+        record["request_count"] += 1
+        self.save()
+
+    def succeeded(self, provider: str) -> None:
+        record = self.record(provider)
+        record["success_count"] += 1
+        record["last_success"] = utc_now().isoformat()
+        self.save()
+
+    def selected(self, provider: str, count: int = 1) -> None:
+        self.record(provider)["selected_count"] += count
+        self.save()
+
+    def skipped(self, provider: str, reason: str, count: int = 1) -> None:
+        record = self.record(provider)
+        record["skipped_count"] += count
+        record["skip_reasons"][reason] = record["skip_reasons"].get(reason, 0) + count
+        self.save()
+
+    def disable(self, provider: str, reason: str) -> None:
+        record = self.record(provider)
+        record["enabled"] = False
+        record["disabled"] = True
+        record["disabled_reason"] = reason
         self.save()
 
     def failed(self, provider: str, kind: str, message: str) -> None:
         record = self.record(provider)
         record["errors"] += 1
+        record["error_count"] += 1
         record["last_error"] = f"{kind}: {message}"[:300]
         if kind in {"auth", "forbidden"}:
             record["disabled"] = True
+            record["enabled"] = False
+            record["disabled_reason"] = kind
         elif kind == "rate_limit":
             record["cooldown_until"] = (utc_now() + timedelta(days=1)).replace(
                 hour=0, minute=5, second=0, microsecond=0
@@ -606,18 +703,32 @@ class QuotaManager:
     def save(self) -> None:
         atomic_json(self.path, self.state)
 
-    def public_status(self) -> dict[str, Any]:
+    def public_status(self, *, demo_fallback_blocked: bool = True) -> dict[str, Any]:
         return {
             "updated_at": utc_now().isoformat(),
+            "build_date_utc": utc_now().date().isoformat(),
+            "expected_toronto_date": expected_edition_date(),
+            "demo_fallback_blocked": demo_fallback_blocked,
             "providers": {
                 name: {
-                    "requests": row["requests"],
+                    "provider": name,
+                    "enabled": row["enabled"] and not row["disabled"],
+                    "attempted": row["attempted"],
+                    "selected_count": row["selected_count"],
+                    "skipped_count": row["skipped_count"],
+                    "request_count": row["request_count"],
+                    "success_count": row["success_count"],
+                    "error_count": row["error_count"],
                     "soft_limit": self.limits.get(name, 30 if name.startswith("rss_") else 0),
                     "available": self.available(name),
+                    "last_success": row["last_success"],
                     "cooldown_until": row["cooldown_until"],
                     "last_error": row["last_error"],
+                    "disabled_reason": row["disabled_reason"],
+                    "skip_reasons": row["skip_reasons"],
                 }
-                for name, row in self.state["providers"].items()
+                for name in sorted(self.state["providers"])
+                for row in [self.record(name)]
             },
         }
 
@@ -648,7 +759,9 @@ def request_json(
             if response.status_code >= 500:
                 raise ProviderError(provider, "server", f"HTTP {response.status_code}")
             response.raise_for_status()
-            return response.json()
+            payload = response.json()
+            quota.succeeded(provider)
+            return payload
         except ProviderError as error:
             quota.failed(provider, error.kind, str(error))
             last_error = error
@@ -668,7 +781,7 @@ def request_json(
 def normalized_article(
     provider: str, title: str, description: str, url: str, category: str,
     published: str | None, *, author: str = "", content_type: str = "news",
-    image_url: str = "", thai_demo: str = "",
+    image_url: str = "", thai_demo: str = "", provider_key: str = "",
 ) -> dict[str, Any] | None:
     title, description = normalize(title), normalize(description)
     if not title or len(description.split()) < 18 or not url:
@@ -678,6 +791,7 @@ def normalized_article(
         "description": description, "url": url, "category": category.title(),
         "published": parse_date(published).isoformat(), "author": normalize(author),
         "content_type": content_type, "image_url": image_url, "thai_demo": thai_demo,
+        "provider_key": provider_key or slugify(provider, 32),
     }
 
 
@@ -713,6 +827,7 @@ def demo_articles() -> list[dict[str, Any]]:
 def fetch_currents(session: requests.Session, quota: QuotaManager, config: dict[str, Any]) -> list[dict[str, Any]]:
     key = config["currents_key"]
     if not key:
+        quota.disable("currents", "missing optional free API key")
         return []
     payload = request_json(session, quota, "currents", CURRENTS_URL, params={
         "language": "en", "page_size": 30, "apiKey": key,
@@ -720,13 +835,14 @@ def fetch_currents(session: requests.Session, quota: QuotaManager, config: dict[
     return [item for row in payload.get("news", []) if (item := normalized_article(
         "Currents", row.get("title", ""), row.get("description", ""), row.get("url", ""),
         (row.get("category") or ["World"])[0] if isinstance(row.get("category"), list) else row.get("category", "World"),
-        row.get("published"), author=row.get("author", ""),
+        row.get("published"), author=row.get("author", ""), provider_key="currents",
     ))]
 
 
 def fetch_guardian(session: requests.Session, quota: QuotaManager, config: dict[str, Any]) -> list[dict[str, Any]]:
     key = config["guardian_key"]
     if not key:
+        quota.disable("guardian", "missing optional free API key")
         return []
     payload = request_json(session, quota, "guardian", GUARDIAN_URL, params={
         "api-key": key, "page-size": 30, "order-by": "newest", "show-fields": "trailText,bodyText,thumbnail",
@@ -738,7 +854,7 @@ def fetch_guardian(session: requests.Session, quota: QuotaManager, config: dict[
         item = normalized_article(
             "The Guardian", row.get("webTitle", ""), text, row.get("webUrl", ""),
             row.get("sectionName", "World"), row.get("webPublicationDate"),
-            content_type="news", image_url=fields.get("thumbnail", ""),
+            content_type="news", image_url=fields.get("thumbnail", ""), provider_key="guardian",
         )
         if item:
             articles.append(item)
@@ -750,6 +866,7 @@ def fetch_rss(session: requests.Session, quota: QuotaManager, config: dict[str, 
     for provider, category, url in RSS_FEEDS:
         quota_name = f"rss_{slugify(provider + '-' + category, 24)}"
         if not quota.available(quota_name):
+            quota.skipped(quota_name, "quota or cooldown")
             continue
         quota.requested(quota_name)
         try:
@@ -781,9 +898,11 @@ def fetch_rss(session: requests.Session, quota: QuotaManager, config: dict[str, 
             item = normalized_article(
                 provider, title, description, link, category, published,
                 author=provider, content_type="rss news summary", image_url=image_url,
+                provider_key=quota_name,
             )
             if item:
                 articles.append(item)
+        quota.succeeded(quota_name)
     return articles
 
 
@@ -801,7 +920,7 @@ def fetch_nasa(session: requests.Session, quota: QuotaManager, config: dict[str,
 
 
 def fetch_nws(session: requests.Session, quota: QuotaManager, config: dict[str, Any]) -> list[dict[str, Any]]:
-    payload = request_json(session, quota, "nws", NWS_ALERTS_URL, params={"status": "actual", "limit": 20},
+    payload = request_json(session, quota, "nws", NWS_ALERTS_URL, params={"status": "actual"},
                            headers={"User-Agent": USER_AGENT, "Accept": "application/geo+json"},
                            timeout=config["timeout"])
     articles = []
@@ -849,6 +968,7 @@ def fetch_arxiv(session: requests.Session, quota: QuotaManager, config: dict[str
             "start": 0, "max_results": 12, "sortBy": "submittedDate", "sortOrder": "descending",
         }, timeout=config["timeout"])
         response.raise_for_status()
+        quota.succeeded("arxiv")
     except requests.RequestException as error:
         quota.failed("arxiv", "network", str(error))
         raise ProviderError("arxiv", "failed", str(error)) from error
@@ -884,7 +1004,14 @@ def collect_candidates(session: requests.Session, quota: QuotaManager, config: d
             logging.warning("%s unavailable: %s", name, error)
     unique: dict[str, dict[str, Any]] = {}
     for article in results:
-        unique.setdefault(article["id"], article)
+        provider_key = article.get("provider_key", slugify(article["provider"], 32))
+        if parse_date(article["published"]) < utc_now() - timedelta(hours=MAX_SOURCE_AGE_HOURS):
+            quota.skipped(provider_key, "source older than 48 hours")
+            continue
+        if article["id"] in unique:
+            quota.skipped(provider_key, "duplicate article")
+            continue
+        unique[article["id"]] = article
     return list(unique.values())
 
 
@@ -1043,16 +1170,23 @@ class Translator:
     def __init__(self, session: requests.Session, config: dict[str, Any]) -> None:
         self.session, self.config = session, config
         self.cache = load_json(TRANSLATION_CACHE_PATH, {})
+        self._nllb_tokenizer: Any = None
+        self._nllb_model: Any = None
 
     def translate(self, text: str, words: list[str], demo_thai: str = "") -> tuple[str, dict[str, str]]:
-        key = hashlib.sha256(text.encode()).hexdigest()
+        key = translation_cache_key(text, self.config)
         if key in self.cache and all(word in self.cache[key].get("words", {}) for word in words):
             row = self.cache[key]
-            if not re.search(r"เธ|เน|โ€", row.get("thai_text", "")):
+            if self.config["demo"] or is_useful_thai_translation(text, row.get("thai_text", "")):
                 return row["thai_text"], safe_word_translations(words, row.get("words", {}))
         if self.config["demo"]:
             dictionary = safe_word_translations(words)
             result = (demo_thai or "คำแปลภาษาไทยสำหรับบทความตัวอย่าง", dictionary)
+            self.cache[key] = {"thai_text": result[0], "words": result[1]}
+            atomic_json(TRANSLATION_CACHE_PATH, self.cache)
+            return result
+        if self.config["translation_provider"] == "nllb":
+            result = (self._nllb_translate(text), safe_word_translations(words))
             self.cache[key] = {"thai_text": result[0], "words": result[1]}
             atomic_json(TRANSLATION_CACHE_PATH, self.cache)
             return result
@@ -1070,6 +1204,9 @@ class Translator:
             translated = [value] if isinstance(value, str) else value
         except requests.RequestException:
             translated = self._argos([text, *words])
+            if not translated and self.config["translation_provider"] == "auto":
+                article_translation = self._nllb_translate(text)
+                translated = [article_translation, *("" for _ in words)] if article_translation else None
         if not translated or len(translated) != len(words) + 1:
             result = ("", safe_word_translations(words))
         else:
@@ -1080,6 +1217,44 @@ class Translator:
         self.cache[key] = {"thai_text": result[0], "words": result[1]}
         atomic_json(TRANSLATION_CACHE_PATH, self.cache)
         return result
+
+    def _nllb_translate(self, text: str) -> str:
+        try:
+            import torch  # type: ignore
+            from transformers import AutoModelForSeq2SeqLM, AutoTokenizer  # type: ignore
+
+            if self._nllb_tokenizer is None or self._nllb_model is None:
+                model_name = self.config["nllb_model"]
+                logging.info("Loading local translation model %s", model_name)
+                self._nllb_tokenizer = AutoTokenizer.from_pretrained(model_name, src_lang="eng_Latn")
+                self._nllb_model = AutoModelForSeq2SeqLM.from_pretrained(model_name)
+                self._nllb_model.eval()
+            target_id = self._nllb_tokenizer.convert_tokens_to_ids("tha_Thai")
+            translated_chunks: list[str] = []
+            for chunk in translation_chunks(text):
+                curated = exact_translated_phrase(chunk)
+                if curated:
+                    translated_chunks.append(curated + ("" if curated[-1] in ".!?。！？" else "."))
+                    continue
+                model_input = simplify_translation_source(chunk)
+                encoded = self._nllb_tokenizer(model_input, return_tensors="pt", truncation=True, max_length=512)
+                with torch.inference_mode():
+                    generated = self._nllb_model.generate(
+                        **encoded,
+                        forced_bos_token_id=target_id,
+                        max_length=512,
+                        num_beams=3,
+                    )
+                decoded = normalize(self._nllb_tokenizer.batch_decode(generated, skip_special_tokens=True)[0])
+                if not re.search(r"[\u0e00-\u0e7f]", decoded):
+                    return ""
+                if decoded[-1] not in ".!?。！？":
+                    decoded += "."
+                translated_chunks.append(decoded)
+            return normalize(" ".join(translated_chunks))
+        except (ImportError, OSError, RuntimeError, ValueError, AttributeError) as error:
+            logging.error("Local NLLB translation failed: %s", error)
+            return ""
 
     @staticmethod
     def _argos(values: list[str]) -> list[str] | None:
@@ -1094,132 +1269,122 @@ class Translator:
             return None
 
 
-def image_for(
-    article: dict[str, Any], session: requests.Session, quota: QuotaManager, config: dict[str, Any],
-) -> dict[str, str]:
-    cache = load_json(IMAGE_CACHE_PATH, {})
-    if article["id"] in cache:
-        cached = cache[article["id"]]
-        local_name = cached.get("local_filename")
-        if local_name and (STATIC_DIR / "images" / local_name).exists():
-            return cached
-        if not cached.get("url"):
-            return {"local_filename": "news-fallback.svg", "credit": "Local fallback", "credit_url": ""}
-    if config["demo"]:
-        filename = DEMO_IMAGE_MAP.get(article["title"], "demo-solar-library.png")
-        result = {"local_filename": filename, "credit": "Generated demo image", "credit_url": ""}
-        cache[article["id"]] = result
-        atomic_json(IMAGE_CACHE_PATH, cache)
-        return result
-    if config["local_image_url"]:
-        try:
-            endpoint = f"{config['local_image_url'].rstrip('/')}/sdapi/v1/txt2img"
-            prompt = (
-                f"Realistic editorial news photograph about {article['title']}. "
-                f"Context: {article['description'][:400]}. "
-                "Natural light, documentary photography, accurate real-world details, "
-                "landscape composition, no text, no logo, no watermark."
-            )
-            response = session.post(endpoint, json={
-                "prompt": prompt,
-                "negative_prompt": (
-                    "text, caption, logo, watermark, poster, illustration, cartoon, "
-                    "distorted hands, duplicate people, blurry"
-                ),
-                "width": 1024,
-                "height": 576,
-                "steps": config["local_image_steps"],
-            }, timeout=config["local_image_timeout"])
-            response.raise_for_status()
-            encoded = (response.json().get("images") or [])[0].split(",", 1)[-1]
-            image_bytes = base64.b64decode(encoded, validate=True)
-            if len(image_bytes) < 10_000:
-                raise ValueError("Local image response was too small")
-            filename = f"generated-{article['id']}.png"
-            output = STATIC_DIR / "images" / filename
-            output.parent.mkdir(parents=True, exist_ok=True)
-            output.write_bytes(image_bytes)
-            result = {
-                "local_filename": filename,
-                "credit": "Generated locally with Stable Diffusion",
-                "credit_url": "",
-            }
-            cache[article["id"]] = result
-            atomic_json(IMAGE_CACHE_PATH, cache)
-            return result
-        except (requests.RequestException, ValueError, KeyError, IndexError, json.JSONDecodeError) as error:
-            logging.warning("Local image generator unavailable for %s: %s", article["title"], error)
-    if article.get("image_url"):
-        result = {
-            "url": article["image_url"], "credit": article["provider"], "credit_url": article["url"],
-        }
-        result = cache_image_or_fallback(article, result, session, config)
-        cache[article["id"]] = result
-        atomic_json(IMAGE_CACHE_PATH, cache)
-        return result
-    query = " ".join(re.findall(r"[A-Za-z]{4,}", article["title"])[:6])
-    result_page = 1 + (int(article["id"][:4], 16) % 5)
-    result: dict[str, str] | None = None
-    if config["unsplash_key"]:
-        try:
-            payload = request_json(session, quota, "unsplash", UNSPLASH_URL, params={
-                "query": query, "per_page": 1, "page": result_page, "orientation": "landscape",
-            }, headers={"Authorization": f"Client-ID {config['unsplash_key']}", "Accept-Version": "v1"},
-                timeout=config["timeout"])
-            photo = (payload.get("results") or [])[0]
-            user = photo.get("user", {})
-            result = {
-                "url": add_query(photo["urls"]["raw"], {"w": "1400", "h": "800", "fit": "crop", "q": "78"}),
-                "credit": user.get("name", "Unsplash contributor"),
-                "credit_url": add_query(user.get("links", {}).get("html", "https://unsplash.com"), {
-                    "utm_source": "daily_english_reader", "utm_medium": "referral",
-                }),
-            }
-        except (ProviderError, IndexError, KeyError):
-            result = None
-    if not result:
-        try:
-            payload = request_json(session, quota, "openverse", OPENVERSE_URL, params={
-                "q": query, "page_size": 1, "page": result_page, "license_type": "commercial",
-            }, timeout=config["timeout"])
-            image = (payload.get("results") or [])[0]
-            result = {
-                "url": image.get("url") or image.get("thumbnail", ""),
-                "credit": image.get("creator") or "Openverse contributor",
-                "credit_url": image.get("foreign_landing_url") or "https://openverse.org/",
-            }
-        except (ProviderError, IndexError):
-            result = None
-    if not result:
-        try:
-            payload = request_json(session, quota, "commons", COMMONS_URL, params={
-                "action": "query", "generator": "search", "gsrsearch": query, "gsrnamespace": 6,
-                "gsrlimit": 1, "prop": "imageinfo", "iiprop": "url|extmetadata", "format": "json",
-            }, timeout=config["timeout"])
-            page = next(iter(payload.get("query", {}).get("pages", {}).values()))
-            info = page["imageinfo"][0]
-            result = {
-                "url": info["url"], "credit": "Wikimedia Commons contributor",
-                "credit_url": info.get("descriptionurl", "https://commons.wikimedia.org/"),
-            }
-        except (ProviderError, StopIteration, KeyError):
-            result = None
-    if not result:
-        result = {"local_filename": "demo-solar-library.png", "credit": "Local fallback", "credit_url": ""}
-    result = cache_image_or_fallback(article, result, session, config)
-    cache[article["id"]] = result
-    atomic_json(IMAGE_CACHE_PATH, cache)
-    return result
+def translation_cache_key(text: str, config: dict[str, Any]) -> str:
+    provider = "demo" if config.get("demo") else config.get("translation_provider", "auto")
+    model = config.get("nllb_model", "") if provider == "nllb" else ""
+    payload = f"v{TRANSLATION_CACHE_VERSION}|{provider}|{model}|{text}"
+    return hashlib.sha256(payload.encode()).hexdigest()
+
+
+def translation_chunks(text: str, max_words: int = 45) -> list[str]:
+    chunks: list[str] = []
+    for sentence in sentence_split(text):
+        words = sentence.split()
+        for start in range(0, len(words), max_words):
+            chunks.append(" ".join(words[start:start + max_words]))
+    return chunks or [text]
+
+
+def image_query(article: dict[str, Any]) -> str:
+    entities = re.findall(r"\b(?:[A-Z][A-Za-z'-]+(?:\s+[A-Z][A-Za-z'-]+){0,2})\b", article["title"])
+    words = [
+        word.lower() for word in re.findall(r"[A-Za-z]{3,}", f"{article['title']} {article['category']}")
+        if word.lower() not in STOPWORDS
+    ]
+    terms: list[str] = []
+    for term in [article["category"], *entities, *words]:
+        if term.lower() not in {item.lower() for item in terms}:
+            terms.append(term)
+    return " ".join(terms[:8]) or article["category"]
+
+
+def image_relevance_score(article: dict[str, Any], query: str, candidate_text: str, source_weight: int) -> int:
+    target = set(re.findall(r"[a-z]{3,}", f"{article['title']} {article['category']} {query}".lower())) - STOPWORDS
+    candidate = set(re.findall(r"[a-z]{3,}", normalize(candidate_text).lower())) - STOPWORDS
+    overlap = len(target & candidate)
+    return min(100, source_weight + overlap * 8)
+
+
+def image_record(
+    article: dict[str, Any], query: str, *, url: str = "", local_filename: str = "",
+    source: str, author: str, license_name: str, attribution_url: str, score: int,
+    reason: str, is_fallback: bool = False, alt: str = "",
+) -> dict[str, Any]:
+    local_path = f"static/images/{local_filename}" if local_filename else ""
+    return {
+        "cache_version": IMAGE_CACHE_VERSION,
+        "url": url,
+        "local_filename": local_filename,
+        "image_url": url or local_path,
+        "image_local_path": local_path,
+        "image_source": source,
+        "image_author": author,
+        "image_license": license_name,
+        "image_attribution_url": attribution_url,
+        "image_alt": alt or f"Cover image for {article['title']}",
+        "image_query": query,
+        "image_relevance_score": score,
+        "image_selected_reason": reason,
+        "image_is_fallback": is_fallback,
+        "credit": author or source,
+        "credit_url": attribution_url,
+    }
+
+
+def unique_fallback_image(article: dict[str, Any], query: str, reason: str) -> dict[str, Any]:
+    filename = f"fallback-{article['id'][:12]}.svg"
+    output = STATIC_DIR / "images" / filename
+    output.parent.mkdir(parents=True, exist_ok=True)
+    hue = int(article["id"][:6], 16) % 360
+    keywords = [html.escape(word) for word in query.split()[:4]]
+    label = " / ".join(keywords) or html.escape(article["category"])
+    title = html.escape(article["title"][:92])
+    svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="800" viewBox="0 0 1400 800" role="img" aria-labelledby="title desc">
+<title id="title">{title}</title><desc id="desc">Unique local cover for {title}</desc>
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="hsl({hue},55%,26%)"/><stop offset="1" stop-color="hsl({(hue + 55) % 360},62%,52%)"/></linearGradient></defs>
+<rect width="1400" height="800" fill="url(#g)"/><circle cx="1160" cy="140" r="260" fill="white" opacity=".11"/><circle cx="160" cy="720" r="330" fill="black" opacity=".12"/>
+<text x="90" y="130" fill="white" opacity=".78" font-family="Georgia,serif" font-size="34">{html.escape(article['category'].upper())}</text>
+<text x="90" y="590" fill="white" font-family="Georgia,serif" font-size="58" font-weight="700">{label}</text>
+<text x="90" y="665" fill="white" opacity=".8" font-family="Arial,sans-serif" font-size="26">Daily English Reader</text></svg>'''
+    output.write_text(svg, encoding="utf-8")
+    return image_record(
+        article, query, local_filename=filename, source="Local generated SVG", author="Daily English Reader",
+        license_name="Project-owned local asset", attribution_url="", score=20,
+        reason=reason, is_fallback=True,
+    )
+
+
+def source_page_image(article: dict[str, Any], session: requests.Session, config: dict[str, Any]) -> dict[str, str]:
+    try:
+        response = session.get(article["url"], headers={"User-Agent": USER_AGENT}, timeout=config["timeout"])
+        response.raise_for_status()
+        soup = BeautifulSoup(response.text, "html.parser")
+        node = soup.select_one('meta[property="og:image"], meta[name="twitter:image"]')
+        if not node or not node.get("content"):
+            return {}
+        alt_node = soup.select_one('meta[property="og:image:alt"], meta[name="twitter:image:alt"]')
+        return {"url": node["content"], "alt": alt_node.get("content", "") if alt_node else ""}
+    except requests.RequestException:
+        return {}
+
+
+def source_media_license(article: dict[str, Any]) -> str:
+    return {
+        "NASA": "NASA Media Usage Guidelines",
+        "USGS": "U.S. government public-domain media",
+        "US National Weather Service": "U.S. government public-domain media",
+    }.get(article.get("provider", ""), "")
 
 
 def cache_image_or_fallback(
-    article: dict[str, Any], result: dict[str, str], session: requests.Session, config: dict[str, Any],
-) -> dict[str, str]:
+    article: dict[str, Any], result: dict[str, Any], session: requests.Session,
+    config: dict[str, Any], query: str, fallback_on_error: bool = True,
+) -> dict[str, Any] | None:
     if result.get("local_filename"):
         return result
     url = result.get("url", "")
     if not url:
-        return {"local_filename": "news-fallback.svg", "credit": "Local fallback", "credit_url": ""}
+        return unique_fallback_image(article, query, "No usable free image candidate") if fallback_on_error else None
     try:
         response = session.get(url, headers={"User-Agent": USER_AGENT}, timeout=config["timeout"])
         response.raise_for_status()
@@ -1231,14 +1396,211 @@ def cache_image_or_fallback(
         output = STATIC_DIR / "images" / filename
         output.parent.mkdir(parents=True, exist_ok=True)
         output.write_bytes(response.content)
-        return {
-            "local_filename": filename,
-            "credit": result.get("credit", article["provider"]),
-            "credit_url": result.get("credit_url", article["url"]),
-        }
+        result["local_filename"] = filename
+        result["image_local_path"] = f"static/images/{filename}"
+        result["image_url"] = result["image_local_path"]
+        return result
     except (requests.RequestException, ValueError, OSError) as error:
         logging.info("Image cache failed for %s: %s", article["title"], error)
-        return {"local_filename": "news-fallback.svg", "credit": "Local fallback", "credit_url": ""}
+        if fallback_on_error:
+            return unique_fallback_image(article, query, f"Selected image was unavailable: {type(error).__name__}")
+        return None
+
+
+def local_generated_image(
+    article: dict[str, Any], query: str, session: requests.Session, config: dict[str, Any],
+) -> dict[str, Any] | None:
+    if not config.get("local_image_url"):
+        return None
+    try:
+        endpoint = f"{config['local_image_url'].rstrip('/')}/sdapi/v1/txt2img"
+        response = session.post(endpoint, json={
+            "prompt": (
+                f"Realistic editorial news photograph about {article['title']}. "
+                f"Context: {article['description'][:400]}. Natural light, accurate details, "
+                "landscape composition, no text, no logo, no watermark."
+            ),
+            "negative_prompt": "text, caption, logo, watermark, poster, cartoon, blurry",
+            "width": 1024, "height": 576, "steps": config.get("local_image_steps", 20),
+        }, timeout=config.get("local_image_timeout", 180))
+        response.raise_for_status()
+        encoded = (response.json().get("images") or [])[0].split(",", 1)[-1]
+        image_bytes = base64.b64decode(encoded, validate=True)
+        if len(image_bytes) < 10_000:
+            raise ValueError("Local image response was too small")
+        filename = f"generated-{article['id']}.png"
+        output = STATIC_DIR / "images" / filename
+        output.parent.mkdir(parents=True, exist_ok=True)
+        output.write_bytes(image_bytes)
+        return image_record(
+            article, query, local_filename=filename, source="Local Stable Diffusion",
+            author="Generated locally", license_name="Project-owned local generation", attribution_url="",
+            score=40, reason="Generated locally after free image sources returned no usable result",
+        )
+    except (requests.RequestException, ValueError, KeyError, IndexError, json.JSONDecodeError) as error:
+        logging.warning("Local image generator unavailable for %s: %s", article["title"], error)
+        return None
+
+
+def image_for(
+    article: dict[str, Any], session: requests.Session, quota: QuotaManager, config: dict[str, Any],
+) -> dict[str, Any]:
+    cache = load_json(IMAGE_CACHE_PATH, {})
+    query = image_query(article)
+    used: set[str] = config.setdefault("_used_image_urls", set())
+
+    def track_selection(result: dict[str, Any]) -> None:
+        if result.get("image_is_fallback"):
+            quota.skipped("images", result.get("image_selected_reason") or "local fallback image")
+            return
+        provider = {
+            "Openverse": "openverse",
+            "Wikimedia Commons": "commons",
+            "Unsplash": "unsplash",
+            "Local Stable Diffusion": "local-images",
+        }.get(result.get("image_source"), "source-images")
+        quota.selected(provider)
+    cached = cache.get(article["id"], {})
+    local_name = cached.get("local_filename")
+    cache_identity = cached.get("url") or local_name
+    if (
+        cached.get("cache_version") == IMAGE_CACHE_VERSION
+        and local_name and (STATIC_DIR / "images" / local_name).exists()
+        and cache_identity not in used
+    ):
+        used.add(cache_identity)
+        return cached
+    if config.get("demo", False):
+        filename = DEMO_IMAGE_MAP.get(article["title"])
+        result = image_record(
+            article, query, local_filename=filename or f"fallback-{article['id'][:12]}.svg",
+            source="Bundled demo asset", author="Daily English Reader", license_name="Project-owned local asset",
+            attribution_url="", score=80 if filename else 20, reason="Curated demo topic image",
+            is_fallback=not bool(filename),
+        ) if filename else unique_fallback_image(article, query, "No curated demo image")
+        cache[article["id"]] = result
+        atomic_json(IMAGE_CACHE_PATH, cache)
+        used.add(result.get("local_filename", ""))
+        track_selection(result)
+        return result
+
+    candidates: list[dict[str, Any]] = []
+    source_license = source_media_license(article)
+    if article.get("image_url") and source_license:
+        candidates.append(image_record(
+            article, query, url=article["image_url"], source=article["provider"],
+            author=article.get("author") or article["provider"], license_name=source_license,
+            attribution_url=article["url"], score=95, reason="Image supplied by the RSS/source feed",
+        ))
+    source_image = source_page_image(article, session, config) if source_license else {}
+    if source_image:
+        candidates.append(image_record(
+            article, query, url=source_image["url"], source=article["provider"],
+            author=article.get("author") or article["provider"], license_name=source_license,
+            attribution_url=article["url"], score=88, reason="Source page og:image",
+            alt=source_image.get("alt", ""),
+        ))
+
+    for source_candidate in sorted(candidates, key=lambda row: row["image_relevance_score"], reverse=True):
+        if source_candidate.get("url") in used:
+            continue
+        source_result = cache_image_or_fallback(
+            article, source_candidate, session, config, query, fallback_on_error=False,
+        )
+        if source_result:
+            identity = source_result.get("url") or source_result.get("local_filename", "")
+            if identity:
+                used.add(identity)
+            cache[article["id"]] = source_result
+            atomic_json(IMAGE_CACHE_PATH, cache)
+            track_selection(source_result)
+            return source_result
+    candidates = []
+
+    def add_openverse() -> None:
+        try:
+            payload = request_json(session, quota, "openverse", OPENVERSE_URL, params={
+                "q": query, "page_size": 8, "license_type": "commercial",
+            }, timeout=config["timeout"])
+            for row in payload.get("results", []):
+                url = row.get("url") or row.get("thumbnail", "")
+                text = f"{row.get('title', '')} {' '.join(row.get('tags') or [])}"
+                candidates.append(image_record(
+                    article, query, url=url, source="Openverse", author=row.get("creator") or "Openverse contributor",
+                    license_name=" ".join(filter(None, [row.get("license", ""), row.get("license_version", "")])),
+                    attribution_url=row.get("foreign_landing_url") or "https://openverse.org/",
+                    score=image_relevance_score(article, query, text, 55), reason="Best relevant Openverse result",
+                    alt=row.get("title", ""),
+                ))
+        except ProviderError:
+            pass
+
+    def add_commons() -> None:
+        try:
+            payload = request_json(session, quota, "commons", COMMONS_URL, params={
+                "action": "query", "generator": "search", "gsrsearch": query, "gsrnamespace": 6,
+                "gsrlimit": 8, "prop": "imageinfo", "iiprop": "url|extmetadata", "format": "json",
+            }, timeout=config["timeout"])
+            for page in payload.get("query", {}).get("pages", {}).values():
+                info = (page.get("imageinfo") or [{}])[0]
+                meta = info.get("extmetadata", {})
+                value = lambda name: normalize(meta.get(name, {}).get("value", ""))
+                candidates.append(image_record(
+                    article, query, url=info.get("url", ""), source="Wikimedia Commons",
+                    author=value("Artist") or "Wikimedia Commons contributor",
+                    license_name=value("LicenseShortName") or "Wikimedia Commons license",
+                    attribution_url=info.get("descriptionurl", "https://commons.wikimedia.org/"),
+                    score=image_relevance_score(article, query, f"{page.get('title', '')} {value('ImageDescription')}", 50),
+                    reason="Best relevant Wikimedia Commons result", alt=value("ImageDescription"),
+                ))
+        except ProviderError:
+            pass
+
+    add_openverse()
+    add_commons()
+    if config.get("unsplash_key"):
+        try:
+            payload = request_json(session, quota, "unsplash", UNSPLASH_URL, params={
+                "query": query, "per_page": 8, "page": 1, "orientation": "landscape",
+            }, headers={"Authorization": f"Client-ID {config['unsplash_key']}", "Accept-Version": "v1"},
+                timeout=config["timeout"])
+            for photo in payload.get("results", []):
+                user = photo.get("user", {})
+                candidates.append(image_record(
+                    article, query,
+                    url=add_query(photo["urls"]["raw"], {"w": "1400", "h": "800", "fit": "crop", "q": "78"}),
+                    source="Unsplash", author=user.get("name", "Unsplash contributor"),
+                    license_name="Unsplash License",
+                    attribution_url=add_query(user.get("links", {}).get("html", "https://unsplash.com"), {
+                        "utm_source": "daily_english_reader", "utm_medium": "referral",
+                    }),
+                    score=image_relevance_score(article, query, photo.get("description") or photo.get("alt_description", ""), 45),
+                    reason="Best relevant Unsplash free-key result", alt=photo.get("alt_description", ""),
+                ))
+        except (ProviderError, KeyError):
+            pass
+    else:
+        quota.disable("unsplash", "missing optional free access key")
+
+    candidates = [
+        row for row in candidates
+        if row.get("url") and row["url"] not in used
+        and row.get("image_author") and row.get("image_license") and row.get("image_attribution_url")
+    ]
+    candidates.sort(key=lambda row: row["image_relevance_score"], reverse=True)
+    local_result = local_generated_image(article, query, session, config) if not candidates else None
+    result = cache_image_or_fallback(
+        article, candidates[0] if candidates else (local_result or {}), session, config, query,
+    )
+    if result is None:
+        result = unique_fallback_image(article, query, "No usable free image candidate")
+    identity = result.get("url") or result.get("local_filename", "")
+    if identity:
+        used.add(identity)
+    cache[article["id"]] = result
+    atomic_json(IMAGE_CACHE_PATH, cache)
+    track_selection(result)
+    return result
 
 
 def source_material(raw: dict[str, Any], session: requests.Session, config: dict[str, Any]) -> str:
@@ -1280,9 +1642,18 @@ def naturalize_thai(text: str) -> str:
         "ในขณะที่": "ขณะที่",
         "ดังกล่าว": "นี้",
         "รายงานว่า": "รายงานว่า",
+        "ผลิตภัณฑ์ประจําเดือน": "ผลิตภัณฑ์สำหรับประจำเดือน",
+        "กระดาษประจําเดือน": "ผ้าอนามัย",
+        "สาปิสุขภาพ": "ผ้าอนามัย",
+        "ถูกภาษีเป็นสินค้าหรูหรา": "ถูกเก็บภาษีในฐานะสินค้าฟุ่มเฟือย",
+        "คนหลายคน": "หลายคน",
+        "ประจํา": "ประจำ",
+        "สําหรับ": "สำหรับ",
+        "ทํา": "ทำ",
     }
     for formal, natural in replacements.items():
         text = text.replace(formal, natural)
+    text = re.sub(r"([.!?])(?=[\u0e00-\u0e7f])", r"\1 ", text)
     text = re.sub(r"\s+([,.!?])", r"\1", text)
     text = re.sub(r"\s{2,}", " ", text)
     return text.strip()
@@ -1358,9 +1729,10 @@ def process_article(
     material = source_material(raw, session, config)
     text = adapt_level(material, raw["level"], config, session)
     words = vocabulary_words(text)
-    thai_text, translations = translator.translate(text, words, raw.get("thai_demo", ""))
-    thai_text = naturalize_thai(thai_text)
-    thai_text = natural_thai_article(raw, text)
+    translated_thai, translations = translator.translate(text, words, raw.get("thai_demo", ""))
+    if config["require_full_translation"] and not is_useful_thai_translation(text, translated_thai):
+        raise RuntimeError(f"Full Thai translation unavailable for article {raw['id']}")
+    thai_text = full_thai_article(raw, text, translated_thai)
     translations = safe_word_translations(words, translations)
     word_pos = {word: part_of_speech(word) for word in words}
     audio_path = generate_audio(text, raw["id"], raw["level"], published_date, config)
@@ -1405,6 +1777,28 @@ def load_articles(retention_days: int) -> list[dict[str, Any]]:
     return sorted(articles, key=lambda row: parse_date(row["generated_at"]), reverse=True)
 
 
+def load_articles_any_schema(retention_days: int) -> list[dict[str, Any]]:
+    cutoff = utc_now() - timedelta(days=retention_days)
+    articles = []
+    for path in PROCESSED_DIR.glob("*/*.json"):
+        row = load_json(path, None)
+        if row and parse_date(row.get("generated_at")) >= cutoff:
+            articles.append(row)
+    return sorted(articles, key=lambda row: parse_date(row["generated_at"]), reverse=True)
+
+
+def processed_to_source(article: dict[str, Any]) -> dict[str, Any]:
+    image = article.get("image", {})
+    return {
+        "id": article["id"], "provider": article["provider"], "provider_key": slugify(article["provider"], 32),
+        "title": article["title"], "description": article["description"],
+        "url": article.get("source_url", ""), "category": article["category"],
+        "published": article["published"], "author": article.get("author", ""),
+        "content_type": article.get("content_type", "news"),
+        "image_url": image.get("url", ""), "thai_demo": "", "level": article["level"],
+    }
+
+
 def article_view(article: dict[str, Any], base_prefix: str) -> dict[str, Any]:
     audio_source = ROOT / article["audio_cache_path"]
     image = article["image"]
@@ -1417,13 +1811,17 @@ def article_view(article: dict[str, Any], base_prefix: str) -> dict[str, Any]:
         **article,
         "page_url": f"{base_prefix}news/{article['published_date']}/{article['slug']}/index.html",
         "image_url": image_url,
+        "image_alt": image.get("image_alt") or f"Cover image for {article['title']}",
         "published_display": parse_date(article["published"]).strftime("%d %b %Y"),
         "word_html": word_spans(article["text"], article["word_translations"], article.get("word_pos", {})),
         "audio_source": audio_source,
     }
 
 
-def render_site(articles: list[dict[str, Any]], quota: QuotaManager) -> None:
+def render_site(
+    articles: list[dict[str, Any]], quota: QuotaManager, expected_date: str,
+    build_report: dict[str, Any],
+) -> None:
     if STAGING_DIR.exists():
         shutil.rmtree(STAGING_DIR)
     shutil.copytree(STATIC_DIR, STAGING_DIR / "static")
@@ -1432,10 +1830,14 @@ def render_site(articles: list[dict[str, Any]], quota: QuotaManager) -> None:
         "description": "Free daily English news practice for Thai learners.",
         "updated_at": utc_now().astimezone().strftime("%d %b %Y, %H:%M"),
     }
-    views = [article_view(article, "") for article in articles]
-    today = utc_now().date().isoformat()
-    recent_cutoff = utc_now().date() - timedelta(days=6)
-    recent = [row for row in views if parse_date(row["published_date"]).date() >= recent_cutoff]
+    today = expected_date
+    recent_cutoff = datetime.fromisoformat(expected_date).date() - timedelta(days=6)
+    site_articles = [
+        row for row in articles
+        if recent_cutoff <= parse_date(row["published_date"]).date() <= datetime.fromisoformat(expected_date).date()
+    ]
+    views = [article_view(article, "") for article in site_articles]
+    recent = list(views)
     today_views = [row for row in views if row["published_date"] == today]
     available_dates = sorted({row["published_date"] for row in recent}, reverse=True)[:7]
     home_days = []
@@ -1477,7 +1879,7 @@ def render_site(articles: list[dict[str, Any]], quota: QuotaManager) -> None:
 
     content_index = []
     article_template = env.get_template("article.html")
-    for article in articles:
+    for article in site_articles:
         directory = STAGING_DIR / "news" / article["published_date"] / article["slug"]
         directory.mkdir(parents=True, exist_ok=True)
         view = article_view(article, "../../../")
@@ -1500,17 +1902,66 @@ def render_site(articles: list[dict[str, Any]], quota: QuotaManager) -> None:
             "image": article_view(article, "")["image_url"],
         })
     atomic_json(STAGING_DIR / "content-index.json", content_index)
-    atomic_json(STAGING_DIR / "provider-status.json", quota.public_status())
-    validate_staging(today_views)
+    provider_status = quota.public_status(
+        demo_fallback_blocked=not bool(build_report.get("demo_mode")),
+    )
+    build_report.update({
+        "status": "ready", "completed_at": utc_now().isoformat(), "latest_date": expected_date,
+        "total_story_count": len(content_index), "today_story_count": len(today_views),
+        "level_distribution": dict(Counter(row["level"] for row in today_views)),
+        "schema_version": SCHEMA_VERSION,
+        "fallback_image_count": sum(bool(row["image"].get("image_is_fallback")) for row in today_views),
+        "fallback_images": [
+            {
+                "article_id": row["id"],
+                "title": row["title"],
+                "reason": row["image"].get("image_selected_reason", ""),
+            }
+            for row in today_views if row["image"].get("image_is_fallback")
+        ],
+    })
+    atomic_json(PROVIDER_STATUS_PATH, provider_status)
+    atomic_json(BUILD_REPORT_PATH, build_report)
+    atomic_json(STAGING_DIR / "provider-status.json", provider_status)
+    atomic_json(STAGING_DIR / "build-report.json", build_report)
+    validate_staging(today_views, expected_date, allow_demo=bool(build_report.get("demo_mode")))
+    validate_internal_links_and_secrets()
     atomic_publish()
 
 
-def validate_staging(today_articles: list[dict[str, Any]]) -> None:
+def validate_staging(
+    today_articles: list[dict[str, Any]], expected_date: str | None = None, *, allow_demo: bool = False,
+) -> None:
+    expected_date = expected_date or expected_edition_date()
     if len(today_articles) != DAILY_ARTICLE_COUNT:
         raise RuntimeError(f"Expected {DAILY_ARTICLE_COUNT} current articles, got {len(today_articles)}")
+    if any(row.get("published_date") != expected_date for row in today_articles):
+        raise RuntimeError(f"Current edition date does not match Toronto date {expected_date}")
     if Counter(row["level"] for row in today_articles) != Counter({level: TARGET_PER_LEVEL for level in LEVELS}):
         raise RuntimeError("Current articles are not split 2 per level")
-    required = ["index.html", "daily.html", "vocabulary.html", "flashcards.html", "saved.html", "content-index.json"]
+    if not allow_demo and any(row.get("provider") == "demo" for row in today_articles):
+        raise RuntimeError("Demo-only article reached production validation")
+    if any(row.get("schema_version") != SCHEMA_VERSION for row in today_articles):
+        raise RuntimeError(f"Current articles must use schema {SCHEMA_VERSION}")
+    if not allow_demo and any(
+        not is_useful_thai_translation(row.get("text", ""), row.get("thai_text", ""))
+        for row in today_articles
+    ):
+        raise RuntimeError("Current edition contains incomplete or placeholder Thai translation")
+    image_fields = {
+        "image_url", "image_local_path", "image_source", "image_author", "image_license",
+        "image_attribution_url", "image_alt", "image_query", "image_relevance_score",
+        "image_selected_reason", "image_is_fallback",
+    }
+    if any(not image_fields.issubset(row.get("image", {})) for row in today_articles):
+        raise RuntimeError("Current edition contains incomplete image metadata")
+    identities = [row["image"].get("url") or row["image"].get("local_filename") for row in today_articles]
+    if len(identities) != len(set(identities)):
+        raise RuntimeError("Current edition contains duplicate cover images")
+    required = [
+        "index.html", "daily.html", "vocabulary.html", "flashcards.html", "saved.html",
+        "content-index.json", "provider-status.json", "build-report.json",
+    ]
     if any(not (STAGING_DIR / name).exists() for name in required):
         raise RuntimeError("Staging site is incomplete")
     for article in today_articles:
@@ -1523,6 +1974,39 @@ def validate_staging(today_articles: list[dict[str, Any]]) -> None:
         if article.get("provider") != "demo":
             if not any(path.stat().st_size >= 400 for path in audio_files):
                 raise RuntimeError(f"Missing readable audio fallback for {article['id']}")
+
+
+def validate_internal_links_and_secrets() -> None:
+    root = STAGING_DIR.resolve()
+    broken: list[str] = []
+    for page in STAGING_DIR.rglob("*.html"):
+        soup = BeautifulSoup(page.read_text(encoding="utf-8"), "html.parser")
+        for node, attribute in [(node, "href") for node in soup.select("[href]")] + [
+            (node, "src") for node in soup.select("[src]")
+        ]:
+            value = node.get(attribute, "").strip()
+            parsed = urlparse(value)
+            if not value or value.startswith(("#", "data:", "mailto:", "tel:", "javascript:")) or parsed.scheme:
+                continue
+            path_text = unquote(parsed.path)
+            if path_text.lstrip("./").startswith("podcast/"):
+                continue
+            target = (root / path_text.lstrip("/")) if path_text.startswith("/") else (page.parent / path_text)
+            target = target.resolve()
+            if root not in target.parents and target != root:
+                broken.append(f"{page.relative_to(root)} -> {value}")
+                continue
+            if target.is_dir():
+                target = target / "index.html"
+            if not target.exists():
+                broken.append(f"{page.relative_to(root)} -> {value}")
+    if broken:
+        raise RuntimeError(f"Broken internal links: {broken[:8]}")
+    secret_patterns = re.compile(r"cfat_[A-Za-z0-9_-]{20,}|AIza[A-Za-z0-9_-]{20,}|BEGIN PRIVATE KEY|google-tts-api-key", re.I)
+    for path in STAGING_DIR.rglob("*"):
+        if path.is_file() and path.suffix.lower() in {".html", ".js", ".json", ".css", ".txt"}:
+            if secret_patterns.search(path.read_text(encoding="utf-8", errors="ignore")):
+                raise RuntimeError(f"Possible secret found in built site: {path.relative_to(root)}")
 
 
 def atomic_publish() -> None:
@@ -1541,7 +2025,7 @@ def atomic_publish() -> None:
 
 
 def cleanup(retention_days: int) -> None:
-    cutoff = utc_now().date() - timedelta(days=retention_days)
+    cutoff = toronto_now().date() - timedelta(days=retention_days)
     for base in (RAW_DIR, PROCESSED_DIR, AUDIO_CACHE_DIR, QUOTA_DIR):
         if not base.exists():
             continue
@@ -1581,6 +2065,9 @@ def config_from_env() -> dict[str, Any]:
         raise RuntimeError("This build only supports FREE_ONLY=1")
     return {
         "free_only": True, "demo": env_bool("DEMO_MODE"), "skip_audio": env_bool("SKIP_AUDIO"),
+        "require_full_translation": env_bool("REQUIRE_FULL_TRANSLATION", False),
+        "translation_provider": os.getenv("READING_TRANSLATION_PROVIDER", "auto").strip().lower(),
+        "nllb_model": os.getenv("READING_TRANSLATION_MODEL", "facebook/nllb-200-distilled-600M").strip(),
         "currents_key": os.getenv("CURRENTS_API_KEY", "").strip(),
         "guardian_key": os.getenv("GUARDIAN_API_KEY", "").strip(),
         "nasa_key": os.getenv("NASA_API_KEY", "DEMO_KEY").strip() or "DEMO_KEY",
@@ -1620,52 +2107,87 @@ def main() -> int:
     session = requests.Session()
     session.headers.update({"User-Agent": USER_AGENT})
     quota = QuotaManager(config["limits"])
-    today_date = utc_now().date()
+    today_date = toronto_now().date()
     today = today_date.isoformat()
-    retained_articles = load_articles(config["retention_days"])
-    target_dates = [
-        (today_date - timedelta(days=days_ago)).isoformat()
-        for days_ago in range(config["backfill_days"])
-    ]
-    dates_to_build = []
-    for target_date in target_dates:
-        existing = [row for row in retained_articles if row["published_date"] == target_date]
-        if (
-            len(existing) != DAILY_ARTICLE_COUNT
-            or (not config["demo"] and is_demo_edition(existing))
-            or (target_date == today and env_bool("REFRESH_TODAY", False))
-        ):
-            dates_to_build.append(target_date)
-    if dates_to_build:
-        candidates = collect_candidates(session, quota, config)
-        atomic_json(RAW_DIR / f"{today}-providers.json", {
-            "fetched_at": utc_now().isoformat(), "candidates": candidates,
-        })
-        translator = Translator(session, config)
-        for date_index, target_date in enumerate(dates_to_build):
-            selected = choose_daily_articles(candidates, offset=date_index * DAILY_ARTICLE_COUNT)
-            if len(selected) != DAILY_ARTICLE_COUNT:
-                raise RuntimeError("Free providers did not supply enough valid articles; existing site was preserved")
-            processed: list[dict[str, Any]] = []
-            for index, raw in enumerate(selected, 1):
-                logging.info("[%s %d/%d] Building %s: %s", target_date, index, DAILY_ARTICLE_COUNT, raw["level"], raw["title"])
-                processed.append(process_article(raw, session, quota, translator, config, target_date))
-            output_dir = PROCESSED_DIR / target_date
-            temporary = PROCESSED_DIR / f".{target_date}-staging"
-            if temporary.exists():
-                shutil.rmtree(temporary)
-            temporary.mkdir(parents=True)
-            for article in processed:
-                atomic_json(temporary / f"{article['slug']}.json", article)
-            if output_dir.exists():
-                shutil.rmtree(output_dir)
-            temporary.replace(output_dir)
-        if not config["demo"]:
-            purge_demo_editions()
-    articles = load_articles(config["retention_days"])
-    render_site(articles, quota)
-    logging.info("Published %d retained article(s).", len(articles))
-    return 0
+    build_report: dict[str, Any] = {
+        "status": "running", "started_at": utc_now().isoformat(), "expected_toronto_date": today,
+        "free_only": True, "demo_mode": config["demo"], "demo_fallback_blocked": not config["demo"],
+        "skip_audio": config["skip_audio"], "required_story_count": DAILY_ARTICLE_COUNT,
+        "required_levels": {level: TARGET_PER_LEVEL for level in LEVELS}, "schema_version": SCHEMA_VERSION,
+    }
+    try:
+        retained_articles = load_articles(config["retention_days"])
+        all_retained_articles = load_articles_any_schema(config["retention_days"])
+        target_dates = [
+            (today_date - timedelta(days=days_ago)).isoformat()
+            for days_ago in range(config["backfill_days"])
+        ]
+        dates_to_build = []
+        for target_date in target_dates:
+            existing = [row for row in retained_articles if row["published_date"] == target_date]
+            if (
+                len(existing) != DAILY_ARTICLE_COUNT
+                or (not config["demo"] and is_demo_edition(existing))
+                or (target_date == today and env_bool("REFRESH_TODAY", False))
+            ):
+                dates_to_build.append(target_date)
+        candidates: list[dict[str, Any]] = []
+        if dates_to_build:
+            needs_fresh_candidates = any(
+                target_date == today
+                or len([row for row in all_retained_articles if row["published_date"] == target_date]) != DAILY_ARTICLE_COUNT
+                for target_date in dates_to_build
+            )
+            if needs_fresh_candidates:
+                candidates = collect_candidates(session, quota, config)
+                atomic_json(RAW_DIR / f"{today}-providers.json", {
+                    "fetched_at": utc_now().isoformat(), "candidates": candidates,
+                })
+            translator = Translator(session, config)
+            for date_index, target_date in enumerate(dates_to_build):
+                historic = [row for row in all_retained_articles if row["published_date"] == target_date]
+                if target_date != today and len(historic) == DAILY_ARTICLE_COUNT:
+                    selected = [processed_to_source(row) for row in historic]
+                    logging.info("Rebuilding %s from its existing real story selection", target_date)
+                else:
+                    selected = choose_daily_articles(candidates, offset=date_index * DAILY_ARTICLE_COUNT)
+                if len(selected) != DAILY_ARTICLE_COUNT:
+                    raise RuntimeError("Free providers did not supply enough fresh valid articles; existing site was preserved")
+                config["_used_image_urls"] = set()
+                selected_ids = {row["id"] for row in selected}
+                for row in selected:
+                    quota.selected(row.get("provider_key", slugify(row["provider"], 32)))
+                if target_date == today:
+                    for row in candidates:
+                        if row["id"] not in selected_ids:
+                            quota.skipped(row.get("provider_key", slugify(row["provider"], 32)), "not selected for daily edition")
+                processed: list[dict[str, Any]] = []
+                for index, raw in enumerate(selected, 1):
+                    logging.info("[%s %d/%d] Building %s: %s", target_date, index, DAILY_ARTICLE_COUNT, raw["level"], raw["title"])
+                    processed.append(process_article(raw, session, quota, translator, config, target_date))
+                output_dir = PROCESSED_DIR / target_date
+                temporary = PROCESSED_DIR / f".{target_date}-staging"
+                if temporary.exists():
+                    shutil.rmtree(temporary)
+                temporary.mkdir(parents=True)
+                for article in processed:
+                    atomic_json(temporary / f"{article['slug']}.json", article)
+                if output_dir.exists():
+                    shutil.rmtree(output_dir)
+                temporary.replace(output_dir)
+            if not config["demo"]:
+                purge_demo_editions()
+        articles = load_articles(config["retention_days"])
+        render_site(articles, quota, today, build_report)
+        logging.info("Published %d retained article(s).", len(articles))
+        return 0
+    except Exception as error:
+        build_report.update({"status": "failed", "completed_at": utc_now().isoformat(), "error": str(error)[:500]})
+        atomic_json(PROVIDER_STATUS_PATH, quota.public_status(
+            demo_fallback_blocked=not bool(build_report.get("demo_mode")),
+        ))
+        atomic_json(BUILD_REPORT_PATH, build_report)
+        raise
 
 
 if __name__ == "__main__":

@@ -1,6 +1,6 @@
 # VocabTH / Podcast Voice - Project Status
 
-Updated: June 17, 2026
+Updated: June 22, 2026
 
 ## Workspace
 
@@ -50,12 +50,12 @@ Updated: June 17, 2026
   `Please enable R2 through the Cloudflare Dashboard. [code: 10042]`
 - Daily Reading automation has been configured for GitHub Actions -> Cloudflare Pages.
 - Automation schedule:
-  `05:00 America/Toronto`
-- GitHub Actions uses UTC cron entries `09:00` and `10:00` with an `America/Toronto` time guard because GitHub schedule cron itself is UTC-based.
+  `05:17 America/Toronto` (avoids the top-of-hour GitHub Actions queue)
+- GitHub Actions uses a timezone-aware `17 5 * * *` schedule for `America/Toronto` and also supports manual or main-branch push runs.
 - Automation deploy target:
   `https://learning-hub-vocabth.pages.dev/`
-- Automation uses free Reading audio generation (`pyttsx3` / `espeak-ng` + `ffmpeg`) and does not consume the Podcast Google Cloud TTS monthly safety cap.
-- Automation uses the existing free image chain: source media, Unsplash, Openverse, Wikimedia Commons, fallback.
+- Reading automation uses browser/iPhone Web Speech (`SKIP_AUDIO=1`) and does not generate MP3 or consume the Podcast Google Cloud TTS monthly safety cap.
+- Automation uses the free image chain: source media, Openverse, Wikimedia Commons, optional free Unsplash, optional local Stable Diffusion, then a unique local SVG fallback.
 - GitHub repository:
   `https://github.com/jackyontime1/learning-hub-vocabth`
 - GitHub Actions repository secrets are configured:
@@ -314,6 +314,39 @@ node "D:\podcast voice\daily-english-reader\scripts\build-learning-hub.mjs"
   and level distribution remains A1/A2/B1/B2/C1 = 14 each.
 - This change did not use Podcast Google Cloud TTS and did not consume the Podcast monthly TTS safety cap.
 
+## Reading Local Full-Translation Pipeline - June 22, 2026
+
+- Prepared a production fix that uses the local/free `facebook/nllb-200-distilled-600M` model for full English-to-Thai article translation.
+- The model supports `eng_Latn` to `tha_Thai`, needs no API key, and is licensed CC-BY-NC-4.0 for this personal non-commercial learning project.
+- Production now fails safely when a complete Thai translation is unavailable instead of publishing a generic placeholder.
+- Translation is generated one sentence at a time so later sentences are not silently omitted.
+- Exact curated translations are preserved for known stories, while unseen stories use NLLB plus natural-Thai cleanup.
+- Broken source fragments such as `and. Other` and `out of. Reach` are repaired before translation.
+- Reading schema is bumped to `9`, forcing all seven retained days to rebuild rather than fixing only today's edition.
+- GitHub Actions caches the NLLB model and keeps `SKIP_AUDIO=1`; no Reading MP3, OpenAI API, Google TTS, or Podcast TTS quota is used.
+- Verification completed locally:
+  - unit tests passed `41/41`;
+  - Python/JS syntax and both workflow YAML files passed;
+  - dependency resolution dry-run passed;
+  - no-audio site dry-run produced 10 stories across A1/A2/B1/B2/C1 and zero MP3 files;
+  - a production-like real-news dry-run created a complete schema 9 edition for the expected Toronto date with 10 stories and zero MP3 files;
+  - full Thai output is present, but spot checks still show occasional awkward wording and name/entity errors from the free local NLLB model.
+- Backup before this change:
+  `D:\podcast voice\backups\before-reading-full-thai-v2-20260622-120944.zip`
+- Deployment and production browser verification are still pending.
+
+## Reading Reliability and Cover Images - June 23, 2026
+
+- Root cause of the stale June 18 production edition: scheduled runs were queued after the exact 05:00 Toronto guard window, so the build-and-deploy job was skipped.
+- The workflow now accepts its timezone-aware scheduled event, manual dispatch, and pushes to `main`; the production job has a 180-minute timeout.
+- Production is fail-closed for stale dates, incomplete story counts, wrong A1-C1 distribution, demo content, missing schema 9 Thai text, broken internal links, and exposed secret patterns.
+- Cloudflare preview and production are both verified before the rolling cache is committed.
+- Image metadata, attribution, relevance reason, duplicate rejection, broken-image rejection, and unique fallback SVGs are implemented.
+- `provider-status.json` and `build-report.json` now explain provider attempts, skips, failures, image fallback count, and per-article fallback reasons.
+- Production-like dry-run passed for `2026-06-22`: 10 real stories, 2 per A1-C1, schema 9, zero Reading MP3, and 2 unique local image fallbacks.
+- Pre-deploy backup:
+  `D:\podcast voice\backups\before-daily-reader-reliability-images-20260622-195052.zip`
+
 ## Backups
 
 - Full Job Interview Days 1-8:
@@ -344,16 +377,25 @@ node "D:\podcast voice\daily-english-reader\scripts\build-learning-hub.mjs"
   `D:\podcast voice\backups\before-reading-translation-fix-20260618-translation-fix.zip`
 - Before Reading whole-article Thai fix:
   `D:\podcast voice\backups\before-20260619-reading-whole-thai-translation.zip`
+- Before Reading local full-translation pipeline:
+  `D:\podcast voice\backups\before-reading-full-thai-v2-20260622-120944.zip`
+- Before Daily Reader reliability and cover-image work:
+  `D:\podcast voice\backups\before-daily-reader-reliability-images-20260622-195052.zip`
 
 ## Next Action
 
-Set up Cloudflare Pages + R2 when credentials are available:
+Deploy and verify the Reading schema 9 full-translation build first:
 
-1. Publish `D:\podcast voice\daily-english-reader\site` as the Cloudflare Pages output.
-2. Put or mirror Podcast MP3 files under the same public path convention:
+1. Push the June 22 translation pipeline to GitHub.
+2. Run the workflow manually and confirm the NLLB model cache/build succeeds.
+3. Verify all seven days and sample A1/A2/B1/B2/C1 translations on production.
+
+Then continue the Cloudflare R2 audio work when R2 is enabled:
+
+1. Put or mirror Podcast MP3 files under the same public path convention:
    `/podcast/audio/words/...`.
-3. Configure R2 CORS to allow `GET`, `HEAD`, `OPTIONS` and the `Range` header.
-4. Test on iPhone Chrome/Safari:
+2. Configure R2 CORS to allow `GET`, `HEAD`, `OPTIONS` and the `Range` header.
+3. Test on iPhone Chrome/Safari:
    Reading, Podcast, Flashcards, MP3 play/pause, headset pause/play, and MP3 HTTP Range `206`.
 
 Keep responses and progress updates concise to reduce token use.
