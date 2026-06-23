@@ -1,12 +1,12 @@
 {
-  "schema_version": 8,
+  "schema_version": 9,
   "id": "a1f3fe4ed47106f2ce",
   "slug": "in-photos-knicks-championship-celebration-a1f3fe4e",
   "level": "B2",
   "title": "IN PHOTOS | Knicks championship celebration",
   "description": "New Yorkers held a ticker-tape parade and victory rally on Thursday for the Knicks men's basketball team that brought home the NBA championship after a 53-year drought.",
   "text": "New Yorkers held a ticker-tape parade and victory rally on Thursday for the Knicks men's basketball team that brought home the NBA championship after a 53-year drought.",
-  "thai_text": "ข่าวนี้มาจาก CBC News อยู่ในหมวดข่าวต่างประเทศ และถูกเรียบเรียงเป็นระดับ B2. เนื้อหาข่าวคือ เนื้อหาข่าวพูดถึงเหตุการณ์สำคัญและผลกระทบที่ผู้อ่านควรติดตามต่อ โดยควรอ่านจากย่อหน้าภาษาอังกฤษด้านบนประกอบด้วย",
+  "thai_text": "ข่าวนี้มาจาก CBC News อยู่ในหมวดข่าวต่างประเทศ และถูกเรียบเรียงเป็นระดับ B2. เนื้อหาข่าวคือ นิวยอร์ก จัดการเดินทัพและการชุมนุมชัยชนะในวันพฤหัสบดี สำหรับทีมบาสเก็ตบอลชายของ นิคส์ ที่พาแชมป์เอ็นบีเอกลับบ้านหลังจากความแห้งแล้ง 53 ปี.",
   "word_translations": {
     "a": "",
     "after": "หลังจาก",
@@ -69,10 +69,23 @@
   "published": "2026-06-18T17:31:23+00:00",
   "published_date": "2026-06-18",
   "image": {
-    "local_filename": "demo-solar-library.png",
-    "credit": "Local fallback",
+    "cache_version": 2,
+    "url": "",
+    "local_filename": "fallback-a1f3fe4ed471.svg",
+    "image_url": "static/images/fallback-a1f3fe4ed471.svg",
+    "image_local_path": "static/images/fallback-a1f3fe4ed471.svg",
+    "image_source": "Local generated SVG",
+    "image_author": "Daily English Reader",
+    "image_license": "Project-owned local asset",
+    "image_attribution_url": "",
+    "image_alt": "Cover image for IN PHOTOS | Knicks championship celebration",
+    "image_query": "World IN PHOTOS Knicks photos championship celebration",
+    "image_relevance_score": 20,
+    "image_selected_reason": "No usable free image candidate",
+    "image_is_fallback": true,
+    "credit": "Daily English Reader",
     "credit_url": ""
   },
   "audio_cache_path": "data/audio/2026-06-18/a1f3fe4ed47106f2ce-b2.wav",
-  "generated_at": "2026-06-18T17:47:28.803130+00:00"
+  "generated_at": "2026-06-23T18:46:09.454108+00:00"
 }

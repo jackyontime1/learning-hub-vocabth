@@ -1,0 +1,82 @@
+{
+  "status": "ready",
+  "started_at": "2026-06-23T17:23:10.984459+00:00",
+  "expected_toronto_date": "2026-06-23",
+  "free_only": true,
+  "demo_mode": false,
+  "demo_fallback_blocked": true,
+  "skip_audio": true,
+  "required_story_count": 10,
+  "required_levels": {
+    "A1": 2,
+    "A2": 2,
+    "B1": 2,
+    "B2": 2,
+    "C1": 2
+  },
+  "schema_version": 9,
+  "completed_at": "2026-06-23T19:07:29.119874+00:00",
+  "latest_date": "2026-06-23",
+  "total_story_count": 70,
+  "today_story_count": 10,
+  "level_distribution": {
+    "C1": 2,
+    "B2": 2,
+    "B1": 2,
+    "A2": 2,
+    "A1": 2
+  },
+  "fallback_image_count": 10,
+  "fallback_images": [
+    {
+      "article_id": "265db05cd2dd2de49c",
+      "title": "Hamilton teen receives Carnegie Medal for pulling man from tent fire",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "301467f07329370f94",
+      "title": "Trump continues to allege D.C. reflecting pool was vandalized, as ex-Olympian denies doing damage",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "43ad3df16cc28b2dd1",
+      "title": "Ontario's freedom of information changes are law. Why experts say they could hurt the government",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "36d7d1a7a649fa18b1",
+      "title": "Frank talk on Ottawa police misconduct dominates 1st in-person board meeting in years",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "7c5ed9fcfd6436c2a8",
+      "title": "Years without fluoridated water in N.B. show pattern of tooth decay experts warned about",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "6fc36ecf999bedf13d",
+      "title": "Australia's coal and gas exports violate our human rights, group says in new UN case",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "140bff2be619a9d26a",
+      "title": "Special Marine Warning issued June 23 at 1:21PM EDT until June 23 at 1:30PM EDT by NWS Newport/Morehead City NC",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "71e2e2654e9df0dd74",
+      "title": "Despite state bans, abortions have almost doubled in the U.S.",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "1e34bf5bdfc8418505",
+      "title": "When falling housing prices are good news — and when they're not",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "40169cd2bc1c774566",
+      "title": "Why the World Cup final halftime show is controversial",
+      "reason": "Selected image was unavailable: ValueError"
+    }
+  ]
+}
