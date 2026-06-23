@@ -1082,15 +1082,23 @@ def simplify_sentence(sentence: str, max_words: int, aggressive: bool) -> list[s
                 chunk, words = words, []
             else:
                 lower_bound = max(5, max_words - 4)
-                upper_bound = min(len(words), max_words + 3)
-                breakpoint = next(
-                    (
-                        index for index in range(upper_bound, lower_bound - 1, -1)
-                        if words[index - 1].lower().strip(",") in {"and", "but", "so", "because", "while"}
-                    ),
-                    max_words,
-                )
-                chunk, words = words[:breakpoint], words[breakpoint:]
+                upper_bound = min(len(words) - 1, max_words * 2)
+                connector_breaks = [
+                    index for index in range(lower_bound, upper_bound + 1)
+                    if words[index].lower().strip(",") in {"and", "but", "so", "because", "while"}
+                ]
+                comma_breaks = [
+                    index for index in range(lower_bound, upper_bound + 1)
+                    if words[index - 1].endswith(",")
+                ]
+                safe_breaks = connector_breaks or comma_breaks
+                if not safe_breaks:
+                    # A longer complete sentence is safer than manufacturing
+                    # fragments such as "through some. Of" for the translator.
+                    chunk, words = words, []
+                else:
+                    breakpoint = min(safe_breaks, key=lambda index: abs(index - max_words))
+                    chunk, words = words[:breakpoint], words[breakpoint:]
             text = " ".join(chunk).strip(" ,")
             if text:
                 output.append(text[0].upper() + text[1:] + ("" if text[-1] in ".!?" else "."))
@@ -1231,7 +1239,10 @@ class Translator:
                 self._nllb_model.eval()
             target_id = self._nllb_tokenizer.convert_tokens_to_ids("tha_Thai")
             translated_chunks: list[str] = []
-            for chunk in translation_chunks(text):
+            chunks = [chunk for chunk in translation_chunks(text) if not is_non_substantive_fragment(chunk)]
+            if not chunks:
+                return ""
+            for chunk in chunks:
                 curated = exact_translated_phrase(chunk)
                 if curated:
                     translated_chunks.append(curated + ("" if curated[-1] in ".!?。！？" else "."))
@@ -1283,6 +1294,15 @@ def translation_chunks(text: str, max_words: int = 45) -> list[str]:
         for start in range(0, len(words), max_words):
             chunks.append(" ".join(words[start:start + max_words]))
     return chunks or [text]
+
+
+def is_non_substantive_fragment(text: str) -> bool:
+    words = re.findall(r"[A-Za-z]+(?:['-][A-Za-z]+)*", text)
+    if len(words) < 3:
+        return True
+    return len(words) <= 10 and bool(re.search(
+        r"\b(?:caption|photo credit|image credit|AFP|Getty Images|Reuters)\b", text, re.I,
+    ))
 
 
 def image_query(article: dict[str, Any]) -> str:
@@ -1616,15 +1636,32 @@ def source_material(raw: dict[str, Any], session: requests.Session, config: dict
             for node in soup.select(selector):
                 node.decompose()
         paragraphs = []
+        seen: set[str] = set()
         for node in soup.select("article p, main p, [role='main'] p, p"):
-            text = normalize(node.get_text(" "))
-            if len(text.split()) >= 8 and not re.search(r"\b(subscribe|sign up|cookie|newsletter)\b", text, re.I):
+            if node.find_parent(["figure", "figcaption"]):
+                continue
+            nearby = [node, *list(node.parents)[:2]]
+            markers = " ".join(
+                " ".join(parent.get("class", [])) + " " + str(parent.get("id", ""))
+                for parent in nearby if getattr(parent, "get", None)
+            )
+            if re.search(r"\b(caption|credit|image-data|photo-credit)\b", markers, re.I):
+                continue
+            text = clean_story_text(node.get_text(" "))
+            if (
+                len(text.split()) >= 8
+                and text not in seen
+                and not re.search(r"\b(subscribe|sign up|cookie|newsletter)\b", text, re.I)
+            ):
                 paragraphs.append(text)
+                seen.add(text)
             if sum(len(row.split()) for row in paragraphs) >= 420:
                 break
         material = " ".join(paragraphs)
         if len(material.split()) >= 80:
-            return material
+            # The feed summary is usually clean and prevents caption-heavy pages
+            # from dominating the deterministic extractive summary.
+            return clean_story_text(f"{fallback} {material}")
     except requests.RequestException as error:
         logging.info("Source-page text unavailable for %s: %s", raw["title"], error)
     return fallback

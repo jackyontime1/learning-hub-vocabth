@@ -73,6 +73,14 @@ jobs:
           path: ~/.cache/huggingface
           key: nllb-200-distilled-600m-v1
 
+      - name: Cache completed local translations between retries
+        uses: actions/cache@v4
+        with:
+          path: daily-english-reader/data/cache/translations.json
+          key: daily-reader-translations-v9-${{ github.run_id }}
+          restore-keys: |
+            daily-reader-translations-v9-
+
       - name: Run tests
         run: python -m unittest discover -s tests -v
 

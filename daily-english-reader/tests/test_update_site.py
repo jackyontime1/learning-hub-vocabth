@@ -73,6 +73,20 @@ class DailyReaderTests(unittest.TestCase):
         self.assertEqual(result["url"], "https://example.test/topic.jpg")
         self.assertEqual(result["alt"], "Topic image")
 
+    def test_source_material_prefers_feed_summary_and_skips_caption_metadata(self):
+        article = dict(site.demo_articles()[0], description="Clean feed summary explains the verified event and its main effect.")
+        body = " ".join(f"bodyword{index}" for index in range(90))
+        page = (
+            "<article><figure><p>Photographer AFP via Getty Images describes a keynote address at the forum.</p></figure>"
+            "<div class='photo-credit'><p>Richards AFP via contributor image credit text here.</p></div>"
+            f"<p>{body}</p></article>"
+        )
+        result = site.source_material(article, FakeSession([FakeResponse(200, text=page)]), {"demo": False, "timeout": 5})
+        self.assertTrue(result.startswith(article["description"].rstrip(".")))
+        self.assertNotIn("Photographer AFP", result)
+        self.assertNotIn("Richards AFP", result)
+        self.assertIn("bodyword89", result)
+
     def test_source_media_requires_an_explicitly_allowed_provider(self):
         article = site.demo_articles()[0]
         self.assertEqual(site.source_media_license(dict(article, provider="BBC News")), "")
@@ -185,6 +199,21 @@ class DailyReaderTests(unittest.TestCase):
         self.assertIn('out of reach for many', cleaned)
         self.assertIn("drained and refilled", site.clean_story_text("The pool was drained and. Refilled yesterday."))
         self.assertIn("flew over the site", site.clean_story_text("The president flew over. The site on Sunday."))
+
+    def test_level_adapter_does_not_manufacture_mid_phrase_fragments(self):
+        source = (
+            "Greenspan steered the Federal Reserve for nearly two decades through some of the longest "
+            "economic booms in United States history, but his listeners were sometimes confused by Fedspeak."
+        )
+        result = " ".join(site.simplify_sentence(source, 12, True))
+        self.assertNotIn("some. Of", result)
+        self.assertNotIn("but.", result.lower())
+        self.assertIn("But his listeners", result)
+
+    def test_non_substantive_fragments_do_not_block_translation(self):
+        self.assertTrue(site.is_non_substantive_fragment("Alan Greenspan."))
+        self.assertTrue(site.is_non_substantive_fragment("Richards/AFP via Getty Images photo credit."))
+        self.assertFalse(site.is_non_substantive_fragment("Greenspan died on Monday at age 100."))
 
     def test_safe_word_translations_fills_missing_or_bad_values(self):
         result = site.safe_word_translations(["company", "unknown"], {"company": "เธเธฃเธดเธฉเธฑเธ—"})
