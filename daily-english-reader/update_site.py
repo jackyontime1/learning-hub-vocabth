@@ -703,11 +703,13 @@ class QuotaManager:
     def save(self) -> None:
         atomic_json(self.path, self.state)
 
-    def public_status(self, *, demo_fallback_blocked: bool = True) -> dict[str, Any]:
+    def public_status(
+        self, *, demo_fallback_blocked: bool = True, expected_date: str | None = None,
+    ) -> dict[str, Any]:
         return {
             "updated_at": utc_now().isoformat(),
             "build_date_utc": utc_now().date().isoformat(),
-            "expected_toronto_date": expected_edition_date(),
+            "expected_toronto_date": expected_date or expected_edition_date(),
             "demo_fallback_blocked": demo_fallback_blocked,
             "providers": {
                 name: {
@@ -1941,6 +1943,7 @@ def render_site(
     atomic_json(STAGING_DIR / "content-index.json", content_index)
     provider_status = quota.public_status(
         demo_fallback_blocked=not bool(build_report.get("demo_mode")),
+        expected_date=expected_date,
     )
     build_report.update({
         "status": "ready", "completed_at": utc_now().isoformat(), "latest_date": expected_date,
@@ -2222,6 +2225,7 @@ def main() -> int:
         build_report.update({"status": "failed", "completed_at": utc_now().isoformat(), "error": str(error)[:500]})
         atomic_json(PROVIDER_STATUS_PATH, quota.public_status(
             demo_fallback_blocked=not bool(build_report.get("demo_mode")),
+            expected_date=build_report.get("expected_toronto_date"),
         ))
         atomic_json(BUILD_REPORT_PATH, build_report)
         raise

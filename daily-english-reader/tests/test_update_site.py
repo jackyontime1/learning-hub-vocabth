@@ -467,6 +467,14 @@ class DailyReaderTests(unittest.TestCase):
         self.assertEqual(row["selected_count"], 2)
         self.assertEqual(row["skip_reasons"]["duplicate article"], 1)
 
+    def test_provider_status_keeps_the_build_start_date_across_toronto_midnight(self):
+        with tempfile.TemporaryDirectory() as temp:
+            with patch.object(site, "QUOTA_DIR", Path(temp)), \
+                 patch.object(site, "expected_edition_date", return_value="2026-06-23"):
+                quota = site.QuotaManager({})
+                status = quota.public_status(expected_date="2026-06-22")
+        self.assertEqual(status["expected_toronto_date"], "2026-06-22")
+
     def test_validation_rejects_incomplete_edition(self):
         with tempfile.TemporaryDirectory() as temp:
             with patch.object(site, "STAGING_DIR", Path(temp)):
