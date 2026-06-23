@@ -357,6 +357,15 @@ def sentence_split(text: str) -> list[str]:
 
 def clean_story_text(text: str) -> str:
     text = normalize(text)
+    text = re.sub(
+        r"\*\s*(WHAT|WHERE|WHEN|IMPACTS|ADDITIONAL DETAILS)\.{2,}\s*",
+        lambda match: f"{match.group(1).title()}: ",
+        text,
+        flags=re.I,
+    )
+    text = re.sub(r"\b(include|includes|including)\.{2,}\s*", r"\1 ", text, flags=re.I)
+    text = re.sub(r"https?://\S+", " ", text, flags=re.I)
+    text = re.sub(r"\s+-\s+", ". ", text)
     text = re.sub(r"\b[A-Z][a-z]+(?: [A-Z][a-z]+){0,3}/(?:iStockphoto|Getty Images|AP|Reuters)[^.!?]*hide caption\b", " ", text)
     text = re.sub(r"\bhide caption\b", " ", text, flags=re.I)
     text = re.sub(r"\b(?:SCOTT DETROW|A MARTÍNEZ|HOST|BYLINE|EDITOR'S NOTE):\s*", " ", text, flags=re.I)

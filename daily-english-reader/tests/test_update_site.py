@@ -200,6 +200,21 @@ class DailyReaderTests(unittest.TestCase):
         self.assertIn("drained and refilled", site.clean_story_text("The pool was drained and. Refilled yesterday."))
         self.assertIn("flew over the site", site.clean_story_text("The president flew over. The site on Sunday."))
 
+    def test_clean_story_text_normalizes_nws_machine_alerts(self):
+        raw = (
+            "* WHAT...Flooding caused by excessive rainfall is expected. "
+            "* WHERE...A portion of Oklahoma. * WHEN...Until 1015 AM CDT. "
+            "* IMPACTS...Minor flooding in low-lying areas. "
+            "* ADDITIONAL DETAILS... - Some locations include... Gate and Knowles. "
+            "- http://www.weather.gov/safety/flood"
+        )
+        cleaned = site.clean_story_text(raw)
+        self.assertIn("What: Flooding", cleaned)
+        self.assertIn("Where: A portion", cleaned)
+        self.assertIn("locations include Gate and Knowles", cleaned)
+        self.assertNotIn("...", cleaned)
+        self.assertNotIn("http", cleaned)
+
     def test_level_adapter_does_not_manufacture_mid_phrase_fragments(self):
         source = (
             "Greenspan steered the Federal Reserve for nearly two decades through some of the longest "
