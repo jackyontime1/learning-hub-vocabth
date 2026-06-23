@@ -6,10 +6,16 @@ from __future__ import annotations
 import argparse
 import json
 import re
+import sys
 from collections import Counter
+from pathlib import Path
 from urllib.parse import urljoin
 
 import requests
+from bs4 import BeautifulSoup
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from update_site import speech_text_issues, translation_quality_issues  # noqa: E402
 
 LEVELS = ("A1", "A2", "B1", "B2", "C1")
 PLACEHOLDERS = (
@@ -61,6 +67,21 @@ def verify(base_url: str, expected_date: str, expected_schema: int) -> dict:
         page_url = urljoin(base_url, row["url"])
         page = fetch(session, page_url)
         scanned_text += page.text
+        article_url = urljoin(page_url, "article.json")
+        article = fetch(session, article_url, expect_json=True)
+        if article.get("schema_version") != expected_schema:
+            raise RuntimeError(f"Expected schema {expected_schema} at {article_url}")
+        if article.get("provider") == "demo":
+            raise RuntimeError(f"Demo article reached production: {article_url}")
+        translation_issues = translation_quality_issues(article.get("text", ""), article.get("thai_text", ""))
+        if translation_issues:
+            raise RuntimeError(f"Unsafe Thai translation at {article_url}: {', '.join(translation_issues)}")
+        speech_issues = speech_text_issues(article.get("speech_text", ""))
+        if speech_issues:
+            raise RuntimeError(f"Unsafe Web Speech text at {article_url}: {', '.join(speech_issues)}")
+        audio = BeautifulSoup(page.text, "html.parser").select_one("#storyAudio[data-reader-text]")
+        if not audio or audio.get("data-reader-text", "") != article.get("speech_text", ""):
+            raise RuntimeError(f"Web Speech text is not rendered at {page_url}")
         image_url = urljoin(base_url, row["image"])
         if image_url not in checked_images:
             image_response = fetch(session, image_url)
@@ -68,12 +89,6 @@ def verify(base_url: str, expected_date: str, expected_schema: int) -> dict:
                 raise RuntimeError(f"Broken image content type: {image_url}")
             checked_images.add(image_url)
         if row["date"] == expected_date and row["level"] not in sample_by_level:
-            article_url = urljoin(page_url, "article.json")
-            article = fetch(session, article_url, expect_json=True)
-            if article.get("schema_version") != expected_schema:
-                raise RuntimeError(f"Expected schema {expected_schema} at {article_url}")
-            if article.get("provider") == "demo":
-                raise RuntimeError(f"Demo article reached production: {article_url}")
             thai = article.get("thai_text", "")
             if not re.search(r"[\u0e00-\u0e7f]", thai) or any(value in thai for value in PLACEHOLDERS):
                 raise RuntimeError(f"Invalid Thai translation: {article_url}")

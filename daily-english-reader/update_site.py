@@ -122,6 +122,12 @@ TRANSLATION_SIMPLIFICATIONS = {
     "menstrual items": "menstrual products",
     "wipes out": "removes",
     "out of reach for": "too expensive for",
+    "violating their human rights": "breaking laws that protect their human rights",
+    "violating our human rights": "breaking laws that protect our human rights",
+    "internal medicine resident": "doctor training in internal medicine",
+    "metro area": "metropolitan area",
+    "pea-sized hail": "small hailstones",
+    "was located near": "was near",
 }
 
 DETERMINERS = {"a", "an", "the", "this", "that", "these", "those", "each", "every", "some", "any"}
@@ -346,6 +352,12 @@ def normalize(value: str) -> str:
     return re.sub(r"\s+", " ", text).strip()
 
 
+def normalize_paragraphs(value: str) -> str:
+    raw = unicodedata.normalize("NFC", str(value or "")).replace("\r\n", "\n")
+    paragraphs = [normalize(part) for part in re.split(r"\n\s*\n", raw)]
+    return "\n\n".join(part for part in paragraphs if part)
+
+
 def slugify(value: str, limit: int = 72) -> str:
     value = re.sub(r"[^a-z0-9]+", "-", value.lower()).strip("-")
     return value[:limit].rstrip("-") or "story"
@@ -358,8 +370,8 @@ def sentence_split(text: str) -> list[str]:
 def clean_story_text(text: str) -> str:
     text = normalize(text)
     text = re.sub(
-        r"\*\s*(WHAT|WHERE|WHEN|IMPACTS|ADDITIONAL DETAILS)\.{2,}\s*",
-        lambda match: f"{match.group(1).title()}: ",
+        r"\*?\s*(WHAT|WHERE|WHEN|IMPACTS|ADDITIONAL DETAILS|HAZARD|SOURCE|IMPACT)\.{2,}\s*",
+        lambda match: f" {match.group(1).title()}: ",
         text,
         flags=re.I,
     )
@@ -385,6 +397,73 @@ def clean_story_text(text: str) -> str:
     text = re.sub(r"(?<!\b[A-Z])\.\s+(?=[a-z])", ", ", text)
     text = re.sub(r"\s{2,}", " ", text)
     return text.strip()
+
+
+def clean_english_fragments(text: str) -> str:
+    text = clean_story_text(text)
+    text = re.sub(
+        r"\b(Depending on|According to|Based on|Because of|Part of)\.\s+(?=[a-z])",
+        r"\1 ", text, flags=re.I,
+    )
+    text = re.sub(r"\bpea size hail\b", "pea-sized hail", text, flags=re.I)
+    text = re.sub(r"\b(Of|To|For|With|From|In|By),\s+(but|and)\b", r"\1 \2", text)
+    text = re.sub(r"\b(It|They|He|She),\s+(?=[a-z])", r"\1 ", text)
+    text = re.sub(r"\s+([,.;:!?])", r"\1", text)
+    return re.sub(r"\s{2,}", " ", text).strip()
+
+
+def normalize_weather_for_speech(text: str) -> str:
+    def clock(match: re.Match[str]) -> str:
+        digits, period, zone = match.groups()
+        digits = digits.zfill(4)
+        hour = str(int(digits[:-2]))
+        minute = digits[-2:]
+        zones = {
+            "EDT": "Eastern Daylight Time", "EST": "Eastern Standard Time",
+            "CDT": "Central Daylight Time", "CST": "Central Standard Time",
+            "MDT": "Mountain Daylight Time", "MST": "Mountain Standard Time",
+            "PDT": "Pacific Daylight Time", "PST": "Pacific Standard Time",
+        }
+        return f"{hour}:{minute} {period.upper()} {zones.get(zone.upper(), zone.upper())}"
+
+    text = re.sub(r"\b(\d{3,4})\s*(AM|PM)\s*(EDT|EST|CDT|CST|MDT|MST|PDT|PST)\b", clock, text, flags=re.I)
+    text = re.sub(r"\b(\d+(?:\.\d+)?)\s*mph\b", r"\1 miles per hour", text, flags=re.I)
+    return text
+
+
+def paragraphize_text(text: str, sentences_per_paragraph: int = 3) -> str:
+    sentences = sentence_split(clean_english_fragments(text))
+    if not sentences:
+        return ""
+    groups = [sentences[index:index + sentences_per_paragraph] for index in range(0, len(sentences), sentences_per_paragraph)]
+    return "\n\n".join(" ".join(group) for group in groups)
+
+
+def prepare_reader_text(text: str) -> str:
+    return paragraphize_text(normalize_weather_for_speech(clean_english_fragments(text)))
+
+
+def make_speech_text(title: str, text: str) -> str:
+    title = clean_english_fragments(title)
+    if title and title[-1] not in ".!?":
+        title += "."
+    body = prepare_reader_text(text)
+    return "\n\n".join(part for part in (title, body) if part)
+
+
+def speech_text_issues(text: str) -> list[str]:
+    issues: list[str] = []
+    if not normalize(text):
+        return ["empty-speech-text"]
+    if re.search(r"https?://|\bhide caption\b|\bimage credit\b", text, re.I):
+        issues.append("speech-metadata-leakage")
+    if re.search(r"\b(?:Depending on|According to|Based on|Because of|Part of)\.\s+[a-z]", text, re.I):
+        issues.append("broken-preposition-fragment")
+    if re.search(r"\b(?:Of|To|For|With|From|In|By),\s+(?:but|and)\b|\b(?:It|They|He|She),\s+[a-z]", text):
+        issues.append("broken-comma-fragment")
+    if re.search(r"\b(?:WHAT|WHERE|WHEN|IMPACTS?|HAZARD|SOURCE)\.{2,}", text, re.I):
+        issues.append("weather-machine-fragment")
+    return issues
 
 
 def sentence_budget(level: str) -> tuple[int, int]:
@@ -535,22 +614,112 @@ def article_thai_sentences(raw: dict[str, Any], text: str) -> list[str]:
     return output
 
 
-def is_useful_thai_translation(source: str, translated: str) -> bool:
-    translated = normalize(translated)
-    if not translated or looks_mojibake(translated):
-        return False
+THAI_MONTHS = {
+    "January": "มกราคม", "February": "กุมภาพันธ์", "March": "มีนาคม", "April": "เมษายน",
+    "May": "พฤษภาคม", "June": "มิถุนายน", "July": "กรกฎาคม", "August": "สิงหาคม",
+    "September": "กันยายน", "October": "ตุลาคม", "November": "พฤศจิกายน", "December": "ธันวาคม",
+}
+THAI_DIGITS = str.maketrans("๐๑๒๓๔๕๖๗๘๙", "0123456789")
+
+
+def numeric_facts(text: str) -> set[str]:
+    text = text.translate(THAI_DIGITS)
+    facts = {match.replace(",", "") for match in re.findall(r"(?<!\w)\d{1,2}:\d{2}(?!\d)", text)}
+    text = re.sub(r"(?<!\w)\d{1,2}:\d{2}(?!\d)", " ", text)
+    facts.update(match.replace(",", "") for match in re.findall(r"(?<!\w)\d[\d,]*(?:\.\d+)?", text))
+    return facts
+
+
+def repeated_translation_issues(text: str) -> list[str]:
+    tokens = re.findall(r"[\u0e00-\u0e7f]+|[A-Za-z]+|\d+(?:[.,:]\d+)*", text.lower())
+    issues: list[str] = []
+    run = 1
+    for index in range(1, len(tokens)):
+        run = run + 1 if tokens[index] == tokens[index - 1] else 1
+        if run >= 4:
+            issues.append("repeated-word-run")
+            break
+    for size in (2, 3):
+        counts = Counter(tuple(tokens[index:index + size]) for index in range(max(0, len(tokens) - size + 1)))
+        if counts:
+            count = max(counts.values())
+            if count >= 4 and count * size >= max(8, len(tokens) // 3):
+                issues.append(f"repeated-{size}-gram")
+    if re.search(r"([\u0e00-\u0e7f]{2,12})(?:\1){3,}", text):
+        issues.append("repeated-junk-string")
+    return issues
+
+
+def translation_quality_issues(source: str, translated: str) -> list[str]:
+    raw_translated = str(translated or "").replace("\r\n", "\n")
+    source = normalize_paragraphs(source)
+    translated = normalize_paragraphs(translated)
+    issues: list[str] = []
+    if not translated:
+        return ["empty-translation"]
+    if re.search(r"\n\s*\n\s*\n", raw_translated):
+        issues.append("empty-paragraph")
+    if looks_mojibake(translated):
+        issues.append("mojibake")
     if not re.search(r"[\u0e00-\u0e7f]", translated):
-        return False
-    blocked = (
-        "คำแปลภาษาไทยสำหรับบทความตัวอย่าง",
-        "เนื้อหาข่าวพูดถึงเหตุการณ์สำคัญ",
-        "ควรอ่านจากย่อหน้าภาษาอังกฤษ",
+        issues.append("missing-thai-script")
+    if re.search(r"[\u0e80-\u0eff\u1000-\u109f\u1780-\u17ff\u0400-\u04ff\u0600-\u06ff\u4e00-\u9fff]", translated):
+        issues.append("unexpected-non-thai-script")
+    placeholders = (
+        "คำแปลภาษาไทยสำหรับบทความตัวอย่าง", "เนื้อหาข่าวพูดถึงเหตุการณ์สำคัญ",
+        "ควรอ่านจากย่อหน้าภาษาอังกฤษ", "translation unavailable",
     )
-    if any(placeholder in translated for placeholder in blocked):
-        return False
+    if any(value.lower() in translated.lower() for value in placeholders):
+        issues.append("placeholder-text")
+    issues.extend(repeated_translation_issues(translated))
+
     source_words = len(re.findall(r"[A-Za-z]+(?:['-][A-Za-z]+)*", source))
     thai_characters = len(re.findall(r"[\u0e00-\u0e7f]", translated))
-    return thai_characters >= max(12, source_words * 2)
+    if thai_characters < max(12, int(source_words * 1.5)):
+        issues.append("suspiciously-short")
+    if source_words and thai_characters > source_words * 10 + 120:
+        issues.append("suspiciously-long")
+    missing_numbers = numeric_facts(source) - numeric_facts(translated)
+    if missing_numbers:
+        issues.append("missing-number:" + ",".join(sorted(missing_numbers)))
+    for month, thai_month in THAI_MONTHS.items():
+        month_context = rf"(?:\b(?:in|on|since|until|through|during|by|from)\s+{month}\b|\b{month}\s+\d{{1,2}}\b|\b\d{{1,2}}\s+{month}\b)"
+        if re.search(month_context, source) and not re.search(rf"\b{month}\b", translated, re.I) and thai_month not in translated:
+            issues.append("missing-month:" + month)
+    if re.search(r"\b\d{1,2}:\d{2}\s*(?:AM|PM)\b", source, re.I):
+        has_clock = bool(re.search(r"\b\d{1,2}:\d{2}\b", translated))
+        has_period = bool(re.search(r"\b(?:AM|PM)\b|น\.|ตอน(?:เช้า|บ่าย|ค่ำ)", translated, re.I))
+        if not has_clock or not has_period:
+            issues.append("missing-time-period")
+    if re.search(r"%|\bper\s*cent\b|\bpercent\b", source, re.I) and not re.search(r"%|\bpercent\b|เปอร์เซ็นต์|ร้อยละ", translated, re.I):
+        issues.append("missing-percent-unit")
+    unit_pairs = {
+        r"\bmiles?\b": ("mile", "miles", "ไมล์"),
+        r"\bknots?\b": ("knot", "knots", "น็อต", "นอต"),
+        r"\bdegrees?\b|°[CF]\b": ("degree", "degrees", "องศา", "°"),
+        r"\bdollars?\b|[$]": ("dollar", "dollars", "$", "ดอลลาร์"),
+    }
+    lower_target = translated.lower()
+    for pattern, equivalents in unit_pairs.items():
+        if re.search(pattern, source, re.I) and not any(value.lower() in lower_target for value in equivalents):
+            issues.append("missing-unit:" + pattern)
+
+    source_sentences = sentence_split(source)
+    target_sentences = [part for part in re.split(r"[.!?ฯ]+", translated) if normalize(part)]
+    if len(source_sentences) >= 4 and len(target_sentences) < max(2, (len(source_sentences) + 1) // 2):
+        issues.append("obvious-truncation")
+    source_paragraphs = [part for part in source.split("\n\n") if part.strip()]
+    target_paragraphs = [part for part in translated.split("\n\n") if part.strip()]
+    if len(source_paragraphs) > 1 and len(target_paragraphs) < len(source_paragraphs):
+        issues.append("collapsed-paragraphs")
+    latin_words = re.findall(r"\b[A-Za-z]{2,}\b", translated)
+    if len(latin_words) > max(10, source_words // 4):
+        issues.append("excessive-english-leakage")
+    return list(dict.fromkeys(issues))
+
+
+def is_useful_thai_translation(source: str, translated: str) -> bool:
+    return not translation_quality_issues(source, translated)
 
 
 def natural_thai_article(raw: dict[str, Any], text: str) -> str:
@@ -578,7 +747,7 @@ def full_thai_article(raw: dict[str, Any], text: str, translated: str) -> str:
         translated += "."
     return (
         f"ข่าวนี้มาจาก {provider} อยู่ในหมวด{category} และถูกเรียบเรียงเป็นระดับ {level}. "
-        f"เนื้อหาข่าวคือ {translated}"
+        f"เนื้อหาข่าวคือ\n\n{translated}"
     )
 
 
@@ -1084,7 +1253,10 @@ def simplify_sentence(sentence: str, max_words: int, aggressive: bool) -> list[s
         sentence = re.sub(rf"\b{hard}\b", easy, sentence, flags=re.I)
     sentence = re.sub(r"\s*[;:—]\s*", ". ", sentence)
     if aggressive:
-        sentence = re.sub(r",?\s+(which|who|although|however|while)\s+", ". ", sentence, flags=re.I)
+        sentence = re.sub(
+            r",?\s+(although|however|while)\s+",
+            lambda match: f". {match.group(1).capitalize()} ", sentence, flags=re.I,
+        )
     output = []
     for piece in sentence_split(sentence) or [sentence]:
         words = piece.split()
@@ -1132,23 +1304,23 @@ def adapt_level(text: str, level: str, config: dict[str, Any], session: requests
             response.raise_for_status()
             generated = normalize(response.json().get("response", ""))
             if len(generated.split()) >= 35:
-                return clean_story_text(generated)
+                return clean_english_fragments(generated)
         except requests.RequestException:
             logging.warning("Ollama unavailable; using deterministic level adapter")
     sentences = sentence_split(clean_story_text(summary))
     _, max_words = sentence_budget(level)
     if level == "A1":
         parts = [part for sentence in sentences[:5] for part in simplify_sentence(sentence, 8, True)]
-        return trim_to_word_budget(parts[:10], max_words)
+        return clean_english_fragments(trim_to_word_budget(parts[:10], max_words))
     if level == "A2":
         parts = [part for sentence in sentences[:6] for part in simplify_sentence(sentence, 12, True)]
-        return trim_to_word_budget(parts[:12], max_words)
+        return clean_english_fragments(trim_to_word_budget(parts[:12], max_words))
     if level == "B1":
         parts = [part for sentence in sentences[:8] for part in simplify_sentence(sentence, 18, False)]
-        return trim_to_word_budget(parts[:12], max_words)
+        return clean_english_fragments(trim_to_word_budget(parts[:12], max_words))
     if level == "B2":
-        return trim_to_word_budget(sentences[:9], max_words)
-    return trim_to_word_budget(sentences[:11], max_words)
+        return clean_english_fragments(trim_to_word_budget(sentences[:9], max_words))
+    return clean_english_fragments(trim_to_word_budget(sentences[:11], max_words))
 
 
 def vocabulary_words(text: str) -> list[str]:
@@ -1191,12 +1363,45 @@ class Translator:
         self.cache = load_json(TRANSLATION_CACHE_PATH, {})
         self._nllb_tokenizer: Any = None
         self._nllb_model: Any = None
+        self.quality_diagnostics: dict[str, Any] = {
+            "cache_rejections": 0, "nllb_retries": 0, "quality_failures": 0, "reasons": Counter(),
+        }
+
+    def _record_quality(self, field: str, issues: list[str]) -> None:
+        self.quality_diagnostics[field] += 1
+        self.quality_diagnostics["reasons"].update(issues)
+
+    def diagnostics_summary(self) -> dict[str, Any]:
+        return {
+            "cache_rejections": self.quality_diagnostics["cache_rejections"],
+            "nllb_retries": self.quality_diagnostics["nllb_retries"],
+            "quality_failures": self.quality_diagnostics["quality_failures"],
+            "rejection_reasons": dict(self.quality_diagnostics["reasons"]),
+        }
+
+    def _nllb_with_quality_retry(self, text: str) -> str:
+        translated = self._nllb_translate(text)
+        issues = translation_quality_issues(text, translated)
+        if not issues:
+            return translated
+        self._record_quality("nllb_retries", issues)
+        translated = self._nllb_translate(text, strict=True)
+        issues = translation_quality_issues(text, translated)
+        if issues:
+            self._record_quality("quality_failures", issues)
+            return ""
+        return translated
 
     def translate(self, text: str, words: list[str], demo_thai: str = "") -> tuple[str, dict[str, str]]:
         key = translation_cache_key(text, self.config)
-        if key in self.cache and all(word in self.cache[key].get("words", {}) for word in words):
+        if key in self.cache:
             row = self.cache[key]
-            if self.config["demo"] or is_useful_thai_translation(text, row.get("thai_text", "")):
+            cache_issues = [] if self.config["demo"] else translation_quality_issues(text, row.get("thai_text", ""))
+            if cache_issues:
+                self._record_quality("cache_rejections", cache_issues)
+                self.cache.pop(key, None)
+                atomic_json(TRANSLATION_CACHE_PATH, self.cache)
+            elif all(word in row.get("words", {}) for word in words):
                 return row["thai_text"], safe_word_translations(words, row.get("words", {}))
         if self.config["demo"]:
             dictionary = safe_word_translations(words)
@@ -1205,7 +1410,7 @@ class Translator:
             atomic_json(TRANSLATION_CACHE_PATH, self.cache)
             return result
         if self.config["translation_provider"] == "nllb":
-            result = (self._nllb_translate(text), safe_word_translations(words))
+            result = (self._nllb_with_quality_retry(text), safe_word_translations(words))
             self.cache[key] = {"thai_text": result[0], "words": result[1]}
             atomic_json(TRANSLATION_CACHE_PATH, self.cache)
             return result
@@ -1224,20 +1429,24 @@ class Translator:
         except requests.RequestException:
             translated = self._argos([text, *words])
             if not translated and self.config["translation_provider"] == "auto":
-                article_translation = self._nllb_translate(text)
+                article_translation = self._nllb_with_quality_retry(text)
                 translated = [article_translation, *("" for _ in words)] if article_translation else None
         if not translated or len(translated) != len(words) + 1:
             result = ("", safe_word_translations(words))
         else:
             result = (
-                normalize(translated[0]),
+                normalize_paragraphs(translated[0]),
                 safe_word_translations(words, {word: normalize(value) for word, value in zip(words, translated[1:])}),
             )
+        result_issues = translation_quality_issues(text, result[0])
+        if result_issues:
+            self._record_quality("quality_failures", result_issues)
+            result = ("", result[1])
         self.cache[key] = {"thai_text": result[0], "words": result[1]}
         atomic_json(TRANSLATION_CACHE_PATH, self.cache)
         return result
 
-    def _nllb_translate(self, text: str) -> str:
+    def _nllb_translate(self, text: str, strict: bool = False) -> str:
         try:
             import torch  # type: ignore
             from transformers import AutoModelForSeq2SeqLM, AutoTokenizer  # type: ignore
@@ -1249,31 +1458,40 @@ class Translator:
                 self._nllb_model = AutoModelForSeq2SeqLM.from_pretrained(model_name)
                 self._nllb_model.eval()
             target_id = self._nllb_tokenizer.convert_tokens_to_ids("tha_Thai")
-            translated_chunks: list[str] = []
-            chunks = [chunk for chunk in translation_chunks(text) if not is_non_substantive_fragment(chunk)]
-            if not chunks:
+            translated_paragraphs: list[str] = []
+            paragraphs = [part for part in normalize_paragraphs(text).split("\n\n") if part]
+            if not paragraphs:
                 return ""
-            for chunk in chunks:
-                curated = exact_translated_phrase(chunk)
-                if curated:
-                    translated_chunks.append(curated + ("" if curated[-1] in ".!?。！？" else "."))
-                    continue
-                model_input = simplify_translation_source(chunk)
-                encoded = self._nllb_tokenizer(model_input, return_tensors="pt", truncation=True, max_length=512)
-                with torch.inference_mode():
-                    generated = self._nllb_model.generate(
-                        **encoded,
-                        forced_bos_token_id=target_id,
-                        max_length=512,
-                        num_beams=3,
-                    )
-                decoded = normalize(self._nllb_tokenizer.batch_decode(generated, skip_special_tokens=True)[0])
-                if not re.search(r"[\u0e00-\u0e7f]", decoded):
-                    return ""
-                if decoded[-1] not in ".!?。！？":
-                    decoded += "."
-                translated_chunks.append(decoded)
-            return normalize(" ".join(translated_chunks))
+            for paragraph in paragraphs:
+                translated_chunks: list[str] = []
+                chunks = [
+                    chunk for chunk in translation_chunks(paragraph, max_words=24 if strict else 45)
+                    if not is_non_substantive_fragment(chunk)
+                ]
+                for chunk in chunks:
+                    curated = exact_translated_phrase(chunk)
+                    if curated:
+                        translated_chunks.append(curated + ("" if curated[-1] in ".!?。！？" else "."))
+                        continue
+                    model_input = simplify_translation_source(chunk)
+                    encoded = self._nllb_tokenizer(model_input, return_tensors="pt", truncation=True, max_length=512)
+                    generation = {
+                        "forced_bos_token_id": target_id, "max_length": 512,
+                        "num_beams": 4 if strict else 3,
+                    }
+                    if strict:
+                        generation.update({"no_repeat_ngram_size": 3, "repetition_penalty": 1.15, "early_stopping": True})
+                    with torch.inference_mode():
+                        generated = self._nllb_model.generate(**encoded, **generation)
+                    decoded = normalize(self._nllb_tokenizer.batch_decode(generated, skip_special_tokens=True)[0])
+                    if not re.search(r"[\u0e00-\u0e7f]", decoded):
+                        return ""
+                    if decoded[-1] not in ".!?。！？":
+                        decoded += "."
+                    translated_chunks.append(decoded)
+                if translated_chunks:
+                    translated_paragraphs.append(" ".join(translated_chunks))
+            return normalize_paragraphs("\n\n".join(translated_paragraphs))
         except (ImportError, OSError, RuntimeError, ValueError, AttributeError) as error:
             logging.error("Local NLLB translation failed: %s", error)
             return ""
@@ -1679,10 +1897,13 @@ def source_material(raw: dict[str, Any], session: requests.Session, config: dict
 
 
 def naturalize_thai(text: str) -> str:
-    text = normalize(text)
+    text = normalize_paragraphs(text)
     replacements = {
         "ได้กล่าวว่า": "บอกว่า",
         "กล่าวว่า": "บอกว่า",
+        "ข่มขืนสิทธิมนุษยชน": "ละเมิดสิทธิมนุษยชน",
+        "หินหินใหญ่ขนาดเปียก": "ลูกเห็บขนาดเล็ก",
+        "น.ม.": "น.",
         "ประชาชน": "ผู้คน",
         "สามารถ": "ทำได้",
         "เนื่องจาก": "เพราะ",
@@ -1701,10 +1922,13 @@ def naturalize_thai(text: str) -> str:
     }
     for formal, natural in replacements.items():
         text = text.replace(formal, natural)
-    text = re.sub(r"([.!?])(?=[\u0e00-\u0e7f])", r"\1 ", text)
-    text = re.sub(r"\s+([,.!?])", r"\1", text)
-    text = re.sub(r"\s{2,}", " ", text)
-    return text.strip()
+    text = re.sub(r"\bknots?\b", "นอต", text, flags=re.I)
+    paragraphs = []
+    for paragraph in text.split("\n\n"):
+        paragraph = re.sub(r"([.!?])(?=[\u0e00-\u0e7f])", r"\1 ", paragraph)
+        paragraph = re.sub(r"\s+([,.!?])", r"\1", paragraph)
+        paragraphs.append(re.sub(r"\s{2,}", " ", paragraph).strip())
+    return "\n\n".join(paragraph for paragraph in paragraphs if paragraph)
 
 
 def generate_audio(text: str, article_id: str, level: str, date: str, config: dict[str, Any]) -> Path:
@@ -1775,7 +1999,11 @@ def process_article(
     translator: Translator, config: dict[str, Any], published_date: str,
 ) -> dict[str, Any]:
     material = source_material(raw, session, config)
-    text = adapt_level(material, raw["level"], config, session)
+    text = prepare_reader_text(adapt_level(material, raw["level"], config, session))
+    speech_text = make_speech_text(raw["title"], text)
+    speech_issues = speech_text_issues(speech_text)
+    if speech_issues:
+        raise RuntimeError(f"Unsafe Web Speech text for article {raw['id']}: {', '.join(speech_issues)}")
     words = vocabulary_words(text)
     translated_thai, translations = translator.translate(text, words, raw.get("thai_demo", ""))
     if config["require_full_translation"] and not is_useful_thai_translation(text, translated_thai):
@@ -1788,7 +2016,8 @@ def process_article(
     slug = f"{slugify(raw['title'])}-{raw['id'][:8]}"
     return {
         "schema_version": SCHEMA_VERSION, "id": raw["id"], "slug": slug, "level": raw["level"],
-        "title": raw["title"], "description": raw["description"], "text": text, "thai_text": thai_text,
+        "title": raw["title"], "description": raw["description"], "text": text,
+        "speech_text": speech_text, "thai_text": thai_text,
         "word_translations": translations, "category": raw["category"], "provider": raw["provider"],
         "word_pos": word_pos,
         "content_type": raw["content_type"], "source_url": raw["url"], "author": raw["author"],
@@ -1815,12 +2044,22 @@ def word_spans(text: str, translations: dict[str, str], word_pos: dict[str, str]
     return Markup("".join(output))
 
 
+def article_meets_current_quality(row: dict[str, Any]) -> bool:
+    if row.get("schema_version") != SCHEMA_VERSION or not row.get("speech_text"):
+        return False
+    if speech_text_issues(row.get("speech_text", "")):
+        return False
+    if row.get("provider") == "demo":
+        return True
+    return not translation_quality_issues(row.get("text", ""), row.get("thai_text", ""))
+
+
 def load_articles(retention_days: int) -> list[dict[str, Any]]:
     cutoff = utc_now() - timedelta(days=retention_days)
     articles = []
     for path in PROCESSED_DIR.glob("*/*.json"):
         row = load_json(path, None)
-        if row and row.get("schema_version") == SCHEMA_VERSION and parse_date(row.get("generated_at")) >= cutoff:
+        if row and article_meets_current_quality(row) and parse_date(row.get("generated_at")) >= cutoff:
             articles.append(row)
     return sorted(articles, key=lambda row: parse_date(row["generated_at"]), reverse=True)
 
@@ -1862,6 +2101,7 @@ def article_view(article: dict[str, Any], base_prefix: str) -> dict[str, Any]:
         "image_alt": image.get("image_alt") or f"Cover image for {article['title']}",
         "published_display": parse_date(article["published"]).strftime("%d %b %Y"),
         "word_html": word_spans(article["text"], article["word_translations"], article.get("word_pos", {})),
+        "thai_paragraphs": [part for part in article.get("thai_text", "").split("\n\n") if part.strip()],
         "audio_source": audio_source,
     }
 
@@ -1992,6 +2232,8 @@ def validate_staging(
         raise RuntimeError("Demo-only article reached production validation")
     if any(row.get("schema_version") != SCHEMA_VERSION for row in today_articles):
         raise RuntimeError(f"Current articles must use schema {SCHEMA_VERSION}")
+    if any(not row.get("speech_text") or speech_text_issues(row.get("speech_text", "")) for row in today_articles):
+        raise RuntimeError("Current edition contains unsafe Web Speech text")
     if not allow_demo and any(
         not is_useful_thai_translation(row.get("text", ""), row.get("thai_text", ""))
         for row in today_articles
@@ -2181,6 +2423,7 @@ def main() -> int:
             ):
                 dates_to_build.append(target_date)
         candidates: list[dict[str, Any]] = []
+        translator: Translator | None = None
         if dates_to_build:
             needs_fresh_candidates = any(
                 target_date == today
@@ -2226,11 +2469,15 @@ def main() -> int:
                 temporary.replace(output_dir)
             if not config["demo"]:
                 purge_demo_editions()
+        if translator is not None:
+            build_report["translation_quality"] = translator.diagnostics_summary()
         articles = load_articles(config["retention_days"])
         render_site(articles, quota, today, build_report)
         logging.info("Published %d retained article(s).", len(articles))
         return 0
     except Exception as error:
+        if "translator" in locals() and translator is not None:
+            build_report["translation_quality"] = translator.diagnostics_summary()
         build_report.update({"status": "failed", "completed_at": utc_now().isoformat(), "error": str(error)[:500]})
         atomic_json(PROVIDER_STATUS_PATH, quota.public_status(
             demo_fallback_blocked=not bool(build_report.get("demo_mode")),

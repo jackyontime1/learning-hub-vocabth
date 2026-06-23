@@ -215,6 +215,27 @@ class DailyReaderTests(unittest.TestCase):
         self.assertNotIn("...", cleaned)
         self.assertNotIn("http", cleaned)
 
+    def test_reader_text_normalizes_weather_time_units_and_hail(self):
+        raw = "At 121 PM EDT, storms moved east at 25 mph. HAZARD...Wind gusts and pea size hail."
+        cleaned = site.prepare_reader_text(raw)
+        self.assertIn("1:21 PM Eastern Daylight Time", cleaned)
+        self.assertIn("25 miles per hour", cleaned)
+        self.assertIn("Hazard: Wind gusts and pea-sized hail", cleaned)
+        self.assertNotIn("...", cleaned)
+
+    def test_speech_text_repairs_known_level_fragments(self):
+        body = "Depending on. data from the report, prices fell. Of, but. It, listeners understood the result."
+        speech = site.make_speech_text("Housing report", body)
+        self.assertNotIn("Depending on.", speech)
+        self.assertNotIn("Of, but", speech)
+        self.assertNotIn("It, listeners", speech)
+        self.assertEqual(site.speech_text_issues(speech), [])
+
+    def test_reader_text_preserves_paragraph_boundaries(self):
+        text = "First sentence. Second sentence. Third sentence. Fourth sentence. Fifth sentence. Sixth sentence."
+        reader = site.prepare_reader_text(text)
+        self.assertEqual(len(reader.split("\n\n")), 2)
+
     def test_level_adapter_does_not_manufacture_mid_phrase_fragments(self):
         source = (
             "Greenspan steered the Federal Reserve for nearly two decades through some of the longest "
@@ -303,6 +324,50 @@ class DailyReaderTests(unittest.TestCase):
         self.assertFalse(site.is_useful_thai_translation(source, placeholder))
         self.assertFalse(site.is_useful_thai_translation(source, ""))
 
+    def test_translation_quality_rejects_repeated_thai_words(self):
+        source = "Inflation rose because energy prices increased across the country."
+        translated = "อัตรา " * 20
+        self.assertIn("repeated-word-run", site.translation_quality_issues(source, translated))
+
+    def test_translation_quality_rejects_repeated_thai_ngrams(self):
+        source = "Energy prices rose quickly and affected families across the country."
+        translated = "ราคาพลังงาน สูงขึ้น " * 10
+        issues = site.translation_quality_issues(source, translated)
+        self.assertTrue(any(issue.startswith("repeated-2-gram") for issue in issues))
+
+    def test_translation_quality_rejects_lao_script(self):
+        source = "The government reduced restrictions after the meeting."
+        translated = "รัฐบาลลดຜ່ອນข้อจำกัดหลังการประชุมอย่างเป็นทางการ"
+        self.assertIn("unexpected-non-thai-script", site.translation_quality_issues(source, translated))
+
+    def test_translation_quality_preserves_months(self):
+        source = "The government announced the change in March after a public meeting."
+        wrong = "รัฐบาลประกาศการเปลี่ยนแปลงในเดือนมกราคมหลังการประชุมกับประชาชน"
+        good = "รัฐบาลประกาศการเปลี่ยนแปลงในเดือนมีนาคมหลังการประชุมกับประชาชน"
+        self.assertIn("missing-month:March", site.translation_quality_issues(source, wrong))
+        self.assertNotIn("missing-month:March", site.translation_quality_issues(source, good))
+
+    def test_translation_quality_preserves_time_and_percent(self):
+        source = "At 1:21 PM, prices increased by 3.2 percent after the report."
+        wrong = "เวลา 2:21 น. ราคาสินค้าเพิ่มขึ้นหลังรายงาน"
+        good = "เวลา 1:21 น. ราคาสินค้าเพิ่มขึ้น 3.2 เปอร์เซ็นต์หลังรายงาน"
+        wrong_issues = site.translation_quality_issues(source, wrong)
+        self.assertTrue(any(issue.startswith("missing-number:") for issue in wrong_issues))
+        self.assertIn("missing-percent-unit", wrong_issues)
+        self.assertFalse(any(issue.startswith("missing-number:") for issue in site.translation_quality_issues(source, good)))
+
+    def test_translation_quality_preserves_all_numbers(self):
+        source = "Officials reported 1,003 cases, 254 deaths, and 100 recoveries."
+        translated = "เจ้าหน้าที่รายงานผู้ป่วย 1,003 ราย ผู้เสียชีวิต 254 ราย และผู้หายป่วย 100 ราย"
+        self.assertFalse(any(issue.startswith("missing-number:") for issue in site.translation_quality_issues(source, translated)))
+        missing = translated.replace("254", "")
+        self.assertTrue(any("254" in issue for issue in site.translation_quality_issues(source, missing)))
+
+    def test_translation_quality_rejects_collapsed_paragraphs(self):
+        source = "One complete sentence. Another complete sentence. A third complete sentence.\n\nA fourth sentence. A fifth sentence. A sixth sentence."
+        translated = "นี่คือประโยคแรก. นี่คือประโยคที่สอง. นี่คือประโยคที่สาม. นี่คือประโยคที่สี่."
+        self.assertIn("collapsed-paragraphs", site.translation_quality_issues(source, translated))
+
     def test_mojibake_detection_keeps_normal_thai_words(self):
         self.assertFalse(site.looks_mojibake("เธอบอกว่าเนื้อหาข่าวนี้อ่านง่าย"))
         self.assertTrue(site.looks_mojibake("เธ\x82เน\x88เธฒเธง"))
@@ -329,6 +394,38 @@ class DailyReaderTests(unittest.TestCase):
                 thai, translations = translator.translate(text, words)
         self.assertEqual(thai, "แมวสีขาวกินสุนัขใกล้บ้านหลังหนึ่ง")
         self.assertEqual(translations["cat"], "แมว")
+
+    def test_translator_rejects_bad_cached_translation_and_records_reason(self):
+        text = "Housing prices fell after the economic report was published."
+        words = ["housing"]
+        config = {"demo": False, "translation_provider": "nllb", "nllb_model": "local-test"}
+        key = site.translation_cache_key(text, config)
+        bad = "อัตรา " * 20
+        good = "ราคาที่อยู่อาศัยลดลงหลังจากมีการเผยแพร่รายงานทางเศรษฐกิจ"
+        with tempfile.TemporaryDirectory() as temp:
+            cache_path = Path(temp) / "translations.json"
+            cache_path.write_text(json.dumps({key: {"thai_text": bad, "words": {"housing": "ที่อยู่อาศัย"}}}), encoding="utf-8")
+            with patch.object(site, "TRANSLATION_CACHE_PATH", cache_path):
+                translator = site.Translator(FakeSession([]), config)
+                with patch.object(translator, "_nllb_translate", return_value=good) as translate:
+                    thai, _ = translator.translate(text, words)
+        self.assertEqual(thai, good)
+        self.assertEqual(translator.diagnostics_summary()["cache_rejections"], 1)
+        translate.assert_called_once_with(text)
+
+    def test_nllb_retries_with_strict_repetition_control(self):
+        text = "Housing prices fell after the economic report was published."
+        config = {"demo": False, "translation_provider": "nllb", "nllb_model": "local-test"}
+        bad = "อัตรา " * 20
+        good = "ราคาที่อยู่อาศัยลดลงหลังจากมีการเผยแพร่รายงานทางเศรษฐกิจ"
+        with tempfile.TemporaryDirectory() as temp:
+            with patch.object(site, "TRANSLATION_CACHE_PATH", Path(temp) / "translations.json"):
+                translator = site.Translator(FakeSession([]), config)
+                with patch.object(translator, "_nllb_translate", side_effect=[bad, good]) as translate:
+                    thai, _ = translator.translate(text, ["housing"])
+        self.assertEqual(thai, good)
+        self.assertEqual(translate.call_count, 2)
+        translate.assert_any_call(text, strict=True)
 
     def test_nllb_provider_translates_article_once_and_keeps_local_glossary(self):
         text = "A white cat eats a dog near the house."
@@ -375,6 +472,12 @@ class DailyReaderTests(unittest.TestCase):
         self.assertIn("ผ้าอนามัย", result)
         self.assertIn("สำหรับหลายคน", result)
         self.assertIn("ทำให้", result)
+
+    def test_naturalize_thai_repairs_human_rights_mistranslation(self):
+        result = site.naturalize_thai("รัฐบาลถูกกล่าวหาว่าข่มขืนสิทธิมนุษยชนของประชาชน ลมแรง 20 knots")
+        self.assertIn("ละเมิดสิทธิมนุษยชน", result)
+        self.assertNotIn("ข่มขืนสิทธิมนุษยชน", result)
+        self.assertIn("20 นอต", result)
 
     def test_rate_limit_pauses_provider(self):
         with tempfile.TemporaryDirectory() as temp:

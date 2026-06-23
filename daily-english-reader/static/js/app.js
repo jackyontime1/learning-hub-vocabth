@@ -74,7 +74,11 @@ function storySpeechSupported() {
 }
 
 function storyWords(audio) {
-  return (audio?.dataset.readerText || "").trim().split(/\s+/).filter(Boolean);
+  const readerText = (audio?.dataset.readerText || "")
+    .trim()
+    .replace(/\n\s*\n/g, " ... ")
+    .replace(/\s+/g, " ");
+  return readerText.split(" ").filter(Boolean);
 }
 
 function storyRate() {
