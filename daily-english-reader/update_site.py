@@ -689,6 +689,15 @@ def repair_translated_facts(source: str, translated: str) -> str:
         for day in re.findall(rf"\b{month}\s+(\d{{1,2}})\b", source):
             if day not in target_numbers and thai_month in translated:
                 translated = translated.replace(thai_month, f"{thai_month} {day}", 1)
+    source_months = {
+        month for month in THAI_MONTHS
+        if re.search(rf"(?:\b(?:in|on|since|until|through|during|by|from)\s+{month}\b|\b{month}\s+\d{{1,2}}\b)", source, re.I)
+    }
+    if len(source_months) == 1:
+        expected_month = THAI_MONTHS[next(iter(source_months))]
+        present_months = [thai_month for thai_month in THAI_MONTHS.values() if thai_month in translated]
+        if expected_month not in translated and len(present_months) == 1:
+            translated = translated.replace(present_months[0], expected_month, 1)
     for clock, period in re.findall(r"\b(\d{1,2}:\d{2})\s*(AM|PM)\b", source, re.I):
         hour, minute = clock.split(":", 1)
         target_clock = rf"(?<!\d){re.escape(str(int(hour)))}[.:]{re.escape(minute)}(?!\d)"

@@ -320,6 +320,14 @@ class DailyReaderTests(unittest.TestCase):
         self.assertIn("10 ปี", repaired)
         self.assertFalse(any(issue.startswith("missing-number:") for issue in site.translation_quality_issues(source, repaired)))
 
+    def test_repair_translated_facts_corrects_single_mistranslated_month(self):
+        source = "The government announced the changes in March."
+        translated = "รัฐบาลประกาศการเปลี่ยนแปลงในเดือนมกราคม."
+        repaired = site.repair_translated_facts(source, translated)
+        self.assertIn("มีนาคม", repaired)
+        self.assertNotIn("มกราคม", repaired)
+        self.assertNotIn("missing-month:March", site.translation_quality_issues(source, repaired))
+
     def test_non_substantive_fragments_do_not_block_translation(self):
         self.assertTrue(site.is_non_substantive_fragment("Alan Greenspan."))
         self.assertTrue(site.is_non_substantive_fragment("Richards/AFP via Getty Images photo credit."))
