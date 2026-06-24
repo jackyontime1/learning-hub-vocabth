@@ -98,6 +98,10 @@ class DailyReaderTests(unittest.TestCase):
         self.assertIn(article["category"].lower(), query.lower())
         self.assertIn("library", query.lower())
 
+    def test_openverse_tag_text_accepts_object_tags(self):
+        tags = [{"name": "government"}, {"name": "United Kingdom"}, "politics"]
+        self.assertEqual(site.openverse_tag_text(tags), "government United Kingdom politics")
+
     def test_unique_fallback_image_is_per_article_and_has_full_metadata(self):
         first, second = site.demo_articles()[:2]
         with tempfile.TemporaryDirectory() as temp:

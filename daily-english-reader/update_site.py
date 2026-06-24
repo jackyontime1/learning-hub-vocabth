@@ -1741,6 +1741,22 @@ def local_generated_image(
         return None
 
 
+def openverse_tag_text(tags: Any) -> str:
+    if isinstance(tags, str):
+        return tags
+    if not isinstance(tags, list):
+        return ""
+    values: list[str] = []
+    for tag in tags:
+        if isinstance(tag, str):
+            values.append(tag)
+        elif isinstance(tag, dict):
+            value = tag.get("name") or tag.get("text") or tag.get("label")
+            if isinstance(value, str):
+                values.append(value)
+    return " ".join(values)
+
+
 def image_for(
     article: dict[str, Any], session: requests.Session, quota: QuotaManager, config: dict[str, Any],
 ) -> dict[str, Any]:
@@ -1823,7 +1839,7 @@ def image_for(
             }, timeout=config["timeout"])
             for row in payload.get("results", []):
                 url = row.get("url") or row.get("thumbnail", "")
-                text = f"{row.get('title', '')} {' '.join(row.get('tags') or [])}"
+                text = f"{row.get('title', '')} {openverse_tag_text(row.get('tags'))}"
                 candidates.append(image_record(
                     article, query, url=url, source="Openverse", author=row.get("creator") or "Openverse contributor",
                     license_name=" ".join(filter(None, [row.get("license", ""), row.get("license_version", "")])),
