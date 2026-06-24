@@ -373,6 +373,15 @@ def sentence_split(text: str) -> list[str]:
 
 def clean_story_text(text: str) -> str:
     text = normalize(text)
+    text = re.sub(r"\(SOUNDBITE OF [^)]+\)", " ", text, flags=re.I)
+    text = re.sub(
+        r"\bCopyright\s*(?:©|\(c\))?\s*\d{4}\s+NPR\.\s*All rights reserved\.",
+        " ", text, flags=re.I,
+    )
+    text = re.sub(
+        r"\bVisit our website terms of use and permissions pages at\s+\S+\s+for further information\.",
+        " ", text, flags=re.I,
+    )
     text = re.sub(
         r"\*?\s*(WHAT|WHERE|WHEN|IMPACTS|ADDITIONAL DETAILS|HAZARD|SOURCE|IMPACT)\.{2,}\s*",
         lambda match: f" {match.group(1).title()}: ",

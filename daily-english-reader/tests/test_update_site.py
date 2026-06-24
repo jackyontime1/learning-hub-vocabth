@@ -187,6 +187,14 @@ class DailyReaderTests(unittest.TestCase):
         self.assertNotIn("hide caption", cleaned)
         self.assertIn("A lot changes when, you move", cleaned)
 
+    def test_clean_story_text_removes_npr_audio_and_legal_boilerplate(self):
+        source = (
+            "Serena Williams returned to tennis. (SOUNDBITE OF MUSIC) "
+            "Copyright © 2026 NPR. All rights reserved. Visit our website terms of use "
+            "and permissions pages at www.npr.org for further information."
+        )
+        self.assertEqual(site.clean_story_text(source), "Serena Williams returned to tennis.")
+
     def test_clean_story_text_repairs_common_source_typos(self):
         cleaned = site.clean_story_text("Last year 2e published a story where you've never too old to play.")
         self.assertIn("Last year we published", cleaned)
