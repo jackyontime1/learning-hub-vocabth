@@ -243,6 +243,11 @@ class DailyReaderTests(unittest.TestCase):
         self.assertIn("Hazard: Wind gusts and pea-sized hail", cleaned)
         self.assertNotIn("...", cleaned)
 
+    def test_reader_text_uses_natural_full_hour_weather_time(self):
+        cleaned = site.prepare_reader_text("The advisory remains active until 100 PM CDT.")
+        self.assertIn("1 PM Central Daylight Time", cleaned)
+        self.assertNotIn("1:00", cleaned)
+
     def test_speech_text_repairs_known_level_fragments(self):
         body = "Depending on. data from the report, prices fell. Of, but. It, listeners understood the result."
         speech = site.make_speech_text("Housing report", body)

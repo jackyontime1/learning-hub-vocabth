@@ -452,7 +452,8 @@ def normalize_weather_for_speech(text: str) -> str:
         }
         zone_key = (zone or "").upper()
         zone_text = zones.get(zone_key, zone_key)
-        return f"{hour}:{minute} {period.upper()}{f' {zone_text}' if zone_text else ''}"
+        clock_text = hour if minute == "00" else f"{hour}:{minute}"
+        return f"{clock_text} {period.upper()}{f' {zone_text}' if zone_text else ''}"
 
     text = re.sub(r"\b(\d{3,4})\s*(AM|PM)(?:\s*(EDT|EST|CDT|CST|MDT|MST|PDT|PST))?\b", clock, text, flags=re.I)
     text = re.sub(r"\b(\d+(?:\.\d+)?)\s*mph\b", r"\1 miles per hour", text, flags=re.I)
