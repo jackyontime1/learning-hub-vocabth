@@ -129,6 +129,9 @@ TRANSLATION_SIMPLIFICATIONS = {
     "pea-sized hail": "small hailstones",
     "ping pong ball size hail": "hailstones the size of ping pong balls",
     "was located near": "was near",
+    "nuclear inspections": "inspections of nuclear facilities",
+    "free transit through the Strait of Hormuz": "free passage through the Hormuz Strait",
+    "petrochemical and petroleum products": "petrochemical products and oil products",
 }
 
 DETERMINERS = {"a", "an", "the", "this", "that", "these", "those", "each", "every", "some", "any"}
@@ -402,6 +405,15 @@ def clean_story_text(text: str) -> str:
 
 def clean_english_fragments(text: str) -> str:
     text = clean_story_text(text)
+    month_names = {
+        "Jan": "January", "Feb": "February", "Mar": "March", "Apr": "April",
+        "Jun": "June", "Jul": "July", "Aug": "August", "Sep": "September",
+        "Sept": "September", "Oct": "October", "Nov": "November", "Dec": "December",
+    }
+    text = re.sub(
+        r"\b(Jan|Feb|Mar|Apr|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec)\.\s+(?=\d{1,2}\b)",
+        lambda match: month_names[match.group(1)] + " ", text,
+    )
     text = re.sub(
         r"\b(Depending on|According to|Based on|Because of|Part of)\.\s+(?=[a-z])",
         r"\1 ", text, flags=re.I,
@@ -440,6 +452,11 @@ def paragraphize_text(text: str, sentences_per_paragraph: int = 3) -> str:
     sentences = sentence_split(clean_english_fragments(text))
     if not sentences:
         return ""
+    deduplicated: list[str] = []
+    for sentence in sentences:
+        if not deduplicated or phrase_key(sentence) != phrase_key(deduplicated[-1]):
+            deduplicated.append(sentence)
+    sentences = deduplicated
     groups = [sentences[index:index + sentences_per_paragraph] for index in range(0, len(sentences), sentences_per_paragraph)]
     return "\n\n".join(" ".join(group) for group in groups)
 
@@ -650,6 +667,11 @@ def repair_translated_facts(source: str, translated: str) -> str:
             rf"\b({re.escape(value)}\s*)(?:กิโลเมตร|มิล|เมล|ไมล|kilometers?|kilometres?|km)(?:\s*ต่อ\s*ชั่วโมง)?\b",
             rf"\1{replacement}", translated, flags=re.I,
         )
+    target_numbers = numeric_facts(translated)
+    for month, thai_month in THAI_MONTHS.items():
+        for day in re.findall(rf"\b{month}\s+(\d{{1,2}})\b", source):
+            if day not in target_numbers and thai_month in translated:
+                translated = translated.replace(thai_month, f"{thai_month} {day}", 1)
     return translated
 
 

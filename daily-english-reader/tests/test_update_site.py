@@ -237,6 +237,17 @@ class DailyReaderTests(unittest.TestCase):
         reader = site.prepare_reader_text(text)
         self.assertEqual(len(reader.split("\n\n")), 2)
 
+    def test_reader_text_keeps_abbreviated_month_with_day(self):
+        text = "The licence permits oil sales through Aug. 21. The policy then expires."
+        reader = site.prepare_reader_text(text)
+        self.assertIn("through August 21.", reader)
+        self.assertNotIn("August.\n", reader)
+
+    def test_reader_text_removes_consecutive_duplicate_sentences(self):
+        sentence = "The United States authorized Iranian oil sales on Monday."
+        reader = site.prepare_reader_text(f"{sentence} {sentence} The licence remains temporary.")
+        self.assertEqual(reader.count(sentence), 1)
+
     def test_level_adapter_does_not_manufacture_mid_phrase_fragments(self):
         source = (
             "Greenspan steered the Federal Reserve for nearly two decades through some of the longest "
@@ -375,6 +386,13 @@ class DailyReaderTests(unittest.TestCase):
         good = "รัฐบาลประกาศการเปลี่ยนแปลงในเดือนมีนาคมหลังการประชุมกับประชาชน"
         self.assertIn("missing-month:March", site.translation_quality_issues(source, wrong))
         self.assertNotIn("missing-month:March", site.translation_quality_issues(source, good))
+
+    def test_translated_date_restores_day_when_model_drops_it(self):
+        source = "The temporary licence remains valid through August 21."
+        translated = "ใบอนุญาตชั่วคราวยังมีผลจนถึงเดือนสิงหาคม"
+        repaired = site.repair_translated_facts(source, translated)
+        self.assertIn("สิงหาคม 21", repaired)
+        self.assertFalse(any(issue.startswith("missing-number:") for issue in site.translation_quality_issues(source, repaired)))
 
     def test_translation_quality_preserves_time_and_percent(self):
         source = "At 1:21 PM, prices increased by 3.2 percent after the report."
