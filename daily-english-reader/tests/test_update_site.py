@@ -195,6 +195,13 @@ class DailyReaderTests(unittest.TestCase):
         )
         self.assertEqual(site.clean_story_text(source), "Serena Williams returned to tennis.")
 
+    def test_clean_story_text_removes_hidden_format_controls(self):
+        source = "The company said it would fix \u2060the pool as part \u200bof its warranty."
+        self.assertEqual(
+            site.clean_story_text(source),
+            "The company said it would fix the pool as part of its warranty.",
+        )
+
     def test_clean_story_text_repairs_common_source_typos(self):
         cleaned = site.clean_story_text("Last year 2e published a story where you've never too old to play.")
         self.assertIn("Last year we published", cleaned)
@@ -305,6 +312,13 @@ class DailyReaderTests(unittest.TestCase):
         self.assertIn("4.41 AM", repaired)
         self.assertIn("5.00 AM", repaired)
         self.assertNotIn("missing-time-period", site.translation_quality_issues(source, repaired))
+
+    def test_repair_translated_facts_restores_prison_sentence_years(self):
+        source = "The law carries a 10-year prison sentence for this offence."
+        translated = "กฎหมายกำหนดโทษจำคุกสำหรับความผิดนี้."
+        repaired = site.repair_translated_facts(source, translated)
+        self.assertIn("10 ปี", repaired)
+        self.assertFalse(any(issue.startswith("missing-number:") for issue in site.translation_quality_issues(source, repaired)))
 
     def test_non_substantive_fragments_do_not_block_translation(self):
         self.assertTrue(site.is_non_substantive_fragment("Alan Greenspan."))
@@ -524,6 +538,13 @@ class DailyReaderTests(unittest.TestCase):
         self.assertIn("menstrual pads", simplified.lower())
         self.assertIn("had tax", simplified.lower())
         self.assertIn("too expensive for", simplified.lower())
+
+    def test_translation_preprocessing_avoids_algae_script_and_preserves_sentence_years(self):
+        source = "Algae appeared in the pool. The law carries a 10-year prison sentence."
+        simplified = site.simplify_translation_source(source)
+        self.assertNotIn("algae", simplified.lower())
+        self.assertIn("green plant material in water", simplified.lower())
+        self.assertIn("prison sentence of 10 years", simplified.lower())
 
     def test_exact_curated_translation_is_used_only_for_the_whole_sentence(self):
         sentence = "For decades, sanitary napkins and other menstrual items have been taxed as luxury goods."

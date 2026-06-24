@@ -132,6 +132,7 @@ TRANSLATION_SIMPLIFICATIONS = {
     "nuclear inspections": "inspections of nuclear facilities",
     "free transit through the Strait of Hormuz": "free passage through the Hormuz Strait",
     "petrochemical and petroleum products": "petrochemical products and oil products",
+    "algae": "green plant material in water",
 }
 
 DETERMINERS = {"a", "an", "the", "this", "that", "these", "those", "each", "every", "some", "any"}
@@ -373,6 +374,7 @@ def sentence_split(text: str) -> list[str]:
 
 def clean_story_text(text: str) -> str:
     text = normalize(text)
+    text = "".join(character for character in text if unicodedata.category(character) != "Cf")
     text = re.sub(r"\(SOUNDBITE OF [^)]+\)", " ", text, flags=re.I)
     text = re.sub(
         r"\bCopyright\s*(?:©|\(c\))?\s*\d{4}\s+NPR\.\s*All rights reserved\.",
@@ -621,6 +623,12 @@ def simplify_translation_source(text: str) -> str:
     output = text
     for original, replacement in TRANSLATION_SIMPLIFICATIONS.items():
         output = re.sub(rf"\b{re.escape(original)}\b", replacement, output, flags=re.I)
+    output = re.sub(
+        r"\b(\d+(?:\.\d+)?)-year prison sentence\b",
+        r"prison sentence of \1 years",
+        output,
+        flags=re.I,
+    )
     return normalize_written_measurements(output)
 
 
@@ -690,6 +698,10 @@ def repair_translated_facts(source: str, translated: str) -> str:
         suffix = translated[match.end():match.end() + 18]
         if not re.match(r"\s*(?:AM|PM)\b", suffix, re.I):
             translated = translated[:match.end()] + f" {period.upper()}" + translated[match.end():]
+    target_numbers = numeric_facts(translated)
+    for years in re.findall(r"\b(\d+(?:\.\d+)?)-year prison sentence\b", source, re.I):
+        if years not in target_numbers:
+            translated = normalize_paragraphs(f"{translated}\n\nโทษจำคุกที่ระบุไว้คือ {years} ปี.")
     return translated
 
 
