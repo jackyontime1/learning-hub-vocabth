@@ -590,7 +590,7 @@ def simplify_translation_source(text: str) -> str:
     output = text
     for original, replacement in TRANSLATION_SIMPLIFICATIONS.items():
         output = re.sub(rf"\b{re.escape(original)}\b", replacement, output, flags=re.I)
-    return output
+    return normalize_written_measurements(output)
 
 
 def sentence_to_thai(sentence: str) -> str:
@@ -620,6 +620,31 @@ THAI_MONTHS = {
     "September": "กันยายน", "October": "ตุลาคม", "November": "พฤศจิกายน", "December": "ธันวาคม",
 }
 THAI_DIGITS = str.maketrans("๐๑๒๓๔๕๖๗๘๙", "0123456789")
+WRITTEN_NUMBERS = {
+    "one": 1, "two": 2, "three": 3, "four": 4, "five": 5, "six": 6, "seven": 7,
+    "eight": 8, "nine": 9, "ten": 10, "eleven": 11, "twelve": 12, "thirteen": 13,
+    "fourteen": 14, "fifteen": 15, "sixteen": 16, "seventeen": 17, "eighteen": 18,
+    "nineteen": 19, "twenty": 20,
+}
+
+
+def normalize_written_measurements(text: str) -> str:
+    units = r"miles?|knots?|degrees?|percent|per cent|dollars?"
+    words = "|".join(WRITTEN_NUMBERS)
+    return re.sub(
+        rf"\b({words})\b(?=\s+(?:{units})\b)",
+        lambda match: str(WRITTEN_NUMBERS[match.group(1).lower()]), text, flags=re.I,
+    )
+
+
+def repair_translated_facts(source: str, translated: str) -> str:
+    source = normalize_written_measurements(source)
+    for value in re.findall(r"\b(\d+(?:\.\d+)?)\s+miles?\b", source, re.I):
+        translated = re.sub(
+            rf"\b({re.escape(value)}\s*)(?:กิโลเมตร|kilometers?|kilometres?|km)\b",
+            r"\1ไมล์", translated, flags=re.I,
+        )
+    return translated
 
 
 def numeric_facts(text: str) -> set[str]:
@@ -652,7 +677,7 @@ def repeated_translation_issues(text: str) -> list[str]:
 
 def translation_quality_issues(source: str, translated: str) -> list[str]:
     raw_translated = str(translated or "").replace("\r\n", "\n")
-    source = normalize_paragraphs(source)
+    source = normalize_written_measurements(normalize_paragraphs(source))
     translated = normalize_paragraphs(translated)
     issues: list[str] = []
     if not translated:
@@ -1270,11 +1295,7 @@ def simplify_sentence(sentence: str, max_words: int, aggressive: bool) -> list[s
                     index for index in range(lower_bound, upper_bound + 1)
                     if words[index].lower().strip(",") in {"and", "but", "so", "because", "while"}
                 ]
-                comma_breaks = [
-                    index for index in range(lower_bound, upper_bound + 1)
-                    if words[index - 1].endswith(",")
-                ]
-                safe_breaks = connector_breaks or comma_breaks
+                safe_breaks = connector_breaks
                 if not safe_breaks:
                     # A longer complete sentence is safer than manufacturing
                     # fragments such as "through some. Of" for the translator.
@@ -1491,7 +1512,8 @@ class Translator:
                     translated_chunks.append(decoded)
                 if translated_chunks:
                     translated_paragraphs.append(" ".join(translated_chunks))
-            return normalize_paragraphs("\n\n".join(translated_paragraphs))
+            translated = normalize_paragraphs("\n\n".join(translated_paragraphs))
+            return normalize_paragraphs(repair_translated_facts(text, translated))
         except (ImportError, OSError, RuntimeError, ValueError, AttributeError) as error:
             logging.error("Local NLLB translation failed: %s", error)
             return ""

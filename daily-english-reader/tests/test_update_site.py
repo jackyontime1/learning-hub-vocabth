@@ -246,6 +246,23 @@ class DailyReaderTests(unittest.TestCase):
         self.assertNotIn("but.", result.lower())
         self.assertIn("But his listeners", result)
 
+    def test_sentence_simplifier_does_not_split_at_descriptive_commas(self):
+        source = (
+            "Israel targeted the entire city, apart from a small, largely Christian enclave on the seaside, "
+            "saying it was targeting fighters."
+        )
+        result = " ".join(site.simplify_sentence(source, 18, False))
+        self.assertNotIn("small. Largely", result)
+
+    def test_written_measurement_and_translated_unit_are_preserved(self):
+        source = "The city is twelve miles north of the border."
+        normalized = site.normalize_written_measurements(source)
+        self.assertIn("12 miles", normalized)
+        repaired = site.repair_translated_facts(source, "เมืองอยู่ห่างจากชายแดนไปทางเหนือ 12 กิโลเมตร")
+        self.assertIn("12 ไมล์", repaired)
+        self.assertNotIn("กิโลเมตร", repaired)
+        self.assertEqual(site.translation_quality_issues(source, repaired), [])
+
     def test_non_substantive_fragments_do_not_block_translation(self):
         self.assertTrue(site.is_non_substantive_fragment("Alan Greenspan."))
         self.assertTrue(site.is_non_substantive_fragment("Richards/AFP via Getty Images photo credit."))
