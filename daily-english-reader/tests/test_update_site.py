@@ -298,6 +298,14 @@ class DailyReaderTests(unittest.TestCase):
         self.assertFalse(any(issue.startswith("missing-number:") for issue in site.translation_quality_issues(source, translated)))
         self.assertNotIn("missing-time-period", site.translation_quality_issues(source, translated))
 
+    def test_repair_translated_facts_restores_missing_time_periods(self):
+        source = "At 4:41 AM CDT, a storm formed. It will arrive near 5:00 AM CDT."
+        translated = "เวลา 4.41 เกิดพายุ และจะมาถึงใกล้เวลา 5.00"
+        repaired = site.repair_translated_facts(source, translated)
+        self.assertIn("4.41 AM", repaired)
+        self.assertIn("5.00 AM", repaired)
+        self.assertNotIn("missing-time-period", site.translation_quality_issues(source, repaired))
+
     def test_non_substantive_fragments_do_not_block_translation(self):
         self.assertTrue(site.is_non_substantive_fragment("Alan Greenspan."))
         self.assertTrue(site.is_non_substantive_fragment("Richards/AFP via Getty Images photo credit."))

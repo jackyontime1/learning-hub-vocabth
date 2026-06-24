@@ -681,6 +681,15 @@ def repair_translated_facts(source: str, translated: str) -> str:
         for day in re.findall(rf"\b{month}\s+(\d{{1,2}})\b", source):
             if day not in target_numbers and thai_month in translated:
                 translated = translated.replace(thai_month, f"{thai_month} {day}", 1)
+    for clock, period in re.findall(r"\b(\d{1,2}:\d{2})\s*(AM|PM)\b", source, re.I):
+        hour, minute = clock.split(":", 1)
+        target_clock = rf"(?<!\d){re.escape(str(int(hour)))}[.:]{re.escape(minute)}(?!\d)"
+        match = re.search(target_clock, translated)
+        if not match:
+            continue
+        suffix = translated[match.end():match.end() + 18]
+        if not re.match(r"\s*(?:AM|PM)\b", suffix, re.I):
+            translated = translated[:match.end()] + f" {period.upper()}" + translated[match.end():]
     return translated
 
 
