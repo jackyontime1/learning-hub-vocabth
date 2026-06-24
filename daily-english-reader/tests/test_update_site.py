@@ -202,6 +202,12 @@ class DailyReaderTests(unittest.TestCase):
             "The company said it would fix the pool as part of its warranty.",
         )
 
+    def test_clean_story_text_removes_npr_unidentified_speaker_number(self):
+        source = "The volunteers visited mobile homes. UNIDENTIFIED VOLUNTEER #2. Hi."
+        cleaned = site.clean_story_text(source)
+        self.assertEqual(cleaned, "The volunteers visited mobile homes. Hi.")
+        self.assertNotIn("2", cleaned)
+
     def test_clean_story_text_repairs_common_source_typos(self):
         cleaned = site.clean_story_text("Last year 2e published a story where you've never too old to play.")
         self.assertIn("Last year we published", cleaned)

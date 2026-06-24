@@ -395,6 +395,7 @@ def clean_story_text(text: str) -> str:
     text = re.sub(r"\s+-\s+", ". ", text)
     text = re.sub(r"\b[A-Z][a-z]+(?: [A-Z][a-z]+){0,3}/(?:iStockphoto|Getty Images|AP|Reuters)[^.!?]*hide caption\b", " ", text)
     text = re.sub(r"\bhide caption\b", " ", text, flags=re.I)
+    text = re.sub(r"\bUNIDENTIFIED(?:\s+[A-Z]+){0,4}\s*#\d+\s*[,.:]?\s*", " ", text, flags=re.I)
     text = re.sub(r"\b(?:SCOTT DETROW|A MARTÍNEZ|HOST|BYLINE|EDITOR'S NOTE):\s*", " ", text, flags=re.I)
     text = re.sub(r"\b(?:Image source|Getty Images|Reuters|Associated Press|AP Photo)\b[^.!?]*(?:\.|$)", " ", text, flags=re.I)
     text = re.sub(r"\b2e\b", "we", text)
