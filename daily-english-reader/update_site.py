@@ -127,6 +127,7 @@ TRANSLATION_SIMPLIFICATIONS = {
     "internal medicine resident": "doctor training in internal medicine",
     "metro area": "metropolitan area",
     "pea-sized hail": "small hailstones",
+    "ping pong ball size hail": "hailstones the size of ping pong balls",
     "was located near": "was near",
 }
 
@@ -406,6 +407,8 @@ def clean_english_fragments(text: str) -> str:
         r"\1 ", text, flags=re.I,
     )
     text = re.sub(r"\bpea size hail\b", "pea-sized hail", text, flags=re.I)
+    text = re.sub(r"\bping pong ball size hail\b", "hailstones the size of ping pong balls", text, flags=re.I)
+    text = re.sub(r"\b(What|Where|When|Impacts?|Additional Details|Hazard|Source)\.\s+(?=[A-Z0-9])", r"\1: ", text)
     text = re.sub(r"\b(Of|To|For|With|From|In|By),\s+(but|and)\b", r"\1 \2", text)
     text = re.sub(r"\b(It|They|He|She),\s+(?=[a-z])", r"\1 ", text)
     text = re.sub(r"\s+([,.;:!?])", r"\1", text)
@@ -424,9 +427,11 @@ def normalize_weather_for_speech(text: str) -> str:
             "MDT": "Mountain Daylight Time", "MST": "Mountain Standard Time",
             "PDT": "Pacific Daylight Time", "PST": "Pacific Standard Time",
         }
-        return f"{hour}:{minute} {period.upper()} {zones.get(zone.upper(), zone.upper())}"
+        zone_key = (zone or "").upper()
+        zone_text = zones.get(zone_key, zone_key)
+        return f"{hour}:{minute} {period.upper()}{f' {zone_text}' if zone_text else ''}"
 
-    text = re.sub(r"\b(\d{3,4})\s*(AM|PM)\s*(EDT|EST|CDT|CST|MDT|MST|PDT|PST)\b", clock, text, flags=re.I)
+    text = re.sub(r"\b(\d{3,4})\s*(AM|PM)(?:\s*(EDT|EST|CDT|CST|MDT|MST|PDT|PST))?\b", clock, text, flags=re.I)
     text = re.sub(r"\b(\d+(?:\.\d+)?)\s*mph\b", r"\1 miles per hour", text, flags=re.I)
     return text
 
@@ -639,18 +644,19 @@ def normalize_written_measurements(text: str) -> str:
 
 def repair_translated_facts(source: str, translated: str) -> str:
     source = normalize_written_measurements(source)
-    for value in re.findall(r"\b(\d+(?:\.\d+)?)\s+miles?\b", source, re.I):
+    for value, rate in re.findall(r"\b(\d+(?:\.\d+)?)\s+miles?(\s+per\s+hour)?\b", source, re.I):
+        replacement = "ไมล์ต่อชั่วโมง" if rate else "ไมล์"
         translated = re.sub(
-            rf"\b({re.escape(value)}\s*)(?:กิโลเมตร|kilometers?|kilometres?|km)\b",
-            r"\1ไมล์", translated, flags=re.I,
+            rf"\b({re.escape(value)}\s*)(?:กิโลเมตร|มิล|เมล|ไมล|kilometers?|kilometres?|km)(?:\s*ต่อ\s*ชั่วโมง)?\b",
+            rf"\1{replacement}", translated, flags=re.I,
         )
     return translated
 
 
 def numeric_facts(text: str) -> set[str]:
     text = text.translate(THAI_DIGITS)
-    facts = {match.replace(",", "") for match in re.findall(r"(?<!\w)\d{1,2}:\d{2}(?!\d)", text)}
-    text = re.sub(r"(?<!\w)\d{1,2}:\d{2}(?!\d)", " ", text)
+    facts = {match.replace(".", ":") for match in re.findall(r"(?<!\w)\d{1,2}[.:]\d{2}(?!\d)", text)}
+    text = re.sub(r"(?<!\w)\d{1,2}[.:]\d{2}(?!\d)", " ", text)
     facts.update(match.replace(",", "") for match in re.findall(r"(?<!\w)\d[\d,]*(?:\.\d+)?", text))
     return facts
 
@@ -712,7 +718,7 @@ def translation_quality_issues(source: str, translated: str) -> list[str]:
         if re.search(month_context, source) and not re.search(rf"\b{month}\b", translated, re.I) and thai_month not in translated:
             issues.append("missing-month:" + month)
     if re.search(r"\b\d{1,2}:\d{2}\s*(?:AM|PM)\b", source, re.I):
-        has_clock = bool(re.search(r"\b\d{1,2}:\d{2}\b", translated))
+        has_clock = bool(re.search(r"\b\d{1,2}[.:]\d{2}\b", translated))
         has_period = bool(re.search(r"\b(?:AM|PM)\b|น\.|ตอน(?:เช้า|บ่าย|ค่ำ)", translated, re.I))
         if not has_clock or not has_period:
             issues.append("missing-time-period")

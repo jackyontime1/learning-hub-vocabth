@@ -216,9 +216,10 @@ class DailyReaderTests(unittest.TestCase):
         self.assertNotIn("http", cleaned)
 
     def test_reader_text_normalizes_weather_time_units_and_hail(self):
-        raw = "At 121 PM EDT, storms moved east at 25 mph. HAZARD...Wind gusts and pea size hail."
+        raw = "At 121 PM EDT, storms moved east at 25 mph. HAZARD...Wind gusts and pea size hail. SOURCE...Hail was reported at 930 PM."
         cleaned = site.prepare_reader_text(raw)
         self.assertIn("1:21 PM Eastern Daylight Time", cleaned)
+        self.assertIn("9:30 PM", cleaned)
         self.assertIn("25 miles per hour", cleaned)
         self.assertIn("Hazard: Wind gusts and pea-sized hail", cleaned)
         self.assertNotIn("...", cleaned)
@@ -262,6 +263,17 @@ class DailyReaderTests(unittest.TestCase):
         self.assertIn("12 ไมล์", repaired)
         self.assertNotIn("กิโลเมตร", repaired)
         self.assertEqual(site.translation_quality_issues(source, repaired), [])
+        rate_source = "Wind moved at 25 miles per hour and later reached 60 miles per hour."
+        rate_target = "ลมเคลื่อนที่ 25 มิลต่อชั่วโมง และต่อมาเพิ่มเป็น 60 เมลต่อชั่วโมง"
+        repaired_rate = site.repair_translated_facts(rate_source, rate_target)
+        self.assertIn("25 ไมล์ต่อชั่วโมง", repaired_rate)
+        self.assertIn("60 ไมล์ต่อชั่วโมง", repaired_rate)
+
+    def test_translation_quality_accepts_equivalent_clock_separators(self):
+        source = "The warning began at 9:33 PM and the report was issued at 9:30 PM."
+        translated = "คำเตือนเริ่มเวลา 9.33 น. และรายงานออกเมื่อเวลา 9.30 น."
+        self.assertFalse(any(issue.startswith("missing-number:") for issue in site.translation_quality_issues(source, translated)))
+        self.assertNotIn("missing-time-period", site.translation_quality_issues(source, translated))
 
     def test_non_substantive_fragments_do_not_block_translation(self):
         self.assertTrue(site.is_non_substantive_fragment("Alan Greenspan."))
