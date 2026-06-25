@@ -5,8 +5,9 @@
   "level": "A2",
   "title": "A brutal gang rape in India revives painful memories of 2012 Delhi assault",
   "description": "The case from Begusarai in Bihar comes close in brutality to that inflicted on a woman during a sexual assault in 2012.",
-  "text": "The case from Begusarai in Bihar comes close in brutality to that inflicted on a woman during a sexual assault in 2012. Thirteen years after the gang rape of an Indian woman on a bus in the capital Delhi made global headlines. A new case that comes close in brutality inflicted on a woman has been reported from the northern state of Bihar. Campaigners say her story is also one of apathy from the police. And medical authorities that women. face sexual assault, especially in small towns. And villages, routinely encounter in India. Indian law prohibits naming victims of sexual assault.",
-  "thai_text": "ข่าวนี้มาจาก BBC News อยู่ในหมวดข่าวต่างประเทศ และถูกเรียบเรียงเป็นระดับ A2. เนื้อหาข่าวคือ กรณีจากเบกูซารายในบีฮาร์ใกล้เคียงกับความโหดร้ายที่เกิดขึ้นกับผู้หญิงคนหนึ่งระหว่างการโจมตีทางเพศในปี 2012. 13 ปีหลังจากการข่มขืนกลุ่มหญิงอินเดียบนรถเมล์ในกรุงเทพมหานคร เดลลี ได้กลายเป็นหัวข่าวทั่วโลก. กรณีใหม่ที่ใกล้เคียงกับความโหดโหดร้ายที่เกิดขึ้นกับผู้หญิงได้ถูกรายงานจากรัฐบีฮาร์ทางตอนเหนือ. ผู้ประกอบการบอกว่าเรื่องของเธอก็เป็นเรื่องของความไม่สนใจของตํารวจ. และทางการแพทย์ว่า ผู้หญิงต้องเผชิญหน้ากับการทำร้ายทางเพศ โดยเฉพาะในเมืองเล็กๆ. และหมู่บ้าน ที่พบกันเป็นประจำในอินเดีย. กฎหมายอินเดียห้ามตั้งชื่อเหยื่อของการทำร้ายทางเพศ.",
+  "text": "The case from Begusarai in Bihar comes close in brutality to that inflicted on a woman during a sexual assault in 2012. Thirteen years after the gang rape of an Indian woman on a bus in the capital Delhi made global headlines, a new case that comes close in brutality inflicted on a woman has been reported from the northern state of Bihar. Campaigners say her story is also one of apathy from the police.\n\nAnd medical authorities that women who face sexual assault, especially in small towns. And villages, routinely encounter in India. Indian law prohibits naming victims of sexual assault.",
+  "speech_text": "A brutal gang rape in India revives painful memories of 2012 Delhi assault.\n\nThe case from Begusarai in Bihar comes close in brutality to that inflicted on a woman during a sexual assault in 2012. Thirteen years after the gang rape of an Indian woman on a bus in the capital Delhi made global headlines, a new case that comes close in brutality inflicted on a woman has been reported from the northern state of Bihar. Campaigners say her story is also one of apathy from the police.\n\nAnd medical authorities that women who face sexual assault, especially in small towns. And villages, routinely encounter in India. Indian law prohibits naming victims of sexual assault.",
+  "thai_text": "ข่าวนี้มาจาก BBC News อยู่ในหมวดข่าวต่างประเทศ และถูกเรียบเรียงเป็นระดับ A2. เนื้อหาข่าวคือ\n\nกรณีจากเบกูซารายในบีฮาร์ใกล้เคียงกับความโหดร้ายที่เกิดขึ้นกับผู้หญิงคนหนึ่งระหว่างการโจมตีทางเพศในปี 2012. สามสิบปีหลังจากการข่มขืนกลุ่มหญิงอินเดียบนรถเมล์ในกรุงเทพมหานคร เดลลี ได้กลายเป็นหัวข่าวทั่วโลก กรณีใหม่ที่ใกล้เคียง. ผู้ประกอบการบอกว่าเรื่องของเธอก็เป็นเรื่องของความไม่สนใจของตํารวจ.\n\nและทางการแพทย์ที่ว่า ผู้หญิงที่เผชิญกับการทำร้ายทางเพศ โดยเฉพาะในเมืองเล็กๆ. และหมู่บ้าน ที่พบกันเป็นประจำในอินเดีย. กฎหมายอินเดียห้ามตั้งชื่อเหยื่อของการทำร้ายทางเพศ.",
   "word_translations": {
     "a": "",
     "after": "หลังจาก",
@@ -68,6 +69,7 @@
     "towns": "เมือง",
     "victims": "เหยื่อ",
     "villages": "",
+    "who": "WHO",
     "woman": "ผู้หญิง",
     "women": "ผู้หญิง",
     "years": "ปี"
@@ -135,6 +137,7 @@
     "towns": "n.",
     "victims": "n.",
     "villages": "n.",
+    "who": "pron.",
     "woman": "n.",
     "women": "v.",
     "years": "n."
@@ -163,5 +166,5 @@
     "credit_url": ""
   },
   "audio_cache_path": "data/audio/2026-06-19/694c1477f3611aacd3-a2.wav",
-  "generated_at": "2026-06-23T18:28:36.576566+00:00"
+  "generated_at": "2026-06-25T06:09:37.831959+00:00"
 }

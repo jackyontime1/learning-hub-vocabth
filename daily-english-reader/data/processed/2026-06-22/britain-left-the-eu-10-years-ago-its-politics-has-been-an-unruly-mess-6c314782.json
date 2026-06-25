@@ -5,8 +5,9 @@
   "level": "A1",
   "title": "Britain left the EU 10 years ago. Its politics has been an unruly mess",
   "description": "Brexit fractured the European Union, and broke British politics. A decade on, millions of voters have deserted the two big parties for alternatives.",
-  "text": "Brexit fractured the European Union, and broke British politics. LONDON. Brexit fractured the European Union, and broke British politics. The U.K. is about to get its seventh prime minister since June 23. 2016, a decade ago Tuesday. When the country voted 52%-48% to leave the EU after more than four decades of membership. Conservative Prime Minister David Cameron. called the referendum.",
-  "thai_text": "ข่าวนี้มาจาก NPR อยู่ในหมวดข่าวต่างประเทศ และถูกเรียบเรียงเป็นระดับ A1. เนื้อหาข่าวคือ Brexit ทำให้สหภาพยุโรปแตก และทำลายการเมืองของอังกฤษ. Brexit ทำให้สหภาพยุโรปแตก และทำลายการเมืองของอังกฤษ. ประเทศอังกฤษกําลังจะมีนายกรัฐมนตรีคนที่ 7 ตั้งแต่วันที่ 23 มิถุนายน. เมื่อปี 2016 เมื่อสิบปีที่ผ่านมา วันอังคาร. เมื่อประเทศ 52%-48% ลงคะแนนออกมาจากสหภาพยุโรป หลังจากเป็นสมาชิกมากกว่า 4 ทศวรรษ. นายกรัฐมนตรีคอนเซนเวทีฟ์ เดวิด คาเมรอน เรียกประชากร.",
+  "text": "Brexit fractured the European Union, and broke British politics. LONDON. Brexit fractured the European Union, and broke British politics.\n\nThe U.K. is about to get its seventh prime minister since June 23, 2016, a decade ago Tuesday, when the country voted 52%-48% to leave the EU after more than four decades of membership. Conservative Prime Minister David Cameron, who called the referendum.",
+  "speech_text": "Britain left the EU 10 years ago. Its politics has been an unruly mess.\n\nBrexit fractured the European Union, and broke British politics. LONDON. Brexit fractured the European Union, and broke British politics.\n\nThe U.K. is about to get its seventh prime minister since June 23, 2016, a decade ago Tuesday, when the country voted 52%-48% to leave the EU after more than four decades of membership. Conservative Prime Minister David Cameron, who called the referendum.",
+  "thai_text": "ข่าวนี้มาจาก NPR อยู่ในหมวดข่าวต่างประเทศ และถูกเรียบเรียงเป็นระดับ A1. เนื้อหาข่าวคือ\n\nBrexit ทำให้สหภาพยุโรปแตก และทำลายการเมืองของอังกฤษ. Brexit ทำให้สหภาพยุโรปแตก และทำลายการเมืองของอังกฤษ.\n\nประเทศอังกฤษกําลังจะมีนายกรัฐมนตรีคนที่เจ็ด ตั้งแต่วันที่ 23 มิถุนายน พ. ศ. 2016 เมื่อวันอังคารที่ 10 ปีที่ผ่านมา เมื่อประเทศนี้เลือกออกจากสหภาพยุโรป 52%-48% หลังเป็นสมาชิกมานานกว่าสี่สิบปี. นายกรัฐมนตรีอนุรักษ์ เดวิด คาเมรอน.",
   "word_translations": {
     "a": "",
     "about": "เกี่ยวกับ",
@@ -50,7 +51,8 @@
     "u": "",
     "union": "สหภาพแรงงาน",
     "voted": "",
-    "when": "เมื่อไร"
+    "when": "เมื่อไร",
+    "who": "WHO"
   },
   "category": "World",
   "provider": "NPR",
@@ -97,7 +99,8 @@
     "u": "n.",
     "union": "n.",
     "voted": "v.",
-    "when": "v."
+    "when": "v.",
+    "who": "pron."
   },
   "content_type": "rss news summary",
   "source_url": "https://www.npr.org/2026/06/23/nx-s1-5867281/brexit-10-years-later",
@@ -123,5 +126,5 @@
     "credit_url": ""
   },
   "audio_cache_path": "data/audio/2026-06-22/6c314782ecb80311cc-a1.wav",
-  "generated_at": "2026-06-23T17:39:22.534015+00:00"
+  "generated_at": "2026-06-25T05:16:33.573021+00:00"
 }

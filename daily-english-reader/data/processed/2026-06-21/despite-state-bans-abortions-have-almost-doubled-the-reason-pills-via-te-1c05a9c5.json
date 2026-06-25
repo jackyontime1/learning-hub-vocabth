@@ -5,8 +5,9 @@
   "level": "A1",
   "title": "Despite state bans, abortions have almost doubled. The reason? Pills via telehealth",
   "description": "States that have banned abortion are suing to stop mailing of abortion pills over state lines. But the telehealth providers say no matter the outcome, they can adapt, and so will their patients.",
-  "text": "States that have banned abortion are suing to stop mailing of abortion pills over state lines. It was the first weekend in May. A federal appeals court had just made it illegal to mail mifepristone. A pill that's part of the most widely used abortion method in the U.S. This story was produced in partnership with KFF Health News. Foster, a specialist in reproductive health.",
-  "thai_text": "ข่าวนี้มาจาก NPR อยู่ในหมวดสุขภาพ และถูกเรียบเรียงเป็นระดับ A1. เนื้อหาข่าวคือ สถานที่ห้ามการทอดทารก ได้ร้องเรียน เพื่อหยุดส่งยาทอดทารกผ่านเขตรัฐ. มันเป็นสุดสัปดาห์แรกในเดือนพฤษภาคม. ศาลร้องเรียนแห่งรัฐบาลเพิ่งยกเลิกการส่งไมฟีพริสตันไปทางไปรษณีย์. แผ่นที่เป็นส่วนหนึ่งของวิธีการทอดลูกที่ใช้มากที่สุดในสหรัฐอเมริกา. เรื่องนี้ถูกผลิตร่วมกับ KFF Health News. โฟสเตอร์ ผู้เชี่ยวชาญด้านสุขภาพการบํารุงพันธุ์.",
+  "text": "States that have banned abortion are suing to stop mailing of abortion pills over state lines. It was the first weekend in May. A federal appeals court had just made it illegal to mail mifepristone, a pill that's part of the most widely used abortion method in the U.S.\n\nThis story was produced in partnership with KFF Health News.",
+  "speech_text": "Despite state bans, abortions have almost doubled. The reason? Pills via telehealth.\n\nStates that have banned abortion are suing to stop mailing of abortion pills over state lines. It was the first weekend in May. A federal appeals court had just made it illegal to mail mifepristone, a pill that's part of the most widely used abortion method in the U.S.\n\nThis story was produced in partnership with KFF Health News.",
+  "thai_text": "ข่าวนี้มาจาก NPR อยู่ในหมวดสุขภาพ และถูกเรียบเรียงเป็นระดับ A1. เนื้อหาข่าวคือ\n\nสถานที่ห้ามการทอดทารก ได้ร้องเรียน เพื่อหยุดส่งยาทอดทารกผ่านเขตรัฐ. มันเป็นสุดสัปดาห์แรกในเดือนพฤษภาคม. ศาลร้องเรียนแห่งรัฐบาลเพิ่งยกเลิกการส่งยาไมฟีพริสตันไปทางทางไปรษณีย์ เป็นยาที่เป็นส่วนหนึ่งของวิธีการเลิกทอดที่ใช้มากที่สุดในสหรัฐอเมริกา.\n\nเรื่องนี้ถูกผลิตร่วมกับ KFF Health News.",
   "word_translations": {
     "a": "",
     "abortion": "",
@@ -16,7 +17,6 @@
     "court": "ศาล",
     "federal": "รัฐบาลกลาง",
     "first": "อันดับแรก",
-    "foster": "",
     "had": "",
     "have": "มี",
     "health": "สุขภาพ",
@@ -41,9 +41,7 @@
     "pill": "ยา",
     "pills": "ยา",
     "produced": "",
-    "reproductive": "",
     "s": "",
-    "specialist": "ผู้เชี่ยวชาญ",
     "state": "รัฐ",
     "states": "",
     "stop": "หยุด",
@@ -72,7 +70,6 @@
     "court": "n.",
     "federal": "adj.",
     "first": "n.",
-    "foster": "n.",
     "had": "n.",
     "have": "v.",
     "health": "n.",
@@ -97,9 +94,7 @@
     "pill": "n.",
     "pills": "n.",
     "produced": "v.",
-    "reproductive": "adj.",
     "s": "n.",
-    "specialist": "n.",
     "state": "v.",
     "states": "n.",
     "stop": "n.",
@@ -141,5 +136,5 @@
     "credit_url": ""
   },
   "audio_cache_path": "data/audio/2026-06-21/1c05a9c5431258bdde-a1.wav",
-  "generated_at": "2026-06-23T17:53:02.770000+00:00"
+  "generated_at": "2026-06-25T05:31:45.784376+00:00"
 }

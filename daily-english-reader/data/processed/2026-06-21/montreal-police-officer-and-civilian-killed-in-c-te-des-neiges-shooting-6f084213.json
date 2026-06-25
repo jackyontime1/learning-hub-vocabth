@@ -5,8 +5,9 @@
   "level": "A2",
   "title": "Montreal police officer and civilian killed in Côte-des-Neiges shooting identified",
   "description": "Montreal police announced \"with profound sadness\" that Const. Mohamed Lamine Benredouane was the officer who was killed in the line of duty Monday during an intervention in the Côte-des-Neiges neighbourhood.",
-  "text": "Montreal police announced \"with profound sadness\" that Const. Mohamed Lamine Benredouane was the officer. was killed in the line of duty Monday during an intervention in the Côte-des-Neiges neighbourhood. Both the Montreal police officer and civilian victim killed in Monday's shooting have been identified. Montreal police announced \"with profound sadness\" that Const. Mohamed Lamine Benredouane was the officer. was killed in the line of duty during an intervention in the Côte-des-Neiges neighbourhood. He was 34 years old.",
-  "thai_text": "ข่าวนี้มาจาก CBC News อยู่ในหมวดข่าวแคนาดา และถูกเรียบเรียงเป็นระดับ A2. เนื้อหาข่าวคือ ตํารวจมอนเตรเลีย ประกาศ \"ด้วยความเศร้าอย่างลึกซึ้ง\" ว่า คอนสต์. โมฮาเมด ลามิน เบนเรดูแวน เป็นเจ้าหน้าที่ ถูกฆ่าในขณะปฏิบัติหน้าที่ ในวันจันทร์ที่ผ่านมา. เจ้าหน้าที่ตํารวจโมเนรียล และเหยื่อพลเรือนที่เสียชีวิตในเหตุยิงเมื่อวันจันทร์ได้ถูกระบุ. ตํารวจมอนเตรเลีย ประกาศ \"ด้วยความเศร้าอย่างลึกซึ้ง\" ว่า คอนสต์. โมฮาเมด ลามิน เบนเรดูแวน เป็นเจ้าหน้าที่ ถูกฆ่าในขณะปฏิบัติหน้าที่ ระหว่างการแทรกแซงในอําเภอคอต เดส นีเจส. เขาอายุ 34 ปี.",
+  "text": "Montreal police announced \"with profound sadness\" that Const. Mohamed Lamine Benredouane was the officer who was killed in the line of duty Monday during an intervention in the Côte-des-Neiges neighbourhood. Both the Montreal police officer and civilian victim killed in Monday's shooting have been identified.\n\nMontreal police announced \"with profound sadness\" that Const. Mohamed Lamine Benredouane was the officer who was killed in the line of duty during an intervention in the Côte-des-Neiges neighbourhood. He was 34 years old.",
+  "speech_text": "Montreal police officer and civilian killed in Côte-des-Neiges shooting identified.\n\nMontreal police announced \"with profound sadness\" that Const. Mohamed Lamine Benredouane was the officer who was killed in the line of duty Monday during an intervention in the Côte-des-Neiges neighbourhood. Both the Montreal police officer and civilian victim killed in Monday's shooting have been identified.\n\nMontreal police announced \"with profound sadness\" that Const. Mohamed Lamine Benredouane was the officer who was killed in the line of duty during an intervention in the Côte-des-Neiges neighbourhood. He was 34 years old.",
+  "thai_text": "ข่าวนี้มาจาก CBC News อยู่ในหมวดข่าวแคนาดา และถูกเรียบเรียงเป็นระดับ A2. เนื้อหาข่าวคือ\n\nตํารวจมอนเตรเลีย ประกาศ \"ด้วยความเศร้าอย่างลึกซึ้ง\" ว่า คอนสต์. โมฮาเม็ด ลามิน เบนเรดูแวน เป็นเจ้าหน้าที่ที่ถูกฆ่าในขณะปฏิบัติหน้าที่ ในวันจันทร์ที่ผ่านมา. เจ้าหน้าที่ตํารวจโมเนรียล และเหยื่อพลเรือนที่เสียชีวิตในเหตุยิงเมื่อวันจันทร์ได้ถูกระบุ.\n\nตํารวจมอนเตรเลีย ประกาศ \"ด้วยความเศร้าอย่างลึกซึ้ง\" ว่า คอนสต์. โมฮาเม็ด ลามิน เบนเรดูแวน เป็นเจ้าหน้าที่ที่ถูกฆ่าในขณะปฏิบัติหน้าที่. เขาอายุ 34 ปี.",
   "word_translations": {
     "an": "",
     "and": "และ",
@@ -43,6 +44,7 @@
     "the": "ที่",
     "victim": "เหยื่อ",
     "was": "",
+    "who": "WHO",
     "with": "กับ",
     "years": "ปี"
   },
@@ -84,6 +86,7 @@
     "the": "det.",
     "victim": "n.",
     "was": "n.",
+    "who": "pron.",
     "with": "prep.",
     "years": "n."
   },
@@ -111,5 +114,5 @@
     "credit_url": ""
   },
   "audio_cache_path": "data/audio/2026-06-21/6f084213cadd60f7f7-a2.wav",
-  "generated_at": "2026-06-23T17:54:35.347340+00:00"
+  "generated_at": "2026-06-25T05:30:31.202634+00:00"
 }

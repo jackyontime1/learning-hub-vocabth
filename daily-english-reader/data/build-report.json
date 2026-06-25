@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-06-23T17:23:10.984459+00:00",
-  "expected_toronto_date": "2026-06-23",
+  "started_at": "2026-06-25T04:21:19.609883+00:00",
+  "expected_toronto_date": "2026-06-25",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -15,8 +15,38 @@
     "C1": 2
   },
   "schema_version": 9,
-  "completed_at": "2026-06-23T19:07:29.119874+00:00",
-  "latest_date": "2026-06-23",
+  "translation_quality": {
+    "cache_rejections": 0,
+    "nllb_retries": 18,
+    "quality_failures": 5,
+    "rejection_reasons": {
+      "repeated-2-gram": 4,
+      "repeated-3-gram": 4,
+      "missing-number:11:04,13,35,4": 1,
+      "missing-unit:\\bmiles?\\b": 1,
+      "collapsed-paragraphs": 2,
+      "missing-number:11:04": 1,
+      "missing-number:2025": 2,
+      "missing-number:10:11,20,24,7": 1,
+      "missing-time-period": 4,
+      "missing-number:10:11": 1,
+      "missing-number:10:08,15,29": 1,
+      "missing-number:10:08": 1,
+      "repeated-junk-string": 10,
+      "missing-number:14.7": 1,
+      "missing-unit:\\bdollars?\\b|[$]": 1,
+      "repeated-word-run": 3,
+      "suspiciously-long": 3,
+      "missing-number:1957": 1,
+      "missing-number:3.2": 2,
+      "missing-month:May": 2,
+      "unexpected-non-thai-script": 1,
+      "missing-unit:\\bdegrees?\\b|°[CF]\\b": 2,
+      "missing-percent-unit": 1
+    }
+  },
+  "completed_at": "2026-06-25T06:12:09.046043+00:00",
+  "latest_date": "2026-06-25",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -29,44 +59,44 @@
   "fallback_image_count": 10,
   "fallback_images": [
     {
-      "article_id": "265db05cd2dd2de49c",
-      "title": "Hamilton teen receives Carnegie Medal for pulling man from tent fire",
+      "article_id": "463cbc8a2bd8c06a96",
+      "title": "'No need for panic' on Ebola case in France, WHO chief says",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "301467f07329370f94",
-      "title": "Trump continues to allege D.C. reflecting pool was vandalized, as ex-Olympian denies doing damage",
+      "article_id": "c825ced9e666406230",
+      "title": "Severe Thunderstorm Watch issued June 24 at 10:19PM MDT until June 25 at 1:00AM MDT by NWS Goodland KS",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "43ad3df16cc28b2dd1",
-      "title": "Ontario's freedom of information changes are law. Why experts say they could hurt the government",
+      "article_id": "40411752e8ca6fa02d",
+      "title": "Learning Action Priors for Cross-embodiment Robot Manipulation",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "36d7d1a7a649fa18b1",
-      "title": "Frank talk on Ottawa police misconduct dominates 1st in-person board meeting in years",
+      "article_id": "fcea36016f59d98553",
+      "title": "'We're begging' - Savannah Guthrie pleads for help as details of her mother’s case emerge",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "7c5ed9fcfd6436c2a8",
-      "title": "Years without fluoridated water in N.B. show pattern of tooth decay experts warned about",
+      "article_id": "1df5995cf717bd63bf",
+      "title": "Why this heatwave feels worse than the last one",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "6fc36ecf999bedf13d",
-      "title": "Australia's coal and gas exports violate our human rights, group says in new UN case",
+      "article_id": "22dfbb08d70192d740",
+      "title": "Do you want AI with that? Chatbots could take your next order at the drive-thru",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "140bff2be619a9d26a",
-      "title": "Special Marine Warning issued June 23 at 1:21PM EDT until June 23 at 1:30PM EDT by NWS Newport/Morehead City NC",
+      "article_id": "94ff42bd9fdc1ed451",
+      "title": "How to protect yourself from ticks",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "a849d3decea1762204",
+      "title": "Severe Thunderstorm Warning issued June 24 at 11:11PM CDT until June 24 at 11:30PM CDT by NWS Lubbock TX",
       "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "71e2e2654e9df0dd74",
-      "title": "Despite state bans, abortions have almost doubled in the U.S.",
-      "reason": "Selected image was unavailable: ValueError"
     },
     {
       "article_id": "1e34bf5bdfc8418505",
@@ -74,9 +104,9 @@
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "40169cd2bc1c774566",
-      "title": "Why the World Cup final halftime show is controversial",
-      "reason": "Selected image was unavailable: ValueError"
+      "article_id": "f90e837532ab689a69",
+      "title": "Severe Thunderstorm Warning issued June 24 at 11:10PM CDT until June 24 at 11:30PM CDT by NWS Amarillo TX",
+      "reason": "No usable free image candidate"
     }
   ]
 }

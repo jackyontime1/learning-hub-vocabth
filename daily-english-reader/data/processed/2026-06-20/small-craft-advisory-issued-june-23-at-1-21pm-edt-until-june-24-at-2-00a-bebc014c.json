@@ -5,8 +5,9 @@
   "level": "B1",
   "title": "Small Craft Advisory issued June 23 at 1:21PM EDT until June 24 at 2:00AM EDT by NWS Newport/Morehead City NC",
   "description": "* WHAT...West winds 15 to 25 kt with gusts up to 30 kt. * WHERE...The coastal waters from Duck to Oregon Inlet. * WHEN...Until 2 AM EDT Wednesday. * IMPACTS...Conditions will be hazardous to small craft.",
-  "text": "What. West winds 15 to 25 kt with gusts up to 30 kt. Where. The coastal waters from Duck to Oregon Inlet. When. Until 2 AM EDT Wednesday. Impacts. Conditions will be hazardous to small craft.",
-  "thai_text": "ข่าวนี้มาจาก US National Weather Service อยู่ในหมวดสิ่งแวดล้อม และถูกเรียบเรียงเป็นระดับ B1. เนื้อหาข่าวคือ ลมตะวันตก 15 ถึง 25 kt กับลมพัดสูงสุด 30 kt. น้ําชายฝั่งจากแดค ไปยังออเรกอนอินเลท. จนถึง 2 โมงเช้าวันพุธ. สถานการณ์จะอันตรายสำหรับเรือเล็ก.",
+  "text": "What: West winds 15 to 25 kt with gusts up to 30 kt. Where: The coastal waters from Duck to Oregon Inlet. When: Until 2 AM EDT Wednesday.\n\nImpacts: Conditions will be hazardous to small craft.",
+  "speech_text": "Small Craft Advisory issued June 23 at 1:21PM EDT until June 24 at 2:00AM EDT by NWS Newport/Morehead City NC.\n\nWhat: West winds 15 to 25 kt with gusts up to 30 kt. Where: The coastal waters from Duck to Oregon Inlet. When: Until 2 AM EDT Wednesday.\n\nImpacts: Conditions will be hazardous to small craft.",
+  "thai_text": "ข่าวนี้มาจาก US National Weather Service อยู่ในหมวดสิ่งแวดล้อม และถูกเรียบเรียงเป็นระดับ B1. เนื้อหาข่าวคือ\n\nอะไร: ลมตะวันตก 15 ถึง 25 kt กับลมพัดสูงสุด 30 kt. ที่: น้ําชายฝั่งจากแดค ถึงออเรกอนอินเลท. เวลา: จนถึง 2 AM EDT วันพุธ.\n\nผล: สถานการณ์จะอันตรายสำหรับเรือเล็ก.",
   "word_translations": {
     "am": "",
     "be": "เป็น",
@@ -93,5 +94,5 @@
     "credit_url": ""
   },
   "audio_cache_path": "data/audio/2026-06-20/bebc014c55831ec1ec-b1.wav",
-  "generated_at": "2026-06-23T18:16:17.817426+00:00"
+  "generated_at": "2026-06-25T05:45:33.221083+00:00"
 }
