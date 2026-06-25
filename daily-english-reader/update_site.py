@@ -390,6 +390,7 @@ def clean_story_text(text: str) -> str:
         text,
         flags=re.I,
     )
+    text = re.sub(r"\bFor the following areas\.{2,}\s*", " ", text, flags=re.I)
     text = re.sub(r"\b(include|includes|including)\.{2,}\s*", r"\1 ", text, flags=re.I)
     text = re.sub(r"https?://\S+", " ", text, flags=re.I)
     text = re.sub(r"\s+-\s+", ". ", text)
@@ -710,6 +711,15 @@ def repair_translated_facts(source: str, translated: str) -> str:
         if not re.match(r"\s*(?:AM|PM)\b", suffix, re.I):
             translated = translated[:match.end()] + f" {period.upper()}" + translated[match.end():]
     target_numbers = numeric_facts(translated)
+    missing_knots = [
+        value for value in re.findall(r"\b(\d+(?:\.\d+)?)\s+knots?\b", source, re.I)
+        if value not in target_numbers
+    ]
+    if missing_knots:
+        translated = normalize_paragraphs(
+            f"{translated}\n\nค่าความเร็วที่ระบุเพิ่มเติมคือ {', '.join(missing_knots)} นอต."
+        )
+        target_numbers = numeric_facts(translated)
     for years in re.findall(r"\b(\d+(?:\.\d+)?)-year prison sentence\b", source, re.I):
         if years not in target_numbers:
             translated = normalize_paragraphs(f"{translated}\n\nโทษจำคุกที่ระบุไว้คือ {years} ปี.")

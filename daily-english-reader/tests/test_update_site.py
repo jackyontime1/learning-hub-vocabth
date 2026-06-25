@@ -240,6 +240,16 @@ class DailyReaderTests(unittest.TestCase):
         self.assertNotIn("...", cleaned)
         self.assertNotIn("http", cleaned)
 
+    def test_clean_story_text_removes_nws_following_areas_boilerplate(self):
+        raw = (
+            "For the following areas... Albemarle Sound... At 121 PM EDT, a strong thunderstorm "
+            "was located near Albemarle Sound. Locations impacted include... Highway 94 Bridge."
+        )
+        cleaned = site.clean_story_text(raw)
+        self.assertNotIn("For the following areas", cleaned)
+        self.assertIn("Albemarle Sound", cleaned)
+        self.assertIn("Locations impacted include Highway 94 Bridge", cleaned)
+
     def test_reader_text_normalizes_weather_time_units_and_hail(self):
         raw = "At 121 PM EDT, storms moved east at 25 mph. HAZARD...Wind gusts and pea size hail. SOURCE...Hail was reported at 930 PM."
         cleaned = site.prepare_reader_text(raw)
@@ -330,6 +340,13 @@ class DailyReaderTests(unittest.TestCase):
         repaired = site.repair_translated_facts(source, translated)
         self.assertIn("10 ปี", repaired)
         self.assertFalse(any(issue.startswith("missing-number:") for issue in site.translation_quality_issues(source, repaired)))
+
+    def test_repair_translated_facts_restores_missing_knot_measurements(self):
+        source = "The storm moved northeast at 20 knots. Wind gusts reached 34 knots."
+        translated = "พายุเคลื่อนไปทางตะวันออกเฉียงเหนือ ลมกระโชกแรงถึง 34 นอต."
+        repaired = site.repair_translated_facts(source, translated)
+        self.assertIn("20 นอต", repaired)
+        self.assertEqual(site.translation_quality_issues(source, repaired), [])
 
     def test_repair_translated_facts_corrects_single_mistranslated_month(self):
         source = "The government announced the changes in March."
