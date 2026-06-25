@@ -1306,13 +1306,18 @@ def complexity(text: str) -> float:
     return len(words) / max(1, len(sentences)) + long_words / max(1, len(words)) * 20
 
 
-def choose_daily_articles(candidates: list[dict[str, Any]], offset: int = 0) -> list[dict[str, Any]]:
+def ordered_daily_candidate_pool(candidates: list[dict[str, Any]], offset: int = 0) -> list[dict[str, Any]]:
     candidates = sorted(candidates, key=lambda row: complexity(row["description"]))
-    if len(candidates) < DAILY_ARTICLE_COUNT:
-        return []
-    if offset:
+    if offset and candidates:
         shift = offset % len(candidates)
         candidates = candidates[shift:] + candidates[:shift]
+    return candidates
+
+
+def choose_daily_articles(candidates: list[dict[str, Any]], offset: int = 0) -> list[dict[str, Any]]:
+    candidates = ordered_daily_candidate_pool(candidates, offset)
+    if len(candidates) < DAILY_ARTICLE_COUNT:
+        return []
     midpoint = len(candidates) // 2
     upper = max(midpoint + 2, int(len(candidates) * 0.72))
     indexes = {
@@ -1338,6 +1343,18 @@ def choose_daily_articles(candidates: list[dict[str, Any]], offset: int = 0) -> 
             if sum(item["level"] == level for item in chosen) == TARGET_PER_LEVEL:
                 break
     return chosen if len(chosen) == DAILY_ARTICLE_COUNT else []
+
+
+def replacement_daily_article(
+    candidates: list[dict[str, Any]], level: str, used_ids: set[str], offset: int = 0,
+) -> dict[str, Any] | None:
+    for article in ordered_daily_candidate_pool(candidates, offset):
+        if article["id"] in used_ids:
+            continue
+        row = dict(article)
+        row["level"] = level
+        return row
+    return None
 
 
 def summarize(text: str) -> str:
@@ -2566,14 +2583,37 @@ def main() -> int:
                 selected_ids = {row["id"] for row in selected}
                 for row in selected:
                     quota.selected(row.get("provider_key", slugify(row["provider"], 32)))
+                processed: list[dict[str, Any]] = []
+                queue = list(selected)
+                for raw in queue:
+                    index = len(processed) + 1
+                    logging.info("[%s %d/%d] Building %s: %s", target_date, index, DAILY_ARTICLE_COUNT, raw["level"], raw["title"])
+                    try:
+                        processed.append(process_article(raw, session, quota, translator, config, target_date))
+                    except RuntimeError as error:
+                        if (
+                            not config["require_full_translation"]
+                            or not str(error).startswith("Full Thai translation unavailable")
+                        ):
+                            raise
+                        provider_key = raw.get("provider_key", slugify(raw["provider"], 32))
+                        quota.skipped(provider_key, str(error))
+                        replacement = replacement_daily_article(
+                            candidates, raw["level"], selected_ids, offset=date_index * DAILY_ARTICLE_COUNT,
+                        )
+                        if replacement is None:
+                            raise
+                        selected_ids.add(replacement["id"])
+                        quota.selected(replacement.get("provider_key", slugify(replacement["provider"], 32)))
+                        queue.append(replacement)
+                        logging.warning(
+                            "Skipping %s after translation failure; trying replacement %s",
+                            raw["id"], replacement["id"],
+                        )
                 if target_date == today:
                     for row in candidates:
                         if row["id"] not in selected_ids:
                             quota.skipped(row.get("provider_key", slugify(row["provider"], 32)), "not selected for daily edition")
-                processed: list[dict[str, Any]] = []
-                for index, raw in enumerate(selected, 1):
-                    logging.info("[%s %d/%d] Building %s: %s", target_date, index, DAILY_ARTICLE_COUNT, raw["level"], raw["title"])
-                    processed.append(process_article(raw, session, quota, translator, config, target_date))
                 output_dir = PROCESSED_DIR / target_date
                 temporary = PROCESSED_DIR / f".{target_date}-staging"
                 if temporary.exists():

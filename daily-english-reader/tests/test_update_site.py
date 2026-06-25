@@ -162,6 +162,18 @@ class DailyReaderTests(unittest.TestCase):
         self.assertEqual({level: sum(row["level"] == level for row in selected) for level in site.LEVELS},
                          {level: site.TARGET_PER_LEVEL for level in site.LEVELS})
 
+    def test_replacement_daily_article_keeps_failed_level_and_skips_used_ids(self):
+        candidates = [
+            {"id": f"id-{index}", "description": "word " * (index + 3), "provider": "Demo"}
+            for index in range(site.DAILY_ARTICLE_COUNT + 1)
+        ]
+        selected = site.choose_daily_articles(candidates)
+        used_ids = {row["id"] for row in selected}
+        replacement = site.replacement_daily_article(candidates, "B2", used_ids)
+        self.assertIsNotNone(replacement)
+        self.assertEqual(replacement["level"], "B2")
+        self.assertNotIn(replacement["id"], used_ids)
+
     def test_word_spans_wrap_every_english_word(self):
         markup = str(site.word_spans("Clean energy works.", {
             "clean": "สะอาด", "energy": "พลังงาน", "works": "ทำงาน",
