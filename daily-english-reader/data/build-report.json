@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-06-25T04:21:19.609883+00:00",
-  "expected_toronto_date": "2026-06-25",
+  "started_at": "2026-06-27T12:32:32.765423+00:00",
+  "expected_toronto_date": "2026-06-27",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -15,38 +15,40 @@
     "C1": 2
   },
   "schema_version": 9,
+  "candidate_rejections": [
+    {
+      "article_id": "b0a3ec6d5253b62a4c",
+      "title": "Flash Flood Warning issued June 27 at 8:16AM EDT until June 27 at 10:30AM EDT by NWS Louisville KY",
+      "provider": "US National Weather Service",
+      "level": "A1",
+      "reason": "RuntimeError: Full Thai translation unavailable for article b0a3ec6d5253b62a4c"
+    },
+    {
+      "article_id": "c4094e913da1955302",
+      "title": "Flash Flood Warning issued June 27 at 8:08AM EDT until June 27 at 11:15AM EDT by NWS Louisville KY",
+      "provider": "US National Weather Service",
+      "level": "C1",
+      "reason": "RuntimeError: Full Thai translation unavailable for article c4094e913da1955302"
+    }
+  ],
+  "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
-    "nllb_retries": 18,
-    "quality_failures": 5,
+    "nllb_retries": 4,
+    "quality_failures": 2,
     "rejection_reasons": {
-      "repeated-2-gram": 4,
-      "repeated-3-gram": 4,
-      "missing-number:11:04,13,35,4": 1,
-      "missing-unit:\\bmiles?\\b": 1,
-      "collapsed-paragraphs": 2,
-      "missing-number:11:04": 1,
-      "missing-number:2025": 2,
-      "missing-number:10:11,20,24,7": 1,
-      "missing-time-period": 4,
-      "missing-number:10:11": 1,
-      "missing-number:10:08,15,29": 1,
-      "missing-number:10:08": 1,
-      "repeated-junk-string": 10,
-      "missing-number:14.7": 1,
-      "missing-unit:\\bdollars?\\b|[$]": 1,
-      "repeated-word-run": 3,
-      "suspiciously-long": 3,
-      "missing-number:1957": 1,
-      "missing-number:3.2": 2,
-      "missing-month:May": 2,
+      "repeated-junk-string": 1,
+      "suspiciously-long": 1,
       "unexpected-non-thai-script": 1,
-      "missing-unit:\\bdegrees?\\b|°[CF]\\b": 2,
-      "missing-percent-unit": 1
+      "missing-number:8:16": 1,
+      "repeated-word-run": 1,
+      "repeated-2-gram": 1,
+      "repeated-3-gram": 1,
+      "missing-number:8:08": 2
     }
   },
-  "completed_at": "2026-06-25T06:12:09.046043+00:00",
-  "latest_date": "2026-06-25",
+  "completed_at": "2026-06-27T13:06:40.160030+00:00",
+  "latest_date": "2026-06-27",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -59,53 +61,53 @@
   "fallback_image_count": 10,
   "fallback_images": [
     {
-      "article_id": "463cbc8a2bd8c06a96",
-      "title": "'No need for panic' on Ebola case in France, WHO chief says",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "c825ced9e666406230",
-      "title": "Severe Thunderstorm Watch issued June 24 at 10:19PM MDT until June 25 at 1:00AM MDT by NWS Goodland KS",
+      "article_id": "5dd453d0483bf382c8",
+      "title": "B.C. launches probe into StubHub over World Cup resale ticket fiasco",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "40411752e8ca6fa02d",
-      "title": "Learning Action Priors for Cross-embodiment Robot Manipulation",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "fcea36016f59d98553",
-      "title": "'We're begging' - Savannah Guthrie pleads for help as details of her mother’s case emerge",
+      "article_id": "9835cb16fdf16d53ee",
+      "title": "Canada can now enter Eurovision, but CBC won't say whether it will",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "1df5995cf717bd63bf",
-      "title": "Why this heatwave feels worse than the last one",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "22dfbb08d70192d740",
-      "title": "Do you want AI with that? Chatbots could take your next order at the drive-thru",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "94ff42bd9fdc1ed451",
-      "title": "How to protect yourself from ticks",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "a849d3decea1762204",
-      "title": "Severe Thunderstorm Warning issued June 24 at 11:11PM CDT until June 24 at 11:30PM CDT by NWS Lubbock TX",
+      "article_id": "2c573c99c896cd3716",
+      "title": "Ukraine unleashes one of its heaviest drone bombardments, as Russia strikes Ukraine",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "1e34bf5bdfc8418505",
-      "title": "When falling housing prices are good news — and when they're not",
+      "article_id": "bf003f0c45659af8ba",
+      "title": "Autoregressive Boltzmann Generators",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "166d56f0ca6e2598d3",
+      "title": "DanceOPD: On-Policy Generative Field Distillation",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "d804fa811a6ee04f96",
+      "title": "Some Russians are turning on Putin as drones hit Moscow. Does it matter?",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "f90e837532ab689a69",
-      "title": "Severe Thunderstorm Warning issued June 24 at 11:10PM CDT until June 24 at 11:30PM CDT by NWS Amarillo TX",
+      "article_id": "2162035bc3663f3664",
+      "title": "Marine Weather Statement issued June 27 at 8:12AM EDT by NWS Key West FL",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "2d7646f9d893c53bc1",
+      "title": "Marine Weather Statement issued June 27 at 8:30AM EDT by NWS Wilmington NC",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "8b923b60a50e0372b4",
+      "title": "5 million have dropped ACA insurance after Trump and the GOP let prices skyrocket",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "5f5ae74e7961c3a723",
+      "title": "Flood Advisory issued June 27 at 7:31AM CDT until June 27 at 10:30AM CDT by NWS Tulsa OK",
       "reason": "No usable free image candidate"
     }
   ]
