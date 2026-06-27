@@ -1,6 +1,6 @@
 {
   "status": "ready",
-  "started_at": "2026-06-27T12:32:32.765423+00:00",
+  "started_at": "2026-06-27T15:00:33.022230+00:00",
   "expected_toronto_date": "2026-06-27",
   "free_only": true,
   "demo_mode": false,
@@ -17,37 +17,33 @@
   "schema_version": 9,
   "candidate_rejections": [
     {
-      "article_id": "b0a3ec6d5253b62a4c",
-      "title": "Flash Flood Warning issued June 27 at 8:16AM EDT until June 27 at 10:30AM EDT by NWS Louisville KY",
-      "provider": "US National Weather Service",
-      "level": "A1",
-      "reason": "RuntimeError: Full Thai translation unavailable for article b0a3ec6d5253b62a4c"
+      "article_id": "a81aba4bf37832840b",
+      "title": "King Charles won't live in Buckingham Palace after completion of £369M renovation",
+      "provider": "CBC News",
+      "level": "C1",
+      "reason": "RuntimeError: Full Thai translation unavailable for article a81aba4bf37832840b"
     },
     {
-      "article_id": "c4094e913da1955302",
-      "title": "Flash Flood Warning issued June 27 at 8:08AM EDT until June 27 at 11:15AM EDT by NWS Louisville KY",
-      "provider": "US National Weather Service",
+      "article_id": "88e46654921fac2c48",
+      "title": "Registered sex offender pleads guilty to sexual assault of 3-year-old in Welland, Ont., other charges",
+      "provider": "CBC News",
       "level": "C1",
-      "reason": "RuntimeError: Full Thai translation unavailable for article c4094e913da1955302"
+      "reason": "RuntimeError: Full Thai translation unavailable for article 88e46654921fac2c48"
     }
   ],
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
-    "nllb_retries": 4,
+    "nllb_retries": 3,
     "quality_failures": 2,
     "rejection_reasons": {
       "repeated-junk-string": 1,
       "suspiciously-long": 1,
-      "unexpected-non-thai-script": 1,
-      "missing-number:8:16": 1,
-      "repeated-word-run": 1,
-      "repeated-2-gram": 1,
-      "repeated-3-gram": 1,
-      "missing-number:8:08": 2
+      "unexpected-non-thai-script": 2,
+      "missing-number:2025": 2
     }
   },
-  "completed_at": "2026-06-27T13:06:40.160030+00:00",
+  "completed_at": "2026-06-27T15:21:40.930094+00:00",
   "latest_date": "2026-06-27",
   "total_story_count": 70,
   "today_story_count": 10,
@@ -61,43 +57,43 @@
   "fallback_image_count": 10,
   "fallback_images": [
     {
+      "article_id": "677ecc786079545970",
+      "title": "It's not just Cape Verde: African soccer is having a World Cup moment",
+      "reason": "No usable free image candidate"
+    },
+    {
       "article_id": "5dd453d0483bf382c8",
       "title": "B.C. launches probe into StubHub over World Cup resale ticket fiasco",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "9835cb16fdf16d53ee",
-      "title": "Canada can now enter Eurovision, but CBC won't say whether it will",
+      "article_id": "721ef539d0338a4784",
+      "title": "Bahrain accuses Iran of targeted drone attack after U.S. strikes Iran",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "2c573c99c896cd3716",
-      "title": "Ukraine unleashes one of its heaviest drone bombardments, as Russia strikes Ukraine",
+      "article_id": "19e40b2cdd45d05ba5",
+      "title": "This satellite is falling towards Earth, so scientists hatched a plan to give it a lil' push",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "bf003f0c45659af8ba",
-      "title": "Autoregressive Boltzmann Generators",
+      "article_id": "b49c63470feda8828d",
+      "title": "Refining cobalt in Cobalt, Ont.? That's the plan for this northern Ontario town",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "166d56f0ca6e2598d3",
-      "title": "DanceOPD: On-Policy Generative Field Distillation",
+      "article_id": "d8d21133af816c4c47",
+      "title": "Israel and Lebanon sign framework agreement after US-brokered talks",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "d804fa811a6ee04f96",
-      "title": "Some Russians are turning on Putin as drones hit Moscow. Does it matter?",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "2162035bc3663f3664",
-      "title": "Marine Weather Statement issued June 27 at 8:12AM EDT by NWS Key West FL",
+      "article_id": "604aa98be06569af5a",
+      "title": "Flash Flood Warning issued June 27 at 9:59AM CDT until June 27 at 1:45PM CDT by NWS Paducah KY",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "2d7646f9d893c53bc1",
-      "title": "Marine Weather Statement issued June 27 at 8:30AM EDT by NWS Wilmington NC",
+      "article_id": "9381fa20e5c381eee8",
+      "title": "If a Lyme disease vaccine gets approved, how would it go over? We asked hunters",
       "reason": "No usable free image candidate"
     },
     {
@@ -106,8 +102,8 @@
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "5f5ae74e7961c3a723",
-      "title": "Flood Advisory issued June 27 at 7:31AM CDT until June 27 at 10:30AM CDT by NWS Tulsa OK",
+      "article_id": "252ed46f459eac9efb",
+      "title": "In Caracas, this feels like the hardest moment in Venezuela's modern history",
       "reason": "No usable free image candidate"
     }
   ]
