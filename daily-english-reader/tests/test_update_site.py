@@ -1,5 +1,9 @@
 import json
 import base64
+import os
+import shutil
+import subprocess
+import sys
 import tempfile
 import unittest
 from pathlib import Path
@@ -259,6 +263,79 @@ class DailyReaderTests(unittest.TestCase):
         self.assertTrue(all(row["isFallback"] and not row["isRealNews"] for row in rows))
         self.assertTrue(all(site.fallback_metadata_issues(row) == [] for row in rows))
         self.assertEqual(report["practice_fallback_count"], 2)
+
+    def test_workflow_preflight_build_produces_two_valid_a1_practice_stories(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            shutil.copy2(site.__file__, root / "update_site.py")
+            shutil.copytree(site.TEMPLATE_DIR, root / "templates")
+            shutil.copytree(site.STATIC_DIR, root / "static")
+            env = os.environ.copy()
+            env.update({
+                "FREE_ONLY": "1", "RETENTION_DAYS": "7", "BACKFILL_DAYS": "1",
+                "DEMO_MODE": "1", "SKIP_AUDIO": "1", "REFRESH_TODAY": "1",
+            })
+            for name in ("REQUIRE_FULL_TRANSLATION", "READING_TRANSLATION_PROVIDER", "READING_TRANSLATION_MODEL"):
+                env.pop(name, None)
+            result = subprocess.run(
+                [sys.executable, "update_site.py"], cwd=root, env=env,
+                capture_output=True, text=True, timeout=120,
+            )
+            self.assertEqual(result.returncode, 0, msg=(result.stdout + result.stderr)[-4000:])
+            rows = json.loads((root / "site" / "content-index.json").read_text(encoding="utf-8"))
+            a1_rows = [row for row in rows if row["level"] == "A1"]
+            self.assertEqual(len(a1_rows), 2)
+            fallback_rows = [row for row in a1_rows if row["isFallback"]]
+            self.assertGreaterEqual(len(fallback_rows), 1)
+            self.assertTrue(all(not row["isRealNews"] for row in fallback_rows))
+            for row in a1_rows:
+                article_path = root / "site" / Path(row["url"]).parent / "article.json"
+                article = json.loads(article_path.read_text(encoding="utf-8"))
+                if article["isFallback"]:
+                    self.assertEqual(site.fallback_metadata_issues(article), [])
+                self.assertEqual(
+                    site.translation_quality_issues(article["text"], site.article_translation_body(article)), []
+                )
+
+    def test_preflight_main_replaces_two_rejected_a1_candidates(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            shutil.copy2(site.__file__, root / "update_site.py")
+            shutil.copytree(site.TEMPLATE_DIR, root / "templates")
+            shutil.copytree(site.STATIC_DIR, root / "static")
+            env = os.environ.copy()
+            env.update({
+                "FREE_ONLY": "1", "RETENTION_DAYS": "7", "BACKFILL_DAYS": "1",
+                "DEMO_MODE": "1", "SKIP_AUDIO": "1", "REFRESH_TODAY": "1",
+            })
+            for name in ("REQUIRE_FULL_TRANSLATION", "READING_TRANSLATION_PROVIDER", "READING_TRANSLATION_MODEL"):
+                env.pop(name, None)
+            harness = (
+                "import update_site as site\n"
+                "original = site.process_article\n"
+                "def reject_a1(raw, *args, **kwargs):\n"
+                "    if raw.get('level') == 'A1' and not raw.get('isFallback'):\n"
+                "        raise RuntimeError('forced A1 real-news rejection')\n"
+                "    return original(raw, *args, **kwargs)\n"
+                "site.process_article = reject_a1\n"
+                "raise SystemExit(site.main())\n"
+            )
+            result = subprocess.run(
+                [sys.executable, "-c", harness], cwd=root, env=env,
+                capture_output=True, text=True, timeout=120,
+            )
+            self.assertEqual(result.returncode, 0, msg=(result.stdout + result.stderr)[-4000:])
+            rows = json.loads((root / "site" / "content-index.json").read_text(encoding="utf-8"))
+            a1_rows = [row for row in rows if row["level"] == "A1"]
+            self.assertEqual(len(a1_rows), 2)
+            self.assertTrue(all(row["isFallback"] and not row["isRealNews"] for row in a1_rows))
+            for row in a1_rows:
+                article_path = root / "site" / Path(row["url"]).parent / "article.json"
+                article = json.loads(article_path.read_text(encoding="utf-8"))
+                self.assertEqual(site.fallback_metadata_issues(article), [])
+                self.assertEqual(
+                    site.translation_quality_issues(article["text"], site.article_translation_body(article)), []
+                )
 
     def test_fallback_metadata_validator_rejects_real_news_marker(self):
         fallback = site.practice_story_candidates("C1", "2026-06-27")[0]
