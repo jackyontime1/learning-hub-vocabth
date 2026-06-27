@@ -223,6 +223,43 @@ class DailyReaderTests(unittest.TestCase):
         self.assertEqual(fallback["disclaimerTh"], site.PRACTICE_DISCLAIMER_TH)
         self.assertEqual(report["practice_fallback_count"], 1)
 
+    def test_rejected_a1_real_news_produces_two_valid_practice_stories(self):
+        real = [
+            {
+                "id": f"real-{index}", "title": f"Real {index}",
+                "description": "real news candidate words " * 8,
+                "provider": "Test News", "provider_key": "test_news", "level": "A1",
+            }
+            for index in range(2)
+        ]
+        thai = (
+            "มีนาพบร่มสีน้ำเงินที่ป้ายรถเมล์หลังฝนหยุด "
+            "เธอถามเจ้าของร้านใกล้เคียงและเขียนข้อความไว้อย่างรอบคอบ "
+            "เช้าวันต่อมาชายสูงวัยกลับมารับร่มและดีใจที่ได้ของขวัญจากลูกสาวคืน"
+        )
+
+        def process(raw, *_args):
+            if not raw.get("isFallback"):
+                raise RuntimeError("Processed article contains incomplete or placeholder Thai translation")
+            return {
+                **raw,
+                "schema_version": site.SCHEMA_VERSION,
+                "speech_text": "A safe practice reading.",
+                "text": raw["description"],
+                "thai_text": site.full_thai_article(raw, raw["description"], thai),
+            }
+
+        report = {}
+        with patch.object(site, "process_article", side_effect=process):
+            rows = site.build_level_readings(
+                "A1", real, real, {row["id"] for row in real}, object(), Mock(),
+                object(), {}, "2026-06-27", report,
+            )
+        self.assertEqual(len(rows), 2)
+        self.assertTrue(all(row["isFallback"] and not row["isRealNews"] for row in rows))
+        self.assertTrue(all(site.fallback_metadata_issues(row) == [] for row in rows))
+        self.assertEqual(report["practice_fallback_count"], 2)
+
     def test_fallback_metadata_validator_rejects_real_news_marker(self):
         fallback = site.practice_story_candidates("C1", "2026-06-27")[0]
         self.assertEqual(site.fallback_metadata_issues(fallback), [])
@@ -264,9 +301,11 @@ class DailyReaderTests(unittest.TestCase):
 
     def test_fallback_thai_text_uses_disclaimer_instead_of_news_claim(self):
         raw = site.practice_story_candidates("A1", "2026-06-27")[0]
-        result = site.full_thai_article(raw, "A short story.", "นี่คือคำแปลเนื้อเรื่องฉบับสมบูรณ์")
+        translated = "นี่คือคำแปลเนื้อเรื่องฉบับสมบูรณ์"
+        with patch.object(site, "naturalize_thai", return_value=""):
+            result = site.full_thai_article(raw, "A short story.", translated)
         self.assertTrue(result.startswith(site.PRACTICE_DISCLAIMER_TH))
-        self.assertEqual(site.article_translation_body({**raw, "thai_text": result}), "นี่คือคำแปลเนื้อเรื่องฉบับสมบูรณ์")
+        self.assertEqual(site.article_translation_body({**raw, "thai_text": result}), translated)
 
     def test_practice_disclaimer_is_visible_in_list_and_article_templates(self):
         for name in ("article.html", "index.html", "daily.html"):

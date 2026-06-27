@@ -860,9 +860,9 @@ def natural_thai_article(raw: dict[str, Any], text: str) -> str:
 
 
 def full_thai_article(raw: dict[str, Any], text: str, translated: str) -> str:
-    translated = naturalize_thai(translated)
     if raw.get("isFallback"):
         return f"{PRACTICE_DISCLAIMER_TH}\n\n{translated}"
+    translated = naturalize_thai(translated)
     if not is_useful_thai_translation(text, translated):
         return natural_thai_article(raw, text)
     category = english_label_for_category(raw.get("category", "news"))
