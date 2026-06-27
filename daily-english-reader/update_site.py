@@ -71,6 +71,25 @@ MAX_SOURCE_AGE_HOURS = 48
 LEVELS = ("A1", "A2", "B1", "B2", "C1")
 TARGET_PER_LEVEL = 2
 DAILY_ARTICLE_COUNT = len(LEVELS) * TARGET_PER_LEVEL
+PRACTICE_SOURCE_NAME = "Learning Hub Practice Story"
+PRACTICE_CONTENT_TYPE = "fictional_practice_story"
+PRACTICE_DISCLAIMER_EN = "Fictional learning story created for English practice. This is not real news."
+PRACTICE_DISCLAIMER_TH = "เรื่องอ่านฝึกภาษา แต่งขึ้นเพื่อการเรียนภาษาอังกฤษ ไม่ใช่ข่าวจริง"
+
+PRACTICE_TOPICS = [
+    ("The umbrella at the bus stop", "Daily Life", "Mina finds a blue umbrella at a quiet bus stop after the rain. She asks nearby shop owners about it and leaves a careful note. The next morning, an older man returns and is happy to find the umbrella his daughter gave him."),
+    ("A garden above the bakery", "Environment", "A small bakery starts a garden on its flat roof. Staff grow herbs for bread and flowers for bees. Neighbors help carry soil upstairs, and the project gives the busy street a cooler and greener place."),
+    ("The library's silent hour", "Education", "A community library creates one silent hour every afternoon for students who need a calm place to study. Visitors turn off phone sounds, volunteers prepare simple study guides, and many learners discover that they can focus better."),
+    ("A bicycle with a second purpose", "Technology", "Ken repairs an old bicycle and connects it to a small generator. People at the community center pedal it to charge lights during evening classes. The invention is simple, but it helps everyone learn about energy."),
+    ("The notebook from platform six", "Travel", "During a train journey, Lila discovers a notebook filled with sketches of towns along the route. She follows the owner's clues, meets helpful passengers, and returns it to a young artist at the final station."),
+    ("Lunch for a new neighbor", "Community", "A family notices that their new neighbor eats alone each day. They invite him to share lunch in the courtyard. He brings a recipe from his hometown, and the meal becomes a weekly gathering for the building."),
+    ("The night class telescope", "Science", "Students in an evening science class build a basic telescope from donated parts. Their first view of the moon is not perfectly clear, yet it inspires them to record observations and improve the design together."),
+    ("A map made from memories", "Culture", "An art teacher asks local residents to draw places that matter to them. The drawings become a large neighborhood map showing old trees, favorite shops, and shared memories that ordinary street maps often miss."),
+    ("The cafe that borrowed cups", "Environment", "A cafe tests a reusable cup program with nearby offices. Customers borrow a cup and return it later to any partner shop. At first the system is confusing, but clear signs and patient staff make it easier."),
+    ("Messages for the morning team", "Work", "Two teams share the same workshop at different times. They begin leaving short voice messages about unfinished tasks and safety checks. The habit prevents mistakes and helps the morning and evening workers trust each other."),
+    ("The seed exchange shelf", "Nature", "Residents place labeled packets of vegetable seeds on a shelf outside the town hall. Anyone may take one packet and later return seeds from a successful plant. The exchange slowly creates more variety in local gardens."),
+    ("A small museum of ordinary things", "Culture", "A school opens a temporary museum containing everyday objects from different generations. Students interview relatives about radios, lunch boxes, tools, and letters, then write short explanations about how daily life has changed."),
+]
 
 RSS_FEEDS = [
     ("CBC News", "Canada", "https://www.cbc.ca/webfeed/rss/rss-canada"),
@@ -842,6 +861,8 @@ def natural_thai_article(raw: dict[str, Any], text: str) -> str:
 
 def full_thai_article(raw: dict[str, Any], text: str, translated: str) -> str:
     translated = naturalize_thai(translated)
+    if raw.get("isFallback"):
+        return f"{PRACTICE_DISCLAIMER_TH}\n\n{translated}"
     if not is_useful_thai_translation(text, translated):
         return natural_thai_article(raw, text)
     category = english_label_for_category(raw.get("category", "news"))
@@ -853,6 +874,13 @@ def full_thai_article(raw: dict[str, Any], text: str, translated: str) -> str:
         f"ข่าวนี้มาจาก {provider} อยู่ในหมวด{category} และถูกเรียบเรียงเป็นระดับ {level}. "
         f"เนื้อหาข่าวคือ\n\n{translated}"
     )
+
+
+def article_translation_body(row: dict[str, Any]) -> str:
+    translated = row.get("thai_text", "")
+    if row.get("isFallback") and translated.startswith(PRACTICE_DISCLAIMER_TH):
+        return translated[len(PRACTICE_DISCLAIMER_TH):].lstrip()
+    return translated
 
 
 def parse_date(value: str | None) -> datetime:
@@ -1108,6 +1136,50 @@ def demo_articles() -> list[dict[str, Any]]:
     return [row for row in rows if row]
 
 
+def practice_story_candidates(level: str, published_date: str) -> list[dict[str, Any]]:
+    if level not in LEVELS:
+        raise ValueError(f"Unsupported CEFR level: {level}")
+    start = LEVELS.index(level) * TARGET_PER_LEVEL
+    rows = []
+    for attempt in range(4):
+        title, category, description = PRACTICE_TOPICS[(start + attempt) % len(PRACTICE_TOPICS)]
+        identifier = f"practice-{published_date}-{level.lower()}-{attempt + 1}"
+        rows.append({
+            "id": stable_id("practice", identifier, title),
+            "provider": PRACTICE_SOURCE_NAME,
+            "provider_key": "practice_story",
+            "title": title,
+            "description": description,
+            "url": "",
+            "category": category,
+            "published": f"{published_date}T12:00:00+00:00",
+            "author": "Learning Hub",
+            "content_type": "fictional practice story",
+            "image_url": "",
+            "thai_demo": "",
+            "level": level,
+            "isFallback": True,
+            "isRealNews": False,
+            "contentType": PRACTICE_CONTENT_TYPE,
+            "sourceName": PRACTICE_SOURCE_NAME,
+            "disclaimerEn": PRACTICE_DISCLAIMER_EN,
+            "disclaimerTh": PRACTICE_DISCLAIMER_TH,
+        })
+    return rows
+
+
+def fallback_metadata_issues(row: dict[str, Any]) -> list[str]:
+    expected = {
+        "isFallback": True,
+        "isRealNews": False,
+        "contentType": PRACTICE_CONTENT_TYPE,
+        "sourceName": PRACTICE_SOURCE_NAME,
+        "disclaimerEn": PRACTICE_DISCLAIMER_EN,
+        "disclaimerTh": PRACTICE_DISCLAIMER_TH,
+    }
+    return [f"invalid-{key}" for key, value in expected.items() if row.get(key) != value]
+
+
 def fetch_currents(session: requests.Session, quota: QuotaManager, config: dict[str, Any]) -> list[dict[str, Any]]:
     key = config["currents_key"]
     if not key:
@@ -1317,7 +1389,12 @@ def ordered_daily_candidate_pool(candidates: list[dict[str, Any]], offset: int =
 def choose_daily_articles(candidates: list[dict[str, Any]], offset: int = 0) -> list[dict[str, Any]]:
     candidates = ordered_daily_candidate_pool(candidates, offset)
     if len(candidates) < DAILY_ARTICLE_COUNT:
-        return []
+        chosen = []
+        for index, article in enumerate(candidates):
+            row = dict(article)
+            row["level"] = LEVELS[index % len(LEVELS)]
+            chosen.append(row)
+        return chosen
     midpoint = len(candidates) // 2
     upper = max(midpoint + 2, int(len(candidates) * 0.72))
     indexes = {
@@ -1355,6 +1432,56 @@ def replacement_daily_article(
         row["level"] = level
         return row
     return None
+
+
+def record_candidate_failure(
+    build_report: dict[str, Any], raw: dict[str, Any], level: str, error: Exception,
+) -> None:
+    reason = f"{type(error).__name__}: {error}"[:240]
+    build_report.setdefault("candidate_rejections", []).append({
+        "article_id": raw.get("id", ""),
+        "title": raw.get("title", ""),
+        "provider": raw.get("provider", ""),
+        "level": level,
+        "reason": reason,
+    })
+
+
+def build_level_readings(
+    level: str, initial: list[dict[str, Any]], candidates: list[dict[str, Any]],
+    used_ids: set[str], session: requests.Session, quota: QuotaManager,
+    translator: Translator, config: dict[str, Any], published_date: str,
+    build_report: dict[str, Any], offset: int = 0,
+) -> list[dict[str, Any]]:
+    processed: list[dict[str, Any]] = []
+    queue = list(initial)
+    practice = practice_story_candidates(level, published_date)
+    while len(processed) < TARGET_PER_LEVEL:
+        if queue:
+            raw = queue.pop(0)
+        else:
+            raw = replacement_daily_article(candidates, level, used_ids, offset)
+            if raw is None:
+                raw = next((row for row in practice if row["id"] not in used_ids), None)
+            if raw is None:
+                raise RuntimeError(
+                    f"Unable to produce {TARGET_PER_LEVEL} valid {level} readings after real-news and practice fallbacks"
+                )
+        used_ids.add(raw["id"])
+        provider_key = raw.get("provider_key", slugify(raw["provider"], 32))
+        quota.selected(provider_key)
+        try:
+            article = process_article(raw, session, quota, translator, config, published_date)
+            validate_processed_article(article, level)
+        except Exception as error:
+            quota.skipped(provider_key, f"candidate rejected: {type(error).__name__}: {error}"[:240])
+            record_candidate_failure(build_report, raw, level, error)
+            logging.warning("Rejecting %s candidate %s: %s", level, raw.get("id", "unknown"), error)
+            continue
+        if article.get("isFallback"):
+            build_report["practice_fallback_count"] = build_report.get("practice_fallback_count", 0) + 1
+        processed.append(article)
+    return processed
 
 
 def summarize(text: str) -> str:
@@ -1989,6 +2116,8 @@ def image_for(
 def source_material(raw: dict[str, Any], session: requests.Session, config: dict[str, Any]) -> str:
     """Use source-page paragraphs when available, otherwise keep the feed summary."""
     fallback = raw["description"]
+    if raw.get("isFallback"):
+        return fallback
     if config["demo"]:
         return fallback
     try:
@@ -2148,6 +2277,7 @@ def process_article(
     audio_path = generate_audio(text, raw["id"], raw["level"], published_date, config)
     image = image_for(raw, session, quota, config)
     slug = f"{slugify(raw['title'])}-{raw['id'][:8]}"
+    is_fallback = bool(raw.get("isFallback", False))
     return {
         "schema_version": SCHEMA_VERSION, "id": raw["id"], "slug": slug, "level": raw["level"],
         "title": raw["title"], "description": raw["description"], "text": text,
@@ -2155,10 +2285,35 @@ def process_article(
         "word_translations": translations, "category": raw["category"], "provider": raw["provider"],
         "word_pos": word_pos,
         "content_type": raw["content_type"], "source_url": raw["url"], "author": raw["author"],
+        "isFallback": is_fallback,
+        "isRealNews": False if is_fallback else raw.get("provider") != "demo",
+        "contentType": PRACTICE_CONTENT_TYPE if is_fallback else "news_article",
+        "sourceName": raw.get("sourceName") or raw["provider"],
+        "disclaimerEn": raw.get("disclaimerEn", ""),
+        "disclaimerTh": raw.get("disclaimerTh", ""),
         "published": raw["published"], "published_date": published_date, "image": image,
         "audio_cache_path": str(audio_path.relative_to(ROOT)).replace("\\", "/"),
         "generated_at": utc_now().isoformat(),
     }
+
+
+def validate_processed_article(row: dict[str, Any], level: str) -> None:
+    if row.get("schema_version") != SCHEMA_VERSION:
+        raise RuntimeError(f"Processed article does not use schema {SCHEMA_VERSION}")
+    if row.get("level") != level:
+        raise RuntimeError(f"Processed article changed level from {level}")
+    if not row.get("speech_text") or speech_text_issues(row.get("speech_text", "")):
+        raise RuntimeError("Processed article contains unsafe Web Speech text")
+    if not is_useful_thai_translation(row.get("text", ""), article_translation_body(row)):
+        raise RuntimeError("Processed article contains incomplete or placeholder Thai translation")
+    if row.get("isFallback"):
+        issues = fallback_metadata_issues(row)
+        if issues:
+            raise RuntimeError(f"Fallback metadata invalid: {', '.join(issues)}")
+    elif row.get("provider") != "demo" and (
+        row.get("isRealNews") is not True or row.get("contentType") != "news_article"
+    ):
+        raise RuntimeError("Real-news metadata invalid")
 
 
 def word_spans(text: str, translations: dict[str, str], word_pos: dict[str, str] | None = None) -> Markup:
@@ -2185,7 +2340,7 @@ def article_meets_current_quality(row: dict[str, Any]) -> bool:
         return False
     if row.get("provider") == "demo":
         return True
-    return not translation_quality_issues(row.get("text", ""), row.get("thai_text", ""))
+    return not translation_quality_issues(row.get("text", ""), article_translation_body(row))
 
 
 def load_articles(retention_days: int) -> list[dict[str, Any]]:
@@ -2217,6 +2372,12 @@ def processed_to_source(article: dict[str, Any]) -> dict[str, Any]:
         "published": article["published"], "author": article.get("author", ""),
         "content_type": article.get("content_type", "news"),
         "image_url": image.get("url", ""), "thai_demo": "", "level": article["level"],
+        "isFallback": article.get("isFallback", False),
+        "isRealNews": article.get("isRealNews", True),
+        "contentType": article.get("contentType", "news_article"),
+        "sourceName": article.get("sourceName", article["provider"]),
+        "disclaimerEn": article.get("disclaimerEn", ""),
+        "disclaimerTh": article.get("disclaimerTh", ""),
     }
 
 
@@ -2322,6 +2483,9 @@ def render_site(
             "level": article["level"], "category": article["category"],
             "date": article["published_date"],
             "image": article_view(article, "")["image_url"],
+            "isFallback": article.get("isFallback", False),
+            "isRealNews": article.get("isRealNews", True),
+            "contentType": article.get("contentType", "news_article"),
         })
     atomic_json(STAGING_DIR / "content-index.json", content_index)
     provider_status = quota.public_status(
@@ -2364,12 +2528,20 @@ def validate_staging(
         raise RuntimeError("Current articles are not split 2 per level")
     if not allow_demo and any(row.get("provider") == "demo" for row in today_articles):
         raise RuntimeError("Demo-only article reached production validation")
+    if not allow_demo:
+        for row in today_articles:
+            if row.get("isFallback"):
+                issues = fallback_metadata_issues(row)
+                if issues:
+                    raise RuntimeError(f"Fallback article metadata is invalid: {', '.join(issues)}")
+            elif row.get("isRealNews") is not True or row.get("contentType") != "news_article":
+                raise RuntimeError("Real-news article metadata is invalid")
     if any(row.get("schema_version") != SCHEMA_VERSION for row in today_articles):
         raise RuntimeError(f"Current articles must use schema {SCHEMA_VERSION}")
     if any(not row.get("speech_text") or speech_text_issues(row.get("speech_text", "")) for row in today_articles):
         raise RuntimeError("Current edition contains unsafe Web Speech text")
     if not allow_demo and any(
-        not is_useful_thai_translation(row.get("text", ""), row.get("thai_text", ""))
+        not is_useful_thai_translation(row.get("text", ""), article_translation_body(row))
         for row in today_articles
     ):
         raise RuntimeError("Current edition contains incomplete or placeholder Thai translation")
@@ -2539,6 +2711,7 @@ def main() -> int:
         "free_only": True, "demo_mode": config["demo"], "demo_fallback_blocked": not config["demo"],
         "skip_audio": config["skip_audio"], "required_story_count": DAILY_ARTICLE_COUNT,
         "required_levels": {level: TARGET_PER_LEVEL for level in LEVELS}, "schema_version": SCHEMA_VERSION,
+        "candidate_rejections": [], "practice_fallback_count": 0,
     }
     try:
         retained_articles = load_articles(config["retention_days"])
@@ -2577,39 +2750,16 @@ def main() -> int:
                     logging.info("Rebuilding %s from its existing real story selection", target_date)
                 else:
                     selected = choose_daily_articles(candidates, offset=date_index * DAILY_ARTICLE_COUNT)
-                if len(selected) != DAILY_ARTICLE_COUNT:
-                    raise RuntimeError("Free providers did not supply enough fresh valid articles; existing site was preserved")
                 config["_used_image_urls"] = set()
                 selected_ids = {row["id"] for row in selected}
-                for row in selected:
-                    quota.selected(row.get("provider_key", slugify(row["provider"], 32)))
                 processed: list[dict[str, Any]] = []
-                queue = list(selected)
-                for raw in queue:
-                    index = len(processed) + 1
-                    logging.info("[%s %d/%d] Building %s: %s", target_date, index, DAILY_ARTICLE_COUNT, raw["level"], raw["title"])
-                    try:
-                        processed.append(process_article(raw, session, quota, translator, config, target_date))
-                    except RuntimeError as error:
-                        if (
-                            not config["require_full_translation"]
-                            or not str(error).startswith("Full Thai translation unavailable")
-                        ):
-                            raise
-                        provider_key = raw.get("provider_key", slugify(raw["provider"], 32))
-                        quota.skipped(provider_key, str(error))
-                        replacement = replacement_daily_article(
-                            candidates, raw["level"], selected_ids, offset=date_index * DAILY_ARTICLE_COUNT,
-                        )
-                        if replacement is None:
-                            raise
-                        selected_ids.add(replacement["id"])
-                        quota.selected(replacement.get("provider_key", slugify(replacement["provider"], 32)))
-                        queue.append(replacement)
-                        logging.warning(
-                            "Skipping %s after translation failure; trying replacement %s",
-                            raw["id"], replacement["id"],
-                        )
+                for level in LEVELS:
+                    level_selected = [row for row in selected if row["level"] == level]
+                    logging.info("[%s] Building %s readings from real news first", target_date, level)
+                    processed.extend(build_level_readings(
+                        level, level_selected, candidates, selected_ids, session, quota, translator,
+                        config, target_date, build_report, offset=date_index * DAILY_ARTICLE_COUNT,
+                    ))
                 if target_date == today:
                     for row in candidates:
                         if row["id"] not in selected_ids:

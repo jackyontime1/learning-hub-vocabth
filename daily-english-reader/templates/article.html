@@ -7,20 +7,25 @@
         <h2>Story level</h2>
         <div class="side-levels"><span class="{{ article.level | lower }}"><b>{{ article.level }}</b> {% if article.level == "A1" %}Starter{% elif article.level == "A2" %}Beginner{% elif article.level == "B1" %}Intermediate{% elif article.level == "B2" %}Upper Intermediate{% else %}Advanced{% endif %}</span></div>
       </section>
-      <section class="side-panel status-panel"><h2>{{ article.content_type | title }}</h2><p>Source: {{ article.provider }}</p><a href="{{ article.source_url }}" rel="noopener">Open source</a></section>
+      <section class="side-panel status-panel">
+        <h2>{{ article.content_type | title }}</h2>
+        <p>Source: {{ article.sourceName or article.provider }}</p>
+        {% if article.isFallback %}<p><strong>Fictional learning story - not real news</strong></p><p>{{ article.disclaimerTh }}</p>{% elif article.source_url %}<a href="{{ article.source_url }}" rel="noopener">Open source</a>{% endif %}
+      </section>
     </aside>
 
     <article class="reader" data-article-id="{{ article.id }}">
       <section class="article-hero">
         <img src="{{ article.image_url }}" alt="{{ article.image_alt }}" fetchpriority="high">
         <div class="hero-shade"></div>
-        <div class="featured-label">{{ article.level }} DAILY STORY</div>
+        <div class="featured-label">{{ article.level }} {% if article.isFallback %}PRACTICE STORY{% else %}DAILY STORY{% endif %}</div>
         <div class="article-hero-copy">
           <div class="story-kicker"><span>{{ article.category }}</span> {{ article.published_display }}</div>
           <h1>{{ article.title }}</h1>
           <p>{{ article.description }}</p>
         </div>
       </section>
+      {% if article.isFallback %}<section class="side-panel status-panel"><h2>Fictional learning story - not real news</h2><p>{{ article.disclaimerEn }}</p><p>{{ article.disclaimerTh }}</p></section>{% endif %}
       <p class="image-attribution">
         Image: {{ article.image.image_author }} / {{ article.image.image_source }}
         {% if article.image.image_license %}({{ article.image.image_license }}){% endif %}

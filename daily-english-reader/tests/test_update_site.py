@@ -174,6 +174,106 @@ class DailyReaderTests(unittest.TestCase):
         self.assertEqual(replacement["level"], "B2")
         self.assertNotIn(replacement["id"], used_ids)
 
+    def test_bad_real_candidate_is_skipped_and_same_level_backup_is_used(self):
+        candidates = [
+            {
+                "id": name, "title": name, "description": "useful article words " * 8,
+                "provider": "Test News", "provider_key": "test_news", "level": "B1",
+            }
+            for name in ("bad", "good", "backup")
+        ]
+        report = {}
+
+        def process(raw, *_args):
+            if raw["id"] == "bad":
+                raise RuntimeError("source cleanup failed")
+            return {"id": raw["id"], "level": raw["level"]}
+
+        with patch.object(site, "process_article", side_effect=process), \
+             patch.object(site, "validate_processed_article"):
+            rows = site.build_level_readings(
+                "B1", candidates[:2], candidates, {"bad", "good"}, object(), Mock(),
+                object(), {}, "2026-06-27", report,
+            )
+        self.assertEqual([row["id"] for row in rows], ["good", "backup"])
+        self.assertEqual(report["candidate_rejections"][0]["article_id"], "bad")
+        self.assertEqual(report["candidate_rejections"][0]["level"], "B1")
+
+    def test_exhausted_real_news_is_filled_by_labeled_practice_story(self):
+        real = {
+            "id": "only-real", "title": "Only real", "description": "useful article words " * 8,
+            "provider": "Test News", "provider_key": "test_news", "level": "A2",
+        }
+
+        def process(raw, *_args):
+            return dict(raw)
+
+        report = {}
+        with patch.object(site, "process_article", side_effect=process), \
+             patch.object(site, "validate_processed_article"):
+            rows = site.build_level_readings(
+                "A2", [real], [real], {real["id"]}, object(), Mock(), object(), {},
+                "2026-06-27", report,
+            )
+        fallback = next(row for row in rows if row.get("isFallback"))
+        self.assertFalse(fallback["isRealNews"])
+        self.assertEqual(fallback["contentType"], "fictional_practice_story")
+        self.assertEqual(fallback["sourceName"], "Learning Hub Practice Story")
+        self.assertEqual(fallback["disclaimerEn"], site.PRACTICE_DISCLAIMER_EN)
+        self.assertEqual(fallback["disclaimerTh"], site.PRACTICE_DISCLAIMER_TH)
+        self.assertEqual(report["practice_fallback_count"], 1)
+
+    def test_fallback_metadata_validator_rejects_real_news_marker(self):
+        fallback = site.practice_story_candidates("C1", "2026-06-27")[0]
+        self.assertEqual(site.fallback_metadata_issues(fallback), [])
+        fallback["isRealNews"] = True
+        self.assertIn("invalid-isRealNews", site.fallback_metadata_issues(fallback))
+
+    def test_level_build_fails_when_all_practice_candidates_fail(self):
+        report = {}
+        with patch.object(site, "process_article", side_effect=RuntimeError("translation failed")):
+            with self.assertRaisesRegex(RuntimeError, "real-news and practice fallbacks"):
+                site.build_level_readings(
+                    "C1", [], [], set(), object(), Mock(), object(), {},
+                    "2026-06-27", report,
+                )
+        self.assertEqual(len(report["candidate_rejections"]), 4)
+        self.assertTrue(all(row["provider"] == site.PRACTICE_SOURCE_NAME for row in report["candidate_rejections"]))
+
+    def test_processed_article_quality_gate_still_rejects_incomplete_thai(self):
+        row = {
+            "schema_version": site.SCHEMA_VERSION, "level": "A1", "speech_text": "A safe sentence.",
+            "text": "A complete English reading.", "thai_text": "", "provider": "Test News",
+            "isFallback": False, "isRealNews": True, "contentType": "news_article",
+        }
+        with self.assertRaisesRegex(RuntimeError, "incomplete or placeholder Thai"):
+            site.validate_processed_article(row, "A1")
+        fallback = dict(
+            row,
+            provider=site.PRACTICE_SOURCE_NAME,
+            isFallback=True,
+            isRealNews=False,
+            contentType=site.PRACTICE_CONTENT_TYPE,
+            sourceName=site.PRACTICE_SOURCE_NAME,
+            disclaimerEn=site.PRACTICE_DISCLAIMER_EN,
+            disclaimerTh=site.PRACTICE_DISCLAIMER_TH,
+            thai_text=site.PRACTICE_DISCLAIMER_TH,
+        )
+        with self.assertRaisesRegex(RuntimeError, "incomplete or placeholder Thai"):
+            site.validate_processed_article(fallback, "A1")
+
+    def test_fallback_thai_text_uses_disclaimer_instead_of_news_claim(self):
+        raw = site.practice_story_candidates("A1", "2026-06-27")[0]
+        result = site.full_thai_article(raw, "A short story.", "นี่คือคำแปลเนื้อเรื่องฉบับสมบูรณ์")
+        self.assertTrue(result.startswith(site.PRACTICE_DISCLAIMER_TH))
+        self.assertEqual(site.article_translation_body({**raw, "thai_text": result}), "นี่คือคำแปลเนื้อเรื่องฉบับสมบูรณ์")
+
+    def test_practice_disclaimer_is_visible_in_list_and_article_templates(self):
+        for name in ("article.html", "index.html", "daily.html"):
+            template = (site.TEMPLATE_DIR / name).read_text(encoding="utf-8")
+            self.assertIn("article.isFallback" if name != "index.html" else "featured.isFallback", template)
+            self.assertIn("Fictional learning story - not real news", template)
+
     def test_word_spans_wrap_every_english_word(self):
         markup = str(site.word_spans("Clean energy works.", {
             "clean": "สะอาด", "energy": "พลังงาน", "works": "ทำงาน",
