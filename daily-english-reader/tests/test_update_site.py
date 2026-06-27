@@ -1,5 +1,6 @@
 import json
 import base64
+import importlib.util
 import os
 import shutil
 import subprocess
@@ -43,6 +44,14 @@ class FakeSession:
 
 
 class DailyReaderTests(unittest.TestCase):
+    def load_production_verifier(self):
+        path = site.ROOT / "scripts" / "verify-production.py"
+        spec = importlib.util.spec_from_file_location("verify_production_test", path)
+        module = importlib.util.module_from_spec(spec)
+        assert spec and spec.loader
+        spec.loader.exec_module(module)
+        return module
+
     def test_demo_stories_have_unique_topic_images(self):
         titles = [row[1] for row in site.DEMO_TOPICS]
         images = [site.DEMO_IMAGE_MAP[title] for title in titles]
@@ -944,6 +953,41 @@ class DailyReaderTests(unittest.TestCase):
                 quota = site.QuotaManager({})
                 status = quota.public_status(expected_date="2026-06-22")
         self.assertEqual(status["expected_toronto_date"], "2026-06-22")
+
+    def test_production_verifier_detects_stale_index(self):
+        verifier = self.load_production_verifier()
+        dates = ["2026-06-26", "2026-06-25", "2026-06-24", "2026-06-23", "2026-06-22", "2026-06-21", "2026-06-20"]
+        index = [{"date": date} for date in dates for _ in range(10)]
+        with self.assertRaisesRegex(verifier.FreshnessError, "ending 2026-06-27"):
+            verifier.validate_index_freshness(index, "2026-06-27")
+
+    def test_production_verifier_retries_until_fresh(self):
+        verifier = self.load_production_verifier()
+        verified = {"status": "verified"}
+        with patch.object(
+            verifier, "verify_once",
+            side_effect=[verifier.FreshnessError("latest date is stale"), verified],
+        ) as verify_once, patch.object(verifier.time, "sleep") as sleep:
+            result = verifier.verify("https://example.test", "2026-06-27", 9, attempts=2, retry_delay=0)
+        self.assertEqual(result["freshness_attempt"], 2)
+        self.assertEqual(verify_once.call_count, 2)
+        self.assertNotEqual(verify_once.call_args_list[0].args[3], verify_once.call_args_list[1].args[3])
+        sleep.assert_called_once_with(0.0)
+
+    def test_production_verifier_fails_if_every_retry_is_stale(self):
+        verifier = self.load_production_verifier()
+        with patch.object(
+            verifier, "verify_once", side_effect=verifier.FreshnessError("latest date is stale"),
+        ), patch.object(verifier.time, "sleep"):
+            with self.assertRaisesRegex(verifier.FreshnessError, "remained stale after 3 attempt"):
+                verifier.verify("https://example.test", "2026-06-27", 9, attempts=3, retry_delay=0)
+
+    def test_production_verifier_uses_cache_busting_and_no_cache_headers(self):
+        verifier = self.load_production_verifier()
+        session = verifier.verifier_session("commit-sha-1")
+        self.assertEqual(session.params["verify"], "commit-sha-1")
+        self.assertEqual(session.headers["Cache-Control"], "no-cache")
+        self.assertEqual(session.headers["Pragma"], "no-cache")
 
     def test_validation_rejects_incomplete_edition(self):
         with tempfile.TemporaryDirectory() as temp:

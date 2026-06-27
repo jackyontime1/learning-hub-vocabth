@@ -7,6 +7,7 @@ import argparse
 import json
 import re
 import sys
+import time
 from collections import Counter
 from pathlib import Path
 from urllib.parse import urljoin
@@ -18,6 +19,8 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from update_site import speech_text_issues, translation_quality_issues  # noqa: E402
 
 LEVELS = ("A1", "A2", "B1", "B2", "C1")
+DEFAULT_VERIFY_ATTEMPTS = 12
+DEFAULT_RETRY_DELAY = 10.0
 PLACEHOLDERS = (
     "คำแปลภาษาไทยสำหรับบทความตัวอย่าง",
     "เนื้อหาข่าวพูดถึงเหตุการณ์สำคัญ",
@@ -28,6 +31,30 @@ SECRET_PATTERN = re.compile(
     r"cfat_[A-Za-z0-9_-]{20,}|AIza[A-Za-z0-9_-]{20,}|BEGIN PRIVATE KEY|google-tts-api-key",
     re.I,
 )
+
+
+class FreshnessError(RuntimeError):
+    """The production alias is still serving an older deployment."""
+
+
+def verifier_session(cache_token: str) -> requests.Session:
+    session = requests.Session()
+    session.headers.update({
+        "User-Agent": "DailyEnglishReaderProductionVerifier/1.0",
+        "Cache-Control": "no-cache",
+        "Pragma": "no-cache",
+    })
+    session.params.update({"verify": cache_token})
+    return session
+
+
+def validate_index_freshness(index: list[dict], expected_date: str) -> list[str]:
+    if len(index) != 70:
+        raise FreshnessError(f"Expected 70 retained stories, got {len(index)}")
+    dates = sorted({row["date"] for row in index}, reverse=True)
+    if len(dates) != 7 or dates[0] != expected_date:
+        raise FreshnessError(f"Expected latest seven days ending {expected_date}, got {dates}")
+    return dates
 
 
 def fetch(session: requests.Session, url: str, *, expect_json: bool = False):
@@ -41,20 +68,15 @@ def fetch(session: requests.Session, url: str, *, expect_json: bool = False):
     return response
 
 
-def verify(base_url: str, expected_date: str, expected_schema: int) -> dict:
+def verify_once(base_url: str, expected_date: str, expected_schema: int, cache_token: str) -> dict:
     base_url = base_url.rstrip("/") + "/"
-    session = requests.Session()
-    session.headers["User-Agent"] = "DailyEnglishReaderProductionVerifier/1.0"
+    session = verifier_session(cache_token)
     homepage = fetch(session, base_url)
     index = fetch(session, urljoin(base_url, "content-index.json"), expect_json=True)
     providers = fetch(session, urljoin(base_url, "provider-status.json"), expect_json=True)
     report = fetch(session, urljoin(base_url, "build-report.json"), expect_json=True)
 
-    if len(index) != 70:
-        raise RuntimeError(f"Expected 70 retained stories, got {len(index)}")
-    dates = sorted({row["date"] for row in index}, reverse=True)
-    if len(dates) != 7 or dates[0] != expected_date:
-        raise RuntimeError(f"Expected latest seven days ending {expected_date}, got {dates}")
+    dates = validate_index_freshness(index, expected_date)
     for date in dates:
         rows = [row for row in index if row["date"] == date]
         if len(rows) != 10 or Counter(row["level"] for row in rows) != Counter({level: 2 for level in LEVELS}):
@@ -102,10 +124,14 @@ def verify(base_url: str, expected_date: str, expected_schema: int) -> dict:
             sample_by_level[row["level"]] = article_url
     if set(sample_by_level) != set(LEVELS):
         raise RuntimeError("Could not verify one current article for every level")
-    if providers.get("expected_toronto_date") != expected_date or not providers.get("demo_fallback_blocked"):
-        raise RuntimeError("Provider diagnostics do not match the production date or free-only policy")
-    if report.get("status") != "ready" or report.get("latest_date") != expected_date:
-        raise RuntimeError("Build report does not confirm a ready current build")
+    if providers.get("expected_toronto_date") != expected_date:
+        raise FreshnessError("Provider diagnostics are still from an older production deployment")
+    if not providers.get("demo_fallback_blocked"):
+        raise RuntimeError("Provider diagnostics do not confirm the free-only production policy")
+    if report.get("latest_date") != expected_date:
+        raise FreshnessError("Build report is still from an older production deployment")
+    if report.get("status") != "ready":
+        raise RuntimeError("Build report does not confirm a ready build")
     if report.get("schema_version") != expected_schema:
         raise RuntimeError("Build report schema mismatch")
     scanned_text += json.dumps([providers, report], ensure_ascii=False)
@@ -118,13 +144,39 @@ def verify(base_url: str, expected_date: str, expected_schema: int) -> dict:
     }
 
 
+def verify(
+    base_url: str, expected_date: str, expected_schema: int, *,
+    attempts: int = DEFAULT_VERIFY_ATTEMPTS, retry_delay: float = DEFAULT_RETRY_DELAY,
+) -> dict:
+    attempts = max(1, attempts)
+    for attempt in range(1, attempts + 1):
+        cache_token = f"{int(time.time() * 1000)}-{attempt}"
+        try:
+            result = verify_once(base_url, expected_date, expected_schema, cache_token)
+            result["freshness_attempt"] = attempt
+            return result
+        except FreshnessError as error:
+            print(f"Freshness attempt {attempt}/{attempts}: {error}", file=sys.stderr, flush=True)
+            if attempt == attempts:
+                raise FreshnessError(
+                    f"Production remained stale after {attempts} attempt(s): {error}"
+                ) from error
+            time.sleep(max(0.0, retry_delay))
+    raise AssertionError("unreachable")
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--base-url", required=True)
     parser.add_argument("--expected-date", required=True)
     parser.add_argument("--schema", type=int, default=9)
+    parser.add_argument("--attempts", type=int, default=DEFAULT_VERIFY_ATTEMPTS)
+    parser.add_argument("--retry-delay", type=float, default=DEFAULT_RETRY_DELAY)
     args = parser.parse_args()
-    print(json.dumps(verify(args.base_url, args.expected_date, args.schema), indent=2))
+    print(json.dumps(verify(
+        args.base_url, args.expected_date, args.schema,
+        attempts=args.attempts, retry_delay=args.retry_delay,
+    ), indent=2))
     return 0
 
 
