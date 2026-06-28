@@ -1,0 +1,422 @@
+[
+  {
+    "id": "a1-bus-card",
+    "level": "A1",
+    "title": "The Bus Card",
+    "category": "Daily Life",
+    "description": "Nok learns how to add money to her bus card before work.",
+    "text": "Nok takes the bus to work. Her bus card has no money on it. She goes to the machine at the station. She adds money to the card and catches the next bus.",
+    "thai_text": "นกนั่งรถประจำทางไปทำงาน. บัตรโดยสารของเธอไม่มีเงินเหลือ. เธอไปที่เครื่องเติมเงินในสถานี. เธอเติมเงินเข้าบัตรและขึ้นรถคันถัดไป.",
+    "useful_phrases": [
+      {"english": "takes the bus", "thai": "นั่งรถประจำทาง", "kind": "phrase", "source_sentence": "Nok takes the bus to work."},
+      {"english": "has no money", "thai": "ไม่มีเงินเหลือ", "kind": "phrase", "source_sentence": "Her bus card has no money on it."},
+      {"english": "catches the next bus", "thai": "ขึ้นรถคันถัดไป", "kind": "phrase", "source_sentence": "She adds money to the card and catches the next bus."}
+    ]
+  },
+  {
+    "id": "a1-grocery-list",
+    "level": "A1",
+    "title": "A Short Shopping List",
+    "category": "Shopping",
+    "description": "Mali uses a short list to buy food for dinner.",
+    "text": "Mali needs food for dinner. She writes rice, eggs, and tomatoes on a list. At the shop, she checks each item. She pays at the counter and goes home.",
+    "thai_text": "มะลิต้องการอาหารสำหรับมื้อเย็น. เธอเขียนข้าว ไข่ และมะเขือเทศลงในรายการ. ที่ร้านเธอตรวจดูของแต่ละอย่าง. เธอจ่ายเงินที่เคาน์เตอร์แล้วกลับบ้าน.",
+    "useful_phrases": [
+      {"english": "needs food for dinner", "thai": "ต้องการอาหารสำหรับมื้อเย็น", "kind": "phrase", "source_sentence": "Mali needs food for dinner."},
+      {"english": "writes rice, eggs, and tomatoes on a list", "thai": "เขียนข้าว ไข่ และมะเขือเทศลงในรายการ", "kind": "phrase", "source_sentence": "She writes rice, eggs, and tomatoes on a list."},
+      {"english": "pays at the counter", "thai": "จ่ายเงินที่เคาน์เตอร์", "kind": "phrase", "source_sentence": "She pays at the counter and goes home."}
+    ]
+  },
+  {
+    "id": "a1-raincoat-work",
+    "level": "A1",
+    "title": "The Raincoat at Work",
+    "category": "Work",
+    "description": "Ton remembers his raincoat before he leaves the office.",
+    "text": "Rain falls after work. Ton looks outside the office. His raincoat is in his desk drawer. He puts it on and walks to the train station. He stays dry.",
+    "thai_text": "ฝนตกหลังเลิกงาน. ต้นมองออกไปนอกสำนักงาน. เสื้อกันฝนของเขาอยู่ในลิ้นชักโต๊ะ. เขาสวมเสื้อแล้วเดินไปสถานีรถไฟ. เขาจึงไม่เปียกฝน.",
+    "useful_phrases": [
+      {"english": "after work", "thai": "หลังเลิกงาน", "kind": "phrase", "source_sentence": "Rain falls after work."},
+      {"english": "looks outside", "thai": "มองออกไปข้างนอก", "kind": "phrase", "source_sentence": "Ton looks outside the office."},
+      {"english": "puts it on", "thai": "สวมมัน", "kind": "phrase", "source_sentence": "He puts it on and walks to the train station."}
+    ]
+  },
+  {
+    "id": "a1-lunch-box",
+    "level": "A1",
+    "title": "The Lunch Box",
+    "category": "Daily Life",
+    "description": "Pim finds the lunch box that she left at home.",
+    "text": "Pim makes lunch in the morning. She puts it in a blue box. At work, she cannot find the box. It is still on the kitchen table. She buys soup for lunch today.",
+    "thai_text": "พิมทำอาหารกลางวันในตอนเช้า. เธอใส่อาหารไว้ในกล่องสีฟ้า. ที่ทำงานเธอหากล่องไม่พบ. กล่องยังอยู่บนโต๊ะในครัว. วันนี้เธอจึงซื้อซุปเป็นอาหารกลางวัน.",
+    "useful_phrases": [
+      {"english": "in the morning", "thai": "ในตอนเช้า", "kind": "phrase", "source_sentence": "Pim makes lunch in the morning."},
+      {"english": "cannot find the box", "thai": "หากล่องไม่พบ", "kind": "phrase", "source_sentence": "At work, she cannot find the box."},
+      {"english": "buys soup for lunch", "thai": "ซื้อซุปเป็นอาหารกลางวัน", "kind": "phrase", "source_sentence": "She buys soup for lunch today."}
+    ]
+  },
+  {
+    "id": "a1-phone-battery",
+    "level": "A1",
+    "title": "A Low Phone Battery",
+    "category": "Daily Life",
+    "description": "Kiet charges his phone before an important call.",
+    "text": "Kiet's phone battery is low. He needs to call his mother tonight. He finds a charger in his bag. He charges the phone during dinner. The phone is ready for the call.",
+    "thai_text": "แบตเตอรี่โทรศัพท์ของเกียรติใกล้หมด. คืนนี้เขาต้องโทรหาแม่. เขาพบที่ชาร์จในกระเป๋า. เขาชาร์จโทรศัพท์ระหว่างกินอาหารเย็น. โทรศัพท์จึงพร้อมสำหรับการโทร.",
+    "useful_phrases": [
+      {"english": "battery is low", "thai": "แบตเตอรี่ใกล้หมด", "kind": "phrase", "source_sentence": "Kiet's phone battery is low."},
+      {"english": "call his mother", "thai": "โทรหาแม่ของเขา", "kind": "phrase", "source_sentence": "He needs to call his mother tonight."},
+      {"english": "finds a charger", "thai": "พบที่ชาร์จ", "kind": "phrase", "source_sentence": "He finds a charger in his bag."}
+    ]
+  },
+  {
+    "id": "a1-library-book",
+    "level": "A1",
+    "title": "Returning a Library Book",
+    "category": "School",
+    "description": "Dao returns a library book on her way home.",
+    "text": "Dao has a library book at home. The book is due today. She puts it in her school bag. After class, she walks to the library. She returns the book on time.",
+    "thai_text": "ดาวมีหนังสือห้องสมุดอยู่ที่บ้าน. หนังสือต้องคืนวันนี้. เธอใส่มันไว้ในกระเป๋านักเรียน. หลังเลิกเรียนเธอเดินไปห้องสมุด. เธอคืนหนังสือตรงเวลา.",
+    "useful_phrases": [
+      {"english": "due today", "thai": "ครบกำหนดวันนี้", "kind": "phrase", "source_sentence": "The book is due today."},
+      {"english": "After class", "thai": "หลังเลิกเรียน", "kind": "phrase", "source_sentence": "After class, she walks to the library."},
+      {"english": "on time", "thai": "ตรงเวลา", "kind": "phrase", "source_sentence": "She returns the book on time."}
+    ]
+  },
+  {
+    "id": "a1-laundry-day",
+    "level": "A1",
+    "title": "Laundry Before the Rain",
+    "category": "Home",
+    "description": "Anan brings his clean clothes inside before rain arrives.",
+    "text": "Anan washes his clothes on Sunday. He hangs them outside in the sun. Dark clouds come in the afternoon. He brings the clothes inside before the rain. They are clean and dry.",
+    "thai_text": "อนันต์ซักเสื้อผ้าในวันอาทิตย์. เขาตากเสื้อผ้าไว้ข้างนอกกลางแดด. เมฆดำมาในช่วงบ่าย. เขานำเสื้อผ้าเข้าบ้านก่อนฝนตก. เสื้อผ้าจึงสะอาดและแห้ง.",
+    "useful_phrases": [
+      {"english": "washes his clothes", "thai": "ซักเสื้อผ้าของเขา", "kind": "phrase", "source_sentence": "Anan washes his clothes on Sunday."},
+      {"english": "in the afternoon", "thai": "ในช่วงบ่าย", "kind": "phrase", "source_sentence": "Dark clouds come in the afternoon."},
+      {"english": "before the rain", "thai": "ก่อนฝนตก", "kind": "phrase", "source_sentence": "He brings the clothes inside before the rain."}
+    ]
+  },
+  {
+    "id": "a1-new-neighbor",
+    "level": "A1",
+    "title": "Meeting a New Neighbor",
+    "category": "Community",
+    "description": "Suda welcomes the new person who moves next door.",
+    "text": "A new neighbor moves next to Suda. His name is Mark. Suda says hello and gives him some fruit. Mark thanks her and asks about the local market. They walk there together.",
+    "thai_text": "เพื่อนบ้านใหม่ย้ายมาอยู่ข้างบ้านสุดา. เขาชื่อมาร์ก. สุดากล่าวสวัสดีและให้ผลไม้แก่เขา. มาร์กขอบคุณเธอและถามเรื่องตลาดใกล้บ้าน. ทั้งสองเดินไปที่นั่นด้วยกัน.",
+    "useful_phrases": [
+      {"english": "new neighbor", "thai": "เพื่อนบ้านใหม่", "kind": "phrase", "source_sentence": "A new neighbor moves next to Suda."},
+      {"english": "says hello", "thai": "กล่าวสวัสดี", "kind": "phrase", "source_sentence": "Suda says hello and gives him some fruit."},
+      {"english": "walk there together", "thai": "เดินไปที่นั่นด้วยกัน", "kind": "phrase", "source_sentence": "They walk there together."}
+    ]
+  },
+  {
+    "id": "a1-pharmacy",
+    "level": "A1",
+    "title": "At the Pharmacy",
+    "category": "Health",
+    "description": "Ben asks the pharmacist for help with a small cut.",
+    "text": "Ben has a small cut on his hand. He goes to the pharmacy near his home. He asks for a bandage. The pharmacist shows him the right box. Ben pays and says thank you.",
+    "thai_text": "เบนมีแผลเล็กที่มือ. เขาไปที่ร้านขายยาใกล้บ้าน. เขาขอซื้อผ้าพันแผล. เภสัชกรแสดงกล่องที่เหมาะสมให้เขาดู. เบนจ่ายเงินและกล่าวขอบคุณ.",
+    "useful_phrases": [
+      {"english": "small cut", "thai": "แผลเล็ก", "kind": "phrase", "source_sentence": "Ben has a small cut on his hand."},
+      {"english": "goes to the pharmacy", "thai": "ไปที่ร้านขายยา", "kind": "phrase", "source_sentence": "He goes to the pharmacy near his home."},
+      {"english": "asks for a bandage", "thai": "ขอซื้อผ้าพันแผล", "kind": "phrase", "source_sentence": "He asks for a bandage."}
+    ]
+  },
+  {
+    "id": "a1-market-change",
+    "level": "A1",
+    "title": "Change at the Market",
+    "category": "Shopping",
+    "description": "May checks her change after buying bananas.",
+    "text": "May buys bananas at the market. She gives the seller a large note. The seller gives her some change. May counts the money before she leaves. The amount is correct.",
+    "thai_text": "เมย์ซื้อกล้วยที่ตลาด. เธอให้ธนบัตรใบใหญ่แก่คนขาย. คนขายทอนเงินให้เธอ. เมย์นับเงินก่อนออกจากร้าน. จำนวนเงินถูกต้อง.",
+    "useful_phrases": [
+      {"english": "at the market", "thai": "ที่ตลาด", "kind": "phrase", "source_sentence": "May buys bananas at the market."},
+      {"english": "gives her some change", "thai": "ทอนเงินให้เธอ", "kind": "phrase", "source_sentence": "The seller gives her some change."},
+      {"english": "counts the money", "thai": "นับเงิน", "kind": "phrase", "source_sentence": "May counts the money before she leaves."}
+    ]
+  },
+  {
+    "id": "a1-early-bus",
+    "level": "A1",
+    "title": "The Early Bus",
+    "category": "Travel",
+    "description": "Joe leaves home early and reaches work before the meeting.",
+    "text": "Joe has a meeting at work. He leaves home early. The bus arrives after a short wait. Joe finds a seat near the door. He gets to work before the meeting starts.",
+    "thai_text": "โจมีประชุมที่ทำงาน. เขาออกจากบ้านแต่เช้า. รถประจำทางมาถึงหลังจากรอไม่นาน. โจหาที่นั่งใกล้ประตู. เขาไปถึงที่ทำงานก่อนการประชุมเริ่ม.",
+    "useful_phrases": [
+      {"english": "has a meeting", "thai": "มีประชุม", "kind": "phrase", "source_sentence": "Joe has a meeting at work."},
+      {"english": "leaves home early", "thai": "ออกจากบ้านแต่เช้า", "kind": "phrase", "source_sentence": "He leaves home early."},
+      {"english": "gets to work", "thai": "ไปถึงที่ทำงาน", "kind": "phrase", "source_sentence": "He gets to work before the meeting starts."}
+    ]
+  },
+  {
+    "id": "a1-broken-cup",
+    "level": "A1",
+    "title": "A Broken Cup",
+    "category": "Home",
+    "description": "Lina cleans the kitchen safely after a cup breaks.",
+    "text": "A cup falls in Lina's kitchen. It breaks on the floor. Lina keeps the children away. She picks up the pieces with a brush. Then she cleans the floor carefully.",
+    "thai_text": "ถ้วยใบหนึ่งตกในครัวของลีนา. มันแตกบนพื้น. ลีนากันเด็กให้อยู่ห่าง. เธอใช้แปรงเก็บเศษถ้วย. จากนั้นเธอทำความสะอาดพื้นอย่างระมัดระวัง.",
+    "useful_phrases": [
+      {"english": "breaks on the floor", "thai": "แตกบนพื้น", "kind": "phrase", "source_sentence": "It breaks on the floor."},
+      {"english": "keeps the children away", "thai": "กันเด็กให้อยู่ห่าง", "kind": "phrase", "source_sentence": "Lina keeps the children away."},
+      {"english": "cleans the floor carefully", "thai": "ทำความสะอาดพื้นอย่างระมัดระวัง", "kind": "phrase", "source_sentence": "Then she cleans the floor carefully."}
+    ]
+  },
+  {
+    "id": "a1-park-walk",
+    "level": "A1",
+    "title": "A Walk in the Park",
+    "category": "Health",
+    "description": "Wit takes a short walk after dinner.",
+    "text": "Wit sits at a desk all day. After dinner, he goes to the park. He walks around the small lake. The air is cool and the path is quiet. He feels better when he gets home.",
+    "thai_text": "วิทย์นั่งทำงานที่โต๊ะทั้งวัน. หลังอาหารเย็นเขาไปสวนสาธารณะ. เขาเดินรอบทะเลสาบเล็ก. อากาศเย็นและทางเดินเงียบสงบ. เขารู้สึกดีขึ้นเมื่อกลับถึงบ้าน.",
+    "useful_phrases": [
+      {"english": "all day", "thai": "ทั้งวัน", "kind": "phrase", "source_sentence": "Wit sits at a desk all day."},
+      {"english": "goes to the park", "thai": "ไปสวนสาธารณะ", "kind": "phrase", "source_sentence": "After dinner, he goes to the park."},
+      {"english": "feels better", "thai": "รู้สึกดีขึ้น", "kind": "phrase", "source_sentence": "He feels better when he gets home."}
+    ]
+  },
+  {
+    "id": "a1-school-pickup",
+    "level": "A1",
+    "title": "Waiting at the School Gate",
+    "category": "School",
+    "description": "Nina waits in the right place to meet her son after school.",
+    "text": "Nina picks up her son after school. She waits by the front gate. Many parents are there. Her son sees her blue bag and waves. They walk home and talk about his day.",
+    "thai_text": "นีน่าไปรับลูกชายหลังเลิกเรียน. เธอรออยู่ข้างประตูหน้า. มีผู้ปกครองหลายคนอยู่ที่นั่น. ลูกชายเห็นกระเป๋าสีฟ้าของเธอและโบกมือ. ทั้งสองเดินกลับบ้านและคุยกันเรื่องวันของเขา.",
+    "useful_phrases": [
+      {"english": "picks up her son", "thai": "ไปรับลูกชาย", "kind": "phrase", "source_sentence": "Nina picks up her son after school."},
+      {"english": "waits by the front gate", "thai": "รออยู่ข้างประตูหน้า", "kind": "phrase", "source_sentence": "She waits by the front gate."},
+      {"english": "walk home", "thai": "เดินกลับบ้าน", "kind": "phrase", "source_sentence": "They walk home and talk about his day."}
+    ]
+  },
+  {
+    "id": "a2-clinic-appointment",
+    "level": "A2",
+    "title": "Making a Clinic Appointment",
+    "category": "Health",
+    "description": "Arun calls a clinic and chooses an appointment that fits his work schedule.",
+    "text": "Arun has had a cough for several days, so he calls a clinic near his office. The receptionist asks for his name and phone number. She offers an appointment in the morning, but Arun has a meeting then. They choose a time after lunch. Arun writes the time in his calendar and arrives a little early.",
+    "thai_text": "อรุณไอมาหลายวันจึงโทรไปที่คลินิกใกล้สำนักงาน. พนักงานต้อนรับถามชื่อและหมายเลขโทรศัพท์ของเขา. เธอเสนอเวลานัดช่วงเช้า แต่อรุณมีประชุมในเวลานั้น. ทั้งสองจึงเลือกเวลาหลังอาหารกลางวัน. อรุณจดเวลาลงในปฏิทินและไปถึงก่อนเวลาเล็กน้อย.",
+    "useful_phrases": [
+      {"english": "calls a clinic", "thai": "โทรไปที่คลินิก", "kind": "phrase", "source_sentence": "Arun has had a cough for several days, so he calls a clinic near his office."},
+      {"english": "offers an appointment", "thai": "เสนอเวลานัด", "kind": "phrase", "source_sentence": "She offers an appointment in the morning, but Arun has a meeting then."},
+      {"english": "arrives a little early", "thai": "ไปถึงก่อนเวลาเล็กน้อย", "kind": "phrase", "source_sentence": "Arun writes the time in his calendar and arrives a little early."}
+    ]
+  },
+  {
+    "id": "a2-work-schedule",
+    "level": "A2",
+    "title": "Changing a Work Shift",
+    "category": "Work",
+    "description": "Fah asks a coworker to exchange shifts so she can attend a family event.",
+    "text": "Fah needs Saturday afternoon off for a family event. She checks the work schedule and sees that Tom works on Sunday. Fah asks if he can exchange shifts with her. Tom agrees because he wants Saturday morning free. They tell their manager about the change, and the manager updates the schedule for both workers.",
+    "thai_text": "ฟ้าต้องการหยุดช่วงบ่ายวันเสาร์เพื่อไปงานครอบครัว. เธอตรวจตารางงานและเห็นว่าทอมทำงานวันอาทิตย์. ฟ้าถามว่าเขาสามารถแลกกะกับเธอได้ไหม. ทอมตกลงเพราะเขาต้องการว่างเช้าวันเสาร์. ทั้งสองแจ้งผู้จัดการเรื่องการเปลี่ยนแปลง และผู้จัดการแก้ไขตารางให้พนักงานทั้งคู่.",
+    "useful_phrases": [
+      {"english": "needs Saturday afternoon off", "thai": "ต้องการหยุดช่วงบ่ายวันเสาร์", "kind": "phrase", "source_sentence": "Fah needs Saturday afternoon off for a family event."},
+      {"english": "exchange shifts", "thai": "แลกกะทำงาน", "kind": "phrase", "source_sentence": "Fah asks if he can exchange shifts with her."},
+      {"english": "updates the schedule", "thai": "แก้ไขตารางงาน", "kind": "phrase", "source_sentence": "They tell their manager about the change, and the manager updates the schedule for both workers."}
+    ]
+  },
+  {
+    "id": "a2-shopping-return",
+    "level": "A2",
+    "title": "Returning the Wrong Shirt",
+    "category": "Shopping",
+    "description": "Niran returns a shirt after discovering that the size is wrong.",
+    "text": "Niran buys a shirt without trying it on. At home, he sees that it is too small. He keeps the receipt and takes the shirt back to the store the next day. The cashier checks the tag and offers another size. Niran tries on the new shirt, confirms that it fits, and exchanges it without paying more.",
+    "thai_text": "นิรันดร์ซื้อเสื้อโดยไม่ได้ลอง. ที่บ้านเขาพบว่าเสื้อเล็กเกินไป. เขาเก็บใบเสร็จและนำเสื้อกลับไปที่ร้านในวันถัดมา. พนักงานเก็บเงินตรวจป้ายและเสนอขนาดอื่น. นิรันดร์ลองเสื้อตัวใหม่ ยืนยันว่าใส่พอดี และแลกเสื้อโดยไม่ต้องจ่ายเพิ่ม.",
+    "useful_phrases": [
+      {"english": "too small", "thai": "เล็กเกินไป", "kind": "phrase", "source_sentence": "At home, he sees that it is too small."},
+      {"english": "takes the shirt back", "thai": "นำเสื้อกลับไปคืน", "kind": "phrase", "source_sentence": "He keeps the receipt and takes the shirt back to the store the next day."},
+      {"english": "tries on the new shirt", "thai": "ลองเสื้อตัวใหม่", "kind": "phrase", "source_sentence": "Niran tries on the new shirt, confirms that it fits, and exchanges it without paying more."}
+    ]
+  },
+  {
+    "id": "a2-missed-bus",
+    "level": "A2",
+    "title": "Missing the Last Bus",
+    "category": "Travel",
+    "description": "Ploy finds another safe way home after missing her bus.",
+    "text": "Ploy's class ends later than usual, and she misses the last bus home. She checks the timetable to make sure another bus is not coming. Then she calls her brother and explains where she is waiting. He cannot pick her up, but he helps her book a licensed taxi. Ploy sends him the car details before she leaves.",
+    "thai_text": "ชั้นเรียนของพลอยเลิกช้ากว่าปกติ และเธอพลาดรถประจำทางเที่ยวสุดท้ายกลับบ้าน. เธอตรวจตารางเวลาเพื่อให้แน่ใจว่าจะไม่มีรถอีกคันมา. จากนั้นเธอโทรหาพี่ชายและบอกว่ากำลังรออยู่ที่ไหน. เขาไปรับไม่ได้ แต่ช่วยเธอเรียกรถแท็กซี่ที่มีใบอนุญาต. พลอยส่งรายละเอียดรถให้เขาก่อนออกเดินทาง.",
+    "useful_phrases": [
+      {"english": "later than usual", "thai": "ช้ากว่าปกติ", "kind": "phrase", "source_sentence": "Ploy's class ends later than usual, and she misses the last bus home."},
+      {"english": "checks the timetable", "thai": "ตรวจตารางเวลา", "kind": "phrase", "source_sentence": "She checks the timetable to make sure another bus is not coming."},
+      {"english": "book a licensed taxi", "thai": "เรียกรถแท็กซี่ที่มีใบอนุญาต", "kind": "phrase", "source_sentence": "He cannot pick her up, but he helps her book a licensed taxi."}
+    ]
+  },
+  {
+    "id": "a2-bank-transfer",
+    "level": "A2",
+    "title": "Checking a Bank Transfer",
+    "category": "Money",
+    "description": "Som checks the account details before sending rent money.",
+    "text": "Som needs to transfer the monthly rent to his landlord. He opens his banking app and enters the account number from the rental agreement. Before sending the money, he checks the name and amount carefully. The details are correct, so he confirms the transfer. He saves the receipt and sends a copy to the landlord.",
+    "thai_text": "สมต้องโอนค่าเช่ารายเดือนให้เจ้าของบ้าน. เขาเปิดแอปธนาคารและกรอกหมายเลขบัญชีจากสัญญาเช่า. ก่อนส่งเงินเขาตรวจชื่อและจำนวนเงินอย่างระมัดระวัง. รายละเอียดถูกต้อง เขาจึงยืนยันการโอน. เขาบันทึกใบเสร็จและส่งสำเนาให้เจ้าของบ้าน.",
+    "useful_phrases": [
+      {"english": "transfer the monthly rent", "thai": "โอนค่าเช่ารายเดือน", "kind": "phrase", "source_sentence": "Som needs to transfer the monthly rent to his landlord."},
+      {"english": "checks the name and amount", "thai": "ตรวจชื่อและจำนวนเงิน", "kind": "phrase", "source_sentence": "Before sending the money, he checks the name and amount carefully."},
+      {"english": "confirms the transfer", "thai": "ยืนยันการโอน", "kind": "phrase", "source_sentence": "The details are correct, so he confirms the transfer."}
+    ]
+  },
+  {
+    "id": "a2-school-meeting",
+    "level": "A2",
+    "title": "A Meeting with the Teacher",
+    "category": "School",
+    "description": "Kanda prepares questions before meeting her daughter's teacher.",
+    "text": "Kanda receives a message about a meeting at her daughter's school. She writes down two questions about homework and reading practice. At the meeting, the teacher explains that her daughter understands the lessons but needs more time to read. Kanda asks for simple activities they can do at home. The teacher gives her a short reading list.",
+    "thai_text": "กานดาได้รับข้อความเรื่องการประชุมที่โรงเรียนของลูกสาว. เธอจดคำถามสองข้อเกี่ยวกับการบ้านและการฝึกอ่าน. ในการประชุม ครูอธิบายว่าลูกสาวเข้าใจบทเรียนแต่ต้องใช้เวลาอ่านมากขึ้น. กานดาขอกิจกรรมง่าย ๆ ที่ทำได้ที่บ้าน. ครูจึงมอบรายการหนังสืออ่านสั้น ๆ ให้เธอ.",
+    "useful_phrases": [
+      {"english": "writes down two questions", "thai": "จดคำถามสองข้อ", "kind": "phrase", "source_sentence": "She writes down two questions about homework and reading practice."},
+      {"english": "needs more time", "thai": "ต้องใช้เวลามากขึ้น", "kind": "phrase", "source_sentence": "At the meeting, the teacher explains that her daughter understands the lessons but needs more time to read."},
+      {"english": "activities they can do at home", "thai": "กิจกรรมที่ทำได้ที่บ้าน", "kind": "phrase", "source_sentence": "Kanda asks for simple activities they can do at home."}
+    ]
+  },
+  {
+    "id": "a2-landlord-leak",
+    "level": "A2",
+    "title": "Calling About a Water Leak",
+    "category": "Home",
+    "description": "Lek reports a leak clearly and helps the landlord arrange a repair.",
+    "text": "Lek notices water under the kitchen sink in his apartment. He turns off the small water valve and takes a photo of the leak. Then he calls his landlord and describes the problem. The landlord asks whether the floor is damaged and arranges for a plumber to visit that afternoon. Lek stays home to let the plumber inside.",
+    "thai_text": "เล็กเห็นน้ำอยู่ใต้ซิงก์ในห้องครัวของอพาร์ตเมนต์. เขาปิดวาล์วน้ำขนาดเล็กและถ่ายรูปจุดรั่ว. จากนั้นเขาโทรหาเจ้าของบ้านและอธิบายปัญหา. เจ้าของบ้านถามว่าพื้นเสียหายหรือไม่และนัดช่างประปาให้มาในช่วงบ่าย. เล็กอยู่บ้านเพื่อเปิดประตูให้ช่างเข้ามา.",
+    "useful_phrases": [
+      {"english": "notices water under the kitchen sink", "thai": "เห็นน้ำอยู่ใต้ซิงก์ในห้องครัว", "kind": "phrase", "source_sentence": "Lek notices water under the kitchen sink in his apartment."},
+      {"english": "describes the problem", "thai": "อธิบายปัญหา", "kind": "phrase", "source_sentence": "Then he calls his landlord and describes the problem."},
+      {"english": "arranges for a plumber", "thai": "นัดช่างประปา", "kind": "phrase", "source_sentence": "The landlord asks whether the floor is damaged and arranges for a plumber to visit that afternoon."}
+    ]
+  },
+  {
+    "id": "a2-restaurant-order",
+    "level": "A2",
+    "title": "Asking About a Restaurant Order",
+    "category": "Food",
+    "description": "Jane politely checks an order when one dish does not arrive.",
+    "text": "Jane and her friend order lunch at a busy restaurant. Their drinks and one meal arrive, but Jane's soup does not. She waits a few minutes and then calls the server politely. The server checks the order and finds that the soup was missed. He brings it soon afterward and removes the extra service charge from the bill.",
+    "thai_text": "เจนกับเพื่อนสั่งอาหารกลางวันที่ร้านซึ่งมีลูกค้ามาก. เครื่องดื่มและอาหารหนึ่งจานมาถึง แต่ซุปของเจนยังไม่มา. เธอรอสักครู่แล้วเรียกพนักงานอย่างสุภาพ. พนักงานตรวจรายการและพบว่าตกหล่นซุป. เขานำซุปมาให้ไม่นานหลังจากนั้นและตัดค่าบริการส่วนเกินออกจากใบเสร็จ.",
+    "useful_phrases": [
+      {"english": "order lunch", "thai": "สั่งอาหารกลางวัน", "kind": "phrase", "source_sentence": "Jane and her friend order lunch at a busy restaurant."},
+      {"english": "checks the order", "thai": "ตรวจรายการอาหาร", "kind": "phrase", "source_sentence": "The server checks the order and finds that the soup was missed."},
+      {"english": "from the bill", "thai": "ออกจากใบเสร็จ", "kind": "phrase", "source_sentence": "He brings it soon afterward and removes the extra service charge from the bill."}
+    ]
+  },
+  {
+    "id": "a2-delivery-call",
+    "level": "A2",
+    "title": "A Phone Call from the Driver",
+    "category": "Daily Life",
+    "description": "Mee gives clear directions when a delivery driver cannot find her building.",
+    "text": "Mee is waiting for a package when the delivery driver calls her. He is on the correct street but cannot see her building number. Mee explains that the entrance is beside a coffee shop and across from a small park. She goes downstairs and waits near the entrance. The driver finds her and confirms her name before giving her the package.",
+    "thai_text": "มีรอรับพัสดุอยู่ตอนที่คนขับรถส่งของโทรหา. เขาอยู่บนถนนที่ถูกต้องแต่มองไม่เห็นหมายเลขอาคาร. มีอธิบายว่าทางเข้าอยู่ข้างร้านกาแฟและตรงข้ามสวนเล็ก. เธอลงไปชั้นล่างและรอใกล้ทางเข้า. คนขับพบเธอและยืนยันชื่อก่อนมอบพัสดุให้.",
+    "useful_phrases": [
+      {"english": "waiting for a package", "thai": "รอรับพัสดุ", "kind": "phrase", "source_sentence": "Mee is waiting for a package when the delivery driver calls her."},
+      {"english": "beside a coffee shop", "thai": "ข้างร้านกาแฟ", "kind": "phrase", "source_sentence": "Mee explains that the entrance is beside a coffee shop and across from a small park."},
+      {"english": "confirms her name", "thai": "ยืนยันชื่อของเธอ", "kind": "phrase", "source_sentence": "The driver finds her and confirms her name before giving her the package."}
+    ]
+  },
+  {
+    "id": "a2-dentist-appointment",
+    "level": "A2",
+    "title": "Moving a Dentist Appointment",
+    "category": "Health",
+    "description": "Pat moves an appointment after his work schedule changes.",
+    "text": "Pat has a dentist appointment on Friday afternoon, but his manager schedules an important training session at the same time. Pat calls the dental office as soon as he sees the change. He explains the situation and asks for another day. The receptionist finds an opening on Monday morning. Pat confirms the new time and updates his phone calendar.",
+    "thai_text": "แพทมีนัดทันตแพทย์ช่วงบ่ายวันศุกร์ แต่ผู้จัดการกำหนดการอบรมสำคัญในเวลาเดียวกัน. แพทโทรไปที่คลินิกทันทีที่เห็นการเปลี่ยนแปลง. เขาอธิบายสถานการณ์และขอนัดวันอื่น. พนักงานต้อนรับพบเวลาว่างในเช้าวันจันทร์. แพทยืนยันเวลาใหม่และแก้ไขปฏิทินในโทรศัพท์.",
+    "useful_phrases": [
+      {"english": "at the same time", "thai": "ในเวลาเดียวกัน", "kind": "phrase", "source_sentence": "Pat has a dentist appointment on Friday afternoon, but his manager schedules an important training session at the same time."},
+      {"english": "asks for another day", "thai": "ขอนัดวันอื่น", "kind": "phrase", "source_sentence": "He explains the situation and asks for another day."},
+      {"english": "confirms the new time", "thai": "ยืนยันเวลาใหม่", "kind": "phrase", "source_sentence": "Pat confirms the new time and updates his phone calendar."}
+    ]
+  },
+  {
+    "id": "a2-post-office",
+    "level": "A2",
+    "title": "Sending a Parcel",
+    "category": "Daily Life",
+    "description": "Yui prepares a parcel and chooses a delivery option at the post office.",
+    "text": "Yui wants to send a birthday gift to her cousin in another city. She puts the gift in a strong box and writes the address clearly. At the post office, the clerk weighs the parcel and explains two delivery options. Yui chooses the slower service because it costs less. She keeps the tracking number so she can check the delivery later.",
+    "thai_text": "ยุ้ยต้องการส่งของขวัญวันเกิดให้ลูกพี่ลูกน้องในอีกเมืองหนึ่ง. เธอใส่ของขวัญในกล่องแข็งแรงและเขียนที่อยู่ให้ชัดเจน. ที่ไปรษณีย์ เจ้าหน้าที่ชั่งพัสดุและอธิบายทางเลือกการส่งสองแบบ. ยุ้ยเลือกบริการที่ช้ากว่าเพราะราคาถูกกว่า. เธอเก็บหมายเลขติดตามไว้เพื่อตรวจสอบการจัดส่งภายหลัง.",
+    "useful_phrases": [
+      {"english": "writes the address clearly", "thai": "เขียนที่อยู่ให้ชัดเจน", "kind": "phrase", "source_sentence": "She puts the gift in a strong box and writes the address clearly."},
+      {"english": "weighs the parcel", "thai": "ชั่งพัสดุ", "kind": "phrase", "source_sentence": "At the post office, the clerk weighs the parcel and explains two delivery options."},
+      {"english": "keeps the tracking number", "thai": "เก็บหมายเลขติดตามไว้", "kind": "phrase", "source_sentence": "She keeps the tracking number so she can check the delivery later."}
+    ]
+  },
+  {
+    "id": "a2-train-ticket",
+    "level": "A2",
+    "title": "Changing a Train Ticket",
+    "category": "Travel",
+    "description": "Dan changes his train after learning that his meeting will end late.",
+    "text": "Dan buys an evening train ticket before his business meeting. During the meeting, he learns that the discussion will finish later than planned. He opens the train app and checks the change rules. There is another train one hour later with available seats. Dan pays a small difference, receives a new ticket, and cancels the old reservation.",
+    "thai_text": "แดนซื้อตั๋วรถไฟช่วงเย็นก่อนเข้าประชุมธุรกิจ. ระหว่างประชุมเขารู้ว่าการพูดคุยจะจบช้ากว่าแผน. เขาเปิดแอปรถไฟและตรวจเงื่อนไขการเปลี่ยนตั๋ว. มีรถไฟอีกขบวนหนึ่งในชั่วโมงถัดไปและยังมีที่นั่ง. แดนจ่ายส่วนต่างเล็กน้อย รับตั๋วใหม่ และยกเลิกการจองเดิม.",
+    "useful_phrases": [
+      {"english": "later than planned", "thai": "ช้ากว่าแผน", "kind": "phrase", "source_sentence": "During the meeting, he learns that the discussion will finish later than planned."},
+      {"english": "checks the change rules", "thai": "ตรวจเงื่อนไขการเปลี่ยนตั๋ว", "kind": "phrase", "source_sentence": "He opens the train app and checks the change rules."},
+      {"english": "cancels the old reservation", "thai": "ยกเลิกการจองเดิม", "kind": "phrase", "source_sentence": "Dan pays a small difference, receives a new ticket, and cancels the old reservation."}
+    ]
+  },
+  {
+    "id": "a2-hotel-checkin",
+    "level": "A2",
+    "title": "Checking In at a Hotel",
+    "category": "Travel",
+    "description": "Fern checks her booking details and asks about breakfast at a hotel.",
+    "text": "Fern arrives at a hotel after a long bus journey. She gives the receptionist her name and shows her booking message. The receptionist confirms that the room is ready and asks for identification. Fern signs the form and receives a key card. Before going upstairs, she asks what time breakfast starts and where it is served.",
+    "thai_text": "เฟิร์นมาถึงโรงแรมหลังจากเดินทางด้วยรถประจำทางเป็นเวลานาน. เธอบอกชื่อแก่พนักงานต้อนรับและแสดงข้อความยืนยันการจอง. พนักงานยืนยันว่าห้องพร้อมแล้วและขอเอกสารประจำตัว. เฟิร์นลงชื่อในแบบฟอร์มและรับคีย์การ์ด. ก่อนขึ้นชั้นบนเธอถามว่าอาหารเช้าเริ่มกี่โมงและเสิร์ฟที่ไหน.",
+    "useful_phrases": [
+      {"english": "shows her booking message", "thai": "แสดงข้อความยืนยันการจอง", "kind": "phrase", "source_sentence": "She gives the receptionist her name and shows her booking message."},
+      {"english": "asks for identification", "thai": "ขอเอกสารประจำตัว", "kind": "phrase", "source_sentence": "The receptionist confirms that the room is ready and asks for identification."},
+      {"english": "what time breakfast starts", "thai": "อาหารเช้าเริ่มกี่โมง", "kind": "phrase", "source_sentence": "Before going upstairs, she asks what time breakfast starts and where it is served."}
+    ]
+  },
+  {
+    "id": "a2-repair-shop",
+    "level": "A2",
+    "title": "Leaving a Phone for Repair",
+    "category": "Technology",
+    "description": "Golf explains a phone problem and asks about the repair cost.",
+    "text": "Golf's phone screen turns black even though the battery is full. He takes the phone to a repair shop and explains when the problem started. The technician checks the phone and says a cable inside may be loose. Golf asks how much the repair might cost and when the phone will be ready. He receives a written estimate before leaving it at the shop.",
+    "thai_text": "หน้าจอโทรศัพท์ของกอล์ฟดับแม้ว่าแบตเตอรี่จะเต็ม. เขานำโทรศัพท์ไปที่ร้านซ่อมและอธิบายว่าปัญหาเริ่มเมื่อใด. ช่างตรวจโทรศัพท์และบอกว่าสายด้านในอาจหลวม. กอล์ฟถามว่าค่าซ่อมอาจเท่าไรและโทรศัพท์จะพร้อมเมื่อใด. เขาได้รับใบประเมินราคาเป็นลายลักษณ์อักษรก่อนฝากโทรศัพท์ไว้ที่ร้าน.",
+    "useful_phrases": [
+      {"english": "takes the phone to a repair shop", "thai": "นำโทรศัพท์ไปที่ร้านซ่อม", "kind": "phrase", "source_sentence": "He takes the phone to a repair shop and explains when the problem started."},
+      {"english": "how much the repair might cost", "thai": "ค่าซ่อมอาจเท่าไร", "kind": "phrase", "source_sentence": "Golf asks how much the repair might cost and when the phone will be ready."},
+      {"english": "receives a written estimate", "thai": "ได้รับใบประเมินราคาเป็นลายลักษณ์อักษร", "kind": "phrase", "source_sentence": "He receives a written estimate before leaving it at the shop."}
+    ]
+  },
+  {
+    "id": "a2-bank-card",
+    "level": "A2",
+    "title": "A Card Left in the Machine",
+    "category": "Money",
+    "description": "Noi contacts the bank quickly after an ATM keeps her card.",
+    "text": "Noi uses an ATM outside her bank, but the machine does not return her card. She does not enter her number again. Instead, she notes the machine location and calls the bank using the number on its official website. The employee blocks the card and checks her recent transactions. Noi visits the branch the next morning to request a replacement.",
+    "thai_text": "น้อยใช้ตู้เอทีเอ็มหน้าธนาคาร แต่เครื่องไม่คืนบัตรของเธอ. เธอไม่กรอกรหัสอีกครั้ง. แต่จดตำแหน่งของเครื่องและโทรหาธนาคารด้วยหมายเลขจากเว็บไซต์ทางการ. พนักงานระงับบัตรและตรวจรายการล่าสุดของเธอ. น้อยไปที่สาขาในเช้าวันถัดมาเพื่อขอบัตรทดแทน.",
+    "useful_phrases": [
+      {"english": "does not return her card", "thai": "ไม่คืนบัตรของเธอ", "kind": "phrase", "source_sentence": "Noi uses an ATM outside her bank, but the machine does not return her card."},
+      {"english": "calls the bank", "thai": "โทรหาธนาคาร", "kind": "phrase", "source_sentence": "Instead, she notes the machine location and calls the bank using the number on its official website."},
+      {"english": "request a replacement", "thai": "ขอบัตรทดแทน", "kind": "phrase", "source_sentence": "Noi visits the branch the next morning to request a replacement."}
+    ]
+  },
+  {
+    "id": "a2-school-form",
+    "level": "A2",
+    "title": "Completing a School Form",
+    "category": "School",
+    "description": "Beam asks the school office about a section of a form she does not understand.",
+    "text": "Beam receives a form for her son's school trip. Most questions are clear, but she is unsure about the emergency contact section. She calls the school office and asks who should be listed there. The staff member explains that it should be another adult the school can call. Beam adds her sister's details, signs the form, and returns it before the deadline.",
+    "thai_text": "บีมได้รับแบบฟอร์มสำหรับทัศนศึกษาของลูกชาย. คำถามส่วนใหญ่ชัดเจน แต่เธอไม่แน่ใจเกี่ยวกับส่วนผู้ติดต่อฉุกเฉิน. เธอโทรไปที่สำนักงานโรงเรียนและถามว่าควรใส่ชื่อใคร. พนักงานอธิบายว่าควรเป็นผู้ใหญ่อีกคนที่โรงเรียนสามารถโทรหาได้. บีมเพิ่มข้อมูลของน้องสาว ลงชื่อ และส่งแบบฟอร์มก่อนกำหนด.",
+    "useful_phrases": [
+      {"english": "is unsure about", "thai": "ไม่แน่ใจเกี่ยวกับ", "kind": "phrase", "source_sentence": "Most questions are clear, but she is unsure about the emergency contact section."},
+      {"english": "who should be listed", "thai": "ควรใส่ชื่อใคร", "kind": "phrase", "source_sentence": "She calls the school office and asks who should be listed there."},
+      {"english": "before the deadline", "thai": "ก่อนกำหนด", "kind": "phrase", "source_sentence": "Beam adds her sister's details, signs the form, and returns it before the deadline."}
+    ]
+  }
+]

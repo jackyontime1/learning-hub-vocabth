@@ -19,7 +19,7 @@
                 <div class="story-content">
                   <div class="story-meta"><span>{{ article.category }}</span><b class="level-chip {{ article.level | lower }}">{{ article.level }}</b></div>
                   <h3><a href="{{ article.page_url }}">{{ article.title }}</a></h3>
-                  {% if article.isFallback %}<p><strong>Fictional learning story - not real news</strong><br>{{ article.disclaimerTh }}</p>{% endif %}
+                  {% if article.contentType == "fictional_practice_story" %}<p><strong>Fictional learning story - not real news</strong><br>{{ article.disclaimerTh }}</p>{% endif %}
                   <p>{{ article.text[:160] }}...</p>
                   <div class="card-actions">
                     <button class="star-button" data-save-article data-id="{{ article.id }}" data-title="{{ article.title }}" data-url="{{ article.page_url }}" data-level="{{ article.level }}" data-category="{{ article.category }}" data-date="{{ article.published_date }}" data-image="{{ article.image_url }}" type="button"><i class="fa-regular fa-bookmark"></i> <span>Save</span></button>

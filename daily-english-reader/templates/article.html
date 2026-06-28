@@ -10,7 +10,7 @@
       <section class="side-panel status-panel">
         <h2>{{ article.content_type | title }}</h2>
         <p>Source: {{ article.sourceName or article.provider }}</p>
-        {% if article.isFallback %}<p><strong>Fictional learning story - not real news</strong></p><p>{{ article.disclaimerTh }}</p>{% elif article.source_url %}<a href="{{ article.source_url }}" rel="noopener">Open source</a>{% endif %}
+        {% if article.contentType == "fictional_practice_story" %}<p><strong>Fictional learning story - not real news</strong></p><p>{{ article.disclaimerTh }}</p>{% elif article.source_url %}<a href="{{ article.source_url }}" rel="noopener">Open source</a>{% endif %}
       </section>
     </aside>
 
@@ -18,14 +18,14 @@
       <section class="article-hero">
         <img src="{{ article.image_url }}" alt="{{ article.image_alt }}" fetchpriority="high">
         <div class="hero-shade"></div>
-        <div class="featured-label">{{ article.level }} {% if article.isFallback %}PRACTICE STORY{% else %}DAILY STORY{% endif %}</div>
+        <div class="featured-label">{{ article.level }} {% if article.contentType == "fictional_practice_story" %}DAILY LIFE PRACTICE STORY{% elif article.readingType == "easy_news" %}EASY NEWS{% elif article.readingType == "advanced_real_news" %}ADVANCED REAL NEWS{% else %}REAL NEWS{% endif %}</div>
         <div class="article-hero-copy">
           <div class="story-kicker"><span>{{ article.category }}</span> {{ article.published_display }}</div>
           <h1>{{ article.title }}</h1>
           <p>{{ article.description }}</p>
         </div>
       </section>
-      {% if article.isFallback %}<section class="side-panel status-panel"><h2>Fictional learning story - not real news</h2><p>{{ article.disclaimerEn }}</p><p>{{ article.disclaimerTh }}</p></section>{% endif %}
+      {% if article.contentType == "fictional_practice_story" %}<section class="side-panel status-panel"><h2>Fictional learning story - not real news</h2><p>{{ article.disclaimerEn }}</p><p>{{ article.disclaimerTh }}</p></section>{% endif %}
       <p class="image-attribution">
         Image: {{ article.image.image_author }} / {{ article.image.image_source }}
         {% if article.image.image_license %}({{ article.image.image_license }}){% endif %}
@@ -57,8 +57,18 @@
         </div>
         <div class="reading-text">{{ article.word_html }}</div>
         <section class="full-translation" id="fullTranslation" hidden>
-          <h3>สรุป/คำแปลไทย</h3>
+          <h3>แปลไทยทั้งบท</h3>
           {% for paragraph in article.thai_paragraphs %}<p>{{ paragraph }}</p>{% endfor %}
+        </section>
+        <section class="full-translation useful-phrases">
+          <h3>ประโยคและวลีที่ใช้ได้จริงจากเรื่องนี้</h3>
+          {% for phrase in article.useful_phrases %}
+            <article>
+              <strong>{{ phrase.english }}</strong>
+              <p>{{ phrase.thai }}</p>
+              <small>{{ phrase.kind | replace("_", " ") | title }} · {{ phrase.source_sentence }}</small>
+            </article>
+          {% endfor %}
         </section>
       </section>
 

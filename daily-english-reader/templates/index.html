@@ -59,12 +59,12 @@
             <section class="featured-story" data-article-id="{{ featured.id }}" data-category="{{ featured.category | lower }}" data-level="{{ featured.level }}">
               {% if featured.image_url %}<img src="{{ featured.image_url }}" alt="{{ featured.image_alt }}" fetchpriority="high">{% endif %}
               <div class="hero-shade"></div>
-              <div class="featured-label">{% if featured.isFallback %}PRACTICE STORY - NOT REAL NEWS{% else %}TOP STORY{% endif %} · {{ featured.level }}</div>
+              <div class="featured-label">{% if featured.contentType == "fictional_practice_story" %}PRACTICE STORY - NOT REAL NEWS{% else %}TOP STORY{% endif %} · {{ featured.level }}</div>
               <div class="featured-copy">
                 <div class="story-kicker"><span>{{ featured.category }}</span> {{ featured.published_display }}</div>
                 <h1>{{ featured.title }}</h1>
                 <p>{{ featured.description }}</p>
-                {% if featured.isFallback %}<p><strong>Fictional learning story - not real news</strong><br>{{ featured.disclaimerTh }}</p>{% endif %}
+                {% if featured.contentType == "fictional_practice_story" %}<p><strong>Fictional learning story - not real news</strong><br>{{ featured.disclaimerTh }}</p>{% endif %}
               </div>
               <div class="featured-actions">
                 <div class="story-stats">
@@ -81,7 +81,7 @@
 
           {% for level in available_levels %}
             <section class="level-section home-level-section" data-section-level="{{ level }}">
-              <header><h2>{{ level }} Daily Stories</h2><p>{% if level == "A1" %}Very simple sentences for first-step reading.{% elif level == "A2" %}Short sentences and common words.{% elif level == "B1" %}Everyday news English with more detail.{% elif level == "B2" %}Closer to standard news style.{% else %}Advanced wording with fuller context.{% endif %}</p></header>
+              <header><h2>{{ level }} Daily Stories</h2><p>{% if level == "A1" %}Simple daily-life practice stories for first-step reading.{% elif level == "A2" %}Longer daily-life practice for common situations.{% elif level == "B1" %}Real news rewritten as easy news.{% elif level == "B2" %}Real news close to standard article style.{% else %}Advanced real news with fuller context.{% endif %}</p></header>
               <div class="story-grid level-story-grid">
                 {% for article in day.level_groups[level] %}
                   <article class="story-card" data-article-id="{{ article.id }}" data-category="{{ article.category | lower }}" data-level="{{ article.level }}">
@@ -89,7 +89,7 @@
                     <div class="story-content">
                       <div class="story-meta"><span>{{ article.category }}</span><b class="level-chip {{ level | lower }}">{{ level }}</b></div>
                       <h3><a href="{{ article.page_url }}">{{ article.title }}</a></h3>
-                      {% if article.isFallback %}<p><strong>Fictional learning story - not real news</strong><br>{{ article.disclaimerTh }}</p>{% endif %}
+                      {% if article.contentType == "fictional_practice_story" %}<p><strong>Fictional learning story - not real news</strong><br>{{ article.disclaimerTh }}</p>{% endif %}
                       <p>{{ article.text[:180] }}{% if article.text|length > 180 %}...{% endif %}</p>
                       <div class="card-actions">
                         <button class="star-button" data-save-article data-id="{{ article.id }}" data-title="{{ article.title }}" data-url="{{ article.page_url }}" data-level="{{ article.level }}" data-category="{{ article.category }}" data-date="{{ article.published_date }}" data-image="{{ article.image_url }}" type="button"><i class="fa-regular fa-bookmark"></i> <span>Save</span></button>

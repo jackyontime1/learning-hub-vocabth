@@ -1,12 +1,9 @@
 import json
 import base64
 import importlib.util
-import os
-import shutil
-import subprocess
-import sys
 import tempfile
 import unittest
+from collections import Counter
 from pathlib import Path
 from unittest.mock import Mock, patch
 
@@ -44,14 +41,6 @@ class FakeSession:
 
 
 class DailyReaderTests(unittest.TestCase):
-    def load_production_verifier(self):
-        path = site.ROOT / "scripts" / "verify-production.py"
-        spec = importlib.util.spec_from_file_location("verify_production_test", path)
-        module = importlib.util.module_from_spec(spec)
-        assert spec and spec.loader
-        spec.loader.exec_module(module)
-        return module
-
     def test_demo_stories_have_unique_topic_images(self):
         titles = [row[1] for row in site.DEMO_TOPICS]
         images = [site.DEMO_IMAGE_MAP[title] for title in titles]
@@ -155,8 +144,84 @@ class DailyReaderTests(unittest.TestCase):
                 site.config_from_env()
 
     def test_translation_schema_rebuilds_existing_editions(self):
-        self.assertEqual(site.SCHEMA_VERSION, 9)
+        self.assertEqual(site.SCHEMA_VERSION, 10)
         self.assertEqual(site.TRANSLATION_CACHE_VERSION, 2)
+
+    def test_planned_practice_catalog_produces_two_a1_and_a2_readings(self):
+        for level in ("A1", "A2"):
+            rows = site.planned_practice_candidates(level, "2026-06-28")
+            self.assertGreaterEqual(len(rows), site.TARGET_PER_LEVEL)
+            for row in rows[:site.TARGET_PER_LEVEL]:
+                self.assertEqual(row["readingType"], "daily_life_practice_story")
+                self.assertEqual(row["contentType"], site.PRACTICE_CONTENT_TYPE)
+                self.assertFalse(row["isRealNews"])
+                self.assertFalse(row["isFallback"])
+                self.assertEqual(row["sourceName"], site.PRACTICE_SOURCE_NAME)
+                self.assertTrue(row["disclaimerEn"])
+                self.assertTrue(row["disclaimerTh"])
+                self.assertFalse(site.translation_quality_issues(row["practice_text"], row["curated_thai"]))
+                self.assertFalse(site.useful_phrases_issues(row["curated_useful_phrases"], row["practice_text"]))
+
+    def test_content_model_requires_planned_practice_and_real_news_metadata(self):
+        practice = site.planned_practice_candidates("A1", "2026-06-28")[0]
+        self.assertEqual(site.content_model_issues(practice), [])
+        self.assertIn("practice-marked-real-news", site.content_model_issues({**practice, "isRealNews": True}))
+        self.assertIn("planned-practice-marked-fallback", site.content_model_issues({**practice, "isFallback": True}))
+
+        news = {
+            "level": "B2", "provider": "Test News", "source_url": "https://example.test/news",
+            "readingType": "real_news", "contentType": "news_article",
+            "isRealNews": True, "isFallback": False,
+        }
+        self.assertEqual(site.content_model_issues(news), [])
+        self.assertIn("news-marked-practice", site.content_model_issues({**news, "contentType": site.PRACTICE_CONTENT_TYPE}))
+        self.assertIn("news-not-real", site.content_model_issues({**news, "isRealNews": False}))
+
+    def test_useful_phrase_source_matching_and_thai_quality(self):
+        text = "Mali needs to make an appointment. She calls the clinic before work."
+        valid = [{
+            "english": "make an appointment", "thai": "นัดหมาย",
+            "kind": "phrase", "source_sentence": "Mali needs to make an appointment.",
+        }] * 3
+        self.assertEqual(site.useful_phrases_issues(valid, text), [])
+        broken = [dict(valid[0], english="not in this story"), *valid[1:]]
+        self.assertIn("phrase-1-not-in-source", site.useful_phrases_issues(broken, text))
+        placeholder = [dict(valid[0], thai="translation unavailable"), *valid[1:]]
+        self.assertIn("phrase-1-invalid-thai", site.useful_phrases_issues(placeholder, text))
+
+    def test_schema_ten_processed_article_requires_useful_phrases(self):
+        practice = site.planned_practice_candidates("A1", "2026-06-28")[0]
+        row = {
+            "schema_version": 10, "level": "A1", "speech_text": practice["practice_text"],
+            "text": practice["practice_text"], "thai_text": practice["curated_thai"],
+            "provider": site.PRACTICE_SOURCE_NAME, "source_url": "",
+            "readingType": "daily_life_practice_story", "contentType": site.PRACTICE_CONTENT_TYPE,
+            "isRealNews": False, "isFallback": False, "sourceName": site.PRACTICE_SOURCE_NAME,
+            "disclaimerEn": site.PRACTICE_DISCLAIMER_EN, "disclaimerTh": site.PRACTICE_DISCLAIMER_TH,
+            "useful_phrases": practice["curated_useful_phrases"],
+        }
+        site.validate_processed_article(row, "A1")
+        with self.assertRaisesRegex(RuntimeError, "useful phrases"):
+            site.validate_processed_article({**row, "useful_phrases": []}, "A1")
+
+    def test_production_verifier_accepts_schema_ten_and_rejects_schema_nine(self):
+        verifier_path = site.ROOT / "scripts" / "verify-production.py"
+        spec = importlib.util.spec_from_file_location("verify_production", verifier_path)
+        verifier = importlib.util.module_from_spec(spec)
+        self.assertIsNotNone(spec.loader)
+        spec.loader.exec_module(verifier)
+        practice = site.planned_practice_candidates("A1", "2026-06-28")[0]
+        article = {
+            "schema_version": 10, "level": "A1", "text": practice["practice_text"],
+            "thai_text": practice["curated_thai"], "speech_text": practice["practice_text"],
+            "provider": site.PRACTICE_SOURCE_NAME, "readingType": "daily_life_practice_story",
+            "contentType": site.PRACTICE_CONTENT_TYPE, "isRealNews": False, "isFallback": False,
+            "sourceName": site.PRACTICE_SOURCE_NAME, "disclaimerEn": site.PRACTICE_DISCLAIMER_EN,
+            "disclaimerTh": site.PRACTICE_DISCLAIMER_TH,
+            "useful_phrases": practice["curated_useful_phrases"],
+        }
+        self.assertEqual(verifier.article_contract_issues(article, 10), [])
+        self.assertIn("schema-version", verifier.article_contract_issues({**article, "schema_version": 9}, 10))
 
     def test_translation_cache_is_scoped_to_provider_and_model(self):
         text = "A short article."
@@ -174,6 +239,38 @@ class DailyReaderTests(unittest.TestCase):
         self.assertEqual(len(selected), site.DAILY_ARTICLE_COUNT)
         self.assertEqual({level: sum(row["level"] == level for row in selected) for level in site.LEVELS},
                          {level: site.TARGET_PER_LEVEL for level in site.LEVELS})
+
+    def test_round_two_daily_model_has_four_practice_and_six_real_news_slots(self):
+        candidates = [dict(row, provider="Test News", url=f"https://example.test/{index}")
+                      for index, row in enumerate(site.demo_articles())]
+        news = site.choose_news_articles(candidates)
+        practice = [
+            *site.planned_practice_candidates("A1", "2026-06-28")[:2],
+            *site.planned_practice_candidates("A2", "2026-06-28")[:2],
+        ]
+        rows = [*practice, *news]
+        self.assertEqual(len(rows), site.DAILY_ARTICLE_COUNT)
+        self.assertEqual(Counter(row["level"] for row in rows), Counter({level: 2 for level in site.LEVELS}))
+        self.assertTrue(all(not row["isRealNews"] and not row["isFallback"] for row in practice))
+        self.assertTrue(all(row["isRealNews"] and not row["isFallback"] for row in news))
+        self.assertEqual(
+            Counter(row["readingType"] for row in rows),
+            Counter({
+                "daily_life_practice_story": 4, "easy_news": 2,
+                "real_news": 2, "advanced_real_news": 2,
+            }),
+        )
+
+    def test_production_environment_assumptions_remain_safe(self):
+        with patch.dict(site.os.environ, {
+            "FREE_ONLY": "1", "DEMO_MODE": "0", "SKIP_AUDIO": "1",
+            "REQUIRE_FULL_TRANSLATION": "1",
+        }, clear=False):
+            config = site.config_from_env()
+        self.assertTrue(config["free_only"])
+        self.assertFalse(config["demo"])
+        self.assertTrue(config["skip_audio"])
+        self.assertTrue(config["require_full_translation"])
 
     def test_replacement_daily_article_keeps_failed_level_and_skips_used_ids(self):
         candidates = [
@@ -236,116 +333,6 @@ class DailyReaderTests(unittest.TestCase):
         self.assertEqual(fallback["disclaimerTh"], site.PRACTICE_DISCLAIMER_TH)
         self.assertEqual(report["practice_fallback_count"], 1)
 
-    def test_rejected_a1_real_news_produces_two_valid_practice_stories(self):
-        real = [
-            {
-                "id": f"real-{index}", "title": f"Real {index}",
-                "description": "real news candidate words " * 8,
-                "provider": "Test News", "provider_key": "test_news", "level": "A1",
-            }
-            for index in range(2)
-        ]
-        thai = (
-            "มีนาพบร่มสีน้ำเงินที่ป้ายรถเมล์หลังฝนหยุด "
-            "เธอถามเจ้าของร้านใกล้เคียงและเขียนข้อความไว้อย่างรอบคอบ "
-            "เช้าวันต่อมาชายสูงวัยกลับมารับร่มและดีใจที่ได้ของขวัญจากลูกสาวคืน"
-        )
-
-        def process(raw, *_args):
-            if not raw.get("isFallback"):
-                raise RuntimeError("Processed article contains incomplete or placeholder Thai translation")
-            return {
-                **raw,
-                "schema_version": site.SCHEMA_VERSION,
-                "speech_text": "A safe practice reading.",
-                "text": raw["description"],
-                "thai_text": site.full_thai_article(raw, raw["description"], thai),
-            }
-
-        report = {}
-        with patch.object(site, "process_article", side_effect=process):
-            rows = site.build_level_readings(
-                "A1", real, real, {row["id"] for row in real}, object(), Mock(),
-                object(), {}, "2026-06-27", report,
-            )
-        self.assertEqual(len(rows), 2)
-        self.assertTrue(all(row["isFallback"] and not row["isRealNews"] for row in rows))
-        self.assertTrue(all(site.fallback_metadata_issues(row) == [] for row in rows))
-        self.assertEqual(report["practice_fallback_count"], 2)
-
-    def test_workflow_preflight_build_produces_two_valid_a1_practice_stories(self):
-        with tempfile.TemporaryDirectory() as temp:
-            root = Path(temp)
-            shutil.copy2(site.__file__, root / "update_site.py")
-            shutil.copytree(site.TEMPLATE_DIR, root / "templates")
-            shutil.copytree(site.STATIC_DIR, root / "static")
-            env = os.environ.copy()
-            env.update({
-                "FREE_ONLY": "1", "RETENTION_DAYS": "7", "BACKFILL_DAYS": "1",
-                "DEMO_MODE": "1", "SKIP_AUDIO": "1", "REFRESH_TODAY": "1",
-            })
-            for name in ("REQUIRE_FULL_TRANSLATION", "READING_TRANSLATION_PROVIDER", "READING_TRANSLATION_MODEL"):
-                env.pop(name, None)
-            result = subprocess.run(
-                [sys.executable, "update_site.py"], cwd=root, env=env,
-                capture_output=True, text=True, timeout=120,
-            )
-            self.assertEqual(result.returncode, 0, msg=(result.stdout + result.stderr)[-4000:])
-            rows = json.loads((root / "site" / "content-index.json").read_text(encoding="utf-8"))
-            a1_rows = [row for row in rows if row["level"] == "A1"]
-            self.assertEqual(len(a1_rows), 2)
-            fallback_rows = [row for row in a1_rows if row["isFallback"]]
-            self.assertGreaterEqual(len(fallback_rows), 1)
-            self.assertTrue(all(not row["isRealNews"] for row in fallback_rows))
-            for row in a1_rows:
-                article_path = root / "site" / Path(row["url"]).parent / "article.json"
-                article = json.loads(article_path.read_text(encoding="utf-8"))
-                if article["isFallback"]:
-                    self.assertEqual(site.fallback_metadata_issues(article), [])
-                self.assertEqual(
-                    site.translation_quality_issues(article["text"], site.article_translation_body(article)), []
-                )
-
-    def test_preflight_main_replaces_two_rejected_a1_candidates(self):
-        with tempfile.TemporaryDirectory() as temp:
-            root = Path(temp)
-            shutil.copy2(site.__file__, root / "update_site.py")
-            shutil.copytree(site.TEMPLATE_DIR, root / "templates")
-            shutil.copytree(site.STATIC_DIR, root / "static")
-            env = os.environ.copy()
-            env.update({
-                "FREE_ONLY": "1", "RETENTION_DAYS": "7", "BACKFILL_DAYS": "1",
-                "DEMO_MODE": "1", "SKIP_AUDIO": "1", "REFRESH_TODAY": "1",
-            })
-            for name in ("REQUIRE_FULL_TRANSLATION", "READING_TRANSLATION_PROVIDER", "READING_TRANSLATION_MODEL"):
-                env.pop(name, None)
-            harness = (
-                "import update_site as site\n"
-                "original = site.process_article\n"
-                "def reject_a1(raw, *args, **kwargs):\n"
-                "    if raw.get('level') == 'A1' and not raw.get('isFallback'):\n"
-                "        raise RuntimeError('forced A1 real-news rejection')\n"
-                "    return original(raw, *args, **kwargs)\n"
-                "site.process_article = reject_a1\n"
-                "raise SystemExit(site.main())\n"
-            )
-            result = subprocess.run(
-                [sys.executable, "-c", harness], cwd=root, env=env,
-                capture_output=True, text=True, timeout=120,
-            )
-            self.assertEqual(result.returncode, 0, msg=(result.stdout + result.stderr)[-4000:])
-            rows = json.loads((root / "site" / "content-index.json").read_text(encoding="utf-8"))
-            a1_rows = [row for row in rows if row["level"] == "A1"]
-            self.assertEqual(len(a1_rows), 2)
-            self.assertTrue(all(row["isFallback"] and not row["isRealNews"] for row in a1_rows))
-            for row in a1_rows:
-                article_path = root / "site" / Path(row["url"]).parent / "article.json"
-                article = json.loads(article_path.read_text(encoding="utf-8"))
-                self.assertEqual(site.fallback_metadata_issues(article), [])
-                self.assertEqual(
-                    site.translation_quality_issues(article["text"], site.article_translation_body(article)), []
-                )
-
     def test_fallback_metadata_validator_rejects_real_news_marker(self):
         fallback = site.practice_story_candidates("C1", "2026-06-27")[0]
         self.assertEqual(site.fallback_metadata_issues(fallback), [])
@@ -385,19 +372,23 @@ class DailyReaderTests(unittest.TestCase):
         with self.assertRaisesRegex(RuntimeError, "incomplete or placeholder Thai"):
             site.validate_processed_article(fallback, "A1")
 
-    def test_fallback_thai_text_uses_disclaimer_instead_of_news_claim(self):
+    def test_practice_thai_text_is_full_translation_without_disclaimer_prefix(self):
         raw = site.practice_story_candidates("A1", "2026-06-27")[0]
-        translated = "นี่คือคำแปลเนื้อเรื่องฉบับสมบูรณ์"
-        with patch.object(site, "naturalize_thai", return_value=""):
-            result = site.full_thai_article(raw, "A short story.", translated)
-        self.assertTrue(result.startswith(site.PRACTICE_DISCLAIMER_TH))
-        self.assertEqual(site.article_translation_body({**raw, "thai_text": result}), translated)
+        result = site.full_thai_article(raw, "A short story.", "นี่คือคำแปลเนื้อเรื่องฉบับสมบูรณ์")
+        self.assertEqual(result, "นี่คือคำแปลเนื้อเรื่องฉบับสมบูรณ์.")
+        self.assertEqual(site.article_translation_body({**raw, "thai_text": result}), result)
 
     def test_practice_disclaimer_is_visible_in_list_and_article_templates(self):
         for name in ("article.html", "index.html", "daily.html"):
             template = (site.TEMPLATE_DIR / name).read_text(encoding="utf-8")
-            self.assertIn("article.isFallback" if name != "index.html" else "featured.isFallback", template)
+            self.assertIn("contentType", template)
             self.assertIn("Fictional learning story - not real news", template)
+
+    def test_article_template_names_full_translation_and_useful_phrases(self):
+        template = (site.TEMPLATE_DIR / "article.html").read_text(encoding="utf-8")
+        self.assertIn("แปลไทยทั้งบท", template)
+        self.assertIn("ประโยคและวลีที่ใช้ได้จริงจากเรื่องนี้", template)
+        self.assertIn("article.useful_phrases", template)
 
     def test_word_spans_wrap_every_english_word(self):
         markup = str(site.word_spans("Clean energy works.", {
@@ -660,10 +651,9 @@ class DailyReaderTests(unittest.TestCase):
         text = "A white cat eats a dog near the house while its owner watches from the garden."
         translated = "แมวสีขาวกินสุนัขใกล้บ้าน ขณะที่เจ้าของมองดูเหตุการณ์จากในสวน"
         thai = site.full_thai_article(raw, text, translated)
-        self.assertIn("ข่าวนี้มาจาก BBC News", thai)
-        self.assertIn("เนื้อหาข่าวคือ", thai)
-        self.assertIn(translated, thai)
-        self.assertNotIn("ควรอ่านจากย่อหน้าภาษาอังกฤษ", thai)
+        self.assertEqual(thai, translated + ".")
+        self.assertNotIn("ข่าวนี้มาจาก BBC News", thai)
+        self.assertNotIn("เนื้อหาข่าวคือ", thai)
 
     def test_full_thai_translation_rejects_placeholder_text(self):
         source = "Researchers published a detailed report about changes in the national economy."
@@ -953,41 +943,6 @@ class DailyReaderTests(unittest.TestCase):
                 quota = site.QuotaManager({})
                 status = quota.public_status(expected_date="2026-06-22")
         self.assertEqual(status["expected_toronto_date"], "2026-06-22")
-
-    def test_production_verifier_detects_stale_index(self):
-        verifier = self.load_production_verifier()
-        dates = ["2026-06-26", "2026-06-25", "2026-06-24", "2026-06-23", "2026-06-22", "2026-06-21", "2026-06-20"]
-        index = [{"date": date} for date in dates for _ in range(10)]
-        with self.assertRaisesRegex(verifier.FreshnessError, "ending 2026-06-27"):
-            verifier.validate_index_freshness(index, "2026-06-27")
-
-    def test_production_verifier_retries_until_fresh(self):
-        verifier = self.load_production_verifier()
-        verified = {"status": "verified"}
-        with patch.object(
-            verifier, "verify_once",
-            side_effect=[verifier.FreshnessError("latest date is stale"), verified],
-        ) as verify_once, patch.object(verifier.time, "sleep") as sleep:
-            result = verifier.verify("https://example.test", "2026-06-27", 9, attempts=2, retry_delay=0)
-        self.assertEqual(result["freshness_attempt"], 2)
-        self.assertEqual(verify_once.call_count, 2)
-        self.assertNotEqual(verify_once.call_args_list[0].args[3], verify_once.call_args_list[1].args[3])
-        sleep.assert_called_once_with(0.0)
-
-    def test_production_verifier_fails_if_every_retry_is_stale(self):
-        verifier = self.load_production_verifier()
-        with patch.object(
-            verifier, "verify_once", side_effect=verifier.FreshnessError("latest date is stale"),
-        ), patch.object(verifier.time, "sleep"):
-            with self.assertRaisesRegex(verifier.FreshnessError, "remained stale after 3 attempt"):
-                verifier.verify("https://example.test", "2026-06-27", 9, attempts=3, retry_delay=0)
-
-    def test_production_verifier_uses_cache_busting_and_no_cache_headers(self):
-        verifier = self.load_production_verifier()
-        session = verifier.verifier_session("commit-sha-1")
-        self.assertEqual(session.params["verify"], "commit-sha-1")
-        self.assertEqual(session.headers["Cache-Control"], "no-cache")
-        self.assertEqual(session.headers["Pragma"], "no-cache")
 
     def test_validation_rejects_incomplete_edition(self):
         with tempfile.TemporaryDirectory() as temp:

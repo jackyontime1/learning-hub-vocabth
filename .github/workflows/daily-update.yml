@@ -6,8 +6,8 @@ on:
     branches:
       - main
   schedule:
-    - cron: "17 5 * * *"
-      timezone: "America/Toronto"
+    - cron: "17 16 * * *"
+      timezone: "UTC"
 
 permissions:
   contents: write
@@ -29,7 +29,7 @@ jobs:
             echo "run=true" >> "$GITHUB_OUTPUT"
             exit 0
           fi
-          if [ "${{ github.event.schedule }}" = "17 5 * * *" ]; then
+          if [ "${{ github.event.schedule }}" = "17 16 * * *" ]; then
             echo "run=true" >> "$GITHUB_OUTPUT"
           else
             echo "run=false" >> "$GITHUB_OUTPUT"
@@ -88,7 +88,7 @@ jobs:
         run: |
           preflight="$(mktemp -d)"
           cp update_site.py "$preflight/"
-          cp -R templates static "$preflight/"
+          cp -R templates static content "$preflight/"
           (
             cd "$preflight"
             FREE_ONLY=1 RETENTION_DAYS=7 BACKFILL_DAYS=1 DEMO_MODE=1 SKIP_AUDIO=1 REFRESH_TODAY=1 python update_site.py
@@ -101,6 +101,10 @@ jobs:
           rows = json.loads((root / "site/content-index.json").read_text(encoding="utf-8"))
           assert len(rows) == 10
           assert Counter(row["level"] for row in rows) == Counter({level: 2 for level in ("A1", "A2", "B1", "B2", "C1")})
+          practice = [row for row in rows if row["level"] in ("A1", "A2")]
+          assert all(row["readingType"] == "daily_life_practice_story" for row in practice)
+          assert all(row["contentType"] == "fictional_practice_story" for row in practice)
+          assert all(row["isRealNews"] is False and row["isFallback"] is False for row in practice)
           assert not list(root.rglob("*.mp3"))
           PY
 
@@ -141,6 +145,11 @@ jobs:
           today = [row for row in rows if row["date"] == expected]
           assert len(today) == 10
           assert Counter(row["level"] for row in today) == Counter({level: 2 for level in ("A1", "A2", "B1", "B2", "C1")})
+          assert Counter(row["readingType"] for row in today) == Counter({
+              "daily_life_practice_story": 4, "easy_news": 2, "real_news": 2, "advanced_real_news": 2,
+          })
+          assert all(row["contentType"] == "fictional_practice_story" and not row["isRealNews"] and not row["isFallback"] for row in today if row["level"] in ("A1", "A2"))
+          assert all(row["contentType"] == "news_article" and row["isRealNews"] and not row["isFallback"] for row in today if row["level"] in ("B1", "B2", "C1"))
           assert json.loads((site / "build-report.json").read_text(encoding="utf-8"))["status"] == "ready"
           PY
 
@@ -165,7 +174,7 @@ jobs:
           echo "url=$preview_url" >> "$GITHUB_OUTPUT"
 
       - name: Verify Cloudflare preview
-        run: python scripts/verify-production.py --base-url "${{ steps.preview.outputs.url }}" --expected-date "$EXPECTED_TORONTO_DATE" --schema 9
+        run: python scripts/verify-production.py --base-url "${{ steps.preview.outputs.url }}" --expected-date "$EXPECTED_TORONTO_DATE" --schema 10
 
       - name: Deploy production to Cloudflare Pages
         env:
@@ -174,7 +183,7 @@ jobs:
         run: npx --yes wrangler@latest pages deploy site --project-name learning-hub-vocabth --branch main
 
       - name: Verify production
-        run: python scripts/verify-production.py --base-url "https://learning-hub-vocabth.pages.dev/" --expected-date "$EXPECTED_TORONTO_DATE" --schema 9
+        run: python scripts/verify-production.py --base-url "https://learning-hub-vocabth.pages.dev/" --expected-date "$EXPECTED_TORONTO_DATE" --schema 10
 
       - name: Persist verified rolling cache
         working-directory: .
