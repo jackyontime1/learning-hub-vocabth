@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-06-28T03:12:13.111757+00:00",
-  "expected_toronto_date": "2026-06-27",
+  "started_at": "2026-06-28T20:43:49.871317+00:00",
+  "expected_toronto_date": "2026-06-28",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -21,12 +21,14 @@
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
-    "nllb_retries": 0,
+    "nllb_retries": 1,
     "quality_failures": 0,
-    "rejection_reasons": {}
+    "rejection_reasons": {
+      "repeated-junk-string": 1
+    }
   },
-  "completed_at": "2026-06-28T03:15:35.717604+00:00",
-  "latest_date": "2026-06-27",
+  "completed_at": "2026-06-28T20:54:36.740871+00:00",
+  "latest_date": "2026-06-28",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -42,16 +44,16 @@
     "easy_news": 2,
     "daily_life_practice_story": 4
   },
-  "fallback_image_count": 10,
+  "fallback_image_count": 8,
   "fallback_images": [
     {
-      "article_id": "a2786bf30fa972ed64",
-      "title": "Yukon fans celebrate hometown star Gavin McKenna's draft to the Maple Leafs",
-      "reason": "No usable free image candidate"
+      "article_id": "7291d092e3d6577fc8",
+      "title": "Kentucky governor says 4 dead amid flooding caused by heavy rains",
+      "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "155e6ef9aaaaadb74c",
-      "title": "OpenAI restricts release of newest ChatGPT model to Trump-approved group during testing period",
+      "article_id": "bd27ca99c8df82df89",
+      "title": "Are we in for a summer of serial heatwaves?",
       "reason": "No usable free image candidate"
     },
     {
@@ -60,14 +62,14 @@
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "f03420506af0561490",
-      "title": "These women said no to having kids - here's why",
+      "article_id": "a84225e8c0f93aaf41",
+      "title": "Trump's face is added to select US passports for America's 250th birthday",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "8b923b60a50e0372b4",
-      "title": "5 million have dropped ACA insurance after Trump and the GOP let prices skyrocket",
-      "reason": "Selected image was unavailable: ValueError"
+      "article_id": "bff095eb22db5965fd",
+      "title": "Severe Thunderstorm Warning issued June 28 at 4:38PM EDT until June 28 at 5:00PM EDT by NWS Raleigh NC",
+      "reason": "No usable free image candidate"
     },
     {
       "article_id": "252ed46f459eac9efb",
@@ -75,24 +77,14 @@
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "bdb3aec66bac3baf48",
-      "title": "A Meeting with the Teacher",
-      "reason": "No usable free image candidate"
+      "article_id": "e46aafb484b74c22e5",
+      "title": "Asking About a Restaurant Order",
+      "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "8fe464696c48b4953a",
-      "title": "Checking a Bank Transfer",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "0c653f2e822fd8c2da",
-      "title": "Waiting at the School Gate",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "7172cf1de8a4ed10b8",
-      "title": "A Walk in the Park",
-      "reason": "No usable free image candidate"
+      "article_id": "6a0e3e70eb9ba9d3fc",
+      "title": "The Bus Card",
+      "reason": "Selected image was unavailable: ValueError"
     }
   ]
 }
