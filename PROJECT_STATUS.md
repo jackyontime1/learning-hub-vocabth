@@ -1,6 +1,6 @@
 # VocabTH / Podcast Voice - Project Status
 
-Updated: June 22, 2026
+Updated: June 28, 2026
 
 ## Workspace
 
@@ -81,6 +81,70 @@ Updated: June 22, 2026
     `https://75d17c08.learning-hub-vocabth.pages.dev`
   - Production URL remains:
     `https://learning-hub-vocabth.pages.dev/`
+
+## Reading Content Model Round 2A - June 28, 2026
+
+- Round 2A: Reading Content Model Redesign is complete and production-verified.
+- Commit:
+  `d104c978b6146fcbf8fbcf3f50fd98020ee65ebf`
+- Commit message:
+  `Redesign Daily Reader content model`
+- GitHub Actions run:
+  `https://github.com/jackyontime1/learning-hub-vocabth/actions/runs/28308679408`
+- Workflow result: success.
+  - `should-run`: success
+  - Preflight no-audio build: success
+  - Build daily reader: success
+  - Preview deploy and verification: success
+  - Production deploy: success
+  - Verify production: success
+  - Rolling cache persistence: success
+- Production verification passed:
+  - Latest date: `2026-06-27`
+  - Retained stories: 70
+  - Latest-day stories: 10
+  - A1/A2/B1/B2/C1: 2 each
+  - Schema version: 10 for all articles
+  - Complete full-body `thai_text`: passed
+  - Placeholder or incomplete Thai: none
+  - `useful_phrases`: 3-5 per reading; validation passed
+  - Useful-phrase source matching and Thai quality: passed
+  - Article template shows `แปลไทยทั้งบท`
+  - Useful-phrases section is visible
+- A1 and A2 are planned first-class bilingual daily-life practice content, not operational fallback:
+  - `readingType`: `daily_life_practice_story`
+  - `contentType`: `fictional_practice_story`
+  - `isRealNews`: `false`
+  - `isFallback`: `false`
+- B1 remains real-news based:
+  - `readingType`: `easy_news`
+  - `isRealNews`: `true`
+- B2 remains real-news based:
+  - `readingType`: `real_news`
+  - `isRealNews`: `true`
+- C1 remains real-news based:
+  - `readingType`: `advanced_real_news`
+  - `isRealNews`: `true`
+- Implementation summary:
+  - A1/A2 use curated bilingual daily-life practice stories.
+  - B1/B2/C1 remain real-news based by level.
+  - Thai translation is stored as full-body `thai_text`, not a summary.
+  - Schema 10 adds `useful_phrases` with source-matching validation.
+  - The production verifier now checks schema 10 and reading classification.
+  - Workflow assertions now require schema 10.
+  - New content file: `daily-english-reader/content/practice-stories.json`
+- Repository safety note:
+  - The original source repository at `D:\podcast voice` remains contaminated and must not be used for commits until it is cleaned separately.
+  - The clean repository at `D:\codex-clean-round2a-20260628` was used for the safe Round 2A commit and push.
+  - Prefer drive D for future clean clones, temporary worktrees, patches, logs, outputs, and backups.
+- Free-only production constraints remain:
+  - `FREE_ONLY=1`
+  - `DEMO_MODE=0`
+  - `SKIP_AUDIO=1`
+  - `REQUIRE_FULL_TRANSLATION=1`
+  - No OpenAI API
+  - No paid translation, image, or audio APIs
+  - No paid storage risk
 
 ## Oxford Category Distribution
 
@@ -384,18 +448,16 @@ node "D:\podcast voice\daily-english-reader\scripts\build-learning-hub.mjs"
 
 ## Next Action
 
-Deploy and verify the Reading schema 9 full-translation build first:
-
-1. Push the June 22 translation pipeline to GitHub.
-2. Run the workflow manually and confirm the NLLB model cache/build succeeds.
-3. Verify all seven days and sample A1/A2/B1/B2/C1 translations on production.
-
-Then continue the Cloudflare R2 audio work when R2 is enabled:
-
-1. Put or mirror Podcast MP3 files under the same public path convention:
-   `/podcast/audio/words/...`.
-2. Configure R2 CORS to allow `GET`, `HEAD`, `OPTIONS` and the `Range` header.
-3. Test on iPhone Chrome/Safari:
-   Reading, Podcast, Flashcards, MP3 play/pause, headset pause/play, and MP3 HTTP Range `206`.
+1. Monitor the next scheduled Daily Reader run after commit
+   `d104c978b6146fcbf8fbcf3f50fd98020ee65ebf`.
+2. If that scheduled run passes, start Round 2B: Reading UI/UX polish.
+3. Keep Round 2B focused on:
+   - Article-page readability
+   - Thai translation box
+   - Useful-phrases presentation
+   - Reducing visual clutter from word highlighting
+   - Mobile layout
+   - Saved vocabulary and saved-story polish later
+4. Preserve the free-only production constraints documented above.
 
 Keep responses and progress updates concise to reduce token use.
