@@ -3291,5 +3291,41 @@
     "image_is_fallback": true,
     "credit": "Daily English Reader",
     "credit_url": ""
+  },
+  "f03420506af0561490": {
+    "cache_version": 2,
+    "url": "",
+    "local_filename": "fallback-f03420506af0.svg",
+    "image_url": "static/images/fallback-f03420506af0.svg",
+    "image_local_path": "static/images/fallback-f03420506af0.svg",
+    "image_source": "Local generated SVG",
+    "image_author": "Daily English Reader",
+    "image_license": "Project-owned local asset",
+    "image_attribution_url": "",
+    "image_alt": "Cover image for These women said no to having kids - here's why",
+    "image_query": "World These women said having kids why",
+    "image_relevance_score": 20,
+    "image_selected_reason": "No usable free image candidate",
+    "image_is_fallback": true,
+    "credit": "Daily English Reader",
+    "credit_url": ""
+  },
+  "1659a7ce143b943c75": {
+    "cache_version": 2,
+    "url": "",
+    "local_filename": "fallback-1659a7ce143b.svg",
+    "image_url": "static/images/fallback-1659a7ce143b.svg",
+    "image_local_path": "static/images/fallback-1659a7ce143b.svg",
+    "image_source": "Local generated SVG",
+    "image_author": "Daily English Reader",
+    "image_license": "Project-owned local asset",
+    "image_attribution_url": "",
+    "image_alt": "Cover image for Future generations being failed if more trees not planted, experts say",
+    "image_query": "Science Future generations failed trees planted experts say",
+    "image_relevance_score": 20,
+    "image_selected_reason": "No usable free image candidate",
+    "image_is_fallback": true,
+    "credit": "Daily English Reader",
+    "credit_url": ""
   }
 }

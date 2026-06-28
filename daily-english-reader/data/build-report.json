@@ -1,6 +1,6 @@
 {
   "status": "ready",
-  "started_at": "2026-06-28T02:22:06.900200+00:00",
+  "started_at": "2026-06-28T03:12:13.111757+00:00",
   "expected_toronto_date": "2026-06-27",
   "free_only": true,
   "demo_mode": false,
@@ -16,33 +16,16 @@
     "C1": 2
   },
   "schema_version": 10,
-  "candidate_rejections": [
-    {
-      "article_id": "5d28b1e809b05f5ecb",
-      "title": "There's a beef about beef at the World Cup, as Argentina fans pour into Texas",
-      "provider": "NPR",
-      "level": "B2",
-      "reason": "RuntimeError: Full Thai translation unavailable for article 5d28b1e809b05f5ecb"
-    },
-    {
-      "article_id": "c825ced9e666406230",
-      "title": "Severe Thunderstorm Watch issued June 24 at 10:19PM MDT until June 25 at 1:00AM MDT by NWS Goodland KS",
-      "provider": "US National Weather Service",
-      "level": "C1",
-      "reason": "RuntimeError: Unable to produce 3 valid useful phrases for C1 reading"
-    }
-  ],
-  "practice_story_count": 28,
+  "candidate_rejections": [],
+  "practice_story_count": 4,
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
-    "nllb_retries": 1,
-    "quality_failures": 1,
-    "rejection_reasons": {
-      "unexpected-non-thai-script": 2
-    }
+    "nllb_retries": 0,
+    "quality_failures": 0,
+    "rejection_reasons": {}
   },
-  "completed_at": "2026-06-28T02:33:53.887154+00:00",
+  "completed_at": "2026-06-28T03:15:35.717604+00:00",
   "latest_date": "2026-06-27",
   "total_story_count": 70,
   "today_story_count": 10,
@@ -72,13 +55,13 @@
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "9381fa20e5c381eee8",
-      "title": "If a Lyme disease vaccine gets approved, how would it go over? We asked hunters",
+      "article_id": "1659a7ce143b943c75",
+      "title": "Future generations being failed if more trees not planted, experts say",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "36725b74c8c9dee5ce",
-      "title": "Canadian Army holds sunset ceremony to deactivate 5th Division",
+      "article_id": "f03420506af0561490",
+      "title": "These women said no to having kids - here's why",
       "reason": "No usable free image candidate"
     },
     {
