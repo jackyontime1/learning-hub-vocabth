@@ -1,5 +1,5 @@
 {
-  "schema_version": 9,
+  "schema_version": 10,
   "id": "02c50b02492a602990",
   "slug": "u-s-to-permit-iranian-oil-sales-easing-decades-old-sanctions-as-peace-ta-02c50b02",
   "level": "B2",
@@ -7,7 +7,39 @@
   "description": "The United States authorized Iranian oil sales on Monday, easing decades-old sanctions as it pushes toward a final peace deal with Tehran in return for commitments on nuclear inspections and free transit through the Strait of Hormuz.",
   "text": "The United States authorized Iranian oil sales on Monday, easing decades-old sanctions as it pushes toward a final peace deal with Tehran in return for commitments on nuclear inspections and free transit through the Strait of Hormuz. The general licence, announced by the Treasury Department, allows the sale of crude oil and petrochemical and petroleum products of Iranian origin through August 21. The licence says Iranian oil can be imported into the U.S. when necessary to complete its sale, delivery or offloading.\n\nThe U.S. has not meaningfully imported Iranian oil since Washington imposed measures after the 1979 revolution.",
   "speech_text": "U.S. to permit Iranian oil sales, easing decades-old sanctions, as peace talks continue.\n\nThe United States authorized Iranian oil sales on Monday, easing decades-old sanctions as it pushes toward a final peace deal with Tehran in return for commitments on nuclear inspections and free transit through the Strait of Hormuz. The general licence, announced by the Treasury Department, allows the sale of crude oil and petrochemical and petroleum products of Iranian origin through August 21. The licence says Iranian oil can be imported into the U.S. when necessary to complete its sale, delivery or offloading.\n\nThe U.S. has not meaningfully imported Iranian oil since Washington imposed measures after the 1979 revolution.",
-  "thai_text": "ข่าวนี้มาจาก CBC News อยู่ในหมวดข่าวต่างประเทศ และถูกเรียบเรียงเป็นระดับ B2. เนื้อหาข่าวคือ\n\nสหรัฐอเมริกาอนุมัติการขายน้ํามันของอิหร่าน เมื่อวันจันทร์ ที่ผ่านมา โดยลดโทษแบนหลายทศวรรษที่ผ่านมา ขณะที่มันผลักดันไปสู่ข้อตกลงสันติภาพสุดท้ายกับเทอเรนในแลกเปลี่ยน. สำหรับการรับผิดชอบเกี่ยวกับการตรวจสอบอุปกรณ์นิวเคลียร์และการเดินทางอิสระผ่านลําเลียงออร์มูซ. ใบอนุญาตทั่วไปที่กระทรวงการคลังประกาศให้บริการในการขายน้ํามันสด และผลิตภัณฑ์ปิตรเคมีและสินค้าน้ํามันที่มาจากอิหร่าน จนถึงเดือนสิงหาคม 21. ใบอนุญาตบอกว่า น้ํามันอิหร่านทำได้นําเข้าประเทศสหรัฐฯได้ เมื่อจําเป็น เพื่อเสร็จสิ้นการขาย ส่งหรือปล่อย.\n\nสหรัฐอเมริกาไม่ได้นําเข้าน้ํามันจากอิหร่านอย่างมีประสิทธิภาพ ตั้งแต่วอชิงตันบังคับมาตรการหลังจากปฏิวัติปี 1979.",
+  "thai_text": "สหรัฐอเมริกาอนุมัติการขายน้ํามันของอิหร่าน เมื่อวันจันทร์ ที่ผ่านมา โดยลดโทษแบนหลายทศวรรษที่ผ่านมา ขณะที่มันผลักดันไปสู่ข้อตกลงสันติภาพสุดท้ายกับเทอเรนในแลกเปลี่ยน. สำหรับการรับผิดชอบเกี่ยวกับการตรวจสอบอุปกรณ์นิวเคลียร์และการเดินทางอิสระผ่านลําเลียงออร์มูซ. ใบอนุญาตทั่วไปที่กระทรวงการคลังประกาศให้บริการในการขายน้ํามันสด และผลิตภัณฑ์ปิตรเคมีและสินค้าน้ํามันที่มาจากอิหร่าน จนถึงเดือนสิงหาคม 21. ใบอนุญาตบอกว่า น้ํามันอิหร่านทำได้นําเข้าประเทศสหรัฐฯได้ เมื่อจําเป็น เพื่อเสร็จสิ้นการขาย ส่งหรือปล่อย.\n\nสหรัฐอเมริกาไม่ได้นําเข้าน้ํามันจากอิหร่านอย่างมีประสิทธิภาพ ตั้งแต่วอชิงตันบังคับมาตรการหลังจากปฏิวัติปี 1979.",
+  "useful_phrases": [
+    {
+      "english": "United States authorized Iranian oil",
+      "kind": "collocation",
+      "source_sentence": "The United States authorized Iranian oil sales on Monday, easing decades-old sanctions as it pushes toward a final peace deal with Tehran in return for commitments on nuclear inspections and free transit through the Strait of Hormuz.",
+      "thai": "สหรัฐอเมริกาอนุมัติ น้ํามันอิหร่าน."
+    },
+    {
+      "english": "easing decades-old sanctions as it",
+      "kind": "collocation",
+      "source_sentence": "The United States authorized Iranian oil sales on Monday, easing decades-old sanctions as it pushes toward a final peace deal with Tehran in return for commitments on nuclear inspections and free transit through the Strait of Hormuz.",
+      "thai": "ผ่อนคลายการลงโทษที่ผ่านมาหลายทศวรรษ."
+    },
+    {
+      "english": "announced by the Treasury Department",
+      "kind": "collocation",
+      "source_sentence": "The general licence, announced by the Treasury Department, allows the sale of crude oil and petrochemical and petroleum products of Iranian origin through August 21.",
+      "thai": "ประกาศโดยกระทรวงการคลัง."
+    },
+    {
+      "english": "can be imported into the",
+      "kind": "collocation",
+      "source_sentence": "The licence says Iranian oil can be imported into the U.S. when necessary to complete its sale, delivery or offloading.",
+      "thai": "สามารถนําเข้าใน."
+    },
+    {
+      "english": "has not meaningfully imported Iranian",
+      "kind": "collocation",
+      "source_sentence": "The U.S. has not meaningfully imported Iranian oil since Washington imposed measures after the 1979 revolution.",
+      "thai": "ไม่นําเข้าประเทศอิหร่านอย่างมีสาระ."
+    }
+  ],
   "word_translations": {
     "a": "",
     "after": "หลังจาก",
@@ -163,6 +195,13 @@
   "content_type": "rss news summary",
   "source_url": "https://www.cbc.ca/news/world/united-states-iran-oil-sales-peace-deal-9.7244322?cmp=rss",
   "author": "CBC News",
+  "readingType": "real_news",
+  "isFallback": false,
+  "isRealNews": true,
+  "contentType": "news_article",
+  "sourceName": "CBC News",
+  "disclaimerEn": "",
+  "disclaimerTh": "",
   "published": "2026-06-22T15:23:41+00:00",
   "published_date": "2026-06-21",
   "image": {
@@ -184,5 +223,5 @@
     "credit_url": ""
   },
   "audio_cache_path": "data/audio/2026-06-21/02c50b02492a602990-b2.wav",
-  "generated_at": "2026-06-25T05:24:19.232514+00:00"
+  "generated_at": "2026-06-28T02:33:43.147141+00:00"
 }

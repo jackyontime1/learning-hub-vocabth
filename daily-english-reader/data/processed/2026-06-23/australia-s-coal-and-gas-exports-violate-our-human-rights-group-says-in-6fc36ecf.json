@@ -1,5 +1,5 @@
 {
-  "schema_version": 9,
+  "schema_version": 10,
   "id": "6fc36ecf999bedf13d",
   "slug": "australia-s-coal-and-gas-exports-violate-our-human-rights-group-says-in-6fc36ecf",
   "level": "B1",
@@ -7,7 +7,39 @@
   "description": "The group says that it is unlawful for Australia to continue approving fossil fuel exports without protecting its citizens.",
   "text": "The group says that it is unlawful for Australia to continue approving fossil fuel exports without protecting its citizens. A group of Australians have accused the government of violating their human rights by continuing to export coal. And gas and are asking the UN to take action.\n\nThe group say their lives have been harmed due to extreme weather in Australia, bushfires, floods, heatwaves, rising sea levels. And toxic algal blooms, and the government's support of fossil fuel companies is to blame. It is the first legal claim taken to an international body or court since 2025's ruling by the International Court of Justice (ICJ) that countries can be sued over climate change.\n\nAny decision by the UN is not legally binding but Australia, one of the world's largest coal. And gas exporters, would be expected to respond.",
   "speech_text": "Australia's coal and gas exports violate our human rights, group says in new UN case.\n\nThe group says that it is unlawful for Australia to continue approving fossil fuel exports without protecting its citizens. A group of Australians have accused the government of violating their human rights by continuing to export coal. And gas and are asking the UN to take action.\n\nThe group say their lives have been harmed due to extreme weather in Australia, bushfires, floods, heatwaves, rising sea levels. And toxic algal blooms, and the government's support of fossil fuel companies is to blame. It is the first legal claim taken to an international body or court since 2025's ruling by the International Court of Justice (ICJ) that countries can be sued over climate change.\n\nAny decision by the UN is not legally binding but Australia, one of the world's largest coal. And gas exporters, would be expected to respond.",
-  "thai_text": "ข่าวนี้มาจาก BBC News อยู่ในหมวดวิทยาศาสตร์ และถูกเรียบเรียงเป็นระดับ B1. เนื้อหาข่าวคือ\n\nกลุ่มนี้บอกว่ามันผิดกฎหมายสำหรับออสเตรเลียที่จะยังคงอนุมัติการส่งออกเชื้อเพลิงฟอสเซล โดยไม่ปกป้องผู้คนของมัน. กลุ่มชาวออสเตรเลียกล่าวหารัฐบาล ว่าละเมิดกฎหมายที่คุ้มครองสิทธิมนุษยชนของพวกเขา โดยการต่อเนื่องส่งออกถ่านหิน. และก๊าซ และขอให้สหประชาชาติดําเนินการ.\n\nกลุ่มนี้บอกว่าชีวิตของพวกเขาได้รับความเสียหายจากอากาศอันตรายในออสเตรเลีย ไฟไหม้ป่า น้ําท่วม ไฟร้อน ระดับน้ําทะเลเพิ่มขึ้น. และแหลมพันธุ์พันธุ์ที่เป็นพิษ และการสนับสนุนของรัฐบาลให้กับบริษัทพลังงานฟอสเซล เป็นความผิด. มันเป็นการเรียกร้องทางกฎหมายครั้งแรกที่นําไปสู่องค์กรหรือศาลนานาชาติ ตั้งแต่การตัดสินของศาลยุติธรรมนานาชาติ (ICJ) ในปี 2025 ว่าประเทศทำได้ถูกฟ้องร้องเกี่ยวกับการเปลี่ยนแปลงสภาพอากาศ.\n\nการตัดสินใจใดๆ ของสหประชาชาติ ไม่ได้บังคับทางกฎหมาย แต่ออสเตรเลีย. และผู้ส่งออกก๊าซ จะต้องตอบสนอง.",
+  "thai_text": "กลุ่มนี้บอกว่ามันผิดกฎหมายสำหรับออสเตรเลียที่จะยังคงอนุมัติการส่งออกเชื้อเพลิงฟอสเซล โดยไม่ปกป้องผู้คนของมัน. กลุ่มชาวออสเตรเลียกล่าวหารัฐบาล ว่าละเมิดกฎหมายที่คุ้มครองสิทธิมนุษยชนของพวกเขา โดยการต่อเนื่องส่งออกถ่านหิน. และก๊าซ และขอให้สหประชาชาติดําเนินการ.\n\nกลุ่มนี้บอกว่าชีวิตของพวกเขาได้รับความเสียหายจากอากาศอันตรายในออสเตรเลีย ไฟไหม้ป่า น้ําท่วม ไฟร้อน ระดับน้ําทะเลเพิ่มขึ้น. และแหลมพันธุ์พันธุ์ที่เป็นพิษ และการสนับสนุนของรัฐบาลให้กับบริษัทพลังงานฟอสเซล เป็นความผิด. มันเป็นการเรียกร้องทางกฎหมายครั้งแรกที่นําไปสู่องค์กรหรือศาลนานาชาติ ตั้งแต่การตัดสินของศาลยุติธรรมนานาชาติ (ICJ) ในปี 2025 ว่าประเทศทำได้ถูกฟ้องร้องเกี่ยวกับการเปลี่ยนแปลงสภาพอากาศ.\n\nการตัดสินใจใดๆ ของสหประชาชาติ ไม่ได้บังคับทางกฎหมาย แต่ออสเตรเลีย. และผู้ส่งออกก๊าซ จะต้องตอบสนอง.",
+  "useful_phrases": [
+    {
+      "english": "is unlawful for Australia to",
+      "kind": "collocation",
+      "source_sentence": "The group says that it is unlawful for Australia to continue approving fossil fuel exports without protecting its citizens.",
+      "thai": "เป็นผิดกฎหมายสําหรับออสเตรเลีย."
+    },
+    {
+      "english": "approving fossil fuel exports without",
+      "kind": "collocation",
+      "source_sentence": "The group says that it is unlawful for Australia to continue approving fossil fuel exports without protecting its citizens.",
+      "thai": "ประกาศอนุมัติการส่งออกเชื้อเพลิงฟอสเซล."
+    },
+    {
+      "english": "protecting its citizens",
+      "kind": "collocation",
+      "source_sentence": "The group says that it is unlawful for Australia to continue approving fossil fuel exports without protecting its citizens.",
+      "thai": "การปกป้องประชาชน."
+    },
+    {
+      "english": "have accused the government of",
+      "kind": "collocation",
+      "source_sentence": "A group of Australians have accused the government of violating their human rights by continuing to export coal.",
+      "thai": "ได้กล่าวหารัฐบาลว่า."
+    },
+    {
+      "english": "violating their human rights by",
+      "kind": "collocation",
+      "source_sentence": "A group of Australians have accused the government of violating their human rights by continuing to export coal.",
+      "thai": "การละเมิดกฎหมายที่ปกป้องสิทธิมนุษยชนของพวกเขา โดย."
+    }
+  ],
   "word_translations": {
     "a": "",
     "accused": "",
@@ -207,6 +239,13 @@
   "content_type": "rss news summary",
   "source_url": "https://www.bbc.co.uk/news/articles/cn8q5nx6jw6o?at_medium=RSS&at_campaign=rss",
   "author": "BBC News",
+  "readingType": "easy_news",
+  "isFallback": false,
+  "isRealNews": true,
+  "contentType": "news_article",
+  "sourceName": "BBC News",
+  "disclaimerEn": "",
+  "disclaimerTh": "",
   "published": "2026-06-23T03:55:00+00:00",
   "published_date": "2026-06-23",
   "image": {
@@ -228,5 +267,5 @@
     "credit_url": ""
   },
   "audio_cache_path": "data/audio/2026-06-23/6fc36ecf999bedf13d-b1.wav",
-  "generated_at": "2026-06-25T04:54:38.958712+00:00"
+  "generated_at": "2026-06-28T02:31:06.954076+00:00"
 }

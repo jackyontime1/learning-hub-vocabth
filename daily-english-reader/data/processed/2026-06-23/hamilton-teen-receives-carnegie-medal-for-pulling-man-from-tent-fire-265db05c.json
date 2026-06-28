@@ -1,5 +1,5 @@
 {
-  "schema_version": 9,
+  "schema_version": 10,
   "id": "265db05cd2dd2de49c",
   "slug": "hamilton-teen-receives-carnegie-medal-for-pulling-man-from-tent-fire-265db05c",
   "level": "C1",
@@ -7,7 +7,39 @@
   "description": "A Hamilton teen who pulled a man from a tent engulfed in flames last year has been awarded the Carnegie Medal, given to those who \"risked serious injury or death attempting to save others in acts of extraordinary heroism.\" Zeke Fox was 17 when he dragged Shawn Goodwin out of the flames that destroyed his encampment at Bayfront Park in January 2025.",
   "text": "A Hamilton teen who pulled a man from a tent engulfed in flames last year has been awarded the Carnegie Medal, given to those who \"risked serious injury or death attempting to save others in acts of extraordinary heroism.\" Zeke Fox was 17 when he dragged Shawn Goodwin out of the flames that destroyed his encampment at Bayfront Park in January 2025. A Hamilton teen who pulled a man from a tent engulfed in flames has been awarded the Carnegie Medal, given to those who \"risked serious injury or death attempting to save others in acts of extraordinary heroism.\" On Monday, Zeke Fox was announced as one of the latest recipients, alongside 17 others from the U.S. and Canada, by the Pittsburgh-based Carnegie Hero Fund.",
   "speech_text": "Hamilton teen receives Carnegie Medal for pulling man from tent fire.\n\nA Hamilton teen who pulled a man from a tent engulfed in flames last year has been awarded the Carnegie Medal, given to those who \"risked serious injury or death attempting to save others in acts of extraordinary heroism.\" Zeke Fox was 17 when he dragged Shawn Goodwin out of the flames that destroyed his encampment at Bayfront Park in January 2025. A Hamilton teen who pulled a man from a tent engulfed in flames has been awarded the Carnegie Medal, given to those who \"risked serious injury or death attempting to save others in acts of extraordinary heroism.\" On Monday, Zeke Fox was announced as one of the latest recipients, alongside 17 others from the U.S. and Canada, by the Pittsburgh-based Carnegie Hero Fund.",
-  "thai_text": "ข่าวนี้มาจาก CBC News อยู่ในหมวดข่าวแคนาดา และถูกเรียบเรียงเป็นระดับ C1. เนื้อหาข่าวคือ\n\nเด็ก วัยรุ่น ใน ฮามิลตัน ที่ พา คน ออก จาก เต็นท์ ที่ มี ไฟไหม้ เมื่อ ปี ที่ ผ่านมา ได้ รับ เหรียญ คาร์เนกี้. ได้ดึงชอว์น กูดวิน ออกจากไฟที่ทำลายค่ายเขาที่บายฟรอนท์ ปาร์ค ในเดือนมกราคมปี 2025. วัยรุ่นชาวฮามิลตัน ที่ดึงชายคนหนึ่ง ออกจากเต็นท์ที่เผาไหม้ ได้รับรางวัล คาร์เนกี้ เหรียญ. ของผู้ได้รับรางวัลล่าสุด ร่วมกับ 17 คนจากสหรัฐอเมริกาและแคนาดา โดยกองทุน Carnegie Hero Fund ที่ตั้งอยู่ที่พิตซเบิร์ก.",
+  "thai_text": "เด็ก วัยรุ่น ใน ฮามิลตัน ที่ พา คน ออก จาก เต็นท์ ที่ มี ไฟไหม้ เมื่อ ปี ที่ ผ่านมา ได้ รับ เหรียญ คาร์เนกี้. ได้ดึงชอว์น กูดวิน ออกจากไฟที่ทำลายค่ายเขาที่บายฟรอนท์ ปาร์ค ในเดือนมกราคมปี 2025. วัยรุ่นชาวฮามิลตัน ที่ดึงชายคนหนึ่ง ออกจากเต็นท์ที่เผาไหม้ ได้รับรางวัล คาร์เนกี้ เหรียญ. ของผู้ได้รับรางวัลล่าสุด ร่วมกับ 17 คนจากสหรัฐอเมริกาและแคนาดา โดยกองทุน Carnegie Hero Fund ที่ตั้งอยู่ที่พิตซเบิร์ก.",
+  "useful_phrases": [
+    {
+      "english": "pulled a man from a",
+      "kind": "collocation",
+      "source_sentence": "A Hamilton teen who pulled a man from a tent engulfed in flames last year has been awarded the Carnegie Medal, given to those who \"risked serious injury or death attempting to save others in acts of extraordinary heroism.\" Zeke Fox was 17 when he dragged Shawn Goodwin out of the flames that destroyed his encampment at Bayfront Park in January 2025.",
+      "thai": "ได้ดึงชายคนหนึ่งจาก."
+    },
+    {
+      "english": "engulfed in flames last year",
+      "kind": "collocation",
+      "source_sentence": "A Hamilton teen who pulled a man from a tent engulfed in flames last year has been awarded the Carnegie Medal, given to those who \"risked serious injury or death attempting to save others in acts of extraordinary heroism.\" Zeke Fox was 17 when he dragged Shawn Goodwin out of the flames that destroyed his encampment at Bayfront Park in January 2025.",
+      "thai": "ถูกเผาไหม้เมื่อปีที่แล้ว."
+    },
+    {
+      "english": "has been awarded the Carnegie",
+      "kind": "collocation",
+      "source_sentence": "A Hamilton teen who pulled a man from a tent engulfed in flames last year has been awarded the Carnegie Medal, given to those who \"risked serious injury or death attempting to save others in acts of extraordinary heroism.\" Zeke Fox was 17 when he dragged Shawn Goodwin out of the flames that destroyed his encampment at Bayfront Park in January 2025.",
+      "thai": "ได้รับรางวัลคาร์เนกี้."
+    },
+    {
+      "english": "risked serious injury or death",
+      "kind": "collocation",
+      "source_sentence": "A Hamilton teen who pulled a man from a tent engulfed in flames last year has been awarded the Carnegie Medal, given to those who \"risked serious injury or death attempting to save others in acts of extraordinary heroism.\" Zeke Fox was 17 when he dragged Shawn Goodwin out of the flames that destroyed his encampment at Bayfront Park in January 2025.",
+      "thai": "ความเสี่ยงของการบาดเจ็บหรือการตายที่ร้ายแรง."
+    },
+    {
+      "english": "attempting to save others in",
+      "kind": "collocation",
+      "source_sentence": "A Hamilton teen who pulled a man from a tent engulfed in flames last year has been awarded the Carnegie Medal, given to those who \"risked serious injury or death attempting to save others in acts of extraordinary heroism.\" Zeke Fox was 17 when he dragged Shawn Goodwin out of the flames that destroyed his encampment at Bayfront Park in January 2025.",
+      "thai": "พยายามที่จะช่วยคนอื่นใน."
+    }
+  ],
   "word_translations": {
     "a": "",
     "acts": "กระทำ, แสดง",
@@ -151,6 +183,13 @@
   "content_type": "rss news summary",
   "source_url": "https://www.cbc.ca/news/canada/hamilton/zeke-fox-carnegie-medal-9.7245403?cmp=rss",
   "author": "CBC News",
+  "readingType": "advanced_real_news",
+  "isFallback": false,
+  "isRealNews": true,
+  "contentType": "news_article",
+  "sourceName": "CBC News",
+  "disclaimerEn": "",
+  "disclaimerTh": "",
   "published": "2026-06-23T08:00:00+00:00",
   "published_date": "2026-06-23",
   "image": {
@@ -172,5 +211,5 @@
     "credit_url": ""
   },
   "audio_cache_path": "data/audio/2026-06-23/265db05cd2dd2de49c-c1.wav",
-  "generated_at": "2026-06-25T04:45:49.009706+00:00"
+  "generated_at": "2026-06-28T02:32:00.534569+00:00"
 }

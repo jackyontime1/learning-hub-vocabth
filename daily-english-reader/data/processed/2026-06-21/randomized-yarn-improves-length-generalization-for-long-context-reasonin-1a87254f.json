@@ -1,5 +1,5 @@
 {
-  "schema_version": 9,
+  "schema_version": 10,
   "id": "1a87254f1ebf7c9697",
   "slug": "randomized-yarn-improves-length-generalization-for-long-context-reasonin-1a87254f",
   "level": "B1",
@@ -7,7 +7,39 @@
   "description": "Large language models (LLMs) are typically pretrained on short sequences and then extended to work on longer sequences with additional training. However, such LLMs still struggle to further generalize to very long sequences. We propose Randomized YaRN, a training method that improves length generalization by combining YaRN-based positional extrapolation with randomized positional encoding and a length curriculum. During training on short context data, tokens are assigned YaRN positional encodings sampled from a larger position range, exposing the model to out-of-distribution positional representations even on short-context inputs. We evaluate Randomized YaRN on two challenging long-context reasoning benchmarks, BABILong and Multi-Round Coreference Resolution (MRCR). When training on data with <8K context, Randomized YaRN consistently improves reasoning performance on context lengths from 16K to 128K and outperforms standard fine-tuning, with the largest gains appearing at far out-of-distribution lengths. Our results suggest that progressively exposing models to OOD positional distributions provides an effective recipe for generalizable long-context reasoning.",
   "text": "Large language models (LLMs) are typically pretrained on short sequences and then extended to work on longer sequences with additional training. However, such LLMs still struggle to further generalize to very long sequences. We propose Randomized YaRN, a training method that improves length generalization by combining YaRN-based positional extrapolation with randomized positional encoding.\n\nAnd a length curriculum. During training on short context data, tokens are assigned YaRN positional encodings sampled from a larger position range, exposing the model to out-of-distribution positional representations even on short-context inputs. We evaluate Randomized YaRN on two challenging long-context reasoning benchmarks, BABILong and Multi-Round Coreference Resolution (MRCR).\n\nWhen training on data with <8K context, Randomized YaRN consistently improves reasoning performance on context lengths from 16K to 128K. And outperforms standard fine-tuning, with the largest gains appearing at far out-of-distribution lengths.",
   "speech_text": "Randomized YaRN Improves Length Generalization for Long-Context Reasoning.\n\nLarge language models (LLMs) are typically pretrained on short sequences and then extended to work on longer sequences with additional training. However, such LLMs still struggle to further generalize to very long sequences. We propose Randomized YaRN, a training method that improves length generalization by combining YaRN-based positional extrapolation with randomized positional encoding.\n\nAnd a length curriculum. During training on short context data, tokens are assigned YaRN positional encodings sampled from a larger position range, exposing the model to out-of-distribution positional representations even on short-context inputs. We evaluate Randomized YaRN on two challenging long-context reasoning benchmarks, BABILong and Multi-Round Coreference Resolution (MRCR).\n\nWhen training on data with <8K context, Randomized YaRN consistently improves reasoning performance on context lengths from 16K to 128K. And outperforms standard fine-tuning, with the largest gains appearing at far out-of-distribution lengths.",
-  "thai_text": "ข่าวนี้มาจาก arXiv อยู่ในหมวดเทคโนโลยี และถูกเรียบเรียงเป็นระดับ B1. เนื้อหาข่าวคือ\n\nโมเดลภาษาขนาดใหญ่ (LLM) โดยทั่วไปมีการฝึกซ้อมก่อนในเรียงลําดับสั้น แล้วขยายให้ทำงานในเรียงลําดับยาวกว่า ด้วยการฝึกซ้อมเพิ่มเติม. แต่ LLM เหล่านี้ยังคงต่อสู้เพื่อนําไปทั่วไปเป็นเรียงลําดับยาวมาก. เราเสนอวิธีการฝึกอบรม YaRN แบบสุ่ม ที่ช่วยปรับปรุงความยาวทั่วไปโดยการรวมการขยายตําแหน่งจาก YaRN กับการรหัสตําแหน่งสุ่ม.\n\nและหลักสูตรระยะยาว. ระหว่างการฝึกอบรมข้อมูลในสภาพสั้น โทคอนได้รับการมอบหมาย YaRN โคดิ้งตําแหน่งจากระยะตําแหน่งที่ใหญ่กว่า, ทำให้รุ่นถูกเผชิญกับการแสดงตําแหน่งนอกการกระจายแม้กระทั่งในข้อมูลในสภาพสั้น. เราประเมิน YaRN แรนโดมิสแซมบนสองเทียบเทียบของการคิดในสภาพยนต์ยาวที่ท้าทาย คือ BABILong และ Multi-Round Coreference Resolution (MRCR).\n\nเมื่อฝึกสอนข้อมูลที่มีสภาพสภาพ <8K, YaRN แรนโดมิสแซมปรับปรุงผลการคิดในความยาวของสภาพสภาพจาก 16K ถึง 128K อย่างต่อเนื่อง. และมีผลงานที่ดีกว่าการปรับปรุงแบบดีแบบมาตรฐาน โดยผลประโยชน์ที่ใหญ่ที่สุดจะปรากฏในระยะยาวที่เกินการกระจาย.",
+  "thai_text": "โมเดลภาษาขนาดใหญ่ (LLM) โดยทั่วไปมีการฝึกซ้อมก่อนในเรียงลําดับสั้น แล้วขยายให้ทำงานในเรียงลําดับยาวกว่า ด้วยการฝึกซ้อมเพิ่มเติม. แต่ LLM เหล่านี้ยังคงต่อสู้เพื่อนําไปทั่วไปเป็นเรียงลําดับยาวมาก. เราเสนอวิธีการฝึกอบรม YaRN แบบสุ่ม ที่ช่วยปรับปรุงความยาวทั่วไปโดยการรวมการขยายตําแหน่งจาก YaRN กับการรหัสตําแหน่งสุ่ม.\n\nและหลักสูตรระยะยาว. ระหว่างการฝึกอบรมข้อมูลในสภาพสั้น โทคอนได้รับการมอบหมาย YaRN โคดิ้งตําแหน่งจากระยะตําแหน่งที่ใหญ่กว่า, ทำให้รุ่นถูกเผชิญกับการแสดงตําแหน่งนอกการกระจายแม้กระทั่งในข้อมูลในสภาพสั้น. เราประเมิน YaRN แรนโดมิสแซมบนสองเทียบเทียบของการคิดในสภาพยนต์ยาวที่ท้าทาย คือ BABILong และ Multi-Round Coreference Resolution (MRCR).\n\nเมื่อฝึกสอนข้อมูลที่มีสภาพสภาพ <8K, YaRN แรนโดมิสแซมปรับปรุงผลการคิดในความยาวของสภาพสภาพจาก 16K ถึง 128K อย่างต่อเนื่อง. และมีผลงานที่ดีกว่าการปรับปรุงแบบดีแบบมาตรฐาน โดยผลประโยชน์ที่ใหญ่ที่สุดจะปรากฏในระยะยาวที่เกินการกระจาย.",
+  "useful_phrases": [
+    {
+      "english": "are typically pretrained on short",
+      "kind": "collocation",
+      "source_sentence": "Large language models (LLMs) are typically pretrained on short sequences and then extended to work on longer sequences with additional training.",
+      "thai": "โดยทั่วไปได้รับการฝึกซ้อมก่อนในช่วงสั้น."
+    },
+    {
+      "english": "extended to work on longer",
+      "kind": "collocation",
+      "source_sentence": "Large language models (LLMs) are typically pretrained on short sequences and then extended to work on longer sequences with additional training.",
+      "thai": "ขยายการทํางานในเวลานานกว่า."
+    },
+    {
+      "english": "training method that improves length",
+      "kind": "collocation",
+      "source_sentence": "We propose Randomized YaRN, a training method that improves length generalization by combining YaRN-based positional extrapolation with randomized positional encoding.",
+      "thai": "วิธีการฝึกอบรมที่ปรับปรุงความยาว."
+    },
+    {
+      "english": "combining YaRN-based positional extrapolation with",
+      "kind": "collocation",
+      "source_sentence": "We propose Randomized YaRN, a training method that improves length generalization by combining YaRN-based positional extrapolation with randomized positional encoding.",
+      "thai": "การรวมการคัดแยกตําแหน่งจาก YaRN กับ."
+    },
+    {
+      "english": "randomized positional encoding",
+      "kind": "collocation",
+      "source_sentence": "We propose Randomized YaRN, a training method that improves length generalization by combining YaRN-based positional extrapolation with randomized positional encoding.",
+      "thai": "การรหัสตําแหน่งแบบสุ่ม."
+    }
+  ],
   "word_translations": {
     "a": "",
     "additional": "เพิ่มเติม",
@@ -189,6 +221,13 @@
   "content_type": "research summary",
   "source_url": "http://arxiv.org/abs/2606.23687v1",
   "author": "Manas Mehta, Fangcong Yin, Greg Durrett",
+  "readingType": "easy_news",
+  "isFallback": false,
+  "isRealNews": true,
+  "contentType": "news_article",
+  "sourceName": "arXiv",
+  "disclaimerEn": "",
+  "disclaimerTh": "",
   "published": "2026-06-22T17:59:53+00:00",
   "published_date": "2026-06-21",
   "image": {
@@ -210,5 +249,5 @@
     "credit_url": ""
   },
   "audio_cache_path": "data/audio/2026-06-21/1a87254f1ebf7c9697-b1.wav",
-  "generated_at": "2026-06-25T05:29:15.315875+00:00"
+  "generated_at": "2026-06-28T02:33:22.957998+00:00"
 }

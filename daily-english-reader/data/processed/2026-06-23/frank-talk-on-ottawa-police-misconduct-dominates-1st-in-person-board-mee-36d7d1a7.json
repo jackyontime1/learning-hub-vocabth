@@ -1,5 +1,5 @@
 {
-  "schema_version": 9,
+  "schema_version": 10,
   "id": "36d7d1a7a649fa18b1",
   "slug": "frank-talk-on-ottawa-police-misconduct-dominates-1st-in-person-board-mee-36d7d1a7",
   "level": "B2",
@@ -7,7 +7,39 @@
   "description": "Gender-based misconduct and what to do about it dominated the discussion at the first in-person Ottawa police oversight board meeting in more than three years Monday night.",
   "text": "Gender-based misconduct and what to do about it dominated the discussion at the first in-person Ottawa police oversight board meeting in more than three years Monday night. Ottawa police announce plan to combat sexual misconduct in the force Gender-based misconduct within the Ottawa Police Service and what to do about it dominated the discussion at the first in-person police oversight board meeting in more than three years on Monday. Among the recent CBC News reporting on the problem are allegations of sexual assault and sexual harassment made by college students against an Ottawa police sergeant who died by suicide in March, and an allegation of sexual assault against Ottawa police union president Matthew Cox being investigated by Ontario's police watchdog.\n\nAfter a decade of assessments, recommendations, promises and millions of dollars spent by service to end this kind of misconduct, some current and former employees of the force have told CBC News that they didn't think meaningful change was coming.",
   "speech_text": "Frank talk on Ottawa police misconduct dominates 1st in-person board meeting in years.\n\nGender-based misconduct and what to do about it dominated the discussion at the first in-person Ottawa police oversight board meeting in more than three years Monday night. Ottawa police announce plan to combat sexual misconduct in the force Gender-based misconduct within the Ottawa Police Service and what to do about it dominated the discussion at the first in-person police oversight board meeting in more than three years on Monday. Among the recent CBC News reporting on the problem are allegations of sexual assault and sexual harassment made by college students against an Ottawa police sergeant who died by suicide in March, and an allegation of sexual assault against Ottawa police union president Matthew Cox being investigated by Ontario's police watchdog.\n\nAfter a decade of assessments, recommendations, promises and millions of dollars spent by service to end this kind of misconduct, some current and former employees of the force have told CBC News that they didn't think meaningful change was coming.",
-  "thai_text": "ข่าวนี้มาจาก CBC News อยู่ในหมวดข่าวแคนาดา และถูกเรียบเรียงเป็นระดับ B2. เนื้อหาข่าวคือ\n\nการกระทำผิดตามเพศ และสิ่งที่ควรทำต่อมัน เป็นหลักในการหารือในประชุมคณะกรรมการฝ่ายควบคุมตํารวจออตตาวา ครั้งแรกในเวลากว่าสามปี เมื่อคืนวันจันทร์. ตํารวจออตตาวา ประกาศแผนการปราบปรามการผิดปกติทางเพศในกองทัพบก การผิดปกติทางเพศในบริการตํารวจออตตาวา และสิ่งที่ควรทำเกี่ยวกับมัน. รายงานข่าวของซีบีซี นิวส์ล่าสุดเกี่ยวกับปัญหานี้ มีข้อกล่าวหาเกี่ยวกับการโจมตีทางเพศและการข่มขืนทางเพศ โดยนักเรียนมหาวิทยาลัย ใส่ซาร์จานตํารวจออตตตาวา ที่เสียชีวิตด้วยการฆ่าตัวตายในเดือนมีนาคม และข้อกล่าวหาเกี่ยวกับการโจมตีทางเพศต่อประธานสหกรณ์ตํารวจออตตตาวา เมธิว คอ็กซ์. ถูกตํารวจออนโตเรีย ตรวจสอบ.\n\nหลังจากการประเมิน, คําแนะนํา, คําสัญญากับล้านดอลลาร์ที่บริการใช้จ่ายเพื่อยุติการกระทำผิดประเภทนี้.",
+  "thai_text": "การกระทำผิดตามเพศ และสิ่งที่ควรทำต่อมัน เป็นหลักในการหารือในประชุมคณะกรรมการฝ่ายควบคุมตํารวจออตตาวา ครั้งแรกในเวลากว่าสามปี เมื่อคืนวันจันทร์. ตํารวจออตตาวา ประกาศแผนการปราบปรามการผิดปกติทางเพศในกองทัพบก การผิดปกติทางเพศในบริการตํารวจออตตาวา และสิ่งที่ควรทำเกี่ยวกับมัน. รายงานข่าวของซีบีซี นิวส์ล่าสุดเกี่ยวกับปัญหานี้ มีข้อกล่าวหาเกี่ยวกับการโจมตีทางเพศและการข่มขืนทางเพศ โดยนักเรียนมหาวิทยาลัย ใส่ซาร์จานตํารวจออตตตาวา ที่เสียชีวิตด้วยการฆ่าตัวตายในเดือนมีนาคม และข้อกล่าวหาเกี่ยวกับการโจมตีทางเพศต่อประธานสหกรณ์ตํารวจออตตตาวา เมธิว คอ็กซ์. ถูกตํารวจออนโตเรีย ตรวจสอบ.\n\nหลังจากการประเมิน, คําแนะนํา, คําสัญญากับล้านดอลลาร์ที่บริการใช้จ่ายเพื่อยุติการกระทำผิดประเภทนี้.",
+  "useful_phrases": [
+    {
+      "english": "based misconduct and what to",
+      "kind": "collocation",
+      "source_sentence": "Gender-based misconduct and what to do about it dominated the discussion at the first in-person Ottawa police oversight board meeting in more than three years Monday night.",
+      "thai": "ความผิดปกติที่เนื่องจาก."
+    },
+    {
+      "english": "dominated the discussion at the",
+      "kind": "collocation",
+      "source_sentence": "Gender-based misconduct and what to do about it dominated the discussion at the first in-person Ottawa police oversight board meeting in more than three years Monday night.",
+      "thai": "เป็นหลักการในการเจรจาที่."
+    },
+    {
+      "english": "meeting in more than three",
+      "kind": "collocation",
+      "source_sentence": "Gender-based misconduct and what to do about it dominated the discussion at the first in-person Ottawa police oversight board meeting in more than three years Monday night.",
+      "thai": "ประชุมในเวลาไม่เกิน 3 ชั่วโมง."
+    },
+    {
+      "english": "based misconduct within the Ottawa",
+      "kind": "collocation",
+      "source_sentence": "Ottawa police announce plan to combat sexual misconduct in the force Gender-based misconduct within the Ottawa Police Service and what to do about it dominated the discussion at the first in-person police oversight board meeting in more than three years on Monday.",
+      "thai": "ความผิดปกติภายในออตตาวา."
+    },
+    {
+      "english": "reporting on the problem are",
+      "kind": "collocation",
+      "source_sentence": "Among the recent CBC News reporting on the problem are allegations of sexual assault and sexual harassment made by college students against an Ottawa police sergeant who died by suicide in March, and an allegation of sexual assault against Ottawa police union president Matthew Cox being investigated by Ontario's police watchdog.",
+      "thai": "การรายงานปัญหา."
+    }
+  ],
   "word_translations": {
     "a": "",
     "about": "เกี่ยวกับ",
@@ -199,6 +231,13 @@
   "content_type": "rss news summary",
   "source_url": "https://www.cbc.ca/news/canada/ottawa/ottawa-police-workplace-safety-misconduct-board-meeting-9.7244820?cmp=rss",
   "author": "CBC News",
+  "readingType": "real_news",
+  "isFallback": false,
+  "isRealNews": true,
+  "contentType": "news_article",
+  "sourceName": "CBC News",
+  "disclaimerEn": "",
+  "disclaimerTh": "",
   "published": "2026-06-23T12:27:44+00:00",
   "published_date": "2026-06-23",
   "image": {
@@ -220,5 +259,5 @@
     "credit_url": ""
   },
   "audio_cache_path": "data/audio/2026-06-23/36d7d1a7a649fa18b1-b2.wav",
-  "generated_at": "2026-06-25T04:52:07.631667+00:00"
+  "generated_at": "2026-06-28T02:31:18.098817+00:00"
 }

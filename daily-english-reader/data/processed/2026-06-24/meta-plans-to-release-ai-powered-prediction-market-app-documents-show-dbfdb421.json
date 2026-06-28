@@ -1,5 +1,5 @@
 {
-  "schema_version": 9,
+  "schema_version": 10,
   "id": "dbfdb421752ed99d0d",
   "slug": "meta-plans-to-release-ai-powered-prediction-market-app-documents-show-dbfdb421",
   "level": "B1",
@@ -7,7 +7,39 @@
   "description": "The company is building an app separate from Facebook and Instagram where people can wager on the outcome of real-world events, using \"play money.\"",
   "text": "The company is building an app separate from Facebook and Instagram where people can wager on the outcome of real-world events, using \"play money.\" Meta is planning to launch its own prediction market app to compete with companies like Kalshi and Polymarket in a booming sector that some analysts project could become a $1 trillion industry in the coming years. Meta CEO Mark Zuckerberg has instructed a team to start building a standalone app called Arena where people can guess the outcome of real-world events, according to two employees who were not authorized to speak publicly about the project. Meta's plans to build a prediction market app were first reported by The New York Times.",
   "speech_text": "Meta plans to release AI-powered prediction market app, documents show.\n\nThe company is building an app separate from Facebook and Instagram where people can wager on the outcome of real-world events, using \"play money.\" Meta is planning to launch its own prediction market app to compete with companies like Kalshi and Polymarket in a booming sector that some analysts project could become a $1 trillion industry in the coming years. Meta CEO Mark Zuckerberg has instructed a team to start building a standalone app called Arena where people can guess the outcome of real-world events, according to two employees who were not authorized to speak publicly about the project. Meta's plans to build a prediction market app were first reported by The New York Times.",
-  "thai_text": "ข่าวนี้มาจาก NPR อยู่ในหมวดธุรกิจและเศรษฐกิจ และถูกเรียบเรียงเป็นระดับ B1. เนื้อหาข่าวคือ\n\nบริษัทกําลังสร้างแอปพลิเคชั่นที่แยกจากเฟซบุ๊ค และอินสตาแกรม โดยผู้คนทำได้แทงบอลได้ในผลงานของเหตุการณ์ในโลกจริง โดยใช้ \"เงินเล่น\" Meta กําลังวางแผนที่จะเปิดแอปพลิเคชั่นตลาดการคาดการณ์ของตัวเอง เพื่อแข่งขันกับบริษัทอย่าง Kalshi และ Polymarket ในช่วงที่กําลังเจริญเจริญ. ภาคที่นักวิเคราะห์บางคนคาดว่าจะกลายเป็นอุตสาหกรรม 1 ทริล้านดอลลาร์ในช่วงปีหน้า. มาร์ค ซูเกอร์เบิร์ก (Mark Zuckerberg) กรรมการผู้จัดการใหญ่ของเมตา (Meta) ได้สั่งให้ทีมงานเริ่มสร้างแอปพลิเคชั่นที่ตั้งชื่อว่า Arena ที่ผู้คนทำได้คาดเดาผลของเหตุการณ์ในโลกจริงได้. โปรแกรมของเมตาในการสร้างแอปพลิเคชันตลาดการคาดการณ์ถูกรายงานครั้งแรกโดย นิวยอร์คไทม์.",
+  "thai_text": "บริษัทกําลังสร้างแอปพลิเคชั่นที่แยกจากเฟซบุ๊ค และอินสตาแกรม โดยผู้คนทำได้แทงบอลได้ในผลงานของเหตุการณ์ในโลกจริง โดยใช้ \"เงินเล่น\" Meta กําลังวางแผนที่จะเปิดแอปพลิเคชั่นตลาดการคาดการณ์ของตัวเอง เพื่อแข่งขันกับบริษัทอย่าง Kalshi และ Polymarket ในช่วงที่กําลังเจริญเจริญ. ภาคที่นักวิเคราะห์บางคนคาดว่าจะกลายเป็นอุตสาหกรรม 1 ทริล้านดอลลาร์ในช่วงปีหน้า. มาร์ค ซูเกอร์เบิร์ก (Mark Zuckerberg) กรรมการผู้จัดการใหญ่ของเมตา (Meta) ได้สั่งให้ทีมงานเริ่มสร้างแอปพลิเคชั่นที่ตั้งชื่อว่า Arena ที่ผู้คนทำได้คาดเดาผลของเหตุการณ์ในโลกจริงได้. โปรแกรมของเมตาในการสร้างแอปพลิเคชันตลาดการคาดการณ์ถูกรายงานครั้งแรกโดย นิวยอร์คไทม์.",
+  "useful_phrases": [
+    {
+      "english": "is building an app separate",
+      "kind": "collocation",
+      "source_sentence": "The company is building an app separate from Facebook and Instagram where people can wager on the outcome of real-world events, using \"play money.\" Meta is planning to launch its own prediction market app to compete with companies like Kalshi and Polymarket in a booming sector that some analysts project could become a $1 trillion industry in the coming years.",
+      "thai": "กําลังสร้างแอปแบบแยก."
+    },
+    {
+      "english": "can wager on the outcome",
+      "kind": "collocation",
+      "source_sentence": "The company is building an app separate from Facebook and Instagram where people can wager on the outcome of real-world events, using \"play money.\" Meta is planning to launch its own prediction market app to compete with companies like Kalshi and Polymarket in a booming sector that some analysts project could become a $1 trillion industry in the coming years.",
+      "thai": "สามารถแทงบอลได้."
+    },
+    {
+      "english": "is planning to launch its",
+      "kind": "collocation",
+      "source_sentence": "The company is building an app separate from Facebook and Instagram where people can wager on the outcome of real-world events, using \"play money.\" Meta is planning to launch its own prediction market app to compete with companies like Kalshi and Polymarket in a booming sector that some analysts project could become a $1 trillion industry in the coming years.",
+      "thai": "มีแผนที่จะเปิดตัว."
+    },
+    {
+      "english": "booming sector that some analysts",
+      "kind": "collocation",
+      "source_sentence": "The company is building an app separate from Facebook and Instagram where people can wager on the outcome of real-world events, using \"play money.\" Meta is planning to launch its own prediction market app to compete with companies like Kalshi and Polymarket in a booming sector that some analysts project could become a $1 trillion industry in the coming years.",
+      "thai": "ภาคที่กําลังเจริญเจริญ ที่นักวิเคราะห์บางคน."
+    },
+    {
+      "english": "could become a",
+      "kind": "collocation",
+      "source_sentence": "The company is building an app separate from Facebook and Instagram where people can wager on the outcome of real-world events, using \"play money.\" Meta is planning to launch its own prediction market app to compete with companies like Kalshi and Polymarket in a booming sector that some analysts project could become a $1 trillion industry in the coming years.",
+      "thai": "อาจจะกลายเป็น."
+    }
+  ],
   "word_translations": {
     "a": "",
     "about": "เกี่ยวกับ",
@@ -179,6 +211,13 @@
   "content_type": "rss news summary",
   "source_url": "https://www.npr.org/2026/06/24/nx-s1-5869486/meta-prediction-market-app-ai",
   "author": "NPR",
+  "readingType": "easy_news",
+  "isFallback": false,
+  "isRealNews": true,
+  "contentType": "news_article",
+  "sourceName": "NPR",
+  "disclaimerEn": "",
+  "disclaimerTh": "",
   "published": "2026-06-24T18:39:06+00:00",
   "published_date": "2026-06-24",
   "image": {
@@ -200,5 +239,5 @@
     "credit_url": ""
   },
   "audio_cache_path": "data/audio/2026-06-24/dbfdb421752ed99d0d-b1.wav",
-  "generated_at": "2026-06-25T04:34:03.302800+00:00"
+  "generated_at": "2026-06-28T02:30:08.960560+00:00"
 }

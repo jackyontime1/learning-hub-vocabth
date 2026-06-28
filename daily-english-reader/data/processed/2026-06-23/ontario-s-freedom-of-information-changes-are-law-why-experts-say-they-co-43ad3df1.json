@@ -1,5 +1,5 @@
 {
-  "schema_version": 9,
+  "schema_version": 10,
   "id": "43ad3df16cc28b2dd1",
   "slug": "ontario-s-freedom-of-information-changes-are-law-why-experts-say-they-co-43ad3df1",
   "level": "B2",
@@ -7,7 +7,33 @@
   "description": "The reality of Premier Doug Ford’s changes to Ontario’s freedom of information system are beginning to take hold as rejections and denials make their way to requesters.",
   "text": "The reality of Premier Doug Ford’s changes to Ontario’s freedom of information system are beginning to take hold as rejections and denials make their way to requesters. The Ford government announced the changes exempting the Premier, his cabinet, and their staff from FOI laws in March and passed the bill a month later.",
   "speech_text": "Ontario's freedom of information changes are law. Why experts say they could hurt the government.\n\nThe reality of Premier Doug Ford’s changes to Ontario’s freedom of information system are beginning to take hold as rejections and denials make their way to requesters. The Ford government announced the changes exempting the Premier, his cabinet, and their staff from FOI laws in March and passed the bill a month later.",
-  "thai_text": "ข่าวนี้มาจาก CBC News อยู่ในหมวดข่าวแคนาดา และถูกเรียบเรียงเป็นระดับ B2. เนื้อหาข่าวคือ\n\nความเป็นจริงของรัฐมนตรี ดั๊ก ฟอร์ด การเปลี่ยนแปลงในระบบเสรีภาพข้อมูลของออนโตเรีย เริ่มเริ่มมีอํานาจขณะที่การปฏิเสธและการปฏิเสธทำให้ผู้ขอได้. รัฐบาลฟอร์ดประกาศการเปลี่ยนแปลงที่ยกเว้นนายกรัฐมนตรี คณะรัฐมนตรี และบุคลากรจากกฎหมาย FOI ในเดือนมีนาคม และผ่านกฎหมายภายในเดือน.",
+  "thai_text": "ความเป็นจริงของรัฐมนตรี ดั๊ก ฟอร์ด การเปลี่ยนแปลงในระบบเสรีภาพข้อมูลของออนโตเรีย เริ่มเริ่มมีอํานาจขณะที่การปฏิเสธและการปฏิเสธทำให้ผู้ขอได้. รัฐบาลฟอร์ดประกาศการเปลี่ยนแปลงที่ยกเว้นนายกรัฐมนตรี คณะรัฐมนตรี และบุคลากรจากกฎหมาย FOI ในเดือนมีนาคม และผ่านกฎหมายภายในเดือน.",
+  "useful_phrases": [
+    {
+      "english": "are beginning to take hold",
+      "kind": "collocation",
+      "source_sentence": "The reality of Premier Doug Ford’s changes to Ontario’s freedom of information system are beginning to take hold as rejections and denials make their way to requesters.",
+      "thai": "เริ่มขึ้น."
+    },
+    {
+      "english": "announced the changes exempting the",
+      "kind": "collocation",
+      "source_sentence": "The Ford government announced the changes exempting the Premier, his cabinet, and their staff from FOI laws in March and passed the bill a month later.",
+      "thai": "ประกาศการเปลี่ยนแปลงที่ยกเว้น."
+    },
+    {
+      "english": "passed the bill a month",
+      "kind": "collocation",
+      "source_sentence": "The Ford government announced the changes exempting the Premier, his cabinet, and their staff from FOI laws in March and passed the bill a month later.",
+      "thai": "ผ่านบิล 1 เดือน."
+    },
+    {
+      "english": "The Ford government announced the changes exempting",
+      "kind": "useful_sentence",
+      "source_sentence": "The Ford government announced the changes exempting the Premier, his cabinet, and their staff from FOI laws in March and passed the bill a month later.",
+      "thai": "รัฐบาลฟอร์ด ประกาศการเปลี่ยนแปลง."
+    }
+  ],
   "word_translations": {
     "a": "",
     "and": "และ",
@@ -99,6 +125,13 @@
   "content_type": "rss news summary",
   "source_url": "https://www.cbc.ca/news/canada/toronto/ford-foi-rejections-continue-9.7244832?cmp=rss",
   "author": "CBC News",
+  "readingType": "real_news",
+  "isFallback": false,
+  "isRealNews": true,
+  "contentType": "news_article",
+  "sourceName": "CBC News",
+  "disclaimerEn": "",
+  "disclaimerTh": "",
   "published": "2026-06-23T08:00:00+00:00",
   "published_date": "2026-06-23",
   "image": {
@@ -120,5 +153,5 @@
     "credit_url": ""
   },
   "audio_cache_path": "data/audio/2026-06-23/43ad3df16cc28b2dd1-b2.wav",
-  "generated_at": "2026-06-25T04:50:50.072578+00:00"
+  "generated_at": "2026-06-28T02:31:22.963861+00:00"
 }

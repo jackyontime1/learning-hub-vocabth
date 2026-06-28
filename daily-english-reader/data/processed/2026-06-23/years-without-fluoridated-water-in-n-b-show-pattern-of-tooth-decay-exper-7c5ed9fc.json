@@ -1,5 +1,5 @@
 {
-  "schema_version": 9,
+  "schema_version": 10,
   "id": "7c5ed9fcfd6436c2a8",
   "slug": "years-without-fluoridated-water-in-n-b-show-pattern-of-tooth-decay-exper-7c5ed9fc",
   "level": "B1",
@@ -7,7 +7,39 @@
   "description": "After more than a decade without fluoridated water in Saint John, the dental community is seeing a surge in tooth decay among young people.",
   "text": "After more than a decade without fluoridated water in Saint John, the dental community is seeing a surge in tooth decay among young people. Dr. Kelly Keyes operates a busy dental practice in Saint John, having treated patients of all ages for three decades.\n\nBut a decline in the oral health of her younger patients is a growing concern. Those patients sometimes need treatment in hospital, which comes after a lengthy waiting period, adding to the overall strain on the health-care system, she said. Keyes said the great equalizer in oral health care was the addition of fluoride in the city’s drinking water in the 1980s, protecting developing teeth from decay by strengthening enamel.\n\nAnd suppressing plaque bacteria. But as the Port City's financial health came under increasing pressure, councillors looking for easy savings decided to cut the fluoridation program.",
   "speech_text": "Years without fluoridated water in N.B. show pattern of tooth decay experts warned about.\n\nAfter more than a decade without fluoridated water in Saint John, the dental community is seeing a surge in tooth decay among young people. Dr. Kelly Keyes operates a busy dental practice in Saint John, having treated patients of all ages for three decades.\n\nBut a decline in the oral health of her younger patients is a growing concern. Those patients sometimes need treatment in hospital, which comes after a lengthy waiting period, adding to the overall strain on the health-care system, she said. Keyes said the great equalizer in oral health care was the addition of fluoride in the city’s drinking water in the 1980s, protecting developing teeth from decay by strengthening enamel.\n\nAnd suppressing plaque bacteria. But as the Port City's financial health came under increasing pressure, councillors looking for easy savings decided to cut the fluoridation program.",
-  "thai_text": "ข่าวนี้มาจาก CBC News อยู่ในหมวดข่าวแคนาดา และถูกเรียบเรียงเป็นระดับ B1. เนื้อหาข่าวคือ\n\nหลังจากที่ไม่มีน้ําฟลอเรเดตในเซนต์จอห์นมากกว่าสิบปีแล้ว สังคมทันตแพทย์กําลังเห็นการสูญเสียฟันในกลุ่มเยาวชนเพิ่มขึ้น. เคลลี่ เคย์ส์ มีพนักงานทันตแพทย์ที่ซานต์จอห์น มีการรักษาผู้ป่วยทุกวัยมาถึงสามสิบปี.\n\nแต่การลดลงของสุขภาพปากของผู้ป่วยหนุ่ม ๆ ของเธอ เป็นความกังวลที่เพิ่มขึ้น. เธอบอกว่าคนไข้เหล่านั้นบางครั้งต้องการการรักษาในโรงพยาบาล ซึ่งเกิดขึ้นหลังจากเวลารอคอยยาวนาน เพิ่มความเครียดทั่วไปต่อระบบการดูแลสุขภาพ. เคย์ส์บอกว่าการสมดุลที่ดีในด้านการดูแลสุขภาพปาก คือการเพิ่มฟลูอไดในน้ําดื่มของเมืองในช่วงปี 1980 ป้องกันฟันที่กําลังพัฒนาจากการสลายโดยการเสริมความแข็งแกร่ง.\n\nและกดแบคทีเรียบล็อก. แต่เมื่อสุขภาพทางการเงินของเมืองท่าเรือได้รับความกดดันเพิ่มขึ้น นักเทศมนตรีที่มองหาการประหยัดง่าย ๆ จึงตัดสินใจตัดโครงการฟลอเรด.",
+  "thai_text": "หลังจากที่ไม่มีน้ําฟลอเรเดตในเซนต์จอห์นมากกว่าสิบปีแล้ว สังคมทันตแพทย์กําลังเห็นการสูญเสียฟันในกลุ่มเยาวชนเพิ่มขึ้น. เคลลี่ เคย์ส์ มีพนักงานทันตแพทย์ที่ซานต์จอห์น มีการรักษาผู้ป่วยทุกวัยมาถึงสามสิบปี.\n\nแต่การลดลงของสุขภาพปากของผู้ป่วยหนุ่ม ๆ ของเธอ เป็นความกังวลที่เพิ่มขึ้น. เธอบอกว่าคนไข้เหล่านั้นบางครั้งต้องการการรักษาในโรงพยาบาล ซึ่งเกิดขึ้นหลังจากเวลารอคอยยาวนาน เพิ่มความเครียดทั่วไปต่อระบบการดูแลสุขภาพ. เคย์ส์บอกว่าการสมดุลที่ดีในด้านการดูแลสุขภาพปาก คือการเพิ่มฟลูอไดในน้ําดื่มของเมืองในช่วงปี 1980 ป้องกันฟันที่กําลังพัฒนาจากการสลายโดยการเสริมความแข็งแกร่ง.\n\nและกดแบคทีเรียบล็อก. แต่เมื่อสุขภาพทางการเงินของเมืองท่าเรือได้รับความกดดันเพิ่มขึ้น นักเทศมนตรีที่มองหาการประหยัดง่าย ๆ จึงตัดสินใจตัดโครงการฟลอเรด.",
+  "useful_phrases": [
+    {
+      "english": "fluoridated water in Saint John",
+      "kind": "collocation",
+      "source_sentence": "After more than a decade without fluoridated water in Saint John, the dental community is seeing a surge in tooth decay among young people.",
+      "thai": "น้ําฟลอเรเดตในเซนต์จอห์น."
+    },
+    {
+      "english": "is seeing a surge in",
+      "kind": "collocation",
+      "source_sentence": "After more than a decade without fluoridated water in Saint John, the dental community is seeing a surge in tooth decay among young people.",
+      "thai": "กําลังเห็นการเพิ่มขึ้นใน."
+    },
+    {
+      "english": "having treated patients of all",
+      "kind": "collocation",
+      "source_sentence": "Kelly Keyes operates a busy dental practice in Saint John, having treated patients of all ages for three decades.",
+      "thai": "การรักษาผู้ป่วยทั้งหมด."
+    },
+    {
+      "english": "is a growing concern",
+      "kind": "collocation",
+      "source_sentence": "But a decline in the oral health of her younger patients is a growing concern.",
+      "thai": "เป็นความกังวลที่เพิ่มขึ้น."
+    },
+    {
+      "english": "need treatment in hospital",
+      "kind": "collocation",
+      "source_sentence": "Those patients sometimes need treatment in hospital, which comes after a lengthy waiting period, adding to the overall strain on the health-care system, she said.",
+      "thai": "ต้องรักษาในโรงพยาบาล."
+    }
+  ],
   "word_translations": {
     "a": "",
     "adding": "เพิ่ม",
@@ -217,6 +249,13 @@
   "content_type": "rss news summary",
   "source_url": "https://www.cbc.ca/news/canada/new-brunswick/years-without-fluoridated-water-shows-pattern-of-tooth-decay-experts-warned-about-9.7244350?cmp=rss",
   "author": "CBC News",
+  "readingType": "easy_news",
+  "isFallback": false,
+  "isRealNews": true,
+  "contentType": "news_article",
+  "sourceName": "CBC News",
+  "disclaimerEn": "",
+  "disclaimerTh": "",
   "published": "2026-06-23T09:00:00+00:00",
   "published_date": "2026-06-23",
   "image": {
@@ -238,5 +277,5 @@
     "credit_url": ""
   },
   "audio_cache_path": "data/audio/2026-06-23/7c5ed9fcfd6436c2a8-b1.wav",
-  "generated_at": "2026-06-25T04:53:21.124284+00:00"
+  "generated_at": "2026-06-28T02:31:12.518733+00:00"
 }

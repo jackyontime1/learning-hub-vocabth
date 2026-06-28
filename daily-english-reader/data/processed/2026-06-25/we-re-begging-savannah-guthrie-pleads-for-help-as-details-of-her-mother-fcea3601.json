@@ -1,5 +1,5 @@
 {
-  "schema_version": 9,
+  "schema_version": 10,
   "id": "fcea36016f59d98553",
   "slug": "we-re-begging-savannah-guthrie-pleads-for-help-as-details-of-her-mother-fcea3601",
   "level": "B2",
@@ -7,7 +7,27 @@
   "description": "Savannah Guthrie spoke on NBC's Today show about a note sent to the media in February regarding her missing mother, Nancy Guthrie, which claimed she had died.",
   "text": "Savannah Guthrie spoke on NBC's Today show about a note sent to the media in February regarding her missing mother, Nancy Guthrie, which claimed she had died.",
   "speech_text": "'We're begging'. Savannah Guthrie pleads for help as details of her mother’s case emerge.\n\nSavannah Guthrie spoke on NBC's Today show about a note sent to the media in February regarding her missing mother, Nancy Guthrie, which claimed she had died.",
-  "thai_text": "ข่าวนี้มาจาก BBC News อยู่ในหมวดข่าวต่างประเทศ และถูกเรียบเรียงเป็นระดับ B2. เนื้อหาข่าวคือ\n\nซาวานนา กูธรี กล่าวในรายการวันนี้ของ NBC เกี่ยวกับหมายเลขที่ส่งไปยังสื่อในเดือนกุมภาพันธ์เกี่ยวกับแม่หายไปของเธอ นานซี่ กูธรี ที่อ้างว่าเธอตาย.",
+  "thai_text": "ซาวานนา กูธรี กล่าวในรายการวันนี้ของ NBC เกี่ยวกับหมายเลขที่ส่งไปยังสื่อในเดือนกุมภาพันธ์เกี่ยวกับแม่หายไปของเธอ นานซี่ กูธรี ที่อ้างว่าเธอตาย.",
+  "useful_phrases": [
+    {
+      "english": "regarding her missing mother",
+      "kind": "collocation",
+      "source_sentence": "Savannah Guthrie spoke on NBC's Today show about a note sent to the media in February regarding her missing mother, Nancy Guthrie, which claimed she had died.",
+      "thai": "เกี่ยวกับแม่ของเธอที่หายไป."
+    },
+    {
+      "english": "claimed she had died",
+      "kind": "collocation",
+      "source_sentence": "Savannah Guthrie spoke on NBC's Today show about a note sent to the media in February regarding her missing mother, Nancy Guthrie, which claimed she had died.",
+      "thai": "อ้างว่าเธอตาย."
+    },
+    {
+      "english": "Savannah Guthrie spoke on NBC's Today show",
+      "kind": "useful_sentence",
+      "source_sentence": "Savannah Guthrie spoke on NBC's Today show about a note sent to the media in February regarding her missing mother, Nancy Guthrie, which claimed she had died.",
+      "thai": "ซาวานา กูธรีพูดในรายการวันนี้ของ NBC."
+    }
+  ],
   "word_translations": {
     "a": "",
     "about": "เกี่ยวกับ",
@@ -69,6 +89,13 @@
   "content_type": "rss news summary",
   "source_url": "https://www.bbc.co.uk/news/videos/cjdg1enzrk5o?at_medium=RSS&at_campaign=rss",
   "author": "BBC News",
+  "readingType": "real_news",
+  "isFallback": false,
+  "isRealNews": true,
+  "contentType": "news_article",
+  "sourceName": "BBC News",
+  "disclaimerEn": "",
+  "disclaimerTh": "",
   "published": "2026-06-23T16:41:44+00:00",
   "published_date": "2026-06-25",
   "image": {
@@ -90,5 +117,5 @@
     "credit_url": ""
   },
   "audio_cache_path": "data/audio/2026-06-25/fcea36016f59d98553-b2.wav",
-  "generated_at": "2026-06-25T04:26:35.710662+00:00"
+  "generated_at": "2026-06-28T02:29:05.206497+00:00"
 }

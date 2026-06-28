@@ -1,11 +1,12 @@
 {
   "status": "ready",
-  "started_at": "2026-06-27T15:00:33.022230+00:00",
+  "started_at": "2026-06-28T02:22:06.900200+00:00",
   "expected_toronto_date": "2026-06-27",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
   "skip_audio": true,
+  "require_full_translation": true,
   "required_story_count": 10,
   "required_levels": {
     "A1": 2,
@@ -14,36 +15,34 @@
     "B2": 2,
     "C1": 2
   },
-  "schema_version": 9,
+  "schema_version": 10,
   "candidate_rejections": [
     {
-      "article_id": "a81aba4bf37832840b",
-      "title": "King Charles won't live in Buckingham Palace after completion of £369M renovation",
-      "provider": "CBC News",
-      "level": "C1",
-      "reason": "RuntimeError: Full Thai translation unavailable for article a81aba4bf37832840b"
+      "article_id": "5d28b1e809b05f5ecb",
+      "title": "There's a beef about beef at the World Cup, as Argentina fans pour into Texas",
+      "provider": "NPR",
+      "level": "B2",
+      "reason": "RuntimeError: Full Thai translation unavailable for article 5d28b1e809b05f5ecb"
     },
     {
-      "article_id": "88e46654921fac2c48",
-      "title": "Registered sex offender pleads guilty to sexual assault of 3-year-old in Welland, Ont., other charges",
-      "provider": "CBC News",
+      "article_id": "c825ced9e666406230",
+      "title": "Severe Thunderstorm Watch issued June 24 at 10:19PM MDT until June 25 at 1:00AM MDT by NWS Goodland KS",
+      "provider": "US National Weather Service",
       "level": "C1",
-      "reason": "RuntimeError: Full Thai translation unavailable for article 88e46654921fac2c48"
+      "reason": "RuntimeError: Unable to produce 3 valid useful phrases for C1 reading"
     }
   ],
+  "practice_story_count": 28,
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
-    "nllb_retries": 3,
-    "quality_failures": 2,
+    "nllb_retries": 1,
+    "quality_failures": 1,
     "rejection_reasons": {
-      "repeated-junk-string": 1,
-      "suspiciously-long": 1,
-      "unexpected-non-thai-script": 2,
-      "missing-number:2025": 2
+      "unexpected-non-thai-script": 2
     }
   },
-  "completed_at": "2026-06-27T15:21:40.930094+00:00",
+  "completed_at": "2026-06-28T02:33:53.887154+00:00",
   "latest_date": "2026-06-27",
   "total_story_count": 70,
   "today_story_count": 10,
@@ -54,46 +53,32 @@
     "A2": 2,
     "A1": 2
   },
+  "reading_type_distribution": {
+    "advanced_real_news": 2,
+    "real_news": 2,
+    "easy_news": 2,
+    "daily_life_practice_story": 4
+  },
   "fallback_image_count": 10,
   "fallback_images": [
     {
-      "article_id": "677ecc786079545970",
-      "title": "It's not just Cape Verde: African soccer is having a World Cup moment",
+      "article_id": "a2786bf30fa972ed64",
+      "title": "Yukon fans celebrate hometown star Gavin McKenna's draft to the Maple Leafs",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "5dd453d0483bf382c8",
-      "title": "B.C. launches probe into StubHub over World Cup resale ticket fiasco",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "721ef539d0338a4784",
-      "title": "Bahrain accuses Iran of targeted drone attack after U.S. strikes Iran",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "19e40b2cdd45d05ba5",
-      "title": "This satellite is falling towards Earth, so scientists hatched a plan to give it a lil' push",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "b49c63470feda8828d",
-      "title": "Refining cobalt in Cobalt, Ont.? That's the plan for this northern Ontario town",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "d8d21133af816c4c47",
-      "title": "Israel and Lebanon sign framework agreement after US-brokered talks",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "604aa98be06569af5a",
-      "title": "Flash Flood Warning issued June 27 at 9:59AM CDT until June 27 at 1:45PM CDT by NWS Paducah KY",
+      "article_id": "155e6ef9aaaaadb74c",
+      "title": "OpenAI restricts release of newest ChatGPT model to Trump-approved group during testing period",
       "reason": "No usable free image candidate"
     },
     {
       "article_id": "9381fa20e5c381eee8",
       "title": "If a Lyme disease vaccine gets approved, how would it go over? We asked hunters",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "36725b74c8c9dee5ce",
+      "title": "Canadian Army holds sunset ceremony to deactivate 5th Division",
       "reason": "No usable free image candidate"
     },
     {
@@ -104,6 +89,26 @@
     {
       "article_id": "252ed46f459eac9efb",
       "title": "In Caracas, this feels like the hardest moment in Venezuela's modern history",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "bdb3aec66bac3baf48",
+      "title": "A Meeting with the Teacher",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "8fe464696c48b4953a",
+      "title": "Checking a Bank Transfer",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "0c653f2e822fd8c2da",
+      "title": "Waiting at the School Gate",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "7172cf1de8a4ed10b8",
+      "title": "A Walk in the Park",
       "reason": "No usable free image candidate"
     }
   ]

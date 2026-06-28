@@ -1,5 +1,5 @@
 {
-  "schema_version": 9,
+  "schema_version": 10,
   "id": "4bcf72f2b435e92cec",
   "slug": "routervla-turning-smoke-tests-into-supervision-for-heterogeneous-vla-sel-4bcf72f2",
   "level": "B1",
@@ -7,7 +7,39 @@
   "description": "We study whether pre-deployment evaluation rollouts can be reused to supervise policy selection. Robot teams routinely smoke test candidate vision-language-action (VLA) policies, then compress those trials into a global winner. RouterVLA evaluates this idea with outcome-disjoint cross-fitting: recorded probes build a profile for each frozen expert, and a separate trial scores the selected expert without entering its profile. Across 34,752 LIBERO-Plus rollout records, a transparent probe-success rule raises held-out success from 0.4686 to 0.6149, a +14.64pp gain. Under the scalar-only profiles studied here, learned scorers are statistically indistinguishable from this rule, showing that commissioning carries the routing value while extra scalar scorer capacity does not create it. Reusing the scored trial inflates the measured gain by $1.87\\times$, so credible ledger routing needs outcome separation; model scaling improves individual policies, while commissioning-aware routing improves the system built from them.",
   "text": "We study whether pre-deployment evaluation rollouts can be reused to supervise policy selection. Robot teams routinely smoke test candidate vision-language-action (VLA) policies, then compress those trials into a global winner. RouterVLA evaluates this idea with outcome-disjoint cross-fitting, recorded probes build a profile for each frozen expert.\n\nAnd a separate trial scores the selected expert without entering its profile. Across 34,752 LIBERO-Plus rollout records, a transparent probe-success rule raises held-out success from 0.4686 to 0.6149, a +14.64pp gain. Under the scalar-only profiles studied here, learned scorers are statistically indistinguishable from this rule, showing that commissioning carries the routing value.\n\nWhile extra scalar scorer capacity does not create it. Reusing the scored trial inflates the measured gain by $1.87\\times$, so credible ledger routing needs outcome separation, model scaling improves individual policies. While commissioning-aware routing improves the system built from them.",
   "speech_text": "RouterVLA: Turning Smoke Tests into Supervision for Heterogeneous VLA Selection.\n\nWe study whether pre-deployment evaluation rollouts can be reused to supervise policy selection. Robot teams routinely smoke test candidate vision-language-action (VLA) policies, then compress those trials into a global winner. RouterVLA evaluates this idea with outcome-disjoint cross-fitting, recorded probes build a profile for each frozen expert.\n\nAnd a separate trial scores the selected expert without entering its profile. Across 34,752 LIBERO-Plus rollout records, a transparent probe-success rule raises held-out success from 0.4686 to 0.6149, a +14.64pp gain. Under the scalar-only profiles studied here, learned scorers are statistically indistinguishable from this rule, showing that commissioning carries the routing value.\n\nWhile extra scalar scorer capacity does not create it. Reusing the scored trial inflates the measured gain by $1.87\\times$, so credible ledger routing needs outcome separation, model scaling improves individual policies. While commissioning-aware routing improves the system built from them.",
-  "thai_text": "ข่าวนี้มาจาก arXiv อยู่ในหมวดเทคโนโลยี และถูกเรียบเรียงเป็นระดับ B1. เนื้อหาข่าวคือ\n\nเราศึกษาว่าการลงประเมินก่อนการจัดจําหน่ายทำได้นําไปใช้อีกครั้งเพื่อควบคุมการเลือกนโยบายหรือไม่. ทีมหุ่นยนต์จะสูบบุหรี่นโยบายการทดสอบผู้สมัครการใช้ภาษาสายตา (VLA) แล้วสับซ้อนการทดลองเหล่านั้นให้เป็นผู้ชนะทั่วโลก. RouterVLA ประเมินแนวคิดนี้ ด้วยการสับสอดแบบแยกผล การบันทึกสํารวจสร้างโปรแกรมสำหรับผู้เชี่ยวชาญที่แข็งตัว.\n\nและการทดลองที่แยกแยก จะให้คะแนนให้กับผู้เชี่ยวชาญที่ได้รับการเลือก โดยไม่เข้าสู่โปรไฟล์. ผ่านสถิติการเปิดตัวของ LIBERO-Plus 34,752 รายการ กฎความสําเร็จของสํารวจที่โปร่งใสเพิ่มความสําเร็จจาก 0.4686 เป็น 0.6149 รายการ การเพิ่ม +14.64pp. ภายใต้โครงการที่วิจัยที่นี่เพียงแค่สกัลเลอร์ นักคะแนนที่เรียนรู้เป็นสถิติไม่แตกต่างจากกฎนี้ แสดงว่าการใช้งานมีค่าการส่งทาง.\n\nขณะที่ความทำได้ในการทำคะแนนเพิ่มเติม Scalar ไม่ได้สร้างมัน. การใช้งานใหม่ของการทดลองที่ได้รับคะแนนจะทำให้ผลประโยชน์ที่วัดเพิ่มขึ้นถึง $1.87 \\times $ ดังนั้นการเชื่อถือสมุดใหญ่ต้องแยกผลการออกแบบ การปรับขนาดแบบจะปรับปรุงนโยบายแต่ละคน. ขณะที่การใช้บริการโดยรู้สึ้ง ทำให้ระบบที่สร้างมาจากมันดีขึ้น.",
+  "thai_text": "เราศึกษาว่าการลงประเมินก่อนการจัดจําหน่ายทำได้นําไปใช้อีกครั้งเพื่อควบคุมการเลือกนโยบายหรือไม่. ทีมหุ่นยนต์จะสูบบุหรี่นโยบายการทดสอบผู้สมัครการใช้ภาษาสายตา (VLA) แล้วสับซ้อนการทดลองเหล่านั้นให้เป็นผู้ชนะทั่วโลก. RouterVLA ประเมินแนวคิดนี้ ด้วยการสับสอดแบบแยกผล การบันทึกสํารวจสร้างโปรแกรมสำหรับผู้เชี่ยวชาญที่แข็งตัว.\n\nและการทดลองที่แยกแยก จะให้คะแนนให้กับผู้เชี่ยวชาญที่ได้รับการเลือก โดยไม่เข้าสู่โปรไฟล์. ผ่านสถิติการเปิดตัวของ LIBERO-Plus 34,752 รายการ กฎความสําเร็จของสํารวจที่โปร่งใสเพิ่มความสําเร็จจาก 0.4686 เป็น 0.6149 รายการ การเพิ่ม +14.64pp. ภายใต้โครงการที่วิจัยที่นี่เพียงแค่สกัลเลอร์ นักคะแนนที่เรียนรู้เป็นสถิติไม่แตกต่างจากกฎนี้ แสดงว่าการใช้งานมีค่าการส่งทาง.\n\nขณะที่ความทำได้ในการทำคะแนนเพิ่มเติม Scalar ไม่ได้สร้างมัน. การใช้งานใหม่ของการทดลองที่ได้รับคะแนนจะทำให้ผลประโยชน์ที่วัดเพิ่มขึ้นถึง $1.87 \\times $ ดังนั้นการเชื่อถือสมุดใหญ่ต้องแยกผลการออกแบบ การปรับขนาดแบบจะปรับปรุงนโยบายแต่ละคน. ขณะที่การใช้บริการโดยรู้สึ้ง ทำให้ระบบที่สร้างมาจากมันดีขึ้น.",
+  "useful_phrases": [
+    {
+      "english": "can be reused to supervise",
+      "kind": "collocation",
+      "source_sentence": "We study whether pre-deployment evaluation rollouts can be reused to supervise policy selection.",
+      "thai": "สามารถนําไปใช้ใหม่เพื่อควบคุม."
+    },
+    {
+      "english": "recorded probes build a profile",
+      "kind": "collocation",
+      "source_sentence": "RouterVLA evaluates this idea with outcome-disjoint cross-fitting, recorded probes build a profile for each frozen expert.",
+      "thai": "จดหมายสํารวจสร้างโปรไฟล์."
+    },
+    {
+      "english": "selected expert without entering its",
+      "kind": "collocation",
+      "source_sentence": "And a separate trial scores the selected expert without entering its profile.",
+      "thai": "ผู้เชี่ยวชาญที่ได้รับการคัดเลือกโดยไม่เข้า."
+    },
+    {
+      "english": "learned scorers are statistically indistinguishable",
+      "kind": "collocation",
+      "source_sentence": "Under the scalar-only profiles studied here, learned scorers are statistically indistinguishable from this rule, showing that commissioning carries the routing value.",
+      "thai": "นักคะแนนที่เรียนรู้เป็นสถิติที่ไม่แตกต่างได้."
+    },
+    {
+      "english": "showing that commissioning carries the",
+      "kind": "collocation",
+      "source_sentence": "Under the scalar-only profiles studied here, learned scorers are statistically indistinguishable from this rule, showing that commissioning carries the routing value.",
+      "thai": "แสดงว่าการใช้งาน."
+    }
+  ],
   "word_translations": {
     "a": "",
     "across": "ข้าม",
@@ -239,6 +271,7 @@
   "content_type": "research summary",
   "source_url": "http://arxiv.org/abs/2606.27355v1",
   "author": "Xingyu Ren, Chugang Yi, Ge Ma, Youran Sun",
+  "readingType": "easy_news",
   "isFallback": false,
   "isRealNews": true,
   "contentType": "news_article",
@@ -266,5 +299,5 @@
     "credit_url": ""
   },
   "audio_cache_path": "data/audio/2026-06-26/4bcf72f2b435e92cec-b1.wav",
-  "generated_at": "2026-06-27T12:55:32.174706+00:00"
+  "generated_at": "2026-06-28T02:27:19.340076+00:00"
 }

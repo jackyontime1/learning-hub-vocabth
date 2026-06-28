@@ -1,5 +1,5 @@
 {
-  "schema_version": 9,
+  "schema_version": 10,
   "id": "92eea27e4b5c1c72da",
   "slug": "scalable-behavior-cloning-with-open-data-training-and-evaluation-92eea27e",
   "level": "B1",
@@ -7,7 +7,39 @@
   "description": "We introduce ABC, a fully open-source stack for manipulation with behavior cloning. At its core is ABC-130K: the largest open-source teleoperation dataset to date, featuring 3,500 hours of data spanning over 130K episodes across 195 diverse tasks. Furthermore, we open-source our accessible hardware setup, training infrastructure, and simulation pipeline. We also release 400 hours of sim-teleop data and provide a co-training recipe that produces correlated simulation and real-world evaluation, offering a reliable proxy for ablating model-design and training decisions before costly real-world evaluation. We explore various training recipes and compare common architectural choices for Diffusion Transformers (DiT) and Vision-Language-Action (VLA) models, grounding our findings in real-world evaluations. The resulting policies successfully execute dexterous tasks such as box folding and extracting credit cards from wallets. By providing a reproducible toolkit, we aim to place researchers on an equal footing, establishing the necessary foundation to learn the ABCs of Behavior Cloning together as a community.",
   "text": "We introduce ABC, a fully open-source stack for manipulation with behavior cloning. At its core is ABC-130K, the largest open-source teleoperation dataset to date, featuring 3,500 hours of data spanning over 130K episodes across 195 diverse tasks. Furthermore, we open-source our accessible hardware setup, training infrastructure, and simulation pipeline.\n\nWe also release 400 hours of sim-teleop data and provide a co-training recipe that produces correlated simulation. And real-world evaluation, offering a reliable proxy for ablating model-design and training decisions before costly real-world evaluation. We explore various training recipes and compare common architectural choices for Diffusion Transformers (DiT).\n\nAnd Vision-Language-Action (VLA) models, grounding our findings in real-world evaluations. The resulting policies successfully execute dexterous tasks such as box folding and extracting credit cards from wallets.",
   "speech_text": "Scalable Behavior Cloning with Open Data, Training, and Evaluation.\n\nWe introduce ABC, a fully open-source stack for manipulation with behavior cloning. At its core is ABC-130K, the largest open-source teleoperation dataset to date, featuring 3,500 hours of data spanning over 130K episodes across 195 diverse tasks. Furthermore, we open-source our accessible hardware setup, training infrastructure, and simulation pipeline.\n\nWe also release 400 hours of sim-teleop data and provide a co-training recipe that produces correlated simulation. And real-world evaluation, offering a reliable proxy for ablating model-design and training decisions before costly real-world evaluation. We explore various training recipes and compare common architectural choices for Diffusion Transformers (DiT).\n\nAnd Vision-Language-Action (VLA) models, grounding our findings in real-world evaluations. The resulting policies successfully execute dexterous tasks such as box folding and extracting credit cards from wallets.",
-  "thai_text": "ข่าวนี้มาจาก arXiv อยู่ในหมวดเทคโนโลยี และถูกเรียบเรียงเป็นระดับ B1. เนื้อหาข่าวคือ\n\nเรานําเสนอ ABC เป็นสแต๊กที่เปิดแหล่งครบครัน เพื่อการควบคุมด้วยการคลอนพฤติกรรม. หลักของมันคือ ABC-130K ซึ่งเป็นเซ็ตข้อมูลโทรปฏิบัติการเปิดแหล่งที่ใหญ่ที่สุดจนถึงปัจจุบัน โดยมีข้อมูล 3,500 ชั่วโมง ที่รวมถึง 130K ตอน ผ่านงาน 195 รายการที่หลากหลาย. ยิ่งไปกว่านั้น เราเปิดแหล่งการตั้งแฮร์ดแวร์ที่ทำได้เข้าถึงได้ สิ่งอํานวยความสะดวกในการฝึกอบรม และระบบการจําลอง.\n\nเรายังปล่อยข้อมูลจากซิม-เทเลอป 400 ชั่วโมง และให้สูตรการฝึกอบรมร่วมกันที่ผลิตการจําลองที่เกี่ยวข้อง. และการประเมินในโลกจริง ซึ่งเป็นการนําเสนอตัวแทนที่น่าเชื่อถือ ในการยกเลิกการตัดสินใจออกแบบและการฝึกอบรม ก่อนการประเมินในโลกจริงที่แพง. เราสํารวจสูตรการฝึกอบรมต่าง ๆ และเปรียบเทียบตัวเลือกสถาปัตยกรรมทั่วไปสำหรับเครื่องแปลงกระจาย (DiT).\n\nและรูปแบบ Vision-Language-Action (VLA) ที่พัฒนาผลการค้นพบของเรา. ปริญญาที่เกิดขึ้นได้สําเร็จในการดําเนินงานอย่างมีเกียรติ เช่น การพับกล่อง และการถอดบัตรเครดิตจากกระเป๋าเปลือก.",
+  "thai_text": "เรานําเสนอ ABC เป็นสแต๊กที่เปิดแหล่งครบครัน เพื่อการควบคุมด้วยการคลอนพฤติกรรม. หลักของมันคือ ABC-130K ซึ่งเป็นเซ็ตข้อมูลโทรปฏิบัติการเปิดแหล่งที่ใหญ่ที่สุดจนถึงปัจจุบัน โดยมีข้อมูล 3,500 ชั่วโมง ที่รวมถึง 130K ตอน ผ่านงาน 195 รายการที่หลากหลาย. ยิ่งไปกว่านั้น เราเปิดแหล่งการตั้งแฮร์ดแวร์ที่ทำได้เข้าถึงได้ สิ่งอํานวยความสะดวกในการฝึกอบรม และระบบการจําลอง.\n\nเรายังปล่อยข้อมูลจากซิม-เทเลอป 400 ชั่วโมง และให้สูตรการฝึกอบรมร่วมกันที่ผลิตการจําลองที่เกี่ยวข้อง. และการประเมินในโลกจริง ซึ่งเป็นการนําเสนอตัวแทนที่น่าเชื่อถือ ในการยกเลิกการตัดสินใจออกแบบและการฝึกอบรม ก่อนการประเมินในโลกจริงที่แพง. เราสํารวจสูตรการฝึกอบรมต่าง ๆ และเปรียบเทียบตัวเลือกสถาปัตยกรรมทั่วไปสำหรับเครื่องแปลงกระจาย (DiT).\n\nและรูปแบบ Vision-Language-Action (VLA) ที่พัฒนาผลการค้นพบของเรา. ปริญญาที่เกิดขึ้นได้สําเร็จในการดําเนินงานอย่างมีเกียรติ เช่น การพับกล่อง และการถอดบัตรเครดิตจากกระเป๋าเปลือก.",
+  "useful_phrases": [
+    {
+      "english": "training recipe that produces correlated",
+      "kind": "collocation",
+      "source_sentence": "We also release 400 hours of sim-teleop data and provide a co-training recipe that produces correlated simulation.",
+      "thai": "สูตรการฝึกอบรมที่ผลิตการสัมพันธ์."
+    },
+    {
+      "english": "offering a reliable proxy for",
+      "kind": "collocation",
+      "source_sentence": "And real-world evaluation, offering a reliable proxy for ablating model-design and training decisions before costly real-world evaluation.",
+      "thai": "ส่งตัวแทนที่น่าเชื่อถือสําหรับ."
+    },
+    {
+      "english": "ablating model-design and training decisions",
+      "kind": "collocation",
+      "source_sentence": "And real-world evaluation, offering a reliable proxy for ablating model-design and training decisions before costly real-world evaluation.",
+      "thai": "ยกเลิกการตัดสินใจออกแบบแบบและการอบรม."
+    },
+    {
+      "english": "training recipes and compare common",
+      "kind": "collocation",
+      "source_sentence": "We explore various training recipes and compare common architectural choices for Diffusion Transformers (DiT).",
+      "thai": "การฝึกอบรมสูตรและการเปรียบเทียบทั่วไป."
+    },
+    {
+      "english": "grounding our findings in real-world",
+      "kind": "collocation",
+      "source_sentence": "And Vision-Language-Action (VLA) models, grounding our findings in real-world evaluations.",
+      "thai": "พื้นฐานการค้นพบของเราในโลกจริง."
+    }
+  ],
   "word_translations": {
     "a": "",
     "abc": "",
@@ -203,6 +235,7 @@
   "content_type": "research summary",
   "source_url": "http://arxiv.org/abs/2606.27375v1",
   "author": "Arthur Allshire, Himanshu Gaurav Singh, Ritvik Singh, Adam Rashid, Hongsuk Choi, David McAllister, Justin Yu, Yiyuan Chen, Huang Huang, Pieter Abbeel, Xi Chen, Rocky Duan, Phillip Isola, Jitendra Malik, Fred Shentu, Guanya Shi, Philipp Wu, Angjoo Kanazawa",
+  "readingType": "easy_news",
   "isFallback": false,
   "isRealNews": true,
   "contentType": "news_article",
@@ -230,5 +263,5 @@
     "credit_url": ""
   },
   "audio_cache_path": "data/audio/2026-06-26/92eea27e4b5c1c72da-b1.wav",
-  "generated_at": "2026-06-27T12:57:01.383466+00:00"
+  "generated_at": "2026-06-28T02:27:13.177387+00:00"
 }

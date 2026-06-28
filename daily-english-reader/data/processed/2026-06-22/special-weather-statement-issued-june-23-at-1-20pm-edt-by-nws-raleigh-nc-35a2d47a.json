@@ -1,5 +1,5 @@
 {
-  "schema_version": 9,
+  "schema_version": 10,
   "id": "35a2d47a2831d3a4ba",
   "slug": "special-weather-statement-issued-june-23-at-1-20pm-edt-by-nws-raleigh-nc-35a2d47a",
   "level": "C1",
@@ -7,7 +7,33 @@
   "description": "At 120 PM EDT, Doppler radar was tracking strong thunderstorms along a line extending from 10 miles southeast of Boydton to near Norlina to near Henderson. Movement was east at 25 mph. HAZARD...Wind gusts up to 40 mph and pea size hail. SOURCE...Radar indicated. IMPACT...Gusty winds could knock down tree limbs and blow around unsecured objects. Minor hail damage to vegetation is possible. Locations impacted include... Henderson, Warrenton, Norlina, Littleton, Middleburg, Macon, Drewry, Lake Gaston, Wise, and Southpointe And Morningstar Marinas. This includes Interstate 85 between Mile Markers 215 and 233.",
   "text": "At 1:20 PM Eastern Daylight Time, Doppler radar was tracking strong thunderstorms along a line extending from 10 miles southeast of Boydton to near Norlina to near Henderson. Movement was east at 25 miles per hour. Hazard: Wind gusts up to 40 miles per hour and pea-sized hail.\n\nSource: Radar indicated. Impact: Gusty winds could knock down tree limbs and blow around unsecured objects. Minor hail damage to vegetation is possible.",
   "speech_text": "Special Weather Statement issued June 23 at 1:20PM EDT by NWS Raleigh NC.\n\nAt 1:20 PM Eastern Daylight Time, Doppler radar was tracking strong thunderstorms along a line extending from 10 miles southeast of Boydton to near Norlina to near Henderson. Movement was east at 25 miles per hour. Hazard: Wind gusts up to 40 miles per hour and pea-sized hail.\n\nSource: Radar indicated. Impact: Gusty winds could knock down tree limbs and blow around unsecured objects. Minor hail damage to vegetation is possible.",
-  "thai_text": "ข่าวนี้มาจาก US National Weather Service อยู่ในหมวดสิ่งแวดล้อม และถูกเรียบเรียงเป็นระดับ C1. เนื้อหาข่าวคือ\n\nเวลา 1:20 PM น. ตามเวลากลางวันตะวันออก ดอปปเลอร์เรดาร์ ติดตามฝนฟ้าคะนองอย่างแรง ตลอดเส้นทางยาวจาก 10 ไมล์์ทางตะวันออกเฉียงใต้ของบอยตัน ถึงใกล้ นอร์ลิน่า ถึงใกล้ เฮนเดอร์สัน. การเคลื่อนไหวเป็นตะวันออก 25 ไมล์ต่อชั่วโมง. อันตราย: ลมพัดสูงถึง 40 ไมล์ต่อชั่วโมง และหินทรายเล็กๆ.\n\nแหล่งข่าว: ราดาร์. ผลกระทบ: ลมแรง อาจ ทำ ให้ ต้นต้นไม้ ล้มลง และ ทำ ให้ สิ่ง ของ ที่ ไม่ มี ความ ปลอดภัย ล้ม โยง. ความเสียหายเล็ก ๆ น้อย ๆ ของฝนฟ้าคะนองต่อพืชพันธุ์เป็นไปได้.",
+  "thai_text": "เวลา 1:20 PM น. ตามเวลากลางวันตะวันออก ดอปปเลอร์เรดาร์ ติดตามฝนฟ้าคะนองอย่างแรง ตลอดเส้นทางยาวจาก 10 ไมล์์ทางตะวันออกเฉียงใต้ของบอยตัน ถึงใกล้ นอร์ลิน่า ถึงใกล้ เฮนเดอร์สัน. การเคลื่อนไหวเป็นตะวันออก 25 ไมล์ต่อชั่วโมง. อันตราย: ลมพัดสูงถึง 40 ไมล์ต่อชั่วโมง และหินทรายเล็กๆ.\n\nแหล่งข่าว: ราดาร์. ผลกระทบ: ลมแรง อาจ ทำ ให้ ต้นต้นไม้ ล้มลง และ ทำ ให้ สิ่ง ของ ที่ ไม่ มี ความ ปลอดภัย ล้ม โยง. ความเสียหายเล็ก ๆ น้อย ๆ ของฝนฟ้าคะนองต่อพืชพันธุ์เป็นไปได้.",
+  "useful_phrases": [
+    {
+      "english": "was tracking strong thunderstorms along",
+      "kind": "collocation",
+      "source_sentence": "At 1:20 PM Eastern Daylight Time, Doppler radar was tracking strong thunderstorms along a line extending from 10 miles southeast of Boydton to near Norlina to near Henderson.",
+      "thai": "กําลังติดตามฝนฟ้าคะนองที่แข็งแรง."
+    },
+    {
+      "english": "was east at",
+      "kind": "collocation",
+      "source_sentence": "Movement was east at 25 miles per hour.",
+      "thai": "เป็นทางตะวันออก."
+    },
+    {
+      "english": "could knock down tree limbs",
+      "kind": "collocation",
+      "source_sentence": "Impact: Gusty winds could knock down tree limbs and blow around unsecured objects.",
+      "thai": "สามารถทําลายขอบต้นไม้."
+    },
+    {
+      "english": "Minor hail damage to vegetation is possible",
+      "kind": "useful_sentence",
+      "source_sentence": "Minor hail damage to vegetation is possible.",
+      "thai": "ความเสียหายเล็ก ๆ น้อย ๆ ของฝนฟ้าคะนองต่อปืชพันธุ์เป็นไปได้."
+    }
+  ],
   "word_translations": {
     "a": "",
     "along": "ตาม",
@@ -125,6 +151,13 @@
   "content_type": "government weather alert",
   "source_url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.0dc8e0d1658f8c16d7fbda4b87c24a0b9d734ebe.001.1",
   "author": "National Weather Service",
+  "readingType": "advanced_real_news",
+  "isFallback": false,
+  "isRealNews": true,
+  "contentType": "news_article",
+  "sourceName": "US National Weather Service",
+  "disclaimerEn": "",
+  "disclaimerTh": "",
   "published": "2026-06-23T17:20:00+00:00",
   "published_date": "2026-06-22",
   "image": {
@@ -146,5 +179,5 @@
     "credit_url": ""
   },
   "audio_cache_path": "data/audio/2026-06-22/35a2d47a2831d3a4ba-c1.wav",
-  "generated_at": "2026-06-25T05:00:10.377909+00:00"
+  "generated_at": "2026-06-28T02:33:16.013990+00:00"
 }

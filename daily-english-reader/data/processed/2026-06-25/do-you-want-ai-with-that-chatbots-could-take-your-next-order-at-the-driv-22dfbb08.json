@@ -1,5 +1,5 @@
 {
-  "schema_version": 9,
+  "schema_version": 10,
   "id": "22dfbb08d70192d740",
   "slug": "do-you-want-ai-with-that-chatbots-could-take-your-next-order-at-the-driv-22dfbb08",
   "level": "B1",
@@ -7,7 +7,39 @@
   "description": "Across the United States, fast food chains are turning to AI to run their drive-thru counters - and Canada could be next. Companies say the technology now has higher accuracy than human employees - and some labour organizers worry it could displace fast food workers.",
   "text": "Across the United States, fast food chains are turning to AI to run their drive-thru counters, and Canada could be next. Companies say the technology now has higher accuracy than human employees, and some labour organizers worry it could displace fast food workers. A busy drive-thru in suburban Detroit looks like any other, until you inch close enough to hear the voice taking the order.\n\nAcross the United States, fast-food chains are turning to AI to run their drive-thru counters, and Canada could be next. Companies say the technology is now more accurate than human employees, while some labour organizers worry it could displace fast-food workers. AI drive-thrus first appeared as early as 2021, though many of the pilot projects were anything but smooth.",
   "speech_text": "Do you want AI with that? Chatbots could take your next order at the drive-thru.\n\nAcross the United States, fast food chains are turning to AI to run their drive-thru counters, and Canada could be next. Companies say the technology now has higher accuracy than human employees, and some labour organizers worry it could displace fast food workers. A busy drive-thru in suburban Detroit looks like any other, until you inch close enough to hear the voice taking the order.\n\nAcross the United States, fast-food chains are turning to AI to run their drive-thru counters, and Canada could be next. Companies say the technology is now more accurate than human employees, while some labour organizers worry it could displace fast-food workers. AI drive-thrus first appeared as early as 2021, though many of the pilot projects were anything but smooth.",
-  "thai_text": "ข่าวนี้มาจาก CBC News อยู่ในหมวดธุรกิจและเศรษฐกิจ และถูกเรียบเรียงเป็นระดับ B1. เนื้อหาข่าวคือ\n\nทั่วสหรัฐอเมริกา ร้านอาหารเร็วกําลังย้ายไปยัง AI เพื่อดําเนินการคอนเตอร์การขับเคลื่อนของตนเอง และแคนาดาอาจเป็นอันดับถัดไป. บริษัทบอกว่าเทคโนโลยีนี้ตอนนี้มีความแม่นยําสูงกว่าพนักงานมนุษย์ และผู้จัดงานบางคนกังวลว่ามันอาจทำให้พนักงาน fast food. การขับรถยนต์ที่จูงใจในเมืองเดโทรทบุรี ดูเหมือนคนอื่นๆ จนกว่าคุณจะใกล้พอที่จะได้ยินเสียงรับคําสั่ง.\n\nทั่วสหรัฐอเมริกา ร้านอาหารด่วนกําลังหันไปยัง AI เพื่อดําเนินการคอนเตอร์การขับเคลื่อนของตนเอง และแคนาดาอาจเป็นอันดับถัดไป. บริษัทบอกว่าเทคโนโลยีนี้ตอนนี้แม่นยํากว่าพนักงานมนุษย์ ขณะที่ผู้จัดงานบางคนกังวลว่ามันอาจทำให้พนักงาน fast food ถูกย้ายออกจากสถานที่. AI drive-thrus ได้ปรากฏขึ้นครั้งแรกตั้งแต่ปี 2021 แม้ว่าหลายๆโครงการทดลองจะไม่เรียบร้อย.",
+  "thai_text": "ทั่วสหรัฐอเมริกา ร้านอาหารเร็วกําลังย้ายไปยัง AI เพื่อดําเนินการคอนเตอร์การขับเคลื่อนของตนเอง และแคนาดาอาจเป็นอันดับถัดไป. บริษัทบอกว่าเทคโนโลยีนี้ตอนนี้มีความแม่นยําสูงกว่าพนักงานมนุษย์ และผู้จัดงานบางคนกังวลว่ามันอาจทำให้พนักงาน fast food. การขับรถยนต์ที่จูงใจในเมืองเดโทรทบุรี ดูเหมือนคนอื่นๆ จนกว่าคุณจะใกล้พอที่จะได้ยินเสียงรับคําสั่ง.\n\nทั่วสหรัฐอเมริกา ร้านอาหารด่วนกําลังหันไปยัง AI เพื่อดําเนินการคอนเตอร์การขับเคลื่อนของตนเอง และแคนาดาอาจเป็นอันดับถัดไป. บริษัทบอกว่าเทคโนโลยีนี้ตอนนี้แม่นยํากว่าพนักงานมนุษย์ ขณะที่ผู้จัดงานบางคนกังวลว่ามันอาจทำให้พนักงาน fast food ถูกย้ายออกจากสถานที่. AI drive-thrus ได้ปรากฏขึ้นครั้งแรกตั้งแต่ปี 2021 แม้ว่าหลายๆโครงการทดลองจะไม่เรียบร้อย.",
+  "useful_phrases": [
+    {
+      "english": "are turning to AI to",
+      "kind": "collocation",
+      "source_sentence": "Across the United States, fast food chains are turning to AI to run their drive-thru counters, and Canada could be next.",
+      "thai": "เปลี่ยนไปยัง AI เพื่อ."
+    },
+    {
+      "english": "could be next",
+      "kind": "collocation",
+      "source_sentence": "Across the United States, fast food chains are turning to AI to run their drive-thru counters, and Canada could be next.",
+      "thai": "อาจจะเป็นคนต่อไป."
+    },
+    {
+      "english": "has higher accuracy than human",
+      "kind": "collocation",
+      "source_sentence": "Companies say the technology now has higher accuracy than human employees, and some labour organizers worry it could displace fast food workers.",
+      "thai": "มีความแม่นยําสูงกว่ามนุษย์."
+    },
+    {
+      "english": "could displace fast food workers",
+      "kind": "collocation",
+      "source_sentence": "Companies say the technology now has higher accuracy than human employees, and some labour organizers worry it could displace fast food workers.",
+      "thai": "อาจทําให้คนทํางานใน fast food."
+    },
+    {
+      "english": "taking the order",
+      "kind": "collocation",
+      "source_sentence": "A busy drive-thru in suburban Detroit looks like any other, until you inch close enough to hear the voice taking the order.",
+      "thai": "รับคําสั่ง."
+    }
+  ],
   "word_translations": {
     "a": "",
     "accuracy": "",
@@ -165,6 +197,13 @@
   "content_type": "rss news summary",
   "source_url": "https://www.cbc.ca/news/business/ai-chatbot-drive-thru-9.7245215?cmp=rss",
   "author": "CBC News",
+  "readingType": "easy_news",
+  "isFallback": false,
+  "isRealNews": true,
+  "contentType": "news_article",
+  "sourceName": "CBC News",
+  "disclaimerEn": "",
+  "disclaimerTh": "",
   "published": "2026-06-23T08:00:00+00:00",
   "published_date": "2026-06-25",
   "image": {
@@ -186,5 +225,5 @@
     "credit_url": ""
   },
   "audio_cache_path": "data/audio/2026-06-25/22dfbb08d70192d740-b1.wav",
-  "generated_at": "2026-06-25T04:25:16.727601+00:00"
+  "generated_at": "2026-06-28T02:28:55.890857+00:00"
 }

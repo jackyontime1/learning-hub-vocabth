@@ -1,5 +1,5 @@
 {
-  "schema_version": 9,
+  "schema_version": 10,
   "id": "40411752e8ca6fa02d",
   "slug": "learning-action-priors-for-cross-embodiment-robot-manipulation-40411752",
   "level": "B2",
@@ -7,7 +7,39 @@
   "description": "Most Vision-Language-Action (VLA) models build on a Vision-Language Model (VLM) backbone by attaching an action module and optimizing the full policy jointly. This design inherits strong visual and linguistic priors from the VLM, but leaves the action module to learn physical motion almost from scratch. As a result, the policy lacks an explicit motion prior, forcing early optimization to simultaneously discover temporal action dynamics and cross-modal alignment, a challenge further amplified in cross-embodiment settings. In this work, we propose to pretrain the action module with motion priors before cross-modal VLA alignment. Specifically, we introduce a two-stage training framework that equips the action module with cross-embodiment temporal motion structure before VLA training begins. In Stage~1, a lightweight flow-matching-based encoder-decoder action module efficiently learns temporal motion structure solely from unconditioned action trajectories, without processing visual or language tokens. In Stage~2, this learned prior is transferred to VLA training through decoder reuse and early-stage latent distillation, aligning visual-language features with the action embedding space while still allowing end-to-end policy refinement. In addition, the trained encoder serves as a compact history compressor, summarizing state-action histories into a single temporal context token for history-aware modeling at negligible cost. Extensive experiments across 13 diverse cross-embodiment tasks on both simulated and real-world platforms validate the effectiveness of our approach. Compared with VLA training without action priors, our model achieves faster convergence, higher success rates, and substantially stronger performance on data-scarce real-world tasks. Moreover, scaling up the action data in Stage~1 yields a more generalizable action prior that directly improves downstream VLA performance.",
   "text": "Most Vision-Language-Action (VLA) models build on a Vision-Language Model (VLM) backbone by attaching an action module and optimizing the full policy jointly. This design inherits strong visual and linguistic priors from the VLM, but leaves the action module to learn physical motion almost from scratch. As a result, the policy lacks an explicit motion prior, forcing early optimization to simultaneously discover temporal action dynamics and cross-modal alignment, a challenge further amplified in cross-embodiment settings.\n\nIn this work, we propose to pretrain the action module with motion priors before cross-modal VLA alignment. Specifically, we introduce a two-stage training framework that equips the action module with cross-embodiment temporal motion structure before VLA training begins. In Stage~1, a lightweight flow-matching-based encoder-decoder action module efficiently learns temporal motion structure solely from unconditioned action trajectories, without processing visual or language tokens.\n\nIn Stage~2, this learned prior is transferred to VLA training through decoder reuse and early-stage latent distillation, aligning visual-language features with the action embedding space while still allowing end-to-end policy refinement.",
   "speech_text": "Learning Action Priors for Cross-embodiment Robot Manipulation.\n\nMost Vision-Language-Action (VLA) models build on a Vision-Language Model (VLM) backbone by attaching an action module and optimizing the full policy jointly. This design inherits strong visual and linguistic priors from the VLM, but leaves the action module to learn physical motion almost from scratch. As a result, the policy lacks an explicit motion prior, forcing early optimization to simultaneously discover temporal action dynamics and cross-modal alignment, a challenge further amplified in cross-embodiment settings.\n\nIn this work, we propose to pretrain the action module with motion priors before cross-modal VLA alignment. Specifically, we introduce a two-stage training framework that equips the action module with cross-embodiment temporal motion structure before VLA training begins. In Stage~1, a lightweight flow-matching-based encoder-decoder action module efficiently learns temporal motion structure solely from unconditioned action trajectories, without processing visual or language tokens.\n\nIn Stage~2, this learned prior is transferred to VLA training through decoder reuse and early-stage latent distillation, aligning visual-language features with the action embedding space while still allowing end-to-end policy refinement.",
-  "thai_text": "ข่าวนี้มาจาก arXiv อยู่ในหมวดเทคโนโลยี และถูกเรียบเรียงเป็นระดับ B2. เนื้อหาข่าวคือ\n\nโมเดล Vision-Language-Action (VLA) ส่วนใหญ่พัฒนาขึ้นบนกระดูกสันหลังแบบ Vision-Language Model (VLM) โดยติดตั้งโมเดลการกระทำและประกอบนโยบายทั้งหมดร่วมกัน. การออกแบบนี้ได้รับมรดกภาพและภาษาที่แข็งแกร่งจาก VLM แต่ทิ้งโมดูลการกระทำเพื่อเรียนรู้การเคลื่อนไหวทางกายภาพเกือบตั้งแต่ต้น. ผลก็คือนโยบายนี้ไม่มีการเคลื่อนไหวที่ชัดเจนก่อนหน้านี้ ซึ่งบังคับให้การอุดมสมัยก่อนที่จะค้นพบไดนามิกการกระทำระยะเวลาและการสอดคล้องข้ามโหมดพร้อมกัน.\n\nในงานนี้ เราเสนอให้ฝึกฝนก่อนโมดูลการกระทำด้วยการเคลื่อนไหวก่อนหน้าการสอดคล้อง VLA ระหว่างโมดูล. โดยเฉพาะอย่างยิ่ง เรานําเสนอกรอบการฝึกอบรมสองระยะ ซึ่งช่างโหลดการกระทำด้วยโครงสร้างการเคลื่อนไหวระยะเวลาข้ามตัว ก่อนที่การฝึกอบรม VLA จะเริ่มต้น. ในระยะ ~ 1 โมดูลการกระทำแบบ encoder-decoder based lightweight flow matching จะเรียนรู้กระบวนการเคลื่อนไหวเวลาได้อย่างมีประสิทธิภาพโดยเฉพาะจากเส้นทางการกระทำที่ไม่มีเงื่อนไข โดยไม่ต้องแปรรูปเทคนิคภาพหรือภาษา.\n\nในระยะ ~ 2 การเรียนรู้ก่อนหน้านี้ถูกถ่ายทอดไปสู่การอบรม VLA ผ่านการใช้ซ้ําของ decoder และการดิสติเลชั่นลับในระยะแรก การสอดคล้องคุณสมบัติของภาษาภาพกับพื้นที่การดําเนินการขณะที่ยังอนุญาตให้มีการปรับปรุงนโยบายจากปลายไปยังปลาย.",
+  "thai_text": "โมเดล Vision-Language-Action (VLA) ส่วนใหญ่พัฒนาขึ้นบนกระดูกสันหลังแบบ Vision-Language Model (VLM) โดยติดตั้งโมเดลการกระทำและประกอบนโยบายทั้งหมดร่วมกัน. การออกแบบนี้ได้รับมรดกภาพและภาษาที่แข็งแกร่งจาก VLM แต่ทิ้งโมดูลการกระทำเพื่อเรียนรู้การเคลื่อนไหวทางกายภาพเกือบตั้งแต่ต้น. ผลก็คือนโยบายนี้ไม่มีการเคลื่อนไหวที่ชัดเจนก่อนหน้านี้ ซึ่งบังคับให้การอุดมสมัยก่อนที่จะค้นพบไดนามิกการกระทำระยะเวลาและการสอดคล้องข้ามโหมดพร้อมกัน.\n\nในงานนี้ เราเสนอให้ฝึกฝนก่อนโมดูลการกระทำด้วยการเคลื่อนไหวก่อนหน้าการสอดคล้อง VLA ระหว่างโมดูล. โดยเฉพาะอย่างยิ่ง เรานําเสนอกรอบการฝึกอบรมสองระยะ ซึ่งช่างโหลดการกระทำด้วยโครงสร้างการเคลื่อนไหวระยะเวลาข้ามตัว ก่อนที่การฝึกอบรม VLA จะเริ่มต้น. ในระยะ ~ 1 โมดูลการกระทำแบบ encoder-decoder based lightweight flow matching จะเรียนรู้กระบวนการเคลื่อนไหวเวลาได้อย่างมีประสิทธิภาพโดยเฉพาะจากเส้นทางการกระทำที่ไม่มีเงื่อนไข โดยไม่ต้องแปรรูปเทคนิคภาพหรือภาษา.\n\nในระยะ ~ 2 การเรียนรู้ก่อนหน้านี้ถูกถ่ายทอดไปสู่การอบรม VLA ผ่านการใช้ซ้ําของ decoder และการดิสติเลชั่นลับในระยะแรก การสอดคล้องคุณสมบัติของภาษาภาพกับพื้นที่การดําเนินการขณะที่ยังอนุญาตให้มีการปรับปรุงนโยบายจากปลายไปยังปลาย.",
+  "useful_phrases": [
+    {
+      "english": "attaching an action module and",
+      "kind": "collocation",
+      "source_sentence": "Most Vision-Language-Action (VLA) models build on a Vision-Language Model (VLM) backbone by attaching an action module and optimizing the full policy jointly.",
+      "thai": "การติดตั้งโมดูลการกระทํา และ."
+    },
+    {
+      "english": "optimizing the full policy jointly",
+      "kind": "collocation",
+      "source_sentence": "Most Vision-Language-Action (VLA) models build on a Vision-Language Model (VLM) backbone by attaching an action module and optimizing the full policy jointly.",
+      "thai": "ปรับปรุงนโยบายทั้งหมดร่วมกัน."
+    },
+    {
+      "english": "As a result",
+      "kind": "expression",
+      "source_sentence": "As a result, the policy lacks an explicit motion prior, forcing early optimization to simultaneously discover temporal action dynamics and cross-modal alignment, a challenge further amplified in cross-embodiment settings.",
+      "thai": "ส่งผลให้."
+    },
+    {
+      "english": "forcing early optimization to simultaneously",
+      "kind": "collocation",
+      "source_sentence": "As a result, the policy lacks an explicit motion prior, forcing early optimization to simultaneously discover temporal action dynamics and cross-modal alignment, a challenge further amplified in cross-embodiment settings.",
+      "thai": "การบังคับให้การอุดมสมรรถนะในช่วงต้น."
+    },
+    {
+      "english": "amplified in cross-embodiment settings",
+      "kind": "collocation",
+      "source_sentence": "As a result, the policy lacks an explicit motion prior, forcing early optimization to simultaneously discover temporal action dynamics and cross-modal alignment, a challenge further amplified in cross-embodiment settings.",
+      "thai": "แข็งแรงในปรับแต่งตัวข้าม."
+    }
+  ],
   "word_translations": {
     "a": "",
     "action": "การกระทำ",
@@ -229,6 +261,13 @@
   "content_type": "research summary",
   "source_url": "http://arxiv.org/abs/2606.26095v1",
   "author": "Dong Jing, Tianqi Zhang, Jiaqi Liu, Jinman Zhao, Zelong Sun, Li Erran Li, Zhiwu Lu, Mingyu Ding",
+  "readingType": "real_news",
+  "isFallback": false,
+  "isRealNews": true,
+  "contentType": "news_article",
+  "sourceName": "arXiv",
+  "disclaimerEn": "",
+  "disclaimerTh": "",
   "published": "2026-06-24T17:59:56+00:00",
   "published_date": "2026-06-25",
   "image": {
@@ -250,5 +289,5 @@
     "credit_url": ""
   },
   "audio_cache_path": "data/audio/2026-06-25/40411752e8ca6fa02d-b2.wav",
-  "generated_at": "2026-06-25T04:28:27.898398+00:00"
+  "generated_at": "2026-06-28T02:29:02.161080+00:00"
 }

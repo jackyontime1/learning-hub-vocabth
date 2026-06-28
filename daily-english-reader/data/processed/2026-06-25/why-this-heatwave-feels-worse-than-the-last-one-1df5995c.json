@@ -1,5 +1,5 @@
 {
-  "schema_version": 9,
+  "schema_version": 10,
   "id": "1df5995cf717bd63bf",
   "slug": "why-this-heatwave-feels-worse-than-the-last-one-1df5995c",
   "level": "B1",
@@ -7,7 +7,39 @@
   "description": "A combination of factors is making this heatwave more uncomfortable than some we have had in the past, as Simon King explains",
   "text": "A combination of factors is making this heatwave more uncomfortable than some we have had in the past, as Simon King explains June temperature records are set to be broken this week as the second heatwave of the year grips England and Wales. That's down to a combination of factors, an unrelenting heat dome, high humidity, and back-to-back tropical nights. The intense record-breaking heatwave in the UK and Europe has been caused by a static.\n\nAnd large area of high pressure, also referred to as a heat dome. This weather pattern results in air sinking down through the atmosphere, which compresses and heats up as it hits the ground. During the May heatwave the centre of the heat dome was over the UK.\n\nSo the heat was able to build underneath it, rather than being pulled in from more humid places.",
   "speech_text": "Why this heatwave feels worse than the last one.\n\nA combination of factors is making this heatwave more uncomfortable than some we have had in the past, as Simon King explains June temperature records are set to be broken this week as the second heatwave of the year grips England and Wales. That's down to a combination of factors, an unrelenting heat dome, high humidity, and back-to-back tropical nights. The intense record-breaking heatwave in the UK and Europe has been caused by a static.\n\nAnd large area of high pressure, also referred to as a heat dome. This weather pattern results in air sinking down through the atmosphere, which compresses and heats up as it hits the ground. During the May heatwave the centre of the heat dome was over the UK.\n\nSo the heat was able to build underneath it, rather than being pulled in from more humid places.",
-  "thai_text": "ข่าวนี้มาจาก BBC News อยู่ในหมวดวิทยาศาสตร์ และถูกเรียบเรียงเป็นระดับ B1. เนื้อหาข่าวคือ\n\nการรวมตัวของปัจจัย ทำให้คลื่นความร้อนนี้ไม่สบายกว่าบางครั้งที่เราเคยมีในอดีต เพราะไซมอน คิงอธิบายว่าสถิติอุณหภูมิเดือนมิถุนายน จะถูกทำลายในสัปดาห์นี้ ขณะที่คลื่นความร้อนครั้งที่สองของปี. นั่นเป็นเพราะการรวมตัวของปัจจัย ค้อนความร้อนที่ไม่หยุดนิ่ง ความหนาวสูง และคืนอุณหภูมิที่ติดต่อกัน. ความร้อนที่รุนแรงที่ทำลายสถิติในอังกฤษและยุโรป เป็นสาเหตุที่เกิดขึ้นจากการหยุดยั้ง.\n\nและพื้นที่ขนาดใหญ่ที่มีความดันสูง เรียกว่าถุมความร้อน. สภาพอากาศแบบนี้ ทำให้อากาศลึกลงลงในบรรยากาศ. ในช่วงช่วงช่วงลมร้อนเดือนพฤษภาคม ศูนย์กลางของศูนย์อุณหภูมิอยู่เหนือประเทศอังกฤษ.\n\nดังนั้นความร้อนจึงทำได้สร้างขึ้นภายใต้มัน แทนที่จะถูกดึงเข้ามาจากสถานที่ที่มีความชื้นมากขึ้น.",
+  "thai_text": "การรวมตัวของปัจจัย ทำให้คลื่นความร้อนนี้ไม่สบายกว่าบางครั้งที่เราเคยมีในอดีต เพราะไซมอน คิงอธิบายว่าสถิติอุณหภูมิเดือนมิถุนายน จะถูกทำลายในสัปดาห์นี้ ขณะที่คลื่นความร้อนครั้งที่สองของปี. นั่นเป็นเพราะการรวมตัวของปัจจัย ค้อนความร้อนที่ไม่หยุดนิ่ง ความหนาวสูง และคืนอุณหภูมิที่ติดต่อกัน. ความร้อนที่รุนแรงที่ทำลายสถิติในอังกฤษและยุโรป เป็นสาเหตุที่เกิดขึ้นจากการหยุดยั้ง.\n\nและพื้นที่ขนาดใหญ่ที่มีความดันสูง เรียกว่าถุมความร้อน. สภาพอากาศแบบนี้ ทำให้อากาศลึกลงลงในบรรยากาศ. ในช่วงช่วงช่วงลมร้อนเดือนพฤษภาคม ศูนย์กลางของศูนย์อุณหภูมิอยู่เหนือประเทศอังกฤษ.\n\nดังนั้นความร้อนจึงทำได้สร้างขึ้นภายใต้มัน แทนที่จะถูกดึงเข้ามาจากสถานที่ที่มีความชื้นมากขึ้น.",
+  "useful_phrases": [
+    {
+      "english": "is making this heatwave more",
+      "kind": "collocation",
+      "source_sentence": "A combination of factors is making this heatwave more uncomfortable than some we have had in the past, as Simon King explains June temperature records are set to be broken this week as the second heatwave of the year grips England and Wales.",
+      "thai": "ทําให้คลื่นความร้อนนี้เพิ่มขึ้น."
+    },
+    {
+      "english": "have had in the past",
+      "kind": "collocation",
+      "source_sentence": "A combination of factors is making this heatwave more uncomfortable than some we have had in the past, as Simon King explains June temperature records are set to be broken this week as the second heatwave of the year grips England and Wales.",
+      "thai": "เคยมีในอดีต."
+    },
+    {
+      "english": "King explains June temperature records",
+      "kind": "collocation",
+      "source_sentence": "A combination of factors is making this heatwave more uncomfortable than some we have had in the past, as Simon King explains June temperature records are set to be broken this week as the second heatwave of the year grips England and Wales.",
+      "thai": "คิงอธิบายสถิติอุณหภูมิเดือนมิถุนายน."
+    },
+    {
+      "english": "are set to be broken",
+      "kind": "collocation",
+      "source_sentence": "A combination of factors is making this heatwave more uncomfortable than some we have had in the past, as Simon King explains June temperature records are set to be broken this week as the second heatwave of the year grips England and Wales.",
+      "thai": "จะถูกทําลาย."
+    },
+    {
+      "english": "unrelenting heat dome",
+      "kind": "collocation",
+      "source_sentence": "That's down to a combination of factors, an unrelenting heat dome, high humidity, and back-to-back tropical nights.",
+      "thai": "หัวหินความร้อนที่ไม่หยุดนิ่ง."
+    }
+  ],
   "word_translations": {
     "a": "",
     "able": "ทำได้",
@@ -199,6 +231,13 @@
   "content_type": "rss news summary",
   "source_url": "https://www.bbc.co.uk/weather/articles/c3vyzly206no?at_medium=RSS&at_campaign=rss",
   "author": "BBC News",
+  "readingType": "easy_news",
+  "isFallback": false,
+  "isRealNews": true,
+  "contentType": "news_article",
+  "sourceName": "BBC News",
+  "disclaimerEn": "",
+  "disclaimerTh": "",
   "published": "2026-06-24T12:24:39+00:00",
   "published_date": "2026-06-25",
   "image": {
@@ -220,5 +259,5 @@
     "credit_url": ""
   },
   "audio_cache_path": "data/audio/2026-06-25/1df5995cf717bd63bf-b1.wav",
-  "generated_at": "2026-06-25T04:26:21.479269+00:00"
+  "generated_at": "2026-06-28T02:28:51.710271+00:00"
 }

@@ -1,5 +1,5 @@
 {
-  "schema_version": 9,
+  "schema_version": 10,
   "id": "463cbc8a2bd8c06a96",
   "slug": "no-need-for-panic-on-ebola-case-in-france-who-chief-says-463cbc8a",
   "level": "C1",
@@ -7,7 +7,39 @@
   "description": "WHO director general Tedros Adhanom Ghebreyesus, speaking on Wednesday about the ongoing Ebola outbreak in the Democratic Republic of Congo and Uganda, weighed in on the report of a recent case of Ebola in a doctor in France who had worked in Congo, saying the risk to the rest of the world remains low.",
   "text": "WHO director general Tedros Adhanom Ghebreyesus, speaking on Wednesday about the ongoing Ebola outbreak in the Democratic Republic of Congo and Uganda, weighed in on the report of a recent case of Ebola in a doctor in France who had worked in Congo, saying the risk to the rest of the world remains low.",
   "speech_text": "'No need for panic' on Ebola case in France, WHO chief says.\n\nWHO director general Tedros Adhanom Ghebreyesus, speaking on Wednesday about the ongoing Ebola outbreak in the Democratic Republic of Congo and Uganda, weighed in on the report of a recent case of Ebola in a doctor in France who had worked in Congo, saying the risk to the rest of the world remains low.",
-  "thai_text": "ข่าวนี้มาจาก CBC News อยู่ในหมวดข่าวต่างประเทศ และถูกเรียบเรียงเป็นระดับ C1. เนื้อหาข่าวคือ\n\nผู้อํานวยการทั่วไปของ WHO เทดรอส อาดฮานอม กีเบรียเซส กล่าวในวันพุธที่ผ่านมาเกี่ยวกับการระบาดของอิโบล่าที่เกิดขึ้นในประชาธิปไตยประชาธิปไตยของคองโกและยูแกนดา. ความเสี่ยงต่อโลกที่เหลือยังคงต่ํา.",
+  "thai_text": "ผู้อํานวยการทั่วไปของ WHO เทดรอส อาดฮานอม กีเบรียเซส กล่าวในวันพุธที่ผ่านมาเกี่ยวกับการระบาดของอิโบล่าที่เกิดขึ้นในประชาธิปไตยประชาธิปไตยของคองโกและยูแกนดา. ความเสี่ยงต่อโลกที่เหลือยังคงต่ํา.",
+  "useful_phrases": [
+    {
+      "english": "speaking on Wednesday about the",
+      "kind": "collocation",
+      "source_sentence": "WHO director general Tedros Adhanom Ghebreyesus, speaking on Wednesday about the ongoing Ebola outbreak in the Democratic Republic of Congo and Uganda, weighed in on the report of a recent case of Ebola in a doctor in France who had worked in Congo, saying the risk to the rest of the world remains low.",
+      "thai": "พูดในวันพุธ."
+    },
+    {
+      "english": "ongoing Ebola outbreak in the",
+      "kind": "collocation",
+      "source_sentence": "WHO director general Tedros Adhanom Ghebreyesus, speaking on Wednesday about the ongoing Ebola outbreak in the Democratic Republic of Congo and Uganda, weighed in on the report of a recent case of Ebola in a doctor in France who had worked in Congo, saying the risk to the rest of the world remains low.",
+      "thai": "การแพร่ระบาดของอิโบล่าที่เกิดขึ้นใน."
+    },
+    {
+      "english": "weighed in on the report",
+      "kind": "collocation",
+      "source_sentence": "WHO director general Tedros Adhanom Ghebreyesus, speaking on Wednesday about the ongoing Ebola outbreak in the Democratic Republic of Congo and Uganda, weighed in on the report of a recent case of Ebola in a doctor in France who had worked in Congo, saying the risk to the rest of the world remains low.",
+      "thai": "พิจารณารายงาน."
+    },
+    {
+      "english": "had worked in Congo",
+      "kind": "collocation",
+      "source_sentence": "WHO director general Tedros Adhanom Ghebreyesus, speaking on Wednesday about the ongoing Ebola outbreak in the Democratic Republic of Congo and Uganda, weighed in on the report of a recent case of Ebola in a doctor in France who had worked in Congo, saying the risk to the rest of the world remains low.",
+      "thai": "เคยทํางานในคองโก."
+    },
+    {
+      "english": "saying the risk to the",
+      "kind": "collocation",
+      "source_sentence": "WHO director general Tedros Adhanom Ghebreyesus, speaking on Wednesday about the ongoing Ebola outbreak in the Democratic Republic of Congo and Uganda, weighed in on the report of a recent case of Ebola in a doctor in France who had worked in Congo, saying the risk to the rest of the world remains low.",
+      "thai": "บอกความเสี่ยงต่อ."
+    }
+  ],
   "word_translations": {
     "a": "",
     "about": "เกี่ยวกับ",
@@ -91,6 +123,13 @@
   "content_type": "rss news summary",
   "source_url": "https://www.cbc.ca/player/play/9.7247362?cmp=rss",
   "author": "CBC News",
+  "readingType": "advanced_real_news",
+  "isFallback": false,
+  "isRealNews": true,
+  "contentType": "news_article",
+  "sourceName": "CBC News",
+  "disclaimerEn": "",
+  "disclaimerTh": "",
   "published": "2026-06-24T16:58:22+00:00",
   "published_date": "2026-06-25",
   "image": {
@@ -112,5 +151,5 @@
     "credit_url": ""
   },
   "audio_cache_path": "data/audio/2026-06-25/463cbc8a2bd8c06a96-c1.wav",
-  "generated_at": "2026-06-25T04:29:37.751891+00:00"
+  "generated_at": "2026-06-28T02:29:10.691918+00:00"
 }

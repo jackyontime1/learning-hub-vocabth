@@ -1,5 +1,5 @@
 {
-  "schema_version": 9,
+  "schema_version": 10,
   "id": "4132739f049eda06d7",
   "slug": "m-7-5-28-km-se-of-yumare-venezuela-4132739f",
   "level": "B1",
@@ -7,7 +7,33 @@
   "description": "The United States Geological Survey reported an earthquake of magnitude 7.5. The event occurred near 28 km SE of Yumare, Venezuela. Official monitoring data may be updated as scientists review additional measurements.",
   "text": "The United States Geological Survey reported an earthquake of magnitude 7.5. The event occurred near 28 km SE of Yumare, Venezuela. Official monitoring data may be updated as scientists review additional measurements.",
   "speech_text": "M 7.5. 28 km SE of Yumare, Venezuela.\n\nThe United States Geological Survey reported an earthquake of magnitude 7.5. The event occurred near 28 km SE of Yumare, Venezuela. Official monitoring data may be updated as scientists review additional measurements.",
-  "thai_text": "ข่าวนี้มาจาก USGS อยู่ในหมวดข่าวต่างประเทศ และถูกเรียบเรียงเป็นระดับ B1. เนื้อหาข่าวคือ\n\nสํานักงานสํารวจภูมิศาสตร์สหรัฐอเมริกา รายงานว่า มีแผ่นดินไหวขนาด 7.5. เหตุการณ์เกิดขึ้นใกล้ 28 กิโลเมตรตะวันออกเฉียงใต้ของ Yumare, เวเนซูเอลา. ข้อมูลการติดตามอย่างเป็นทางการอาจถูกปรับปรุงเมื่อนักวิทยาศาสตร์ตรวจสอบการวัดเพิ่มเติม.",
+  "thai_text": "สํานักงานสํารวจภูมิศาสตร์สหรัฐอเมริกา รายงานว่า มีแผ่นดินไหวขนาด 7.5. เหตุการณ์เกิดขึ้นใกล้ 28 กิโลเมตรตะวันออกเฉียงใต้ของ Yumare, เวเนซูเอลา. ข้อมูลการติดตามอย่างเป็นทางการอาจถูกปรับปรุงเมื่อนักวิทยาศาสตร์ตรวจสอบการวัดเพิ่มเติม.",
+  "useful_phrases": [
+    {
+      "english": "United States Geological Survey reported",
+      "kind": "collocation",
+      "source_sentence": "The United States Geological Survey reported an earthquake of magnitude 7.5.",
+      "thai": "สหรัฐอเมริกา การสํารวจภูมิศาสตร์รายงาน."
+    },
+    {
+      "english": "monitoring data may be updated",
+      "kind": "collocation",
+      "source_sentence": "Official monitoring data may be updated as scientists review additional measurements.",
+      "thai": "ข้อมูลการติดตามสามารถปรับปรุงได้."
+    },
+    {
+      "english": "The United States Geological Survey reported an",
+      "kind": "useful_sentence",
+      "source_sentence": "The United States Geological Survey reported an earthquake of magnitude 7.5.",
+      "thai": "สํานักงานสํารวจภูมิศาสตร์สหรัฐอเมริการายงานว่า."
+    },
+    {
+      "english": "Official monitoring data may be updated as",
+      "kind": "useful_sentence",
+      "source_sentence": "Official monitoring data may be updated as scientists review additional measurements.",
+      "thai": "ข้อมูลการติดตามอย่างเป็นทางการสามารถถูกปรับปรุงตาม."
+    }
+  ],
   "word_translations": {
     "additional": "เพิ่มเติม",
     "an": "",
@@ -73,6 +99,13 @@
   "content_type": "government earthquake report",
   "source_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t7zp",
   "author": "U.S. Geological Survey",
+  "readingType": "easy_news",
+  "isFallback": false,
+  "isRealNews": true,
+  "contentType": "news_article",
+  "sourceName": "USGS",
+  "disclaimerEn": "",
+  "disclaimerTh": "",
   "published": "2026-06-24T22:05:11.566000+00:00",
   "published_date": "2026-06-24",
   "image": {
@@ -94,5 +127,5 @@
     "credit_url": ""
   },
   "audio_cache_path": "data/audio/2026-06-24/4132739f049eda06d7-b1.wav",
-  "generated_at": "2026-06-25T04:43:57.617119+00:00"
+  "generated_at": "2026-06-28T02:30:03.483782+00:00"
 }
