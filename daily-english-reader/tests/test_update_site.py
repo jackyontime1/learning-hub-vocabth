@@ -403,6 +403,35 @@ class DailyReaderTests(unittest.TestCase):
         }))
         self.assertIn('data-pos="adj."', markup)
 
+    def test_word_spans_include_only_available_curated_ipa(self):
+        markup = str(site.word_spans(
+            "Appointment unknown.",
+            {"appointment": "นัดหมาย", "unknown": "ไม่ทราบ"},
+            ipa_lexicon={"appointment": "/əˈpɔɪntmənt/"},
+        ))
+        self.assertIn('data-ipa="/əˈpɔɪntmənt/"', markup)
+        self.assertEqual(markup.count("data-ipa="), 1)
+        self.assertIn('data-word="unknown"', markup)
+
+    def test_ipa_lexicon_rejects_invalid_optional_entries(self):
+        with tempfile.TemporaryDirectory() as temp:
+            path = Path(temp) / "ipa.json"
+            path.write_text(json.dumps({
+                "appointment": "/əˈpɔɪntmənt/",
+                "unsafe": "<script>",
+                "_meta": {"dialect": "en-US"},
+            }), encoding="utf-8")
+            self.assertEqual(site.load_ipa_lexicon(path), {"appointment": "/əˈpɔɪntmənt/"})
+
+    def test_article_popup_hides_missing_ipa_and_keeps_learning_sections(self):
+        template = (site.TEMPLATE_DIR / "article.html").read_text(encoding="utf-8")
+        script = (site.STATIC_DIR / "js" / "app.js").read_text(encoding="utf-8")
+        self.assertIn('id="popoverPronunciation" hidden', template)
+        self.assertIn("target.dataset.ipa ||", script)
+        self.assertIn("pronunciation.hidden = !activeWord.ipa", script)
+        self.assertIn("แปลไทยทั้งบท", template)
+        self.assertIn("article.useful_phrases", template)
+
     def test_part_of_speech_uses_common_labels(self):
         self.assertEqual(site.part_of_speech("clean"), "adj.")
         self.assertEqual(site.part_of_speech("respond"), "v.")

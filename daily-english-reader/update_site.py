@@ -54,6 +54,7 @@ SITE_DIR = ROOT / "site"
 STAGING_DIR = ROOT / ".site-staging"
 BACKUP_DIR = ROOT / ".site-backup"
 PRACTICE_STORIES_PATH = CONTENT_DIR / "practice-stories.json"
+IPA_LEXICON_PATH = CONTENT_DIR / "ipa-lexicon.json"
 
 CURRENTS_URL = "https://api.currentsapi.services/v1/latest-news"
 GUARDIAN_URL = "https://content.guardianapis.com/search"
@@ -389,6 +390,24 @@ def load_json(path: Path, fallback: Any) -> Any:
         return json.loads(path.read_text(encoding="utf-8")) if path.exists() else fallback
     except (OSError, json.JSONDecodeError):
         return fallback
+
+
+def load_ipa_lexicon(path: Path = IPA_LEXICON_PATH) -> dict[str, str]:
+    data = load_json(path, {})
+    if not isinstance(data, dict):
+        return {}
+    lexicon = {}
+    for word, ipa in data.items():
+        if not isinstance(word, str) or not isinstance(ipa, str):
+            continue
+        key = word.strip().lower()
+        value = ipa.strip()
+        if re.fullmatch(r"[a-z]+(?:['-][a-z]+)*", key) and re.fullmatch(r"/[^/<>{}\r\n]{2,40}/", value):
+            lexicon[key] = value
+    return lexicon
+
+
+IPA_LEXICON = load_ipa_lexicon()
 
 
 def normalize(value: str) -> str:
@@ -2650,16 +2669,24 @@ def validate_processed_article(row: dict[str, Any], level: str) -> None:
             raise RuntimeError(f"Processed article metadata invalid: {', '.join(model_issues)}")
 
 
-def word_spans(text: str, translations: dict[str, str], word_pos: dict[str, str] | None = None) -> Markup:
+def word_spans(
+    text: str,
+    translations: dict[str, str],
+    word_pos: dict[str, str] | None = None,
+    ipa_lexicon: dict[str, str] | None = None,
+) -> Markup:
     pieces = re.findall(r"[A-Za-z]+(?:['-][A-Za-z]+)*|[^A-Za-z]+", text)
     output = []
+    lexicon = IPA_LEXICON if ipa_lexicon is None else ipa_lexicon
     for piece in pieces:
         if re.fullmatch(r"[A-Za-z]+(?:['-][A-Za-z]+)*", piece):
             key = piece.lower()
+            ipa = lexicon.get(key, "")
+            ipa_attribute = f' data-ipa="{html.escape(ipa, quote=True)}"' if ipa else ""
             output.append(
                 f'<span class="word" tabindex="0" role="button" data-word="{html.escape(piece, quote=True)}" '
                 f'data-translation="{html.escape(translations.get(key, ""), quote=True)}" '
-                f'data-pos="{html.escape((word_pos or {}).get(key, part_of_speech(key)), quote=True)}">'
+                f'data-pos="{html.escape((word_pos or {}).get(key, part_of_speech(key)), quote=True)}"{ipa_attribute}>'
                 f'{html.escape(piece)}</span>'
             )
         else:

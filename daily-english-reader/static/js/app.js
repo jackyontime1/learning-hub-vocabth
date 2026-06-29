@@ -61,7 +61,7 @@ function refreshArticleButtons() {
 }
 
 function speakWord(word) {
-  if (!word || !("speechSynthesis" in window)) return;
+  if (!word || !storySpeechSupported()) return;
   speechSynthesis.cancel();
   const utterance = new SpeechSynthesisUtterance(word);
   utterance.lang = "en-US";
@@ -161,6 +161,13 @@ function pauseStorySpeech(toggle) {
   return true;
 }
 
+function closeWordPopover() {
+  const popover = document.querySelector("#vocabPopover");
+  if (popover) popover.hidden = true;
+  activeWordTarget?.classList.remove("active");
+  activeWordTarget = null;
+}
+
 function positionPopover(target) {
   const popover = document.querySelector("#vocabPopover");
   if (!popover) return;
@@ -177,18 +184,29 @@ function positionPopover(target) {
 }
 
 function openWord(target) {
+  activeWordTarget?.classList.remove("active");
   activeWordTarget = target;
+  activeWordTarget.classList.add("active");
   activeWord = {
     word: target.dataset.word,
     pos: target.dataset.pos || "",
+    ipa: target.dataset.ipa || "",
     translation: target.dataset.translation || "ยังไม่มีคำแปล",
     articleId: document.querySelector(".reader")?.dataset.articleId || "",
     articleTitle: document.querySelector(".article-hero h1")?.textContent || "",
     savedAt: new Date().toISOString(),
   };
   document.querySelector("#popoverWord").textContent = activeWord.word;
-  document.querySelector("#popoverPronunciation").textContent = `${activeWord.pos ? `${activeWord.pos} · ` : ""}English: ${activeWord.word.toLowerCase()}`;
+  const pos = document.querySelector("#popoverPos");
+  pos.textContent = activeWord.pos;
+  pos.hidden = !activeWord.pos;
+  const pronunciation = document.querySelector("#popoverPronunciation");
+  pronunciation.textContent = activeWord.ipa;
+  pronunciation.hidden = !activeWord.ipa;
   document.querySelector("#popoverTranslation").textContent = activeWord.translation;
+  const speaker = document.querySelector("#speakPopoverWord");
+  speaker.hidden = !storySpeechSupported();
+  speaker.setAttribute("aria-label", `Hear ${activeWord.word}`);
   document.querySelector("#learnWord").classList.toggle("active", Boolean(savedWords[activeWord.word.toLowerCase()]));
   positionPopover(target);
 }
@@ -680,7 +698,7 @@ document.addEventListener("click", (event) => {
   }
 
   if (event.target.closest("#closeVocabPopover")) {
-    document.querySelector("#vocabPopover").hidden = true;
+    closeWordPopover();
     return;
   }
 
@@ -689,6 +707,7 @@ document.addEventListener("click", (event) => {
     const panel = document.querySelector("#fullTranslation");
     panel.hidden = !panel.hidden;
     translate.classList.toggle("active", !panel.hidden);
+    translate.setAttribute("aria-expanded", String(!panel.hidden));
     return;
   }
 
@@ -767,8 +786,7 @@ document.addEventListener("click", (event) => {
   }
 
   if (!event.target.closest("#vocabPopover")) {
-    const popover = document.querySelector("#vocabPopover");
-    if (popover) popover.hidden = true;
+    closeWordPopover();
   }
 });
 
@@ -827,8 +845,10 @@ document.querySelector("#mobileHomeCategory")?.addEventListener("change", (event
   applyHomeFilters();
 });
 window.addEventListener("resize", () => {
-  const popover = document.querySelector("#vocabPopover");
-  if (popover) popover.hidden = true;
+  closeWordPopover();
+});
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") closeWordPopover();
 });
 document.querySelectorAll(".word").forEach((word) => {
   word.addEventListener("keydown", (event) => {

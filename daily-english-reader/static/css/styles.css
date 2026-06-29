@@ -8,6 +8,7 @@
   --paper: #f4f7fb;
   --surface: #fff;
   --green: #20a967;
+  --green-soft: #effaf2;
   --orange: #f06a27;
   --purple: #8352d8;
   --reader-scale: 1;
@@ -340,19 +341,21 @@ main { width: min(1500px, calc(100% - 34px)); margin: 0 auto; padding: 20px 0 50
 .reading-actions .audio-button { color: var(--blue); }
 .reading-panel { display: none; padding: 24px 20px; }
 .reading-panel.active { display: block; }
-.reading-text { max-width: 820px; font-family: Georgia, "Times New Roman", serif; font-size: calc(20px * var(--reader-scale)); line-height: 1.85; }
+.reading-text { max-width: 72ch; margin: 0 auto; padding: 28px 32px 30px; font-family: Georgia, "Times New Roman", serif; font-size: calc(20px * var(--reader-scale)); line-height: 1.85; text-wrap: pretty; }
 .reading-text p { margin: 0 0 1.25em; }
 .word {
   display: inline;
   margin: 0;
-  padding: 1px 2px;
-  border-bottom: 2px solid #f0b63a;
-  background: #fff3bf;
+  padding: 1px;
+  border-bottom: 1px dotted var(--muted);
+  border-radius: 3px;
+  background: transparent;
   color: inherit;
   font: inherit;
   cursor: pointer;
 }
-.word:hover, .word:focus { background: #ffe58b; outline: 2px solid rgba(240,182,58,.3); }
+.word:hover { background: var(--blue-soft); border-bottom-color: var(--blue); }
+.word:focus-visible, .word.active { background: var(--blue-soft); outline: 2px solid rgba(18,100,223,.35); outline-offset: 1px; }
 .thai-help { margin: 0 20px 20px; padding: 18px; border-radius: 6px; background: #f0faf3; }
 .thai-help h3 { margin: 0 0 7px; font-size: 15px; }
 .thai-help p { margin: 0; color: #4b6654; font-size: 13px; line-height: 1.6; }
@@ -389,35 +392,26 @@ main { width: min(1500px, calc(100% - 34px)); margin: 0 auto; padding: 20px 0 50
 .vocab-popover {
   position: fixed;
   z-index: 100;
-  width: 275px;
-  overflow: hidden;
-  padding: 17px 17px 0;
-  border: 1px solid #cfd6df;
+  width: min(340px, calc(100vw - 24px));
+  padding: 18px;
+  border: 1px solid var(--line);
   border-radius: 8px;
   background: #fff;
-  box-shadow: 0 14px 40px rgba(17,31,54,.25);
+  box-shadow: 0 6px 8px rgba(17,31,54,.16);
 }
-.vocab-popover::after {
-  position: absolute;
-  bottom: -8px;
-  left: calc(50% - 8px);
-  width: 16px;
-  height: 16px;
-  content: "";
-  transform: rotate(45deg);
-  background: #fff;
-  border-right: 1px solid #cfd6df;
-  border-bottom: 1px solid #cfd6df;
-}
-.popover-close { position: absolute; top: 8px; right: 8px; border: 0; background: transparent; color: #8b94a3; }
-.word-sound { width: 30px; height: 30px; margin-right: 5px; border: 0; border-radius: 50%; background: var(--blue-soft); color: var(--blue); }
-.vocab-popover > strong { font-size: 22px; }
-.pronunciation, .thai-translation { display: block; margin-left: 40px; }
-.pronunciation { margin-top: -3px; color: #929aaa; font-size: 11px; }
-.thai-translation { margin-top: 7px; color: var(--ink); font-size: 16px; font-weight: 700; }
+.popover-close { position: absolute; top: 4px; right: 4px; width: 44px; height: 44px; border: 0; background: transparent; color: #657087; }
+.popover-heading { min-height: 44px; display: grid; grid-template-columns: minmax(0,1fr) 44px; align-items: center; gap: 10px; padding-right: 34px; }
+.popover-heading strong { display: block; overflow-wrap: anywhere; font-size: 24px; line-height: 1.15; }
+.popover-pos { display: block; margin-top: 4px; color: var(--muted); font-size: 12px; font-style: italic; }
+.word-sound { width: 44px; height: 44px; border: 0; border-radius: 50%; background: var(--blue-soft); color: var(--blue); }
+.word-sound:hover { background: var(--blue-soft); }
+.word-sound:focus-visible, .popover-close:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.pronunciation, .thai-translation { display: block; }
+.pronunciation { margin-top: 8px; color: var(--muted); font-size: 14px; }
+.thai-translation { margin-top: 14px; color: var(--ink); font-size: 18px; font-weight: 700; line-height: 1.6; }
 .vocab-popover > p { margin: 12px 0; color: var(--muted); font-size: 11px; line-height: 1.5; }
-.vocab-actions { display: grid; grid-template-columns: 1fr 1fr; margin: 0 -17px; }
-.vocab-actions button { min-height: 42px; border: 0; font-weight: 700; }
+.vocab-actions { display: grid; grid-template-columns: 1fr 1fr; margin: 16px -18px -18px; overflow: hidden; border-radius: 0 0 8px 8px; }
+.vocab-actions button { min-height: 48px; border: 0; font-weight: 700; }
 .known-word { background: #61d28a; color: #155c31; }.learn-word { background: #f0c355; color: #6a4b00; }
 .vocab-actions button.active { box-shadow: inset 0 0 0 3px rgba(0,0,0,.16); }
 .site-footer { padding: 20px; border-top: 1px solid var(--line); background: #fff; color: var(--muted); text-align: center; font-size: 11px; }
@@ -504,9 +498,18 @@ main { width: min(1500px, calc(100% - 34px)); margin: 0 auto; padding: 20px 0 50
 .speed-control { display: flex; gap: 3px; }
 .speed-control button { min-height: 30px; padding: 0 8px; border: 1px solid var(--line); background: #fff; font-size: 10px; }
 .speed-control button.active { border-color: var(--blue); background: var(--blue-soft); color: var(--blue); }
-.full-translation { margin: 0 20px 20px; padding: 18px; border-left: 4px solid var(--green); background: #effaf2; }
-.full-translation h3 { margin: 0 0 8px; }
-.full-translation p { margin: 0; line-height: 1.75; }
+.full-translation { margin: 0 20px 20px; padding: 22px; border: 1px solid var(--line); border-radius: 8px; background: var(--green-soft); }
+.full-translation h3 { margin: 0 0 14px; font-size: 18px; line-height: 1.4; text-wrap: balance; }
+.full-translation p { margin: 0; line-height: 1.85; }
+.full-translation p + p { margin-top: 14px; }
+.translation-section p { max-width: 72ch; font-size: 17px; }
+.useful-phrases { background: var(--paper); }
+.useful-phrase { padding: 16px 0; border-top: 1px solid var(--line); }
+.useful-phrase:first-of-type { padding-top: 0; border-top: 0; }
+.useful-phrase:last-child { padding-bottom: 0; }
+.useful-phrase strong { font-size: 16px; line-height: 1.45; }
+.useful-phrase p { margin-top: 6px; color: var(--ink); font-size: 15px; }
+.useful-phrase small { display: block; margin-top: 8px; color: var(--muted); font-size: 13px; line-height: 1.6; }
 .saved-article-words { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); border: 1px solid var(--line); }
 .saved-word-row {
   min-height: 58px;
@@ -689,10 +692,12 @@ main { width: min(1500px, calc(100% - 34px)); margin: 0 auto; padding: 20px 0 50
   .reading-actions { width: 100%; display: grid; grid-template-columns: 1fr 1fr 48px 48px; }
   .reading-actions button { padding: 0 5px; }
   .reading-panel { padding: 20px 15px; }
-  .reading-text { font-size: calc(19px * var(--reader-scale)); }
+  .reading-text { padding: 22px 16px 24px; font-size: calc(19px * var(--reader-scale)); }
+  .full-translation { margin: 0 12px 16px; padding: 17px; }
+  .translation-section p { font-size: 16px; line-height: 1.9; }
   .vocabulary-list { grid-template-columns: 1fr; }
   .vocab-card { border-right: 0; }
-  .vocab-popover { width: min(280px, calc(100vw - 24px)); }
+  .vocab-popover { width: calc(100vw - 24px); }
   .site-footer { padding-bottom: 80px; }
   .flashcards-heading { align-items: stretch; }
   .flashcard-stats { grid-template-columns: repeat(3, 1fr); }

@@ -40,7 +40,7 @@
         <header class="reader-toolbar">
           <div><h2>{{ article.level }} Version</h2><p>Click any word for its Thai meaning.</p></div>
           <div class="reading-actions">
-            <button class="translate-toggle" type="button"><i class="fa-solid fa-language"></i> Translate to Thai</button>
+            <button class="translate-toggle" type="button" aria-controls="fullTranslation" aria-expanded="false"><i class="fa-solid fa-language"></i> Translate to Thai</button>
             <button class="font-button" data-font-action="decrease" type="button">A-</button>
             <button class="font-button" data-font-action="increase" type="button">A+</button>
           </div>
@@ -56,14 +56,14 @@
           <audio id="storyAudio" preload="metadata" src="{{ article.audio_url }}" data-reader-text="{{ article.speech_text | e }}"></audio>
         </div>
         <div class="reading-text">{{ article.word_html }}</div>
-        <section class="full-translation" id="fullTranslation" hidden>
-          <h3>แปลไทยทั้งบท</h3>
+        <section class="full-translation translation-section" id="fullTranslation" aria-labelledby="translationHeading" hidden>
+          <h3 id="translationHeading">แปลไทยทั้งบท</h3>
           {% for paragraph in article.thai_paragraphs %}<p>{{ paragraph }}</p>{% endfor %}
         </section>
-        <section class="full-translation useful-phrases">
-          <h3>ประโยคและวลีที่ใช้ได้จริงจากเรื่องนี้</h3>
+        <section class="full-translation useful-phrases" aria-labelledby="usefulPhrasesHeading">
+          <h3 id="usefulPhrasesHeading">ประโยคและวลีที่ใช้ได้จริงจากเรื่องนี้</h3>
           {% for phrase in article.useful_phrases %}
-            <article>
+            <article class="useful-phrase">
               <strong>{{ phrase.english }}</strong>
               <p>{{ phrase.thai }}</p>
               <small>{{ phrase.kind | replace("_", " ") | title }} · {{ phrase.source_sentence }}</small>
@@ -86,10 +86,13 @@
     </article>
   </div>
 
-  <div class="vocab-popover" id="vocabPopover" hidden role="dialog" aria-label="Vocabulary translation">
-    <button class="popover-close" id="closeVocabPopover" type="button" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
-    <button class="word-sound" id="speakPopoverWord" type="button"><i class="fa-solid fa-volume-high"></i></button>
-    <strong id="popoverWord"></strong><span class="pronunciation" id="popoverPronunciation"></span>
+  <div class="vocab-popover" id="vocabPopover" hidden role="dialog" aria-labelledby="popoverWord" aria-describedby="popoverTranslation">
+    <button class="popover-close" id="closeVocabPopover" type="button" aria-label="Close vocabulary popup" title="Close"><i class="fa-solid fa-xmark"></i></button>
+    <div class="popover-heading">
+      <div><strong id="popoverWord"></strong><span class="popover-pos" id="popoverPos" hidden></span></div>
+      <button class="word-sound" id="speakPopoverWord" type="button" aria-label="Hear word" title="Hear word"><i class="fa-solid fa-volume-high"></i></button>
+    </div>
+    <span class="pronunciation" id="popoverPronunciation" hidden></span>
     <span class="thai-translation" id="popoverTranslation"></span>
     <div class="vocab-actions">
       <button class="known-word" id="knownWord" type="button"><i class="fa-solid fa-check"></i> รู้แล้ว</button>
