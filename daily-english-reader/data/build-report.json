@@ -1,6 +1,6 @@
 {
   "status": "ready",
-  "started_at": "2026-06-29T11:49:59.364033+00:00",
+  "started_at": "2026-06-29T21:46:59.848710+00:00",
   "expected_toronto_date": "2026-06-29",
   "free_only": true,
   "demo_mode": false,
@@ -16,16 +16,36 @@
     "C1": 2
   },
   "schema_version": 10,
-  "candidate_rejections": [],
+  "candidate_rejections": [
+    {
+      "article_id": "309f8620d2083e8224",
+      "title": "Severe Thunderstorm Warning issued June 29 at 4:44PM CDT until June 29 at 5:00PM CDT by NWS Bismarck ND",
+      "provider": "US National Weather Service",
+      "level": "B1",
+      "reason": "RuntimeError: Unable to produce 3 valid useful phrases for B1 reading"
+    },
+    {
+      "article_id": "b6b788c1fd51b17a2f",
+      "title": "Special Marine Warning issued June 29 at 4:45PM CDT until June 29 at 5:00PM CDT by NWS Duluth MN",
+      "provider": "US National Weather Service",
+      "level": "B1",
+      "reason": "RuntimeError: Full Thai translation unavailable for article b6b788c1fd51b17a2f"
+    }
+  ],
   "practice_story_count": 4,
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
-    "nllb_retries": 0,
-    "quality_failures": 0,
-    "rejection_reasons": {}
+    "nllb_retries": 2,
+    "quality_failures": 1,
+    "rejection_reasons": {
+      "missing-unit:\\bknots?\\b": 2,
+      "repeated-2-gram": 1,
+      "repeated-3-gram": 1,
+      "missing-number:40": 1
+    }
   },
-  "completed_at": "2026-06-29T11:59:36.762814+00:00",
+  "completed_at": "2026-06-29T22:00:13.689602+00:00",
   "latest_date": "2026-06-29",
   "total_story_count": 70,
   "today_story_count": 10,
@@ -45,33 +65,33 @@
   "fallback_image_count": 8,
   "fallback_images": [
     {
-      "article_id": "7291d092e3d6577fc8",
-      "title": "Kentucky governor says 4 dead amid flooding caused by heavy rains",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
       "article_id": "073c812b3d4724b6f6",
       "title": "US and Iran exchange strikes and accuse each other of violating ceasefire",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "d90f441dcc23a0ddc8",
-      "title": "Three firefighters die battling huge wildfires on Colorado-Utah border",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "17b82a85a138e2244d",
-      "title": "Israel strikes southern Lebanon as Hezbollah condemns new deal",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "13f937a44305b5e838",
-      "title": "Special Marine Warning issued June 29 at 6:44AM CDT until June 29 at 7:15AM CDT by NWS Duluth MN",
+      "article_id": "7f0529e948712932fb",
+      "title": "Biden blasts Trump 'vanity projects', calling him a 'loser' at fundraising event",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "3d3226a9db5cc2b777",
-      "title": "Special Weather Statement issued June 29 at 7:43AM EDT by NWS Gaylord MI",
+      "article_id": "44547d97acf9af638c",
+      "title": "Supreme Court blocks Trump's attempt to fire Federal Reserve Governor Lisa Cook",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "bf76862d1d6613288a",
+      "title": "U.S. and Iran exchange strikes, underscoring the fragility of the ceasefire",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "bb05ced64808405799",
+      "title": "Severe Thunderstorm Warning issued June 29 at 4:42PM CDT until June 29 at 5:00PM CDT by NWS Duluth MN",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "fb12e53447a837a143",
+      "title": "U.S. Supreme Court declines Trump's appeal in E. Jean Carroll case",
       "reason": "No usable free image candidate"
     },
     {
