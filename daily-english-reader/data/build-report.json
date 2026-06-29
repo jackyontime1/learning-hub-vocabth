@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-06-28T20:43:49.871317+00:00",
-  "expected_toronto_date": "2026-06-28",
+  "started_at": "2026-06-29T11:49:59.364033+00:00",
+  "expected_toronto_date": "2026-06-29",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -21,14 +21,12 @@
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
-    "nllb_retries": 1,
+    "nllb_retries": 0,
     "quality_failures": 0,
-    "rejection_reasons": {
-      "repeated-junk-string": 1
-    }
+    "rejection_reasons": {}
   },
-  "completed_at": "2026-06-28T20:54:36.740871+00:00",
-  "latest_date": "2026-06-28",
+  "completed_at": "2026-06-29T11:59:36.762814+00:00",
+  "latest_date": "2026-06-29",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -52,38 +50,38 @@
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "bd27ca99c8df82df89",
-      "title": "Are we in for a summer of serial heatwaves?",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "1659a7ce143b943c75",
-      "title": "Future generations being failed if more trees not planted, experts say",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "a84225e8c0f93aaf41",
-      "title": "Trump's face is added to select US passports for America's 250th birthday",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "bff095eb22db5965fd",
-      "title": "Severe Thunderstorm Warning issued June 28 at 4:38PM EDT until June 28 at 5:00PM EDT by NWS Raleigh NC",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "252ed46f459eac9efb",
-      "title": "In Caracas, this feels like the hardest moment in Venezuela's modern history",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "e46aafb484b74c22e5",
-      "title": "Asking About a Restaurant Order",
+      "article_id": "073c812b3d4724b6f6",
+      "title": "US and Iran exchange strikes and accuse each other of violating ceasefire",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "6a0e3e70eb9ba9d3fc",
-      "title": "The Bus Card",
+      "article_id": "d90f441dcc23a0ddc8",
+      "title": "Three firefighters die battling huge wildfires on Colorado-Utah border",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "17b82a85a138e2244d",
+      "title": "Israel strikes southern Lebanon as Hezbollah condemns new deal",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "13f937a44305b5e838",
+      "title": "Special Marine Warning issued June 29 at 6:44AM CDT until June 29 at 7:15AM CDT by NWS Duluth MN",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "3d3226a9db5cc2b777",
+      "title": "Special Weather Statement issued June 29 at 7:43AM EDT by NWS Gaylord MI",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "a016e667c570b41d96",
+      "title": "A Phone Call from the Driver",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "0239213aa1a536fe15",
+      "title": "The Lunch Box",
       "reason": "Selected image was unavailable: ValueError"
     }
   ]
