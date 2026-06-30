@@ -4047,5 +4047,41 @@
     "image_is_fallback": true,
     "credit": "Daily English Reader",
     "credit_url": ""
+  },
+  "8bd786e4090f862310": {
+    "cache_version": 2,
+    "url": "",
+    "local_filename": "fallback-8bd786e4090f.svg",
+    "image_url": "static/images/fallback-8bd786e4090f.svg",
+    "image_local_path": "static/images/fallback-8bd786e4090f.svg",
+    "image_source": "Local generated SVG",
+    "image_author": "Daily English Reader",
+    "image_license": "Project-owned local asset",
+    "image_attribution_url": "",
+    "image_alt": "Cover image for Venezuelans race against clock looking for earthquake survivors",
+    "image_query": "World Venezuelans race clock looking earthquake survivors",
+    "image_relevance_score": 20,
+    "image_selected_reason": "No usable free image candidate",
+    "image_is_fallback": true,
+    "credit": "Daily English Reader",
+    "credit_url": ""
+  },
+  "1bf1833f0ba8bdc253": {
+    "cache_version": 2,
+    "url": "",
+    "local_filename": "fallback-1bf1833f0ba8.svg",
+    "image_url": "static/images/fallback-1bf1833f0ba8.svg",
+    "image_local_path": "static/images/fallback-1bf1833f0ba8.svg",
+    "image_source": "Local generated SVG",
+    "image_author": "Daily English Reader",
+    "image_license": "Project-owned local asset",
+    "image_attribution_url": "",
+    "image_alt": "Cover image for WhatsApp will allow users to go by usernames, closing a privacy blind spot",
+    "image_query": "Business WhatsApp allow users usernames closing privacy blind",
+    "image_relevance_score": 20,
+    "image_selected_reason": "No usable free image candidate",
+    "image_is_fallback": true,
+    "credit": "Daily English Reader",
+    "credit_url": ""
   }
 }

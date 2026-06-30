@@ -1,6 +1,6 @@
 {
   "status": "ready",
-  "started_at": "2026-06-30T18:03:46.294160+00:00",
+  "started_at": "2026-06-30T20:05:57.663101+00:00",
   "expected_toronto_date": "2026-06-30",
   "free_only": true,
   "demo_mode": false,
@@ -18,25 +18,24 @@
   "schema_version": 10,
   "candidate_rejections": [
     {
-      "article_id": "7f292966e87e55baf9",
-      "title": "Russian strikes across Ukraine kill at least 9, injure dozens",
-      "provider": "CBC News",
-      "level": "C1",
-      "reason": "RuntimeError: Full Thai translation unavailable for article 7f292966e87e55baf9"
+      "article_id": "9ab035c0cc38b6f81b",
+      "title": "What do we know about the shooting in Stade, Germany?",
+      "provider": "BBC News",
+      "level": "B2",
+      "reason": "RuntimeError: Unable to produce 3 valid useful phrases for B2 reading"
     }
   ],
   "practice_story_count": 4,
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
-    "nllb_retries": 3,
-    "quality_failures": 1,
+    "nllb_retries": 1,
+    "quality_failures": 0,
     "rejection_reasons": {
-      "repeated-junk-string": 2,
-      "unexpected-non-thai-script": 2
+      "repeated-junk-string": 1
     }
   },
-  "completed_at": "2026-06-30T18:14:26.999084+00:00",
+  "completed_at": "2026-06-30T20:15:36.402181+00:00",
   "latest_date": "2026-06-30",
   "total_story_count": 70,
   "today_story_count": 10,
@@ -56,19 +55,19 @@
   "fallback_image_count": 8,
   "fallback_images": [
     {
+      "article_id": "1bf1833f0ba8bdc253",
+      "title": "WhatsApp will allow users to go by usernames, closing a privacy blind spot",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "8bd786e4090f862310",
+      "title": "Venezuelans race against clock looking for earthquake survivors",
+      "reason": "No usable free image candidate"
+    },
+    {
       "article_id": "0efc7458aa9b17491d",
       "title": "U.S. Supreme Court rejects Trump-led challenge against mail-in ballots",
       "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "9b98c7e6a06ae9b15e",
-      "title": "6 people presumed drowned as RCMP lead recovery of sunken boat near Richmond, B.C.",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "13bb66c880eb35e584",
-      "title": "Teyana Taylor's tears and Lauryn Hill tribute steal show at BET Awards",
-      "reason": "No usable free image candidate"
     },
     {
       "article_id": "fa76f4834994596989",
