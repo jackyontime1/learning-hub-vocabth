@@ -1,6 +1,6 @@
 {
   "status": "ready",
-  "started_at": "2026-06-30T20:05:57.663101+00:00",
+  "started_at": "2026-06-30T21:51:51.157040+00:00",
   "expected_toronto_date": "2026-06-30",
   "free_only": true,
   "demo_mode": false,
@@ -16,26 +16,16 @@
     "C1": 2
   },
   "schema_version": 10,
-  "candidate_rejections": [
-    {
-      "article_id": "9ab035c0cc38b6f81b",
-      "title": "What do we know about the shooting in Stade, Germany?",
-      "provider": "BBC News",
-      "level": "B2",
-      "reason": "RuntimeError: Unable to produce 3 valid useful phrases for B2 reading"
-    }
-  ],
+  "candidate_rejections": [],
   "practice_story_count": 4,
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
-    "nllb_retries": 1,
+    "nllb_retries": 0,
     "quality_failures": 0,
-    "rejection_reasons": {
-      "repeated-junk-string": 1
-    }
+    "rejection_reasons": {}
   },
-  "completed_at": "2026-06-30T20:15:36.402181+00:00",
+  "completed_at": "2026-06-30T21:55:40.427675+00:00",
   "latest_date": "2026-06-30",
   "total_story_count": 70,
   "today_story_count": 10,
@@ -55,13 +45,23 @@
   "fallback_image_count": 8,
   "fallback_images": [
     {
+      "article_id": "67ca8c2a1bc8638527",
+      "title": "Potentially dangerous heatwave to sweep across the eastern United States",
+      "reason": "No usable free image candidate"
+    },
+    {
       "article_id": "1bf1833f0ba8bdc253",
       "title": "WhatsApp will allow users to go by usernames, closing a privacy blind spot",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "8bd786e4090f862310",
-      "title": "Venezuelans race against clock looking for earthquake survivors",
+      "article_id": "686d0c80d62a7b015a",
+      "title": "Flooding hits Ghana's capital killing 13 people - with another storm forecast",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "afe213fa7bff66c538",
+      "title": "Iran war supercharges pivot to renewable energy",
       "reason": "No usable free image candidate"
     },
     {
@@ -70,18 +70,8 @@
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "fa76f4834994596989",
-      "title": "Keep an eye out for tonight's Strawberry Moon",
-      "reason": "No usable free image candidate"
-    },
-    {
       "article_id": "1d233215ce0837fc95",
       "title": "Tricks to help you spend less money at restaurants",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "fb12e53447a837a143",
-      "title": "U.S. Supreme Court declines Trump's appeal in E. Jean Carroll case",
       "reason": "No usable free image candidate"
     },
     {
