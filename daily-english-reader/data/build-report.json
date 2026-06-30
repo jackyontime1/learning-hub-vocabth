@@ -1,6 +1,6 @@
 {
   "status": "ready",
-  "started_at": "2026-06-30T13:35:06.441003+00:00",
+  "started_at": "2026-06-30T14:04:39.476501+00:00",
   "expected_toronto_date": "2026-06-30",
   "free_only": true,
   "demo_mode": false,
@@ -16,18 +16,24 @@
     "C1": 2
   },
   "schema_version": 10,
-  "candidate_rejections": [],
+  "candidate_rejections": [
+    {
+      "article_id": "db15871e8d3bcb5a66",
+      "title": "Small Craft Advisory issued June 30 at 10:02AM EDT until July 1 at 5:00AM EDT by NWS Newport/Morehead City NC",
+      "provider": "US National Weather Service",
+      "level": "C1",
+      "reason": "RuntimeError: Unable to produce 3 valid useful phrases for C1 reading"
+    }
+  ],
   "practice_story_count": 4,
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
-    "nllb_retries": 1,
+    "nllb_retries": 0,
     "quality_failures": 0,
-    "rejection_reasons": {
-      "missing-number:500": 1
-    }
+    "rejection_reasons": {}
   },
-  "completed_at": "2026-06-30T13:46:46.861696+00:00",
+  "completed_at": "2026-06-30T14:06:53.841451+00:00",
   "latest_date": "2026-06-30",
   "total_story_count": 70,
   "today_story_count": 10,
@@ -47,19 +53,14 @@
   "fallback_image_count": 8,
   "fallback_images": [
     {
-      "article_id": "965ce800b761a512d3",
-      "title": "Palestinian exhibit at human rights museum 'should be rectified': federal heritage minister",
+      "article_id": "f3c8f951be76876d79",
+      "title": "Severe Thunderstorm Warning issued June 30 at 8:53AM CDT until June 30 at 9:30AM CDT by NWS Green Bay WI",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "b31f09f3d0655942c3",
-      "title": "N.W.T. braces for another day of worsening wildfires",
+      "article_id": "ce4623d85760dc6f3a",
+      "title": "Optimization Dynamics Imprint Semantic Specificity in Contrastive Embedding Norms",
       "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "bb11c0d5b17ff29cfa",
-      "title": "US says it has agreed to 'stand down' after exchange of strikes with Iran",
-      "reason": "Selected image was unavailable: ValueError"
     },
     {
       "article_id": "dc0f1e2b2f68e10adc",
@@ -67,9 +68,14 @@
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "0efc7458aa9b17491d",
-      "title": "U.S. Supreme Court rejects Trump-led challenge against mail-in ballots",
-      "reason": "Selected image was unavailable: ValueError"
+      "article_id": "8d4b13daafb7b883c4",
+      "title": "Pakistani airstrikes kill 36 civilians in Afghanistan and wound 160, officials say",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "da5efbc3c2c5fb0f63",
+      "title": "Special Weather Statement issued June 30 at 9:03AM CDT by NWS Green Bay WI",
+      "reason": "No usable free image candidate"
     },
     {
       "article_id": "fb12e53447a837a143",
