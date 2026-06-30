@@ -1,6 +1,6 @@
 {
   "status": "ready",
-  "started_at": "2026-06-30T14:04:39.476501+00:00",
+  "started_at": "2026-06-30T14:12:32.005991+00:00",
   "expected_toronto_date": "2026-06-30",
   "free_only": true,
   "demo_mode": false,
@@ -18,22 +18,26 @@
   "schema_version": 10,
   "candidate_rejections": [
     {
-      "article_id": "db15871e8d3bcb5a66",
-      "title": "Small Craft Advisory issued June 30 at 10:02AM EDT until July 1 at 5:00AM EDT by NWS Newport/Morehead City NC",
-      "provider": "US National Weather Service",
+      "article_id": "8090e740d57818b8ac",
+      "title": "Tariff deal with Trump unlikely before U.S. midterms, says Canada's former trade chief",
+      "provider": "CBC News",
       "level": "C1",
-      "reason": "RuntimeError: Unable to produce 3 valid useful phrases for C1 reading"
+      "reason": "RuntimeError: Full Thai translation unavailable for article 8090e740d57818b8ac"
     }
   ],
   "practice_story_count": 4,
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
-    "nllb_retries": 0,
-    "quality_failures": 0,
-    "rejection_reasons": {}
+    "nllb_retries": 3,
+    "quality_failures": 1,
+    "rejection_reasons": {
+      "repeated-junk-string": 2,
+      "missing-number:12": 1,
+      "unexpected-non-thai-script": 2
+    }
   },
-  "completed_at": "2026-06-30T14:06:53.841451+00:00",
+  "completed_at": "2026-06-30T14:26:32.951120+00:00",
   "latest_date": "2026-06-30",
   "total_story_count": 70,
   "today_story_count": 10,
@@ -53,28 +57,28 @@
   "fallback_image_count": 8,
   "fallback_images": [
     {
-      "article_id": "f3c8f951be76876d79",
-      "title": "Severe Thunderstorm Warning issued June 30 at 8:53AM CDT until June 30 at 9:30AM CDT by NWS Green Bay WI",
+      "article_id": "0efc7458aa9b17491d",
+      "title": "U.S. Supreme Court rejects Trump-led challenge against mail-in ballots",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "52e3a713f851f446fc",
+      "title": "More families turning to financial aid to afford overnight summer camps",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "ce4623d85760dc6f3a",
-      "title": "Optimization Dynamics Imprint Semantic Specificity in Contrastive Embedding Norms",
+      "article_id": "44547d97acf9af638c",
+      "title": "Supreme Court blocks Trump's attempt to fire Federal Reserve Governor Lisa Cook",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "dc0f1e2b2f68e10adc",
-      "title": "Eleven killed after plane carrying skydivers crashes in eastern France",
+      "article_id": "8bcd1dbb670fea85d3",
+      "title": "Venezuela's deadly quakes put its U.S.-backed government to the test",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "8d4b13daafb7b883c4",
-      "title": "Pakistani airstrikes kill 36 civilians in Afghanistan and wound 160, officials say",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "da5efbc3c2c5fb0f63",
-      "title": "Special Weather Statement issued June 30 at 9:03AM CDT by NWS Green Bay WI",
+      "article_id": "1d233215ce0837fc95",
+      "title": "Tricks to help you spend less money at restaurants",
       "reason": "No usable free image candidate"
     },
     {
