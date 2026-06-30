@@ -1,6 +1,6 @@
 # VocabTH / Podcast Voice - Project Status
 
-Updated: June 28, 2026
+Updated: June 30, 2026
 
 ## Workspace
 
@@ -145,6 +145,33 @@ Updated: June 28, 2026
   - No OpenAI API
   - No paid translation, image, or audio APIs
   - No paid storage risk
+
+## Reading Round 2B-C - Local IPA Dictionary Integration - June 30, 2026
+
+- Round 2B-C: Local IPA Dictionary Integration is complete and production-verified.
+- Implementation commit:
+  `09fbe1536d18866b59aacc8fc1f4d9b7f13b670a`
+- GitHub Actions run:
+  `https://github.com/jackyontime1/learning-hub-vocabth/actions/runs/28441415281`
+- Attempt `#2` succeeded.
+  - `should-run`: success
+  - `build-and-deploy`: success
+  - Verify production: success
+  - Persist verified rolling cache: success
+- Automated rolling-cache commit:
+  `2670174f37a5a96c16b550263ff3332375fea766`
+- Production verification passed:
+  - Latest date: `2026-06-30`
+  - Retained stories: 70
+  - Latest-day stories: 10
+  - Schema version: 10
+  - IPA dictionary fallback: production verified
+- IPA resolution behavior:
+  - The curated IPA lexicon remains the highest-priority source.
+  - The generated runtime IPA subset regenerates automatically during each daily build.
+  - The vendored source dictionary is build-only and is not loaded by the frontend.
+- Known remaining workflow reliability risk:
+  - Verify production still needs bounded retry/backoff for Cloudflare production-alias propagation delay.
 
 ## Oxford Category Distribution
 
@@ -448,16 +475,10 @@ node "D:\podcast voice\daily-english-reader\scripts\build-learning-hub.mjs"
 
 ## Next Action
 
-1. Monitor the next scheduled Daily Reader run after commit
-   `d104c978b6146fcbf8fbcf3f50fd98020ee65ebf`.
-2. If that scheduled run passes, start Round 2B: Reading UI/UX polish.
-3. Keep Round 2B focused on:
-   - Article-page readability
-   - Thai translation box
-   - Useful-phrases presentation
-   - Reducing visual clutter from word highlighting
-   - Mobile layout
-   - Saved vocabulary and saved-story polish later
-4. Preserve the free-only production constraints documented above.
+1. Add bounded retry/backoff to the Verify production workflow step.
+2. Add Alice Control Center.
+3. Start Learning UI / UX Redesign research-first.
+
+Preserve the free-only production constraints documented above.
 
 Keep responses and progress updates concise to reduce token use.
