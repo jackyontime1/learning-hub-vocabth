@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-06-29T21:46:59.848710+00:00",
-  "expected_toronto_date": "2026-06-29",
+  "started_at": "2026-06-30T13:35:06.441003+00:00",
+  "expected_toronto_date": "2026-06-30",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -16,37 +16,19 @@
     "C1": 2
   },
   "schema_version": 10,
-  "candidate_rejections": [
-    {
-      "article_id": "309f8620d2083e8224",
-      "title": "Severe Thunderstorm Warning issued June 29 at 4:44PM CDT until June 29 at 5:00PM CDT by NWS Bismarck ND",
-      "provider": "US National Weather Service",
-      "level": "B1",
-      "reason": "RuntimeError: Unable to produce 3 valid useful phrases for B1 reading"
-    },
-    {
-      "article_id": "b6b788c1fd51b17a2f",
-      "title": "Special Marine Warning issued June 29 at 4:45PM CDT until June 29 at 5:00PM CDT by NWS Duluth MN",
-      "provider": "US National Weather Service",
-      "level": "B1",
-      "reason": "RuntimeError: Full Thai translation unavailable for article b6b788c1fd51b17a2f"
-    }
-  ],
+  "candidate_rejections": [],
   "practice_story_count": 4,
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
-    "nllb_retries": 2,
-    "quality_failures": 1,
+    "nllb_retries": 1,
+    "quality_failures": 0,
     "rejection_reasons": {
-      "missing-unit:\\bknots?\\b": 2,
-      "repeated-2-gram": 1,
-      "repeated-3-gram": 1,
-      "missing-number:40": 1
+      "missing-number:500": 1
     }
   },
-  "completed_at": "2026-06-29T22:00:13.689602+00:00",
-  "latest_date": "2026-06-29",
+  "completed_at": "2026-06-30T13:46:46.861696+00:00",
+  "latest_date": "2026-06-30",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -65,29 +47,29 @@
   "fallback_image_count": 8,
   "fallback_images": [
     {
-      "article_id": "073c812b3d4724b6f6",
-      "title": "US and Iran exchange strikes and accuse each other of violating ceasefire",
+      "article_id": "965ce800b761a512d3",
+      "title": "Palestinian exhibit at human rights museum 'should be rectified': federal heritage minister",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "b31f09f3d0655942c3",
+      "title": "N.W.T. braces for another day of worsening wildfires",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "bb11c0d5b17ff29cfa",
+      "title": "US says it has agreed to 'stand down' after exchange of strikes with Iran",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "7f0529e948712932fb",
-      "title": "Biden blasts Trump 'vanity projects', calling him a 'loser' at fundraising event",
+      "article_id": "dc0f1e2b2f68e10adc",
+      "title": "Eleven killed after plane carrying skydivers crashes in eastern France",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "44547d97acf9af638c",
-      "title": "Supreme Court blocks Trump's attempt to fire Federal Reserve Governor Lisa Cook",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "bf76862d1d6613288a",
-      "title": "U.S. and Iran exchange strikes, underscoring the fragility of the ceasefire",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "bb05ced64808405799",
-      "title": "Severe Thunderstorm Warning issued June 29 at 4:42PM CDT until June 29 at 5:00PM CDT by NWS Duluth MN",
-      "reason": "No usable free image candidate"
+      "article_id": "0efc7458aa9b17491d",
+      "title": "U.S. Supreme Court rejects Trump-led challenge against mail-in ballots",
+      "reason": "Selected image was unavailable: ValueError"
     },
     {
       "article_id": "fb12e53447a837a143",
@@ -95,13 +77,13 @@
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "a016e667c570b41d96",
-      "title": "A Phone Call from the Driver",
+      "article_id": "529e1fdbb5533b45b2",
+      "title": "Sending a Parcel",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "0239213aa1a536fe15",
-      "title": "The Lunch Box",
+      "article_id": "8b84e71b9c0c71053e",
+      "title": "A Low Phone Battery",
       "reason": "Selected image was unavailable: ValueError"
     }
   ]
