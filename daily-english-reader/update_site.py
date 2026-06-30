@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import base64
+import gzip
 import hashlib
 import html
 import json
@@ -55,6 +56,19 @@ STAGING_DIR = ROOT / ".site-staging"
 BACKUP_DIR = ROOT / ".site-backup"
 PRACTICE_STORIES_PATH = CONTENT_DIR / "practice-stories.json"
 IPA_LEXICON_PATH = CONTENT_DIR / "ipa-lexicon.json"
+IPA_DICTIONARY_PATH = CONTENT_DIR / "ipa-dict-en-us-subset.json"
+IPA_DICTIONARY_SOURCE_PATH = ROOT / "vendor" / "ipa-dict" / "en_US.txt.gz"
+IPA_DICTIONARY_SOURCE_COMMIT = "43c3570eb3553bdd19fccd2bd0091534889af023"
+IPA_DICTIONARY_SOURCE_SHA256 = "2AF6F154A5C363275F052D1F85ACEDEF38ED185CA9745AA4314BE77F6B70DE67"
+
+IPA_DICTIONARY_EXCLUDED_WORDS = frozenset({
+    "a", "an", "and", "are", "as", "at", "be", "been", "being", "but", "by", "can", "could",
+    "did", "do", "does", "for", "from", "had", "has", "have", "he", "her", "hers", "him", "his",
+    "i", "if", "in", "into", "is", "it", "its", "may", "might", "must", "of", "on", "or", "our",
+    "ours", "she", "should", "that", "the", "their", "theirs", "them", "they", "this", "those", "to",
+    "us", "was", "we", "were", "what", "when", "where", "which", "who", "why", "will", "with",
+    "would", "you", "your", "yours", "pim", "toronto", "london", "npr", "nasa",
+})
 
 CURRENTS_URL = "https://api.currentsapi.services/v1/latest-news"
 GUARDIAN_URL = "https://content.guardianapis.com/search"
@@ -408,6 +422,96 @@ def load_ipa_lexicon(path: Path = IPA_LEXICON_PATH) -> dict[str, str]:
 
 
 IPA_LEXICON = load_ipa_lexicon()
+
+
+def load_ipa_dictionary(path: Path = IPA_DICTIONARY_PATH) -> dict[str, str]:
+    return {
+        word: ipa
+        for word, ipa in load_ipa_lexicon(path).items()
+        if word not in IPA_DICTIONARY_EXCLUDED_WORDS
+    }
+
+
+IPA_DICTIONARY = load_ipa_dictionary()
+
+
+def load_ipa_dictionary_source(path: Path = IPA_DICTIONARY_SOURCE_PATH) -> dict[str, str]:
+    if not path.exists():
+        logging.warning("IPA dictionary source is missing; using curated IPA only: %s", path)
+        return {}
+    entries: dict[str, str] = {}
+    ambiguous: set[str] = set()
+    try:
+        source_file = gzip.open(path, "rt", encoding="utf-8") if path.suffix == ".gz" else path.open("r", encoding="utf-8")
+        with source_file as source:
+            for raw_line in source:
+                parts = raw_line.rstrip("\r\n").split("\t", 1)
+                if len(parts) != 2:
+                    continue
+                word, ipa = parts[0].strip(), parts[1].strip()
+                if not re.fullmatch(r"[a-z]+", word):
+                    continue
+                if not re.fullmatch(r"/[^/<>{}\r\n]{2,40}/", ipa):
+                    continue
+                if word in ambiguous:
+                    continue
+                previous = entries.get(word)
+                if previous and previous != ipa:
+                    entries.pop(word, None)
+                    ambiguous.add(word)
+                    continue
+                entries[word] = ipa
+    except OSError as error:
+        logging.warning("Unable to read IPA dictionary source; using curated IPA only: %s", error)
+        return {}
+    return entries
+
+
+def generate_ipa_dictionary_subset(
+    articles: list[dict[str, Any]], source_path: Path = IPA_DICTIONARY_SOURCE_PATH,
+    output_path: Path = IPA_DICTIONARY_PATH, curated_lexicon: dict[str, str] | None = None,
+) -> dict[str, str]:
+    source = load_ipa_dictionary_source(source_path)
+    if not source:
+        return {}
+    curated = IPA_LEXICON if curated_lexicon is None else curated_lexicon
+    forms: dict[str, set[str]] = {}
+    for article in articles:
+        for word in re.findall(r"[A-Za-z]+(?:['-][A-Za-z]+)*", str(article.get("text", ""))):
+            key = word.lower()
+            if re.fullmatch(r"[a-z]+", key):
+                forms.setdefault(key, set()).add(word)
+
+    subset: dict[str, str] = {}
+    for word in sorted(forms):
+        observed = forms[word]
+        if (
+            len(word) > 1
+            and word not in curated
+            and word not in IPA_DICTIONARY_EXCLUDED_WORDS
+            and word in source
+            and any(value.islower() for value in observed)
+            and not any(len(value) > 1 and value.isupper() for value in observed)
+            and not any(not (value.islower() or value.istitle()) for value in observed)
+        ):
+            subset[word] = source[word]
+
+    payload = {
+        "_meta": {
+            "dialect": "en-US (General American)",
+            "source": "open-dict-data/ipa-dict data/en_US.txt",
+            "source_commit": IPA_DICTIONARY_SOURCE_COMMIT,
+            "source_sha256": IPA_DICTIONARY_SOURCE_SHA256,
+            "article_count": len(articles),
+            "policy": "Generated exact-word fallback subset; curated ipa-lexicon.json overrides; ambiguous and unsafe tokens omitted",
+        },
+        **subset,
+    }
+    try:
+        atomic_json(output_path, payload)
+    except OSError as error:
+        logging.warning("Unable to persist IPA dictionary subset; using generated in-memory subset: %s", error)
+    return subset
 
 
 def normalize(value: str) -> str:
@@ -2674,14 +2778,18 @@ def word_spans(
     translations: dict[str, str],
     word_pos: dict[str, str] | None = None,
     ipa_lexicon: dict[str, str] | None = None,
+    ipa_dictionary: dict[str, str] | None = None,
 ) -> Markup:
     pieces = re.findall(r"[A-Za-z]+(?:['-][A-Za-z]+)*|[^A-Za-z]+", text)
     output = []
     lexicon = IPA_LEXICON if ipa_lexicon is None else ipa_lexicon
+    dictionary = IPA_DICTIONARY if ipa_dictionary is None and ipa_lexicon is None else (ipa_dictionary or {})
     for piece in pieces:
         if re.fullmatch(r"[A-Za-z]+(?:['-][A-Za-z]+)*", piece):
             key = piece.lower()
             ipa = lexicon.get(key, "")
+            if not ipa and piece.islower() and key not in IPA_DICTIONARY_EXCLUDED_WORDS:
+                ipa = dictionary.get(key, "")
             ipa_attribute = f' data-ipa="{html.escape(ipa, quote=True)}"' if ipa else ""
             output.append(
                 f'<span class="word" tabindex="0" role="button" data-word="{html.escape(piece, quote=True)}" '
@@ -2771,6 +2879,8 @@ def render_site(
     articles: list[dict[str, Any]], quota: QuotaManager, expected_date: str,
     build_report: dict[str, Any],
 ) -> None:
+    global IPA_DICTIONARY
+    IPA_DICTIONARY = generate_ipa_dictionary_subset(articles)
     if STAGING_DIR.exists():
         shutil.rmtree(STAGING_DIR)
     shutil.copytree(STATIC_DIR, STAGING_DIR / "static")

@@ -413,6 +413,223 @@ class DailyReaderTests(unittest.TestCase):
         self.assertEqual(markup.count("data-ipa="), 1)
         self.assertIn('data-word="unknown"', markup)
 
+    def test_ipa_lookup_normalizes_case_and_punctuation_only(self):
+        markup = str(site.word_spans(
+            "WORK, work!",
+            {"work": "งาน"},
+            ipa_lexicon={"work": "/wɝk/"},
+        ))
+        self.assertEqual(markup.count('data-ipa="/wɝk/"'), 2)
+
+    def test_curated_ipa_overrides_dictionary_fallback(self):
+        markup = str(site.word_spans(
+            "work",
+            {},
+            ipa_lexicon={"work": "/curated/"},
+            ipa_dictionary={"work": "/dictionary/"},
+        ))
+        self.assertIn('data-ipa="/curated/"', markup)
+        self.assertNotIn("/dictionary/", markup)
+
+    def test_dictionary_fallback_supports_safe_lowercase_words(self):
+        markup = str(site.word_spans(
+            "weather unknown",
+            {},
+            ipa_lexicon={},
+            ipa_dictionary={"weather": "/ˈwɛðɝ/"},
+        ))
+        words = {
+            row["data-word"]: row.get("data-ipa", "")
+            for row in site.BeautifulSoup(markup, "html.parser").select(".word")
+        }
+        self.assertEqual(words["weather"], "/ˈwɛðɝ/")
+        self.assertEqual(words["unknown"], "")
+
+    def test_dictionary_fallback_hides_names_places_and_acronyms(self):
+        unsafe = {
+            "pim": "/pɪm/", "toronto": "/təˈrɑntoʊ/", "london": "/ˈlʌndən/",
+            "npr": "/ˌɛnpiːˈɑːr/", "nasa": "/ˈnæsə/",
+        }
+        markup = str(site.word_spans(
+            "Pim Toronto London NPR NASA",
+            {},
+            ipa_lexicon={},
+            ipa_dictionary=unsafe,
+        ))
+        self.assertNotIn("data-ipa=", markup)
+
+    def test_dictionary_fallback_hides_context_sensitive_function_words(self):
+        markup = str(site.word_spans(
+            "the a to",
+            {},
+            ipa_lexicon={},
+            ipa_dictionary={"the": "/ðə/", "a": "/ə/", "to": "/tə/"},
+        ))
+        self.assertNotIn("data-ipa=", markup)
+
+    def test_dictionary_loader_skips_multiple_pronunciations(self):
+        with tempfile.TemporaryDirectory() as temp:
+            path = Path(temp) / "ipa-dictionary.json"
+            path.write_text(json.dumps({
+                "read": "/ˈɹɛd/, /ˈɹid/",
+                "worked": "/ˈwɝkt/",
+                "the": "/ðə/",
+            }), encoding="utf-8")
+            self.assertEqual(site.load_ipa_dictionary(path), {"worked": "/ˈwɝkt/"})
+
+    def test_runtime_ipa_subset_regenerates_for_current_article_corpus(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            source = root / "en_US.txt"
+            output = root / "subset.json"
+            source.write_text(
+                "legacy\t/ˈlɛɡəsi/\nfuture\t/ˈfjutʃɝ/\nworked\t/ˈwɝkt/\n",
+                encoding="utf-8",
+            )
+            first = site.generate_ipa_dictionary_subset(
+                [{"text": "legacy"}], source, output, curated_lexicon={},
+            )
+            second = site.generate_ipa_dictionary_subset(
+                [{"text": "future worked"}], source, output, curated_lexicon={},
+            )
+            self.assertEqual(first, {"legacy": "/ˈlɛɡəsi/"})
+            self.assertEqual(second, {"future": "/ˈfjutʃɝ/", "worked": "/ˈwɝkt/"})
+            self.assertNotIn("legacy", json.loads(output.read_text(encoding="utf-8")))
+
+    def test_generated_ipa_subset_excludes_unsafe_and_ambiguous_words(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            source = root / "en_US.txt"
+            source.write_text(
+                "safe\t/ˈseɪf/\nwork\t/ˈwɝk/\nworked\t/ˈwɝkt/\n"
+                "working\t/ˈwɝkɪŋ/\npim\t/ˈpɪm/\ntoronto\t/tɝˈɑntoʊ/\n"
+                "london\t/ˈlʌndən/\nnpr\t/ˈɛnˈpiˈɑɹ/\nnasa\t/ˈnæsə/\n"
+                "the\t/ˈðə/\na\t/ə/\nto\t/ˈtu/\nread\t/ˈɹɛd/, /ˈɹid/\n"
+                "brandname\t/ˈbɹændneɪm/\n",
+                encoding="utf-8",
+            )
+            subset = site.generate_ipa_dictionary_subset(
+                [{"text": "safe work worked guessing Pim Toronto London NPR NASA the a to read BrandName 2026"}],
+                source, root / "subset.json", curated_lexicon={},
+            )
+            self.assertEqual(subset, {
+                "safe": "/ˈseɪf/", "work": "/ˈwɝk/", "worked": "/ˈwɝkt/",
+            })
+            self.assertNotIn("working", subset)
+            self.assertNotIn("guessing", subset)
+
+    def test_missing_ipa_source_falls_back_without_overwriting_subset(self):
+        with tempfile.TemporaryDirectory() as temp:
+            output = Path(temp) / "subset.json"
+            output.write_text('{"existing": "/test/"}', encoding="utf-8")
+            subset = site.generate_ipa_dictionary_subset(
+                [{"text": "future"}], Path(temp) / "missing.txt", output, curated_lexicon={},
+            )
+            self.assertEqual(subset, {})
+            self.assertIn("existing", output.read_text(encoding="utf-8"))
+
+    def test_render_site_refreshes_ipa_subset_before_writing(self):
+        with patch.object(
+            site, "generate_ipa_dictionary_subset", side_effect=RuntimeError("subset refresh called"),
+        ) as refresh:
+            with self.assertRaisesRegex(RuntimeError, "subset refresh called"):
+                site.render_site([], Mock(), "2026-06-30", {})
+        refresh.assert_called_once_with([])
+
+    def test_dictionary_inflections_require_exact_entries(self):
+        markup = str(site.word_spans(
+            "work worked working",
+            {},
+            ipa_lexicon={},
+            ipa_dictionary={"work": "/wɝk/", "worked": "/wɝkt/"},
+        ))
+        words = {
+            row["data-word"]: row.get("data-ipa", "")
+            for row in site.BeautifulSoup(markup, "html.parser").select(".word")
+        }
+        self.assertEqual(words["work"], "/wɝk/")
+        self.assertEqual(words["worked"], "/wɝkt/")
+        self.assertEqual(words["working"], "")
+
+    def test_generated_ipa_dictionary_subset_stays_small(self):
+        path = site.IPA_DICTIONARY_PATH
+        data = json.loads(path.read_text(encoding="utf-8"))
+        entries = {word: ipa for word, ipa in data.items() if not word.startswith("_")}
+        self.assertGreater(len(entries), 100)
+        self.assertLess(len(entries), 2000)
+        self.assertLess(path.stat().st_size, 64 * 1024)
+        self.assertEqual(site.SCHEMA_VERSION, 10)
+
+    def test_full_ipa_source_is_build_only_and_matches_audited_file(self):
+        source = site.IPA_DICTIONARY_SOURCE_PATH
+        self.assertLess(source.stat().st_size, 1_000_000)
+        with site.gzip.open(source, "rb") as handle:
+            source_data = handle.read()
+        self.assertEqual(len(source_data), 3_180_267)
+        self.assertEqual(
+            site.hashlib.sha256(source_data).hexdigest().upper(),
+            site.IPA_DICTIONARY_SOURCE_SHA256,
+        )
+        self.assertFalse(source.is_relative_to(site.STATIC_DIR))
+        frontend = "\n".join([
+            (site.STATIC_DIR / "js" / "app.js").read_text(encoding="utf-8"),
+            (site.TEMPLATE_DIR / "article.html").read_text(encoding="utf-8"),
+        ])
+        self.assertNotIn("en_US.txt.gz", frontend)
+        self.assertNotIn("vendor/ipa-dict", frontend)
+
+    def test_ipa_does_not_guess_proper_nouns_or_acronyms(self):
+        markup = str(site.word_spans(
+            "Pim called NPR in Toronto and London.",
+            {},
+            ipa_lexicon={"called": "/kɔld/"},
+        ))
+        words = {
+            row["data-word"]: row.get("data-ipa", "")
+            for row in site.BeautifulSoup(markup, "html.parser").select(".word")
+        }
+        self.assertEqual(words["called"], "/kɔld/")
+        self.assertEqual(words["Pim"], "")
+        self.assertEqual(words["NPR"], "")
+        self.assertEqual(words["Toronto"], "")
+        self.assertEqual(words["London"], "")
+
+    def test_ipa_inflections_require_exact_entries(self):
+        markup = str(site.word_spans(
+            "work worked working",
+            {},
+            ipa_lexicon={"work": "/wɝk/", "worked": "/wɝkt/"},
+        ))
+        words = {
+            row["data-word"]: row.get("data-ipa", "")
+            for row in site.BeautifulSoup(markup, "html.parser").select(".word")
+        }
+        self.assertEqual(words["work"], "/wɝk/")
+        self.assertEqual(words["worked"], "/wɝkt/")
+        self.assertEqual(words["working"], "")
+
+    def test_article_view_keeps_schema_ten_when_ipa_is_missing(self):
+        article = {
+            "audio_cache_path": "data/audio/missing.wav",
+            "image": {},
+            "published_date": "2026-06-30",
+            "slug": "pim-story",
+            "published": "2026-06-30T00:00:00Z",
+            "title": "Pim Story",
+            "text": "Pim visits NPR.",
+            "word_translations": {},
+            "word_pos": {},
+            "thai_text": "พิมไปเยี่ยมเอ็นพีอาร์",
+        }
+        view = site.article_view(article, "")
+        self.assertEqual(site.SCHEMA_VERSION, 10)
+        words = {
+            row["data-word"]: row.get("data-ipa", "")
+            for row in site.BeautifulSoup(str(view["word_html"]), "html.parser").select(".word")
+        }
+        self.assertEqual(words["Pim"], "")
+        self.assertEqual(words["NPR"], "")
+
     def test_ipa_lexicon_rejects_invalid_optional_entries(self):
         with tempfile.TemporaryDirectory() as temp:
             path = Path(temp) / "ipa.json"
