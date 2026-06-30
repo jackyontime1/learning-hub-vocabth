@@ -1,6 +1,6 @@
 {
   "status": "ready",
-  "started_at": "2026-06-30T14:12:32.005991+00:00",
+  "started_at": "2026-06-30T18:03:46.294160+00:00",
   "expected_toronto_date": "2026-06-30",
   "free_only": true,
   "demo_mode": false,
@@ -18,11 +18,11 @@
   "schema_version": 10,
   "candidate_rejections": [
     {
-      "article_id": "8090e740d57818b8ac",
-      "title": "Tariff deal with Trump unlikely before U.S. midterms, says Canada's former trade chief",
+      "article_id": "7f292966e87e55baf9",
+      "title": "Russian strikes across Ukraine kill at least 9, injure dozens",
       "provider": "CBC News",
       "level": "C1",
-      "reason": "RuntimeError: Full Thai translation unavailable for article 8090e740d57818b8ac"
+      "reason": "RuntimeError: Full Thai translation unavailable for article 7f292966e87e55baf9"
     }
   ],
   "practice_story_count": 4,
@@ -33,11 +33,10 @@
     "quality_failures": 1,
     "rejection_reasons": {
       "repeated-junk-string": 2,
-      "missing-number:12": 1,
       "unexpected-non-thai-script": 2
     }
   },
-  "completed_at": "2026-06-30T14:26:32.951120+00:00",
+  "completed_at": "2026-06-30T18:14:26.999084+00:00",
   "latest_date": "2026-06-30",
   "total_story_count": 70,
   "today_story_count": 10,
@@ -62,18 +61,18 @@
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "52e3a713f851f446fc",
-      "title": "More families turning to financial aid to afford overnight summer camps",
+      "article_id": "9b98c7e6a06ae9b15e",
+      "title": "6 people presumed drowned as RCMP lead recovery of sunken boat near Richmond, B.C.",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "44547d97acf9af638c",
-      "title": "Supreme Court blocks Trump's attempt to fire Federal Reserve Governor Lisa Cook",
+      "article_id": "13bb66c880eb35e584",
+      "title": "Teyana Taylor's tears and Lauryn Hill tribute steal show at BET Awards",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "8bcd1dbb670fea85d3",
-      "title": "Venezuela's deadly quakes put its U.S.-backed government to the test",
+      "article_id": "fa76f4834994596989",
+      "title": "Keep an eye out for tonight's Strawberry Moon",
       "reason": "No usable free image candidate"
     },
     {
