@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-06-30T21:51:51.157040+00:00",
-  "expected_toronto_date": "2026-06-30",
+  "started_at": "2026-07-01T12:43:41.713798+00:00",
+  "expected_toronto_date": "2026-07-01",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -16,17 +16,38 @@
     "C1": 2
   },
   "schema_version": 10,
-  "candidate_rejections": [],
+  "candidate_rejections": [
+    {
+      "article_id": "f6aea5b4f5a4dc201d",
+      "title": "Americans react to Supreme Court upholding birthright citizenship",
+      "provider": "BBC News",
+      "level": "B2",
+      "reason": "RuntimeError: Full Thai translation unavailable for article f6aea5b4f5a4dc201d"
+    },
+    {
+      "article_id": "f75fc87a6107392a70",
+      "title": "Special Weather Statement issued July 1 at 10:40PM ChST by NWS Tiyan GU",
+      "provider": "US National Weather Service",
+      "level": "C1",
+      "reason": "RuntimeError: Full Thai translation unavailable for article f75fc87a6107392a70"
+    }
+  ],
   "practice_story_count": 4,
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
-    "nllb_retries": 0,
-    "quality_failures": 0,
-    "rejection_reasons": {}
+    "nllb_retries": 4,
+    "quality_failures": 2,
+    "rejection_reasons": {
+      "missing-number:150": 2,
+      "repeated-word-run": 1,
+      "repeated-junk-string": 1,
+      "unexpected-non-thai-script": 1,
+      "missing-number:38": 1
+    }
   },
-  "completed_at": "2026-06-30T21:55:40.427675+00:00",
-  "latest_date": "2026-06-30",
+  "completed_at": "2026-07-01T13:01:41.747431+00:00",
+  "latest_date": "2026-07-01",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -42,46 +63,51 @@
     "easy_news": 2,
     "daily_life_practice_story": 4
   },
-  "fallback_image_count": 8,
+  "fallback_image_count": 9,
   "fallback_images": [
-    {
-      "article_id": "67ca8c2a1bc8638527",
-      "title": "Potentially dangerous heatwave to sweep across the eastern United States",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "1bf1833f0ba8bdc253",
-      "title": "WhatsApp will allow users to go by usernames, closing a privacy blind spot",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "686d0c80d62a7b015a",
-      "title": "Flooding hits Ghana's capital killing 13 people - with another storm forecast",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "afe213fa7bff66c538",
-      "title": "Iran war supercharges pivot to renewable energy",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "0efc7458aa9b17491d",
-      "title": "U.S. Supreme Court rejects Trump-led challenge against mail-in ballots",
-      "reason": "Selected image was unavailable: ValueError"
-    },
     {
       "article_id": "1d233215ce0837fc95",
       "title": "Tricks to help you spend less money at restaurants",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "529e1fdbb5533b45b2",
-      "title": "Sending a Parcel",
+      "article_id": "da4f62f12e9fad120b",
+      "title": "Freeform Preference Learning for Robotic Manipulation",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "69c9aa89d5246187ab",
+      "title": "Mexico ends a 40-year knockout drought, beats Ecuador to advance in World Cup",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "8d4b13daafb7b883c4",
+      "title": "Pakistani airstrikes kill 36 civilians in Afghanistan and wound 160, officials say",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "aacc697e172f089db8",
+      "title": "Severe Thunderstorm Warning issued July 1 at 7:35AM CDT until July 1 at 8:00AM CDT by NWS Green Bay WI",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "6279a00b882b38ab28",
+      "title": "Severe Thunderstorm Warning issued July 1 at 7:38AM CDT until July 1 at 8:00AM CDT by NWS Milwaukee/Sullivan WI",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "dfb0f853c5dcdadea4",
+      "title": "Leaving a Phone for Repair",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "8b84e71b9c0c71053e",
-      "title": "A Low Phone Battery",
+      "article_id": "676ad7d194255128cd",
+      "title": "Meeting a New Neighbor",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "ffb18d353b26f33012",
+      "title": "Laundry Before the Rain",
       "reason": "Selected image was unavailable: ValueError"
     }
   ]
