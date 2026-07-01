@@ -1,6 +1,6 @@
 {
   "status": "ready",
-  "started_at": "2026-07-01T12:43:41.713798+00:00",
+  "started_at": "2026-07-01T21:42:49.323855+00:00",
   "expected_toronto_date": "2026-07-01",
   "free_only": true,
   "demo_mode": false,
@@ -16,37 +16,20 @@
     "C1": 2
   },
   "schema_version": 10,
-  "candidate_rejections": [
-    {
-      "article_id": "f6aea5b4f5a4dc201d",
-      "title": "Americans react to Supreme Court upholding birthright citizenship",
-      "provider": "BBC News",
-      "level": "B2",
-      "reason": "RuntimeError: Full Thai translation unavailable for article f6aea5b4f5a4dc201d"
-    },
-    {
-      "article_id": "f75fc87a6107392a70",
-      "title": "Special Weather Statement issued July 1 at 10:40PM ChST by NWS Tiyan GU",
-      "provider": "US National Weather Service",
-      "level": "C1",
-      "reason": "RuntimeError: Full Thai translation unavailable for article f75fc87a6107392a70"
-    }
-  ],
+  "candidate_rejections": [],
   "practice_story_count": 4,
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
-    "nllb_retries": 4,
-    "quality_failures": 2,
+    "nllb_retries": 1,
+    "quality_failures": 0,
     "rejection_reasons": {
-      "missing-number:150": 2,
-      "repeated-word-run": 1,
       "repeated-junk-string": 1,
-      "unexpected-non-thai-script": 1,
-      "missing-number:38": 1
+      "suspiciously-long": 1,
+      "missing-number:112,44": 1
     }
   },
-  "completed_at": "2026-07-01T13:01:41.747431+00:00",
+  "completed_at": "2026-07-01T21:45:44.883251+00:00",
   "latest_date": "2026-07-01",
   "total_story_count": 70,
   "today_story_count": 10,
@@ -66,33 +49,33 @@
   "fallback_image_count": 9,
   "fallback_images": [
     {
-      "article_id": "1d233215ce0837fc95",
-      "title": "Tricks to help you spend less money at restaurants",
+      "article_id": "1bf1833f0ba8bdc253",
+      "title": "WhatsApp will allow users to go by usernames, closing a privacy blind spot",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "da4f62f12e9fad120b",
-      "title": "Freeform Preference Learning for Robotic Manipulation",
+      "article_id": "34db9153b1e78fe813",
+      "title": "FLORA: A deep learning approach to predict forest attributes from heterogeneous LiDAR data",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "69c9aa89d5246187ab",
-      "title": "Mexico ends a 40-year knockout drought, beats Ecuador to advance in World Cup",
+      "article_id": "686d0c80d62a7b015a",
+      "title": "Flooding hits Ghana's capital killing 13 people - with another storm forecast",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "8d4b13daafb7b883c4",
-      "title": "Pakistani airstrikes kill 36 civilians in Afghanistan and wound 160, officials say",
+      "article_id": "4400892f3d44955c3a",
+      "title": "Heat scorches parts of U.S., millions facing 'extremely dangerous' conditions",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "aacc697e172f089db8",
-      "title": "Severe Thunderstorm Warning issued July 1 at 7:35AM CDT until July 1 at 8:00AM CDT by NWS Green Bay WI",
+      "article_id": "009d829f27f9a22078",
+      "title": "Special Weather Statement issued July 1 at 4:41PM CDT by NWS Jackson MS",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "6279a00b882b38ab28",
-      "title": "Severe Thunderstorm Warning issued July 1 at 7:38AM CDT until July 1 at 8:00AM CDT by NWS Milwaukee/Sullivan WI",
+      "article_id": "83d8d375c1f2fc3ca6",
+      "title": "Special Weather Statement issued July 1 at 3:38PM MDT by NWS Billings MT",
       "reason": "No usable free image candidate"
     },
     {
