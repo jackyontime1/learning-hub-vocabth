@@ -1,6 +1,6 @@
 # VocabTH / Podcast Voice - Project Status
 
-Updated: June 30, 2026
+Updated: July 1, 2026
 
 ## Workspace
 
@@ -172,6 +172,39 @@ Updated: June 30, 2026
   - The vendored source dictionary is build-only and is not loaded by the frontend.
 - Known remaining workflow reliability risk:
   - Verify production still needs bounded retry/backoff for Cloudflare production-alias propagation delay.
+
+## Reading Round 2D-B - Article UI Polish - July 1, 2026
+
+- Round 2D-B: Article UI Polish is complete and production-verified.
+- Implementation commit:
+  `0796f14f23c935c9201320391d21f1b6d6dc7130`
+- GitHub Actions run:
+  `https://github.com/jackyontime1/learning-hub-vocabth/actions/runs/28518304188`
+- Workflow result: success.
+  - `should-run`: success
+  - `build-and-deploy`: success
+  - Production deploy: success
+  - Verify production: success
+  - Persist verified rolling cache: success
+- Production verification passed:
+  - Latest date: `2026-07-01`
+  - Retained stories: 70
+  - Latest-day stories: 10
+  - A1/A2/B1/B2/C1: 2 each
+  - Schema version: 10 for all 70 articles
+  - Complete Thai text: present in all 70 articles
+  - Useful phrases: present in all 70 articles
+- Article UI production verification passed:
+  - Full Thai translation and useful phrases display correctly.
+  - Supported IPA displays; unsupported-name IPA remains hidden.
+  - Speaker control, Escape dismissal, and focus return work correctly.
+  - Mobile `390x844` has no horizontal overflow.
+  - Vocabulary popup viewport clamping is verified.
+  - Mobile reading controls meet the 44px touch-target height.
+  - Browser console errors: none.
+- Remaining verification risk:
+  - Interactive production testing sampled one A1 article.
+  - C1 remains covered by pre-commit browser testing and the shared article template.
 
 ## Oxford Category Distribution
 
@@ -475,9 +508,9 @@ node "D:\podcast voice\daily-english-reader\scripts\build-learning-hub.mjs"
 
 ## Next Action
 
-1. Add bounded retry/backoff to the Verify production workflow step.
-2. Add Alice Control Center.
-3. Start Learning UI / UX Redesign research-first.
+1. Continue using Alice Control Center v1 for scoped project management.
+2. Scope Round 2D-C separately before implementation.
+3. Research the homepage and story-card UI redesign before implementation.
 
 Preserve the free-only production constraints documented above.
 
