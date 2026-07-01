@@ -7,30 +7,40 @@
         <h2>Story level</h2>
         <div class="side-levels"><span class="{{ article.level | lower }}"><b>{{ article.level }}</b> {% if article.level == "A1" %}Starter{% elif article.level == "A2" %}Beginner{% elif article.level == "B1" %}Intermediate{% elif article.level == "B2" %}Upper Intermediate{% else %}Advanced{% endif %}</span></div>
       </section>
-      <section class="side-panel status-panel">
-        <h2>{{ article.content_type | title }}</h2>
+      <section class="side-panel status-panel article-source-panel">
+        <h2>Source</h2>
         <p>Source: {{ article.sourceName or article.provider }}</p>
-        {% if article.contentType == "fictional_practice_story" %}<p><strong>Fictional learning story - not real news</strong></p><p>{{ article.disclaimerTh }}</p>{% elif article.source_url %}<a href="{{ article.source_url }}" rel="noopener">Open source</a>{% endif %}
+        {% if article.source_url %}<a href="{{ article.source_url }}" rel="noopener">Open source</a>{% endif %}
       </section>
     </aside>
 
     <article class="reader" data-article-id="{{ article.id }}">
-      <section class="article-hero">
-        <img src="{{ article.image_url }}" alt="{{ article.image_alt }}" fetchpriority="high">
-        <div class="hero-shade"></div>
-        <div class="featured-label">{{ article.level }} {% if article.contentType == "fictional_practice_story" %}DAILY LIFE PRACTICE STORY{% elif article.readingType == "easy_news" %}EASY NEWS{% elif article.readingType == "advanced_real_news" %}ADVANCED REAL NEWS{% else %}REAL NEWS{% endif %}</div>
-        <div class="article-hero-copy">
-          <div class="story-kicker"><span>{{ article.category }}</span> {{ article.published_display }}</div>
+      <header class="article-header">
+        <div class="article-header-copy">
+          <div class="article-classification">
+            <span class="level-chip {{ article.level | lower }}">{{ article.level }}</span>
+            <span>{% if article.contentType == "fictional_practice_story" %}Daily Life Practice Story{% elif article.readingType == "easy_news" %}Easy News{% elif article.readingType == "advanced_real_news" %}Advanced Real News{% else %}Real News{% endif %}</span>
+          </div>
+          <p class="article-meta"><span>{{ article.category }}</span><span>{{ article.published_display }}</span></p>
           <h1>{{ article.title }}</h1>
-          <p>{{ article.description }}</p>
+          <p class="article-summary">{{ article.description }}</p>
+          {% if article.contentType == "fictional_practice_story" %}
+            <aside class="practice-notice" aria-label="Practice story notice">
+              <strong>Fictional learning story - not real news</strong>
+              <p>{{ article.disclaimerEn }}</p>
+              <p lang="th">{{ article.disclaimerTh }}</p>
+            </aside>
+          {% endif %}
         </div>
-      </section>
-      {% if article.contentType == "fictional_practice_story" %}<section class="side-panel status-panel"><h2>Fictional learning story - not real news</h2><p>{{ article.disclaimerEn }}</p><p>{{ article.disclaimerTh }}</p></section>{% endif %}
-      <p class="image-attribution">
-        Image: {{ article.image.image_author }} / {{ article.image.image_source }}
-        {% if article.image.image_license %}({{ article.image.image_license }}){% endif %}
-        {% if article.image.image_attribution_url %}<a href="{{ article.image.image_attribution_url }}" rel="noopener">Attribution</a>{% endif %}
-      </p>
+        <figure class="article-cover">
+          <img src="{{ article.image_url }}" alt="{{ article.image_alt }}" fetchpriority="high">
+          <figcaption>
+            Image: {{ article.image.image_author }} / {{ article.image.image_source }}
+            {% if article.image.image_license %}({{ article.image.image_license }}){% endif %}
+            {% if article.image.image_attribution_url %}<a href="{{ article.image.image_attribution_url }}" rel="noopener">Attribution</a>{% endif %}
+          </figcaption>
+        </figure>
+      </header>
       <div class="article-action-bar">
         <div><span><i class="fa-regular fa-clock"></i> 5 min read</span><span><i class="fa-solid fa-signal"></i> {{ article.level }}</span></div>
         <button class="star-button" data-save-article data-id="{{ article.id }}" data-title="{{ article.title }}" data-url="{{ article.page_url }}" data-level="{{ article.level }}" data-category="{{ article.category }}" data-date="{{ article.published_date }}" data-image="{{ article.image_url }}" type="button"><i class="fa-regular fa-bookmark"></i> <span>Save</span></button>
@@ -38,11 +48,11 @@
 
       <section class="reader-card" id="reader">
         <header class="reader-toolbar">
-          <div><h2>{{ article.level }} Version</h2><p>Click any word for its Thai meaning.</p></div>
+          <div><h2>{{ article.level }} reading</h2><p>Select any word for its Thai meaning and pronunciation.</p></div>
           <div class="reading-actions">
-            <button class="translate-toggle" type="button" aria-controls="fullTranslation" aria-expanded="false"><i class="fa-solid fa-language"></i> Translate to Thai</button>
-            <button class="font-button" data-font-action="decrease" type="button">A-</button>
-            <button class="font-button" data-font-action="increase" type="button">A+</button>
+            <button class="translate-toggle" type="button" aria-controls="fullTranslation" aria-expanded="false"><i class="fa-solid fa-language"></i> แปลไทยทั้งบท</button>
+            <button class="font-button" data-font-action="decrease" type="button" aria-label="Decrease reading text size" title="Decrease text size">A-</button>
+            <button class="font-button" data-font-action="increase" type="button" aria-label="Increase reading text size" title="Increase text size">A+</button>
           </div>
         </header>
         <div class="audio-player">
@@ -50,25 +60,30 @@
           <span id="audioCurrent">0:00</span>
           <input id="audioProgress" type="range" min="0" max="100" value="0" aria-label="Audio progress">
           <span id="audioDuration">0:00</span>
-          <div class="speed-control" aria-label="Playback speed">
-            {% for speed in ["0.75", "1", "1.25"] %}<button class="{% if speed == '1' %}active{% endif %}" data-speed="{{ speed }}" type="button">{{ speed }}x</button>{% endfor %}
+          <div class="speed-control" role="group" aria-label="Playback speed">
+            {% for speed in ["0.75", "1", "1.25"] %}<button class="{% if speed == '1' %}active{% endif %}" data-speed="{{ speed }}" type="button" aria-pressed="{% if speed == '1' %}true{% else %}false{% endif %}">{{ speed }}x</button>{% endfor %}
           </div>
           <audio id="storyAudio" preload="metadata" src="{{ article.audio_url }}" data-reader-text="{{ article.speech_text | e }}"></audio>
         </div>
-        <div class="reading-text">{{ article.word_html }}</div>
-        <section class="full-translation translation-section" id="fullTranslation" aria-labelledby="translationHeading" hidden>
+        <div class="reading-text" aria-label="English reading">{{ article.word_html }}</div>
+        <section class="lesson-section translation-section" id="fullTranslation" aria-labelledby="translationHeading" lang="th" hidden>
           <h3 id="translationHeading">แปลไทยทั้งบท</h3>
           {% for paragraph in article.thai_paragraphs %}<p>{{ paragraph }}</p>{% endfor %}
         </section>
-        <section class="full-translation useful-phrases" aria-labelledby="usefulPhrasesHeading">
-          <h3 id="usefulPhrasesHeading">ประโยคและวลีที่ใช้ได้จริงจากเรื่องนี้</h3>
-          {% for phrase in article.useful_phrases %}
-            <article class="useful-phrase">
-              <strong>{{ phrase.english }}</strong>
-              <p>{{ phrase.thai }}</p>
-              <small>{{ phrase.kind | replace("_", " ") | title }} · {{ phrase.source_sentence }}</small>
-            </article>
-          {% endfor %}
+        <section class="lesson-section useful-phrases" aria-labelledby="usefulPhrasesHeading">
+          <header class="lesson-section-heading">
+            <h3 id="usefulPhrasesHeading">ประโยคและวลีที่ใช้ได้จริงจากเรื่องนี้</h3>
+            <p>Useful phrases from this story</p>
+          </header>
+          <div class="useful-phrase-list">
+            {% for phrase in article.useful_phrases %}
+              <article class="useful-phrase">
+                <div class="useful-phrase-heading"><strong>{{ phrase.english }}</strong><span>{{ phrase.kind | replace("_", " ") | title }}</span></div>
+                <p lang="th">{{ phrase.thai }}</p>
+                <p class="phrase-source"><span>From the story</span>{{ phrase.source_sentence }}</p>
+              </article>
+            {% endfor %}
+          </div>
         </section>
       </section>
 
@@ -86,17 +101,18 @@
     </article>
   </div>
 
-  <div class="vocab-popover" id="vocabPopover" hidden role="dialog" aria-labelledby="popoverWord" aria-describedby="popoverTranslation">
+  <div class="vocab-popover" id="vocabPopover" hidden role="dialog" aria-modal="false" aria-labelledby="popoverWord" aria-describedby="popoverTranslation">
     <button class="popover-close" id="closeVocabPopover" type="button" aria-label="Close vocabulary popup" title="Close"><i class="fa-solid fa-xmark"></i></button>
     <div class="popover-heading">
       <div><strong id="popoverWord"></strong><span class="popover-pos" id="popoverPos" hidden></span></div>
       <button class="word-sound" id="speakPopoverWord" type="button" aria-label="Hear word" title="Hear word"><i class="fa-solid fa-volume-high"></i></button>
     </div>
     <span class="pronunciation" id="popoverPronunciation" hidden></span>
-    <span class="thai-translation" id="popoverTranslation"></span>
+    <span class="popover-label">Thai meaning</span>
+    <span class="thai-translation" id="popoverTranslation" lang="th" aria-live="polite"></span>
     <div class="vocab-actions">
-      <button class="known-word" id="knownWord" type="button"><i class="fa-solid fa-check"></i> รู้แล้ว</button>
-      <button class="learn-word" id="learnWord" type="button"><i class="fa-solid fa-star"></i> เรียน</button>
+      <button class="known-word" id="knownWord" type="button" aria-pressed="false"><i class="fa-solid fa-check"></i> รู้แล้ว</button>
+      <button class="learn-word" id="learnWord" type="button" aria-pressed="false"><i class="fa-regular fa-bookmark"></i> บันทึกคำ</button>
     </div>
   </div>
 {% endblock %}

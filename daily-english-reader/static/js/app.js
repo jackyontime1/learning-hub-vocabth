@@ -161,11 +161,14 @@ function pauseStorySpeech(toggle) {
   return true;
 }
 
-function closeWordPopover() {
+function closeWordPopover(restoreFocus = false) {
   const popover = document.querySelector("#vocabPopover");
   if (popover) popover.hidden = true;
-  activeWordTarget?.classList.remove("active");
+  const previousTarget = activeWordTarget;
+  previousTarget?.classList.remove("active");
+  previousTarget?.setAttribute("aria-expanded", "false");
   activeWordTarget = null;
+  if (restoreFocus && previousTarget?.isConnected) previousTarget.focus();
 }
 
 function positionPopover(target) {
@@ -179,21 +182,25 @@ function positionPopover(target) {
   const left = Math.max(margin, Math.min(innerWidth - width - margin, rect.left + rect.width / 2 - width / 2));
   let top = rect.top - height - 12;
   if (top < margin) top = rect.bottom + 12;
+  const maxTop = Math.max(margin, innerHeight - height - margin);
+  top = Math.max(margin, Math.min(top, maxTop));
   popover.style.left = `${left}px`;
   popover.style.top = `${top}px`;
 }
 
-function openWord(target) {
+function openWord(target, focusPopup = false) {
   activeWordTarget?.classList.remove("active");
+  activeWordTarget?.setAttribute("aria-expanded", "false");
   activeWordTarget = target;
   activeWordTarget.classList.add("active");
+  activeWordTarget.setAttribute("aria-expanded", "true");
   activeWord = {
     word: target.dataset.word,
     pos: target.dataset.pos || "",
     ipa: target.dataset.ipa || "",
     translation: target.dataset.translation || "ยังไม่มีคำแปล",
     articleId: document.querySelector(".reader")?.dataset.articleId || "",
-    articleTitle: document.querySelector(".article-hero h1")?.textContent || "",
+    articleTitle: document.querySelector(".article-header h1")?.textContent || "",
     savedAt: new Date().toISOString(),
   };
   document.querySelector("#popoverWord").textContent = activeWord.word;
@@ -203,12 +210,22 @@ function openWord(target) {
   const pronunciation = document.querySelector("#popoverPronunciation");
   pronunciation.textContent = activeWord.ipa;
   pronunciation.hidden = !activeWord.ipa;
-  document.querySelector("#popoverTranslation").textContent = activeWord.translation;
+  const translation = document.querySelector("#popoverTranslation");
+  translation.textContent = activeWord.translation;
+  translation.classList.toggle("unavailable", !target.dataset.translation);
   const speaker = document.querySelector("#speakPopoverWord");
   speaker.hidden = !storySpeechSupported();
   speaker.setAttribute("aria-label", `Hear ${activeWord.word}`);
-  document.querySelector("#learnWord").classList.toggle("active", Boolean(savedWords[activeWord.word.toLowerCase()]));
+  const knownButton = document.querySelector("#knownWord");
+  knownButton.classList.remove("active");
+  knownButton.setAttribute("aria-pressed", "false");
+  const learnButton = document.querySelector("#learnWord");
+  const isSaved = Boolean(savedWords[activeWord.word.toLowerCase()]);
+  learnButton.classList.toggle("active", isSaved);
+  learnButton.setAttribute("aria-pressed", String(isSaved));
+  learnButton.querySelector("i").className = isSaved ? "fa-solid fa-bookmark" : "fa-regular fa-bookmark";
   positionPopover(target);
+  if (focusPopup) document.querySelector("#closeVocabPopover")?.focus();
 }
 
 function renderArticleSavedWords() {
@@ -221,7 +238,7 @@ function renderArticleSavedWords() {
       <button data-speak="${escapeHtml(row.word)}" type="button"><i class="fa-solid fa-volume-high"></i></button>
       <span><strong>${escapeHtml(row.word)}${row.pos ? ` <em>${escapeHtml(row.pos)}</em>` : ""}</strong><small>${escapeHtml(row.translation || "")}</small></span>
       <button data-remove-word="${escapeHtml(row.word.toLowerCase())}" type="button" aria-label="Remove ${escapeHtml(row.word)}"><i class="fa-solid fa-xmark"></i></button>
-    </div>`).join("") : `<p class="inline-empty">Select a word and press “เรียน” to save it here.</p>`;
+    </div>`).join("") : `<p class="inline-empty">Select a word and press “บันทึกคำ” to save it here.</p>`;
 }
 
 function escapeHtml(value = "") {
@@ -677,7 +694,11 @@ document.addEventListener("click", (event) => {
     if (savedWords[key]) delete savedWords[key];
     else savedWords[key] = activeWord;
     writeObject(WORD_KEY, savedWords);
-    document.querySelector("#learnWord").classList.toggle("active", Boolean(savedWords[key]));
+    const learnButton = document.querySelector("#learnWord");
+    const isSaved = Boolean(savedWords[key]);
+    learnButton.classList.toggle("active", isSaved);
+    learnButton.setAttribute("aria-pressed", String(isSaved));
+    learnButton.querySelector("i").className = isSaved ? "fa-solid fa-bookmark" : "fa-regular fa-bookmark";
     renderArticleSavedWords();
     renderVocabularyPage(document.querySelector("#wordSearch")?.value || "");
     return;
@@ -693,12 +714,15 @@ document.addEventListener("click", (event) => {
   }
 
   if (event.target.closest("#knownWord")) {
-    event.target.closest("#knownWord").classList.toggle("active");
+    const knownButton = event.target.closest("#knownWord");
+    const isKnown = !knownButton.classList.contains("active");
+    knownButton.classList.toggle("active", isKnown);
+    knownButton.setAttribute("aria-pressed", String(isKnown));
     return;
   }
 
   if (event.target.closest("#closeVocabPopover")) {
-    closeWordPopover();
+    closeWordPopover(true);
     return;
   }
 
@@ -749,7 +773,11 @@ document.addEventListener("click", (event) => {
     audio.playbackRate = Number(speed.dataset.speed);
     preferences.speed = audio.playbackRate;
     writeObject(PREF_KEY, preferences);
-    document.querySelectorAll("[data-speed]").forEach((button) => button.classList.toggle("active", button === speed));
+    document.querySelectorAll("[data-speed]").forEach((button) => {
+      const isActive = button === speed;
+      button.classList.toggle("active", isActive);
+      button.setAttribute("aria-pressed", String(isActive));
+    });
     if (storySpeechSupported() && storySpeech.words.length) {
       const wasPlaying = storySpeech.playing;
       pauseStorySpeech(document.querySelector("#audioToggle"));
@@ -848,13 +876,16 @@ window.addEventListener("resize", () => {
   closeWordPopover();
 });
 document.addEventListener("keydown", (event) => {
-  if (event.key === "Escape") closeWordPopover();
+  if (event.key === "Escape" && !document.querySelector("#vocabPopover")?.hidden) {
+    event.preventDefault();
+    closeWordPopover(true);
+  }
 });
 document.querySelectorAll(".word").forEach((word) => {
   word.addEventListener("keydown", (event) => {
     if (event.key === "Enter" || event.key === " ") {
       event.preventDefault();
-      openWord(word);
+      openWord(word, true);
     }
   });
 });

@@ -649,6 +649,21 @@ class DailyReaderTests(unittest.TestCase):
         self.assertIn("แปลไทยทั้งบท", template)
         self.assertIn("article.useful_phrases", template)
 
+    def test_article_reading_ui_keeps_accessible_language_and_popup_behavior(self):
+        template = (site.TEMPLATE_DIR / "article.html").read_text(encoding="utf-8")
+        styles = (site.STATIC_DIR / "css" / "styles.css").read_text(encoding="utf-8")
+        script = (site.STATIC_DIR / "js" / "app.js").read_text(encoding="utf-8")
+        self.assertIn('class="article-header"', template)
+        self.assertNotIn('class="article-hero"', template)
+        self.assertIn('lang="th"', template)
+        self.assertIn('aria-modal="false"', template)
+        self.assertIn('aria-pressed="false"', template)
+        self.assertIn("border-bottom: 1px solid transparent", styles)
+        self.assertNotIn("border-bottom: 1px dotted var(--muted)", styles)
+        self.assertIn("previousTarget.focus()", script)
+        self.assertIn("closeWordPopover(true)", script)
+        self.assertIn("Math.min(top, maxTop)", script)
+
     def test_part_of_speech_uses_common_labels(self):
         self.assertEqual(site.part_of_speech("clean"), "adj.")
         self.assertEqual(site.part_of_speech("respond"), "v.")
