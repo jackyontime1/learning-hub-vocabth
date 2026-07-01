@@ -1,6 +1,6 @@
 {
   "status": "ready",
-  "started_at": "2026-07-01T21:42:49.323855+00:00",
+  "started_at": "2026-07-01T21:59:43.793918+00:00",
   "expected_toronto_date": "2026-07-01",
   "free_only": true,
   "demo_mode": false,
@@ -16,20 +16,26 @@
     "C1": 2
   },
   "schema_version": 10,
-  "candidate_rejections": [],
+  "candidate_rejections": [
+    {
+      "article_id": "acabca9657eb790ed9",
+      "title": "US Supreme Court upholds birthright citizenship in blow to Trump",
+      "provider": "BBC News",
+      "level": "B2",
+      "reason": "RuntimeError: Full Thai translation unavailable for article acabca9657eb790ed9"
+    }
+  ],
   "practice_story_count": 4,
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
     "nllb_retries": 1,
-    "quality_failures": 0,
+    "quality_failures": 1,
     "rejection_reasons": {
-      "repeated-junk-string": 1,
-      "suspiciously-long": 1,
-      "missing-number:112,44": 1
+      "missing-number:150": 2
     }
   },
-  "completed_at": "2026-07-01T21:45:44.883251+00:00",
+  "completed_at": "2026-07-01T22:09:41.456638+00:00",
   "latest_date": "2026-07-01",
   "total_story_count": 70,
   "today_story_count": 10,
@@ -49,33 +55,33 @@
   "fallback_image_count": 9,
   "fallback_images": [
     {
-      "article_id": "1bf1833f0ba8bdc253",
-      "title": "WhatsApp will allow users to go by usernames, closing a privacy blind spot",
+      "article_id": "7b37bd120b349633ef",
+      "title": "N.L.'s loss, sacrifice at Beaumont-Hamel remembered on both sides of the Atlantic — 110 years later",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "34db9153b1e78fe813",
-      "title": "FLORA: A deep learning approach to predict forest attributes from heterogeneous LiDAR data",
+      "article_id": "67ca8c2a1bc8638527",
+      "title": "Potentially dangerous heatwave to sweep across the eastern United States",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "686d0c80d62a7b015a",
-      "title": "Flooding hits Ghana's capital killing 13 people - with another storm forecast",
+      "article_id": "f7675cfc7e192f527e",
+      "title": "After Trump's reelection, these U.S. scientists found jobs in the U.K.",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "4400892f3d44955c3a",
-      "title": "Heat scorches parts of U.S., millions facing 'extremely dangerous' conditions",
+      "article_id": "04f141d6df46742b15",
+      "title": "N.L. government declares fire ban for all Labrador, until at least July 13",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "009d829f27f9a22078",
-      "title": "Special Weather Statement issued July 1 at 4:41PM CDT by NWS Jackson MS",
+      "article_id": "1d233215ce0837fc95",
+      "title": "Tricks to help you spend less money at restaurants",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "83d8d375c1f2fc3ca6",
-      "title": "Special Weather Statement issued July 1 at 3:38PM MDT by NWS Billings MT",
+      "article_id": "69c9aa89d5246187ab",
+      "title": "Mexico ends a 40-year knockout drought, beats Ecuador to advance in World Cup",
       "reason": "No usable free image candidate"
     },
     {
