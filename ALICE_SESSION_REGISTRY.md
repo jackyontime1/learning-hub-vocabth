@@ -27,11 +27,16 @@ Update it only from owner-provided context or verified project evidence.
 - Memory: `$CODEX_HOME/automations/oxford-mp3-daily-batch/memory.md`
 - Related path: `D:\podcast voice`
 - Schedule: daily at 09:00 Asia/Bangkok, subject to owner confirmation
-- Status from owner screenshot: Partially Verified
-- Production verified in screenshot: No
+- Last completed word: `really`
+- Last completed category: `Starter Everyday`, day 9
+- Also completed: `Actions & Thinking`, day 2
+- Next pending: `go with`, `Actions & Thinking`, day 3
+- Website/podcast integration: not confirmed
+- Safe to run next TTS batch: no, pending integration verification and owner approval
 - Next allowed mode without owner approval: inspect-only
-- Risks: Git availability, ffmpeg path, Google TTS network/quota, monthly safety
-  cap, and duplicate visible run/session names
+- Risks: dirty Podcast Voice repository, unresolved `translations.json` conflict,
+  quota-accounting uncertainty, missing Oxford MP3 references in the generated
+  Learning Hub bundle, and quota-consuming TTS without owner approval
 
 ## Alice Organization / Alice Money Engine
 

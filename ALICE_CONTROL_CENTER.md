@@ -193,6 +193,9 @@ Podcast Voice work must not touch Reading BBC files unless the owner explicitly
 approves a cross-project integration task. Apply the same isolation in every
 direction.
 
+Before starting work, Alice must state the project name, repo or path, current
+phase, task type, and recommended model.
+
 ## 11. Session and Chat Hygiene
 
 ChatGPT sidebar chats and scheduled automation runs are external project
@@ -205,8 +208,10 @@ screenshot, summary, or export before making claims. Recommend clear names:
 - `Reading BBC - Round 2B-C IPA Dictionary`
 - `Reading BBC - Alice Control Center`
 - `Reading BBC - UI Redesign Research`
+- `Reading BBC - Round 2D-C Homepage UI Research`
 - `Podcast Voice - Oxford MP3 Batch - YYYY-MM-DD`
 - `Podcast Voice - Oxford MP3 Audit - YYYY-MM-DD`
+- `Podcast Voice - Oxford MP3 Debug - YYYY-MM-DD`
 - `Alice Money Engine - Platform Opportunity Scan`
 
 ## 12. Scheduled Automation Registry
@@ -238,17 +243,21 @@ repo/path, requested mode (`inspect-only`, `fix`, `verify`, `disable`,
 - Schedule: daily at 09:00 Asia/Bangkok, subject to owner confirmation
 - Known purpose: generate more natural podcast-style MP3 audio under the owner's
   free-quota rule
-- Known status from owner screenshot: Partially Verified
-- Production verified in screenshot: No
+- Last audited state:
+  - Last completed word: `really`.
+  - Last completed category: `Starter Everyday`, day 9.
+  - Also completed: `Actions & Thinking`, day 2.
+  - Next pending word: `go with`, `Actions & Thinking`, day 3.
+  - Website and podcast integration is not confirmed.
+  - The generated Learning Hub bundle did not contain Oxford MP3 references at
+    audit time.
+  - A new TTS batch is not safe until integration is verified.
 - Known risks:
-  - `git.exe` unavailable in that shell;
-  - ffmpeg path dependency;
-  - Google TTS network and quota dependency;
-  - monthly character safety-cap risk;
-  - duplicate visible run/session names in the ChatGPT sidebar.
-
-Screenshot-derived facts remain provisional until checked against automation
-memory, files, or owner confirmation.
+  - the Podcast Voice repository is dirty;
+  - `daily-english-reader/data/cache/translations.json` has an unresolved conflict;
+  - local quota accounting does not prove the provider-side free allowance;
+  - the generated Learning Hub bundle omitted Oxford MP3 references;
+  - TTS must not run without owner approval.
 
 ## 13. Podcast/Oxford MP3 Audit Policy
 
