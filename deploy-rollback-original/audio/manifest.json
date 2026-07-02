@@ -7191,6 +7191,798 @@
       ],
       "status": "generated",
       "generatedAt": "2026-07-02T18:19:06.609Z"
+    },
+    "actions-and-thinking__day-005": {
+      "category": "Actions & Thinking",
+      "categorySlug": "actions-and-thinking",
+      "day": 5,
+      "audioProfile": "english-balanced-v2",
+      "provider": "google-cloud-tts",
+      "playbackMode": "item-sequence",
+      "recallPauseMs": 3000,
+      "itemCount": 50,
+      "monthBucket": "2026-07",
+      "voice": {
+        "en": {
+          "languageCode": "en-US",
+          "name": "en-US-Chirp3-HD-Puck",
+          "speakingRate": 0.98,
+          "pitch": 0
+        },
+        "th": {
+          "languageCode": "th-TH",
+          "name": "th-TH-Chirp3-HD-Puck",
+          "speakingRate": 1.08,
+          "pitch": 0
+        }
+      },
+      "profileSettings": {
+        "englishVolumeGainDb": 5,
+        "englishWordSpeakingRate": 0.98,
+        "englishExampleSpeakingRate": 0.88
+      },
+      "variants": {
+        "withSpelling": {
+          "type": "item-sequence",
+          "estimatedChars": 4649,
+          "fileCount": 20
+        },
+        "withoutSpelling": {
+          "type": "item-sequence",
+          "estimatedChars": 2556,
+          "fileCount": 10
+        }
+      },
+      "items": [
+        {
+          "word": "have to",
+          "order": 0,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/actions-and-thinking/profiles/english-balanced-v2/review/have-to.mp3",
+          "fileWithoutSpelling": "audio/words/actions-and-thinking/profiles/english-balanced-v2/review/have-to.mp3"
+        },
+        {
+          "word": "have on",
+          "order": 1,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/actions-and-thinking/profiles/english-balanced-v2/review/have-on.mp3",
+          "fileWithoutSpelling": "audio/words/actions-and-thinking/profiles/english-balanced-v2/review/have-on.mp3"
+        },
+        {
+          "word": "get",
+          "order": 2,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/actions-and-thinking/profiles/english-balanced-v2/review/get.mp3",
+          "fileWithoutSpelling": "audio/words/actions-and-thinking/profiles/english-balanced-v2/review/get.mp3"
+        },
+        {
+          "word": "get in",
+          "order": 3,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/actions-and-thinking/profiles/english-balanced-v2/review/get-in.mp3",
+          "fileWithoutSpelling": "audio/words/actions-and-thinking/profiles/english-balanced-v2/review/get-in.mp3"
+        },
+        {
+          "word": "do with",
+          "order": 4,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/actions-and-thinking/profiles/english-balanced-v2/review/do-with.mp3",
+          "fileWithoutSpelling": "audio/words/actions-and-thinking/profiles/english-balanced-v2/review/do-with.mp3"
+        },
+        {
+          "word": "get on",
+          "order": 5,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/actions-and-thinking/profiles/english-balanced-v2/review/get-on.mp3",
+          "fileWithoutSpelling": "audio/words/actions-and-thinking/profiles/english-balanced-v2/review/get-on.mp3"
+        },
+        {
+          "word": "get by",
+          "order": 6,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/actions-and-thinking/profiles/english-balanced-v2/review/get-by.mp3",
+          "fileWithoutSpelling": "audio/words/actions-and-thinking/profiles/english-balanced-v2/review/get-by.mp3"
+        },
+        {
+          "word": "get on with",
+          "order": 7,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/actions-and-thinking/profiles/english-balanced-v2/review/get-on-with.mp3",
+          "fileWithoutSpelling": "audio/words/actions-and-thinking/profiles/english-balanced-v2/review/get-on-with.mp3"
+        },
+        {
+          "word": "know",
+          "order": 8,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/actions-and-thinking/profiles/english-balanced-v2/review/know.mp3",
+          "fileWithoutSpelling": "audio/words/actions-and-thinking/profiles/english-balanced-v2/review/know.mp3"
+        },
+        {
+          "word": "make",
+          "order": 9,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/actions-and-thinking/profiles/english-balanced-v2/review/make.mp3",
+          "fileWithoutSpelling": "audio/words/actions-and-thinking/profiles/english-balanced-v2/review/make.mp3"
+        },
+        {
+          "word": "see to",
+          "order": 10,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/actions-and-thinking/profiles/english-balanced-v2/review/see-to.mp3",
+          "fileWithoutSpelling": "audio/words/actions-and-thinking/profiles/english-balanced-v2/review/see-to.mp3"
+        },
+        {
+          "word": "think",
+          "order": 11,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/actions-and-thinking/profiles/english-balanced-v2/review/think.mp3",
+          "fileWithoutSpelling": "audio/words/actions-and-thinking/profiles/english-balanced-v2/review/think.mp3"
+        },
+        {
+          "word": "do up",
+          "order": 12,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/actions-and-thinking/profiles/english-balanced-v2/review/do-up.mp3",
+          "fileWithoutSpelling": "audio/words/actions-and-thinking/profiles/english-balanced-v2/review/do-up.mp3"
+        },
+        {
+          "word": "think of",
+          "order": 13,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/actions-and-thinking/profiles/english-balanced-v2/review/think-of.mp3",
+          "fileWithoutSpelling": "audio/words/actions-and-thinking/profiles/english-balanced-v2/review/think-of.mp3"
+        },
+        {
+          "word": "want",
+          "order": 14,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/actions-and-thinking/profiles/english-balanced-v2/review/want.mp3",
+          "fileWithoutSpelling": "audio/words/actions-and-thinking/profiles/english-balanced-v2/review/want.mp3"
+        },
+        {
+          "word": "get up",
+          "order": 15,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/actions-and-thinking/profiles/english-balanced-v2/review/get-up.mp3",
+          "fileWithoutSpelling": "audio/words/actions-and-thinking/profiles/english-balanced-v2/review/get-up.mp3"
+        },
+        {
+          "word": "get out of",
+          "order": 16,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/actions-and-thinking/profiles/english-balanced-v2/review/get-out-of.mp3",
+          "fileWithoutSpelling": "audio/words/actions-and-thinking/profiles/english-balanced-v2/review/get-out-of.mp3"
+        },
+        {
+          "word": "go to",
+          "order": 17,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/actions-and-thinking/profiles/english-balanced-v2/review/go-to.mp3",
+          "fileWithoutSpelling": "audio/words/actions-and-thinking/profiles/english-balanced-v2/review/go-to.mp3"
+        },
+        {
+          "word": "go on",
+          "order": 18,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/actions-and-thinking/profiles/english-balanced-v2/review/go-on.mp3",
+          "fileWithoutSpelling": "audio/words/actions-and-thinking/profiles/english-balanced-v2/review/go-on.mp3"
+        },
+        {
+          "word": "think of as",
+          "order": 19,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/actions-and-thinking/profiles/english-balanced-v2/review/think-of-as.mp3",
+          "fileWithoutSpelling": "audio/words/actions-and-thinking/profiles/english-balanced-v2/review/think-of-as.mp3"
+        },
+        {
+          "word": "go with",
+          "order": 20,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/actions-and-thinking/profiles/english-balanced-v2/review/go-with.mp3",
+          "fileWithoutSpelling": "audio/words/actions-and-thinking/profiles/english-balanced-v2/review/go-with.mp3"
+        },
+        {
+          "word": "need",
+          "order": 21,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/actions-and-thinking/profiles/english-balanced-v2/review/need.mp3",
+          "fileWithoutSpelling": "audio/words/actions-and-thinking/profiles/english-balanced-v2/review/need.mp3"
+        },
+        {
+          "word": "have back",
+          "order": 22,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/actions-and-thinking/profiles/english-balanced-v2/review/have-back.mp3",
+          "fileWithoutSpelling": "audio/words/actions-and-thinking/profiles/english-balanced-v2/review/have-back.mp3"
+        },
+        {
+          "word": "go by",
+          "order": 23,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/actions-and-thinking/profiles/english-balanced-v2/review/go-by.mp3",
+          "fileWithoutSpelling": "audio/words/actions-and-thinking/profiles/english-balanced-v2/review/go-by.mp3"
+        },
+        {
+          "word": "see about",
+          "order": 24,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/actions-and-thinking/profiles/english-balanced-v2/review/see-about.mp3",
+          "fileWithoutSpelling": "audio/words/actions-and-thinking/profiles/english-balanced-v2/review/see-about.mp3"
+        },
+        {
+          "word": "take",
+          "order": 25,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/actions-and-thinking/profiles/english-balanced-v2/review/take.mp3",
+          "fileWithoutSpelling": "audio/words/actions-and-thinking/profiles/english-balanced-v2/review/take.mp3"
+        },
+        {
+          "word": "make up",
+          "order": 26,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/actions-and-thinking/profiles/english-balanced-v2/review/make-up-r28.mp3",
+          "fileWithoutSpelling": "audio/words/actions-and-thinking/profiles/english-balanced-v2/review/make-up-r28.mp3"
+        },
+        {
+          "word": "make-up",
+          "order": 27,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/actions-and-thinking/profiles/english-balanced-v2/review/make-up-r29.mp3",
+          "fileWithoutSpelling": "audio/words/actions-and-thinking/profiles/english-balanced-v2/review/make-up-r29.mp3"
+        },
+        {
+          "word": "think about",
+          "order": 28,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/actions-and-thinking/profiles/english-balanced-v2/review/think-about.mp3",
+          "fileWithoutSpelling": "audio/words/actions-and-thinking/profiles/english-balanced-v2/review/think-about.mp3"
+        },
+        {
+          "word": "think up",
+          "order": 29,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/actions-and-thinking/profiles/english-balanced-v2/review/think-up.mp3",
+          "fileWithoutSpelling": "audio/words/actions-and-thinking/profiles/english-balanced-v2/review/think-up.mp3"
+        },
+        {
+          "word": "take in",
+          "order": 30,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/actions-and-thinking/profiles/english-balanced-v2/review/take-in.mp3",
+          "fileWithoutSpelling": "audio/words/actions-and-thinking/profiles/english-balanced-v2/review/take-in.mp3"
+        },
+        {
+          "word": "get into",
+          "order": 31,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/actions-and-thinking/profiles/english-balanced-v2/review/get-into.mp3",
+          "fileWithoutSpelling": "audio/words/actions-and-thinking/profiles/english-balanced-v2/review/get-into.mp3"
+        },
+        {
+          "word": "say",
+          "order": 32,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/actions-and-thinking/profiles/english-balanced-v2/review/say.mp3",
+          "fileWithoutSpelling": "audio/words/actions-and-thinking/profiles/english-balanced-v2/review/say.mp3"
+        },
+        {
+          "word": "take on",
+          "order": 33,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/actions-and-thinking/profiles/english-balanced-v2/review/take-on.mp3",
+          "fileWithoutSpelling": "audio/words/actions-and-thinking/profiles/english-balanced-v2/review/take-on.mp3"
+        },
+        {
+          "word": "get over",
+          "order": 34,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/actions-and-thinking/profiles/english-balanced-v2/review/get-over.mp3",
+          "fileWithoutSpelling": "audio/words/actions-and-thinking/profiles/english-balanced-v2/review/get-over.mp3"
+        },
+        {
+          "word": "go out",
+          "order": 35,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/actions-and-thinking/profiles/english-balanced-v2/review/go-out.mp3",
+          "fileWithoutSpelling": "audio/words/actions-and-thinking/profiles/english-balanced-v2/review/go-out.mp3"
+        },
+        {
+          "word": "go up",
+          "order": 36,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/actions-and-thinking/profiles/english-balanced-v2/review/go-up.mp3",
+          "fileWithoutSpelling": "audio/words/actions-and-thinking/profiles/english-balanced-v2/review/go-up.mp3"
+        },
+        {
+          "word": "make up for",
+          "order": 37,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/actions-and-thinking/profiles/english-balanced-v2/review/make-up-for.mp3",
+          "fileWithoutSpelling": "audio/words/actions-and-thinking/profiles/english-balanced-v2/review/make-up-for.mp3"
+        },
+        {
+          "word": "get back",
+          "order": 38,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/actions-and-thinking/profiles/english-balanced-v2/review/get-back.mp3",
+          "fileWithoutSpelling": "audio/words/actions-and-thinking/profiles/english-balanced-v2/review/get-back.mp3"
+        },
+        {
+          "word": "go out with",
+          "order": 39,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/actions-and-thinking/profiles/english-balanced-v2/review/go-out-with.mp3",
+          "fileWithoutSpelling": "audio/words/actions-and-thinking/profiles/english-balanced-v2/review/go-out-with.mp3"
+        },
+        {
+          "word": "work out",
+          "order": 40,
+          "mode": "word-meaning",
+          "fileWithSpelling": "audio/words/actions-and-thinking/profiles/english-balanced-v2/day-005/041-work-out.mp3",
+          "fileWithoutSpelling": "audio/words/actions-and-thinking/profiles/english-balanced-v2/day-005/041-work-out-no-spelling.mp3"
+        },
+        {
+          "word": "look",
+          "order": 41,
+          "mode": "word-meaning",
+          "fileWithSpelling": "audio/words/actions-and-thinking/profiles/english-balanced-v2/day-005/042-look.mp3",
+          "fileWithoutSpelling": "audio/words/actions-and-thinking/profiles/english-balanced-v2/day-005/042-look-no-spelling.mp3"
+        },
+        {
+          "word": "use",
+          "order": 42,
+          "mode": "word-meaning",
+          "fileWithSpelling": "audio/words/actions-and-thinking/profiles/english-balanced-v2/day-005/043-use.mp3",
+          "fileWithoutSpelling": "audio/words/actions-and-thinking/profiles/english-balanced-v2/day-005/043-use-no-spelling.mp3"
+        },
+        {
+          "word": "make into",
+          "order": 43,
+          "mode": "word-meaning",
+          "fileWithSpelling": "audio/words/actions-and-thinking/profiles/english-balanced-v2/day-005/044-make-into.mp3",
+          "fileWithoutSpelling": "audio/words/actions-and-thinking/profiles/english-balanced-v2/day-005/044-make-into-no-spelling.mp3"
+        },
+        {
+          "word": "take up",
+          "order": 44,
+          "mode": "word-meaning",
+          "fileWithSpelling": "audio/words/actions-and-thinking/profiles/english-balanced-v2/day-005/045-take-up.mp3",
+          "fileWithoutSpelling": "audio/words/actions-and-thinking/profiles/english-balanced-v2/day-005/045-take-up-no-spelling.mp3"
+        },
+        {
+          "word": "come",
+          "order": 45,
+          "mode": "word-meaning",
+          "fileWithSpelling": "audio/words/actions-and-thinking/profiles/english-balanced-v2/day-005/046-come.mp3",
+          "fileWithoutSpelling": "audio/words/actions-and-thinking/profiles/english-balanced-v2/day-005/046-come-no-spelling.mp3"
+        },
+        {
+          "word": "look on",
+          "order": 46,
+          "mode": "word-meaning",
+          "fileWithSpelling": "audio/words/actions-and-thinking/profiles/english-balanced-v2/day-005/047-look-on.mp3",
+          "fileWithoutSpelling": "audio/words/actions-and-thinking/profiles/english-balanced-v2/day-005/047-look-on-no-spelling.mp3"
+        },
+        {
+          "word": "think over",
+          "order": 47,
+          "mode": "word-meaning",
+          "fileWithSpelling": "audio/words/actions-and-thinking/profiles/english-balanced-v2/day-005/048-think-over.mp3",
+          "fileWithoutSpelling": "audio/words/actions-and-thinking/profiles/english-balanced-v2/day-005/048-think-over-no-spelling.mp3"
+        },
+        {
+          "word": "come in",
+          "order": 48,
+          "mode": "word-meaning",
+          "fileWithSpelling": "audio/words/actions-and-thinking/profiles/english-balanced-v2/day-005/049-come-in.mp3",
+          "fileWithoutSpelling": "audio/words/actions-and-thinking/profiles/english-balanced-v2/day-005/049-come-in-no-spelling.mp3"
+        },
+        {
+          "word": "come to",
+          "order": 49,
+          "mode": "word-meaning",
+          "fileWithSpelling": "audio/words/actions-and-thinking/profiles/english-balanced-v2/day-005/050-come-to.mp3",
+          "fileWithoutSpelling": "audio/words/actions-and-thinking/profiles/english-balanced-v2/day-005/050-come-to-no-spelling.mp3"
+        }
+      ],
+      "status": "generated",
+      "generatedAt": "2026-07-02T19:03:51.946Z"
+    },
+    "starter-everyday__day-012": {
+      "category": "Starter Everyday",
+      "categorySlug": "starter-everyday",
+      "day": 12,
+      "audioProfile": "english-balanced-v2",
+      "provider": "google-cloud-tts",
+      "playbackMode": "item-sequence",
+      "recallPauseMs": 3000,
+      "itemCount": 50,
+      "monthBucket": "2026-07",
+      "voice": {
+        "en": {
+          "languageCode": "en-US",
+          "name": "en-US-Chirp3-HD-Puck",
+          "speakingRate": 0.98,
+          "pitch": 0
+        },
+        "th": {
+          "languageCode": "th-TH",
+          "name": "th-TH-Chirp3-HD-Puck",
+          "speakingRate": 1.08,
+          "pitch": 0
+        }
+      },
+      "profileSettings": {
+        "englishVolumeGainDb": 5,
+        "englishWordSpeakingRate": 0.98,
+        "englishExampleSpeakingRate": 0.88
+      },
+      "variants": {
+        "withSpelling": {
+          "type": "item-sequence",
+          "estimatedChars": 4533,
+          "fileCount": 20
+        },
+        "withoutSpelling": {
+          "type": "item-sequence",
+          "estimatedChars": 2523,
+          "fileCount": 10
+        }
+      },
+      "items": [
+        {
+          "word": "over",
+          "order": 0,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/starter-everyday/profiles/english-balanced-v2/review/over.mp3",
+          "fileWithoutSpelling": "audio/words/starter-everyday/profiles/english-balanced-v2/review/over.mp3"
+        },
+        {
+          "word": "any",
+          "order": 1,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/starter-everyday/profiles/english-balanced-v2/review/any.mp3",
+          "fileWithoutSpelling": "audio/words/starter-everyday/profiles/english-balanced-v2/review/any.mp3"
+        },
+        {
+          "word": "then",
+          "order": 2,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/starter-everyday/profiles/english-balanced-v2/review/then.mp3",
+          "fileWithoutSpelling": "audio/words/starter-everyday/profiles/english-balanced-v2/review/then.mp3"
+        },
+        {
+          "word": "could",
+          "order": 3,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/starter-everyday/profiles/english-balanced-v2/review/could.mp3",
+          "fileWithoutSpelling": "audio/words/starter-everyday/profiles/english-balanced-v2/review/could.mp3"
+        },
+        {
+          "word": "back",
+          "order": 4,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/starter-everyday/profiles/english-balanced-v2/review/back.mp3",
+          "fileWithoutSpelling": "audio/words/starter-everyday/profiles/english-balanced-v2/review/back.mp3"
+        },
+        {
+          "word": "us",
+          "order": 5,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/starter-everyday/profiles/english-balanced-v2/review/us.mp3",
+          "fileWithoutSpelling": "audio/words/starter-everyday/profiles/english-balanced-v2/review/us.mp3"
+        },
+        {
+          "word": "because",
+          "order": 6,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/starter-everyday/profiles/english-balanced-v2/review/because.mp3",
+          "fileWithoutSpelling": "audio/words/starter-everyday/profiles/english-balanced-v2/review/because.mp3"
+        },
+        {
+          "word": "go",
+          "order": 7,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/starter-everyday/profiles/english-balanced-v2/review/go.mp3",
+          "fileWithoutSpelling": "audio/words/starter-everyday/profiles/english-balanced-v2/review/go.mp3"
+        },
+        {
+          "word": "well",
+          "order": 8,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/starter-everyday/profiles/english-balanced-v2/review/well.mp3",
+          "fileWithoutSpelling": "audio/words/starter-everyday/profiles/english-balanced-v2/review/well.mp3"
+        },
+        {
+          "word": "because of",
+          "order": 9,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/starter-everyday/profiles/english-balanced-v2/review/because-of.mp3",
+          "fileWithoutSpelling": "audio/words/starter-everyday/profiles/english-balanced-v2/review/because-of.mp3"
+        },
+        {
+          "word": "way",
+          "order": 10,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/starter-everyday/profiles/english-balanced-v2/review/way.mp3",
+          "fileWithoutSpelling": "audio/words/starter-everyday/profiles/english-balanced-v2/review/way.mp3"
+        },
+        {
+          "word": "most",
+          "order": 11,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/starter-everyday/profiles/english-balanced-v2/review/most.mp3",
+          "fileWithoutSpelling": "audio/words/starter-everyday/profiles/english-balanced-v2/review/most.mp3"
+        },
+        {
+          "word": "much",
+          "order": 12,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/starter-everyday/profiles/english-balanced-v2/review/much.mp3",
+          "fileWithoutSpelling": "audio/words/starter-everyday/profiles/english-balanced-v2/review/much.mp3"
+        },
+        {
+          "word": "very",
+          "order": 13,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/starter-everyday/profiles/english-balanced-v2/review/very.mp3",
+          "fileWithoutSpelling": "audio/words/starter-everyday/profiles/english-balanced-v2/review/very.mp3"
+        },
+        {
+          "word": "where",
+          "order": 14,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/starter-everyday/profiles/english-balanced-v2/review/where.mp3",
+          "fileWithoutSpelling": "audio/words/starter-everyday/profiles/english-balanced-v2/review/where.mp3"
+        },
+        {
+          "word": "even",
+          "order": 15,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/starter-everyday/profiles/english-balanced-v2/review/even.mp3",
+          "fileWithoutSpelling": "audio/words/starter-everyday/profiles/english-balanced-v2/review/even.mp3"
+        },
+        {
+          "word": "should",
+          "order": 16,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/starter-everyday/profiles/english-balanced-v2/review/should.mp3",
+          "fileWithoutSpelling": "audio/words/starter-everyday/profiles/english-balanced-v2/review/should.mp3"
+        },
+        {
+          "word": "May",
+          "order": 17,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/starter-everyday/profiles/english-balanced-v2/review/may.mp3",
+          "fileWithoutSpelling": "audio/words/starter-everyday/profiles/english-balanced-v2/review/may.mp3"
+        },
+        {
+          "word": "here",
+          "order": 18,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/starter-everyday/profiles/english-balanced-v2/review/here.mp3",
+          "fileWithoutSpelling": "audio/words/starter-everyday/profiles/english-balanced-v2/review/here.mp3"
+        },
+        {
+          "word": "really",
+          "order": 19,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/starter-everyday/profiles/english-balanced-v2/review/really.mp3",
+          "fileWithoutSpelling": "audio/words/starter-everyday/profiles/english-balanced-v2/review/really.mp3"
+        },
+        {
+          "word": "right",
+          "order": 20,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/starter-everyday/profiles/english-balanced-v2/review/right.mp3",
+          "fileWithoutSpelling": "audio/words/starter-everyday/profiles/english-balanced-v2/review/right.mp3"
+        },
+        {
+          "word": "year",
+          "order": 21,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/starter-everyday/profiles/english-balanced-v2/review/year.mp3",
+          "fileWithoutSpelling": "audio/words/starter-everyday/profiles/english-balanced-v2/review/year.mp3"
+        },
+        {
+          "word": "day",
+          "order": 22,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/starter-everyday/profiles/english-balanced-v2/review/day.mp3",
+          "fileWithoutSpelling": "audio/words/starter-everyday/profiles/english-balanced-v2/review/day.mp3"
+        },
+        {
+          "word": "too",
+          "order": 23,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/starter-everyday/profiles/english-balanced-v2/review/too.mp3",
+          "fileWithoutSpelling": "audio/words/starter-everyday/profiles/english-balanced-v2/review/too.mp3"
+        },
+        {
+          "word": "before",
+          "order": 24,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/starter-everyday/profiles/english-balanced-v2/review/before.mp3",
+          "fileWithoutSpelling": "audio/words/starter-everyday/profiles/english-balanced-v2/review/before.mp3"
+        },
+        {
+          "word": "off",
+          "order": 25,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/starter-everyday/profiles/english-balanced-v2/review/off.mp3",
+          "fileWithoutSpelling": "audio/words/starter-everyday/profiles/english-balanced-v2/review/off.mp3"
+        },
+        {
+          "word": "why",
+          "order": 26,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/starter-everyday/profiles/english-balanced-v2/review/why.mp3",
+          "fileWithoutSpelling": "audio/words/starter-everyday/profiles/english-balanced-v2/review/why.mp3"
+        },
+        {
+          "word": "still",
+          "order": 27,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/starter-everyday/profiles/english-balanced-v2/review/still.mp3",
+          "fileWithoutSpelling": "audio/words/starter-everyday/profiles/english-balanced-v2/review/still.mp3"
+        },
+        {
+          "word": "many",
+          "order": 28,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/starter-everyday/profiles/english-balanced-v2/review/many.mp3",
+          "fileWithoutSpelling": "audio/words/starter-everyday/profiles/english-balanced-v2/review/many.mp3"
+        },
+        {
+          "word": "never",
+          "order": 29,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/starter-everyday/profiles/english-balanced-v2/review/never.mp3",
+          "fileWithoutSpelling": "audio/words/starter-everyday/profiles/english-balanced-v2/review/never.mp3"
+        },
+        {
+          "word": "life",
+          "order": 30,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/starter-everyday/profiles/english-balanced-v2/review/life.mp3",
+          "fileWithoutSpelling": "audio/words/starter-everyday/profiles/english-balanced-v2/review/life.mp3"
+        },
+        {
+          "word": "world",
+          "order": 31,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/starter-everyday/profiles/english-balanced-v2/review/world.mp3",
+          "fileWithoutSpelling": "audio/words/starter-everyday/profiles/english-balanced-v2/review/world.mp3"
+        },
+        {
+          "word": "back up",
+          "order": 32,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/starter-everyday/profiles/english-balanced-v2/review/back-up.mp3",
+          "fileWithoutSpelling": "audio/words/starter-everyday/profiles/english-balanced-v2/review/back-up.mp3"
+        },
+        {
+          "word": "down",
+          "order": 33,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/starter-everyday/profiles/english-balanced-v2/review/down.mp3",
+          "fileWithoutSpelling": "audio/words/starter-everyday/profiles/english-balanced-v2/review/down.mp3"
+        },
+        {
+          "word": "great",
+          "order": 34,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/starter-everyday/profiles/english-balanced-v2/review/great.mp3",
+          "fileWithoutSpelling": "audio/words/starter-everyday/profiles/english-balanced-v2/review/great.mp3"
+        },
+        {
+          "word": "through",
+          "order": 35,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/starter-everyday/profiles/english-balanced-v2/review/through.mp3",
+          "fileWithoutSpelling": "audio/words/starter-everyday/profiles/english-balanced-v2/review/through.mp3"
+        },
+        {
+          "word": "while",
+          "order": 36,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/starter-everyday/profiles/english-balanced-v2/review/while.mp3",
+          "fileWithoutSpelling": "audio/words/starter-everyday/profiles/english-balanced-v2/review/while.mp3"
+        },
+        {
+          "word": "all right",
+          "order": 37,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/starter-everyday/profiles/english-balanced-v2/review/all-right.mp3",
+          "fileWithoutSpelling": "audio/words/starter-everyday/profiles/english-balanced-v2/review/all-right.mp3"
+        },
+        {
+          "word": "best",
+          "order": 38,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/starter-everyday/profiles/english-balanced-v2/review/best.mp3",
+          "fileWithoutSpelling": "audio/words/starter-everyday/profiles/english-balanced-v2/review/best.mp3"
+        },
+        {
+          "word": "such",
+          "order": 39,
+          "mode": "review",
+          "fileWithSpelling": "audio/words/starter-everyday/profiles/english-balanced-v2/review/such.mp3",
+          "fileWithoutSpelling": "audio/words/starter-everyday/profiles/english-balanced-v2/review/such.mp3"
+        },
+        {
+          "word": "long",
+          "order": 40,
+          "mode": "word-meaning",
+          "fileWithSpelling": "audio/words/starter-everyday/profiles/english-balanced-v2/day-012/041-long.mp3",
+          "fileWithoutSpelling": "audio/words/starter-everyday/profiles/english-balanced-v2/day-012/041-long-no-spelling.mp3"
+        },
+        {
+          "word": "something",
+          "order": 41,
+          "mode": "word-meaning",
+          "fileWithSpelling": "audio/words/starter-everyday/profiles/english-balanced-v2/day-012/042-something.mp3",
+          "fileWithoutSpelling": "audio/words/starter-everyday/profiles/english-balanced-v2/day-012/042-something-no-spelling.mp3"
+        },
+        {
+          "word": "same",
+          "order": 42,
+          "mode": "word-meaning",
+          "fileWithSpelling": "audio/words/starter-everyday/profiles/english-balanced-v2/day-012/043-same.mp3",
+          "fileWithoutSpelling": "audio/words/starter-everyday/profiles/english-balanced-v2/day-012/043-same-no-spelling.mp3"
+        },
+        {
+          "word": "both",
+          "order": 43,
+          "mode": "word-meaning",
+          "fileWithSpelling": "audio/words/starter-everyday/profiles/english-balanced-v2/day-012/044-both.mp3",
+          "fileWithoutSpelling": "audio/words/starter-everyday/profiles/english-balanced-v2/day-012/044-both-no-spelling.mp3"
+        },
+        {
+          "word": "every",
+          "order": 44,
+          "mode": "word-meaning",
+          "fileWithSpelling": "audio/words/starter-everyday/profiles/english-balanced-v2/day-012/045-every.mp3",
+          "fileWithoutSpelling": "audio/words/starter-everyday/profiles/english-balanced-v2/day-012/045-every-no-spelling.mp3"
+        },
+        {
+          "word": "used to",
+          "order": 45,
+          "mode": "word-meaning",
+          "fileWithSpelling": "audio/words/starter-everyday/profiles/english-balanced-v2/day-012/046-used-to.mp3",
+          "fileWithoutSpelling": "audio/words/starter-everyday/profiles/english-balanced-v2/day-012/046-used-to-no-spelling.mp3"
+        },
+        {
+          "word": "part",
+          "order": 46,
+          "mode": "word-meaning",
+          "fileWithSpelling": "audio/words/starter-everyday/profiles/english-balanced-v2/day-012/047-part.mp3",
+          "fileWithoutSpelling": "audio/words/starter-everyday/profiles/english-balanced-v2/day-012/047-part-no-spelling.mp3"
+        },
+        {
+          "word": "state",
+          "order": 47,
+          "mode": "word-meaning",
+          "fileWithSpelling": "audio/words/starter-everyday/profiles/english-balanced-v2/day-012/048-state.mp3",
+          "fileWithoutSpelling": "audio/words/starter-everyday/profiles/english-balanced-v2/day-012/048-state-no-spelling.mp3"
+        },
+        {
+          "word": "three",
+          "order": 48,
+          "mode": "word-meaning",
+          "fileWithSpelling": "audio/words/starter-everyday/profiles/english-balanced-v2/day-012/049-three.mp3",
+          "fileWithoutSpelling": "audio/words/starter-everyday/profiles/english-balanced-v2/day-012/049-three-no-spelling.mp3"
+        },
+        {
+          "word": "around",
+          "order": 49,
+          "mode": "word-meaning",
+          "fileWithSpelling": "audio/words/starter-everyday/profiles/english-balanced-v2/day-012/050-around.mp3",
+          "fileWithoutSpelling": "audio/words/starter-everyday/profiles/english-balanced-v2/day-012/050-around-no-spelling.mp3"
+        }
+      ],
+      "status": "generated",
+      "generatedAt": "2026-07-02T19:05:13.878Z"
     }
   },
   "usage": [
@@ -7786,6 +8578,42 @@
       "monthBucket": "2026-07",
       "usedChars": 2637,
       "generatedAt": "2026-07-02T18:19:06.609Z"
+    },
+    {
+      "lessonId": "actions-and-thinking__day-005",
+      "variant": "withSpelling",
+      "playbackMode": "item-sequence",
+      "provider": "google-cloud-tts",
+      "monthBucket": "2026-07",
+      "usedChars": 4649,
+      "generatedAt": "2026-07-02T19:03:23.154Z"
+    },
+    {
+      "lessonId": "actions-and-thinking__day-005",
+      "variant": "withoutSpelling",
+      "playbackMode": "item-sequence",
+      "provider": "google-cloud-tts",
+      "monthBucket": "2026-07",
+      "usedChars": 2556,
+      "generatedAt": "2026-07-02T19:03:51.946Z"
+    },
+    {
+      "lessonId": "starter-everyday__day-012",
+      "variant": "withSpelling",
+      "playbackMode": "item-sequence",
+      "provider": "google-cloud-tts",
+      "monthBucket": "2026-07",
+      "usedChars": 4533,
+      "generatedAt": "2026-07-02T19:04:45.656Z"
+    },
+    {
+      "lessonId": "starter-everyday__day-012",
+      "variant": "withoutSpelling",
+      "playbackMode": "item-sequence",
+      "provider": "google-cloud-tts",
+      "monthBucket": "2026-07",
+      "usedChars": 2523,
+      "generatedAt": "2026-07-02T19:05:13.878Z"
     }
   ]
 }
