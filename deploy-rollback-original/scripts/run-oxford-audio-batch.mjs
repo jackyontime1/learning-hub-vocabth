@@ -17,9 +17,17 @@ const DEFAULT_MANIFEST = path.join(APP_ROOT, "audio", "manifest.json");
 const DEFAULT_JOBS = path.join(APP_ROOT, "audio", "jobs", "oxford-daily-batch.json");
 const DEFAULT_API_KEY = path.resolve(APP_ROOT, "..", ".secrets", "google-tts-api-key.txt");
 const BACKUPS_ROOT = path.resolve(APP_ROOT, "..", "backups");
+const DEFAULT_AUTOMATION_MEMORY = path.join(
+  process.env.CODEX_HOME || (process.env.USERPROFILE ? path.join(process.env.USERPROFILE, ".codex") : ""),
+  "automations",
+  "oxford-mp3-daily-batch",
+  "memory.md"
+);
 const DEFAULT_MONTHLY_CAP = 900000;
-const DEFAULT_RUN_CAP = 25000;
-const DEFAULT_NEW_WORD_CAP = 25;
+const DEFAULT_RUN_CAP = 16000;
+const DEFAULT_NEW_WORD_CAP = 20;
+const DEFAULT_LESSON_CAP = 2;
+const DEFAULT_MP3_FILE_CAP = 70;
 const DAY_SIZE = 10;
 const REVIEW_CAP = 50;
 const AUDIO_PROFILE = "english-balanced-v2";
@@ -590,16 +598,18 @@ function estimateLessonGeneration(lesson) {
     totalChars: withSpellingChars + withoutSpellingChars,
     withSpellingFiles,
     withoutSpellingFiles,
+    totalFiles: withSpellingFiles + withoutSpellingFiles,
     missingFullWords
   };
 }
 
-function selectLessons({ lessons, globalWords, maxNewWords, maxRunChars }) {
+function selectLessons({ lessons, globalWords, maxLessons, maxNewWords, maxRunChars, maxMp3Files }) {
   const lessonById = new Map(lessons.map(lesson => [lesson.id, summarizeLesson(lesson)]));
   const selectedLessonIds = new Set();
   const selected = [];
   let selectedNewWords = 0;
   let selectedChars = 0;
+  let selectedFiles = 0;
 
   const completeWordKeys = new Set();
   for (const lesson of lessonById.values()) {
@@ -617,21 +627,30 @@ function selectLessons({ lessons, globalWords, maxNewWords, maxRunChars }) {
     const lesson = lessonById.get(word.lessonId);
     if (!lesson) continue;
     if (selectedLessonIds.has(lesson.id)) continue;
+    if (selectedLessonIds.size >= maxLessons) break;
 
     const estimate = estimateLessonGeneration(lesson);
     if (!estimate.missingFullWords) continue;
     if (selectedNewWords && selectedNewWords + estimate.missingFullWords > maxNewWords) break;
     if (selectedChars && selectedChars + estimate.totalChars > maxRunChars) break;
+    if (selectedFiles && selectedFiles + estimate.totalFiles > maxMp3Files) break;
+    if (!selectedLessonIds.size && maxLessons < 1) {
+      throw new Error(`The Oxford run lesson cap must be at least 1; received ${maxLessons}.`);
+    }
     if (!selectedNewWords && estimate.missingFullWords > maxNewWords) {
       throw new Error(`The next Oxford lesson ${lesson.id} needs ${estimate.missingFullWords} new words, above the run cap ${maxNewWords}.`);
     }
     if (!selectedChars && estimate.totalChars > maxRunChars) {
       throw new Error(`The next Oxford lesson ${lesson.id} needs ${estimate.totalChars} chars, above the run cap ${maxRunChars}.`);
     }
+    if (!selectedFiles && estimate.totalFiles > maxMp3Files) {
+      throw new Error(`The next Oxford lesson ${lesson.id} needs ${estimate.totalFiles} MP3 files, above the run cap ${maxMp3Files}.`);
+    }
 
     selectedLessonIds.add(lesson.id);
     selectedNewWords += estimate.missingFullWords;
     selectedChars += estimate.totalChars;
+    selectedFiles += estimate.totalFiles;
     selected.push({
       ...lesson,
       estimate
@@ -648,6 +667,7 @@ function selectLessons({ lessons, globalWords, maxNewWords, maxRunChars }) {
     selected,
     newWords: selectedNewWords,
     estimatedChars: selectedChars,
+    mp3Files: selectedFiles,
     nextWord: pendingAfterSelection ? {
       word: pendingAfterSelection.word,
       category: pendingAfterSelection.category,
@@ -656,7 +676,7 @@ function selectLessons({ lessons, globalWords, maxNewWords, maxRunChars }) {
   };
 }
 
-function buildJobsPayload(selection, bucket, maxNewWords, maxRunChars) {
+function buildJobsPayload(selection, bucket, maxLessons, maxNewWords, maxRunChars, maxMp3Files, safetyReport) {
   return {
     version: 1,
     app: "VocabTH / Oxford Audio Vocabulary",
@@ -664,14 +684,18 @@ function buildJobsPayload(selection, bucket, maxNewWords, maxRunChars) {
     generatedAt: new Date().toISOString(),
     monthBucket: bucket,
     limits: {
+      maxLessons,
       maxNewWords,
-      maxRunChars
+      maxRunChars,
+      maxMp3Files
     },
     summary: {
       selectedLessons: selection.selected.length,
       newWords: selection.newWords,
+      mp3Files: selection.mp3Files,
       estimatedChars: selection.estimatedChars,
-      nextWord: selection.nextWord
+      nextWord: selection.nextWord,
+      safety: safetyReport
     },
     lessons: selection.selected.map(lesson => ({
       id: lesson.id,
@@ -682,6 +706,182 @@ function buildJobsPayload(selection, bucket, maxNewWords, maxRunChars) {
       estimate: lesson.estimate,
       items: lesson.items
     }))
+  };
+}
+
+function toPosixPath(value) {
+  return String(value).replace(/\\/g, "/");
+}
+
+function manifestRefToAbs(ref) {
+  return path.join(APP_ROOT, String(ref).replace(/\//g, path.sep));
+}
+
+function collectManifestMp3Refs(manifest) {
+  const refs = [];
+  for (const lesson of Object.values(manifest.lessons || {})) {
+    for (const item of lesson.items || []) {
+      for (const field of ["fileWithSpelling", "fileWithoutSpelling", "file", "src"]) {
+        if (item[field] && String(item[field]).endsWith(".mp3")) refs.push(String(item[field]));
+      }
+    }
+  }
+  return refs;
+}
+
+function validateManifestReferences(manifest) {
+  const refs = collectManifestMp3Refs(manifest);
+  const missing = [...new Set(refs)].filter(ref => !fileReady(manifestRefToAbs(ref)));
+  if (missing.length) {
+    throw new Error(`Manifest has ${missing.length} missing MP3 reference(s). First missing reference: ${missing[0]}`);
+  }
+  return {
+    rawMp3Refs: refs.length,
+    uniqueMp3Refs: new Set(refs).size,
+    missingMp3Refs: 0
+  };
+}
+
+function validateCompletedOxfordLessonsInManifest(lessons, manifest) {
+  const stale = [];
+  for (const lesson of lessons) {
+    if (!lesson.fullItems.length) continue;
+    const fullItemsComplete = lesson.fullItems.every(item => isWordComplete(lesson, item));
+    if (!fullItemsComplete) continue;
+
+    const entry = manifest.lessons?.[lesson.id];
+    if (!entry || entry.status !== "generated" || !Array.isArray(entry.items)) {
+      stale.push(`${lesson.id}: physical MP3s exist but manifest entry is missing or not generated`);
+      continue;
+    }
+
+    const manifestItems = new Map(entry.items.map(item => [String(item.word || "").toLowerCase(), item]));
+    for (const item of lesson.fullItems) {
+      const manifestItem = manifestItems.get(item.word.toLowerCase());
+      if (!manifestItem?.fileWithSpelling || !manifestItem?.fileWithoutSpelling) {
+        stale.push(`${lesson.id}: manifest is missing MP3 fields for ${item.word}`);
+        break;
+      }
+      if (!fileReady(manifestRefToAbs(manifestItem.fileWithSpelling)) || !fileReady(manifestRefToAbs(manifestItem.fileWithoutSpelling))) {
+        stale.push(`${lesson.id}: manifest MP3 path does not exist for ${item.word}`);
+        break;
+      }
+    }
+  }
+
+  if (stale.length) {
+    throw new Error(`Oxford manifest/status appears stale. ${stale.slice(0, 3).join(" | ")}`);
+  }
+  return { staleCompletedLessons: 0 };
+}
+
+function collectSelectionOutputPlans(selection) {
+  const plans = [];
+  for (const lesson of selection.selected) {
+    for (const includeSpelling of [true, false]) {
+      const variant = includeSpelling ? "withSpelling" : "withoutSpelling";
+      for (const item of lesson.items) {
+        if (item.mode === "review" && !includeSpelling) continue;
+        const output = itemOutputPath(lesson, item, includeSpelling);
+        plans.push({
+          lessonId: lesson.id,
+          variant,
+          word: item.word,
+          mode: item.mode,
+          rel: output.rel,
+          abs: output.abs,
+          needsGeneration: !fileReady(output.abs)
+        });
+      }
+    }
+  }
+  return plans;
+}
+
+function validateSelectionSafety(selection, limits) {
+  if (selection.selected.length > limits.maxLessons) {
+    throw new Error(`Autopilot safety stopped run: ${selection.selected.length} lessons exceeds cap ${limits.maxLessons}.`);
+  }
+  if (selection.newWords > limits.maxNewWords) {
+    throw new Error(`Autopilot safety stopped run: ${selection.newWords} new words exceeds cap ${limits.maxNewWords}.`);
+  }
+  if (selection.estimatedChars > limits.maxRunChars) {
+    throw new Error(`Autopilot safety stopped run: ${selection.estimatedChars} estimated chars exceeds cap ${limits.maxRunChars}.`);
+  }
+
+  const plans = collectSelectionOutputPlans(selection);
+  const duplicatePaths = [];
+  const seen = new Set();
+  for (const plan of plans) {
+    const key = plan.rel.toLowerCase();
+    if (seen.has(key)) duplicatePaths.push(plan.rel);
+    seen.add(key);
+  }
+  if (duplicatePaths.length) {
+    throw new Error(`Autopilot safety stopped run: duplicate output path(s): ${duplicatePaths.slice(0, 3).join(", ")}`);
+  }
+
+  const missingPlans = plans.filter(plan => plan.needsGeneration);
+  if (missingPlans.length > limits.maxMp3Files) {
+    throw new Error(`Autopilot safety stopped run: ${missingPlans.length} MP3 files exceeds cap ${limits.maxMp3Files}.`);
+  }
+
+  return {
+    duplicateOutputPaths: 0,
+    overwriteRenameDeleteRisk: 0,
+    mp3FilesToGenerate: missingPlans.length,
+    existingFilesReused: plans.length - missingPlans.length
+  };
+}
+
+function assertCleanWorktreeForLiveRun({ jobsPath, dryRun }) {
+  const repoRoot = path.resolve(APP_ROOT, "..");
+  const result = spawnSync(
+    "git",
+    ["-C", repoRoot, "status", "--porcelain=v1", "--untracked-files=all"],
+    { encoding: "utf8", windowsHide: true }
+  );
+  if (result.status !== 0) {
+    throw new Error(`Unable to inspect git status before Oxford TTS run: ${(result.stderr || result.stdout || "").slice(0, 400)}`);
+  }
+
+  const allowedJobPath = toPosixPath(path.relative(repoRoot, jobsPath));
+  const dirty = (result.stdout || "")
+    .split(/\r?\n/)
+    .map(line => line.trimEnd())
+    .filter(Boolean)
+    .filter(line => toPosixPath(line.slice(3)) !== allowedJobPath);
+
+  if (!dirty.length) {
+    return { cleanWorktree: true, ignoredGeneratedJobFile: false };
+  }
+
+  const translationConflict = dirty.find(line => line.includes("daily-english-reader/data/cache/translations.json"));
+  const prefix = dryRun ? "Autopilot strict dry-run" : "Autopilot live TTS";
+  if (translationConflict) {
+    throw new Error(`${prefix} stopped: protected translations.json is dirty/conflicted (${translationConflict}).`);
+  }
+  throw new Error(`${prefix} stopped: git worktree is not clean. First dirty path: ${dirty[0]}`);
+}
+
+function validateAutomationMemoryFresh({ memoryPath, manifest, bucket, cap }) {
+  if (!memoryPath || !existsSync(memoryPath)) {
+    return { automationMemoryChecked: false };
+  }
+  const text = readFileSync(memoryPath, "utf8");
+  const used = usedCharsForMonth(manifest, bucket);
+  const usageNeedles = [
+    `${used} / ${cap}`,
+    `${used}/${cap}`,
+    `${used.toLocaleString("en-US")} / ${cap.toLocaleString("en-US")}`,
+    `${used.toLocaleString("en-US")}/${cap.toLocaleString("en-US")}`
+  ];
+  if (!usageNeedles.some(needle => text.includes(needle))) {
+    throw new Error(`Autopilot safety stopped run: automation memory appears stale; it does not record current manifest usage ${used}/${cap}.`);
+  }
+  return {
+    automationMemoryChecked: true,
+    automationMemoryUsageMatchesManifest: true
   };
 }
 
@@ -833,27 +1033,73 @@ async function main() {
   const cap = Number(args["month-cap"] || process.env.MONTHLY_TTS_CHAR_CAP || DEFAULT_MONTHLY_CAP);
   const maxRunChars = Number(args["max-run-chars"] || DEFAULT_RUN_CAP);
   const maxNewWords = Number(args["max-new-words"] || DEFAULT_NEW_WORD_CAP);
+  const maxLessons = Number(args["max-lessons"] || DEFAULT_LESSON_CAP);
+  const maxMp3Files = Number(args["max-mp3-files"] || DEFAULT_MP3_FILE_CAP);
   const manifestPath = path.resolve(args.manifest || DEFAULT_MANIFEST);
   const jobsPath = path.resolve(args.jobs || DEFAULT_JOBS);
   const dryRun = Boolean(args["dry-run"]);
+  const strictDryRun = Boolean(args["strict-dry-run"] || process.env.OXFORD_STRICT_DRY_RUN);
+  const memoryPath = path.resolve(args["memory-file"] || process.env.OXFORD_AUTOMATION_MEMORY || DEFAULT_AUTOMATION_MEMORY);
   const ffmpegPath = findFfmpeg(args.ffmpeg);
 
+  if (!dryRun) {
+    assertCleanWorktreeForLiveRun({ jobsPath, dryRun });
+  } else if (strictDryRun) {
+    assertCleanWorktreeForLiveRun({ jobsPath, dryRun });
+  }
+
+  const manifest = loadManifest(manifestPath, cap, bucket);
+  const automationMemoryReport = (!dryRun || strictDryRun)
+    ? validateAutomationMemoryFresh({ memoryPath, manifest, bucket, cap })
+    : { automationMemoryChecked: false };
   const categoryBuckets = buildOxfordEntries();
   const { lessons, globalWords } = buildLessons(categoryBuckets);
+  const manifestReferenceReport = validateManifestReferences(manifest);
+  const manifestStatusReport = validateCompletedOxfordLessonsInManifest(
+    lessons.map(summarizeLesson),
+    manifest
+  );
   const selection = selectLessons({
     lessons,
     globalWords,
+    maxLessons,
     maxNewWords,
-    maxRunChars
+    maxRunChars,
+    maxMp3Files
   });
-  const jobsPayload = buildJobsPayload(selection, bucket, maxNewWords, maxRunChars);
+  const safetyReport = validateSelectionSafety(selection, {
+    maxLessons,
+    maxNewWords,
+    maxRunChars,
+    maxMp3Files
+  });
+  const jobsPayload = buildJobsPayload(
+    selection,
+    bucket,
+    maxLessons,
+    maxNewWords,
+    maxRunChars,
+    maxMp3Files,
+    {
+      ...manifestReferenceReport,
+      ...manifestStatusReport,
+      ...safetyReport,
+      ...automationMemoryReport
+    }
+  );
   writeJson(jobsPath, jobsPayload);
 
   console.log(`Month cap: ${bucket} ${cap}`);
+  console.log(`Autopilot caps: lessons ${maxLessons}, new words ${maxNewWords}, MP3 files ${maxMp3Files}, chars ${maxRunChars}`);
   console.log(`ffmpeg: ${ffmpegPath || "not found; binary concat fallback"}`);
   console.log(`Selected lessons: ${selection.selected.length}`);
   console.log(`Selected new words: ${selection.newWords}`);
+  console.log(`Selected MP3 files: ${selection.mp3Files}`);
   console.log(`Estimated run chars: ${selection.estimatedChars}`);
+  console.log(`Safety duplicate output paths: ${safetyReport.duplicateOutputPaths}`);
+  console.log(`Safety overwrite/rename/delete risk: ${safetyReport.overwriteRenameDeleteRisk}`);
+  console.log(`Manifest missing MP3 references: ${manifestReferenceReport.missingMp3Refs}`);
+  console.log(`Automation memory checked: ${automationMemoryReport.automationMemoryChecked}`);
   if (selection.nextWord) {
     console.log(`Next word after batch: ${selection.nextWord.word} (${selection.nextWord.category} day ${selection.nextWord.day})`);
   } else {
@@ -865,7 +1111,6 @@ async function main() {
     return;
   }
 
-  const manifest = loadManifest(manifestPath, cap, bucket);
   console.log(`Current month usage: ${usedCharsForMonth(manifest, bucket)}/${cap}`);
 
   for (const lesson of selection.selected) {
