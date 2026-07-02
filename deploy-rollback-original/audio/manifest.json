@@ -6353,6 +6353,122 @@
       ],
       "status": "generated",
       "generatedAt": "2026-07-02T03:02:29.404Z"
+    },
+    "work-and-study__day-001": {
+      "category": "Work & Study",
+      "categorySlug": "work-and-study",
+      "day": 1,
+      "audioProfile": "english-balanced-v2",
+      "provider": "google-cloud-tts",
+      "playbackMode": "item-sequence",
+      "recallPauseMs": 3000,
+      "itemCount": 10,
+      "monthBucket": "2026-07",
+      "voice": {
+        "en": {
+          "languageCode": "en-US",
+          "name": "en-US-Chirp3-HD-Puck",
+          "speakingRate": 0.98,
+          "pitch": 0
+        },
+        "th": {
+          "languageCode": "th-TH",
+          "name": "th-TH-Chirp3-HD-Puck",
+          "speakingRate": 1.08,
+          "pitch": 0
+        }
+      },
+      "profileSettings": {
+        "englishVolumeGainDb": 5,
+        "englishWordSpeakingRate": 0.98,
+        "englishExampleSpeakingRate": 0.88
+      },
+      "variants": {
+        "withSpelling": {
+          "type": "item-sequence",
+          "estimatedChars": 3399,
+          "fileCount": 10
+        },
+        "withoutSpelling": {
+          "type": "item-sequence",
+          "estimatedChars": 2881,
+          "fileCount": 10
+        }
+      },
+      "items": [
+        {
+          "word": "work",
+          "order": 0,
+          "mode": "full",
+          "fileWithSpelling": "audio/words/work-and-study/profiles/english-balanced-v2/day-001/001-work.mp3",
+          "fileWithoutSpelling": "audio/words/work-and-study/profiles/english-balanced-v2/day-001/001-work-no-spelling.mp3"
+        },
+        {
+          "word": "school",
+          "order": 1,
+          "mode": "word-meaning",
+          "fileWithSpelling": "audio/words/work-and-study/profiles/english-balanced-v2/day-001/002-school.mp3",
+          "fileWithoutSpelling": "audio/words/work-and-study/profiles/english-balanced-v2/day-001/002-school-no-spelling.mp3"
+        },
+        {
+          "word": "company",
+          "order": 2,
+          "mode": "full",
+          "fileWithSpelling": "audio/words/work-and-study/profiles/english-balanced-v2/day-001/003-company.mp3",
+          "fileWithoutSpelling": "audio/words/work-and-study/profiles/english-balanced-v2/day-001/003-company-no-spelling.mp3"
+        },
+        {
+          "word": "business",
+          "order": 3,
+          "mode": "full",
+          "fileWithSpelling": "audio/words/work-and-study/profiles/english-balanced-v2/day-001/004-business.mp3",
+          "fileWithoutSpelling": "audio/words/work-and-study/profiles/english-balanced-v2/day-001/004-business-no-spelling.mp3"
+        },
+        {
+          "word": "read",
+          "order": 4,
+          "mode": "word-meaning",
+          "fileWithSpelling": "audio/words/work-and-study/profiles/english-balanced-v2/day-001/005-read.mp3",
+          "fileWithoutSpelling": "audio/words/work-and-study/profiles/english-balanced-v2/day-001/005-read-no-spelling.mp3"
+        },
+        {
+          "word": "job",
+          "order": 5,
+          "mode": "word-meaning",
+          "fileWithSpelling": "audio/words/work-and-study/profiles/english-balanced-v2/day-001/006-job.mp3",
+          "fileWithoutSpelling": "audio/words/work-and-study/profiles/english-balanced-v2/day-001/006-job-no-spelling.mp3"
+        },
+        {
+          "word": "later",
+          "order": 6,
+          "mode": "word-meaning",
+          "fileWithSpelling": "audio/words/work-and-study/profiles/english-balanced-v2/day-001/007-later.mp3",
+          "fileWithoutSpelling": "audio/words/work-and-study/profiles/english-balanced-v2/day-001/007-later-no-spelling.mp3"
+        },
+        {
+          "word": "order",
+          "order": 7,
+          "mode": "word-meaning",
+          "fileWithSpelling": "audio/words/work-and-study/profiles/english-balanced-v2/day-001/008-order.mp3",
+          "fileWithoutSpelling": "audio/words/work-and-study/profiles/english-balanced-v2/day-001/008-order-no-spelling.mp3"
+        },
+        {
+          "word": "service",
+          "order": 8,
+          "mode": "word-meaning",
+          "fileWithSpelling": "audio/words/work-and-study/profiles/english-balanced-v2/day-001/009-service.mp3",
+          "fileWithoutSpelling": "audio/words/work-and-study/profiles/english-balanced-v2/day-001/009-service-no-spelling.mp3"
+        },
+        {
+          "word": "show off",
+          "order": 9,
+          "mode": "word-meaning",
+          "fileWithSpelling": "audio/words/work-and-study/profiles/english-balanced-v2/day-001/010-show-off.mp3",
+          "fileWithoutSpelling": "audio/words/work-and-study/profiles/english-balanced-v2/day-001/010-show-off-no-spelling.mp3"
+        }
+      ],
+      "status": "generated",
+      "generatedAt": "2026-07-02T13:42:16.867Z"
     }
   },
   "usage": [
@@ -6894,6 +7010,24 @@
       "monthBucket": "2026-07",
       "usedChars": 2597,
       "generatedAt": "2026-07-02T03:02:29.404Z"
+    },
+    {
+      "lessonId": "work-and-study__day-001",
+      "variant": "withSpelling",
+      "playbackMode": "item-sequence",
+      "provider": "google-cloud-tts",
+      "monthBucket": "2026-07",
+      "usedChars": 3399,
+      "generatedAt": "2026-07-02T13:41:43.637Z"
+    },
+    {
+      "lessonId": "work-and-study__day-001",
+      "variant": "withoutSpelling",
+      "playbackMode": "item-sequence",
+      "provider": "google-cloud-tts",
+      "monthBucket": "2026-07",
+      "usedChars": 2881,
+      "generatedAt": "2026-07-02T13:42:16.867Z"
     }
   ]
 }
