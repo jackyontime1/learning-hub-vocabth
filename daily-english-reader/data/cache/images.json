@@ -4407,5 +4407,41 @@
     "image_is_fallback": true,
     "credit": "Daily English Reader",
     "credit_url": ""
+  },
+  "a62d3aa5c9603454e3": {
+    "cache_version": 2,
+    "url": "",
+    "local_filename": "fallback-a62d3aa5c960.svg",
+    "image_url": "static/images/fallback-a62d3aa5c960.svg",
+    "image_local_path": "static/images/fallback-a62d3aa5c960.svg",
+    "image_source": "Local generated SVG",
+    "image_author": "Daily English Reader",
+    "image_license": "Project-owned local asset",
+    "image_attribution_url": "",
+    "image_alt": "Cover image for U.S. declines to extend CUSMA trade deal with Canada, Mexico",
+    "image_query": "World CUSMA Canada Mexico declines extend trade deal",
+    "image_relevance_score": 20,
+    "image_selected_reason": "No usable free image candidate",
+    "image_is_fallback": true,
+    "credit": "Daily English Reader",
+    "credit_url": ""
+  },
+  "1d5a414ffaa31570a5": {
+    "cache_version": 2,
+    "url": "",
+    "local_filename": "fallback-1d5a414ffaa3.svg",
+    "image_url": "static/images/fallback-1d5a414ffaa3.svg",
+    "image_local_path": "static/images/fallback-1d5a414ffaa3.svg",
+    "image_source": "Local generated SVG",
+    "image_author": "Daily English Reader",
+    "image_license": "Project-owned local asset",
+    "image_attribution_url": "",
+    "image_alt": "Cover image for Experts confirm tornado touched down in southwest Winnipeg on Monday",
+    "image_query": "Canada Experts Winnipeg Monday confirm tornado touched southwest",
+    "image_relevance_score": 20,
+    "image_selected_reason": "No usable free image candidate",
+    "image_is_fallback": true,
+    "credit": "Daily English Reader",
+    "credit_url": ""
   }
 }
