@@ -418,7 +418,7 @@ function itemOutputPath(lesson, item, index, includeSpelling) {
   if (lesson.audioProfile) {
     const profile = safeFileStem(lesson.audioProfile);
     if (item.mode === "review") {
-      const fileName = `${safeFileStem(item.word)}.mp3`;
+      const fileName = `${safeFileStem(item.reviewFileStem || item.word)}.mp3`;
       const rel = `audio/words/${lesson.categorySlug}/profiles/${profile}/review/${fileName}`;
       return { rel, abs: path.join(APP_ROOT, rel) };
     }
@@ -428,7 +428,7 @@ function itemOutputPath(lesson, item, index, includeSpelling) {
     return { rel, abs: path.join(APP_ROOT, rel) };
   }
   if (item.mode === "review") {
-    const fileName = `${safeFileStem(item.word)}.mp3`;
+    const fileName = `${safeFileStem(item.reviewFileStem || item.word)}.mp3`;
     const rel = `audio/words/${lesson.categorySlug}/review/${fileName}`;
     return { rel, abs: path.join(APP_ROOT, rel) };
   }
@@ -471,6 +471,14 @@ async function generateSplitLesson({ lesson, provider, dryRun, manifest, cap, bu
       needsGeneration
     };
   });
+  const outputPaths = new Set();
+  for (const row of prepared) {
+    const outputKey = row.output.rel.toLowerCase();
+    if (outputPaths.has(outputKey)) {
+      throw new Error(`Duplicate output path in ${lesson.id} ${variantName}: ${row.output.rel}`);
+    }
+    outputPaths.add(outputKey);
+  }
   const estimatedChars = prepared.reduce((sum, row) => sum + row.estimatedChars, 0);
   const currentUsed = usedCharsForMonth(manifest, bucket);
   if (currentUsed + estimatedChars > cap) {
