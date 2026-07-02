@@ -1,6 +1,6 @@
 {
   "status": "ready",
-  "started_at": "2026-07-02T14:45:00.497512+00:00",
+  "started_at": "2026-07-02T18:24:52.225619+00:00",
   "expected_toronto_date": "2026-07-02",
   "free_only": true,
   "demo_mode": false,
@@ -21,11 +21,13 @@
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
-    "nllb_retries": 0,
+    "nllb_retries": 1,
     "quality_failures": 0,
-    "rejection_reasons": {}
+    "rejection_reasons": {
+      "missing-number:61000": 1
+    }
   },
-  "completed_at": "2026-07-02T14:54:53.205281+00:00",
+  "completed_at": "2026-07-02T18:33:29.158957+00:00",
   "latest_date": "2026-07-02",
   "total_story_count": 70,
   "today_story_count": 10,
@@ -45,23 +47,23 @@
   "fallback_image_count": 6,
   "fallback_images": [
     {
-      "article_id": "65eb40bdeed137dbdb",
-      "title": "Is One Layer Enough? Training A Single Transformer Layer Can Match Full-Parameter RL Training",
+      "article_id": "cc149114796389e0f5",
+      "title": "Alberta government to announce details for West Coast pipeline proposal",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "a25c41da44ba786915",
-      "title": "AutoMem: Automated Learning of Memory as a Cognitive Skill",
+      "article_id": "14424333a99e5ebea7",
+      "title": "U.S. job market slows in June",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "681bc99de0df786c57",
-      "title": "2 legendary polar exploration shipwrecks are about to get their 21st-century close-up",
+      "article_id": "db51afe0f15d8f9070",
+      "title": "Quebec's biggest landfill gets emergency approval to pile garbage higher",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "684d78f5d579e0d2c6",
-      "title": "Funerals held for 14 Pakistani children killed in tutoring center collapse",
+      "article_id": "b2ed01b361b13ec921",
+      "title": "Nine Thai monks killed after 11-year-old driver collides with procession",
       "reason": "No usable free image candidate"
     },
     {
