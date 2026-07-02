@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-07-02T03:08:16.350899+00:00",
-  "expected_toronto_date": "2026-07-01",
+  "started_at": "2026-07-02T13:47:27.312525+00:00",
+  "expected_toronto_date": "2026-07-02",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -29,16 +29,15 @@
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 1,
-    "nllb_retries": 2,
+    "nllb_retries": 1,
     "quality_failures": 1,
     "rejection_reasons": {
       "empty-translation": 1,
-      "missing-number:150": 2,
-      "repeated-junk-string": 1
+      "missing-number:150": 2
     }
   },
-  "completed_at": "2026-07-02T03:15:57.486302+00:00",
-  "latest_date": "2026-07-01",
+  "completed_at": "2026-07-02T13:52:24.285980+00:00",
+  "latest_date": "2026-07-02",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -54,52 +53,37 @@
     "easy_news": 2,
     "daily_life_practice_story": 4
   },
-  "fallback_image_count": 9,
+  "fallback_image_count": 6,
   "fallback_images": [
     {
-      "article_id": "1d5a414ffaa31570a5",
-      "title": "Experts confirm tornado touched down in southwest Winnipeg on Monday",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "7b37bd120b349633ef",
-      "title": "N.L.'s loss, sacrifice at Beaumont-Hamel remembered on both sides of the Atlantic — 110 years later",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "f7675cfc7e192f527e",
-      "title": "After Trump's reelection, these U.S. scientists found jobs in the U.K.",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "a62d3aa5c9603454e3",
-      "title": "U.S. declines to extend CUSMA trade deal with Canada, Mexico",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "1d233215ce0837fc95",
-      "title": "Tricks to help you spend less money at restaurants",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "69c9aa89d5246187ab",
-      "title": "Mexico ends a 40-year knockout drought, beats Ecuador to advance in World Cup",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "dfb0f853c5dcdadea4",
-      "title": "Leaving a Phone for Repair",
+      "article_id": "38a05af17fc3841c40",
+      "title": "Canada's economy reverses months of slow growth with 0.5% boost in April",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "676ad7d194255128cd",
-      "title": "Meeting a New Neighbor",
+      "article_id": "f2d59856281209ffc4",
+      "title": "Actor Danny Glover reveals he has Alzheimer's disease",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "51656b4a4c75d07b2b",
+      "title": "Trump denies conflict of interest over crypto. And, Vatican excommunicates rebel group",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "786f1035f9770e75f1",
+      "title": "Rescuers inch closer to quake survivor after eight days - and he's cheering them on",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "ffb18d353b26f33012",
-      "title": "Laundry Before the Rain",
-      "reason": "Selected image was unavailable: ValueError"
+      "article_id": "ffff01abd3d80ff4f5",
+      "title": "Special Weather Statement issued July 2 at 8:37AM CDT by NWS Twin Cities/Chanhassen MN",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "b7c2736d49d3ee04b8",
+      "title": "Canadian boy, 11, dies of rabies after waking to bat on his face",
+      "reason": "No usable free image candidate"
     }
   ]
 }
