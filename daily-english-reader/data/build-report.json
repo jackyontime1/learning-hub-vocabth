@@ -1,6 +1,6 @@
 {
   "status": "ready",
-  "started_at": "2026-07-02T20:43:37.678190+00:00",
+  "started_at": "2026-07-02T21:28:22.022538+00:00",
   "expected_toronto_date": "2026-07-02",
   "free_only": true,
   "demo_mode": false,
@@ -16,16 +16,27 @@
     "C1": 2
   },
   "schema_version": 10,
-  "candidate_rejections": [],
+  "candidate_rejections": [
+    {
+      "article_id": "ae9f3f3636b3f48cbe",
+      "title": "Gaza patients face agonising delays for medical evacuation",
+      "provider": "BBC News",
+      "level": "C1",
+      "reason": "RuntimeError: Full Thai translation unavailable for article ae9f3f3636b3f48cbe"
+    }
+  ],
   "practice_story_count": 4,
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
-    "nllb_retries": 0,
-    "quality_failures": 0,
-    "rejection_reasons": {}
+    "nllb_retries": 2,
+    "quality_failures": 1,
+    "rejection_reasons": {
+      "repeated-junk-string": 1,
+      "missing-number:300": 2
+    }
   },
-  "completed_at": "2026-07-02T20:45:19.391796+00:00",
+  "completed_at": "2026-07-02T21:38:43.835977+00:00",
   "latest_date": "2026-07-02",
   "total_story_count": 70,
   "today_story_count": 10,
@@ -45,33 +56,33 @@
   "fallback_image_count": 6,
   "fallback_images": [
     {
-      "article_id": "14424333a99e5ebea7",
-      "title": "U.S. job market slows in June",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "c2305f59b246a1c158",
-      "title": "9 monks struck and killed in Thailand by 11-year-old driver",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "7e200c860760e92751",
-      "title": "Turkish police beat us with iron rods before we lost limbs to frostbite, Afghans say",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "db51afe0f15d8f9070",
-      "title": "Quebec's biggest landfill gets emergency approval to pile garbage higher",
-      "reason": "No usable free image candidate"
-    },
-    {
       "article_id": "51656b4a4c75d07b2b",
       "title": "Trump denies conflict of interest over crypto. And, Vatican excommunicates rebel group",
       "reason": "No usable free image candidate"
     },
     {
+      "article_id": "604c586725d1165a51",
+      "title": "Russia hits Ukraine's capital with a massive drone and missile attack, killing at least 18",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "19b4c6369974b1949c",
+      "title": "Ebola treatments trial begins in the Democratic Republic of Congo",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "13d3c9feaff82e7205",
+      "title": "Cheers and applause as security guard rescued from rubble",
+      "reason": "No usable free image candidate"
+    },
+    {
       "article_id": "b7c2736d49d3ee04b8",
       "title": "Canadian boy, 11, dies of rabies after waking to bat on his face",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "f18717350849c8fc43",
+      "title": "A hot summer trend in the sharing economy? Rental swimming pools",
       "reason": "No usable free image candidate"
     }
   ]
