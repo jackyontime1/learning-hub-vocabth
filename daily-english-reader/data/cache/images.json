@@ -4767,5 +4767,41 @@
     "image_is_fallback": true,
     "credit": "Daily English Reader",
     "credit_url": ""
+  },
+  "7e200c860760e92751": {
+    "cache_version": 2,
+    "url": "",
+    "local_filename": "fallback-7e200c860760.svg",
+    "image_url": "static/images/fallback-7e200c860760.svg",
+    "image_local_path": "static/images/fallback-7e200c860760.svg",
+    "image_source": "Local generated SVG",
+    "image_author": "Daily English Reader",
+    "image_license": "Project-owned local asset",
+    "image_attribution_url": "",
+    "image_alt": "Cover image for Turkish police beat us with iron rods before we lost limbs to frostbite, Afghans say",
+    "image_query": "World Turkish Afghans police beat iron rods lost",
+    "image_relevance_score": 20,
+    "image_selected_reason": "No usable free image candidate",
+    "image_is_fallback": true,
+    "credit": "Daily English Reader",
+    "credit_url": ""
+  },
+  "6c7508632a44ea8eff": {
+    "cache_version": 2,
+    "url": "",
+    "local_filename": "fallback-6c7508632a44.svg",
+    "image_url": "static/images/fallback-6c7508632a44.svg",
+    "image_local_path": "static/images/fallback-6c7508632a44.svg",
+    "image_source": "Local generated SVG",
+    "image_author": "Daily English Reader",
+    "image_license": "Project-owned local asset",
+    "image_attribution_url": "",
+    "image_alt": "Cover image for The Vespa at 80: Why the Italian scooter remains the coolest thing on 2 wheels",
+    "image_query": "World The Vespa Why Italian vespa scooter remains coolest",
+    "image_relevance_score": 20,
+    "image_selected_reason": "No usable free image candidate",
+    "image_is_fallback": true,
+    "credit": "Daily English Reader",
+    "credit_url": ""
   }
 }

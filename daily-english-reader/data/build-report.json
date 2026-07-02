@@ -1,6 +1,6 @@
 {
   "status": "ready",
-  "started_at": "2026-07-02T18:24:52.225619+00:00",
+  "started_at": "2026-07-02T19:12:53.824783+00:00",
   "expected_toronto_date": "2026-07-02",
   "free_only": true,
   "demo_mode": false,
@@ -21,13 +21,11 @@
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
-    "nllb_retries": 1,
+    "nllb_retries": 0,
     "quality_failures": 0,
-    "rejection_reasons": {
-      "missing-number:61000": 1
-    }
+    "rejection_reasons": {}
   },
-  "completed_at": "2026-07-02T18:33:29.158957+00:00",
+  "completed_at": "2026-07-02T19:16:50.423169+00:00",
   "latest_date": "2026-07-02",
   "total_story_count": 70,
   "today_story_count": 10,
@@ -47,23 +45,23 @@
   "fallback_image_count": 6,
   "fallback_images": [
     {
-      "article_id": "cc149114796389e0f5",
-      "title": "Alberta government to announce details for West Coast pipeline proposal",
+      "article_id": "6c7508632a44ea8eff",
+      "title": "The Vespa at 80: Why the Italian scooter remains the coolest thing on 2 wheels",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "14424333a99e5ebea7",
-      "title": "U.S. job market slows in June",
+      "article_id": "f2d59856281209ffc4",
+      "title": "Actor Danny Glover reveals he has Alzheimer's disease",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "7e200c860760e92751",
+      "title": "Turkish police beat us with iron rods before we lost limbs to frostbite, Afghans say",
       "reason": "No usable free image candidate"
     },
     {
       "article_id": "db51afe0f15d8f9070",
       "title": "Quebec's biggest landfill gets emergency approval to pile garbage higher",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "b2ed01b361b13ec921",
-      "title": "Nine Thai monks killed after 11-year-old driver collides with procession",
       "reason": "No usable free image candidate"
     },
     {
