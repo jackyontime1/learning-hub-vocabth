@@ -1,9 +1,23 @@
 # VocabTH / Podcast Voice - Project Status
 
-Updated: July 1, 2026
+Updated: July 2, 2026
 
+
+## Oxford MP3 Status Correction - July 2, 2026
+
+- Actions & Thinking day 3 controlled TTS completed and production verified.
+- Commit: `c2d2aa3c9b27329eb41810fe2fd663961cb66f26`.
+- GitHub Actions run: `28562475081` passed.
+- Rolling cache follow-up advanced `origin/main` to `c1ac39c320d32b4bdb8a2aa8264586fbb2395b2c`.
+- Generated approved Actions & Thinking day 3 words: `go with`, `need`, `have back`, `go by`, `see about`, `take`, `make up`, `make-up`, `think about`, `think up`.
+- Actual TTS usage for day 3: `7,256` characters.
+- July usage after day 3: `28,610 / 900,000`; remaining safety allowance: `871,390` characters.
+- Production verification passed: 14 Oxford lessons, 140 Oxford words, 390 MP3 URLs checked, 390 passed, content-type `audio/mpeg`, and MP3 selection before Web Speech verified.
+- Runner dry-run after day 3 selects `Work & Study` day 1, 10 words, estimated `6,280` characters.
+- Next word after that dry-run batch would be `take in` in `Actions & Thinking` day 4.
+- Recurring automation remains `PAUSED`.
+- Do not run Work & Study day 1 without separate owner approval.
 ## Workspace
-
 - Working directory: `D:\podcast voice`
 - Production source: `D:\podcast voice\deploy-rollback-original`
 - Production URL: https://fabulous-tanuki-b7a44d.netlify.app
