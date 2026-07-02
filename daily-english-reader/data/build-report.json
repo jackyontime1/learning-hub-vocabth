@@ -1,6 +1,6 @@
 {
   "status": "ready",
-  "started_at": "2026-07-02T13:47:27.312525+00:00",
+  "started_at": "2026-07-02T14:45:00.497512+00:00",
   "expected_toronto_date": "2026-07-02",
   "free_only": true,
   "demo_mode": false,
@@ -16,27 +16,16 @@
     "C1": 2
   },
   "schema_version": 10,
-  "candidate_rejections": [
-    {
-      "article_id": "f6aea5b4f5a4dc201d",
-      "title": "Americans react to Supreme Court upholding birthright citizenship",
-      "provider": "BBC News",
-      "level": "B2",
-      "reason": "RuntimeError: Full Thai translation unavailable for article f6aea5b4f5a4dc201d"
-    }
-  ],
+  "candidate_rejections": [],
   "practice_story_count": 4,
   "practice_fallback_count": 0,
   "translation_quality": {
-    "cache_rejections": 1,
-    "nllb_retries": 1,
-    "quality_failures": 1,
-    "rejection_reasons": {
-      "empty-translation": 1,
-      "missing-number:150": 2
-    }
+    "cache_rejections": 0,
+    "nllb_retries": 0,
+    "quality_failures": 0,
+    "rejection_reasons": {}
   },
-  "completed_at": "2026-07-02T13:52:24.285980+00:00",
+  "completed_at": "2026-07-02T14:54:53.205281+00:00",
   "latest_date": "2026-07-02",
   "total_story_count": 70,
   "today_story_count": 10,
@@ -56,28 +45,28 @@
   "fallback_image_count": 6,
   "fallback_images": [
     {
-      "article_id": "38a05af17fc3841c40",
-      "title": "Canada's economy reverses months of slow growth with 0.5% boost in April",
-      "reason": "Selected image was unavailable: ValueError"
+      "article_id": "65eb40bdeed137dbdb",
+      "title": "Is One Layer Enough? Training A Single Transformer Layer Can Match Full-Parameter RL Training",
+      "reason": "No usable free image candidate"
     },
     {
-      "article_id": "f2d59856281209ffc4",
-      "title": "Actor Danny Glover reveals he has Alzheimer's disease",
+      "article_id": "a25c41da44ba786915",
+      "title": "AutoMem: Automated Learning of Memory as a Cognitive Skill",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "681bc99de0df786c57",
+      "title": "2 legendary polar exploration shipwrecks are about to get their 21st-century close-up",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "684d78f5d579e0d2c6",
+      "title": "Funerals held for 14 Pakistani children killed in tutoring center collapse",
       "reason": "No usable free image candidate"
     },
     {
       "article_id": "51656b4a4c75d07b2b",
       "title": "Trump denies conflict of interest over crypto. And, Vatican excommunicates rebel group",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "786f1035f9770e75f1",
-      "title": "Rescuers inch closer to quake survivor after eight days - and he's cheering them on",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "ffff01abd3d80ff4f5",
-      "title": "Special Weather Statement issued July 2 at 8:37AM CDT by NWS Twin Cities/Chanhassen MN",
       "reason": "No usable free image candidate"
     },
     {
