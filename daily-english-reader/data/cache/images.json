@@ -4803,5 +4803,23 @@
     "image_is_fallback": true,
     "credit": "Daily English Reader",
     "credit_url": ""
+  },
+  "c2305f59b246a1c158": {
+    "cache_version": 2,
+    "url": "",
+    "local_filename": "fallback-c2305f59b246.svg",
+    "image_url": "static/images/fallback-c2305f59b246.svg",
+    "image_local_path": "static/images/fallback-c2305f59b246.svg",
+    "image_source": "Local generated SVG",
+    "image_author": "Daily English Reader",
+    "image_license": "Project-owned local asset",
+    "image_attribution_url": "",
+    "image_alt": "Cover image for 9 monks struck and killed in Thailand by 11-year-old driver",
+    "image_query": "World Thailand monks struck killed year old driver",
+    "image_relevance_score": 20,
+    "image_selected_reason": "No usable free image candidate",
+    "image_is_fallback": true,
+    "credit": "Daily English Reader",
+    "credit_url": ""
   }
 }

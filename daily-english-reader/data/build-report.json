@@ -1,6 +1,6 @@
 {
   "status": "ready",
-  "started_at": "2026-07-02T19:34:55.777475+00:00",
+  "started_at": "2026-07-02T20:43:37.678190+00:00",
   "expected_toronto_date": "2026-07-02",
   "free_only": true,
   "demo_mode": false,
@@ -25,7 +25,7 @@
     "quality_failures": 0,
     "rejection_reasons": {}
   },
-  "completed_at": "2026-07-02T19:35:05.040604+00:00",
+  "completed_at": "2026-07-02T20:45:19.391796+00:00",
   "latest_date": "2026-07-02",
   "total_story_count": 70,
   "today_story_count": 10,
@@ -45,13 +45,13 @@
   "fallback_image_count": 6,
   "fallback_images": [
     {
-      "article_id": "6c7508632a44ea8eff",
-      "title": "The Vespa at 80: Why the Italian scooter remains the coolest thing on 2 wheels",
+      "article_id": "14424333a99e5ebea7",
+      "title": "U.S. job market slows in June",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "f2d59856281209ffc4",
-      "title": "Actor Danny Glover reveals he has Alzheimer's disease",
+      "article_id": "c2305f59b246a1c158",
+      "title": "9 monks struck and killed in Thailand by 11-year-old driver",
       "reason": "No usable free image candidate"
     },
     {

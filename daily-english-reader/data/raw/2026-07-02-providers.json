@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-02T19:34:56.809140+00:00",
+  "fetched_at": "2026-07-02T20:43:39.326656+00:00",
   "candidates": [
     {
       "id": "b1bd47ad91abed40c9",
@@ -44,6 +44,20 @@
       "provider_key": "rss_cbc-news-canada"
     },
     {
+      "id": "929a3eaaade9a3dece",
+      "provider": "CBC News",
+      "title": "Growing recognition for Inuk war hero John Shiwak brings ‘sense of relief’ says relative",
+      "description": "Even though he died more than a century ago, fighting far from home, seeing Inuk war hero John Shiwak's growing recognition for his sacrifice is a relief for his family.",
+      "url": "https://www.cbc.ca/news/inuk-war-hero-john-shiwak-recognition-9.7256341?cmp=rss",
+      "category": "Canada",
+      "published": "2026-07-02T19:25:18+00:00",
+      "author": "CBC News",
+      "content_type": "rss news summary",
+      "image_url": "",
+      "thai_demo": "",
+      "provider_key": "rss_cbc-news-canada"
+    },
+    {
       "id": "32e027113394b88d30",
       "provider": "CBC News",
       "title": "Search ongoing for 7-year-old boy who went missing at Hamilton conservation area",
@@ -72,6 +86,20 @@
       "provider_key": "rss_cbc-news-canada"
     },
     {
+      "id": "43858b32c4d22b6a05",
+      "provider": "CBC News",
+      "title": "Extreme heat pushes Windsor-Essex closer to 19th-century record temperatures",
+      "description": "An orange heat warning continues to be in effect for Windsor-Essex with possibilities of the temperature reaching record level seen in the 1800s.",
+      "url": "https://www.cbc.ca/news/canada/windsor/record-high-temperatures-possible-with-ongoing-extreme-heat-in-windsor-essex-9.7256212?cmp=rss",
+      "category": "Canada",
+      "published": "2026-07-02T18:08:41+00:00",
+      "author": "CBC News",
+      "content_type": "rss news summary",
+      "image_url": "",
+      "thai_demo": "",
+      "provider_key": "rss_cbc-news-canada"
+    },
+    {
       "id": "2c19b480d977220820",
       "provider": "CBC News",
       "title": "Ottawa-Gatineau cleans up after storm under smothering heat",
@@ -79,6 +107,20 @@
       "url": "https://www.cbc.ca/news/canada/ottawa/ottawa-gatineau-canada-day-storm-weather-cancel-9.7255678?cmp=rss",
       "category": "Canada",
       "published": "2026-07-02T12:06:08+00:00",
+      "author": "CBC News",
+      "content_type": "rss news summary",
+      "image_url": "",
+      "thai_demo": "",
+      "provider_key": "rss_cbc-news-canada"
+    },
+    {
+      "id": "dc4f180ca88771c519",
+      "provider": "CBC News",
+      "title": "Tornado warning lifted for area west of Cornwall, Ont.",
+      "description": "Environment Canada has lifted a tornado warning that was briefly in place on Thursday afternoon for an area west of Cornwall, Ont.",
+      "url": "https://www.cbc.ca/news/canada/ottawa/tornado-warning-west-of-cornwall-9.7256513?cmp=rss",
+      "category": "Canada",
+      "published": "2026-07-02T20:20:20+00:00",
       "author": "CBC News",
       "content_type": "rss news summary",
       "image_url": "",
@@ -128,10 +170,10 @@
       "provider_key": "rss_cbc-news-canada"
     },
     {
-      "id": "f35a6b5cf617e2ab24",
+      "id": "430c510b1f5f58196a",
       "provider": "CBC News",
-      "title": "Evacuation order to be reassessed as rainfall helped fight Labrador West wildfires, mayor says",
-      "description": "Rainfall over wildfires burning near Labrador West provided some much needed relief on Wednesday, but the mayor of Labrador City says it's still too early to know when an evacuation order could be lifted for residents.",
+      "title": "Evacuation orders partially lifted as rainfall helped fight Labrador West wildfires",
+      "description": "While rain helped bring some relief and helped lift some evacuation orders as of late Thursday afternoon, one order remains in place for Walsh River.",
       "url": "https://www.cbc.ca/news/canada/newfoundland-labrador/labrador-west-fires-july-2-9.7255650?cmp=rss",
       "category": "Canada",
       "published": "2026-07-02T12:50:55+00:00",
@@ -212,48 +254,6 @@
       "provider_key": "rss_cbc-news-canada"
     },
     {
-      "id": "af0d03c2636be723f5",
-      "provider": "CBC News",
-      "title": "Teen driver charged after man on riding lawnmower killed in fatal collision in North Dumfries, Ont.",
-      "description": "A 16-year-old girl has been charged with dangerous operation of a vehicle causing death, speeding and stunt driving after a collision between a car and riding lawnmower last month in southern Ontario. A 51-year-old North Dumfries Township man died.",
-      "url": "https://www.cbc.ca/news/canada/kitchener-waterloo/teen-driver-charged-man-on-riding-lawnmower-killed-north-dumfries-9.7255329?cmp=rss",
-      "category": "Canada",
-      "published": "2026-07-01T19:15:00+00:00",
-      "author": "CBC News",
-      "content_type": "rss news summary",
-      "image_url": "",
-      "thai_demo": "",
-      "provider_key": "rss_cbc-news-canada"
-    },
-    {
-      "id": "693db16549d6fca7c1",
-      "provider": "CBC News",
-      "title": "Why one superfan thinks now is the right time for Canada's Eurovision debut",
-      "description": "When it was announced that Canada would be entering the 2027 Eurovision Song Contest — it was music to Matti McLean’s ears. A Canadian superfan of the international music competition, co-host of the Think About Eurovision podcast and creator of the Fringe Festival show A Canadian Explains Eurovision to Other Canadians, McLean says he has been campaigning for years to see this moment become a reality.",
-      "url": "https://www.cbc.ca/radio/asithappens/canada-joining-eurovision-9.7255437?cmp=rss",
-      "category": "Canada",
-      "published": "2026-07-01T22:20:00+00:00",
-      "author": "CBC News",
-      "content_type": "rss news summary",
-      "image_url": "",
-      "thai_demo": "",
-      "provider_key": "rss_cbc-news-canada"
-    },
-    {
-      "id": "0b6630e9263be04eea",
-      "provider": "CBC News",
-      "title": "Canadians mark Canada Day as Carney urges unity, heat grips Central Canada",
-      "description": "Officials in many provinces are urging people to stay hydrated and check on vulnerable neighbours as communities kick off celebrations for Canada's 159th birthday.",
-      "url": "https://www.cbc.ca/news/canada/canada-day-heat-wave-festivities-9.7255107?cmp=rss",
-      "category": "Canada",
-      "published": "2026-07-01T14:21:07+00:00",
-      "author": "CBC News",
-      "content_type": "rss news summary",
-      "image_url": "",
-      "thai_demo": "",
-      "provider_key": "rss_cbc-news-canada"
-    },
-    {
       "id": "0c233c7e4e020c52ed",
       "provider": "CBC News",
       "title": "Trump isn't extending CUSMA trade deal, so what happens now?",
@@ -261,6 +261,20 @@
       "url": "https://www.cbc.ca/news/politics/what-next-cusma-usmca-us-canada-mexico-trump-tariffs-9.7255435?cmp=rss",
       "category": "World",
       "published": "2026-07-02T08:00:00+00:00",
+      "author": "CBC News",
+      "content_type": "rss news summary",
+      "image_url": "",
+      "thai_demo": "",
+      "provider_key": "rss_cbc-news-world"
+    },
+    {
+      "id": "5cd041512c3afef0dc",
+      "provider": "CBC News",
+      "title": "Ex-Olympian indicted on felony charge over what Trump called reflecting pool vandalism",
+      "description": "A former U.S. Olympian was indicted Thursday on a felony charge in what President Donald Trump has called vandalism of the reflecting pool.",
+      "url": "https://www.cbc.ca/news/world/olympian-indicted-felony-charge-trump-reflecting-pool-vandalism-9.7256383?cmp=rss",
+      "category": "World",
+      "published": "2026-07-02T20:02:11+00:00",
       "author": "CBC News",
       "content_type": "rss news summary",
       "image_url": "",
@@ -373,6 +387,20 @@
       "url": "https://www.cbc.ca/news/world/empire-state-building-banner-arrests-power-of-love-9.7255362?cmp=rss",
       "category": "World",
       "published": "2026-07-01T19:50:33+00:00",
+      "author": "CBC News",
+      "content_type": "rss news summary",
+      "image_url": "",
+      "thai_demo": "",
+      "provider_key": "rss_cbc-news-world"
+    },
+    {
+      "id": "693db16549d6fca7c1",
+      "provider": "CBC News",
+      "title": "Why one superfan thinks now is the right time for Canada's Eurovision debut",
+      "description": "When it was announced that Canada would be entering the 2027 Eurovision Song Contest — it was music to Matti McLean’s ears. A Canadian superfan of the international music competition, co-host of the Think About Eurovision podcast and creator of the Fringe Festival show A Canadian Explains Eurovision to Other Canadians, McLean says he has been campaigning for years to see this moment become a reality.",
+      "url": "https://www.cbc.ca/radio/asithappens/canada-joining-eurovision-9.7255437?cmp=rss",
+      "category": "World",
+      "published": "2026-07-01T22:20:00+00:00",
       "author": "CBC News",
       "content_type": "rss news summary",
       "image_url": "",
@@ -520,13 +548,13 @@
       "provider_key": "rss_bbc-news-world"
     },
     {
-      "id": "81bfbfe75725afecd0",
+      "id": "6156bd404f11c96483",
       "provider": "BBC News",
-      "title": "'Most massive' Russian attack on Kyiv kills at least 25",
+      "title": "'Most massive' Russian attack on Kyiv kills at least 27",
       "description": "The latest barrage deployed the largest number of weapons on the capital and hit locations over a wide area.",
       "url": "https://www.bbc.co.uk/news/articles/c4gyv05gk4do?at_medium=RSS&at_campaign=rss",
       "category": "World",
-      "published": "2026-07-02T18:35:36+00:00",
+      "published": "2026-07-02T20:18:14+00:00",
       "author": "BBC News",
       "content_type": "rss news summary",
       "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/6649/live/4f89e160-7630-11f1-ac11-19a4319081d7.jpg",
@@ -544,6 +572,20 @@
       "author": "BBC News",
       "content_type": "rss news summary",
       "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/bbab/live/7f056730-7639-11f1-a627-714adb4eed6e.jpg",
+      "thai_demo": "",
+      "provider_key": "rss_bbc-news-world"
+    },
+    {
+      "id": "5f415d2cfd5e9cd6c3",
+      "provider": "BBC News",
+      "title": "Former Olympian indicted for allegedly vandalising Washington Reflecting Pool",
+      "description": "US authorities charged him with property destruction after renovations championed by President Donald Trump appeared to go awry.",
+      "url": "https://www.bbc.co.uk/news/articles/c2ky3p9jlveo?at_medium=RSS&at_campaign=rss",
+      "category": "World",
+      "published": "2026-07-02T20:34:52+00:00",
+      "author": "BBC News",
+      "content_type": "rss news summary",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/062b/live/8a25abc0-764d-11f1-a011-354a7c444b02.jpg",
       "thai_demo": "",
       "provider_key": "rss_bbc-news-world"
     },
@@ -716,20 +758,6 @@
       "provider_key": "rss_bbc-news-world"
     },
     {
-      "id": "f6aea5b4f5a4dc201d",
-      "provider": "BBC News",
-      "title": "Americans react to Supreme Court upholding birthright citizenship",
-      "description": "The BBC asked Americans how they felt after the Supreme Court's ruling on citizenship for babies born in the US.",
-      "url": "https://www.bbc.co.uk/news/videos/c621d53wqw0o?at_medium=RSS&at_campaign=rss",
-      "category": "World",
-      "published": "2026-06-30T19:36:51+00:00",
-      "author": "BBC News",
-      "content_type": "rss news summary",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/821f/live/08b6c1d0-74ba-11f1-b1db-af71d47507d6.jpg",
-      "thai_demo": "",
-      "provider_key": "rss_bbc-news-world"
-    },
-    {
       "id": "26a7c751658c9cef3d",
       "provider": "BBC News",
       "title": "Meta glasses wearers hit with paywall to use built-in feature",
@@ -812,6 +840,20 @@
       "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/f217/live/4c490bf0-7538-11f1-8900-93a4ac49db90.png",
       "thai_demo": "",
       "provider_key": "rss_bbc-news-science"
+    },
+    {
+      "id": "1bdbada8545928978c",
+      "provider": "NPR",
+      "title": "Are the wars in Ukraine and Iran showing the limits of global powers?",
+      "description": "We look at the Russian attacks on Kyiv and the overall state of the wars between Russia and Ukraine and the U.S. and Iran.",
+      "url": "https://www.npr.org/2026/07/02/nx-s1-5877615/are-the-wars-in-ukraine-and-iran-showing-the-limits-of-global-powers",
+      "category": "World",
+      "published": "2026-07-02T20:13:37+00:00",
+      "author": "NPR",
+      "content_type": "rss news summary",
+      "image_url": "",
+      "thai_demo": "",
+      "provider_key": "rss_npr-world"
     },
     {
       "id": "51656b4a4c75d07b2b",
@@ -940,18 +982,18 @@
       "provider_key": "rss_npr-world"
     },
     {
-      "id": "69c9aa89d5246187ab",
+      "id": "46846e0c7f62d0ec50",
       "provider": "NPR",
-      "title": "Mexico ends a 40-year knockout drought, beats Ecuador to advance in World Cup",
-      "description": "Mexico lost seven consecutive times at that same stage from 1994 to 2018 and didn't advance past the group stage in 2022. Now, the 40-year wait is over.",
-      "url": "https://www.npr.org/2026/07/01/nx-s1-5877257/mexico-beats-ecuador-advance-world-cup",
-      "category": "World",
-      "published": "2026-07-01T06:56:58+00:00",
+      "title": "Trump earned more than $1 billion from crypto — but his investors didn't fare so well",
+      "description": "President Trump earned more than $1 billion in 2025 from cryptocurrency ventures. But there are thousands of investors who bought into some of those cryptocurrencies, and they stand to lose big.",
+      "url": "https://www.npr.org/2026/07/02/nx-s1-5878411/trump-earned-more-than-1-billion-from-crypto-but-his-investors-didnt-fare-so-well",
+      "category": "Business",
+      "published": "2026-07-02T20:08:42+00:00",
       "author": "NPR",
       "content_type": "rss news summary",
       "image_url": "",
       "thai_demo": "",
-      "provider_key": "rss_npr-world"
+      "provider_key": "rss_npr-business"
     },
     {
       "id": "14424333a99e5ebea7",
@@ -961,20 +1003,6 @@
       "url": "https://www.npr.org/2026/07/02/nx-s1-5877491/labor-department-to-release-latest-jobs-report-thursday",
       "category": "Business",
       "published": "2026-07-02T08:49:28+00:00",
-      "author": "NPR",
-      "content_type": "rss news summary",
-      "image_url": "",
-      "thai_demo": "",
-      "provider_key": "rss_npr-business"
-    },
-    {
-      "id": "766dfce3ffd83337fb",
-      "provider": "NPR",
-      "title": "Meta considered buying Kalshi before developing its own prediction market app",
-      "description": "Mark Zuckerberg met with Kalshi's CEO last year about a potential deal, but talks did not move forward. Now Meta is making its own prediction market app.",
-      "url": "https://www.npr.org/2026/06/30/nx-s1-5875468/meta-kalshi-prediction-market-acquisition-talks",
-      "category": "Business",
-      "published": "2026-06-30T20:33:04+00:00",
       "author": "NPR",
       "content_type": "rss news summary",
       "image_url": "",
