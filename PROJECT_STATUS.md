@@ -3,23 +3,25 @@
 Updated: July 2, 2026
 
 
-## Oxford MP3 Status Correction - July 3, 2026
+## Oxford MP3 Autopilot / Status Correction - July 3, 2026
 
-- Starter Everyday day 11 controlled TTS completed and production verified.
-- Commit: `6c26be4b9c951fec0a7ea7756c044a77850ae9e5`.
-- Commit message: `Add Starter Everyday day 11 Oxford MP3 audio`.
-- GitHub Actions run: `28612416022` passed, including production deploy, production verification, and rolling cache persistence.
-- Rolling cache follow-up advanced `origin/main` to `b488f52ed7062ed0d5d3f261c276784502915015`.
-- Generated approved Starter Everyday day 11 new words: `life`, `world`, `back up`, `down`, `great`, `through`, `while`, `all right`, `best`, `such`.
-- Generated approved missing review MP3s for completed Starter Everyday day 10 words: `right`, `year`, `day`, `too`, `before`, `off`, `why`, `still`, `many`, `never`.
-- Generated MP3 files: 30 total, 10 review MP3s, 10 day-11 with-spelling MP3s, and 10 day-11 no-spelling MP3s.
-- No Actions & Thinking day 5 / `work out` audio was generated.
-- Actual TTS usage for Starter Everyday day 11: `7,229` characters (`4,592` with spelling, `2,637` without spelling).
-- July usage after Starter Everyday day 11: `49,433 / 900,000`; remaining safety allowance: `850,567` characters.
-- Production verification passed: Starter Everyday day 11 present, approved words exact, approved review MP3s present, 30/30 new MP3 URLs returned `audio/mpeg`, 10 day-11 flashcards have both MP3 paths, and MP3 selection before Web Speech was verified.
-- Production MP3 reference count meaning: `692/692` was verified as unique production MP3 URLs/manifest refs. Raw manifest MP3 references are higher because review entries can point both spelling modes at the same file.
+- Latest verified completed TTS batch is Actions & Thinking day 5 plus Starter Everyday day 12.
+- Evidence checked in this status correction:
+  - Commit `435e4db45435d70b6dbf7f476edca6fffa573770` exists on main with message `Add Actions day 5 and Starter day 12 Oxford MP3 audio`.
+  - GitHub Actions run `28615232272` completed successfully.
+  - Source manifest contains `actions-and-thinking__day-005` and `starter-everyday__day-012` with status `generated`.
+  - Production manifest at `https://learning-hub-vocabth.pages.dev/podcast/audio/manifest.json` contains both lessons with exact approved new words.
+- Generated approved Actions & Thinking day 5 new words: `work out`, `look`, `use`, `make into`, `take up`, `come`, `look on`, `think over`, `come in`, `come to`.
+- Generated approved Starter Everyday day 12 new words: `long`, `something`, `same`, `both`, `every`, `used to`, `part`, `state`, `three`, `around`.
+- Generated MP3 files for that batch: 60 total, including 20 missing review MP3s, 20 with-spelling MP3s, and 20 no-spelling MP3s.
+- Actual TTS usage for that batch: `14,261` characters.
+- July usage after that batch: `63,694 / 900,000`; remaining safety allowance: `836,306` characters.
+- Production verification passed for the batch: both approved lessons present, approved words exact, production MP3 refs checked as `752/752` unique URLs and `1,940` raw refs, and MP3 selection before Web Speech was verified in the previous production check.
+- Oxford MP3 Autopilot v1 safety hardening completed in commit `ced9bbb9619806baa419dd3709011652bd419ce7`.
+- Autopilot v1 GitHub Actions run `28616448407` passed. Rolling cache follow-up advanced `origin/main` to bot commit `5bb54e16cb257c42b07c6cc8d13fa879d8a4300f`.
+- Autopilot v1 hardening ran no TTS and generated no MP3 files.
 - Recurring automation remains `PAUSED`.
-- Next pending batch is not approved and was not audited in this status-only task. Do not run Actions & Thinking day 5 / `work out` or any next batch without separate owner approval and a no-TTS scope audit.
+- Next batch is not approved. Autopilot v1 dry-run selected `home-and-food__day-001` plus `starter-everyday__day-013`, but that was no-TTS dry-run evidence only and must not be treated as completed or approved.
 ## Workspace
 - Working directory: `D:\podcast voice`
 - Production source: `D:\podcast voice\deploy-rollback-original`
