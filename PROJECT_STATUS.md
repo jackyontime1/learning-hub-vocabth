@@ -3,23 +3,23 @@
 Updated: July 2, 2026
 
 
-## Oxford MP3 Status Correction - July 2, 2026
+## Oxford MP3 Status Correction - July 3, 2026
 
-- Actions & Thinking day 4 controlled TTS completed and production verified.
-- Commit: `cba6cbed83b585e23c0ebc23c0947d100a58f6cc`.
-- GitHub Actions run: `28598838048` passed.
-- Rolling cache follow-up advanced `origin/main` to `2979b78a82f158905a4a40343431a6e0deda4953`.
-- Generated approved Actions & Thinking day 4 new words: `take in`, `get into`, `say`, `take on`, `get over`, `go out`, `go up`, `make up for`, `get back`, `go out with`.
-- Generated approved missing review MP3s for completed Actions & Thinking day 3 words: `go with`, `need`, `have back`, `go by`, `see about`, `take`, `make up`, `make-up`, `think about`, `think up`.
-- Generated MP3 files: 30 total, 10 day-4 with spelling, 10 day-4 no-spelling, and 10 missing review MP3 files.
-- `make up` and `make-up` review files remain disambiguated as `make-up-r28.mp3` and `make-up-r29.mp3`.
-- No Starter Everyday day 11 / `life` audio was generated.
-- Actual TTS usage for Actions & Thinking day 4: `7,314` characters.
-- July usage after Actions & Thinking day 4: `42,204 / 900,000`; remaining safety allowance: `857,796` characters.
-- Production verification passed: Actions & Thinking day 4 present, 30/30 new MP3 URLs passed, 440/440 unique Oxford MP3 URLs passed, and MP3 selection before Web Speech verified.
-- The controlled TTS run reported the next word after the day-4 batch as `life` in `Starter Everyday` day 11; this next batch has not been audited or approved.
+- Starter Everyday day 11 controlled TTS completed and production verified.
+- Commit: `6c26be4b9c951fec0a7ea7756c044a77850ae9e5`.
+- Commit message: `Add Starter Everyday day 11 Oxford MP3 audio`.
+- GitHub Actions run: `28612416022` passed, including production deploy, production verification, and rolling cache persistence.
+- Rolling cache follow-up advanced `origin/main` to `b488f52ed7062ed0d5d3f261c276784502915015`.
+- Generated approved Starter Everyday day 11 new words: `life`, `world`, `back up`, `down`, `great`, `through`, `while`, `all right`, `best`, `such`.
+- Generated approved missing review MP3s for completed Starter Everyday day 10 words: `right`, `year`, `day`, `too`, `before`, `off`, `why`, `still`, `many`, `never`.
+- Generated MP3 files: 30 total, 10 review MP3s, 10 day-11 with-spelling MP3s, and 10 day-11 no-spelling MP3s.
+- No Actions & Thinking day 5 / `work out` audio was generated.
+- Actual TTS usage for Starter Everyday day 11: `7,229` characters (`4,592` with spelling, `2,637` without spelling).
+- July usage after Starter Everyday day 11: `49,433 / 900,000`; remaining safety allowance: `850,567` characters.
+- Production verification passed: Starter Everyday day 11 present, approved words exact, approved review MP3s present, 30/30 new MP3 URLs returned `audio/mpeg`, 10 day-11 flashcards have both MP3 paths, and MP3 selection before Web Speech was verified.
+- Production MP3 reference count meaning: `692/692` was verified as unique production MP3 URLs/manifest refs. Raw manifest MP3 references are higher because review entries can point both spelling modes at the same file.
 - Recurring automation remains `PAUSED`.
-- Do not run Starter Everyday day 11 or any next batch without separate owner approval and a no-TTS scope audit.
+- Next pending batch is not approved and was not audited in this status-only task. Do not run Actions & Thinking day 5 / `work out` or any next batch without separate owner approval and a no-TTS scope audit.
 ## Workspace
 - Working directory: `D:\podcast voice`
 - Production source: `D:\podcast voice\deploy-rollback-original`
