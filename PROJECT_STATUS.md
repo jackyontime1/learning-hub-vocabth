@@ -3,25 +3,25 @@
 Updated: July 2, 2026
 
 
-## Oxford MP3 Autopilot / Status Correction - July 3, 2026
+## Oxford MP3 Batch Status Correction - July 3, 2026
 
-- Latest verified completed TTS batch is Actions & Thinking day 5 plus Starter Everyday day 12.
+- Latest verified completed TTS batch is Home & Food day 1 plus Starter Everyday day 13.
 - Evidence checked in this status correction:
-  - Commit `435e4db45435d70b6dbf7f476edca6fffa573770` exists on main with message `Add Actions day 5 and Starter day 12 Oxford MP3 audio`.
-  - GitHub Actions run `28615232272` completed successfully.
-  - Source manifest contains `actions-and-thinking__day-005` and `starter-everyday__day-012` with status `generated`.
-  - Production manifest at `https://learning-hub-vocabth.pages.dev/podcast/audio/manifest.json` contains both lessons with exact approved new words.
-- Generated approved Actions & Thinking day 5 new words: `work out`, `look`, `use`, `make into`, `take up`, `come`, `look on`, `think over`, `come in`, `come to`.
-- Generated approved Starter Everyday day 12 new words: `long`, `something`, `same`, `both`, `every`, `used to`, `part`, `state`, `three`, `around`.
-- Generated MP3 files for that batch: 60 total, including 20 missing review MP3s, 20 with-spelling MP3s, and 20 no-spelling MP3s.
-- Actual TTS usage for that batch: `14,261` characters.
-- July usage after that batch: `63,694 / 900,000`; remaining safety allowance: `836,306` characters.
-- Production verification passed for the batch: both approved lessons present, approved words exact, production MP3 refs checked as `752/752` unique URLs and `1,940` raw refs, and MP3 selection before Web Speech was verified in the previous production check.
+  - Commit `91af89343c1f190bd9ecd218a197a28e67d3dccd` exists on main with message `Add Home day 1 and Starter day 13 Oxford MP3 audio`.
+  - GitHub Actions run `28622616208` completed successfully.
+  - Source manifest contains `home-and-food__day-001` and `starter-everyday__day-013` with status `generated`.
+  - Production manifest at `https://learning-hub-vocabth.pages.dev/podcast/audio/manifest.json` contains both approved lessons with exact approved new words.
+- Generated approved Home & Food day 1 new words: `home`, `house`, `water`, `black`, `food`, `room`, `light`, `buy`, `living`, `above`.
+- Generated approved Starter Everyday day 13 new words: `between`, `always`, `high`, `little`, `old`, `since`, `another`, `own`, `under`, `during`.
+- Generated Starter Everyday review MP3s for: `long`, `something`, `same`, `both`, `every`, `used to`, `part`, `state`, `three`, `around`.
+- Generated MP3 files for that batch: 50 total, including 10 missing review MP3s, 20 with-spelling MP3s, and 20 no-spelling MP3s.
+- Actual TTS usage for that batch: `13,613` characters.
+- July usage after that batch: `77,307 / 900,000`; remaining safety allowance: `822,693` characters.
+- Production verification passed for the batch: both approved lessons present, approved words exact, new MP3 URLs checked as `50/50`, production MP3 refs checked as `802/802` unique URLs, and MP3 selection before Web Speech was verified in the podcast app.
 - Oxford MP3 Autopilot v1 safety hardening completed in commit `ced9bbb9619806baa419dd3709011652bd419ce7`.
-- Autopilot v1 GitHub Actions run `28616448407` passed. Rolling cache follow-up advanced `origin/main` to bot commit `5bb54e16cb257c42b07c6cc8d13fa879d8a4300f`.
 - Autopilot v1 hardening ran no TTS and generated no MP3 files.
 - Recurring automation remains `PAUSED`.
-- Next batch is not approved. Autopilot v1 dry-run selected `home-and-food__day-001` plus `starter-everyday__day-013`, but that was no-TTS dry-run evidence only and must not be treated as completed or approved.
+- Next batch is not approved and was not audited in this status correction. Prior runner output suggested Actions & Thinking day 6 / `get off` could be next, but no next-batch audit or TTS approval has been performed.
 ## Workspace
 - Working directory: `D:\podcast voice`
 - Production source: `D:\podcast voice\deploy-rollback-original`
