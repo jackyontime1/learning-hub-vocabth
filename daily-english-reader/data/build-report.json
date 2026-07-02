@@ -1,6 +1,6 @@
 {
   "status": "ready",
-  "started_at": "2026-07-02T19:12:53.824783+00:00",
+  "started_at": "2026-07-02T19:34:55.777475+00:00",
   "expected_toronto_date": "2026-07-02",
   "free_only": true,
   "demo_mode": false,
@@ -25,7 +25,7 @@
     "quality_failures": 0,
     "rejection_reasons": {}
   },
-  "completed_at": "2026-07-02T19:16:50.423169+00:00",
+  "completed_at": "2026-07-02T19:35:05.040604+00:00",
   "latest_date": "2026-07-02",
   "total_story_count": 70,
   "today_story_count": 10,

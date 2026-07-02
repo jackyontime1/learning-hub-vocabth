@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-02T19:12:55.032803+00:00",
+  "fetched_at": "2026-07-02T19:34:56.809140+00:00",
   "candidates": [
     {
       "id": "b1bd47ad91abed40c9",
@@ -996,11 +996,11 @@
       "provider_key": "rss_npr-health"
     },
     {
-      "id": "d957eb45e32908eee7",
+      "id": "9aa092b8f1eb64805f",
       "provider": "NPR",
-      "title": "Federal civil rights data holds schools accountable. Under Trump, it's 6 months late",
-      "description": "The Education Department has long collected civil rights data about things like bullying, harassment and disability services in schools, but it hasn't made the latest information public.",
-      "url": "https://www.npr.org/2026/07/02/nx-s1-5859422/civil-rights-data-students-education",
+      "title": "The U.S. healthcare system is in crisis. A Supreme Court ruling could make things worse",
+      "description": "Mass deportations would be felt across hospitals and emergency rooms, which already face persistent staffing shortfalls. The long-term healthcare sector will suffer the greatest disruptions, experts say.",
+      "url": "https://www.npr.org/2026/07/02/nx-s1-5878415/haitian-tps-healthcare-immigration-supreme-court",
       "category": "Health",
       "published": "2026-07-02T09:00:00+00:00",
       "author": "NPR",
@@ -1010,11 +1010,11 @@
       "provider_key": "rss_npr-health"
     },
     {
-      "id": "9aa092b8f1eb64805f",
+      "id": "d957eb45e32908eee7",
       "provider": "NPR",
-      "title": "The U.S. healthcare system is in crisis. A Supreme Court ruling could make things worse",
-      "description": "Mass deportations would be felt across hospitals and emergency rooms, which already face persistent staffing shortfalls. The long-term healthcare sector will suffer the greatest disruptions, experts say.",
-      "url": "https://www.npr.org/2026/07/02/nx-s1-5878415/haitian-tps-healthcare-immigration-supreme-court",
+      "title": "Federal civil rights data holds schools accountable. Under Trump, it's 6 months late",
+      "description": "The Education Department has long collected civil rights data about things like bullying, harassment and disability services in schools, but it hasn't made the latest information public.",
+      "url": "https://www.npr.org/2026/07/02/nx-s1-5859422/civil-rights-data-students-education",
       "category": "Health",
       "published": "2026-07-02T09:00:00+00:00",
       "author": "NPR",
