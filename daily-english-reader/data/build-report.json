@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-07-02T21:28:22.022538+00:00",
-  "expected_toronto_date": "2026-07-02",
+  "started_at": "2026-07-03T20:37:32.833618+00:00",
+  "expected_toronto_date": "2026-07-03",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -18,26 +18,30 @@
   "schema_version": 10,
   "candidate_rejections": [
     {
-      "article_id": "ae9f3f3636b3f48cbe",
-      "title": "Gaza patients face agonising delays for medical evacuation",
-      "provider": "BBC News",
-      "level": "C1",
-      "reason": "RuntimeError: Full Thai translation unavailable for article ae9f3f3636b3f48cbe"
+      "article_id": "9f14b8a45a867dc5c9",
+      "title": "Severe Thunderstorm Warning issued July 3 at 4:34PM EDT until July 3 at 6:00PM EDT by NWS Grand Rapids MI",
+      "provider": "US National Weather Service",
+      "level": "B1",
+      "reason": "RuntimeError: Full Thai translation unavailable for article 9f14b8a45a867dc5c9"
     }
   ],
   "practice_story_count": 4,
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
-    "nllb_retries": 2,
+    "nllb_retries": 3,
     "quality_failures": 1,
     "rejection_reasons": {
-      "repeated-junk-string": 1,
-      "missing-number:300": 2
+      "repeated-word-run": 1,
+      "repeated-2-gram": 1,
+      "repeated-3-gram": 1,
+      "missing-number:15": 1,
+      "missing-number:4:34,6": 1,
+      "repeated-junk-string": 2
     }
   },
-  "completed_at": "2026-07-02T21:38:43.835977+00:00",
-  "latest_date": "2026-07-02",
+  "completed_at": "2026-07-03T20:56:53.710824+00:00",
+  "latest_date": "2026-07-03",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -53,26 +57,26 @@
     "easy_news": 2,
     "daily_life_practice_story": 4
   },
-  "fallback_image_count": 6,
+  "fallback_image_count": 7,
   "fallback_images": [
     {
-      "article_id": "51656b4a4c75d07b2b",
-      "title": "Trump denies conflict of interest over crypto. And, Vatican excommunicates rebel group",
+      "article_id": "824541f58b419bb050",
+      "title": "Nearly 600 wildfire evacuees from Kasabonika Lake First Nation staying in Toronto",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "604c586725d1165a51",
-      "title": "Russia hits Ukraine's capital with a massive drone and missile attack, killing at least 18",
+      "article_id": "ae9f3f3636b3f48cbe",
+      "title": "Gaza patients face agonising delays for medical evacuation",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "19b4c6369974b1949c",
-      "title": "Ebola treatments trial begins in the Democratic Republic of Congo",
-      "reason": "No usable free image candidate"
+      "article_id": "67c53435c3786734a4",
+      "title": "Oregon ER doctors win a 'David and Goliath' battle against a national company",
+      "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "13d3c9feaff82e7205",
-      "title": "Cheers and applause as security guard rescued from rubble",
+      "article_id": "e537604eafb0dbf661",
+      "title": "Instagram running ads promoting child sexual abuse material in India, BBC finds",
       "reason": "No usable free image candidate"
     },
     {
@@ -84,6 +88,11 @@
       "article_id": "f18717350849c8fc43",
       "title": "A hot summer trend in the sharing economy? Rental swimming pools",
       "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "f137c07c26552a5a6d",
+      "title": "Making a Clinic Appointment",
+      "reason": "Selected image was unavailable: ValueError"
     }
   ]
 }
