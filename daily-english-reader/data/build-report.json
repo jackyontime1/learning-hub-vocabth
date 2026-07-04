@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-07-03T20:37:32.833618+00:00",
-  "expected_toronto_date": "2026-07-03",
+  "started_at": "2026-07-04T20:17:33.834244+00:00",
+  "expected_toronto_date": "2026-07-04",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -18,30 +18,33 @@
   "schema_version": 10,
   "candidate_rejections": [
     {
-      "article_id": "9f14b8a45a867dc5c9",
-      "title": "Severe Thunderstorm Warning issued July 3 at 4:34PM EDT until July 3 at 6:00PM EDT by NWS Grand Rapids MI",
-      "provider": "US National Weather Service",
-      "level": "B1",
-      "reason": "RuntimeError: Full Thai translation unavailable for article 9f14b8a45a867dc5c9"
+      "article_id": "517a40c221d44c70dc",
+      "title": "Trump promises 'really long' Fourth of July speech despite heat warning",
+      "provider": "CBC News",
+      "level": "B2",
+      "reason": "RuntimeError: Unable to produce 3 valid useful phrases for B2 reading"
+    },
+    {
+      "article_id": "ebdf67d367ea5919b6",
+      "title": "Green light for Greenlight: Pembina, partners go ahead with gas plant for data centre",
+      "provider": "CBC News",
+      "level": "C1",
+      "reason": "RuntimeError: Full Thai translation unavailable for article ebdf67d367ea5919b6"
     }
   ],
   "practice_story_count": 4,
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
-    "nllb_retries": 3,
+    "nllb_retries": 1,
     "quality_failures": 1,
     "rejection_reasons": {
-      "repeated-word-run": 1,
-      "repeated-2-gram": 1,
-      "repeated-3-gram": 1,
-      "missing-number:15": 1,
-      "missing-number:4:34,6": 1,
-      "repeated-junk-string": 2
+      "repeated-junk-string": 1,
+      "missing-number:2030": 1
     }
   },
-  "completed_at": "2026-07-03T20:56:53.710824+00:00",
-  "latest_date": "2026-07-03",
+  "completed_at": "2026-07-04T20:31:22.889447+00:00",
+  "latest_date": "2026-07-04",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -60,28 +63,28 @@
   "fallback_image_count": 7,
   "fallback_images": [
     {
-      "article_id": "824541f58b419bb050",
-      "title": "Nearly 600 wildfire evacuees from Kasabonika Lake First Nation staying in Toronto",
+      "article_id": "ef818d632d0bfebd88",
+      "title": "Special Weather Statement issued July 4 at 4:16PM EDT by NWS Detroit/Pontiac MI",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "ae9f3f3636b3f48cbe",
-      "title": "Gaza patients face agonising delays for medical evacuation",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "67c53435c3786734a4",
-      "title": "Oregon ER doctors win a 'David and Goliath' battle against a national company",
+      "article_id": "8e081a33b7734781d9",
+      "title": "China's military promotes 2 new generals after anti-corruption purge thins ranks",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "e537604eafb0dbf661",
-      "title": "Instagram running ads promoting child sexual abuse material in India, BBC finds",
+      "article_id": "1e2f0ef4ff982a473b",
+      "title": "B.C. nurses to form picket lines at Vancouver General Hospital next week",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "c34578d247b7c5d3be",
+      "title": "Ukrainian suspect hunted by police after Monaco bomb attack was 'disguised as a man'",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "b7c2736d49d3ee04b8",
-      "title": "Canadian boy, 11, dies of rabies after waking to bat on his face",
+      "article_id": "4913db08f72800e98f",
+      "title": "Severe Thunderstorm Warning issued July 4 at 4:14PM EDT until July 4 at 4:30PM EDT by NWS Pittsburgh PA",
       "reason": "No usable free image candidate"
     },
     {
@@ -90,8 +93,8 @@
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "f137c07c26552a5a6d",
-      "title": "Making a Clinic Appointment",
+      "article_id": "d811dd8083d051abe7",
+      "title": "Returning the Wrong Shirt",
       "reason": "Selected image was unavailable: ValueError"
     }
   ]
