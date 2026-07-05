@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-07-05T02:52:02.627837+00:00",
-  "expected_toronto_date": "2026-07-04",
+  "started_at": "2026-07-05T20:34:58.897776+00:00",
+  "expected_toronto_date": "2026-07-05",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -18,44 +18,44 @@
   "schema_version": 10,
   "candidate_rejections": [
     {
-      "article_id": "1e2f0ef4ff982a473b",
-      "title": "B.C. nurses to form picket lines at Vancouver General Hospital next week",
-      "provider": "CBC News",
+      "article_id": "9534fa70a30a83f5af",
+      "title": "Severe Thunderstorm Warning issued July 5 at 3:32PM CDT until July 5 at 4:15PM CDT by NWS Lubbock TX",
+      "provider": "US National Weather Service",
       "level": "B1",
-      "reason": "RuntimeError: Full Thai translation unavailable for article 1e2f0ef4ff982a473b"
+      "reason": "RuntimeError: Unable to produce 3 valid useful phrases for B1 reading"
     },
     {
-      "article_id": "01a729eb0567684642",
-      "title": "In pictures: Stars and fans celebrate Taylor Swift and Travis Kelce's wedding",
-      "provider": "BBC News",
-      "level": "B2",
-      "reason": "RuntimeError: Full Thai translation unavailable for article 01a729eb0567684642"
-    },
-    {
-      "article_id": "7f3ac31dfbc3022378",
-      "title": "Pancakes, pipelines and independence: politics serving up new flavour at this year’s Calgary Stampede",
+      "article_id": "4df81d36b69e4d8fbd",
+      "title": "The test of time: Canada’s only watchmaking school still ticking after 80 years",
       "provider": "CBC News",
-      "level": "C1",
-      "reason": "RuntimeError: Full Thai translation unavailable for article 7f3ac31dfbc3022378"
+      "level": "B2",
+      "reason": "RuntimeError: Unable to produce 3 valid useful phrases for B2 reading"
+    },
+    {
+      "article_id": "19aa800ae412a8c513",
+      "title": "Special Marine Warning issued July 5 at 3:33PM CDT until July 5 at 4:45PM CDT by NWS New Orleans LA",
+      "provider": "US National Weather Service",
+      "level": "B2",
+      "reason": "RuntimeError: Full Thai translation unavailable for article 19aa800ae412a8c513"
     }
   ],
   "practice_story_count": 4,
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
-    "nllb_retries": 4,
-    "quality_failures": 3,
+    "nllb_retries": 3,
+    "quality_failures": 1,
     "rejection_reasons": {
-      "missing-number:30,5": 2,
-      "repeated-word-run": 1,
+      "repeated-junk-string": 1,
+      "missing-unit:\\bknots?\\b": 1,
+      "collapsed-paragraphs": 2,
       "repeated-2-gram": 1,
       "repeated-3-gram": 1,
-      "missing-unit:\\bknots?\\b": 2,
-      "missing-unit:\\bdollars?\\b|[$]": 2
+      "missing-number:15": 1
     }
   },
-  "completed_at": "2026-07-05T03:08:05.635800+00:00",
-  "latest_date": "2026-07-04",
+  "completed_at": "2026-07-05T20:51:19.965437+00:00",
+  "latest_date": "2026-07-05",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -71,26 +71,31 @@
     "easy_news": 2,
     "daily_life_practice_story": 4
   },
-  "fallback_image_count": 7,
+  "fallback_image_count": 8,
   "fallback_images": [
     {
-      "article_id": "d0a42bb799014a1de5",
-      "title": "Special Weather Statement issued July 4 at 10:44PM EDT by NWS Charleston WV",
+      "article_id": "4e69ae63f719c764b7",
+      "title": "Trump thanks Fifa for spending USA striker's ban",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "95f86e508bebcce077",
-      "title": "Eala wins 'for all the girls with ruffled socks and chubby cheeks'",
+      "article_id": "26f6488d0d41b1041c",
+      "title": "Ontario transit agency issued parking ticket for a car stolen from a train station. Its owner is still fighting it",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "3ec7bce3f2648de3df",
+      "title": "Special Weather Statement issued July 5 at 3:34PM CDT by NWS Jackson MS",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "84e3115b67731acee9",
-      "title": "Special Weather Statement issued July 4 at 9:47PM CDT by NWS Jackson MS",
+      "article_id": "d8256028f851c4db87",
+      "title": "2 people pulled from Montreal's Lachine canal overnight in critical condition",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "54a844bc414958e242",
-      "title": "Row after Indian state drops eggs from school lunch menu",
+      "article_id": "94a17aea95d1a142d1",
+      "title": "Severe Thunderstorm Warning issued July 5 at 4:33PM EDT until July 5 at 5:00PM EDT by NWS Wakefield VA",
       "reason": "No usable free image candidate"
     },
     {
@@ -99,13 +104,13 @@
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "0dbbaf495dd88c64c6",
-      "title": "Special Weather Statement issued July 4 at 8:48PM MDT by NWS Albuquerque NM",
-      "reason": "No usable free image candidate"
+      "article_id": "c61a5a32012f8b8c4a",
+      "title": "Checking a Bank Transfer",
+      "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "d811dd8083d051abe7",
-      "title": "Returning the Wrong Shirt",
+      "article_id": "b47f22c19ba8c08f51",
+      "title": "The Bus Card",
       "reason": "Selected image was unavailable: ValueError"
     }
   ]
