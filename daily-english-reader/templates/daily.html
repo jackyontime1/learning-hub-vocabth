@@ -2,7 +2,7 @@
 {% block content %}
   <section class="library-page">
     <header class="page-heading">
-      <div><p class="eyebrow">Last 7 days</p><h1>Daily Reading</h1><p>Browse recent stories by level and category.</p></div>
+      <div><p class="home-section-label">Last 7 days</p><h1>Daily Reading</h1><p>Browse recent stories by level and category.</p></div>
       <div class="page-filters">
         <select id="levelFilter" aria-label="Filter by level"><option value="all">All levels</option>{% for level in available_levels %}<option>{{ level }}</option>{% endfor %}</select>
         <select id="dailyCategoryFilter" aria-label="Filter by category"><option value="all">All categories</option>{% for category in ["World", "Technology", "Health", "Business", "Science", "Environment"] %}<option>{{ category }}</option>{% endfor %}</select>
@@ -17,10 +17,16 @@
               <article class="story-card" data-level="{{ article.level }}" data-category="{{ article.category | lower }}">
                 <a class="story-image" href="{{ article.page_url }}"><img src="{{ article.image_url }}" alt="{{ article.image_alt }}" loading="lazy"></a>
                 <div class="story-content">
-                  <div class="story-meta"><span>{{ article.category }}</span><b class="level-chip {{ article.level | lower }}">{{ article.level }}</b></div>
+                  <div class="story-meta story-meta-row"><span>{{ article.category }}</span><b class="level-chip {{ article.level | lower }}">{{ article.level }}</b></div>
+                  <p class="story-type-pill">{% if article.contentType == "fictional_practice_story" %}Practice story{% elif article.readingType == "easy_news" %}Easy news{% elif article.readingType == "advanced_real_news" %}Advanced real news{% else %}Real news{% endif %}</p>
                   <h3><a href="{{ article.page_url }}">{{ article.title }}</a></h3>
-                  {% if article.contentType == "fictional_practice_story" %}<p><strong>Fictional learning story - not real news</strong><br>{{ article.disclaimerTh }}</p>{% endif %}
-                  <p>{{ article.text[:160] }}...</p>
+                  {% if article.contentType == "fictional_practice_story" %}<p class="practice-card-note"><strong>Fictional learning story - not real news</strong><span lang="th">{{ article.disclaimerTh }}</span></p>{% endif %}
+                  <p class="story-summary">{{ article.description }}</p>
+                  <div class="learning-cues" aria-label="Learning support included">
+                    <span><i class="fa-solid fa-language"></i> Thai</span>
+                    <span><i class="fa-regular fa-comments"></i> Phrases</span>
+                    <span><i class="fa-solid fa-volume-low"></i> Audio</span>
+                  </div>
                   <div class="card-actions">
                     <button class="star-button" data-save-article data-id="{{ article.id }}" data-title="{{ article.title }}" data-url="{{ article.page_url }}" data-level="{{ article.level }}" data-category="{{ article.category }}" data-date="{{ article.published_date }}" data-image="{{ article.image_url }}" type="button"><i class="fa-regular fa-bookmark"></i> <span>Save</span></button>
                     <a href="{{ article.page_url }}">Read</a>

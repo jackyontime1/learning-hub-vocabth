@@ -28,7 +28,7 @@
 
       <section class="side-panel">
         <h2>Levels</h2>
-        <p>Choose a news level</p>
+        <p>Choose a reading level</p>
         <div class="level-filter-list" id="homeLevelFilters">
           <button class="active" data-home-level="all" type="button"><b>All</b><span>Every level</span></button>
           {% for level, label in [("A1", "Starter"), ("A2", "Beginner"), ("B1", "Intermediate"), ("B2", "Upper Intermediate"), ("C1", "Advanced")] %}
@@ -48,49 +48,77 @@
 
     <div class="dashboard" id="homeDashboard">
       <section class="mobile-home-filters" aria-label="Home filters">
-        <label><span>Date</span><select id="mobileHomeDate">{% for day in home_days %}<option value="{{ day.date }}">{{ day.label }} · {{ day.date_display }}</option>{% endfor %}</select></label>
+        <label><span>Date</span><select id="mobileHomeDate">{% for day in home_days %}<option value="{{ day.date }}">{{ day.label }} - {{ day.date_display }}</option>{% endfor %}</select></label>
         <label><span>Level</span><select id="mobileHomeLevel"><option value="all">All levels</option>{% for level in available_levels %}<option value="{{ level }}">{{ level }}</option>{% endfor %}</select></label>
         <label><span>Category</span><select id="mobileHomeCategory"><option value="all">All categories</option>{% for category in ["World", "Technology", "Health", "Business", "Science", "Environment"] %}<option value="{{ category | lower }}">{{ category }}</option>{% endfor %}</select></label>
       </section>
       {% for day in home_days %}
         <div class="home-day-panel{% if loop.first %} active{% endif %}" data-home-day="{{ day.date }}">
+          <section class="home-overview" aria-labelledby="home-title-{{ loop.index }}">
+            <div>
+              <p class="home-section-label">{{ day.label }} - {{ day.date_display }}</p>
+              <h1 id="home-title-{{ loop.index }}">Choose your English reading</h1>
+              <p>Ten short lessons are grouped by CEFR level, with Thai support, useful phrases, and vocabulary help inside each story.</p>
+            </div>
+            <dl class="home-stats" aria-label="Daily reading summary">
+              <div><dt>Stories</dt><dd>{{ day.articles | length }}</dd></div>
+              <div><dt>Levels</dt><dd>{{ available_levels | length }}</dd></div>
+              <div><dt>Format</dt><dd>EN + TH</dd></div>
+            </dl>
+          </section>
+
           {% set featured = day.featured %}
           {% if featured %}
-            <section class="featured-story" data-article-id="{{ featured.id }}" data-category="{{ featured.category | lower }}" data-level="{{ featured.level }}">
-              {% if featured.image_url %}<img src="{{ featured.image_url }}" alt="{{ featured.image_alt }}" fetchpriority="high">{% endif %}
-              <div class="hero-shade"></div>
-              <div class="featured-label">{% if featured.contentType == "fictional_practice_story" %}PRACTICE STORY - NOT REAL NEWS{% else %}TOP STORY{% endif %} · {{ featured.level }}</div>
+            <section class="featured-story" data-article-id="{{ featured.id }}" data-category="{{ featured.category | lower }}" data-level="{{ featured.level }}" aria-label="Featured reading">
+              {% if featured.image_url %}
+                <a class="featured-media" href="{{ featured.page_url }}"><img src="{{ featured.image_url }}" alt="{{ featured.image_alt }}" fetchpriority="high"></a>
+              {% endif %}
               <div class="featured-copy">
-                <div class="story-kicker"><span>{{ featured.category }}</span> {{ featured.published_display }}</div>
-                <h1>{{ featured.title }}</h1>
-                <p>{{ featured.description }}</p>
-                {% if featured.contentType == "fictional_practice_story" %}<p><strong>Fictional learning story - not real news</strong><br>{{ featured.disclaimerTh }}</p>{% endif %}
+                <div class="story-meta story-meta-row"><span>{{ featured.category }}</span><b class="level-chip {{ featured.level | lower }}">{{ featured.level }}</b></div>
+                <p class="story-type-pill">{% if featured.contentType == "fictional_practice_story" %}Practice story{% elif featured.readingType == "easy_news" %}Easy news{% elif featured.readingType == "advanced_real_news" %}Advanced real news{% else %}Real news{% endif %}</p>
+                <h2><a href="{{ featured.page_url }}">{{ featured.title }}</a></h2>
+                <p class="story-summary">{{ featured.description }}</p>
+                {% if featured.contentType == "fictional_practice_story" %}<p class="practice-card-note"><strong>Fictional learning story - not real news</strong><span lang="th">{{ featured.disclaimerTh }}</span></p>{% endif %}
+                <div class="learning-cues" aria-label="Learning support included">
+                  <span><i class="fa-solid fa-language"></i> Thai translation</span>
+                  <span><i class="fa-regular fa-comments"></i> Useful phrases</span>
+                  <span><i class="fa-solid fa-volume-low"></i> Audio</span>
+                </div>
               </div>
               <div class="featured-actions">
-                <div class="story-stats">
-                  <span><i class="fa-regular fa-clock"></i> 5 min read</span>
-                  <span><i class="fa-solid fa-signal"></i> {{ featured.level }}</span>
-                </div>
-                <div>
-                  <button class="star-button" data-save-article data-id="{{ featured.id }}" data-title="{{ featured.title }}" data-url="{{ featured.page_url }}" data-level="{{ featured.level }}" data-category="{{ featured.category }}" data-date="{{ featured.published_date }}" data-image="{{ featured.image_url }}" type="button"><i class="fa-regular fa-bookmark"></i> <span>Save</span></button>
-                  <a class="primary-button" href="{{ featured.page_url }}"><i class="fa-solid fa-book-open-reader"></i> Start Reading <i class="fa-solid fa-chevron-right"></i></a>
-                </div>
+                <button class="star-button" data-save-article data-id="{{ featured.id }}" data-title="{{ featured.title }}" data-url="{{ featured.page_url }}" data-level="{{ featured.level }}" data-category="{{ featured.category }}" data-date="{{ featured.published_date }}" data-image="{{ featured.image_url }}" type="button"><i class="fa-regular fa-bookmark"></i> <span>Save</span></button>
+                <a class="primary-button" href="{{ featured.page_url }}"><i class="fa-solid fa-book-open-reader"></i> Start reading</a>
               </div>
             </section>
           {% endif %}
 
           {% for level in available_levels %}
-            <section class="level-section home-level-section" data-section-level="{{ level }}">
-              <header><h2>{{ level }} Daily Stories</h2><p>{% if level == "A1" %}Simple daily-life practice stories for first-step reading.{% elif level == "A2" %}Longer daily-life practice for common situations.{% elif level == "B1" %}Real news rewritten as easy news.{% elif level == "B2" %}Real news close to standard article style.{% else %}Advanced real news with fuller context.{% endif %}</p></header>
+            <section class="level-section home-level-section" data-section-level="{{ level }}" aria-labelledby="level-heading-{{ day.date }}-{{ level }}">
+              <header>
+                <div class="level-heading-row">
+                  <span class="level-chip {{ level | lower }}">{{ level }}</span>
+                  <div>
+                    <h2 id="level-heading-{{ day.date }}-{{ level }}">{{ level }} readings</h2>
+                    <p>{% if level == "A1" %}Simple daily-life practice stories for first-step reading.{% elif level == "A2" %}Longer daily-life practice for common situations.{% elif level == "B1" %}Real news rewritten as easy news.{% elif level == "B2" %}Real news close to standard article style.{% else %}Advanced real news with fuller context.{% endif %}</p>
+                  </div>
+                </div>
+                <span class="level-count">{{ day.level_groups[level] | length }} stories</span>
+              </header>
               <div class="story-grid level-story-grid">
                 {% for article in day.level_groups[level] %}
                   <article class="story-card" data-article-id="{{ article.id }}" data-category="{{ article.category | lower }}" data-level="{{ article.level }}">
                     <a class="story-image" href="{{ article.page_url }}"><img src="{{ article.image_url }}" alt="{{ article.image_alt }}" loading="lazy"></a>
                     <div class="story-content">
-                      <div class="story-meta"><span>{{ article.category }}</span><b class="level-chip {{ level | lower }}">{{ level }}</b></div>
+                      <div class="story-meta story-meta-row"><span>{{ article.category }}</span><b class="level-chip {{ level | lower }}">{{ level }}</b></div>
+                      <p class="story-type-pill">{% if article.contentType == "fictional_practice_story" %}Practice story{% elif article.readingType == "easy_news" %}Easy news{% elif article.readingType == "advanced_real_news" %}Advanced real news{% else %}Real news{% endif %}</p>
                       <h3><a href="{{ article.page_url }}">{{ article.title }}</a></h3>
-                      {% if article.contentType == "fictional_practice_story" %}<p><strong>Fictional learning story - not real news</strong><br>{{ article.disclaimerTh }}</p>{% endif %}
-                      <p>{{ article.text[:180] }}{% if article.text|length > 180 %}...{% endif %}</p>
+                      {% if article.contentType == "fictional_practice_story" %}<p class="practice-card-note"><strong>Fictional learning story - not real news</strong><span lang="th">{{ article.disclaimerTh }}</span></p>{% endif %}
+                      <p class="story-summary">{{ article.description }}</p>
+                      <div class="learning-cues" aria-label="Learning support included">
+                        <span><i class="fa-solid fa-language"></i> Thai</span>
+                        <span><i class="fa-regular fa-comments"></i> Phrases</span>
+                        <span><i class="fa-solid fa-volume-low"></i> Audio</span>
+                      </div>
                       <div class="card-actions">
                         <button class="star-button" data-save-article data-id="{{ article.id }}" data-title="{{ article.title }}" data-url="{{ article.page_url }}" data-level="{{ article.level }}" data-category="{{ article.category }}" data-date="{{ article.published_date }}" data-image="{{ article.image_url }}" type="button"><i class="fa-regular fa-bookmark"></i> <span>Save</span></button>
                         <a href="{{ article.page_url }}">Read story</a>
