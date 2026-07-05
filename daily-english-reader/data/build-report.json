@@ -1,6 +1,6 @@
 {
   "status": "ready",
-  "started_at": "2026-07-04T20:17:33.834244+00:00",
+  "started_at": "2026-07-05T02:52:02.627837+00:00",
   "expected_toronto_date": "2026-07-04",
   "free_only": true,
   "demo_mode": false,
@@ -18,32 +18,43 @@
   "schema_version": 10,
   "candidate_rejections": [
     {
-      "article_id": "517a40c221d44c70dc",
-      "title": "Trump promises 'really long' Fourth of July speech despite heat warning",
+      "article_id": "1e2f0ef4ff982a473b",
+      "title": "B.C. nurses to form picket lines at Vancouver General Hospital next week",
       "provider": "CBC News",
-      "level": "B2",
-      "reason": "RuntimeError: Unable to produce 3 valid useful phrases for B2 reading"
+      "level": "B1",
+      "reason": "RuntimeError: Full Thai translation unavailable for article 1e2f0ef4ff982a473b"
     },
     {
-      "article_id": "ebdf67d367ea5919b6",
-      "title": "Green light for Greenlight: Pembina, partners go ahead with gas plant for data centre",
+      "article_id": "01a729eb0567684642",
+      "title": "In pictures: Stars and fans celebrate Taylor Swift and Travis Kelce's wedding",
+      "provider": "BBC News",
+      "level": "B2",
+      "reason": "RuntimeError: Full Thai translation unavailable for article 01a729eb0567684642"
+    },
+    {
+      "article_id": "7f3ac31dfbc3022378",
+      "title": "Pancakes, pipelines and independence: politics serving up new flavour at this year’s Calgary Stampede",
       "provider": "CBC News",
       "level": "C1",
-      "reason": "RuntimeError: Full Thai translation unavailable for article ebdf67d367ea5919b6"
+      "reason": "RuntimeError: Full Thai translation unavailable for article 7f3ac31dfbc3022378"
     }
   ],
   "practice_story_count": 4,
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
-    "nllb_retries": 1,
-    "quality_failures": 1,
+    "nllb_retries": 4,
+    "quality_failures": 3,
     "rejection_reasons": {
-      "repeated-junk-string": 1,
-      "missing-number:2030": 1
+      "missing-number:30,5": 2,
+      "repeated-word-run": 1,
+      "repeated-2-gram": 1,
+      "repeated-3-gram": 1,
+      "missing-unit:\\bknots?\\b": 2,
+      "missing-unit:\\bdollars?\\b|[$]": 2
     }
   },
-  "completed_at": "2026-07-04T20:31:22.889447+00:00",
+  "completed_at": "2026-07-05T03:08:05.635800+00:00",
   "latest_date": "2026-07-04",
   "total_story_count": 70,
   "today_story_count": 10,
@@ -63,33 +74,33 @@
   "fallback_image_count": 7,
   "fallback_images": [
     {
-      "article_id": "ef818d632d0bfebd88",
-      "title": "Special Weather Statement issued July 4 at 4:16PM EDT by NWS Detroit/Pontiac MI",
+      "article_id": "d0a42bb799014a1de5",
+      "title": "Special Weather Statement issued July 4 at 10:44PM EDT by NWS Charleston WV",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "8e081a33b7734781d9",
-      "title": "China's military promotes 2 new generals after anti-corruption purge thins ranks",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "1e2f0ef4ff982a473b",
-      "title": "B.C. nurses to form picket lines at Vancouver General Hospital next week",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "c34578d247b7c5d3be",
-      "title": "Ukrainian suspect hunted by police after Monaco bomb attack was 'disguised as a man'",
+      "article_id": "95f86e508bebcce077",
+      "title": "Eala wins 'for all the girls with ruffled socks and chubby cheeks'",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "4913db08f72800e98f",
-      "title": "Severe Thunderstorm Warning issued July 4 at 4:14PM EDT until July 4 at 4:30PM EDT by NWS Pittsburgh PA",
+      "article_id": "84e3115b67731acee9",
+      "title": "Special Weather Statement issued July 4 at 9:47PM CDT by NWS Jackson MS",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "f18717350849c8fc43",
-      "title": "A hot summer trend in the sharing economy? Rental swimming pools",
+      "article_id": "54a844bc414958e242",
+      "title": "Row after Indian state drops eggs from school lunch menu",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "64bcef0d2632a0f4c1",
+      "title": "Move over Chutes & Ladders: Schisto & Ladders has educational value plus worms",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "0dbbaf495dd88c64c6",
+      "title": "Special Weather Statement issued July 4 at 8:48PM MDT by NWS Albuquerque NM",
       "reason": "No usable free image candidate"
     },
     {
