@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-07-05T20:34:58.897776+00:00",
-  "expected_toronto_date": "2026-07-05",
+  "started_at": "2026-07-06T21:52:52.770452+00:00",
+  "expected_toronto_date": "2026-07-06",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -18,44 +18,33 @@
   "schema_version": 10,
   "candidate_rejections": [
     {
-      "article_id": "9534fa70a30a83f5af",
-      "title": "Severe Thunderstorm Warning issued July 5 at 3:32PM CDT until July 5 at 4:15PM CDT by NWS Lubbock TX",
+      "article_id": "7c45e7d0134330662b",
+      "title": "Severe Thunderstorm Warning issued July 6 at 4:49PM CDT until July 6 at 5:15PM CDT by NWS Little Rock AR",
       "provider": "US National Weather Service",
       "level": "B1",
-      "reason": "RuntimeError: Unable to produce 3 valid useful phrases for B1 reading"
+      "reason": "RuntimeError: Full Thai translation unavailable for article 7c45e7d0134330662b"
     },
     {
-      "article_id": "4df81d36b69e4d8fbd",
-      "title": "The test of time: Canada’s only watchmaking school still ticking after 80 years",
-      "provider": "CBC News",
+      "article_id": "4bc61b15d86bb7797d",
+      "title": "Will this heatwave feel as hot and sticky as the last one?",
+      "provider": "BBC News",
       "level": "B2",
       "reason": "RuntimeError: Unable to produce 3 valid useful phrases for B2 reading"
-    },
-    {
-      "article_id": "19aa800ae412a8c513",
-      "title": "Special Marine Warning issued July 5 at 3:33PM CDT until July 5 at 4:45PM CDT by NWS New Orleans LA",
-      "provider": "US National Weather Service",
-      "level": "B2",
-      "reason": "RuntimeError: Full Thai translation unavailable for article 19aa800ae412a8c513"
     }
   ],
   "practice_story_count": 4,
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
-    "nllb_retries": 3,
+    "nllb_retries": 1,
     "quality_failures": 1,
     "rejection_reasons": {
-      "repeated-junk-string": 1,
-      "missing-unit:\\bknots?\\b": 1,
-      "collapsed-paragraphs": 2,
-      "repeated-2-gram": 1,
-      "repeated-3-gram": 1,
-      "missing-number:15": 1
+      "missing-number:13,4:49,5": 1,
+      "missing-number:4:49": 1
     }
   },
-  "completed_at": "2026-07-05T20:51:19.965437+00:00",
-  "latest_date": "2026-07-05",
+  "completed_at": "2026-07-06T22:06:22.907505+00:00",
+  "latest_date": "2026-07-06",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -74,43 +63,43 @@
   "fallback_image_count": 8,
   "fallback_images": [
     {
-      "article_id": "4e69ae63f719c764b7",
-      "title": "Trump thanks Fifa for spending USA striker's ban",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "26f6488d0d41b1041c",
-      "title": "Ontario transit agency issued parking ticket for a car stolen from a train station. Its owner is still fighting it",
+      "article_id": "a00df48c38a995e989",
+      "title": "Air Canada halts, delays several flight routes to U.S. destinations amid high fuel costs",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "3ec7bce3f2648de3df",
-      "title": "Special Weather Statement issued July 5 at 3:34PM CDT by NWS Jackson MS",
+      "article_id": "300ead2d321bac0103",
+      "title": "Summer McIntosh's coach hails 'very important' 200m butterfly world record",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "d8256028f851c4db87",
-      "title": "2 people pulled from Montreal's Lachine canal overnight in critical condition",
+      "article_id": "d55b95900f8aa1df40",
+      "title": "Some N.L. soccer fans see red after Trump asks for player suspension review",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "94a17aea95d1a142d1",
-      "title": "Severe Thunderstorm Warning issued July 5 at 4:33PM EDT until July 5 at 5:00PM EDT by NWS Wakefield VA",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "64bcef0d2632a0f4c1",
-      "title": "Move over Chutes & Ladders: Schisto & Ladders has educational value plus worms",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "c61a5a32012f8b8c4a",
-      "title": "Checking a Bank Transfer",
+      "article_id": "453d7a6437d6c4ca67",
+      "title": "Saskatchewan village celebrates new beginning without ‘Queen of Canada’ cult",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "b47f22c19ba8c08f51",
-      "title": "The Bus Card",
+      "article_id": "f7c8bc7166a67e4557",
+      "title": "Special Weather Statement issued July 6 at 4:50PM CDT by NWS Jackson MS",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "8e5a772305beb72352",
+      "title": "Severe Thunderstorm Warning issued July 6 at 4:51PM CDT until July 6 at 5:30PM CDT by NWS Little Rock AR",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "a6f99e113af70f6d0e",
+      "title": "Asking About a Restaurant Order",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "39df0989a7e3588234",
+      "title": "The Lunch Box",
       "reason": "Selected image was unavailable: ValueError"
     }
   ]
