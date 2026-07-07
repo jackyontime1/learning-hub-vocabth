@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-07-06T21:52:52.770452+00:00",
-  "expected_toronto_date": "2026-07-06",
+  "started_at": "2026-07-07T21:13:24.222681+00:00",
+  "expected_toronto_date": "2026-07-07",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -16,35 +16,17 @@
     "C1": 2
   },
   "schema_version": 10,
-  "candidate_rejections": [
-    {
-      "article_id": "7c45e7d0134330662b",
-      "title": "Severe Thunderstorm Warning issued July 6 at 4:49PM CDT until July 6 at 5:15PM CDT by NWS Little Rock AR",
-      "provider": "US National Weather Service",
-      "level": "B1",
-      "reason": "RuntimeError: Full Thai translation unavailable for article 7c45e7d0134330662b"
-    },
-    {
-      "article_id": "4bc61b15d86bb7797d",
-      "title": "Will this heatwave feel as hot and sticky as the last one?",
-      "provider": "BBC News",
-      "level": "B2",
-      "reason": "RuntimeError: Unable to produce 3 valid useful phrases for B2 reading"
-    }
-  ],
+  "candidate_rejections": [],
   "practice_story_count": 4,
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
-    "nllb_retries": 1,
-    "quality_failures": 1,
-    "rejection_reasons": {
-      "missing-number:13,4:49,5": 1,
-      "missing-number:4:49": 1
-    }
+    "nllb_retries": 0,
+    "quality_failures": 0,
+    "rejection_reasons": {}
   },
-  "completed_at": "2026-07-06T22:06:22.907505+00:00",
-  "latest_date": "2026-07-06",
+  "completed_at": "2026-07-07T21:25:15.638395+00:00",
+  "latest_date": "2026-07-07",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -63,43 +45,43 @@
   "fallback_image_count": 8,
   "fallback_images": [
     {
-      "article_id": "a00df48c38a995e989",
-      "title": "Air Canada halts, delays several flight routes to U.S. destinations amid high fuel costs",
+      "article_id": "5b32d88e68dae0b9b7",
+      "title": "International Olympic Committee lifts Russia suspension ahead of 2028 LA Games",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "300ead2d321bac0103",
-      "title": "Summer McIntosh's coach hails 'very important' 200m butterfly world record",
+      "article_id": "c3324ffdf123826fc5",
+      "title": "Resistance and revenge - Iran wanted to send a message with its farewell to Khamenei",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "d55b95900f8aa1df40",
-      "title": "Some N.L. soccer fans see red after Trump asks for player suspension review",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "453d7a6437d6c4ca67",
-      "title": "Saskatchewan village celebrates new beginning without ‘Queen of Canada’ cult",
+      "article_id": "20b261cd24488a3523",
+      "title": "Rogers cuts 230 jobs, closes radio stations in Vancouver, Calgary, Halifax and Kitchener",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "f7c8bc7166a67e4557",
-      "title": "Special Weather Statement issued July 6 at 4:50PM CDT by NWS Jackson MS",
+      "article_id": "6a432e430fad79e945",
+      "title": "Trump revives argument that U.S. should control Greenland as NATO leaders gather",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "8e5a772305beb72352",
-      "title": "Severe Thunderstorm Warning issued July 6 at 4:51PM CDT until July 6 at 5:30PM CDT by NWS Little Rock AR",
+      "article_id": "a26b946c1f325eb710",
+      "title": "Special Weather Statement issued July 7 at 5:10PM EDT by NWS Jacksonville FL",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "a6f99e113af70f6d0e",
-      "title": "Asking About a Restaurant Order",
+      "article_id": "83013f90287e7a6ae1",
+      "title": "Life after space is a journey all astronauts must figure out — and Jeremy Hansen's up next",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "39df0989a7e3588234",
-      "title": "The Lunch Box",
+      "article_id": "a7fa4d289bd773637b",
+      "title": "A Phone Call from the Driver",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "56012b0c703335c577",
+      "title": "A Low Phone Battery",
       "reason": "Selected image was unavailable: ValueError"
     }
   ]
