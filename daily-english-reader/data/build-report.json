@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-07-07T21:13:24.222681+00:00",
-  "expected_toronto_date": "2026-07-07",
+  "started_at": "2026-07-08T20:46:30.273974+00:00",
+  "expected_toronto_date": "2026-07-08",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -16,17 +16,43 @@
     "C1": 2
   },
   "schema_version": 10,
-  "candidate_rejections": [],
+  "candidate_rejections": [
+    {
+      "article_id": "e9edb6edd987d370a7",
+      "title": "Special Weather Statement issued July 8 at 4:46PM EDT by NWS Blacksburg VA",
+      "provider": "US National Weather Service",
+      "level": "B1",
+      "reason": "RuntimeError: Full Thai translation unavailable for article e9edb6edd987d370a7"
+    },
+    {
+      "article_id": "6871d42babf5095817",
+      "title": "Gale Warning issued July 8 at 1:44PM PDT until July 9 at 5:00AM PDT by NWS Seattle WA",
+      "provider": "US National Weather Service",
+      "level": "B1",
+      "reason": "RuntimeError: Unable to produce 3 valid useful phrases for B1 reading"
+    },
+    {
+      "article_id": "701da1336f775c8b1e",
+      "title": "Le Pen says she'll run for French presidency next year despite court-ordered monitor",
+      "provider": "NPR",
+      "level": "C1",
+      "reason": "RuntimeError: Full Thai translation unavailable for article 701da1336f775c8b1e"
+    }
+  ],
   "practice_story_count": 4,
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
-    "nllb_retries": 0,
-    "quality_failures": 0,
-    "rejection_reasons": {}
+    "nllb_retries": 3,
+    "quality_failures": 2,
+    "rejection_reasons": {
+      "missing-number:4:45": 2,
+      "repeated-word-run": 1,
+      "unexpected-non-thai-script": 2
+    }
   },
-  "completed_at": "2026-07-07T21:25:15.638395+00:00",
-  "latest_date": "2026-07-07",
+  "completed_at": "2026-07-08T21:02:34.093605+00:00",
+  "latest_date": "2026-07-08",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -42,17 +68,22 @@
     "easy_news": 2,
     "daily_life_practice_story": 4
   },
-  "fallback_image_count": 8,
+  "fallback_image_count": 10,
   "fallback_images": [
     {
-      "article_id": "5b32d88e68dae0b9b7",
-      "title": "International Olympic Committee lifts Russia suspension ahead of 2028 LA Games",
+      "article_id": "154a73ac030bb1bda8",
+      "title": "Severe Thunderstorm Warning issued July 8 at 2:43PM MDT until July 8 at 3:15PM MDT by NWS Billings MT",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "8eb85065058a83df71",
+      "title": "Trying to avoid cyclosporiasis? Wash your hands, wash your produce",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "c3324ffdf123826fc5",
-      "title": "Resistance and revenge - Iran wanted to send a message with its farewell to Khamenei",
-      "reason": "No usable free image candidate"
+      "article_id": "703b3746c393149ebe",
+      "title": "US strikes target Iranian military boats",
+      "reason": "Selected image was unavailable: ValueError"
     },
     {
       "article_id": "20b261cd24488a3523",
@@ -60,28 +91,33 @@
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "6a432e430fad79e945",
-      "title": "Trump revives argument that U.S. should control Greenland as NATO leaders gather",
+      "article_id": "77c9225c849839c051",
+      "title": "Special Weather Statement issued July 8 at 2:42PM MDT by NWS Pocatello ID",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "a26b946c1f325eb710",
-      "title": "Special Weather Statement issued July 7 at 5:10PM EDT by NWS Jacksonville FL",
+      "article_id": "e1b559d60e017fdeb7",
+      "title": "How Esports World Cup moved from Saudi Arabia to Paris in 8 weeks",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "83013f90287e7a6ae1",
-      "title": "Life after space is a journey all astronauts must figure out — and Jeremy Hansen's up next",
+      "article_id": "277c831cf23701c54a",
+      "title": "Changing a Train Ticket",
+      "reason": "Selected image was unavailable: HTTPError"
+    },
+    {
+      "article_id": "d7ef9a949465091267",
+      "title": "Sending a Parcel",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "a7fa4d289bd773637b",
-      "title": "A Phone Call from the Driver",
+      "article_id": "0b6bd0bc13d5b62574",
+      "title": "Meeting a New Neighbor",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "56012b0c703335c577",
-      "title": "A Low Phone Battery",
+      "article_id": "38ccfabdc7d7243f5d",
+      "title": "Laundry Before the Rain",
       "reason": "Selected image was unavailable: ValueError"
     }
   ]
