@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-07-08T20:46:30.273974+00:00",
-  "expected_toronto_date": "2026-07-08",
+  "started_at": "2026-07-09T21:09:10.405459+00:00",
+  "expected_toronto_date": "2026-07-09",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -16,43 +16,19 @@
     "C1": 2
   },
   "schema_version": 10,
-  "candidate_rejections": [
-    {
-      "article_id": "e9edb6edd987d370a7",
-      "title": "Special Weather Statement issued July 8 at 4:46PM EDT by NWS Blacksburg VA",
-      "provider": "US National Weather Service",
-      "level": "B1",
-      "reason": "RuntimeError: Full Thai translation unavailable for article e9edb6edd987d370a7"
-    },
-    {
-      "article_id": "6871d42babf5095817",
-      "title": "Gale Warning issued July 8 at 1:44PM PDT until July 9 at 5:00AM PDT by NWS Seattle WA",
-      "provider": "US National Weather Service",
-      "level": "B1",
-      "reason": "RuntimeError: Unable to produce 3 valid useful phrases for B1 reading"
-    },
-    {
-      "article_id": "701da1336f775c8b1e",
-      "title": "Le Pen says she'll run for French presidency next year despite court-ordered monitor",
-      "provider": "NPR",
-      "level": "C1",
-      "reason": "RuntimeError: Full Thai translation unavailable for article 701da1336f775c8b1e"
-    }
-  ],
+  "candidate_rejections": [],
   "practice_story_count": 4,
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
-    "nllb_retries": 3,
-    "quality_failures": 2,
+    "nllb_retries": 1,
+    "quality_failures": 0,
     "rejection_reasons": {
-      "missing-number:4:45": 2,
-      "repeated-word-run": 1,
-      "unexpected-non-thai-script": 2
+      "unexpected-non-thai-script": 1
     }
   },
-  "completed_at": "2026-07-08T21:02:34.093605+00:00",
-  "latest_date": "2026-07-08",
+  "completed_at": "2026-07-09T21:21:41.639452+00:00",
+  "latest_date": "2026-07-09",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -68,56 +44,41 @@
     "easy_news": 2,
     "daily_life_practice_story": 4
   },
-  "fallback_image_count": 10,
+  "fallback_image_count": 7,
   "fallback_images": [
     {
-      "article_id": "154a73ac030bb1bda8",
-      "title": "Severe Thunderstorm Warning issued July 8 at 2:43PM MDT until July 8 at 3:15PM MDT by NWS Billings MT",
+      "article_id": "c5fe308f72c9724de9",
+      "title": "Jackdaw owner says gas field will 'not materially influence' climate change",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "db6810022896fd12c5",
+      "title": "Court strikes down confidentiality clause for air travel complaints process",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "11c30c37f75d67e401",
+      "title": "Agon: Competitive Cross-Model RL with Implicit Rival Grading of Reasoning",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "8eb85065058a83df71",
-      "title": "Trying to avoid cyclosporiasis? Wash your hands, wash your produce",
+      "article_id": "d2d85e1514bb1b75de",
+      "title": "$8M settlement proposed in beef price-fixing class action",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "703b3746c393149ebe",
-      "title": "US strikes target Iranian military boats",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "20b261cd24488a3523",
-      "title": "Rogers cuts 230 jobs, closes radio stations in Vancouver, Calgary, Halifax and Kitchener",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "77c9225c849839c051",
-      "title": "Special Weather Statement issued July 8 at 2:42PM MDT by NWS Pocatello ID",
+      "article_id": "9cd2454f385e32877f",
+      "title": "Special Weather Statement issued July 9 at 4:08PM CDT by NWS Dodge City KS",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "e1b559d60e017fdeb7",
-      "title": "How Esports World Cup moved from Saudi Arabia to Paris in 8 weeks",
+      "article_id": "4fee25b3fdc52ebd68",
+      "title": "Beaverlodge RCMP issue Amber Alert for 6-year-old boy",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "277c831cf23701c54a",
-      "title": "Changing a Train Ticket",
-      "reason": "Selected image was unavailable: HTTPError"
-    },
-    {
-      "article_id": "d7ef9a949465091267",
-      "title": "Sending a Parcel",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "0b6bd0bc13d5b62574",
-      "title": "Meeting a New Neighbor",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "38ccfabdc7d7243f5d",
-      "title": "Laundry Before the Rain",
+      "article_id": "875de3031874bd2819",
+      "title": "Leaving a Phone for Repair",
       "reason": "Selected image was unavailable: ValueError"
     }
   ]
