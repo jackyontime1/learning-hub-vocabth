@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-07-09T21:09:10.405459+00:00",
-  "expected_toronto_date": "2026-07-09",
+  "started_at": "2026-07-10T18:04:08.543367+00:00",
+  "expected_toronto_date": "2026-07-10",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -16,19 +16,43 @@
     "C1": 2
   },
   "schema_version": 10,
-  "candidate_rejections": [],
+  "candidate_rejections": [
+    {
+      "article_id": "1238529b2e98499536",
+      "title": "Beaverlodge RCMP issue Amber Alert for 6-year-old boy, last seen in B.C.",
+      "provider": "CBC News",
+      "level": "B1",
+      "reason": "RuntimeError: Full Thai translation unavailable for article 1238529b2e98499536"
+    },
+    {
+      "article_id": "e5e5d22dbb48245ad8",
+      "title": "Microsoft is doing a hard reset of its XBOX gaming division",
+      "provider": "NPR",
+      "level": "B1",
+      "reason": "RuntimeError: Full Thai translation unavailable for article e5e5d22dbb48245ad8"
+    },
+    {
+      "article_id": "6dd502b12d8d002b5a",
+      "title": "Man fatally shot by ICE in Houston was not intended target, DHS says",
+      "provider": "BBC News",
+      "level": "B2",
+      "reason": "RuntimeError: Full Thai translation unavailable for article 6dd502b12d8d002b5a"
+    }
+  ],
   "practice_story_count": 4,
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
-    "nllb_retries": 1,
-    "quality_failures": 0,
+    "nllb_retries": 5,
+    "quality_failures": 3,
     "rejection_reasons": {
-      "unexpected-non-thai-script": 1
+      "repeated-junk-string": 2,
+      "missing-number:30,9": 2,
+      "unexpected-non-thai-script": 4
     }
   },
-  "completed_at": "2026-07-09T21:21:41.639452+00:00",
-  "latest_date": "2026-07-09",
+  "completed_at": "2026-07-10T18:25:04.474514+00:00",
+  "latest_date": "2026-07-10",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -44,11 +68,11 @@
     "easy_news": 2,
     "daily_life_practice_story": 4
   },
-  "fallback_image_count": 7,
+  "fallback_image_count": 6,
   "fallback_images": [
     {
-      "article_id": "c5fe308f72c9724de9",
-      "title": "Jackdaw owner says gas field will 'not materially influence' climate change",
+      "article_id": "5446e8c0c326f00ad0",
+      "title": "Rates of gun-related intimate partner violence rising: StatsCan",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
@@ -57,29 +81,24 @@
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "11c30c37f75d67e401",
-      "title": "Agon: Competitive Cross-Model RL with Implicit Rival Grading of Reasoning",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "d2d85e1514bb1b75de",
-      "title": "$8M settlement proposed in beef price-fixing class action",
+      "article_id": "e790eb6a2002ee0535",
+      "title": "Vicious storm in central Alberta results in 2 tornadoes, sends 3 people to hospital",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "9cd2454f385e32877f",
-      "title": "Special Weather Statement issued July 9 at 4:08PM CDT by NWS Dodge City KS",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "4fee25b3fdc52ebd68",
-      "title": "Beaverlodge RCMP issue Amber Alert for 6-year-old boy",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "875de3031874bd2819",
-      "title": "Leaving a Phone for Repair",
+      "article_id": "170f009acdf2250920",
+      "title": "Wildfire in southern Spain leaves at least 12 dead and 23 missing",
       "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "5fd974616a838eacf8",
+      "title": "Special Weather Statement issued July 10 at 2:01PM EDT by NWS Wakefield VA",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "b7b839e1288bcfa904",
+      "title": "Special Weather Statement issued July 10 at 1:58PM EDT by NWS Blacksburg VA",
+      "reason": "No usable free image candidate"
     }
   ]
 }
