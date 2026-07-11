@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-07-10T18:04:08.543367+00:00",
-  "expected_toronto_date": "2026-07-10",
+  "started_at": "2026-07-11T17:18:45.465155+00:00",
+  "expected_toronto_date": "2026-07-11",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -18,41 +18,26 @@
   "schema_version": 10,
   "candidate_rejections": [
     {
-      "article_id": "1238529b2e98499536",
-      "title": "Beaverlodge RCMP issue Amber Alert for 6-year-old boy, last seen in B.C.",
-      "provider": "CBC News",
-      "level": "B1",
-      "reason": "RuntimeError: Full Thai translation unavailable for article 1238529b2e98499536"
-    },
-    {
-      "article_id": "e5e5d22dbb48245ad8",
-      "title": "Microsoft is doing a hard reset of its XBOX gaming division",
-      "provider": "NPR",
-      "level": "B1",
-      "reason": "RuntimeError: Full Thai translation unavailable for article e5e5d22dbb48245ad8"
-    },
-    {
-      "article_id": "6dd502b12d8d002b5a",
-      "title": "Man fatally shot by ICE in Houston was not intended target, DHS says",
+      "article_id": "687cc3f41b8312d167",
+      "title": "How a fake presidential council ended up with a budget of almost $1m in Nigeria",
       "provider": "BBC News",
       "level": "B2",
-      "reason": "RuntimeError: Full Thai translation unavailable for article 6dd502b12d8d002b5a"
+      "reason": "RuntimeError: Full Thai translation unavailable for article 687cc3f41b8312d167"
     }
   ],
   "practice_story_count": 4,
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
-    "nllb_retries": 5,
-    "quality_failures": 3,
+    "nllb_retries": 1,
+    "quality_failures": 1,
     "rejection_reasons": {
-      "repeated-junk-string": 2,
-      "missing-number:30,9": 2,
-      "unexpected-non-thai-script": 4
+      "repeated-word-run": 1,
+      "unexpected-non-thai-script": 1
     }
   },
-  "completed_at": "2026-07-10T18:25:04.474514+00:00",
-  "latest_date": "2026-07-10",
+  "completed_at": "2026-07-11T17:33:26.027956+00:00",
+  "latest_date": "2026-07-11",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -68,37 +53,42 @@
     "easy_news": 2,
     "daily_life_practice_story": 4
   },
-  "fallback_image_count": 6,
+  "fallback_image_count": 7,
   "fallback_images": [
     {
-      "article_id": "5446e8c0c326f00ad0",
-      "title": "Rates of gun-related intimate partner violence rising: StatsCan",
+      "article_id": "f92ec4c65ee7f09433",
+      "title": "A ship exploded in Lake Huron 143 years ago. Now, a team is trying to find its wreckage",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "db6810022896fd12c5",
-      "title": "Court strikes down confidentiality clause for air travel complaints process",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "e790eb6a2002ee0535",
-      "title": "Vicious storm in central Alberta results in 2 tornadoes, sends 3 people to hospital",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "170f009acdf2250920",
-      "title": "Wildfire in southern Spain leaves at least 12 dead and 23 missing",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "5fd974616a838eacf8",
-      "title": "Special Weather Statement issued July 10 at 2:01PM EDT by NWS Wakefield VA",
+      "article_id": "094c058f24c4a17a73",
+      "title": "AUTOPILOT VQA: Benchmarking Vision-Language Models for Incident-Centric Dashcam Understanding",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "b7b839e1288bcfa904",
-      "title": "Special Weather Statement issued July 10 at 1:58PM EDT by NWS Blacksburg VA",
+      "article_id": "c084051e86c92f0420",
+      "title": "Special Weather Statement issued July 11 at 12:07PM CDT by NWS Mobile AL",
       "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "449885fab24024f861",
+      "title": "Iran must pledge to stop shooting at ships in Strait of Hormuz, US officials say",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "004f82afe44a914b2c",
+      "title": "Special Weather Statement issued July 11 at 11:58AM CDT by NWS Huntsville AL",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "21771ef7b45118fc0d",
+      "title": "Dating can be hard in South Korea - so the monks stepped in",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "a589fb65061561eda3",
+      "title": "Making a Clinic Appointment",
+      "reason": "Selected image was unavailable: ValueError"
     }
   ]
 }
