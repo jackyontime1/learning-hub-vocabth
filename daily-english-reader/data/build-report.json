@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-07-11T17:18:45.465155+00:00",
-  "expected_toronto_date": "2026-07-11",
+  "started_at": "2026-07-12T17:28:33.434839+00:00",
+  "expected_toronto_date": "2026-07-12",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -18,26 +18,23 @@
   "schema_version": 10,
   "candidate_rejections": [
     {
-      "article_id": "687cc3f41b8312d167",
-      "title": "How a fake presidential council ended up with a budget of almost $1m in Nigeria",
+      "article_id": "d1b25df3832755614b",
+      "title": "Helping one of Britain's rarest butterflies",
       "provider": "BBC News",
       "level": "B2",
-      "reason": "RuntimeError: Full Thai translation unavailable for article 687cc3f41b8312d167"
+      "reason": "RuntimeError: Unable to produce 3 valid useful phrases for B2 reading"
     }
   ],
   "practice_story_count": 4,
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
-    "nllb_retries": 1,
-    "quality_failures": 1,
-    "rejection_reasons": {
-      "repeated-word-run": 1,
-      "unexpected-non-thai-script": 1
-    }
+    "nllb_retries": 0,
+    "quality_failures": 0,
+    "rejection_reasons": {}
   },
-  "completed_at": "2026-07-11T17:33:26.027956+00:00",
-  "latest_date": "2026-07-11",
+  "completed_at": "2026-07-12T17:37:18.339505+00:00",
+  "latest_date": "2026-07-12",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -53,41 +50,46 @@
     "easy_news": 2,
     "daily_life_practice_story": 4
   },
-  "fallback_image_count": 7,
+  "fallback_image_count": 8,
   "fallback_images": [
     {
-      "article_id": "f92ec4c65ee7f09433",
-      "title": "A ship exploded in Lake Huron 143 years ago. Now, a team is trying to find its wreckage",
+      "article_id": "9168df9e73cf9f1fa9",
+      "title": "Trump threatens Iran after Ayatollah Ali Khamenei's funeral saw calls for his killing",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "094c058f24c4a17a73",
-      "title": "AUTOPILOT VQA: Benchmarking Vision-Language Models for Incident-Centric Dashcam Understanding",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "c084051e86c92f0420",
-      "title": "Special Weather Statement issued July 11 at 12:07PM CDT by NWS Mobile AL",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "449885fab24024f861",
-      "title": "Iran must pledge to stop shooting at ships in Strait of Hormuz, US officials say",
+      "article_id": "1db050e313713f0a53",
+      "title": "B.C. drowning deaths rise sharply as safety groups urge life-jacket use",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "004f82afe44a914b2c",
-      "title": "Special Weather Statement issued July 11 at 11:58AM CDT by NWS Huntsville AL",
+      "article_id": "3aaa5bfe4c5be0d2d7",
+      "title": "Special Weather Statement issued July 12 at 12:24PM CDT by NWS Amarillo TX",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "21771ef7b45118fc0d",
-      "title": "Dating can be hard in South Korea - so the monks stepped in",
+      "article_id": "24e77673ea128a15bf",
+      "title": "Home exchanges gaining popularity as Canadians look for cheaper ways to travel",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "a589fb65061561eda3",
-      "title": "Making a Clinic Appointment",
+      "article_id": "0773d24a8832f58515",
+      "title": "Special Weather Statement issued July 12 at 1:27PM EDT by NWS Melbourne FL",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "092b14c265cbdfaf6c",
+      "title": "Special Weather Statement issued July 12 at 1:26PM EDT by NWS Jacksonville FL",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "93c3945819d6cd67d5",
+      "title": "Returning the Wrong Shirt",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "3d3ea2ce93ce9eb246",
+      "title": "The Bus Card",
       "reason": "Selected image was unavailable: ValueError"
     }
   ]
