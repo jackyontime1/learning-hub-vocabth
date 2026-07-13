@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-07-12T17:28:33.434839+00:00",
-  "expected_toronto_date": "2026-07-12",
+  "started_at": "2026-07-13T18:12:27.161138+00:00",
+  "expected_toronto_date": "2026-07-13",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -18,8 +18,8 @@
   "schema_version": 10,
   "candidate_rejections": [
     {
-      "article_id": "d1b25df3832755614b",
-      "title": "Helping one of Britain's rarest butterflies",
+      "article_id": "93a91bc6edfaceab14",
+      "title": "People flee Bangkok bar as huge flames shoot out from doorway",
       "provider": "BBC News",
       "level": "B2",
       "reason": "RuntimeError: Unable to produce 3 valid useful phrases for B2 reading"
@@ -29,12 +29,15 @@
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
-    "nllb_retries": 0,
+    "nllb_retries": 2,
     "quality_failures": 0,
-    "rejection_reasons": {}
+    "rejection_reasons": {
+      "repeated-junk-string": 1,
+      "missing-unit:\\bdollars?\\b|[$]": 1
+    }
   },
-  "completed_at": "2026-07-12T17:37:18.339505+00:00",
-  "latest_date": "2026-07-12",
+  "completed_at": "2026-07-13T18:18:30.578101+00:00",
+  "latest_date": "2026-07-13",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -53,43 +56,43 @@
   "fallback_image_count": 8,
   "fallback_images": [
     {
-      "article_id": "9168df9e73cf9f1fa9",
-      "title": "Trump threatens Iran after Ayatollah Ali Khamenei's funeral saw calls for his killing",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "1db050e313713f0a53",
-      "title": "B.C. drowning deaths rise sharply as safety groups urge life-jacket use",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "3aaa5bfe4c5be0d2d7",
-      "title": "Special Weather Statement issued July 12 at 12:24PM CDT by NWS Amarillo TX",
+      "article_id": "329b591c2395aa1275",
+      "title": "Flood Watch issued July 13 at 11:11AM PDT until July 15 at 11:00PM PDT by NWS Elko NV",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "24e77673ea128a15bf",
-      "title": "Home exchanges gaining popularity as Canadians look for cheaper ways to travel",
+      "article_id": "a436239f4293cdf54a",
+      "title": "N.S. artist questions local business association's use of AI for merchandise",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "0773d24a8832f58515",
-      "title": "Special Weather Statement issued July 12 at 1:27PM EDT by NWS Melbourne FL",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "092b14c265cbdfaf6c",
-      "title": "Special Weather Statement issued July 12 at 1:26PM EDT by NWS Jacksonville FL",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "93c3945819d6cd67d5",
-      "title": "Returning the Wrong Shirt",
+      "article_id": "9fcb2550ed1db31db5",
+      "title": "The U.S.-Iran ceasefire grows more distant. And, Congress faces a consequential week",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "3d3ea2ce93ce9eb246",
-      "title": "The Bus Card",
+      "article_id": "26085b8cfb7daf1f70",
+      "title": "Sam Neill, known for 'Jurassic Park' and 'The Piano,' dies at 78, his family says",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "d51d699839ffee6f66",
+      "title": "U.S. Republican Sen. Lindsey Graham likely died after aorta rupture: medical examiner",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "4801852ec66c1c9cca",
+      "title": "German court convicts Iraqi couple of enslaving Yazidi girls",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "f8ccc8bc83494ecc6a",
+      "title": "Checking a Bank Transfer",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "b6f430c19da25a369a",
+      "title": "The Lunch Box",
       "reason": "Selected image was unavailable: ValueError"
     }
   ]
