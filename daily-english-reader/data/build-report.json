@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-07-13T18:12:27.161138+00:00",
-  "expected_toronto_date": "2026-07-13",
+  "started_at": "2026-07-14T17:36:42.305401+00:00",
+  "expected_toronto_date": "2026-07-14",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -18,26 +18,28 @@
   "schema_version": 10,
   "candidate_rejections": [
     {
-      "article_id": "93a91bc6edfaceab14",
-      "title": "People flee Bangkok bar as huge flames shoot out from doorway",
-      "provider": "BBC News",
-      "level": "B2",
-      "reason": "RuntimeError: Unable to produce 3 valid useful phrases for B2 reading"
+      "article_id": "997f8eaf550a111893",
+      "title": "Mixture of Frames Policy: Multi-Frame Action Denoising for Bimanual Mobile Manipulation",
+      "provider": "arXiv",
+      "level": "C1",
+      "reason": "RuntimeError: Full Thai translation unavailable for article 997f8eaf550a111893"
     }
   ],
   "practice_story_count": 4,
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
-    "nllb_retries": 2,
-    "quality_failures": 0,
+    "nllb_retries": 3,
+    "quality_failures": 1,
     "rejection_reasons": {
-      "repeated-junk-string": 1,
-      "missing-unit:\\bdollars?\\b|[$]": 1
+      "repeated-junk-string": 3,
+      "unexpected-non-thai-script": 2,
+      "suspiciously-long": 1,
+      "missing-number:2016,71": 1
     }
   },
-  "completed_at": "2026-07-13T18:18:30.578101+00:00",
-  "latest_date": "2026-07-13",
+  "completed_at": "2026-07-14T17:59:18.306536+00:00",
+  "latest_date": "2026-07-14",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -56,28 +58,28 @@
   "fallback_image_count": 8,
   "fallback_images": [
     {
-      "article_id": "329b591c2395aa1275",
-      "title": "Flood Watch issued July 13 at 11:11AM PDT until July 15 at 11:00PM PDT by NWS Elko NV",
+      "article_id": "db4d8761d5b7dc5db7",
+      "title": "Lindsey Graham and the transformation of the GOP",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "a436239f4293cdf54a",
-      "title": "N.S. artist questions local business association's use of AI for merchandise",
+      "article_id": "9cdfead00ee50e6944",
+      "title": "Trump's HHS abandons threat to withhold Medicare and Medicaid funding over trans care",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "9fcb2550ed1db31db5",
-      "title": "The U.S.-Iran ceasefire grows more distant. And, Congress faces a consequential week",
+      "article_id": "bf915642d87d5016da",
+      "title": "10 years of Pokémon Go and the millions still trying to catch 'em all",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "26085b8cfb7daf1f70",
-      "title": "Sam Neill, known for 'Jurassic Park' and 'The Piano,' dies at 78, his family says",
-      "reason": "No usable free image candidate"
+      "article_id": "533ddac88c722e2e16",
+      "title": "Trump pays writer E Jean Carroll $5m in damages over sexual abuse and defamation",
+      "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "d51d699839ffee6f66",
-      "title": "U.S. Republican Sen. Lindsey Graham likely died after aorta rupture: medical examiner",
+      "article_id": "201e018e1338aee571",
+      "title": "People watching the World Cup during work hours is leading to a drop in productivity",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
@@ -86,13 +88,13 @@
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "f8ccc8bc83494ecc6a",
-      "title": "Checking a Bank Transfer",
+      "article_id": "718d5fc46c76aa2495",
+      "title": "Asking About a Restaurant Order",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "b6f430c19da25a369a",
-      "title": "The Lunch Box",
+      "article_id": "c432d26deeb6257d36",
+      "title": "A Low Phone Battery",
       "reason": "Selected image was unavailable: ValueError"
     }
   ]
