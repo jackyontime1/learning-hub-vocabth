@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-07-14T17:36:42.305401+00:00",
-  "expected_toronto_date": "2026-07-14",
+  "started_at": "2026-07-15T17:41:39.204959+00:00",
+  "expected_toronto_date": "2026-07-15",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -16,30 +16,21 @@
     "C1": 2
   },
   "schema_version": 10,
-  "candidate_rejections": [
-    {
-      "article_id": "997f8eaf550a111893",
-      "title": "Mixture of Frames Policy: Multi-Frame Action Denoising for Bimanual Mobile Manipulation",
-      "provider": "arXiv",
-      "level": "C1",
-      "reason": "RuntimeError: Full Thai translation unavailable for article 997f8eaf550a111893"
-    }
-  ],
+  "candidate_rejections": [],
   "practice_story_count": 4,
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
-    "nllb_retries": 3,
-    "quality_failures": 1,
+    "nllb_retries": 2,
+    "quality_failures": 0,
     "rejection_reasons": {
-      "repeated-junk-string": 3,
-      "unexpected-non-thai-script": 2,
-      "suspiciously-long": 1,
-      "missing-number:2016,71": 1
+      "repeated-junk-string": 1,
+      "repeated-2-gram": 1,
+      "repeated-3-gram": 1
     }
   },
-  "completed_at": "2026-07-14T17:59:18.306536+00:00",
-  "latest_date": "2026-07-14",
+  "completed_at": "2026-07-15T18:00:46.636391+00:00",
+  "latest_date": "2026-07-15",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -55,46 +46,51 @@
     "easy_news": 2,
     "daily_life_practice_story": 4
   },
-  "fallback_image_count": 8,
+  "fallback_image_count": 9,
   "fallback_images": [
     {
-      "article_id": "db4d8761d5b7dc5db7",
-      "title": "Lindsey Graham and the transformation of the GOP",
+      "article_id": "551c814ed1e0650290",
+      "title": "Wind Advisory issued July 15 at 10:37AM PDT until July 16 at 4:00AM PDT by NWS Los Angeles/Oxnard CA",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "9cdfead00ee50e6944",
-      "title": "Trump's HHS abandons threat to withhold Medicare and Medicaid funding over trans care",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "bf915642d87d5016da",
-      "title": "10 years of Pokémon Go and the millions still trying to catch 'em all",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "533ddac88c722e2e16",
-      "title": "Trump pays writer E Jean Carroll $5m in damages over sexual abuse and defamation",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "201e018e1338aee571",
-      "title": "People watching the World Cup during work hours is leading to a drop in productivity",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "4801852ec66c1c9cca",
-      "title": "German court convicts Iraqi couple of enslaving Yazidi girls",
+      "article_id": "ee6e725bd88441935e",
+      "title": "Extreme Heat Warning issued July 15 at 10:37AM PDT until July 16 at 8:00PM PDT by NWS Los Angeles/Oxnard CA",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "718d5fc46c76aa2495",
-      "title": "Asking About a Restaurant Order",
+      "article_id": "d627d9d4f0da3c2eb4",
+      "title": "CREA downgrades housing market forecast again as June home sales edge up",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "76cb5203987d665f4c",
+      "title": "Venezuela government to launch formal talks with opposition members",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "c432d26deeb6257d36",
-      "title": "A Low Phone Battery",
+      "article_id": "027e8b64af2b622333",
+      "title": "Canada wildfires leaves train 'encased in flames' as smoke from drifts towards US",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "0537b5446a7b156d5b",
+      "title": "American AI is expensive. Some startups are turning to cheap Chinese models",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "37ef3c3249d88cf197",
+      "title": "A Phone Call from the Driver",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "978b4345a109c5aed6",
+      "title": "Meeting a New Neighbor",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "e22c2a09bbd510f02d",
+      "title": "Laundry Before the Rain",
       "reason": "Selected image was unavailable: ValueError"
     }
   ]
