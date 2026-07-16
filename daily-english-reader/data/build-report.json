@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-07-15T17:41:39.204959+00:00",
-  "expected_toronto_date": "2026-07-15",
+  "started_at": "2026-07-16T17:42:43.480824+00:00",
+  "expected_toronto_date": "2026-07-16",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -21,16 +21,14 @@
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
-    "nllb_retries": 2,
+    "nllb_retries": 1,
     "quality_failures": 0,
     "rejection_reasons": {
-      "repeated-junk-string": 1,
-      "repeated-2-gram": 1,
-      "repeated-3-gram": 1
+      "repeated-junk-string": 1
     }
   },
-  "completed_at": "2026-07-15T18:00:46.636391+00:00",
-  "latest_date": "2026-07-15",
+  "completed_at": "2026-07-16T17:52:47.148454+00:00",
+  "latest_date": "2026-07-16",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -46,16 +44,16 @@
     "easy_news": 2,
     "daily_life_practice_story": 4
   },
-  "fallback_image_count": 9,
+  "fallback_image_count": 7,
   "fallback_images": [
     {
-      "article_id": "551c814ed1e0650290",
-      "title": "Wind Advisory issued July 15 at 10:37AM PDT until July 16 at 4:00AM PDT by NWS Los Angeles/Oxnard CA",
-      "reason": "No usable free image candidate"
+      "article_id": "5a3c4aefdfdb629048",
+      "title": "Moment US Navy jet stuns packed Florida beach with low flypast",
+      "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "ee6e725bd88441935e",
-      "title": "Extreme Heat Warning issued July 15 at 10:37AM PDT until July 16 at 8:00PM PDT by NWS Los Angeles/Oxnard CA",
+      "article_id": "97bd93b28448b561a8",
+      "title": "Improving Wind and Solar Power Prediction with Efficient Wrapper-based Feature Selection: An Empirical Study",
       "reason": "No usable free image candidate"
     },
     {
@@ -64,33 +62,23 @@
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "76cb5203987d665f4c",
-      "title": "Venezuela government to launch formal talks with opposition members",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "027e8b64af2b622333",
-      "title": "Canada wildfires leaves train 'encased in flames' as smoke from drifts towards US",
+      "article_id": "f8d180adb134c0c3bd",
+      "title": "Teen hackers who live streamed cyber-attack on TfL jailed",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "0537b5446a7b156d5b",
-      "title": "American AI is expensive. Some startups are turning to cheap Chinese models",
+      "article_id": "8ecfee1f88d77c338e",
+      "title": "Why is it so hard for the U.S. to win wars?",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "37ef3c3249d88cf197",
-      "title": "A Phone Call from the Driver",
+      "article_id": "5c8b2d91a82e149770",
+      "title": "Andy Burnham: the next U.K. prime minister",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "978b4345a109c5aed6",
-      "title": "Meeting a New Neighbor",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "e22c2a09bbd510f02d",
-      "title": "Laundry Before the Rain",
+      "article_id": "613a2e9f3d810c1d32",
+      "title": "Sending a Parcel",
       "reason": "Selected image was unavailable: ValueError"
     }
   ]
