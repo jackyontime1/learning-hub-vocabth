@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-07-16T17:42:43.480824+00:00",
-  "expected_toronto_date": "2026-07-16",
+  "started_at": "2026-07-17T17:33:51.266184+00:00",
+  "expected_toronto_date": "2026-07-17",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -21,14 +21,12 @@
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
-    "nllb_retries": 1,
+    "nllb_retries": 0,
     "quality_failures": 0,
-    "rejection_reasons": {
-      "repeated-junk-string": 1
-    }
+    "rejection_reasons": {}
   },
-  "completed_at": "2026-07-16T17:52:47.148454+00:00",
-  "latest_date": "2026-07-16",
+  "completed_at": "2026-07-17T17:36:55.543401+00:00",
+  "latest_date": "2026-07-17",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -47,38 +45,38 @@
   "fallback_image_count": 7,
   "fallback_images": [
     {
-      "article_id": "5a3c4aefdfdb629048",
-      "title": "Moment US Navy jet stuns packed Florida beach with low flypast",
+      "article_id": "ed64e4c22496d987c5",
+      "title": "Police in India allege suspect in high-profile murder case fled to Canada",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "97bd93b28448b561a8",
-      "title": "Improving Wind and Solar Power Prediction with Efficient Wrapper-based Feature Selection: An Empirical Study",
+      "article_id": "016d477b1980fb35f2",
+      "title": "Beyond the Leaderboard: Design Lessons for Trustworthy Multimodal VQA",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "d627d9d4f0da3c2eb4",
-      "title": "CREA downgrades housing market forecast again as June home sales edge up",
+      "article_id": "b572ca0e9d8ab73c25",
+      "title": "China's Moonshot AI claims Kimi K3 can rival OpenAI and Anthropic",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "f8d180adb134c0c3bd",
-      "title": "Teen hackers who live streamed cyber-attack on TfL jailed",
+      "article_id": "eab4b042e90eebc0ce",
+      "title": "Bodycam footage shows airlift of girl stranded by Texas floods",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "8ecfee1f88d77c338e",
-      "title": "Why is it so hard for the U.S. to win wars?",
-      "reason": "Selected image was unavailable: ValueError"
+      "article_id": "eeead6662fc289c664",
+      "title": "Special Weather Statement issued July 17 at 1:29PM EDT by NWS Jacksonville FL",
+      "reason": "No usable free image candidate"
     },
     {
-      "article_id": "5c8b2d91a82e149770",
-      "title": "Andy Burnham: the next U.K. prime minister",
-      "reason": "Selected image was unavailable: ValueError"
+      "article_id": "85a08726bbd7e3e808",
+      "title": "Special Weather Statement issued July 17 at 1:27PM EDT by NWS Melbourne FL",
+      "reason": "No usable free image candidate"
     },
     {
-      "article_id": "613a2e9f3d810c1d32",
-      "title": "Sending a Parcel",
+      "article_id": "e184e7da11b455a949",
+      "title": "Leaving a Phone for Repair",
       "reason": "Selected image was unavailable: ValueError"
     }
   ]
