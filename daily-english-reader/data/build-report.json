@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-07-17T17:33:51.266184+00:00",
-  "expected_toronto_date": "2026-07-17",
+  "started_at": "2026-07-18T17:17:59.094638+00:00",
+  "expected_toronto_date": "2026-07-18",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -21,12 +21,15 @@
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
-    "nllb_retries": 0,
+    "nllb_retries": 1,
     "quality_failures": 0,
-    "rejection_reasons": {}
+    "rejection_reasons": {
+      "unexpected-non-thai-script": 1,
+      "repeated-junk-string": 1
+    }
   },
-  "completed_at": "2026-07-17T17:36:55.543401+00:00",
-  "latest_date": "2026-07-17",
+  "completed_at": "2026-07-18T17:26:13.477214+00:00",
+  "latest_date": "2026-07-18",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -42,12 +45,12 @@
     "easy_news": 2,
     "daily_life_practice_story": 4
   },
-  "fallback_image_count": 7,
+  "fallback_image_count": 6,
   "fallback_images": [
     {
-      "article_id": "ed64e4c22496d987c5",
-      "title": "Police in India allege suspect in high-profile murder case fled to Canada",
-      "reason": "Selected image was unavailable: ValueError"
+      "article_id": "98df61d0a253a1e3ad",
+      "title": "SceneBind: Binding What and Where Across Vision, Audio and Language",
+      "reason": "No usable free image candidate"
     },
     {
       "article_id": "016d477b1980fb35f2",
@@ -55,9 +58,9 @@
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "b572ca0e9d8ab73c25",
-      "title": "China's Moonshot AI claims Kimi K3 can rival OpenAI and Anthropic",
-      "reason": "No usable free image candidate"
+      "article_id": "12c9af6f65d4ca3d54",
+      "title": "Second half of summer to bring chances for rain but heatwave threat persists",
+      "reason": "Selected image was unavailable: ValueError"
     },
     {
       "article_id": "eab4b042e90eebc0ce",
@@ -65,19 +68,14 @@
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "eeead6662fc289c664",
-      "title": "Special Weather Statement issued July 17 at 1:29PM EDT by NWS Jacksonville FL",
+      "article_id": "93de44f2d8bd1bc2e7",
+      "title": "Severe Thunderstorm Warning issued July 18 at 1:14PM EDT until July 18 at 1:45PM EDT by NWS Buffalo NY",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "85a08726bbd7e3e808",
-      "title": "Special Weather Statement issued July 17 at 1:27PM EDT by NWS Melbourne FL",
+      "article_id": "22ca5e03795ae04c63",
+      "title": "Tornado Warning issued July 18 at 1:16PM EDT until July 18 at 1:45PM EDT by NWS Buffalo NY",
       "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "e184e7da11b455a949",
-      "title": "Leaving a Phone for Repair",
-      "reason": "Selected image was unavailable: ValueError"
     }
   ]
 }
