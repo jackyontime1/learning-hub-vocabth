@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-07-18T17:17:59.094638+00:00",
-  "expected_toronto_date": "2026-07-18",
+  "started_at": "2026-07-19T17:19:40.262692+00:00",
+  "expected_toronto_date": "2026-07-19",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -21,15 +21,12 @@
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
-    "nllb_retries": 1,
+    "nllb_retries": 0,
     "quality_failures": 0,
-    "rejection_reasons": {
-      "unexpected-non-thai-script": 1,
-      "repeated-junk-string": 1
-    }
+    "rejection_reasons": {}
   },
-  "completed_at": "2026-07-18T17:26:13.477214+00:00",
-  "latest_date": "2026-07-18",
+  "completed_at": "2026-07-19T17:23:26.830962+00:00",
+  "latest_date": "2026-07-19",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -45,37 +42,47 @@
     "easy_news": 2,
     "daily_life_practice_story": 4
   },
-  "fallback_image_count": 6,
+  "fallback_image_count": 8,
   "fallback_images": [
     {
-      "article_id": "98df61d0a253a1e3ad",
-      "title": "SceneBind: Binding What and Where Across Vision, Audio and Language",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "016d477b1980fb35f2",
-      "title": "Beyond the Leaderboard: Design Lessons for Trustworthy Multimodal VQA",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "12c9af6f65d4ca3d54",
-      "title": "Second half of summer to bring chances for rain but heatwave threat persists",
+      "article_id": "b908115d3ba5c1a370",
+      "title": "China signals possible return of U.S. trade privileges for Hong Kong",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "eab4b042e90eebc0ce",
-      "title": "Bodycam footage shows airlift of girl stranded by Texas floods",
+      "article_id": "394c853849d5980416",
+      "title": "How modern warfare is reshaping Ukraine’s natural environment",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "b849f3383b52abc156",
+      "title": "Is this the most controversial World Cup yet?",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "ac2f510c2e4ee11761",
+      "title": "Why is it so hard for the U.S. to win wars?",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "690d14f9183b763546",
+      "title": "An Israeli paraglider tries to save migrating swifts that nest in the Western Wall",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "93de44f2d8bd1bc2e7",
-      "title": "Severe Thunderstorm Warning issued July 18 at 1:14PM EDT until July 18 at 1:45PM EDT by NWS Buffalo NY",
-      "reason": "No usable free image candidate"
+      "article_id": "beb083ec8e11c2e234",
+      "title": "Changing a Work Shift",
+      "reason": "Selected image was unavailable: HTTPError"
     },
     {
-      "article_id": "22ca5e03795ae04c63",
-      "title": "Tornado Warning issued July 18 at 1:16PM EDT until July 18 at 1:45PM EDT by NWS Buffalo NY",
-      "reason": "No usable free image candidate"
+      "article_id": "00faab650dcdb4258f",
+      "title": "Making a Clinic Appointment",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "9f68409fb282555700",
+      "title": "The Bus Card",
+      "reason": "Selected image was unavailable: ValueError"
     }
   ]
 }
