@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-07-20T18:23:10.919126+00:00",
-  "expected_toronto_date": "2026-07-20",
+  "started_at": "2026-07-21T17:49:06.201925+00:00",
+  "expected_toronto_date": "2026-07-21",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -16,17 +16,29 @@
     "C1": 2
   },
   "schema_version": 10,
-  "candidate_rejections": [],
+  "candidate_rejections": [
+    {
+      "article_id": "b49c2f00b3b086d142",
+      "title": "Special Weather Statement issued July 21 at 1:46PM EDT by NWS Newport/Morehead City NC",
+      "provider": "US National Weather Service",
+      "level": "B1",
+      "reason": "RuntimeError: Full Thai translation unavailable for article b49c2f00b3b086d142"
+    }
+  ],
   "practice_story_count": 4,
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
-    "nllb_retries": 0,
-    "quality_failures": 0,
-    "rejection_reasons": {}
+    "nllb_retries": 3,
+    "quality_failures": 1,
+    "rejection_reasons": {
+      "unexpected-non-thai-script": 1,
+      "missing-number:35": 1,
+      "repeated-junk-string": 2
+    }
   },
-  "completed_at": "2026-07-20T18:33:38.726577+00:00",
-  "latest_date": "2026-07-20",
+  "completed_at": "2026-07-21T17:56:46.032760+00:00",
+  "latest_date": "2026-07-21",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -42,41 +54,46 @@
     "easy_news": 2,
     "daily_life_practice_story": 4
   },
-  "fallback_image_count": 7,
+  "fallback_image_count": 8,
   "fallback_images": [
     {
-      "article_id": "0d1765a4ef0a05bffd",
-      "title": "Notorious drug cartel leader Ismael Zambada sentenced to life in US prison",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "0674016a13bda0e334",
-      "title": "What did Vancouver get from the World Cup?",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "f926636b1bfb13a95a",
-      "title": "Cuban dissident Luis Manuel Otero Alcántara goes into exile in US",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "079eec9b269c056719",
-      "title": "‘All I think about is her’: Families demand answers as Nigeria's boat disasters keep happening",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "c4a18f9bb1857082d6",
-      "title": "Special Weather Statement issued July 20 at 2:22PM EDT by NWS Newport/Morehead City NC",
+      "article_id": "5df98212a6dfd65f15",
+      "title": "Meet Jimothy, the unusually round Seattle raccoon capturing hearts worldwide",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "d60ed53681b62aa8b1",
-      "title": "Returning the Wrong Shirt",
+      "article_id": "0a0e693afd2f274f3b",
+      "title": "Former Toronto police officer Derek McCormick pleads guilty in Project South investigation",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "17a7001ba83a09a805",
+      "title": "Thousands of websites taken down for illegal World Cup streams",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "5963dbae5cba810c36",
-      "title": "The Lunch Box",
+      "article_id": "4e63f03e23420c88b7",
+      "title": "How the outbreak of an intestinal parasite in the U.S. unfolded",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "45f9e6e301a9cfdb75",
+      "title": "India's 'cockroach' protest continues a day after police crackdown",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "7b001b4a3c1a13cf1a",
+      "title": "Court ruling freezes Paramount-Warner Bros. merger for now",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "069851fa6891f8fa5a",
+      "title": "Checking a Bank Transfer",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "c3ceb14524ef040f5a",
+      "title": "A Low Phone Battery",
       "reason": "Selected image was unavailable: ValueError"
     }
   ]
