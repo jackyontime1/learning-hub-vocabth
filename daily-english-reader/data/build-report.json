@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-07-21T17:49:06.201925+00:00",
-  "expected_toronto_date": "2026-07-21",
+  "started_at": "2026-07-22T17:44:17.598132+00:00",
+  "expected_toronto_date": "2026-07-22",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -18,11 +18,18 @@
   "schema_version": 10,
   "candidate_rejections": [
     {
-      "article_id": "b49c2f00b3b086d142",
-      "title": "Special Weather Statement issued July 21 at 1:46PM EDT by NWS Newport/Morehead City NC",
+      "article_id": "4ecee4499462aa864f",
+      "title": "B.C. RCMP issue Amber Alert for 4-year-old boy",
+      "provider": "CBC News",
+      "level": "B1",
+      "reason": "RuntimeError: Full Thai translation unavailable for article 4ecee4499462aa864f"
+    },
+    {
+      "article_id": "3075e1fa33fa85c2f3",
+      "title": "Special Weather Statement issued July 22 at 1:40PM EDT by NWS Caribou ME",
       "provider": "US National Weather Service",
       "level": "B1",
-      "reason": "RuntimeError: Full Thai translation unavailable for article b49c2f00b3b086d142"
+      "reason": "RuntimeError: Full Thai translation unavailable for article 3075e1fa33fa85c2f3"
     }
   ],
   "practice_story_count": 4,
@@ -30,15 +37,16 @@
   "translation_quality": {
     "cache_rejections": 0,
     "nllb_retries": 3,
-    "quality_failures": 1,
+    "quality_failures": 2,
     "rejection_reasons": {
-      "unexpected-non-thai-script": 1,
-      "missing-number:35": 1,
-      "repeated-junk-string": 2
+      "missing-number:20": 2,
+      "unexpected-non-thai-script": 2,
+      "repeated-junk-string": 1,
+      "missing-number:3": 1
     }
   },
-  "completed_at": "2026-07-21T17:56:46.032760+00:00",
-  "latest_date": "2026-07-21",
+  "completed_at": "2026-07-22T18:02:31.557167+00:00",
+  "latest_date": "2026-07-22",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -54,31 +62,31 @@
     "easy_news": 2,
     "daily_life_practice_story": 4
   },
-  "fallback_image_count": 8,
+  "fallback_image_count": 9,
   "fallback_images": [
     {
-      "article_id": "5df98212a6dfd65f15",
-      "title": "Meet Jimothy, the unusually round Seattle raccoon capturing hearts worldwide",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "0a0e693afd2f274f3b",
-      "title": "Former Toronto police officer Derek McCormick pleads guilty in Project South investigation",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "17a7001ba83a09a805",
-      "title": "Thousands of websites taken down for illegal World Cup streams",
+      "article_id": "d9cb61cf5e35c64373",
+      "title": "Selective State-Space Adaptation and Retrieval for Language Model Reasoning",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "4e63f03e23420c88b7",
-      "title": "How the outbreak of an intestinal parasite in the U.S. unfolded",
+      "article_id": "2daa63f73643b9e17f",
+      "title": "India's 'cockroach' protesters vow to remain in New Delhi after police use tear gas, batons",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "64204f354f3e97bfae",
+      "title": "Why Iran is risking so much over the Strait of Hormuz",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "45f9e6e301a9cfdb75",
-      "title": "India's 'cockroach' protest continues a day after police crackdown",
+      "article_id": "7e564eeefdd0b26a4c",
+      "title": "Meet the women breaking world records in lumberjack sports",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "7572dba14205540aff",
+      "title": "What's behind the push to get more men on testosterone?",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
@@ -87,13 +95,18 @@
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "069851fa6891f8fa5a",
-      "title": "Checking a Bank Transfer",
+      "article_id": "f05ba630692038df7f",
+      "title": "Asking About a Restaurant Order",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "c3ceb14524ef040f5a",
-      "title": "A Low Phone Battery",
+      "article_id": "f45597da55a3128771",
+      "title": "Meeting a New Neighbor",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "a8224686f27710de7a",
+      "title": "Laundry Before the Rain",
       "reason": "Selected image was unavailable: ValueError"
     }
   ]
