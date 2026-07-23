@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-07-22T17:44:17.598132+00:00",
-  "expected_toronto_date": "2026-07-22",
+  "started_at": "2026-07-23T17:50:26.133857+00:00",
+  "expected_toronto_date": "2026-07-23",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -16,37 +16,19 @@
     "C1": 2
   },
   "schema_version": 10,
-  "candidate_rejections": [
-    {
-      "article_id": "4ecee4499462aa864f",
-      "title": "B.C. RCMP issue Amber Alert for 4-year-old boy",
-      "provider": "CBC News",
-      "level": "B1",
-      "reason": "RuntimeError: Full Thai translation unavailable for article 4ecee4499462aa864f"
-    },
-    {
-      "article_id": "3075e1fa33fa85c2f3",
-      "title": "Special Weather Statement issued July 22 at 1:40PM EDT by NWS Caribou ME",
-      "provider": "US National Weather Service",
-      "level": "B1",
-      "reason": "RuntimeError: Full Thai translation unavailable for article 3075e1fa33fa85c2f3"
-    }
-  ],
+  "candidate_rejections": [],
   "practice_story_count": 4,
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
-    "nllb_retries": 3,
-    "quality_failures": 2,
+    "nllb_retries": 1,
+    "quality_failures": 0,
     "rejection_reasons": {
-      "missing-number:20": 2,
-      "unexpected-non-thai-script": 2,
-      "repeated-junk-string": 1,
-      "missing-number:3": 1
+      "unexpected-non-thai-script": 1
     }
   },
-  "completed_at": "2026-07-22T18:02:31.557167+00:00",
-  "latest_date": "2026-07-22",
+  "completed_at": "2026-07-23T18:01:56.886067+00:00",
+  "latest_date": "2026-07-23",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -62,51 +44,41 @@
     "easy_news": 2,
     "daily_life_practice_story": 4
   },
-  "fallback_image_count": 9,
+  "fallback_image_count": 7,
   "fallback_images": [
     {
-      "article_id": "d9cb61cf5e35c64373",
-      "title": "Selective State-Space Adaptation and Retrieval for Language Model Reasoning",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "2daa63f73643b9e17f",
-      "title": "India's 'cockroach' protesters vow to remain in New Delhi after police use tear gas, batons",
+      "article_id": "8e8a7db280627097f7",
+      "title": "UK's largest onshore wind farm to be rebuilt with fewer, larger turbines",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "64204f354f3e97bfae",
-      "title": "Why Iran is risking so much over the Strait of Hormuz",
+      "article_id": "8e7e1979a74d1276ab",
+      "title": "Frustration, worry and hope: Canadian businesses brace for the latest round of U.S. tariffs",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "7e564eeefdd0b26a4c",
-      "title": "Meet the women breaking world records in lumberjack sports",
+      "article_id": "a3ed98409fd503fad2",
+      "title": "Trump's nuclear deal with Saudis jettisons longstanding US demands",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "d1dfeabc5523b95fdc",
+      "title": "France's heat wave in June tied to 5,700 more deaths than normal",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "7572dba14205540aff",
-      "title": "What's behind the push to get more men on testosterone?",
+      "article_id": "102fdc7cd0535b3503",
+      "title": "Special Weather Statement issued July 23 at 11:49AM MDT by NWS Pueblo CO",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "ce02c993a817803802",
+      "title": "This AI tool promises a 'second pair of eyes' to clinicians. Did patients benefit?",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "7b001b4a3c1a13cf1a",
-      "title": "Court ruling freezes Paramount-Warner Bros. merger for now",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "f05ba630692038df7f",
-      "title": "Asking About a Restaurant Order",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "f45597da55a3128771",
-      "title": "Meeting a New Neighbor",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "a8224686f27710de7a",
-      "title": "Laundry Before the Rain",
+      "article_id": "73c94d1f775ff12422",
+      "title": "A Phone Call from the Driver",
       "reason": "Selected image was unavailable: ValueError"
     }
   ]
