@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-07-23T17:50:26.133857+00:00",
-  "expected_toronto_date": "2026-07-23",
+  "started_at": "2026-07-24T17:55:03.178582+00:00",
+  "expected_toronto_date": "2026-07-24",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -27,8 +27,8 @@
       "unexpected-non-thai-script": 1
     }
   },
-  "completed_at": "2026-07-23T18:01:56.886067+00:00",
-  "latest_date": "2026-07-23",
+  "completed_at": "2026-07-24T18:08:10.794328+00:00",
+  "latest_date": "2026-07-24",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -47,28 +47,23 @@
   "fallback_image_count": 7,
   "fallback_images": [
     {
-      "article_id": "8e8a7db280627097f7",
-      "title": "UK's largest onshore wind farm to be rebuilt with fewer, larger turbines",
+      "article_id": "6ff323889aa54fa575",
+      "title": "GraphVid: Interactive Graph-Controllable Video Generation",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "8e7e1979a74d1276ab",
-      "title": "Frustration, worry and hope: Canadian businesses brace for the latest round of U.S. tariffs",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "a3ed98409fd503fad2",
-      "title": "Trump's nuclear deal with Saudis jettisons longstanding US demands",
+      "article_id": "4659d030e0529dee05",
+      "title": "Barzilai-Borwein Fails Superlinear Convergence on an Open Set of Quadratics for Every Dimension $n\\geq 4$",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "d1dfeabc5523b95fdc",
-      "title": "France's heat wave in June tied to 5,700 more deaths than normal",
+      "article_id": "1fce39020d023592df",
+      "title": "Several injured in seaplane emergency landing near B.C.-Wash. border",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "102fdc7cd0535b3503",
-      "title": "Special Weather Statement issued July 23 at 11:49AM MDT by NWS Pueblo CO",
+      "article_id": "523bd0bc692b286726",
+      "title": "Andy Burnham works for 1st time as British PM out of Manchester office",
       "reason": "No usable free image candidate"
     },
     {
@@ -77,8 +72,13 @@
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "73c94d1f775ff12422",
-      "title": "A Phone Call from the Driver",
+      "article_id": "14f8899e59c9bb28fa",
+      "title": "CJP protest: The youth movement India's Modi didn't see coming",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "04d766adf4ef013139",
+      "title": "Sending a Parcel",
       "reason": "Selected image was unavailable: ValueError"
     }
   ]
