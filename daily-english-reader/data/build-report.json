@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-07-24T17:55:03.178582+00:00",
-  "expected_toronto_date": "2026-07-24",
+  "started_at": "2026-07-25T17:19:12.371096+00:00",
+  "expected_toronto_date": "2026-07-25",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -21,14 +21,12 @@
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
-    "nllb_retries": 1,
+    "nllb_retries": 0,
     "quality_failures": 0,
-    "rejection_reasons": {
-      "unexpected-non-thai-script": 1
-    }
+    "rejection_reasons": {}
   },
-  "completed_at": "2026-07-24T18:08:10.794328+00:00",
-  "latest_date": "2026-07-24",
+  "completed_at": "2026-07-25T17:27:20.735663+00:00",
+  "latest_date": "2026-07-25",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -47,28 +45,28 @@
   "fallback_image_count": 7,
   "fallback_images": [
     {
-      "article_id": "6ff323889aa54fa575",
-      "title": "GraphVid: Interactive Graph-Controllable Video Generation",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "4659d030e0529dee05",
-      "title": "Barzilai-Borwein Fails Superlinear Convergence on an Open Set of Quadratics for Every Dimension $n\\geq 4$",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "1fce39020d023592df",
-      "title": "Several injured in seaplane emergency landing near B.C.-Wash. border",
+      "article_id": "8e6cc1ba7c27d7cd06",
+      "title": "Parks Canada charges hikers after grizzly bear run-in with off-leash dog in Banff National Park",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "523bd0bc692b286726",
-      "title": "Andy Burnham works for 1st time as British PM out of Manchester office",
+      "article_id": "738201a943f7657d4d",
+      "title": "ICC member nations vote to remove chief prosecutor",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "83dc211d29212d6071",
+      "title": "Wildberries is the Amazon of Russia. Ukraine is trying to destroy it",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "ce02c993a817803802",
-      "title": "This AI tool promises a 'second pair of eyes' to clinicians. Did patients benefit?",
+      "article_id": "e71bd8ceb617a3b352",
+      "title": "U.S. measles cases have already broken last year's record",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "618346d8f4cb137151",
+      "title": "COMIC: Temps are predicted to hit 106 in Egypt this week. How do people stay cool?",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
@@ -77,8 +75,8 @@
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "04d766adf4ef013139",
-      "title": "Sending a Parcel",
+      "article_id": "4770118a426d192967",
+      "title": "Leaving a Phone for Repair",
       "reason": "Selected image was unavailable: ValueError"
     }
   ]
