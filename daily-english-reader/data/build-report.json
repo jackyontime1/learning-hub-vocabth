@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-07-25T17:19:12.371096+00:00",
-  "expected_toronto_date": "2026-07-25",
+  "started_at": "2026-07-26T17:19:23.504164+00:00",
+  "expected_toronto_date": "2026-07-26",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -16,17 +16,28 @@
     "C1": 2
   },
   "schema_version": 10,
-  "candidate_rejections": [],
+  "candidate_rejections": [
+    {
+      "article_id": "a0c5d83330f1fa27da",
+      "title": "Marine Weather Statement issued July 26 at 1:09PM EDT by NWS Miami FL",
+      "provider": "US National Weather Service",
+      "level": "B1",
+      "reason": "RuntimeError: Full Thai translation unavailable for article a0c5d83330f1fa27da"
+    }
+  ],
   "practice_story_count": 4,
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
-    "nllb_retries": 0,
-    "quality_failures": 0,
-    "rejection_reasons": {}
+    "nllb_retries": 2,
+    "quality_failures": 1,
+    "rejection_reasons": {
+      "unexpected-non-thai-script": 2,
+      "repeated-junk-string": 1
+    }
   },
-  "completed_at": "2026-07-25T17:27:20.735663+00:00",
-  "latest_date": "2026-07-25",
+  "completed_at": "2026-07-26T17:29:49.231151+00:00",
+  "latest_date": "2026-07-26",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -45,24 +56,29 @@
   "fallback_image_count": 7,
   "fallback_images": [
     {
-      "article_id": "8e6cc1ba7c27d7cd06",
-      "title": "Parks Canada charges hikers after grizzly bear run-in with off-leash dog in Banff National Park",
+      "article_id": "c2a75ba5653ed1a95f",
+      "title": "You've got snail mail — subscription-based clubs are delivering on the desire for physical letters",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "738201a943f7657d4d",
-      "title": "ICC member nations vote to remove chief prosecutor",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "83dc211d29212d6071",
-      "title": "Wildberries is the Amazon of Russia. Ukraine is trying to destroy it",
+      "article_id": "3984d7b286388fe82b",
+      "title": "Federal government says it won't support Ontario's Billy Bishop Airport expansion plans",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "e71bd8ceb617a3b352",
-      "title": "U.S. measles cases have already broken last year's record",
+      "article_id": "37b364baaecf8ba3db",
+      "title": "President Trump just implemented new tariffs. How are small businesses coping?",
       "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "aed2e9a5d997443f9f",
+      "title": "What’s it like having an AI boyfriend? Ontario researchers are finding out",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "ba2788a319dd11d30c",
+      "title": "Special Marine Warning issued July 26 at 1:18PM EDT until July 26 at 1:45PM EDT by NWS Miami FL",
+      "reason": "No usable free image candidate"
     },
     {
       "article_id": "618346d8f4cb137151",
@@ -70,13 +86,8 @@
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "14f8899e59c9bb28fa",
-      "title": "CJP protest: The youth movement India's Modi didn't see coming",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "4770118a426d192967",
-      "title": "Leaving a Phone for Repair",
+      "article_id": "023a25590d62ab4013",
+      "title": "The Bus Card",
       "reason": "Selected image was unavailable: ValueError"
     }
   ]
