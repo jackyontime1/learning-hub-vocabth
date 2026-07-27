@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-07-26T17:19:23.504164+00:00",
-  "expected_toronto_date": "2026-07-26",
+  "started_at": "2026-07-27T17:58:13.941737+00:00",
+  "expected_toronto_date": "2026-07-27",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -18,11 +18,18 @@
   "schema_version": 10,
   "candidate_rejections": [
     {
-      "article_id": "a0c5d83330f1fa27da",
-      "title": "Marine Weather Statement issued July 26 at 1:09PM EDT by NWS Miami FL",
+      "article_id": "296b1592c505354cb5",
+      "title": "Tornado Warning issued July 27 at 12:55PM CDT until July 27 at 1:45PM CDT by NWS Chicago IL",
       "provider": "US National Weather Service",
       "level": "B1",
-      "reason": "RuntimeError: Full Thai translation unavailable for article a0c5d83330f1fa27da"
+      "reason": "RuntimeError: Full Thai translation unavailable for article 296b1592c505354cb5"
+    },
+    {
+      "article_id": "bec4b1fc4abfeaf72c",
+      "title": "Tadej Pogačar of Slovenia wins the 2026 Tour de France, his fifth victory in the race",
+      "provider": "NPR",
+      "level": "C1",
+      "reason": "RuntimeError: Full Thai translation unavailable for article bec4b1fc4abfeaf72c"
     }
   ],
   "practice_story_count": 4,
@@ -30,14 +37,19 @@
   "translation_quality": {
     "cache_rejections": 0,
     "nllb_retries": 2,
-    "quality_failures": 1,
+    "quality_failures": 2,
     "rejection_reasons": {
-      "unexpected-non-thai-script": 2,
-      "repeated-junk-string": 1
+      "repeated-2-gram": 1,
+      "repeated-3-gram": 1,
+      "missing-number:12:55,35": 1,
+      "missing-unit:\\bmiles?\\b": 1,
+      "missing-number:12:55": 1,
+      "missing-number:5:50": 1,
+      "missing-number:49": 1
     }
   },
-  "completed_at": "2026-07-26T17:29:49.231151+00:00",
-  "latest_date": "2026-07-26",
+  "completed_at": "2026-07-27T18:15:35.286521+00:00",
+  "latest_date": "2026-07-27",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -53,41 +65,46 @@
     "easy_news": 2,
     "daily_life_practice_story": 4
   },
-  "fallback_image_count": 7,
+  "fallback_image_count": 8,
   "fallback_images": [
     {
-      "article_id": "c2a75ba5653ed1a95f",
-      "title": "You've got snail mail — subscription-based clubs are delivering on the desire for physical letters",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "3984d7b286388fe82b",
-      "title": "Federal government says it won't support Ontario's Billy Bishop Airport expansion plans",
+      "article_id": "7a1ef5554317303d9f",
+      "title": "Special Marine Warning issued July 27 at 1:55PM EDT until July 27 at 2:00PM EDT by NWS Wakefield VA",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "37b364baaecf8ba3db",
-      "title": "President Trump just implemented new tariffs. How are small businesses coping?",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "aed2e9a5d997443f9f",
-      "title": "What’s it like having an AI boyfriend? Ontario researchers are finding out",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "ba2788a319dd11d30c",
-      "title": "Special Marine Warning issued July 26 at 1:18PM EDT until July 26 at 1:45PM EDT by NWS Miami FL",
+      "article_id": "6a1a573dd17c2c4fde",
+      "title": "Neskantaga First Nation calls on Ontario to communicate better amid wildfire emergency",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "618346d8f4cb137151",
-      "title": "COMIC: Temps are predicted to hit 106 in Egypt this week. How do people stay cool?",
+      "article_id": "871452fc1bc48ddc88",
+      "title": "Anger as Berlin Pride attacker revealed to have been freed weeks earlier",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "023a25590d62ab4013",
-      "title": "The Bus Card",
+      "article_id": "e3fe103868288c804a",
+      "title": "Rapper Yung Filly tells trial 'vibes were good' with woman who accuses him of rape",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "583b446554b959ef3b",
+      "title": "Severe Thunderstorm Warning issued July 27 at 12:55PM CDT until July 27 at 1:30PM CDT by NWS Milwaukee/Sullivan WI",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "10b58d54572ec8614e",
+      "title": "Severe Thunderstorm Warning issued July 27 at 1:54PM EDT until July 27 at 2:15PM EDT by NWS Jacksonville FL",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "60fc5e6f62822170c0",
+      "title": "Making a Clinic Appointment",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "af774452669f4d9d8a",
+      "title": "The Lunch Box",
       "reason": "Selected image was unavailable: ValueError"
     }
   ]
