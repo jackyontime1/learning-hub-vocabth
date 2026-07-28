@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-07-27T17:58:13.941737+00:00",
-  "expected_toronto_date": "2026-07-27",
+  "started_at": "2026-07-28T17:47:37.799386+00:00",
+  "expected_toronto_date": "2026-07-28",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -18,38 +18,65 @@
   "schema_version": 10,
   "candidate_rejections": [
     {
-      "article_id": "296b1592c505354cb5",
-      "title": "Tornado Warning issued July 27 at 12:55PM CDT until July 27 at 1:45PM CDT by NWS Chicago IL",
-      "provider": "US National Weather Service",
+      "article_id": "fcbe280a17be48c282",
+      "title": "Japan earthquake: What we know so far",
+      "provider": "BBC News",
       "level": "B1",
-      "reason": "RuntimeError: Full Thai translation unavailable for article 296b1592c505354cb5"
+      "reason": "RuntimeError: Full Thai translation unavailable for article fcbe280a17be48c282"
     },
     {
-      "article_id": "bec4b1fc4abfeaf72c",
-      "title": "Tadej Pogačar of Slovenia wins the 2026 Tour de France, his fifth victory in the race",
-      "provider": "NPR",
+      "article_id": "82286ddf3a4adf835e",
+      "title": "US singer D4vd to go on trial for murder in death of 14-year-old",
+      "provider": "BBC News",
+      "level": "B2",
+      "reason": "RuntimeError: Full Thai translation unavailable for article 82286ddf3a4adf835e"
+    },
+    {
+      "article_id": "9f8102f90af2353ad0",
+      "title": "Gordie Howe bridge means smoother transport, but not lower consumer prices: truckers",
+      "provider": "CBC News",
       "level": "C1",
-      "reason": "RuntimeError: Full Thai translation unavailable for article bec4b1fc4abfeaf72c"
+      "reason": "RuntimeError: Full Thai translation unavailable for article 9f8102f90af2353ad0"
+    },
+    {
+      "article_id": "35a331b89458543bf6",
+      "title": "European wildfires in maps - and how they're being tackled",
+      "provider": "BBC News",
+      "level": "C1",
+      "reason": "RuntimeError: Full Thai translation unavailable for article 35a331b89458543bf6"
+    },
+    {
+      "article_id": "4e55f82b232d17d1b5",
+      "title": "Severe Thunderstorm Warning issued July 28 at 1:31PM EDT until July 28 at 2:15PM EDT by NWS Mount Holly NJ",
+      "provider": "US National Weather Service",
+      "level": "C1",
+      "reason": "RuntimeError: Full Thai translation unavailable for article 4e55f82b232d17d1b5"
     }
   ],
   "practice_story_count": 4,
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
-    "nllb_retries": 2,
-    "quality_failures": 2,
+    "nllb_retries": 6,
+    "quality_failures": 5,
     "rejection_reasons": {
+      "missing-number:07,16": 2,
+      "repeated-word-run": 1,
       "repeated-2-gram": 1,
       "repeated-3-gram": 1,
-      "missing-number:12:55,35": 1,
-      "missing-unit:\\bmiles?\\b": 1,
-      "missing-number:12:55": 1,
-      "missing-number:5:50": 1,
-      "missing-number:49": 1
+      "missing-number:2017": 1,
+      "missing-unit:\\bdegrees?\\b|°[CF]\\b": 2,
+      "missing-number:1,401,4500,75": 1,
+      "missing-month:November": 1,
+      "missing-number:1,4500": 1,
+      "missing-number:162": 2,
+      "unexpected-non-thai-script": 2,
+      "missing-number:1:30,25": 1,
+      "missing-number:1:30": 1
     }
   },
-  "completed_at": "2026-07-27T18:15:35.286521+00:00",
-  "latest_date": "2026-07-27",
+  "completed_at": "2026-07-28T17:58:43.617375+00:00",
+  "latest_date": "2026-07-28",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -68,43 +95,43 @@
   "fallback_image_count": 8,
   "fallback_images": [
     {
-      "article_id": "7a1ef5554317303d9f",
-      "title": "Special Marine Warning issued July 27 at 1:55PM EDT until July 27 at 2:00PM EDT by NWS Wakefield VA",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "6a1a573dd17c2c4fde",
-      "title": "Neskantaga First Nation calls on Ontario to communicate better amid wildfire emergency",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "871452fc1bc48ddc88",
-      "title": "Anger as Berlin Pride attacker revealed to have been freed weeks earlier",
+      "article_id": "3ed7e1bd17811a5a24",
+      "title": "AI tokens could become the kilowatt-hour of the AI age",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "e3fe103868288c804a",
-      "title": "Rapper Yung Filly tells trial 'vibes were good' with woman who accuses him of rape",
+      "article_id": "81e8e5c5c985c8cb1e",
+      "title": "Special Weather Statement issued July 28 at 1:45PM EDT by NWS Jackson KY",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "583b446554b959ef3b",
-      "title": "Severe Thunderstorm Warning issued July 27 at 12:55PM CDT until July 27 at 1:30PM CDT by NWS Milwaukee/Sullivan WI",
+      "article_id": "fad7d7dd0f7276b4d2",
+      "title": "Special Weather Statement issued July 28 at 11:46AM MDT by NWS Pueblo CO",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "10b58d54572ec8614e",
-      "title": "Severe Thunderstorm Warning issued July 27 at 1:54PM EDT until July 27 at 2:15PM EDT by NWS Jacksonville FL",
+      "article_id": "d45e645a631883bdce",
+      "title": "Odyssey translator writes scathing review of Nolan film adaptation",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "60fc5e6f62822170c0",
-      "title": "Making a Clinic Appointment",
+      "article_id": "4d8e8fe1757dd3cebb",
+      "title": "Rand Paul releases Anthony Fauci's pandemic-era diary notes. Here's what they tell us",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "af774452669f4d9d8a",
-      "title": "The Lunch Box",
+      "article_id": "e2271200242a597f6b",
+      "title": "Severe Thunderstorm Warning issued July 28 at 1:47PM EDT until July 28 at 2:30PM EDT by NWS Blacksburg VA",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "62d5f3d87834f6262c",
+      "title": "Returning the Wrong Shirt",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "5426fdbaa26ab4c50b",
+      "title": "A Low Phone Battery",
       "reason": "Selected image was unavailable: ValueError"
     }
   ]
