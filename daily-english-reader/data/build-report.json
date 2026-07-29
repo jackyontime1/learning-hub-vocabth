@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-07-28T17:47:37.799386+00:00",
-  "expected_toronto_date": "2026-07-28",
+  "started_at": "2026-07-29T17:42:35.396070+00:00",
+  "expected_toronto_date": "2026-07-29",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -18,65 +18,25 @@
   "schema_version": 10,
   "candidate_rejections": [
     {
-      "article_id": "fcbe280a17be48c282",
-      "title": "Japan earthquake: What we know so far",
-      "provider": "BBC News",
-      "level": "B1",
-      "reason": "RuntimeError: Full Thai translation unavailable for article fcbe280a17be48c282"
-    },
-    {
-      "article_id": "82286ddf3a4adf835e",
-      "title": "US singer D4vd to go on trial for murder in death of 14-year-old",
-      "provider": "BBC News",
-      "level": "B2",
-      "reason": "RuntimeError: Full Thai translation unavailable for article 82286ddf3a4adf835e"
-    },
-    {
-      "article_id": "9f8102f90af2353ad0",
-      "title": "Gordie Howe bridge means smoother transport, but not lower consumer prices: truckers",
-      "provider": "CBC News",
+      "article_id": "597d27d77fefe00547",
+      "title": "Pakistan study suggests microbiome may influence preterm birth",
+      "provider": "NPR",
       "level": "C1",
-      "reason": "RuntimeError: Full Thai translation unavailable for article 9f8102f90af2353ad0"
-    },
-    {
-      "article_id": "35a331b89458543bf6",
-      "title": "European wildfires in maps - and how they're being tackled",
-      "provider": "BBC News",
-      "level": "C1",
-      "reason": "RuntimeError: Full Thai translation unavailable for article 35a331b89458543bf6"
-    },
-    {
-      "article_id": "4e55f82b232d17d1b5",
-      "title": "Severe Thunderstorm Warning issued July 28 at 1:31PM EDT until July 28 at 2:15PM EDT by NWS Mount Holly NJ",
-      "provider": "US National Weather Service",
-      "level": "C1",
-      "reason": "RuntimeError: Full Thai translation unavailable for article 4e55f82b232d17d1b5"
+      "reason": "RuntimeError: Full Thai translation unavailable for article 597d27d77fefe00547"
     }
   ],
   "practice_story_count": 4,
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
-    "nllb_retries": 6,
-    "quality_failures": 5,
+    "nllb_retries": 1,
+    "quality_failures": 1,
     "rejection_reasons": {
-      "missing-number:07,16": 2,
-      "repeated-word-run": 1,
-      "repeated-2-gram": 1,
-      "repeated-3-gram": 1,
-      "missing-number:2017": 1,
-      "missing-unit:\\bdegrees?\\b|°[CF]\\b": 2,
-      "missing-number:1,401,4500,75": 1,
-      "missing-month:November": 1,
-      "missing-number:1,4500": 1,
-      "missing-number:162": 2,
-      "unexpected-non-thai-script": 2,
-      "missing-number:1:30,25": 1,
-      "missing-number:1:30": 1
+      "missing-unit:\\bmiles?\\b": 2
     }
   },
-  "completed_at": "2026-07-28T17:58:43.617375+00:00",
-  "latest_date": "2026-07-28",
+  "completed_at": "2026-07-29T17:53:50.205435+00:00",
+  "latest_date": "2026-07-29",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -92,26 +52,31 @@
     "easy_news": 2,
     "daily_life_practice_story": 4
   },
-  "fallback_image_count": 8,
+  "fallback_image_count": 9,
   "fallback_images": [
     {
-      "article_id": "3ed7e1bd17811a5a24",
-      "title": "AI tokens could become the kilowatt-hour of the AI age",
+      "article_id": "37911b96668b586edb",
+      "title": "Special Weather Statement issued July 29 at 1:39PM EDT by NWS Jacksonville FL",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "390b2f2a3eeb663ede",
+      "title": "Security for Prince Harry's visits to Canada topped all internationally protected persons",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "81e8e5c5c985c8cb1e",
-      "title": "Special Weather Statement issued July 28 at 1:45PM EDT by NWS Jackson KY",
+      "article_id": "2faf133cbe96178743",
+      "title": "Pictura: Perspective-View Self-Play at Scale for Driving",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "fad7d7dd0f7276b4d2",
-      "title": "Special Weather Statement issued July 28 at 11:46AM MDT by NWS Pueblo CO",
-      "reason": "No usable free image candidate"
+      "article_id": "c4d2710c1de199dcd2",
+      "title": "Where is best to see the July Buck Moon?",
+      "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "d45e645a631883bdce",
-      "title": "Odyssey translator writes scathing review of Nolan film adaptation",
+      "article_id": "4cd3c49426473fbc85",
+      "title": "Anthony Fauci invokes Fifth Amendment in Rand Paul Senate hearing",
       "reason": "No usable free image candidate"
     },
     {
@@ -120,18 +85,18 @@
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "e2271200242a597f6b",
-      "title": "Severe Thunderstorm Warning issued July 28 at 1:47PM EDT until July 28 at 2:30PM EDT by NWS Blacksburg VA",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "62d5f3d87834f6262c",
-      "title": "Returning the Wrong Shirt",
+      "article_id": "e088524dffadbed3be",
+      "title": "Checking a Bank Transfer",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "5426fdbaa26ab4c50b",
-      "title": "A Low Phone Battery",
+      "article_id": "5a896db2385fa4ba24",
+      "title": "Meeting a New Neighbor",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "b9b55e667ebedb2ecf",
+      "title": "Laundry Before the Rain",
       "reason": "Selected image was unavailable: ValueError"
     }
   ]
