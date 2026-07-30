@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-07-29T17:42:35.396070+00:00",
-  "expected_toronto_date": "2026-07-29",
+  "started_at": "2026-07-30T17:53:29.589809+00:00",
+  "expected_toronto_date": "2026-07-30",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -18,25 +18,36 @@
   "schema_version": 10,
   "candidate_rejections": [
     {
-      "article_id": "597d27d77fefe00547",
-      "title": "Pakistan study suggests microbiome may influence preterm birth",
-      "provider": "NPR",
+      "article_id": "694c1a53b8602359e8",
+      "title": "Special Weather Statement issued July 30 at 12:44PM CDT by NWS Mobile AL",
+      "provider": "US National Weather Service",
+      "level": "B1",
+      "reason": "RuntimeError: Full Thai translation unavailable for article 694c1a53b8602359e8"
+    },
+    {
+      "article_id": "c9db98f50ad7a12af9",
+      "title": "Father of teen school shooter sentenced to 15 years in prison",
+      "provider": "BBC News",
       "level": "C1",
-      "reason": "RuntimeError: Full Thai translation unavailable for article 597d27d77fefe00547"
+      "reason": "RuntimeError: Full Thai translation unavailable for article c9db98f50ad7a12af9"
     }
   ],
   "practice_story_count": 4,
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
-    "nllb_retries": 1,
-    "quality_failures": 1,
+    "nllb_retries": 2,
+    "quality_failures": 2,
     "rejection_reasons": {
-      "missing-unit:\\bmiles?\\b": 2
+      "repeated-2-gram": 1,
+      "repeated-3-gram": 1,
+      "missing-number:15": 1,
+      "unexpected-non-thai-script": 1,
+      "missing-unit:\\bdegrees?\\b|°[CF]\\b": 2
     }
   },
-  "completed_at": "2026-07-29T17:53:50.205435+00:00",
-  "latest_date": "2026-07-29",
+  "completed_at": "2026-07-30T18:07:50.037464+00:00",
+  "latest_date": "2026-07-30",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -52,51 +63,41 @@
     "easy_news": 2,
     "daily_life_practice_story": 4
   },
-  "fallback_image_count": 9,
+  "fallback_image_count": 7,
   "fallback_images": [
     {
-      "article_id": "37911b96668b586edb",
-      "title": "Special Weather Statement issued July 29 at 1:39PM EDT by NWS Jacksonville FL",
+      "article_id": "f8796c48bb723778ba",
+      "title": "Marine Weather Statement issued July 30 at 1:51PM EDT by NWS Melbourne FL",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "390b2f2a3eeb663ede",
-      "title": "Security for Prince Harry's visits to Canada topped all internationally protected persons",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "2faf133cbe96178743",
-      "title": "Pictura: Perspective-View Self-Play at Scale for Driving",
+      "article_id": "be4599ecafee9b7e91",
+      "title": "Despite WestJet wind-down plans, a strike isn't a sure bet, but the clock is ticking",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "c4d2710c1de199dcd2",
-      "title": "Where is best to see the July Buck Moon?",
+      "article_id": "f89af87d339852b223",
+      "title": "US launches 'heavy' strikes on Iran after attempted attack on American troops",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "4cd3c49426473fbc85",
-      "title": "Anthony Fauci invokes Fifth Amendment in Rand Paul Senate hearing",
+      "article_id": "950b9a90a1de314853",
+      "title": "2nd hiker in a week dies after falling from Banff National Park mountain",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "94883a62f27200d32b",
+      "title": "Sen. Paul threatens to hold Fauci in contempt. And, a new rule undercuts U.S. asylum",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "4d8e8fe1757dd3cebb",
-      "title": "Rand Paul releases Anthony Fauci's pandemic-era diary notes. Here's what they tell us",
-      "reason": "Selected image was unavailable: ValueError"
+      "article_id": "ae2d60229665b756d1",
+      "title": "Animal spillover? Lab leak? What the science says about the origins of COVID-19",
+      "reason": "No usable free image candidate"
     },
     {
-      "article_id": "e088524dffadbed3be",
-      "title": "Checking a Bank Transfer",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "5a896db2385fa4ba24",
-      "title": "Meeting a New Neighbor",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "b9b55e667ebedb2ecf",
-      "title": "Laundry Before the Rain",
+      "article_id": "abef8cbe77b5cb2034",
+      "title": "Asking About a Restaurant Order",
       "reason": "Selected image was unavailable: ValueError"
     }
   ]
