@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-07-30T17:53:29.589809+00:00",
-  "expected_toronto_date": "2026-07-30",
+  "started_at": "2026-07-31T17:55:54.994627+00:00",
+  "expected_toronto_date": "2026-07-31",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -16,38 +16,17 @@
     "C1": 2
   },
   "schema_version": 10,
-  "candidate_rejections": [
-    {
-      "article_id": "694c1a53b8602359e8",
-      "title": "Special Weather Statement issued July 30 at 12:44PM CDT by NWS Mobile AL",
-      "provider": "US National Weather Service",
-      "level": "B1",
-      "reason": "RuntimeError: Full Thai translation unavailable for article 694c1a53b8602359e8"
-    },
-    {
-      "article_id": "c9db98f50ad7a12af9",
-      "title": "Father of teen school shooter sentenced to 15 years in prison",
-      "provider": "BBC News",
-      "level": "C1",
-      "reason": "RuntimeError: Full Thai translation unavailable for article c9db98f50ad7a12af9"
-    }
-  ],
+  "candidate_rejections": [],
   "practice_story_count": 4,
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
-    "nllb_retries": 2,
-    "quality_failures": 2,
-    "rejection_reasons": {
-      "repeated-2-gram": 1,
-      "repeated-3-gram": 1,
-      "missing-number:15": 1,
-      "unexpected-non-thai-script": 1,
-      "missing-unit:\\bdegrees?\\b|°[CF]\\b": 2
-    }
+    "nllb_retries": 0,
+    "quality_failures": 0,
+    "rejection_reasons": {}
   },
-  "completed_at": "2026-07-30T18:07:50.037464+00:00",
-  "latest_date": "2026-07-30",
+  "completed_at": "2026-07-31T18:05:24.742630+00:00",
+  "latest_date": "2026-07-31",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -66,29 +45,29 @@
   "fallback_image_count": 7,
   "fallback_images": [
     {
-      "article_id": "f8796c48bb723778ba",
-      "title": "Marine Weather Statement issued July 30 at 1:51PM EDT by NWS Melbourne FL",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "be4599ecafee9b7e91",
-      "title": "Despite WestJet wind-down plans, a strike isn't a sure bet, but the clock is ticking",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "f89af87d339852b223",
-      "title": "US launches 'heavy' strikes on Iran after attempted attack on American troops",
+      "article_id": "7171bf27640d2f31f8",
+      "title": "Trump says 'Board of Peace' reaches deal for Hamas, other Gaza groups to disarm",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "950b9a90a1de314853",
-      "title": "2nd hiker in a week dies after falling from Banff National Park mountain",
+      "article_id": "2536084a79312fdb63",
+      "title": "WestJet flight attendants' union serves 72-hour strike notice",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "94883a62f27200d32b",
-      "title": "Sen. Paul threatens to hold Fauci in contempt. And, a new rule undercuts U.S. asylum",
+      "article_id": "e9ee856b75d1eb4e65",
+      "title": "Nicaraguan leader proposes extending presidential term by another year",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "c83dd52db69d73cbad",
+      "title": "Four women accuse Jared Leto of criminal sexual conduct",
       "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "0c0efd16b4932f97cc",
+      "title": "Amazon and Apple just told us more about their AI plans - here are three things we learned",
+      "reason": "Selected image was unavailable: ValueError"
     },
     {
       "article_id": "ae2d60229665b756d1",
@@ -96,8 +75,8 @@
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "abef8cbe77b5cb2034",
-      "title": "Asking About a Restaurant Order",
+      "article_id": "8d628a82f0f96842e7",
+      "title": "A Phone Call from the Driver",
       "reason": "Selected image was unavailable: ValueError"
     }
   ]
