@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-07-31T17:55:54.994627+00:00",
-  "expected_toronto_date": "2026-07-31",
+  "started_at": "2026-08-01T17:18:34.058753+00:00",
+  "expected_toronto_date": "2026-08-01",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -16,17 +16,27 @@
     "C1": 2
   },
   "schema_version": 10,
-  "candidate_rejections": [],
+  "candidate_rejections": [
+    {
+      "article_id": "f9f576cd6373ccdb69",
+      "title": "Saskatoon fire crews searching river after reports of missing person, dog",
+      "provider": "CBC News",
+      "level": "B1",
+      "reason": "RuntimeError: Full Thai translation unavailable for article f9f576cd6373ccdb69"
+    }
+  ],
   "practice_story_count": 4,
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
-    "nllb_retries": 0,
-    "quality_failures": 0,
-    "rejection_reasons": {}
+    "nllb_retries": 1,
+    "quality_failures": 1,
+    "rejection_reasons": {
+      "missing-number:50": 2
+    }
   },
-  "completed_at": "2026-07-31T18:05:24.742630+00:00",
-  "latest_date": "2026-07-31",
+  "completed_at": "2026-08-01T17:30:01.699311+00:00",
+  "latest_date": "2026-08-01",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -45,24 +55,29 @@
   "fallback_image_count": 7,
   "fallback_images": [
     {
-      "article_id": "7171bf27640d2f31f8",
-      "title": "Trump says 'Board of Peace' reaches deal for Hamas, other Gaza groups to disarm",
+      "article_id": "6d0fdebe19501113dc",
+      "title": "ReToken: One Token to Improve Vision-Language Models for Visual Retrieval",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "2536084a79312fdb63",
-      "title": "WestJet flight attendants' union serves 72-hour strike notice",
+      "article_id": "a1f35fac0381226675",
+      "title": "Change2Task: From Repository Changes to Executable Coding Agent Tasks and Environments",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "e9ee856b75d1eb4e65",
-      "title": "Nicaraguan leader proposes extending presidential term by another year",
+      "article_id": "8c3854bd94ede8e69b",
+      "title": "Drought conditions may worsen before improving as little rain in sight",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "c83dd52db69d73cbad",
-      "title": "Four women accuse Jared Leto of criminal sexual conduct",
-      "reason": "No usable free image candidate"
+      "article_id": "fe577c90b516136231",
+      "title": "One of Calgary's most decorated Second World War veterans dies at 101",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "cf4f03fc763048c6b5",
+      "title": "Keeping cool without AC: Our readers share their tips",
+      "reason": "Selected image was unavailable: ValueError"
     },
     {
       "article_id": "0c0efd16b4932f97cc",
@@ -70,13 +85,8 @@
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "ae2d60229665b756d1",
-      "title": "Animal spillover? Lab leak? What the science says about the origins of COVID-19",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "8d628a82f0f96842e7",
-      "title": "A Phone Call from the Driver",
+      "article_id": "efa9dd8efdbc39d2c1",
+      "title": "Sending a Parcel",
       "reason": "Selected image was unavailable: ValueError"
     }
   ]
