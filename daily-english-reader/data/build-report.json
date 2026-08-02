@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-08-01T17:18:34.058753+00:00",
-  "expected_toronto_date": "2026-08-01",
+  "started_at": "2026-08-02T17:19:32.257564+00:00",
+  "expected_toronto_date": "2026-08-02",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -18,11 +18,11 @@
   "schema_version": 10,
   "candidate_rejections": [
     {
-      "article_id": "f9f576cd6373ccdb69",
-      "title": "Saskatoon fire crews searching river after reports of missing person, dog",
+      "article_id": "7d8d25f563f9106441",
+      "title": "Evacuations underway as fast-growing wildfires threaten communities in B.C.'s Interior",
       "provider": "CBC News",
-      "level": "B1",
-      "reason": "RuntimeError: Full Thai translation unavailable for article f9f576cd6373ccdb69"
+      "level": "C1",
+      "reason": "RuntimeError: Full Thai translation unavailable for article 7d8d25f563f9106441"
     }
   ],
   "practice_story_count": 4,
@@ -32,11 +32,11 @@
     "nllb_retries": 1,
     "quality_failures": 1,
     "rejection_reasons": {
-      "missing-number:50": 2
+      "missing-number:1": 2
     }
   },
-  "completed_at": "2026-08-01T17:30:01.699311+00:00",
-  "latest_date": "2026-08-01",
+  "completed_at": "2026-08-02T17:35:44.395674+00:00",
+  "latest_date": "2026-08-02",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -52,41 +52,46 @@
     "easy_news": 2,
     "daily_life_practice_story": 4
   },
-  "fallback_image_count": 7,
+  "fallback_image_count": 8,
   "fallback_images": [
     {
-      "article_id": "6d0fdebe19501113dc",
-      "title": "ReToken: One Token to Improve Vision-Language Models for Visual Retrieval",
+      "article_id": "06a8dfbb3823e8ccd4",
+      "title": "From a mother's grief to a nation's fury: How an exam leak became a political storm",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "a1f35fac0381226675",
-      "title": "Change2Task: From Repository Changes to Executable Coding Agent Tasks and Environments",
+      "article_id": "c6e724e45fc2e70081",
+      "title": "First 7-Eleven, now Zabka: Canadian convenience giant Alimentation Couche-Tard eyes takeover of Polish rival",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "5d41d7def7b5b479a1",
+      "title": "How these slum dwellers went from one-room shacks to beautiful new apartments",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "8c3854bd94ede8e69b",
-      "title": "Drought conditions may worsen before improving as little rain in sight",
+      "article_id": "ea28562258a50b4f1a",
+      "title": "FIFA scraps controversial deal to sell stakes in World Cup to private investors",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "251ee94e7a523adc20",
+      "title": "The man who phoned in Canada's most famous UFO sighting became the face of the mystery",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "fe577c90b516136231",
-      "title": "One of Calgary's most decorated Second World War veterans dies at 101",
+      "article_id": "bb24bee4b55408453e",
+      "title": "Special Weather Statement issued August 2 at 12:13PM CDT by NWS Mobile AL",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "cf1a3b54e522b4c124",
+      "title": "Leaving a Phone for Repair",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "cf4f03fc763048c6b5",
-      "title": "Keeping cool without AC: Our readers share their tips",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "0c0efd16b4932f97cc",
-      "title": "Amazon and Apple just told us more about their AI plans - here are three things we learned",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "efa9dd8efdbc39d2c1",
-      "title": "Sending a Parcel",
+      "article_id": "babc2707db06865078",
+      "title": "The Bus Card",
       "reason": "Selected image was unavailable: ValueError"
     }
   ]
