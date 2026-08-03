@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-08-02T17:19:32.257564+00:00",
-  "expected_toronto_date": "2026-08-02",
+  "started_at": "2026-08-03T18:10:13.415914+00:00",
+  "expected_toronto_date": "2026-08-03",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -16,27 +16,19 @@
     "C1": 2
   },
   "schema_version": 10,
-  "candidate_rejections": [
-    {
-      "article_id": "7d8d25f563f9106441",
-      "title": "Evacuations underway as fast-growing wildfires threaten communities in B.C.'s Interior",
-      "provider": "CBC News",
-      "level": "C1",
-      "reason": "RuntimeError: Full Thai translation unavailable for article 7d8d25f563f9106441"
-    }
-  ],
+  "candidate_rejections": [],
   "practice_story_count": 4,
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
     "nllb_retries": 1,
-    "quality_failures": 1,
+    "quality_failures": 0,
     "rejection_reasons": {
-      "missing-number:1": 2
+      "missing-number:6": 1
     }
   },
-  "completed_at": "2026-08-02T17:35:44.395674+00:00",
-  "latest_date": "2026-08-02",
+  "completed_at": "2026-08-03T18:22:24.005199+00:00",
+  "latest_date": "2026-08-03",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -52,26 +44,31 @@
     "easy_news": 2,
     "daily_life_practice_story": 4
   },
-  "fallback_image_count": 8,
+  "fallback_image_count": 7,
   "fallback_images": [
     {
-      "article_id": "06a8dfbb3823e8ccd4",
-      "title": "From a mother's grief to a nation's fury: How an exam leak became a political storm",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "c6e724e45fc2e70081",
-      "title": "First 7-Eleven, now Zabka: Canadian convenience giant Alimentation Couche-Tard eyes takeover of Polish rival",
+      "article_id": "f5c65087b33f62866c",
+      "title": "A blaze on an Indonesian passenger ferry leaves at least 5 dead and dozens missing",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "5d41d7def7b5b479a1",
-      "title": "How these slum dwellers went from one-room shacks to beautiful new apartments",
+      "article_id": "ee856208671471ae73",
+      "title": "Morocco denies responsibility for events at its border with Spain, as deaths near 100",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "ea28562258a50b4f1a",
-      "title": "FIFA scraps controversial deal to sell stakes in World Cup to private investors",
+      "article_id": "5cbb9eae4cd02cbdbf",
+      "title": "Lurkers in the deep: How Canada's new submarines will be used in peace and potential war",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "0ba151d4f381904261",
+      "title": "After 8 years and 15,000 kilometres, B.C. couple nears end of Trans Canada Trail trek",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "eba6e92536169bb02f",
+      "title": "Special Marine Warning issued August 3 at 2:05PM EDT until August 3 at 3:15PM EDT by NWS Baltimore MD/Washington DC",
       "reason": "No usable free image candidate"
     },
     {
@@ -80,18 +77,8 @@
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "bb24bee4b55408453e",
-      "title": "Special Weather Statement issued August 2 at 12:13PM CDT by NWS Mobile AL",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "cf1a3b54e522b4c124",
-      "title": "Leaving a Phone for Repair",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "babc2707db06865078",
-      "title": "The Bus Card",
+      "article_id": "a0a42e4ef5b2b3381f",
+      "title": "The Lunch Box",
       "reason": "Selected image was unavailable: ValueError"
     }
   ]
