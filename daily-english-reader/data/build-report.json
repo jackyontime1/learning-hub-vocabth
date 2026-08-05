@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-08-03T18:10:13.415914+00:00",
-  "expected_toronto_date": "2026-08-03",
+  "started_at": "2026-08-05T17:56:05.474478+00:00",
+  "expected_toronto_date": "2026-08-05",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -17,18 +17,20 @@
   },
   "schema_version": 10,
   "candidate_rejections": [],
-  "practice_story_count": 4,
+  "practice_story_count": 8,
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
-    "nllb_retries": 1,
+    "nllb_retries": 2,
     "quality_failures": 0,
     "rejection_reasons": {
-      "missing-number:6": 1
+      "unexpected-non-thai-script": 1,
+      "repeated-junk-string": 2,
+      "missing-number:13": 1
     }
   },
-  "completed_at": "2026-08-03T18:22:24.005199+00:00",
-  "latest_date": "2026-08-03",
+  "completed_at": "2026-08-05T18:26:28.831848+00:00",
+  "latest_date": "2026-08-05",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -44,41 +46,51 @@
     "easy_news": 2,
     "daily_life_practice_story": 4
   },
-  "fallback_image_count": 7,
+  "fallback_image_count": 9,
   "fallback_images": [
     {
-      "article_id": "f5c65087b33f62866c",
-      "title": "A blaze on an Indonesian passenger ferry leaves at least 5 dead and dozens missing",
+      "article_id": "831fc99729a8b4e7ae",
+      "title": "ParVL: Parallel Scaling and Expandable Compute Allocation for Multimodal LLMs",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "ee856208671471ae73",
-      "title": "Morocco denies responsibility for events at its border with Spain, as deaths near 100",
+      "article_id": "ca87532ab895a1d17f",
+      "title": "string2string Studio: An Interactive, In-Browser Platform for String-to-String Algorithms",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "5cbb9eae4cd02cbdbf",
-      "title": "Lurkers in the deep: How Canada's new submarines will be used in peace and potential war",
+      "article_id": "9bdbac0005f2631116",
+      "title": "Pakistan restricts international media reporting",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "0ba151d4f381904261",
-      "title": "After 8 years and 15,000 kilometres, B.C. couple nears end of Trans Canada Trail trek",
+      "article_id": "ebc5d4068c5c10d829",
+      "title": "See the Sun like never before with most detailed images yet",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "eba6e92536169bb02f",
-      "title": "Special Marine Warning issued August 3 at 2:05PM EDT until August 3 at 3:15PM EDT by NWS Baltimore MD/Washington DC",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "251ee94e7a523adc20",
-      "title": "The man who phoned in Canada's most famous UFO sighting became the face of the mystery",
+      "article_id": "2702bfe0326f4bcfb1",
+      "title": "Why Texas is betting 'Y'all Street' can take on Wall Street",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "a0a42e4ef5b2b3381f",
-      "title": "The Lunch Box",
+      "article_id": "0e672c50c3b8f3779b",
+      "title": "Where in the West Country to see the biggest solar eclipse since 1999",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "8b78c52ef493bcca1d",
+      "title": "Returning the Wrong Shirt",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "f3246ac92cd22b90a9",
+      "title": "Meeting a New Neighbor",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "2d58429a877e96379c",
+      "title": "Laundry Before the Rain",
       "reason": "Selected image was unavailable: ValueError"
     }
   ]
