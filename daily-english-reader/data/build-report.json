@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-08-05T17:56:05.474478+00:00",
-  "expected_toronto_date": "2026-08-05",
+  "started_at": "2026-08-07T17:11:31.932367+00:00",
+  "expected_toronto_date": "2026-08-07",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -16,21 +16,43 @@
     "C1": 2
   },
   "schema_version": 10,
-  "candidate_rejections": [],
+  "candidate_rejections": [
+    {
+      "article_id": "23390b532579c37c11",
+      "title": "Mexico and Peru restore diplomatic relations after asylum row",
+      "provider": "BBC News",
+      "level": "B2",
+      "reason": "RuntimeError: Full Thai translation unavailable for article 23390b532579c37c11"
+    },
+    {
+      "article_id": "72a8d933dde524f820",
+      "title": "Heat Advisory issued August 7 at 10:06AM PDT until August 9 at 10:00PM PDT by NWS San Francisco CA",
+      "provider": "US National Weather Service",
+      "level": "C1",
+      "reason": "RuntimeError: Unable to produce 3 valid useful phrases for C1 reading"
+    },
+    {
+      "article_id": "cdd8c4e0fa5a753f89",
+      "title": "Why was Taiwan’s president evacuated in the middle of the night?",
+      "provider": "BBC News",
+      "level": "C1",
+      "reason": "RuntimeError: Unable to produce 3 valid useful phrases for C1 reading"
+    }
+  ],
   "practice_story_count": 8,
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
-    "nllb_retries": 2,
-    "quality_failures": 0,
+    "nllb_retries": 3,
+    "quality_failures": 1,
     "rejection_reasons": {
-      "unexpected-non-thai-script": 1,
-      "repeated-junk-string": 2,
-      "missing-number:13": 1
+      "missing-number:2025": 2,
+      "missing-number:811": 1,
+      "repeated-junk-string": 1
     }
   },
-  "completed_at": "2026-08-05T18:26:28.831848+00:00",
-  "latest_date": "2026-08-05",
+  "completed_at": "2026-08-07T17:36:32.996688+00:00",
+  "latest_date": "2026-08-07",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -46,51 +68,41 @@
     "easy_news": 2,
     "daily_life_practice_story": 4
   },
-  "fallback_image_count": 9,
+  "fallback_image_count": 7,
   "fallback_images": [
     {
-      "article_id": "831fc99729a8b4e7ae",
-      "title": "ParVL: Parallel Scaling and Expandable Compute Allocation for Multimodal LLMs",
+      "article_id": "c5d8ca3b9b799112ae",
+      "title": "Granby Zoo issues warning to visitors who may have had contact with Japanese macaques",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "ca87532ab895a1d17f",
-      "title": "string2string Studio: An Interactive, In-Browser Platform for String-to-String Algorithms",
+      "article_id": "73dd00bc91ec61c40d",
+      "title": "Everyone's talking about hormone therapy for menopause. Should I be on it?",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "9bdbac0005f2631116",
-      "title": "Pakistan restricts international media reporting",
-      "reason": "Selected image was unavailable: ValueError"
+      "article_id": "de57ee138c3ec0771b",
+      "title": "Special Weather Statement issued August 7 at 12:03PM CDT by NWS Norman OK",
+      "reason": "No usable free image candidate"
     },
     {
-      "article_id": "ebc5d4068c5c10d829",
-      "title": "See the Sun like never before with most detailed images yet",
-      "reason": "Selected image was unavailable: ValueError"
+      "article_id": "8d402cfe7abc6c2452",
+      "title": "‘Wiped out’ - BBC reports from Spokane neighbourhood devastated by fires",
+      "reason": "No usable free image candidate"
     },
     {
-      "article_id": "2702bfe0326f4bcfb1",
-      "title": "Why Texas is betting 'Y'all Street' can take on Wall Street",
-      "reason": "Selected image was unavailable: ValueError"
+      "article_id": "079254ca3164039a54",
+      "title": "Special Weather Statement issued August 7 at 12:07PM CDT by NWS Jackson MS",
+      "reason": "No usable free image candidate"
     },
     {
-      "article_id": "0e672c50c3b8f3779b",
-      "title": "Where in the West Country to see the biggest solar eclipse since 1999",
-      "reason": "Selected image was unavailable: ValueError"
+      "article_id": "89dc221a7985ab0468",
+      "title": "A new vaccine could vanquish a major cause of deadly diarrheal disease",
+      "reason": "No usable free image candidate"
     },
     {
-      "article_id": "8b78c52ef493bcca1d",
-      "title": "Returning the Wrong Shirt",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "f3246ac92cd22b90a9",
-      "title": "Meeting a New Neighbor",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "2d58429a877e96379c",
-      "title": "Laundry Before the Rain",
+      "article_id": "f838adeed5803a6173",
+      "title": "Asking About a Restaurant Order",
       "reason": "Selected image was unavailable: ValueError"
     }
   ]
