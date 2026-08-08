@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-08-07T17:11:31.932367+00:00",
-  "expected_toronto_date": "2026-08-07",
+  "started_at": "2026-08-08T16:55:33.521649+00:00",
+  "expected_toronto_date": "2026-08-08",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -18,41 +18,27 @@
   "schema_version": 10,
   "candidate_rejections": [
     {
-      "article_id": "23390b532579c37c11",
-      "title": "Mexico and Peru restore diplomatic relations after asylum row",
-      "provider": "BBC News",
-      "level": "B2",
-      "reason": "RuntimeError: Full Thai translation unavailable for article 23390b532579c37c11"
-    },
-    {
-      "article_id": "72a8d933dde524f820",
-      "title": "Heat Advisory issued August 7 at 10:06AM PDT until August 9 at 10:00PM PDT by NWS San Francisco CA",
-      "provider": "US National Weather Service",
-      "level": "C1",
-      "reason": "RuntimeError: Unable to produce 3 valid useful phrases for C1 reading"
-    },
-    {
-      "article_id": "cdd8c4e0fa5a753f89",
-      "title": "Why was Taiwan’s president evacuated in the middle of the night?",
+      "article_id": "f6818ff386508ee159",
+      "title": "Trump's ex-lawyer Todd Blanche narrowly confirmed as US attorney general",
       "provider": "BBC News",
       "level": "C1",
-      "reason": "RuntimeError: Unable to produce 3 valid useful phrases for C1 reading"
+      "reason": "RuntimeError: Full Thai translation unavailable for article f6818ff386508ee159"
     }
   ],
-  "practice_story_count": 8,
+  "practice_story_count": 4,
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
-    "nllb_retries": 3,
+    "nllb_retries": 2,
     "quality_failures": 1,
     "rejection_reasons": {
-      "missing-number:2025": 2,
-      "missing-number:811": 1,
-      "repeated-junk-string": 1
+      "repeated-junk-string": 1,
+      "unexpected-non-thai-script": 2,
+      "missing-number:1.3": 1
     }
   },
-  "completed_at": "2026-08-07T17:36:32.996688+00:00",
-  "latest_date": "2026-08-07",
+  "completed_at": "2026-08-08T17:01:00.610043+00:00",
+  "latest_date": "2026-08-08",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -71,28 +57,28 @@
   "fallback_image_count": 7,
   "fallback_images": [
     {
-      "article_id": "c5d8ca3b9b799112ae",
-      "title": "Granby Zoo issues warning to visitors who may have had contact with Japanese macaques",
+      "article_id": "219d4beeca7ff87ac0",
+      "title": "Severe Thunderstorm Warning issued August 8 at 12:44PM EDT until August 8 at 1:00PM EDT by NWS Charleston WV",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "73dd00bc91ec61c40d",
-      "title": "Everyone's talking about hormone therapy for menopause. Should I be on it?",
+      "article_id": "6a7423a9f223844cce",
+      "title": "Watch: Nasa astronauts conduct 6.5-hour spacewalk outside ISS",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "de57ee138c3ec0771b",
-      "title": "Special Weather Statement issued August 7 at 12:03PM CDT by NWS Norman OK",
+      "article_id": "77b12869083f82e1f8",
+      "title": "Spanish police arrest 78 people in bust of 'one of largest' smuggling networks",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "ab02b6e56ef3e3eceb",
+      "title": "Hosepipe bans in force as drought declared - is your area affected?",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "8d402cfe7abc6c2452",
-      "title": "‘Wiped out’ - BBC reports from Spokane neighbourhood devastated by fires",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "079254ca3164039a54",
-      "title": "Special Weather Statement issued August 7 at 12:07PM CDT by NWS Jackson MS",
+      "article_id": "9ce1b2c9a2fd0b3f19",
+      "title": "Special Weather Statement issued August 8 at 11:53AM CDT by NWS Shreveport LA",
       "reason": "No usable free image candidate"
     },
     {
@@ -101,8 +87,8 @@
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "f838adeed5803a6173",
-      "title": "Asking About a Restaurant Order",
+      "article_id": "1e04842859a6999763",
+      "title": "A Phone Call from the Driver",
       "reason": "Selected image was unavailable: ValueError"
     }
   ]
