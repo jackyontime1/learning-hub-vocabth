@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-08-10T17:12:17.906075+00:00",
-  "expected_toronto_date": "2026-08-10",
+  "started_at": "2026-08-12T17:15:58.833553+00:00",
+  "expected_toronto_date": "2026-08-12",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -18,36 +18,29 @@
   "schema_version": 10,
   "candidate_rejections": [
     {
-      "article_id": "83bd47d990df7216c1",
-      "title": "There's a birth control backlash online. Can it explain the rise in abortions?",
-      "provider": "NPR",
-      "level": "B1",
-      "reason": "RuntimeError: Full Thai translation unavailable for article 83bd47d990df7216c1"
-    },
-    {
-      "article_id": "d261d4f7601c86070d",
-      "title": "Watch: What we know about suspected crime boss Daniel Kinahan",
+      "article_id": "3efd2489d9b378ae50",
+      "title": "In shattered Cali, residents search for loved ones and signs of hope",
       "provider": "BBC News",
       "level": "C1",
-      "reason": "RuntimeError: Full Thai translation unavailable for article d261d4f7601c86070d"
+      "reason": "RuntimeError: Unable to produce 3 valid useful phrases for C1 reading"
     }
   ],
-  "practice_story_count": 4,
+  "practice_story_count": 8,
   "practice_fallback_count": 0,
   "translation_quality": {
-    "cache_rejections": 1,
-    "nllb_retries": 4,
-    "quality_failures": 2,
+    "cache_rejections": 0,
+    "nllb_retries": 2,
+    "quality_failures": 0,
     "rejection_reasons": {
-      "empty-translation": 1,
-      "unexpected-non-thai-script": 2,
-      "missing-number:30": 1,
-      "repeated-junk-string": 1,
-      "missing-number:2015,2017": 2
+      "unexpected-non-thai-script": 1,
+      "repeated-word-run": 1,
+      "repeated-2-gram": 1,
+      "repeated-3-gram": 1,
+      "repeated-junk-string": 1
     }
   },
-  "completed_at": "2026-08-10T17:38:21.543906+00:00",
-  "latest_date": "2026-08-10",
+  "completed_at": "2026-08-12T17:25:21.309027+00:00",
+  "latest_date": "2026-08-12",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -63,46 +56,56 @@
     "easy_news": 2,
     "daily_life_practice_story": 4
   },
-  "fallback_image_count": 8,
+  "fallback_image_count": 10,
   "fallback_images": [
     {
-      "article_id": "479cdc37de95db374a",
-      "title": "Don Nelson, 2nd-winningest NBA coach who won 5 titles as Celtics player, dead at 86",
+      "article_id": "e5966883a3110646f8",
+      "title": "Special Weather Statement issued August 12 at 1:12PM EDT by NWS Jacksonville FL",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "927a75762469c652d6",
-      "title": "In Munich, it's never too early for a breakfast beer with sausage and pretzels",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "a5829615d6f9e1faa2",
-      "title": "Work at National Trust site to prevent flooding",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "bdbc54c3589983a81a",
-      "title": "Australia is the planet's extinction hotspot, but one animal offers a glimmer of hope",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "51ea7bc3b5e8ae5755",
-      "title": "Decades of abuse revealed at Michigan art school. And, the Iran war's impact on midterms",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "b4f94a7c1c4ee4fc48",
-      "title": "Severe Thunderstorm Warning issued August 10 at 1:09PM EDT until August 10 at 1:15PM EDT by NWS Wilmington OH",
+      "article_id": "a7b283b423f385c03e",
+      "title": "MultiModal Code-Switching: Interleaving Visual Objects into Language for Explicit Object-Level Alignment",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "aff748bf72df5ac7ff",
-      "title": "Leaving a Phone for Repair",
+      "article_id": "c7baeeaed9710c423d",
+      "title": "AI agent hacks gym to get its user a spot in pilates class",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "75d094f85d3b1f5427",
+      "title": "The hurdles facing Canada's planned pandemic-busting lab",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "2fd97dd5db60e3e6ef",
+      "title": "When and where in the West Country to see the solar eclipse",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "49dec817a31177e82b",
-      "title": "The Lunch Box",
+      "article_id": "e4bae3e850da262337",
+      "title": "His wedding guests gave $6k to fund a health startup. Now it's won a $3 million prize",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "030aecd8512ea5f257",
+      "title": "Changing a Work Shift",
+      "reason": "Selected image was unavailable: HTTPError"
+    },
+    {
+      "article_id": "10549154daaf7768c9",
+      "title": "Making a Clinic Appointment",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "0a013355614ee95d39",
+      "title": "Meeting a New Neighbor",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "d0a4fc6c428505f7eb",
+      "title": "Laundry Before the Rain",
       "reason": "Selected image was unavailable: ValueError"
     }
   ]
