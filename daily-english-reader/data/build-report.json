@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-08-12T17:15:58.833553+00:00",
-  "expected_toronto_date": "2026-08-12",
+  "started_at": "2026-08-13T17:16:15.315549+00:00",
+  "expected_toronto_date": "2026-08-13",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -18,29 +18,44 @@
   "schema_version": 10,
   "candidate_rejections": [
     {
+      "article_id": "789cbeb17b92558096",
+      "title": "Baby Shark boy set to make K-pop debut",
+      "provider": "BBC News",
+      "level": "B2",
+      "reason": "RuntimeError: Unable to produce 3 valid useful phrases for B2 reading"
+    },
+    {
       "article_id": "3efd2489d9b378ae50",
       "title": "In shattered Cali, residents search for loved ones and signs of hope",
       "provider": "BBC News",
       "level": "C1",
       "reason": "RuntimeError: Unable to produce 3 valid useful phrases for C1 reading"
+    },
+    {
+      "article_id": "8ab8205c1cbd2fcaa1",
+      "title": "Special Marine Warning issued August 13 at 1:03PM EDT until August 13 at 2:00PM EDT by NWS Boston/Norton MA",
+      "provider": "US National Weather Service",
+      "level": "C1",
+      "reason": "RuntimeError: Full Thai translation unavailable for article 8ab8205c1cbd2fcaa1"
     }
   ],
-  "practice_story_count": 8,
+  "practice_story_count": 4,
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
-    "nllb_retries": 2,
-    "quality_failures": 0,
+    "nllb_retries": 3,
+    "quality_failures": 1,
     "rejection_reasons": {
       "unexpected-non-thai-script": 1,
-      "repeated-word-run": 1,
-      "repeated-2-gram": 1,
-      "repeated-3-gram": 1,
-      "repeated-junk-string": 1
+      "repeated-junk-string": 2,
+      "missing-number:50": 1,
+      "missing-percent-unit": 1,
+      "missing-number:1:03": 2,
+      "missing-time-period": 2
     }
   },
-  "completed_at": "2026-08-12T17:25:21.309027+00:00",
-  "latest_date": "2026-08-12",
+  "completed_at": "2026-08-13T17:23:07.399892+00:00",
+  "latest_date": "2026-08-13",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -56,27 +71,22 @@
     "easy_news": 2,
     "daily_life_practice_story": 4
   },
-  "fallback_image_count": 10,
+  "fallback_image_count": 6,
   "fallback_images": [
     {
-      "article_id": "e5966883a3110646f8",
-      "title": "Special Weather Statement issued August 12 at 1:12PM EDT by NWS Jacksonville FL",
+      "article_id": "966297aa8a966b24fe",
+      "title": "Feel so busy you don't even realize you're busy? Try doing a time audit",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "ae93e40466a018a1a1",
+      "title": "CUSMA breakdown could mean hundreds of thousands of jobs, a trillion dollars lost: report",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "a7b283b423f385c03e",
-      "title": "MultiModal Code-Switching: Interleaving Visual Objects into Language for Explicit Object-Level Alignment",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "c7baeeaed9710c423d",
-      "title": "AI agent hacks gym to get its user a spot in pilates class",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "75d094f85d3b1f5427",
-      "title": "The hurdles facing Canada's planned pandemic-busting lab",
-      "reason": "No usable free image candidate"
+      "article_id": "8bfb17c71cf8da957f",
+      "title": "Major Russian grain export terminals hit in Ukraine Black Sea port attack",
+      "reason": "Selected image was unavailable: ValueError"
     },
     {
       "article_id": "2fd97dd5db60e3e6ef",
@@ -89,23 +99,8 @@
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "030aecd8512ea5f257",
-      "title": "Changing a Work Shift",
-      "reason": "Selected image was unavailable: HTTPError"
-    },
-    {
-      "article_id": "10549154daaf7768c9",
-      "title": "Making a Clinic Appointment",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "0a013355614ee95d39",
-      "title": "Meeting a New Neighbor",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "d0a4fc6c428505f7eb",
-      "title": "Laundry Before the Rain",
+      "article_id": "3bc06609c76629f48e",
+      "title": "Returning the Wrong Shirt",
       "reason": "Selected image was unavailable: ValueError"
     }
   ]
