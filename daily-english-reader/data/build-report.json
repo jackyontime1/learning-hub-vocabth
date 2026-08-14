@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-08-13T17:16:15.315549+00:00",
-  "expected_toronto_date": "2026-08-13",
+  "started_at": "2026-08-14T17:14:24.393846+00:00",
+  "expected_toronto_date": "2026-08-14",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -18,44 +18,30 @@
   "schema_version": 10,
   "candidate_rejections": [
     {
-      "article_id": "789cbeb17b92558096",
-      "title": "Baby Shark boy set to make K-pop debut",
-      "provider": "BBC News",
-      "level": "B2",
-      "reason": "RuntimeError: Unable to produce 3 valid useful phrases for B2 reading"
-    },
-    {
-      "article_id": "3efd2489d9b378ae50",
-      "title": "In shattered Cali, residents search for loved ones and signs of hope",
-      "provider": "BBC News",
+      "article_id": "e8aa5dcc3453765ecc",
+      "title": "Canada, U.S. not yet ready to make tariff deal, Canada unsatisfied with latest U.S. offer: sources",
+      "provider": "CBC News",
       "level": "C1",
-      "reason": "RuntimeError: Unable to produce 3 valid useful phrases for C1 reading"
-    },
-    {
-      "article_id": "8ab8205c1cbd2fcaa1",
-      "title": "Special Marine Warning issued August 13 at 1:03PM EDT until August 13 at 2:00PM EDT by NWS Boston/Norton MA",
-      "provider": "US National Weather Service",
-      "level": "C1",
-      "reason": "RuntimeError: Full Thai translation unavailable for article 8ab8205c1cbd2fcaa1"
+      "reason": "RuntimeError: Full Thai translation unavailable for article e8aa5dcc3453765ecc"
     }
   ],
   "practice_story_count": 4,
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
-    "nllb_retries": 3,
+    "nllb_retries": 4,
     "quality_failures": 1,
     "rejection_reasons": {
-      "unexpected-non-thai-script": 1,
       "repeated-junk-string": 2,
-      "missing-number:50": 1,
-      "missing-percent-unit": 1,
-      "missing-number:1:03": 2,
-      "missing-time-period": 2
+      "missing-number:1999": 1,
+      "missing-month:September": 1,
+      "missing-number:75": 1,
+      "unexpected-non-thai-script": 2,
+      "missing-unit:\\bdegrees?\\b|°[CF]\\b": 2
     }
   },
-  "completed_at": "2026-08-13T17:23:07.399892+00:00",
-  "latest_date": "2026-08-13",
+  "completed_at": "2026-08-14T17:38:42.089976+00:00",
+  "latest_date": "2026-08-14",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -71,36 +57,41 @@
     "easy_news": 2,
     "daily_life_practice_story": 4
   },
-  "fallback_image_count": 6,
+  "fallback_image_count": 7,
   "fallback_images": [
     {
-      "article_id": "966297aa8a966b24fe",
-      "title": "Feel so busy you don't even realize you're busy? Try doing a time audit",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "ae93e40466a018a1a1",
-      "title": "CUSMA breakdown could mean hundreds of thousands of jobs, a trillion dollars lost: report",
+      "article_id": "655887910a5c1ab8dd",
+      "title": "Special Weather Statement issued August 14 at 1:12PM EDT by NWS Morristown TN",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "8bfb17c71cf8da957f",
-      "title": "Major Russian grain export terminals hit in Ukraine Black Sea port attack",
+      "article_id": "5f6c0af0c917d517db",
+      "title": "Detroit automakers fear North American trade deal revamp could cost them billions",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "2fd97dd5db60e3e6ef",
-      "title": "When and where in the West Country to see the solar eclipse",
+      "article_id": "07cf96ba994affad86",
+      "title": "Cloudy skies lead to mixed fortunes for Scotland's eclipse hunters",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "e4bae3e850da262337",
-      "title": "His wedding guests gave $6k to fund a health startup. Now it's won a $3 million prize",
+      "article_id": "338750b9999f1e5be4",
+      "title": "BBC Verify speaks to woman who filmed ICE agent pointing gun at her",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "3bc06609c76629f48e",
-      "title": "Returning the Wrong Shirt",
+      "article_id": "b218c78d7b403d0462",
+      "title": "Special Weather Statement issued August 14 at 1:07PM EDT by NWS Wakefield VA",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "9e8e5d9e9b8e9dcfa3",
+      "title": "Sen. Ruben Gallego on handling of USS Lincoln conditions: 'That's not proper leadership'",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "39a7c8fb3a75d7621f",
+      "title": "Checking a Bank Transfer",
       "reason": "Selected image was unavailable: ValueError"
     }
   ]
