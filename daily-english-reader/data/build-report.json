@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-08-14T17:14:24.393846+00:00",
-  "expected_toronto_date": "2026-08-14",
+  "started_at": "2026-08-15T16:44:41.174315+00:00",
+  "expected_toronto_date": "2026-08-15",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -18,30 +18,43 @@
   "schema_version": 10,
   "candidate_rejections": [
     {
-      "article_id": "e8aa5dcc3453765ecc",
-      "title": "Canada, U.S. not yet ready to make tariff deal, Canada unsatisfied with latest U.S. offer: sources",
+      "article_id": "89ddc2b11af5101812",
+      "title": "Lawn bowling beer garden a 'lifeline' for downtown Guelph brewery",
       "provider": "CBC News",
       "level": "C1",
-      "reason": "RuntimeError: Full Thai translation unavailable for article e8aa5dcc3453765ecc"
+      "reason": "RuntimeError: Full Thai translation unavailable for article 89ddc2b11af5101812"
+    },
+    {
+      "article_id": "7e67010ab02badb892",
+      "title": "Doctors say Medicaid change to gender-affirming care will harm vulnerable youth",
+      "provider": "NPR",
+      "level": "C1",
+      "reason": "RuntimeError: Full Thai translation unavailable for article 7e67010ab02badb892"
+    },
+    {
+      "article_id": "097d96d6c632fe68aa",
+      "title": "Indian solar mission's new findings throw light on enduring Sun mysteries",
+      "provider": "BBC News",
+      "level": "C1",
+      "reason": "RuntimeError: Full Thai translation unavailable for article 097d96d6c632fe68aa"
     }
   ],
   "practice_story_count": 4,
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
-    "nllb_retries": 4,
-    "quality_failures": 1,
+    "nllb_retries": 3,
+    "quality_failures": 3,
     "rejection_reasons": {
-      "repeated-junk-string": 2,
-      "missing-number:1999": 1,
-      "missing-month:September": 1,
-      "missing-number:75": 1,
-      "unexpected-non-thai-script": 2,
+      "repeated-junk-string": 1,
+      "missing-number:50": 1,
+      "missing-percent-unit": 2,
+      "missing-unit:\\bdollars?\\b|[$]": 2,
       "missing-unit:\\bdegrees?\\b|°[CF]\\b": 2
     }
   },
-  "completed_at": "2026-08-14T17:38:42.089976+00:00",
-  "latest_date": "2026-08-14",
+  "completed_at": "2026-08-15T17:02:19.431388+00:00",
+  "latest_date": "2026-08-15",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -60,29 +73,29 @@
   "fallback_image_count": 7,
   "fallback_images": [
     {
-      "article_id": "655887910a5c1ab8dd",
-      "title": "Special Weather Statement issued August 14 at 1:12PM EDT by NWS Morristown TN",
+      "article_id": "938e8a9b35f22d00e7",
+      "title": "The Taliban has taken a terrible toll on the education of girls -- and boys as well",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "19468dac40913cbdea",
+      "title": "Measuring Task-Agnostic Training Data Influence Across Language Model Pretraining",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "5f6c0af0c917d517db",
-      "title": "Detroit automakers fear North American trade deal revamp could cost them billions",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "07cf96ba994affad86",
-      "title": "Cloudy skies lead to mixed fortunes for Scotland's eclipse hunters",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "338750b9999f1e5be4",
-      "title": "BBC Verify speaks to woman who filmed ICE agent pointing gun at her",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "b218c78d7b403d0462",
-      "title": "Special Weather Statement issued August 14 at 1:07PM EDT by NWS Wakefield VA",
+      "article_id": "ae0baa739a794d2a40",
+      "title": "Afghan women tell the BBC their lives are unrecognisable after five years of Taliban rule",
       "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "2a0523e14edae7a33d",
+      "title": "Why tech bosses keep sharing their manifestos about AI",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "70448e7f0ebf4225b9",
+      "title": "Secondhand book sales are booming. Is it because of AI?",
+      "reason": "Selected image was unavailable: ValueError"
     },
     {
       "article_id": "9e8e5d9e9b8e9dcfa3",
@@ -90,8 +103,8 @@
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "39a7c8fb3a75d7621f",
-      "title": "Checking a Bank Transfer",
+      "article_id": "99ec9b09bff27871e4",
+      "title": "Asking About a Restaurant Order",
       "reason": "Selected image was unavailable: ValueError"
     }
   ]
