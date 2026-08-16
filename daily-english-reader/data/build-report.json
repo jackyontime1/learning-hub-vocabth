@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-08-15T16:44:41.174315+00:00",
-  "expected_toronto_date": "2026-08-15",
+  "started_at": "2026-08-16T16:45:29.249166+00:00",
+  "expected_toronto_date": "2026-08-16",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -18,43 +18,26 @@
   "schema_version": 10,
   "candidate_rejections": [
     {
-      "article_id": "89ddc2b11af5101812",
-      "title": "Lawn bowling beer garden a 'lifeline' for downtown Guelph brewery",
-      "provider": "CBC News",
-      "level": "C1",
-      "reason": "RuntimeError: Full Thai translation unavailable for article 89ddc2b11af5101812"
-    },
-    {
-      "article_id": "7e67010ab02badb892",
-      "title": "Doctors say Medicaid change to gender-affirming care will harm vulnerable youth",
-      "provider": "NPR",
-      "level": "C1",
-      "reason": "RuntimeError: Full Thai translation unavailable for article 7e67010ab02badb892"
-    },
-    {
-      "article_id": "097d96d6c632fe68aa",
-      "title": "Indian solar mission's new findings throw light on enduring Sun mysteries",
-      "provider": "BBC News",
-      "level": "C1",
-      "reason": "RuntimeError: Full Thai translation unavailable for article 097d96d6c632fe68aa"
+      "article_id": "1392ea100dc3b75ea6",
+      "title": "Small Craft Advisory issued August 16 at 9:39AM PDT until August 17 at 3:00AM PDT by NWS Seattle WA",
+      "provider": "US National Weather Service",
+      "level": "B1",
+      "reason": "RuntimeError: Unable to produce 3 valid useful phrases for B1 reading"
     }
   ],
   "practice_story_count": 4,
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
-    "nllb_retries": 3,
-    "quality_failures": 3,
+    "nllb_retries": 2,
+    "quality_failures": 0,
     "rejection_reasons": {
       "repeated-junk-string": 1,
-      "missing-number:50": 1,
-      "missing-percent-unit": 2,
-      "missing-unit:\\bdollars?\\b|[$]": 2,
-      "missing-unit:\\bdegrees?\\b|°[CF]\\b": 2
+      "mojibake": 1
     }
   },
-  "completed_at": "2026-08-15T17:02:19.431388+00:00",
-  "latest_date": "2026-08-15",
+  "completed_at": "2026-08-16T16:58:00.896696+00:00",
+  "latest_date": "2026-08-16",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -70,42 +53,52 @@
     "easy_news": 2,
     "daily_life_practice_story": 4
   },
-  "fallback_image_count": 7,
+  "fallback_image_count": 9,
   "fallback_images": [
     {
-      "article_id": "938e8a9b35f22d00e7",
-      "title": "The Taliban has taken a terrible toll on the education of girls -- and boys as well",
-      "reason": "Selected image was unavailable: ValueError"
+      "article_id": "3bd746a8292d0fcef2",
+      "title": "Many Canadians are boycotting the US, so this is where they're travelling instead",
+      "reason": "Selected image was unavailable: HTTPError"
     },
     {
-      "article_id": "19468dac40913cbdea",
-      "title": "Measuring Task-Agnostic Training Data Influence Across Language Model Pretraining",
+      "article_id": "ca9490429795c71a40",
+      "title": "Toxic algae outbreaks in Alberta can now be tracked online through satellite imagery",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "ae0baa739a794d2a40",
-      "title": "Afghan women tell the BBC their lives are unrecognisable after five years of Taliban rule",
+      "article_id": "2c2399c2aff561826b",
+      "title": "Protein or pickled garlic? What's new in ice cream",
+      "reason": "Selected image was unavailable: HTTPError"
+    },
+    {
+      "article_id": "be71055dbc32ff3e44",
+      "title": "The Polygamist's author says women see themselves reflected in her Netflix hit",
+      "reason": "Selected image was unavailable: HTTPError"
+    },
+    {
+      "article_id": "d090320f92e7e2a3af",
+      "title": "Severe Thunderstorm Warning issued August 16 at 12:32PM EDT until August 16 at 1:00PM EDT by NWS Cleveland OH",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "2a0523e14edae7a33d",
-      "title": "Why tech bosses keep sharing their manifestos about AI",
+      "article_id": "ac1bc65a0c8c4a71a4",
+      "title": "Special Weather Statement issued August 16 at 12:35PM EDT by NWS Blacksburg VA",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "70448e7f0ebf4225b9",
-      "title": "Secondhand book sales are booming. Is it because of AI?",
-      "reason": "Selected image was unavailable: ValueError"
+      "article_id": "3736aa0b6f21565787",
+      "title": "A Phone Call from the Driver",
+      "reason": "Selected image was unavailable: HTTPError"
     },
     {
-      "article_id": "9e8e5d9e9b8e9dcfa3",
-      "title": "Sen. Ruben Gallego on handling of USS Lincoln conditions: 'That's not proper leadership'",
-      "reason": "No usable free image candidate"
+      "article_id": "e2a9cc108bb9549332",
+      "title": "A Short Shopping List",
+      "reason": "Selected image was unavailable: HTTPError"
     },
     {
-      "article_id": "99ec9b09bff27871e4",
-      "title": "Asking About a Restaurant Order",
-      "reason": "Selected image was unavailable: ValueError"
+      "article_id": "f7c9349b3bc6258590",
+      "title": "The Bus Card",
+      "reason": "Selected image was unavailable: HTTPError"
     }
   ]
 }
