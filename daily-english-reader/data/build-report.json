@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-08-16T16:45:29.249166+00:00",
-  "expected_toronto_date": "2026-08-16",
+  "started_at": "2026-08-17T16:49:00.091554+00:00",
+  "expected_toronto_date": "2026-08-17",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -18,11 +18,11 @@
   "schema_version": 10,
   "candidate_rejections": [
     {
-      "article_id": "1392ea100dc3b75ea6",
-      "title": "Small Craft Advisory issued August 16 at 9:39AM PDT until August 17 at 3:00AM PDT by NWS Seattle WA",
+      "article_id": "49187c3a76da046660",
+      "title": "Heat Advisory issued August 17 at 11:48AM CDT until August 17 at 8:00PM CDT by NWS Norman OK",
       "provider": "US National Weather Service",
-      "level": "B1",
-      "reason": "RuntimeError: Unable to produce 3 valid useful phrases for B1 reading"
+      "level": "B2",
+      "reason": "RuntimeError: Unable to produce 3 valid useful phrases for B2 reading"
     }
   ],
   "practice_story_count": 4,
@@ -32,12 +32,15 @@
     "nllb_retries": 2,
     "quality_failures": 0,
     "rejection_reasons": {
-      "repeated-junk-string": 1,
-      "mojibake": 1
+      "repeated-word-run": 1,
+      "repeated-2-gram": 1,
+      "repeated-3-gram": 1,
+      "repeated-junk-string": 2,
+      "suspiciously-long": 1
     }
   },
-  "completed_at": "2026-08-16T16:58:00.896696+00:00",
-  "latest_date": "2026-08-16",
+  "completed_at": "2026-08-17T17:03:38.920578+00:00",
+  "latest_date": "2026-08-17",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -53,52 +56,47 @@
     "easy_news": 2,
     "daily_life_practice_story": 4
   },
-  "fallback_image_count": 9,
+  "fallback_image_count": 8,
   "fallback_images": [
     {
-      "article_id": "3bd746a8292d0fcef2",
-      "title": "Many Canadians are boycotting the US, so this is where they're travelling instead",
-      "reason": "Selected image was unavailable: HTTPError"
+      "article_id": "5e48853e11d29c2676",
+      "title": "Thousands evacuated as Indonesia quake death toll rises to 53",
+      "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "ca9490429795c71a40",
-      "title": "Toxic algae outbreaks in Alberta can now be tracked online through satellite imagery",
+      "article_id": "d5ce03f3458829b30f",
+      "title": "Driver in custody after bus in Hungary crashes into ditch, killing 12 and injuring at least 10",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "dab4aa866135ad24fd",
+      "title": "At least 6 dead after Ukraine launches aerial attack on Russia",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "bbbd26cb198c840a18",
+      "title": "USS Washington to relieve USS Lincoln. And, Jared Kushner to meet with Netanyahu",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "2c2399c2aff561826b",
-      "title": "Protein or pickled garlic? What's new in ice cream",
-      "reason": "Selected image was unavailable: HTTPError"
+      "article_id": "00b1748e28411129cb",
+      "title": "B.C. mayor calls for gang task force support after surge in targeted shootings",
+      "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "be71055dbc32ff3e44",
-      "title": "The Polygamist's author says women see themselves reflected in her Netflix hit",
-      "reason": "Selected image was unavailable: HTTPError"
+      "article_id": "566703e73d498522f1",
+      "title": "Meet Finn, the 15-year-old who saved a shark in New Brunswick",
+      "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "d090320f92e7e2a3af",
-      "title": "Severe Thunderstorm Warning issued August 16 at 12:32PM EDT until August 16 at 1:00PM EDT by NWS Cleveland OH",
-      "reason": "No usable free image candidate"
+      "article_id": "10e7c90fb7f2f1607d",
+      "title": "Sending a Parcel",
+      "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "ac1bc65a0c8c4a71a4",
-      "title": "Special Weather Statement issued August 16 at 12:35PM EDT by NWS Blacksburg VA",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "3736aa0b6f21565787",
-      "title": "A Phone Call from the Driver",
-      "reason": "Selected image was unavailable: HTTPError"
-    },
-    {
-      "article_id": "e2a9cc108bb9549332",
-      "title": "A Short Shopping List",
-      "reason": "Selected image was unavailable: HTTPError"
-    },
-    {
-      "article_id": "f7c9349b3bc6258590",
-      "title": "The Bus Card",
-      "reason": "Selected image was unavailable: HTTPError"
+      "article_id": "a8794eb309ea0f5cfb",
+      "title": "The Lunch Box",
+      "reason": "Selected image was unavailable: ValueError"
     }
   ]
 }
