@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-08-17T16:49:00.091554+00:00",
-  "expected_toronto_date": "2026-08-17",
+  "started_at": "2026-08-18T16:52:02.132143+00:00",
+  "expected_toronto_date": "2026-08-18",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -18,29 +18,50 @@
   "schema_version": 10,
   "candidate_rejections": [
     {
-      "article_id": "49187c3a76da046660",
-      "title": "Heat Advisory issued August 17 at 11:48AM CDT until August 17 at 8:00PM CDT by NWS Norman OK",
+      "article_id": "44ecdb55e800a1f9a6",
+      "title": "U.S. and Iran miss peace talks deadline. And, Alaska, Florida and Wyoming primaries",
+      "provider": "NPR",
+      "level": "B1",
+      "reason": "RuntimeError: Full Thai translation unavailable for article 44ecdb55e800a1f9a6"
+    },
+    {
+      "article_id": "775c3ee27bcde272ca",
+      "title": "Extreme Heat Warning issued August 18 at 11:46AM CDT until August 19 at 8:00PM CDT by NWS Little Rock AR",
       "provider": "US National Weather Service",
       "level": "B2",
       "reason": "RuntimeError: Unable to produce 3 valid useful phrases for B2 reading"
+    },
+    {
+      "article_id": "836cd2bee1b3a6f7ee",
+      "title": "Canadian icon Jann Arden marries Icelandic author Thordis Elva: 'Wife and wife'",
+      "provider": "CBC News",
+      "level": "B2",
+      "reason": "RuntimeError: Full Thai translation unavailable for article 836cd2bee1b3a6f7ee"
+    },
+    {
+      "article_id": "57f37885679c5885b9",
+      "title": "Proteus: Incremental Memory Activation for Long-Context Sequence Modeling",
+      "provider": "arXiv",
+      "level": "C1",
+      "reason": "RuntimeError: Full Thai translation unavailable for article 57f37885679c5885b9"
     }
   ],
   "practice_story_count": 4,
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
-    "nllb_retries": 2,
-    "quality_failures": 0,
+    "nllb_retries": 3,
+    "quality_failures": 3,
     "rejection_reasons": {
-      "repeated-word-run": 1,
-      "repeated-2-gram": 1,
-      "repeated-3-gram": 1,
-      "repeated-junk-string": 2,
-      "suspiciously-long": 1
+      "unexpected-non-thai-script": 3,
+      "missing-number:2025": 1,
+      "missing-number:2025,31": 1,
+      "missing-month:December": 1,
+      "missing-unit:\\bdegrees?\\b|°[CF]\\b": 2
     }
   },
-  "completed_at": "2026-08-17T17:03:38.920578+00:00",
-  "latest_date": "2026-08-17",
+  "completed_at": "2026-08-18T17:13:27.524555+00:00",
+  "latest_date": "2026-08-18",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -56,16 +77,16 @@
     "easy_news": 2,
     "daily_life_practice_story": 4
   },
-  "fallback_image_count": 8,
+  "fallback_image_count": 9,
   "fallback_images": [
     {
-      "article_id": "5e48853e11d29c2676",
-      "title": "Thousands evacuated as Indonesia quake death toll rises to 53",
-      "reason": "Selected image was unavailable: ValueError"
+      "article_id": "096e4f65023db153e3",
+      "title": "U.S. Supreme Court again rejects Trump's effort to overturn E. Jean Carroll verdict",
+      "reason": "No usable free image candidate"
     },
     {
-      "article_id": "d5ce03f3458829b30f",
-      "title": "Driver in custody after bus in Hungary crashes into ditch, killing 12 and injuring at least 10",
+      "article_id": "aadd598089b29e7d9c",
+      "title": "Demand for Canadian citizenship certificates soaring, fuelled by Americans",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
@@ -74,28 +95,33 @@
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "bbbd26cb198c840a18",
-      "title": "USS Washington to relieve USS Lincoln. And, Jared Kushner to meet with Netanyahu",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "00b1748e28411129cb",
-      "title": "B.C. mayor calls for gang task force support after surge in targeted shootings",
+      "article_id": "dd49fad98e7bf06adc",
+      "title": "How soon will the drought be over?",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "566703e73d498522f1",
-      "title": "Meet Finn, the 15-year-old who saved a shark in New Brunswick",
+      "article_id": "d8b775251a995c3885",
+      "title": "Number of collisions with bison on N.W.T. roads declines",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "10e7c90fb7f2f1607d",
-      "title": "Sending a Parcel",
+      "article_id": "b40c1a9b50fb6169dd",
+      "title": "The grueling fight over who profits from AI music",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "a8794eb309ea0f5cfb",
-      "title": "The Lunch Box",
+      "article_id": "db22c57aa5bd2b4a0b",
+      "title": "Leaving a Phone for Repair",
+      "reason": "Selected image was unavailable: HTTPError"
+    },
+    {
+      "article_id": "7c757dbb65fbb0039c",
+      "title": "Returning a Library Book",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "5e7b8d3d832830c279",
+      "title": "A Low Phone Battery",
       "reason": "Selected image was unavailable: ValueError"
     }
   ]
