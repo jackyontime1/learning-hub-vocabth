@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-08-19T16:49:58.865488+00:00",
-  "expected_toronto_date": "2026-08-19",
+  "started_at": "2026-08-20T16:54:23.780148+00:00",
+  "expected_toronto_date": "2026-08-20",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -16,39 +16,17 @@
     "C1": 2
   },
   "schema_version": 10,
-  "candidate_rejections": [
-    {
-      "article_id": "42c29a4acfad9c046c",
-      "title": "Columbia House, which once promised 12 CDs for a penny, removes notice of closure",
-      "provider": "CBC News",
-      "level": "B2",
-      "reason": "RuntimeError: Full Thai translation unavailable for article 42c29a4acfad9c046c"
-    },
-    {
-      "article_id": "da8c8a7b65ef1c892b",
-      "title": "Special Weather Statement issued August 19 at 12:46PM AST by NWS San Juan PR",
-      "provider": "US National Weather Service",
-      "level": "B2",
-      "reason": "RuntimeError: Full Thai translation unavailable for article da8c8a7b65ef1c892b"
-    }
-  ],
+  "candidate_rejections": [],
   "practice_story_count": 4,
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
-    "nllb_retries": 3,
-    "quality_failures": 2,
-    "rejection_reasons": {
-      "repeated-word-run": 1,
-      "repeated-2-gram": 1,
-      "repeated-3-gram": 1,
-      "missing-number:71": 1,
-      "missing-number:1955": 1,
-      "excessive-english-leakage": 2
-    }
+    "nllb_retries": 0,
+    "quality_failures": 0,
+    "rejection_reasons": {}
   },
-  "completed_at": "2026-08-19T17:06:52.681971+00:00",
-  "latest_date": "2026-08-19",
+  "completed_at": "2026-08-20T17:03:00.898241+00:00",
+  "latest_date": "2026-08-20",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -64,46 +42,41 @@
     "easy_news": 2,
     "daily_life_practice_story": 4
   },
-  "fallback_image_count": 8,
+  "fallback_image_count": 7,
   "fallback_images": [
-    {
-      "article_id": "ecb3df9816bf5c88f6",
-      "title": "From Corpora to Co-Evolving Capabilities: Capability-Centric Data Design for Generalist Image Generation",
-      "reason": "No usable free image candidate"
-    },
     {
       "article_id": "533a10dece038cd014",
       "title": "15 states have laws that allow corporal punishment in schools. Here's where, and why",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "00c4ea172777e8b9b2",
-      "title": "'This...impacts everyone': Missouri couple brings dementia care to medical deserts",
+      "article_id": "911225572471b84c81",
+      "title": "Israel confirms soldiers fired at car in which Hind Rajab was killed and opens criminal investigation",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "f28d09d4b3af81e1ad",
+      "title": "Canadian marathon route was 674m too long",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "c67aef91e4c33f52a6",
-      "title": "Head-on collision between bus and lorry in Brazil kills more than 20",
-      "reason": "Selected image was unavailable: ValueError"
+      "article_id": "fa6f2adde194b1cca0",
+      "title": "K-pop fever hits Toronto as BTS returns for 2-night stadium concert",
+      "reason": "No usable free image candidate"
     },
     {
-      "article_id": "92f67c4b1b75511014",
-      "title": "Feeling restless? Level up your life by starting a side quest",
-      "reason": "Selected image was unavailable: ValueError"
+      "article_id": "179f75ce3eb2ff6036",
+      "title": "Flash Flood Warning issued August 20 at 12:52PM EDT until August 20 at 1:00PM EDT by NWS Pittsburgh PA",
+      "reason": "No usable free image candidate"
     },
     {
-      "article_id": "b40c1a9b50fb6169dd",
-      "title": "The grueling fight over who profits from AI music",
-      "reason": "Selected image was unavailable: ValueError"
+      "article_id": "55c2a2d4145dac0024",
+      "title": "Former Fauci adviser Dr. David Morens pleads guilty to concealing COVID-related records",
+      "reason": "No usable free image candidate"
     },
     {
-      "article_id": "2cb0d85145ca28763c",
-      "title": "Meeting a New Neighbor",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "01ea5ebf37f41d24c1",
-      "title": "Laundry Before the Rain",
+      "article_id": "339a28c656b5a01676",
+      "title": "Making a Clinic Appointment",
       "reason": "Selected image was unavailable: ValueError"
     }
   ]
