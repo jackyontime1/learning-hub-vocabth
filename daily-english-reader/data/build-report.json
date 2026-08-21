@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-08-20T16:54:23.780148+00:00",
-  "expected_toronto_date": "2026-08-20",
+  "started_at": "2026-08-21T16:54:37.111905+00:00",
+  "expected_toronto_date": "2026-08-21",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -16,17 +16,28 @@
     "C1": 2
   },
   "schema_version": 10,
-  "candidate_rejections": [],
+  "candidate_rejections": [
+    {
+      "article_id": "55d4be205b737e1143",
+      "title": "An Agentic Approach for Active Data Collection, Travel Behavior Modeling, and Weather-Sensitive Demand Prediction",
+      "provider": "arXiv",
+      "level": "C1",
+      "reason": "RuntimeError: Full Thai translation unavailable for article 55d4be205b737e1143"
+    }
+  ],
   "practice_story_count": 4,
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
-    "nllb_retries": 0,
-    "quality_failures": 0,
-    "rejection_reasons": {}
+    "nllb_retries": 1,
+    "quality_failures": 1,
+    "rejection_reasons": {
+      "repeated-junk-string": 1,
+      "unexpected-non-thai-script": 1
+    }
   },
-  "completed_at": "2026-08-20T17:03:00.898241+00:00",
-  "latest_date": "2026-08-20",
+  "completed_at": "2026-08-21T17:10:37.554582+00:00",
+  "latest_date": "2026-08-21",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -45,28 +56,23 @@
   "fallback_image_count": 7,
   "fallback_images": [
     {
-      "article_id": "533a10dece038cd014",
-      "title": "15 states have laws that allow corporal punishment in schools. Here's where, and why",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "911225572471b84c81",
-      "title": "Israel confirms soldiers fired at car in which Hind Rajab was killed and opens criminal investigation",
+      "article_id": "cfef20b8881f374edb",
+      "title": "Special Weather Statement issued August 21 at 11:53AM CDT by NWS North Platte NE",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "f28d09d4b3af81e1ad",
-      "title": "Canadian marathon route was 674m too long",
+      "article_id": "d89cef1ffb383124c6",
+      "title": "B.C.'s Howe Sound Pulp and Paper announces mill operations stopping indefinitely",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "fa6f2adde194b1cca0",
-      "title": "K-pop fever hits Toronto as BTS returns for 2-night stadium concert",
-      "reason": "No usable free image candidate"
+      "article_id": "96b9718f6ff5f7beec",
+      "title": "Why the US economy is ringing alarm bells",
+      "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "179f75ce3eb2ff6036",
-      "title": "Flash Flood Warning issued August 20 at 12:52PM EDT until August 20 at 1:00PM EDT by NWS Pittsburgh PA",
+      "article_id": "9272528cdb7a215ed8",
+      "title": "Bali jails Swiss tourist for insulting sacred Day of Silence",
       "reason": "No usable free image candidate"
     },
     {
@@ -75,8 +81,13 @@
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "339a28c656b5a01676",
-      "title": "Making a Clinic Appointment",
+      "article_id": "39595d4a6ac3acb9cb",
+      "title": "What to know about this weekend's IndyCar race on the National Mall",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "f1196569e3291bd46c",
+      "title": "Returning the Wrong Shirt",
       "reason": "Selected image was unavailable: ValueError"
     }
   ]
