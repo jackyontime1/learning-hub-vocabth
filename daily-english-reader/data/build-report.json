@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-08-21T16:54:37.111905+00:00",
-  "expected_toronto_date": "2026-08-21",
+  "started_at": "2026-08-22T16:44:10.565562+00:00",
+  "expected_toronto_date": "2026-08-22",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -18,26 +18,41 @@
   "schema_version": 10,
   "candidate_rejections": [
     {
-      "article_id": "55d4be205b737e1143",
-      "title": "An Agentic Approach for Active Data Collection, Travel Behavior Modeling, and Weather-Sensitive Demand Prediction",
+      "article_id": "e705f50c7c5609c36e",
+      "title": "Robot horse and rider steal the spotlight at Chinese conference",
+      "provider": "BBC News",
+      "level": "B2",
+      "reason": "RuntimeError: Unable to produce 3 valid useful phrases for B2 reading"
+    },
+    {
+      "article_id": "185f5d6f649e1f4fbb",
+      "title": "What to know about Dr. Heidi Overton, Trump's pick to lead the FDA",
+      "provider": "NPR",
+      "level": "B2",
+      "reason": "RuntimeError: Full Thai translation unavailable for article 185f5d6f649e1f4fbb"
+    },
+    {
+      "article_id": "461eccd321eab3abfb",
+      "title": "Towards Surgical World-Action Modeling: A Preliminary Joint Visual-Trajectory Forecasting for Surgical Motion Planning",
       "provider": "arXiv",
       "level": "C1",
-      "reason": "RuntimeError: Full Thai translation unavailable for article 55d4be205b737e1143"
+      "reason": "RuntimeError: Full Thai translation unavailable for article 461eccd321eab3abfb"
     }
   ],
   "practice_story_count": 4,
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
-    "nllb_retries": 1,
-    "quality_failures": 1,
+    "nllb_retries": 2,
+    "quality_failures": 2,
     "rejection_reasons": {
+      "unexpected-non-thai-script": 2,
       "repeated-junk-string": 1,
-      "unexpected-non-thai-script": 1
+      "missing-number:22:22,45:77": 1
     }
   },
-  "completed_at": "2026-08-21T17:10:37.554582+00:00",
-  "latest_date": "2026-08-21",
+  "completed_at": "2026-08-22T16:50:01.325153+00:00",
+  "latest_date": "2026-08-22",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -56,28 +71,28 @@
   "fallback_image_count": 7,
   "fallback_images": [
     {
-      "article_id": "cfef20b8881f374edb",
-      "title": "Special Weather Statement issued August 21 at 11:53AM CDT by NWS North Platte NE",
+      "article_id": "c89136baa072e506cd",
+      "title": "M 6.7 - 31 km NW of Aniso, Peru",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "d89cef1ffb383124c6",
-      "title": "B.C.'s Howe Sound Pulp and Paper announces mill operations stopping indefinitely",
+      "article_id": "ca351dec1df76a78b9",
+      "title": "Manitoba premier says Port of Churchill expansion could cost $80B and include offshore LNG terminal",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "96b9718f6ff5f7beec",
-      "title": "Why the US economy is ringing alarm bells",
+      "article_id": "d0d810af88b0b97b0a",
+      "title": "Hours after U.S. imposes tariffs, Canada says it'll strike back starting Sept. 8",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "9272528cdb7a215ed8",
-      "title": "Bali jails Swiss tourist for insulting sacred Day of Silence",
+      "article_id": "29df2ca42455ceda9c",
+      "title": "Robot horse and rider steal the spotlight at Chinese conference",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "55c2a2d4145dac0024",
-      "title": "Former Fauci adviser Dr. David Morens pleads guilty to concealing COVID-related records",
+      "article_id": "39b120467c69875691",
+      "title": "Marine Weather Statement issued August 22 at 12:39PM EDT by NWS Detroit/Pontiac MI",
       "reason": "No usable free image candidate"
     },
     {
@@ -86,8 +101,8 @@
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "f1196569e3291bd46c",
-      "title": "Returning the Wrong Shirt",
+      "article_id": "22a3dfc29b6283377b",
+      "title": "Checking a Bank Transfer",
       "reason": "Selected image was unavailable: ValueError"
     }
   ]
