@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-08-22T16:44:10.565562+00:00",
-  "expected_toronto_date": "2026-08-22",
+  "started_at": "2026-08-23T16:45:46.952425+00:00",
+  "expected_toronto_date": "2026-08-23",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -18,41 +18,26 @@
   "schema_version": 10,
   "candidate_rejections": [
     {
-      "article_id": "e705f50c7c5609c36e",
-      "title": "Robot horse and rider steal the spotlight at Chinese conference",
-      "provider": "BBC News",
-      "level": "B2",
-      "reason": "RuntimeError: Unable to produce 3 valid useful phrases for B2 reading"
-    },
-    {
-      "article_id": "185f5d6f649e1f4fbb",
-      "title": "What to know about Dr. Heidi Overton, Trump's pick to lead the FDA",
-      "provider": "NPR",
-      "level": "B2",
-      "reason": "RuntimeError: Full Thai translation unavailable for article 185f5d6f649e1f4fbb"
-    },
-    {
-      "article_id": "461eccd321eab3abfb",
-      "title": "Towards Surgical World-Action Modeling: A Preliminary Joint Visual-Trajectory Forecasting for Surgical Motion Planning",
-      "provider": "arXiv",
-      "level": "C1",
-      "reason": "RuntimeError: Full Thai translation unavailable for article 461eccd321eab3abfb"
+      "article_id": "0dcac59e19faa87f05",
+      "title": "Small Craft Advisory issued August 23 at 8:23AM AKDT until August 24 at 5:00AM AKDT by NWS Juneau AK",
+      "provider": "US National Weather Service",
+      "level": "B1",
+      "reason": "RuntimeError: Full Thai translation unavailable for article 0dcac59e19faa87f05"
     }
   ],
   "practice_story_count": 4,
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
-    "nllb_retries": 2,
-    "quality_failures": 2,
+    "nllb_retries": 3,
+    "quality_failures": 1,
     "rejection_reasons": {
-      "unexpected-non-thai-script": 2,
-      "repeated-junk-string": 1,
-      "missing-number:22:22,45:77": 1
+      "missing-number:8": 2,
+      "repeated-junk-string": 2
     }
   },
-  "completed_at": "2026-08-22T16:50:01.325153+00:00",
-  "latest_date": "2026-08-22",
+  "completed_at": "2026-08-23T17:09:17.489648+00:00",
+  "latest_date": "2026-08-23",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -68,41 +53,46 @@
     "easy_news": 2,
     "daily_life_practice_story": 4
   },
-  "fallback_image_count": 7,
+  "fallback_image_count": 8,
   "fallback_images": [
     {
-      "article_id": "c89136baa072e506cd",
-      "title": "M 6.7 - 31 km NW of Aniso, Peru",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "ca351dec1df76a78b9",
-      "title": "Manitoba premier says Port of Churchill expansion could cost $80B and include offshore LNG terminal",
+      "article_id": "928c3aea534a3a3745",
+      "title": "Churchill, Man., residents say year-round shipping would benefit town but tourism, environment must be considered",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "d0d810af88b0b97b0a",
-      "title": "Hours after U.S. imposes tariffs, Canada says it'll strike back starting Sept. 8",
+      "article_id": "4b69e3be800ef78af8",
+      "title": "Nonprofits are helping musicians pay for insurance in Austin, Texas, and beyond",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "29df2ca42455ceda9c",
-      "title": "Robot horse and rider steal the spotlight at Chinese conference",
+      "article_id": "8d8de716b9a027532f",
+      "title": "Lindsay Clancy suffering 'command hallucination' when she killed children, court hears",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "39b120467c69875691",
-      "title": "Marine Weather Statement issued August 22 at 12:39PM EDT by NWS Detroit/Pontiac MI",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "39595d4a6ac3acb9cb",
-      "title": "What to know about this weekend's IndyCar race on the National Mall",
+      "article_id": "bb178cb67702a654bf",
+      "title": "Thousands struggling without power in Indiana 12 days after severe storms",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "22a3dfc29b6283377b",
-      "title": "Checking a Bank Transfer",
+      "article_id": "c33c3ae2d4d2f426d8",
+      "title": "Special Weather Statement issued August 23 at 12:34PM EDT by NWS Binghamton NY",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "30c78913a761f54ba1",
+      "title": "As Canada readies retaliatory tariffs, Mark Carney says his nation is 'at war' with U.S.",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "94baa2e12886e6db2f",
+      "title": "Asking About a Restaurant Order",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "1b3521008b923f9872",
+      "title": "The Bus Card",
       "reason": "Selected image was unavailable: ValueError"
     }
   ]
