@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-08-23T16:45:46.952425+00:00",
-  "expected_toronto_date": "2026-08-23",
+  "started_at": "2026-08-24T16:59:00.396187+00:00",
+  "expected_toronto_date": "2026-08-24",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -18,26 +18,28 @@
   "schema_version": 10,
   "candidate_rejections": [
     {
-      "article_id": "0dcac59e19faa87f05",
-      "title": "Small Craft Advisory issued August 23 at 8:23AM AKDT until August 24 at 5:00AM AKDT by NWS Juneau AK",
+      "article_id": "33cd090d1eb2628ea3",
+      "title": "Flood Advisory issued August 24 at 12:31PM AST until August 24 at 3:30PM AST by NWS San Juan PR",
       "provider": "US National Weather Service",
-      "level": "B1",
-      "reason": "RuntimeError: Full Thai translation unavailable for article 0dcac59e19faa87f05"
+      "level": "B2",
+      "reason": "RuntimeError: Full Thai translation unavailable for article 33cd090d1eb2628ea3"
     }
   ],
   "practice_story_count": 4,
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
-    "nllb_retries": 3,
+    "nllb_retries": 2,
     "quality_failures": 1,
     "rejection_reasons": {
-      "missing-number:8": 2,
-      "repeated-junk-string": 2
+      "missing-number:3:30": 2,
+      "repeated-word-run": 1,
+      "repeated-2-gram": 1,
+      "repeated-3-gram": 1
     }
   },
-  "completed_at": "2026-08-23T17:09:17.489648+00:00",
-  "latest_date": "2026-08-23",
+  "completed_at": "2026-08-24T17:14:39.860533+00:00",
+  "latest_date": "2026-08-24",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -56,43 +58,43 @@
   "fallback_image_count": 8,
   "fallback_images": [
     {
-      "article_id": "928c3aea534a3a3745",
-      "title": "Churchill, Man., residents say year-round shipping would benefit town but tourism, environment must be considered",
+      "article_id": "ead2696d6b5f009117",
+      "title": "More grizzly bears killed in 2024 than any other year on record in Alberta",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "4b69e3be800ef78af8",
-      "title": "Nonprofits are helping musicians pay for insurance in Austin, Texas, and beyond",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "8d8de716b9a027532f",
-      "title": "Lindsay Clancy suffering 'command hallucination' when she killed children, court hears",
+      "article_id": "9475e97799a442d7c5",
+      "title": "High-intensity sprints can trigger molecular changes in the bloodstream",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "bb178cb67702a654bf",
-      "title": "Thousands struggling without power in Indiana 12 days after severe storms",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "c33c3ae2d4d2f426d8",
-      "title": "Special Weather Statement issued August 23 at 12:34PM EDT by NWS Binghamton NY",
+      "article_id": "e5568f5e10613033c5",
+      "title": "Special Weather Statement issued August 24 at 11:33AM CDT by NWS Jackson MS",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "30c78913a761f54ba1",
-      "title": "As Canada readies retaliatory tariffs, Mark Carney says his nation is 'at war' with U.S.",
+      "article_id": "67647d16dc15786748",
+      "title": "Becerra, running for governor of California, faces a health insurance problem",
+      "reason": "Selected image was unavailable: HTTPError"
+    },
+    {
+      "article_id": "a91f5b68e477cc8604",
+      "title": "Special Weather Statement issued August 24 at 11:37AM CDT by NWS Jackson MS",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "94baa2e12886e6db2f",
-      "title": "Asking About a Restaurant Order",
+      "article_id": "648b2aba8c663f7a3d",
+      "title": "Partial lunar eclipse to grace Canadian skies this week",
+      "reason": "Selected image was unavailable: HTTPError"
+    },
+    {
+      "article_id": "7acee53857f58d5b4e",
+      "title": "A Phone Call from the Driver",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "1b3521008b923f9872",
-      "title": "The Bus Card",
+      "article_id": "e4efaa74dca701f2c3",
+      "title": "The Lunch Box",
       "reason": "Selected image was unavailable: ValueError"
     }
   ]
