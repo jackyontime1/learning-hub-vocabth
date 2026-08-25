@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-08-24T16:59:00.396187+00:00",
-  "expected_toronto_date": "2026-08-24",
+  "started_at": "2026-08-25T17:01:52.450095+00:00",
+  "expected_toronto_date": "2026-08-25",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -18,28 +18,38 @@
   "schema_version": 10,
   "candidate_rejections": [
     {
-      "article_id": "33cd090d1eb2628ea3",
-      "title": "Flood Advisory issued August 24 at 12:31PM AST until August 24 at 3:30PM AST by NWS San Juan PR",
+      "article_id": "bc8b1c7a9551f0af30",
+      "title": "Supreme Court rejects challenge to Trump order on mail-in ballots, but more legal battles are expected",
+      "provider": "CBC News",
+      "level": "C1",
+      "reason": "RuntimeError: Full Thai translation unavailable for article bc8b1c7a9551f0af30"
+    },
+    {
+      "article_id": "fe6252f22e2db6b0c7",
+      "title": "Severe Thunderstorm Warning issued August 25 at 11:53AM CDT until August 25 at 12:45PM CDT by NWS Dodge City KS",
       "provider": "US National Weather Service",
-      "level": "B2",
-      "reason": "RuntimeError: Full Thai translation unavailable for article 33cd090d1eb2628ea3"
+      "level": "C1",
+      "reason": "RuntimeError: Full Thai translation unavailable for article fe6252f22e2db6b0c7"
     }
   ],
   "practice_story_count": 4,
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
-    "nllb_retries": 2,
-    "quality_failures": 1,
+    "nllb_retries": 3,
+    "quality_failures": 2,
     "rejection_reasons": {
-      "missing-number:3:30": 2,
-      "repeated-word-run": 1,
+      "unexpected-non-thai-script": 1,
+      "missing-month:March": 2,
       "repeated-2-gram": 1,
-      "repeated-3-gram": 1
+      "repeated-3-gram": 1,
+      "missing-number:11:53,20": 1,
+      "missing-number:11:53": 1,
+      "missing-number:20": 1
     }
   },
-  "completed_at": "2026-08-24T17:14:39.860533+00:00",
-  "latest_date": "2026-08-24",
+  "completed_at": "2026-08-25T17:19:10.452735+00:00",
+  "latest_date": "2026-08-25",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -58,9 +68,9 @@
   "fallback_image_count": 8,
   "fallback_images": [
     {
-      "article_id": "ead2696d6b5f009117",
-      "title": "More grizzly bears killed in 2024 than any other year on record in Alberta",
-      "reason": "Selected image was unavailable: ValueError"
+      "article_id": "cbc365b0fe12888cdb",
+      "title": "Special Weather Statement issued August 25 at 12:58PM EDT by NWS Jacksonville FL",
+      "reason": "No usable free image candidate"
     },
     {
       "article_id": "9475e97799a442d7c5",
@@ -68,33 +78,33 @@
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "e5568f5e10613033c5",
-      "title": "Special Weather Statement issued August 24 at 11:33AM CDT by NWS Jackson MS",
+      "article_id": "a047802c5ba2685373",
+      "title": "Sonya Massey's killer Sean Grayson dies in US prison",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "67647d16dc15786748",
-      "title": "Becerra, running for governor of California, faces a health insurance problem",
-      "reason": "Selected image was unavailable: HTTPError"
-    },
-    {
-      "article_id": "a91f5b68e477cc8604",
-      "title": "Special Weather Statement issued August 24 at 11:37AM CDT by NWS Jackson MS",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "648b2aba8c663f7a3d",
-      "title": "Partial lunar eclipse to grace Canadian skies this week",
-      "reason": "Selected image was unavailable: HTTPError"
-    },
-    {
-      "article_id": "7acee53857f58d5b4e",
-      "title": "A Phone Call from the Driver",
+      "article_id": "783ce8141402f6c33b",
+      "title": "Songs created by AI banned from Australia's music charts",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "e4efaa74dca701f2c3",
-      "title": "The Lunch Box",
+      "article_id": "1536e6fe34993cf0b2",
+      "title": "Halifax woman defrauded $1,200 after wallet stolen, thieves reportedly impersonated her bank",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "e35da57b04bbc6e7e9",
+      "title": "Marine Weather Statement issued August 25 at 12:20PM EDT by NWS Jacksonville FL",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "08482481060c308154",
+      "title": "Sending a Parcel",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "9447880464d1f2689a",
+      "title": "A Low Phone Battery",
       "reason": "Selected image was unavailable: ValueError"
     }
   ]
