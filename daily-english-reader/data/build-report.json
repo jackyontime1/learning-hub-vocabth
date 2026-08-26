@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-08-25T17:01:52.450095+00:00",
-  "expected_toronto_date": "2026-08-25",
+  "started_at": "2026-08-26T17:52:09.821198+00:00",
+  "expected_toronto_date": "2026-08-26",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -16,40 +16,24 @@
     "C1": 2
   },
   "schema_version": 10,
-  "candidate_rejections": [
-    {
-      "article_id": "bc8b1c7a9551f0af30",
-      "title": "Supreme Court rejects challenge to Trump order on mail-in ballots, but more legal battles are expected",
-      "provider": "CBC News",
-      "level": "C1",
-      "reason": "RuntimeError: Full Thai translation unavailable for article bc8b1c7a9551f0af30"
-    },
-    {
-      "article_id": "fe6252f22e2db6b0c7",
-      "title": "Severe Thunderstorm Warning issued August 25 at 11:53AM CDT until August 25 at 12:45PM CDT by NWS Dodge City KS",
-      "provider": "US National Weather Service",
-      "level": "C1",
-      "reason": "RuntimeError: Full Thai translation unavailable for article fe6252f22e2db6b0c7"
-    }
-  ],
+  "candidate_rejections": [],
   "practice_story_count": 4,
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
     "nllb_retries": 3,
-    "quality_failures": 2,
+    "quality_failures": 0,
     "rejection_reasons": {
-      "unexpected-non-thai-script": 1,
-      "missing-month:March": 2,
-      "repeated-2-gram": 1,
-      "repeated-3-gram": 1,
-      "missing-number:11:53,20": 1,
-      "missing-number:11:53": 1,
-      "missing-number:20": 1
+      "repeated-2-gram": 2,
+      "repeated-3-gram": 2,
+      "missing-number:13,15": 1,
+      "repeated-junk-string": 1,
+      "missing-number:2023": 1,
+      "repeated-word-run": 1
     }
   },
-  "completed_at": "2026-08-25T17:19:10.452735+00:00",
-  "latest_date": "2026-08-25",
+  "completed_at": "2026-08-26T18:19:11.933394+00:00",
+  "latest_date": "2026-08-26",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -65,46 +49,51 @@
     "easy_news": 2,
     "daily_life_practice_story": 4
   },
-  "fallback_image_count": 8,
+  "fallback_image_count": 9,
   "fallback_images": [
     {
-      "article_id": "cbc365b0fe12888cdb",
-      "title": "Special Weather Statement issued August 25 at 12:58PM EDT by NWS Jacksonville FL",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "9475e97799a442d7c5",
-      "title": "High-intensity sprints can trigger molecular changes in the bloodstream",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "a047802c5ba2685373",
-      "title": "Sonya Massey's killer Sean Grayson dies in US prison",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "783ce8141402f6c33b",
-      "title": "Songs created by AI banned from Australia's music charts",
+      "article_id": "bf0e15548383200bca",
+      "title": "COMIC: Trying for a baby? These lifestyle habits may boost your fertility odds",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "1536e6fe34993cf0b2",
-      "title": "Halifax woman defrauded $1,200 after wallet stolen, thieves reportedly impersonated her bank",
+      "article_id": "eec40e2ca291a1cb6e",
+      "title": "Instagram head Adam Mosseri testifies in defense of Meta in child safety trial",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "e35da57b04bbc6e7e9",
-      "title": "Marine Weather Statement issued August 25 at 12:20PM EDT by NWS Jacksonville FL",
+      "article_id": "e1a345a696009424f6",
+      "title": "A nosy polar bear and a lucky squirrel: Wildlife Photographer of the Year 2026 shortlist",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "08482481060c308154",
-      "title": "Sending a Parcel",
+      "article_id": "c39f29d648be164ec0",
+      "title": "Retaliatory tariffs could raise costs for Canadian businesses already weathering the trade war",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "9447880464d1f2689a",
-      "title": "A Low Phone Battery",
+      "article_id": "881ea55290f87d93e5",
+      "title": "Special Weather Statement issued August 26 at 12:45PM CDT by NWS Birmingham AL",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "a9e379937269213155",
+      "title": "Special Weather Statement issued August 26 at 1:51PM EDT by NWS Melbourne FL",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "6be7ae5c87f7fa841d",
+      "title": "Leaving a Phone for Repair",
+      "reason": "Selected image was unavailable: HTTPError"
+    },
+    {
+      "article_id": "98813c0dbb80d03485",
+      "title": "Meeting a New Neighbor",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "71aa18368128ae04d0",
+      "title": "Laundry Before the Rain",
       "reason": "Selected image was unavailable: ValueError"
     }
   ]
