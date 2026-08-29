@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-08-28T00:59:23.544333+00:00",
-  "expected_toronto_date": "2026-08-27",
+  "started_at": "2026-08-29T00:35:27.801385+00:00",
+  "expected_toronto_date": "2026-08-28",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -18,23 +18,27 @@
   "schema_version": 10,
   "candidate_rejections": [
     {
-      "article_id": "f12be66715fa8dd511",
-      "title": "People pulled from mud in Nepal after deadly flash floods",
-      "provider": "BBC News",
-      "level": "B2",
-      "reason": "RuntimeError: Unable to produce 3 valid useful phrases for B2 reading"
+      "article_id": "8f8a170b67b6347f59",
+      "title": "Special Weather Statement issued August 28 at 6:22PM MDT by NWS Great Falls MT",
+      "provider": "US National Weather Service",
+      "level": "B1",
+      "reason": "RuntimeError: Full Thai translation unavailable for article 8f8a170b67b6347f59"
     }
   ],
   "practice_story_count": 4,
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
-    "nllb_retries": 0,
-    "quality_failures": 0,
-    "rejection_reasons": {}
+    "nllb_retries": 2,
+    "quality_failures": 1,
+    "rejection_reasons": {
+      "missing-number:6:20": 2,
+      "missing-number:2024": 1,
+      "missing-month:November": 1
+    }
   },
-  "completed_at": "2026-08-28T01:07:43.520264+00:00",
-  "latest_date": "2026-08-27",
+  "completed_at": "2026-08-29T00:51:20.242701+00:00",
+  "latest_date": "2026-08-28",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -50,32 +54,42 @@
     "easy_news": 2,
     "daily_life_practice_story": 4
   },
-  "fallback_image_count": 5,
+  "fallback_image_count": 7,
   "fallback_images": [
     {
-      "article_id": "dcecc2064a1f2d8a1f",
-      "title": "ICON Decomposition: Multivariate Concept-Level Explanations of Deep Representations for Model Auditing",
+      "article_id": "c3579980022821510a",
+      "title": "Boosting LLM Exploration via Weak-Model Guidance in RLVR",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "4a42821ed34612a0c0",
-      "title": "Enbridge signs deal with KKR and Apollo to fund Westcoast pipeline expansion",
+      "article_id": "11a63ae6d62aa3683c",
+      "title": "Regulator upholds sanctions against oilsands operator ordered to abandon operations",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "155680ae4c6fbd5c4b",
-      "title": "Severe Thunderstorm Warning issued August 27 at 8:53PM EDT until August 27 at 9:30PM EDT by NWS Pittsburgh PA",
+      "article_id": "127c36273963212fa5",
+      "title": "US plans to cut off military aid to key Middle East ally, BBC told",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "95dc805bb45a4e4360",
+      "title": "Matt Lucas and Hugh Bonneville among actors calling for law on AI voice cloning",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "44ceca2c970c474b6e",
-      "title": "Severe Thunderstorm Warning issued August 27 at 5:58PM MST until August 27 at 6:30PM MST by NWS Tucson AZ",
+      "article_id": "12177902f1fe5f4a6a",
+      "title": "Special Weather Statement issued August 28 at 6:25PM MDT by NWS Great Falls MT",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "c95bb9c58a9588aeac",
-      "title": "Raptors to raise Kyle Lowry's No. 7 to rafters in January retirement ceremony",
+      "article_id": "94e13426b0599e4932",
+      "title": "Special Weather Statement issued August 28 at 7:29PM CDT by NWS Corpus Christi TX",
       "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "5c9ceea8e21f8be280",
+      "title": "Making a Clinic Appointment",
+      "reason": "Selected image was unavailable: ValueError"
     }
   ]
 }
