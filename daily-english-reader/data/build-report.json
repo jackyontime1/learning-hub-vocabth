@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-08-29T00:35:27.801385+00:00",
-  "expected_toronto_date": "2026-08-28",
+  "started_at": "2026-08-29T19:26:43.974364+00:00",
+  "expected_toronto_date": "2026-08-29",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -16,29 +16,17 @@
     "C1": 2
   },
   "schema_version": 10,
-  "candidate_rejections": [
-    {
-      "article_id": "8f8a170b67b6347f59",
-      "title": "Special Weather Statement issued August 28 at 6:22PM MDT by NWS Great Falls MT",
-      "provider": "US National Weather Service",
-      "level": "B1",
-      "reason": "RuntimeError: Full Thai translation unavailable for article 8f8a170b67b6347f59"
-    }
-  ],
+  "candidate_rejections": [],
   "practice_story_count": 4,
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
-    "nllb_retries": 2,
-    "quality_failures": 1,
-    "rejection_reasons": {
-      "missing-number:6:20": 2,
-      "missing-number:2024": 1,
-      "missing-month:November": 1
-    }
+    "nllb_retries": 0,
+    "quality_failures": 0,
+    "rejection_reasons": {}
   },
-  "completed_at": "2026-08-29T00:51:20.242701+00:00",
-  "latest_date": "2026-08-28",
+  "completed_at": "2026-08-29T19:35:43.496542+00:00",
+  "latest_date": "2026-08-29",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -57,38 +45,38 @@
   "fallback_image_count": 7,
   "fallback_images": [
     {
-      "article_id": "c3579980022821510a",
-      "title": "Boosting LLM Exploration via Weak-Model Guidance in RLVR",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "11a63ae6d62aa3683c",
-      "title": "Regulator upholds sanctions against oilsands operator ordered to abandon operations",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "127c36273963212fa5",
-      "title": "US plans to cut off military aid to key Middle East ally, BBC told",
+      "article_id": "f9c37b7143de22ecf3",
+      "title": "Air Canada will now allow you up to 3 mobility aids on flights in expanded policy",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "95dc805bb45a4e4360",
-      "title": "Matt Lucas and Hugh Bonneville among actors calling for law on AI voice cloning",
+      "article_id": "b89ae7ba1c5c53d420",
+      "title": "Bank holiday weekend to see more thunderstorms and rain",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "c1af2d773fc526892a",
+      "title": "Norway's new king remembers 'my dear father' in first speech",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "cc95cf42e540b178c8",
+      "title": "Footage of Tibet floods isn't being shown in China - and we know little about victims there",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "12177902f1fe5f4a6a",
-      "title": "Special Weather Statement issued August 28 at 6:25PM MDT by NWS Great Falls MT",
+      "article_id": "55a6cd00759bb09fb2",
+      "title": "Special Weather Statement issued August 29 at 1:08PM MDT by NWS Salt Lake City UT",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "94e13426b0599e4932",
-      "title": "Special Weather Statement issued August 28 at 7:29PM CDT by NWS Corpus Christi TX",
+      "article_id": "180c7943906a88cb0a",
+      "title": "Severe Thunderstorm Warning issued August 29 at 1:25PM MDT until August 29 at 1:45PM MDT by NWS Salt Lake City UT",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "5c9ceea8e21f8be280",
-      "title": "Making a Clinic Appointment",
+      "article_id": "c7c44077e295c486bb",
+      "title": "Returning the Wrong Shirt",
       "reason": "Selected image was unavailable: ValueError"
     }
   ]
