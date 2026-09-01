@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-08-31T21:30:37.420811+00:00",
-  "expected_toronto_date": "2026-08-31",
+  "started_at": "2026-09-01T19:26:16.728698+00:00",
+  "expected_toronto_date": "2026-09-01",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -16,17 +16,46 @@
     "C1": 2
   },
   "schema_version": 10,
-  "candidate_rejections": [],
+  "candidate_rejections": [
+    {
+      "article_id": "5404d880ec0ba948d9",
+      "title": "Severe Thunderstorm Warning issued September 1 at 1:20PM MDT until September 1 at 1:30PM MDT by NWS Salt Lake City UT",
+      "provider": "US National Weather Service",
+      "level": "B1",
+      "reason": "RuntimeError: Unable to produce 3 valid useful phrases for B1 reading"
+    },
+    {
+      "article_id": "32a815c621e74af71b",
+      "title": "Dry eyes are common among women. Here's why you shouldn't ignore it",
+      "provider": "NPR",
+      "level": "B1",
+      "reason": "RuntimeError: Full Thai translation unavailable for article 32a815c621e74af71b"
+    },
+    {
+      "article_id": "c67ac6dbb479beac86",
+      "title": "Summer 2026 was UK's hottest on record, Met Office says",
+      "provider": "BBC News",
+      "level": "B2",
+      "reason": "RuntimeError: Full Thai translation unavailable for article c67ac6dbb479beac86"
+    }
+  ],
   "practice_story_count": 4,
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
-    "nllb_retries": 0,
-    "quality_failures": 0,
-    "rejection_reasons": {}
+    "nllb_retries": 4,
+    "quality_failures": 2,
+    "rejection_reasons": {
+      "repeated-junk-string": 3,
+      "collapsed-paragraphs": 2,
+      "missing-number:1884": 1,
+      "missing-number:16.5": 1,
+      "missing-number:31": 1,
+      "missing-month:July": 1
+    }
   },
-  "completed_at": "2026-08-31T21:42:02.998291+00:00",
-  "latest_date": "2026-08-31",
+  "completed_at": "2026-09-01T19:49:46.888911+00:00",
+  "latest_date": "2026-09-01",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -42,41 +71,46 @@
     "easy_news": 2,
     "daily_life_practice_story": 4
   },
-  "fallback_image_count": 7,
+  "fallback_image_count": 8,
   "fallback_images": [
     {
-      "article_id": "0f4fe4f5f80097782c",
-      "title": "From playing Serena Williams on screen to following in her footsteps",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "09b60be8cf581aa381",
-      "title": "Ontario's new cash bail system on hold after judge grants injunction",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "ffb3fc61c139e6ab19",
-      "title": "Monza memories - Italian GP in pictures through the years",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "08f83a2e604e7d1407",
-      "title": "Special Weather Statement issued August 31 at 5:16PM EDT by NWS Jacksonville FL",
+      "article_id": "cb32112fb9d94f4a69",
+      "title": "DIASENTINEL: An Auditable Multi-Agent System for Guideline-Grounded Diabetes Risk Screening",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "bf36e25d44e3f38bf1",
-      "title": "Severe Thunderstorm Warning issued August 31 at 2:27PM MST until August 31 at 2:45PM MST by NWS Phoenix AZ",
+      "article_id": "83fbf9558c28d52ec7",
+      "title": "RCMP charge Calgary man for allegedly running $164M Ponzi scheme",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "52580769d659e06f62",
-      "title": "Asking About a Restaurant Order",
+      "article_id": "d4a57e869dd38d4153",
+      "title": "US singer D4vd's celebrity lawyers withdraw from murder case",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "2f071c929c08465c1f",
-      "title": "The Lunch Box",
+      "article_id": "f175ecde863be2d4fe",
+      "title": "Seabirds, silting and salt: Photos show some of the early effects of El Niño",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "a18c39ad6d7b2cd469",
+      "title": "They live by a shrine to a saint. Why are their homes being demolished?",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "3a58b144ef96687186",
+      "title": "How a small island in Canada appeared, vanished, and was found again",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "14e2157508bf1f1a0c",
+      "title": "A Phone Call from the Driver",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "39d0aecec775394211",
+      "title": "A Low Phone Battery",
       "reason": "Selected image was unavailable: ValueError"
     }
   ]
