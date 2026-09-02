@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-09-01T19:26:16.728698+00:00",
-  "expected_toronto_date": "2026-09-01",
+  "started_at": "2026-09-02T19:25:22.618905+00:00",
+  "expected_toronto_date": "2026-09-02",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -18,25 +18,25 @@
   "schema_version": 10,
   "candidate_rejections": [
     {
-      "article_id": "5404d880ec0ba948d9",
-      "title": "Severe Thunderstorm Warning issued September 1 at 1:20PM MDT until September 1 at 1:30PM MDT by NWS Salt Lake City UT",
-      "provider": "US National Weather Service",
-      "level": "B1",
-      "reason": "RuntimeError: Unable to produce 3 valid useful phrases for B1 reading"
-    },
-    {
-      "article_id": "32a815c621e74af71b",
-      "title": "Dry eyes are common among women. Here's why you shouldn't ignore it",
-      "provider": "NPR",
-      "level": "B1",
-      "reason": "RuntimeError: Full Thai translation unavailable for article 32a815c621e74af71b"
-    },
-    {
-      "article_id": "c67ac6dbb479beac86",
-      "title": "Summer 2026 was UK's hottest on record, Met Office says",
+      "article_id": "cdccaaf1010d654244",
+      "title": "Watch: Moment Duane 'Keffe D' Davis is found guilty of Tupac Shakur's murder",
       "provider": "BBC News",
       "level": "B2",
-      "reason": "RuntimeError: Full Thai translation unavailable for article c67ac6dbb479beac86"
+      "reason": "RuntimeError: Unable to produce 3 valid useful phrases for B2 reading"
+    },
+    {
+      "article_id": "b3ba8ae6742ef2f414",
+      "title": "Dry eyes are common among women. Here's why you shouldn't ignore it",
+      "provider": "NPR",
+      "level": "B2",
+      "reason": "RuntimeError: Full Thai translation unavailable for article b3ba8ae6742ef2f414"
+    },
+    {
+      "article_id": "961fe115988927b197",
+      "title": "Special Weather Statement issued September 2 at 3:16PM EDT by NWS Wakefield VA",
+      "provider": "US National Weather Service",
+      "level": "B2",
+      "reason": "RuntimeError: Full Thai translation unavailable for article 961fe115988927b197"
     }
   ],
   "practice_story_count": 4,
@@ -46,16 +46,13 @@
     "nllb_retries": 4,
     "quality_failures": 2,
     "rejection_reasons": {
-      "repeated-junk-string": 3,
-      "collapsed-paragraphs": 2,
-      "missing-number:1884": 1,
-      "missing-number:16.5": 1,
-      "missing-number:31": 1,
-      "missing-month:July": 1
+      "empty-translation": 2,
+      "missing-number:3:15,3:25": 2,
+      "repeated-junk-string": 2
     }
   },
-  "completed_at": "2026-09-01T19:49:46.888911+00:00",
-  "latest_date": "2026-09-01",
+  "completed_at": "2026-09-02T19:44:28.814038+00:00",
+  "latest_date": "2026-09-02",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -71,31 +68,16 @@
     "easy_news": 2,
     "daily_life_practice_story": 4
   },
-  "fallback_image_count": 8,
+  "fallback_image_count": 10,
   "fallback_images": [
     {
-      "article_id": "cb32112fb9d94f4a69",
-      "title": "DIASENTINEL: An Auditable Multi-Agent System for Guideline-Grounded Diabetes Risk Screening",
+      "article_id": "6339f483a6a9089843",
+      "title": "Ethics watchdog finds Liberal MP Idlout violated conflict of interest code",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "83fbf9558c28d52ec7",
-      "title": "RCMP charge Calgary man for allegedly running $164M Ponzi scheme",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "d4a57e869dd38d4153",
-      "title": "US singer D4vd's celebrity lawyers withdraw from murder case",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "f175ecde863be2d4fe",
-      "title": "Seabirds, silting and salt: Photos show some of the early effects of El Niño",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "a18c39ad6d7b2cd469",
-      "title": "They live by a shrine to a saint. Why are their homes being demolished?",
+      "article_id": "d806030622951e4023",
+      "title": "Maritime farmers hit by major drought last summer say they're on the road to recovery",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
@@ -104,13 +86,38 @@
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "14e2157508bf1f1a0c",
-      "title": "A Phone Call from the Driver",
+      "article_id": "8db9f89e09d17f4dd7",
+      "title": "Remarkable US oil deal puzzles analysts - and angers many Venezuelans",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "39d0aecec775394211",
-      "title": "A Low Phone Battery",
+      "article_id": "52187b0a830707e867",
+      "title": "Severe Thunderstorm Warning issued September 2 at 3:16PM EDT until September 2 at 3:45PM EDT by NWS Mount Holly NJ",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "8f404599452c12eb71",
+      "title": "Severe Thunderstorm Warning issued September 2 at 3:19PM EDT until September 2 at 4:30PM EDT by NWS Detroit/Pontiac MI",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "d8e84c9e3099d8f383",
+      "title": "Changing a Train Ticket",
+      "reason": "Selected image was unavailable: HTTPError"
+    },
+    {
+      "article_id": "6e0de6856b29b680a3",
+      "title": "Sending a Parcel",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "a7be691eb391fa588c",
+      "title": "Meeting a New Neighbor",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "cb403ebb2f7fde5195",
+      "title": "Laundry Before the Rain",
       "reason": "Selected image was unavailable: ValueError"
     }
   ]
