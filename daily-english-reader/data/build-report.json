@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-09-02T19:25:22.618905+00:00",
-  "expected_toronto_date": "2026-09-02",
+  "started_at": "2026-09-03T19:19:55.945510+00:00",
+  "expected_toronto_date": "2026-09-03",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -18,41 +18,74 @@
   "schema_version": 10,
   "candidate_rejections": [
     {
-      "article_id": "cdccaaf1010d654244",
-      "title": "Watch: Moment Duane 'Keffe D' Davis is found guilty of Tupac Shakur's murder",
-      "provider": "BBC News",
-      "level": "B2",
-      "reason": "RuntimeError: Unable to produce 3 valid useful phrases for B2 reading"
+      "article_id": "a1486788387f818ae8",
+      "title": "Severe Thunderstorm Warning issued September 3 at 3:16PM EDT until September 3 at 3:45PM EDT by NWS Grand Rapids MI",
+      "provider": "US National Weather Service",
+      "level": "B1",
+      "reason": "RuntimeError: Full Thai translation unavailable for article a1486788387f818ae8"
+    },
+    {
+      "article_id": "7467a3114ab53a27c3",
+      "title": "Tornado Warning issued September 3 at 3:15PM EDT until September 3 at 3:45PM EDT by NWS Detroit/Pontiac MI",
+      "provider": "US National Weather Service",
+      "level": "B1",
+      "reason": "RuntimeError: Full Thai translation unavailable for article 7467a3114ab53a27c3"
+    },
+    {
+      "article_id": "bb695149eadee4952e",
+      "title": "Special Marine Warning issued September 3 at 3:14PM EDT until September 3 at 4:00PM EDT by NWS Miami FL",
+      "provider": "US National Weather Service",
+      "level": "B1",
+      "reason": "RuntimeError: Full Thai translation unavailable for article bb695149eadee4952e"
+    },
+    {
+      "article_id": "e1c20bd1c37c721764",
+      "title": "Post-Training Language Models for Gold-Medal Performance in Coding Competitions",
+      "provider": "arXiv",
+      "level": "C1",
+      "reason": "RuntimeError: Full Thai translation unavailable for article e1c20bd1c37c721764"
     },
     {
       "article_id": "b3ba8ae6742ef2f414",
       "title": "Dry eyes are common among women. Here's why you shouldn't ignore it",
       "provider": "NPR",
-      "level": "B2",
+      "level": "C1",
       "reason": "RuntimeError: Full Thai translation unavailable for article b3ba8ae6742ef2f414"
     },
     {
-      "article_id": "961fe115988927b197",
-      "title": "Special Weather Statement issued September 2 at 3:16PM EDT by NWS Wakefield VA",
+      "article_id": "6ecaae5f36c77c1747",
+      "title": "Severe Thunderstorm Warning issued September 3 at 3:14PM EDT until September 3 at 4:00PM EDT by NWS Northern Indiana",
       "provider": "US National Weather Service",
-      "level": "B2",
-      "reason": "RuntimeError: Full Thai translation unavailable for article 961fe115988927b197"
+      "level": "C1",
+      "reason": "RuntimeError: Full Thai translation unavailable for article 6ecaae5f36c77c1747"
     }
   ],
   "practice_story_count": 4,
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
-    "nllb_retries": 4,
-    "quality_failures": 2,
+    "nllb_retries": 8,
+    "quality_failures": 6,
     "rejection_reasons": {
+      "missing-number:11,20,3:16": 1,
+      "missing-number:3:16": 1,
+      "missing-number:45": 2,
+      "missing-unit:\\bmiles?\\b": 2,
+      "repeated-2-gram": 1,
+      "repeated-3-gram": 1,
+      "missing-number:3:12": 2,
+      "missing-time-period": 3,
+      "repeated-junk-string": 2,
+      "missing-number:438.3,502": 1,
+      "suspiciously-long": 1,
       "empty-translation": 2,
-      "missing-number:3:15,3:25": 2,
-      "repeated-junk-string": 2
+      "missing-number:30": 1,
+      "missing-number:3:14": 1,
+      "unexpected-non-thai-script": 1
     }
   },
-  "completed_at": "2026-09-02T19:44:28.814038+00:00",
-  "latest_date": "2026-09-02",
+  "completed_at": "2026-09-03T19:51:37.338009+00:00",
+  "latest_date": "2026-09-03",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -68,56 +101,41 @@
     "easy_news": 2,
     "daily_life_practice_story": 4
   },
-  "fallback_image_count": 10,
+  "fallback_image_count": 7,
   "fallback_images": [
     {
-      "article_id": "6339f483a6a9089843",
-      "title": "Ethics watchdog finds Liberal MP Idlout violated conflict of interest code",
+      "article_id": "b82e5715bdad570d93",
+      "title": "Kissing apes, anti-splash urinals: This year's Ig Nobels showcase surprising science",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "d806030622951e4023",
-      "title": "Maritime farmers hit by major drought last summer say they're on the road to recovery",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "3a58b144ef96687186",
-      "title": "How a small island in Canada appeared, vanished, and was found again",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "8db9f89e09d17f4dd7",
-      "title": "Remarkable US oil deal puzzles analysts - and angers many Venezuelans",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "52187b0a830707e867",
-      "title": "Severe Thunderstorm Warning issued September 2 at 3:16PM EDT until September 2 at 3:45PM EDT by NWS Mount Holly NJ",
+      "article_id": "41b2a16a7014b790a6",
+      "title": "SafeEvolve: Harness-Policy Co-Evolution from Agent Experience for Safety Alignment",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "8f404599452c12eb71",
-      "title": "Severe Thunderstorm Warning issued September 2 at 3:19PM EDT until September 2 at 4:30PM EDT by NWS Detroit/Pontiac MI",
+      "article_id": "afb973b7791a261192",
+      "title": "'The crowd shouted that we'd stolen someone's genitals' - deadly rumours spread on social media",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "d8e84c9e3099d8f383",
-      "title": "Changing a Train Ticket",
-      "reason": "Selected image was unavailable: HTTPError"
+      "article_id": "2d13ec328f9360663d",
+      "title": "Low flypast over Cape Town stadium to be reviewed, South Africa says",
+      "reason": "No usable free image candidate"
     },
     {
-      "article_id": "6e0de6856b29b680a3",
-      "title": "Sending a Parcel",
-      "reason": "Selected image was unavailable: ValueError"
+      "article_id": "97cb4e4596ef1a95d3",
+      "title": "Severe Thunderstorm Warning issued September 3 at 3:16PM EDT until September 3 at 3:30PM EDT by NWS Grand Rapids MI",
+      "reason": "No usable free image candidate"
     },
     {
-      "article_id": "a7be691eb391fa588c",
-      "title": "Meeting a New Neighbor",
-      "reason": "Selected image was unavailable: ValueError"
+      "article_id": "f978b2cdcd4b3cd6d4",
+      "title": "Severe Thunderstorm Warning issued September 3 at 3:14PM EDT until September 3 at 4:00PM EDT by NWS Grand Rapids MI",
+      "reason": "No usable free image candidate"
     },
     {
-      "article_id": "cb403ebb2f7fde5195",
-      "title": "Laundry Before the Rain",
+      "article_id": "d29c72552329b6c0f3",
+      "title": "Leaving a Phone for Repair",
       "reason": "Selected image was unavailable: ValueError"
     }
   ]
