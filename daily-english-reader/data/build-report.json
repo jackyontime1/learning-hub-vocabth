@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-09-03T19:19:55.945510+00:00",
-  "expected_toronto_date": "2026-09-03",
+  "started_at": "2026-09-05T18:21:49.435080+00:00",
+  "expected_toronto_date": "2026-09-05",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -18,74 +18,62 @@
   "schema_version": 10,
   "candidate_rejections": [
     {
-      "article_id": "a1486788387f818ae8",
-      "title": "Severe Thunderstorm Warning issued September 3 at 3:16PM EDT until September 3 at 3:45PM EDT by NWS Grand Rapids MI",
-      "provider": "US National Weather Service",
-      "level": "B1",
-      "reason": "RuntimeError: Full Thai translation unavailable for article a1486788387f818ae8"
+      "article_id": "2ced2ff49caceb9f0a",
+      "title": "US hits three Iranian oil tankers after saying its warships were targeted",
+      "provider": "BBC News",
+      "level": "B2",
+      "reason": "RuntimeError: Full Thai translation unavailable for article 2ced2ff49caceb9f0a"
     },
     {
-      "article_id": "7467a3114ab53a27c3",
-      "title": "Tornado Warning issued September 3 at 3:15PM EDT until September 3 at 3:45PM EDT by NWS Detroit/Pontiac MI",
-      "provider": "US National Weather Service",
-      "level": "B1",
-      "reason": "RuntimeError: Full Thai translation unavailable for article 7467a3114ab53a27c3"
-    },
-    {
-      "article_id": "bb695149eadee4952e",
-      "title": "Special Marine Warning issued September 3 at 3:14PM EDT until September 3 at 4:00PM EDT by NWS Miami FL",
-      "provider": "US National Weather Service",
-      "level": "B1",
-      "reason": "RuntimeError: Full Thai translation unavailable for article bb695149eadee4952e"
-    },
-    {
-      "article_id": "e1c20bd1c37c721764",
-      "title": "Post-Training Language Models for Gold-Medal Performance in Coding Competitions",
-      "provider": "arXiv",
+      "article_id": "aef1275cb1cb994b66",
+      "title": "'Layer upon layer of miracles' to find tunnel survivors, Nepal rescue adviser tells BBC",
+      "provider": "BBC News",
       "level": "C1",
-      "reason": "RuntimeError: Full Thai translation unavailable for article e1c20bd1c37c721764"
+      "reason": "RuntimeError: Full Thai translation unavailable for article aef1275cb1cb994b66"
     },
     {
-      "article_id": "b3ba8ae6742ef2f414",
-      "title": "Dry eyes are common among women. Here's why you shouldn't ignore it",
+      "article_id": "e2242aeeb248f36d28",
+      "title": "Severe Thunderstorm Warning issued September 5 at 1:57PM EDT until September 5 at 2:45PM EDT by NWS Greenville-Spartanburg SC",
+      "provider": "US National Weather Service",
+      "level": "B1",
+      "reason": "RuntimeError: Full Thai translation unavailable for article e2242aeeb248f36d28"
+    },
+    {
+      "article_id": "704d27141c1bc9613d",
+      "title": "'The health system in Nepal is not prepared for this'",
       "provider": "NPR",
       "level": "C1",
-      "reason": "RuntimeError: Full Thai translation unavailable for article b3ba8ae6742ef2f414"
+      "reason": "RuntimeError: Full Thai translation unavailable for article 704d27141c1bc9613d"
     },
     {
-      "article_id": "6ecaae5f36c77c1747",
-      "title": "Severe Thunderstorm Warning issued September 3 at 3:14PM EDT until September 3 at 4:00PM EDT by NWS Northern Indiana",
+      "article_id": "4b4143d1238724188a",
+      "title": "Small Craft Advisory issued September 5 at 9:54AM AKDT until September 6 at 1:00AM AKDT by NWS Juneau AK",
       "provider": "US National Weather Service",
       "level": "C1",
-      "reason": "RuntimeError: Full Thai translation unavailable for article 6ecaae5f36c77c1747"
+      "reason": "RuntimeError: Unable to produce 3 valid useful phrases for C1 reading"
     }
   ],
-  "practice_story_count": 4,
+  "practice_story_count": 8,
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
-    "nllb_retries": 8,
-    "quality_failures": 6,
+    "nllb_retries": 7,
+    "quality_failures": 4,
     "rejection_reasons": {
-      "missing-number:11,20,3:16": 1,
-      "missing-number:3:16": 1,
-      "missing-number:45": 2,
-      "missing-unit:\\bmiles?\\b": 2,
-      "repeated-2-gram": 1,
-      "repeated-3-gram": 1,
-      "missing-number:3:12": 2,
-      "missing-time-period": 3,
-      "repeated-junk-string": 2,
-      "missing-number:438.3,502": 1,
-      "suspiciously-long": 1,
-      "empty-translation": 2,
-      "missing-number:30": 1,
-      "missing-number:3:14": 1,
-      "unexpected-non-thai-script": 1
+      "unexpected-non-thai-script": 3,
+      "repeated-junk-string": 3,
+      "missing-number:1300": 2,
+      "repeated-word-run": 2,
+      "repeated-2-gram": 2,
+      "repeated-3-gram": 2,
+      "missing-number:9": 1,
+      "missing-number:1:57,2:45,9": 1,
+      "missing-time-period": 1,
+      "missing-number:1200": 1
     }
   },
-  "completed_at": "2026-09-03T19:51:37.338009+00:00",
-  "latest_date": "2026-09-03",
+  "completed_at": "2026-09-05T19:19:38.147909+00:00",
+  "latest_date": "2026-09-05",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -104,38 +92,38 @@
   "fallback_image_count": 7,
   "fallback_images": [
     {
-      "article_id": "b82e5715bdad570d93",
-      "title": "Kissing apes, anti-splash urinals: This year's Ig Nobels showcase surprising science",
+      "article_id": "a0ba08b759dd043cce",
+      "title": "Special Weather Statement issued September 5 at 1:59PM EDT by NWS Greenville-Spartanburg SC",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "41b2a16a7014b790a6",
-      "title": "SafeEvolve: Harness-Policy Co-Evolution from Agent Experience for Safety Alignment",
+      "article_id": "229390a42a3c47fdd3",
+      "title": "Scientists map key protein interactions linked with profound autism",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "b6dfbc7e787a78ab45",
+      "title": "Whatever happened to the floating schools of Bangladesh?",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "65945101851740d369",
+      "title": "Europe targeted by spiralling campaign of sabotage - and Russia is the chief suspect",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "7e1dc6640a157f6f4d",
+      "title": "Philippine vice president is ordered arrested for threats against the president",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "4c452f0c84042c0fb8",
+      "title": "Severe Thunderstorm Warning issued September 5 at 1:56PM EDT until September 5 at 2:30PM EDT by NWS Blacksburg VA",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "afb973b7791a261192",
-      "title": "'The crowd shouted that we'd stolen someone's genitals' - deadly rumours spread on social media",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "2d13ec328f9360663d",
-      "title": "Low flypast over Cape Town stadium to be reviewed, South Africa says",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "97cb4e4596ef1a95d3",
-      "title": "Severe Thunderstorm Warning issued September 3 at 3:16PM EDT until September 3 at 3:30PM EDT by NWS Grand Rapids MI",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "f978b2cdcd4b3cd6d4",
-      "title": "Severe Thunderstorm Warning issued September 3 at 3:14PM EDT until September 3 at 4:00PM EDT by NWS Grand Rapids MI",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "d29c72552329b6c0f3",
-      "title": "Leaving a Phone for Repair",
+      "article_id": "dc8307d116c4840c8d",
+      "title": "Making a Clinic Appointment",
       "reason": "Selected image was unavailable: ValueError"
     }
   ]
