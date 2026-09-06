@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-09-05T18:21:49.435080+00:00",
-  "expected_toronto_date": "2026-09-05",
+  "started_at": "2026-09-06T18:22:02.230928+00:00",
+  "expected_toronto_date": "2026-09-06",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -16,64 +16,23 @@
     "C1": 2
   },
   "schema_version": 10,
-  "candidate_rejections": [
-    {
-      "article_id": "2ced2ff49caceb9f0a",
-      "title": "US hits three Iranian oil tankers after saying its warships were targeted",
-      "provider": "BBC News",
-      "level": "B2",
-      "reason": "RuntimeError: Full Thai translation unavailable for article 2ced2ff49caceb9f0a"
-    },
-    {
-      "article_id": "aef1275cb1cb994b66",
-      "title": "'Layer upon layer of miracles' to find tunnel survivors, Nepal rescue adviser tells BBC",
-      "provider": "BBC News",
-      "level": "C1",
-      "reason": "RuntimeError: Full Thai translation unavailable for article aef1275cb1cb994b66"
-    },
-    {
-      "article_id": "e2242aeeb248f36d28",
-      "title": "Severe Thunderstorm Warning issued September 5 at 1:57PM EDT until September 5 at 2:45PM EDT by NWS Greenville-Spartanburg SC",
-      "provider": "US National Weather Service",
-      "level": "B1",
-      "reason": "RuntimeError: Full Thai translation unavailable for article e2242aeeb248f36d28"
-    },
-    {
-      "article_id": "704d27141c1bc9613d",
-      "title": "'The health system in Nepal is not prepared for this'",
-      "provider": "NPR",
-      "level": "C1",
-      "reason": "RuntimeError: Full Thai translation unavailable for article 704d27141c1bc9613d"
-    },
-    {
-      "article_id": "4b4143d1238724188a",
-      "title": "Small Craft Advisory issued September 5 at 9:54AM AKDT until September 6 at 1:00AM AKDT by NWS Juneau AK",
-      "provider": "US National Weather Service",
-      "level": "C1",
-      "reason": "RuntimeError: Unable to produce 3 valid useful phrases for C1 reading"
-    }
-  ],
-  "practice_story_count": 8,
+  "candidate_rejections": [],
+  "practice_story_count": 4,
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
-    "nllb_retries": 7,
-    "quality_failures": 4,
+    "nllb_retries": 2,
+    "quality_failures": 0,
     "rejection_reasons": {
-      "unexpected-non-thai-script": 3,
-      "repeated-junk-string": 3,
-      "missing-number:1300": 2,
-      "repeated-word-run": 2,
-      "repeated-2-gram": 2,
-      "repeated-3-gram": 2,
-      "missing-number:9": 1,
-      "missing-number:1:57,2:45,9": 1,
-      "missing-time-period": 1,
-      "missing-number:1200": 1
+      "repeated-word-run": 1,
+      "repeated-2-gram": 1,
+      "repeated-3-gram": 1,
+      "suspiciously-long": 1,
+      "missing-number:1300": 1
     }
   },
-  "completed_at": "2026-09-05T19:19:38.147909+00:00",
-  "latest_date": "2026-09-05",
+  "completed_at": "2026-09-06T18:33:50.769824+00:00",
+  "latest_date": "2026-09-06",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -89,42 +48,52 @@
     "easy_news": 2,
     "daily_life_practice_story": 4
   },
-  "fallback_image_count": 7,
+  "fallback_image_count": 9,
   "fallback_images": [
     {
-      "article_id": "a0ba08b759dd043cce",
-      "title": "Special Weather Statement issued September 5 at 1:59PM EDT by NWS Greenville-Spartanburg SC",
+      "article_id": "dd37b56ee13c09ec75",
+      "title": "Iran warns of 'faster, heavier, more painful response' to US attacks",
+      "reason": "Selected image was unavailable: HTTPError"
+    },
+    {
+      "article_id": "abefcec88cec129beb",
+      "title": "Woman found alive in home destroyed by Nepal flood, days after family began mourning rites",
+      "reason": "Selected image was unavailable: HTTPError"
+    },
+    {
+      "article_id": "5d7fbb0426e5fab4b6",
+      "title": "'It looked like a puddle': Tow truck driver kept busy by huge N.S. rainfall",
+      "reason": "Selected image was unavailable: HTTPError"
+    },
+    {
+      "article_id": "8e7a0d9509d3281bfb",
+      "title": "UN votes to adopt new world map to reflect Africa's true size",
+      "reason": "Selected image was unavailable: HTTPError"
+    },
+    {
+      "article_id": "174822f0b42b296d2a",
+      "title": "Special Weather Statement issued September 6 at 1:10PM CDT by NWS Bismarck ND",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "229390a42a3c47fdd3",
-      "title": "Scientists map key protein interactions linked with profound autism",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "b6dfbc7e787a78ab45",
-      "title": "Whatever happened to the floating schools of Bangladesh?",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "65945101851740d369",
-      "title": "Europe targeted by spiralling campaign of sabotage - and Russia is the chief suspect",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "7e1dc6640a157f6f4d",
-      "title": "Philippine vice president is ordered arrested for threats against the president",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "4c452f0c84042c0fb8",
-      "title": "Severe Thunderstorm Warning issued September 5 at 1:56PM EDT until September 5 at 2:30PM EDT by NWS Blacksburg VA",
+      "article_id": "6de1f66edc9f3e90f7",
+      "title": "Special Weather Statement issued September 6 at 1:20PM CDT by NWS Tulsa OK",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "dc8307d116c4840c8d",
-      "title": "Making a Clinic Appointment",
+      "article_id": "238f8ca7568a45e132",
+      "title": "Returning the Wrong Shirt",
       "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "cf7f150fa875fe0ce1",
+      "title": "A Short Shopping List",
+      "reason": "Selected image was unavailable: HTTPError"
+    },
+    {
+      "article_id": "7bf975f6450f5ec2ff",
+      "title": "The Bus Card",
+      "reason": "Selected image was unavailable: HTTPError"
     }
   ]
 }
