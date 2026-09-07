@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-09-06T18:22:02.230928+00:00",
-  "expected_toronto_date": "2026-09-06",
+  "started_at": "2026-09-07T20:00:13.948971+00:00",
+  "expected_toronto_date": "2026-09-07",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -21,18 +21,20 @@
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
-    "nllb_retries": 2,
+    "nllb_retries": 3,
     "quality_failures": 0,
     "rejection_reasons": {
       "repeated-word-run": 1,
       "repeated-2-gram": 1,
       "repeated-3-gram": 1,
       "suspiciously-long": 1,
-      "missing-number:1300": 1
+      "missing-number:15": 1,
+      "repeated-junk-string": 1,
+      "missing-month:August": 1
     }
   },
-  "completed_at": "2026-09-06T18:33:50.769824+00:00",
-  "latest_date": "2026-09-06",
+  "completed_at": "2026-09-07T20:18:01.567164+00:00",
+  "latest_date": "2026-09-07",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -48,52 +50,47 @@
     "easy_news": 2,
     "daily_life_practice_story": 4
   },
-  "fallback_image_count": 9,
+  "fallback_image_count": 8,
   "fallback_images": [
     {
-      "article_id": "dd37b56ee13c09ec75",
-      "title": "Iran warns of 'faster, heavier, more painful response' to US attacks",
-      "reason": "Selected image was unavailable: HTTPError"
-    },
-    {
-      "article_id": "abefcec88cec129beb",
-      "title": "Woman found alive in home destroyed by Nepal flood, days after family began mourning rites",
-      "reason": "Selected image was unavailable: HTTPError"
-    },
-    {
-      "article_id": "5d7fbb0426e5fab4b6",
-      "title": "'It looked like a puddle': Tow truck driver kept busy by huge N.S. rainfall",
-      "reason": "Selected image was unavailable: HTTPError"
-    },
-    {
-      "article_id": "8e7a0d9509d3281bfb",
-      "title": "UN votes to adopt new world map to reflect Africa's true size",
-      "reason": "Selected image was unavailable: HTTPError"
-    },
-    {
-      "article_id": "174822f0b42b296d2a",
-      "title": "Special Weather Statement issued September 6 at 1:10PM CDT by NWS Bismarck ND",
+      "article_id": "92ac4d10a09c7a14fc",
+      "title": "Israeli clearance of Gaza rubble could destroy evidence of 'atrocity crimes,' says UN expert",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "6de1f66edc9f3e90f7",
-      "title": "Special Weather Statement issued September 6 at 1:20PM CDT by NWS Tulsa OK",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "238f8ca7568a45e132",
-      "title": "Returning the Wrong Shirt",
+      "article_id": "5928574c0feb306af3",
+      "title": "Cape Breton storm yet another one for the history books",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "cf7f150fa875fe0ce1",
-      "title": "A Short Shopping List",
-      "reason": "Selected image was unavailable: HTTPError"
+      "article_id": "5b25d8006c8ed91dd0",
+      "title": "Investigators begin work on why cargo plane overran Miami runway",
+      "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "7bf975f6450f5ec2ff",
-      "title": "The Bus Card",
-      "reason": "Selected image was unavailable: HTTPError"
+      "article_id": "9bf84cc1d1bc6a5a63",
+      "title": "Germany's far-right AfD says 'democracy demands' parties work with them after state election win",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "da25810130956312c0",
+      "title": "Severe Thunderstorm Warning issued September 7 at 2:57PM CDT until September 7 at 3:45PM CDT by NWS New Orleans LA",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "148c5662b6cc66efe0",
+      "title": "Special Weather Statement issued September 7 at 2:59PM CDT by NWS Tulsa OK",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "034c1e8823245d0adb",
+      "title": "Checking a Bank Transfer",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "d0262e68ae0f776345",
+      "title": "The Lunch Box",
+      "reason": "Selected image was unavailable: ValueError"
     }
   ]
 }
