@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-09-09T19:19:41.585289+00:00",
-  "expected_toronto_date": "2026-09-09",
+  "started_at": "2026-09-10T19:09:29.759777+00:00",
+  "expected_toronto_date": "2026-09-10",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -18,61 +18,42 @@
   "schema_version": 10,
   "candidate_rejections": [
     {
-      "article_id": "2ccb421e12d6b13cf4",
-      "title": "What to know about Canada's escalating trade war with the U.S.",
+      "article_id": "19fd4e405fc346a579",
+      "title": "Special Weather Statement issued September 10 at 3:06PM EDT by NWS Tallahassee FL",
+      "provider": "US National Weather Service",
+      "level": "B1",
+      "reason": "RuntimeError: Full Thai translation unavailable for article 19fd4e405fc346a579"
+    },
+    {
+      "article_id": "84b7747d8de4b7d697",
+      "title": "'I'll never trust them again': Some Afghans who helped the U.S. post-9/11 regret it",
       "provider": "NPR",
       "level": "B1",
-      "reason": "RuntimeError: Full Thai translation unavailable for article 2ccb421e12d6b13cf4"
+      "reason": "RuntimeError: Unable to produce 3 valid useful phrases for B1 reading"
     },
     {
-      "article_id": "77a0bd83b70c1b9880",
-      "title": "Ben Shelton beats defending champ Carlos Alcaraz in U.S. Open match that ends after 3:30 a.m.",
-      "provider": "CBC News",
-      "level": "B1",
-      "reason": "RuntimeError: Full Thai translation unavailable for article 77a0bd83b70c1b9880"
-    },
-    {
-      "article_id": "f15dc97083e120d086",
-      "title": "Hegseth is shaking up the Pentagon as the US wages war - but at what cost?",
-      "provider": "BBC News",
-      "level": "B2",
-      "reason": "RuntimeError: Full Thai translation unavailable for article f15dc97083e120d086"
-    },
-    {
-      "article_id": "aa78974c050195ef25",
-      "title": "Extreme Heat Warning issued September 9 at 12:19PM MST until September 10 at 8:00PM MST by NWS Phoenix AZ",
+      "article_id": "c5623b05022e04fe90",
+      "title": "Wind Advisory issued September 10 at 12:04PM PDT until September 13 at 2:00AM PDT by NWS Reno NV",
       "provider": "US National Weather Service",
       "level": "B2",
-      "reason": "RuntimeError: Full Thai translation unavailable for article aa78974c050195ef25"
-    },
-    {
-      "article_id": "c032fa5ab1ae3d8f1a",
-      "title": "'Good to have choice': Australians on opting out of social media algorithms",
-      "provider": "BBC News",
-      "level": "C1",
-      "reason": "RuntimeError: Unable to produce 3 valid useful phrases for C1 reading"
+      "reason": "RuntimeError: Full Thai translation unavailable for article c5623b05022e04fe90"
     }
   ],
   "practice_story_count": 4,
   "practice_fallback_count": 0,
   "translation_quality": {
-    "cache_rejections": 1,
-    "nllb_retries": 6,
-    "quality_failures": 4,
+    "cache_rejections": 0,
+    "nllb_retries": 2,
+    "quality_failures": 2,
     "rejection_reasons": {
-      "empty-translation": 1,
-      "repeated-junk-string": 3,
-      "missing-number:01": 2,
-      "missing-number:33": 2,
-      "collapsed-paragraphs": 2,
-      "unexpected-non-thai-script": 4,
-      "missing-number:8": 2,
-      "missing-number:20,50": 1,
-      "missing-unit:\\bdollars?\\b|[$]": 1
+      "unexpected-non-thai-script": 1,
+      "missing-number:15": 1,
+      "missing-number:8": 1,
+      "missing-number:35,8": 1
     }
   },
-  "completed_at": "2026-09-09T19:29:55.924711+00:00",
-  "latest_date": "2026-09-09",
+  "completed_at": "2026-09-10T19:23:21.193047+00:00",
+  "latest_date": "2026-09-10",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -88,51 +69,41 @@
     "easy_news": 2,
     "daily_life_practice_story": 4
   },
-  "fallback_image_count": 9,
+  "fallback_image_count": 7,
   "fallback_images": [
     {
-      "article_id": "9ac77d7c39acd269c0",
-      "title": "Chrystia Freeland negotiated with Trump. Now she's watching a trade war unfold",
+      "article_id": "1bccaeada6c25936e9",
+      "title": "Man 27, charged in stabbing inside Edmonton Sikh temple",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "9f434d4f6f5e3fbb6a",
-      "title": "Procedural Graphs: Self-Evolving Execution Structures for LLM Agents",
+      "article_id": "f0b9ca5f03dbebe38b",
+      "title": "Ontario court records accessed in cybersecurity breach",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "efaa71de1573f15b32",
-      "title": "Trump banning import of Canadian booze, motorcycles, other goods into U.S.",
+      "article_id": "118927b6a385092f1c",
+      "title": "Marine Weather Statement issued September 10 at 3:06PM EDT by NWS Miami FL",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "6518c300657cba5cd0",
-      "title": "Whatever happened to the measles outbreak that shocked a country this year?",
-      "reason": "Selected image was unavailable: ValueError"
+      "article_id": "e64881b7fef9edb256",
+      "title": "Israel's Netanyahu to sue newspaper over claim UAE warned him of 7 October attack",
+      "reason": "No usable free image candidate"
     },
     {
-      "article_id": "ba418bc6defdc854e3",
-      "title": "Canada 'will NEVER be the 51st state. Sorry!': B.C. premier unveils new border welcome signs",
-      "reason": "Selected image was unavailable: ValueError"
+      "article_id": "cb1dbcb7446186c7a0",
+      "title": "Special Weather Statement issued September 10 at 2:06PM CDT by NWS Norman OK",
+      "reason": "No usable free image candidate"
     },
     {
-      "article_id": "beb2142ded5ae0b536",
-      "title": "Has the economy gone C-shaped?",
-      "reason": "Selected image was unavailable: ValueError"
+      "article_id": "7a1a10f7d3cbccb9e4",
+      "title": "Special Weather Statement issued September 10 at 3:07PM EDT by NWS Melbourne FL",
+      "reason": "No usable free image candidate"
     },
     {
-      "article_id": "a27b4961701d52c279",
-      "title": "A Phone Call from the Driver",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "2c89b334d9f98e7816",
-      "title": "Meeting a New Neighbor",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "41792aff39ee7d1042",
-      "title": "Laundry Before the Rain",
+      "article_id": "c3227acd34eae0cb28",
+      "title": "Sending a Parcel",
       "reason": "Selected image was unavailable: ValueError"
     }
   ]
