@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-09-10T19:09:29.759777+00:00",
-  "expected_toronto_date": "2026-09-10",
+  "started_at": "2026-09-11T19:11:47.916113+00:00",
+  "expected_toronto_date": "2026-09-11",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -18,42 +18,36 @@
   "schema_version": 10,
   "candidate_rejections": [
     {
-      "article_id": "19fd4e405fc346a579",
-      "title": "Special Weather Statement issued September 10 at 3:06PM EDT by NWS Tallahassee FL",
-      "provider": "US National Weather Service",
-      "level": "B1",
-      "reason": "RuntimeError: Full Thai translation unavailable for article 19fd4e405fc346a579"
-    },
-    {
       "article_id": "84b7747d8de4b7d697",
       "title": "'I'll never trust them again': Some Afghans who helped the U.S. post-9/11 regret it",
       "provider": "NPR",
       "level": "B1",
-      "reason": "RuntimeError: Unable to produce 3 valid useful phrases for B1 reading"
+      "reason": "RuntimeError: Full Thai translation unavailable for article 84b7747d8de4b7d697"
     },
     {
-      "article_id": "c5623b05022e04fe90",
-      "title": "Wind Advisory issued September 10 at 12:04PM PDT until September 13 at 2:00AM PDT by NWS Reno NV",
+      "article_id": "3075c4df35a1a54412",
+      "title": "Severe Thunderstorm Warning issued September 11 at 12:10PM MST until September 11 at 12:45PM MST by NWS Flagstaff AZ",
       "provider": "US National Weather Service",
-      "level": "B2",
-      "reason": "RuntimeError: Full Thai translation unavailable for article c5623b05022e04fe90"
+      "level": "B1",
+      "reason": "RuntimeError: Full Thai translation unavailable for article 3075c4df35a1a54412"
     }
   ],
   "practice_story_count": 4,
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
-    "nllb_retries": 2,
+    "nllb_retries": 3,
     "quality_failures": 2,
     "rejection_reasons": {
+      "missing-number:9": 1,
+      "missing-unit:\\bdegrees?\\b|°[CF]\\b": 2,
       "unexpected-non-thai-script": 1,
-      "missing-number:15": 1,
-      "missing-number:8": 1,
-      "missing-number:35,8": 1
+      "missing-number:5": 1,
+      "missing-number:12:10,1:10,1:45,5": 1
     }
   },
-  "completed_at": "2026-09-10T19:23:21.193047+00:00",
-  "latest_date": "2026-09-10",
+  "completed_at": "2026-09-11T19:24:54.039528+00:00",
+  "latest_date": "2026-09-11",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -72,38 +66,38 @@
   "fallback_image_count": 7,
   "fallback_images": [
     {
-      "article_id": "1bccaeada6c25936e9",
-      "title": "Man 27, charged in stabbing inside Edmonton Sikh temple",
+      "article_id": "c312888ee219a6a550",
+      "title": "Man loses case to claw back $369,000 he spent on lavish gifts for ex-girlfriend",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "0e2cbf1c470d7d0c05",
+      "title": "Flood Advisory issued September 11 at 3:07PM EDT until September 11 at 4:00PM EDT by NWS Charleston SC",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "f0b9ca5f03dbebe38b",
-      "title": "Ontario court records accessed in cybersecurity breach",
+      "article_id": "b98fe56c8781f86e9f",
+      "title": "How global trade and oil prices could be hit by Houthi advance",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "26634b0cabb62f94fe",
+      "title": "Hong Kong's Tiananmen activists sentenced to up to seven years in prison",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "cb1b69970b071c8295",
+      "title": "Special Marine Warning issued September 11 at 3:07PM EDT until September 11 at 3:30PM EDT by NWS Tallahassee FL",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "118927b6a385092f1c",
-      "title": "Marine Weather Statement issued September 10 at 3:06PM EDT by NWS Miami FL",
+      "article_id": "67add99c2abdd3d245",
+      "title": "Special Weather Statement issued September 11 at 3:01PM EDT by NWS Charleston SC",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "e64881b7fef9edb256",
-      "title": "Israel's Netanyahu to sue newspaper over claim UAE warned him of 7 October attack",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "cb1dbcb7446186c7a0",
-      "title": "Special Weather Statement issued September 10 at 2:06PM CDT by NWS Norman OK",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "7a1a10f7d3cbccb9e4",
-      "title": "Special Weather Statement issued September 10 at 3:07PM EDT by NWS Melbourne FL",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "c3227acd34eae0cb28",
-      "title": "Sending a Parcel",
+      "article_id": "8757a088b9e049225a",
+      "title": "Leaving a Phone for Repair",
       "reason": "Selected image was unavailable: ValueError"
     }
   ]
