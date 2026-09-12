@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-09-11T19:11:47.916113+00:00",
-  "expected_toronto_date": "2026-09-11",
+  "started_at": "2026-09-12T18:27:32.373749+00:00",
+  "expected_toronto_date": "2026-09-12",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -18,36 +18,28 @@
   "schema_version": 10,
   "candidate_rejections": [
     {
-      "article_id": "84b7747d8de4b7d697",
-      "title": "'I'll never trust them again': Some Afghans who helped the U.S. post-9/11 regret it",
-      "provider": "NPR",
-      "level": "B1",
-      "reason": "RuntimeError: Full Thai translation unavailable for article 84b7747d8de4b7d697"
-    },
-    {
-      "article_id": "3075c4df35a1a54412",
-      "title": "Severe Thunderstorm Warning issued September 11 at 12:10PM MST until September 11 at 12:45PM MST by NWS Flagstaff AZ",
+      "article_id": "f667f5dc187291e0b8",
+      "title": "Special Weather Statement issued September 12 at 1:26PM CDT by NWS Tulsa OK",
       "provider": "US National Weather Service",
       "level": "B1",
-      "reason": "RuntimeError: Full Thai translation unavailable for article 3075c4df35a1a54412"
+      "reason": "RuntimeError: Full Thai translation unavailable for article f667f5dc187291e0b8"
     }
   ],
   "practice_story_count": 4,
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
-    "nllb_retries": 3,
-    "quality_failures": 2,
+    "nllb_retries": 2,
+    "quality_failures": 1,
     "rejection_reasons": {
-      "missing-number:9": 1,
-      "missing-unit:\\bdegrees?\\b|°[CF]\\b": 2,
-      "unexpected-non-thai-script": 1,
-      "missing-number:5": 1,
-      "missing-number:12:10,1:10,1:45,5": 1
+      "repeated-word-run": 2,
+      "repeated-2-gram": 2,
+      "repeated-3-gram": 2,
+      "missing-number:2,3": 1
     }
   },
-  "completed_at": "2026-09-11T19:24:54.039528+00:00",
-  "latest_date": "2026-09-11",
+  "completed_at": "2026-09-12T18:34:22.862205+00:00",
+  "latest_date": "2026-09-12",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -63,42 +55,37 @@
     "easy_news": 2,
     "daily_life_practice_story": 4
   },
-  "fallback_image_count": 7,
+  "fallback_image_count": 6,
   "fallback_images": [
     {
-      "article_id": "c312888ee219a6a550",
-      "title": "Man loses case to claw back $369,000 he spent on lavish gifts for ex-girlfriend",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "0e2cbf1c470d7d0c05",
-      "title": "Flood Advisory issued September 11 at 3:07PM EDT until September 11 at 4:00PM EDT by NWS Charleston SC",
+      "article_id": "a2d5bd7d7bad63c91d",
+      "title": "From DOGE to \"space lasers,\" Alex Gibney peels back the many layers of Elon Musk",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "b98fe56c8781f86e9f",
-      "title": "How global trade and oil prices could be hit by Houthi advance",
+      "article_id": "caaa32857ebee44029",
+      "title": "US diesel prices soar past $6 a gallon, deepening strain for hauling everyday goods",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "26634b0cabb62f94fe",
-      "title": "Hong Kong's Tiananmen activists sentenced to up to seven years in prison",
+      "article_id": "93ee6adf8968ea2311",
+      "title": "El Niño likely to cause wetter and warmer-than-normal autumn",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "cb1b69970b071c8295",
-      "title": "Special Marine Warning issued September 11 at 3:07PM EDT until September 11 at 3:30PM EDT by NWS Tallahassee FL",
+      "article_id": "372f2154295184f706",
+      "title": "Gen Zs recall first learning of 'deeply harrowing, terrifying' 9/11",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "67add99c2abdd3d245",
-      "title": "Special Weather Statement issued September 11 at 3:01PM EDT by NWS Charleston SC",
+      "article_id": "09b0fd42f4ee8531a3",
+      "title": "Republican lawmaker wants to rename Lake Erie to Lake Pennsylvania",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "8757a088b9e049225a",
-      "title": "Leaving a Phone for Repair",
-      "reason": "Selected image was unavailable: ValueError"
+      "article_id": "47ea68f92384048859",
+      "title": "U.S. federal officials declare end to cyclospora outbreak that sickened thousands in 21 states",
+      "reason": "No usable free image candidate"
     }
   ]
 }
