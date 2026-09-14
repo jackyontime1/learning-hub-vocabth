@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-09-13T18:50:13.453168+00:00",
-  "expected_toronto_date": "2026-09-13",
+  "started_at": "2026-09-14T20:21:09.850013+00:00",
+  "expected_toronto_date": "2026-09-14",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -16,7 +16,22 @@
     "C1": 2
   },
   "schema_version": 10,
-  "candidate_rejections": [],
+  "candidate_rejections": [
+    {
+      "article_id": "4f358d44eaee0ff0c6",
+      "title": "Gale Warning issued September 14 at 4:20PM EDT until September 15 at 8:00PM EDT by NWS Marquette MI",
+      "provider": "US National Weather Service",
+      "level": "C1",
+      "reason": "RuntimeError: Unable to produce 3 valid useful phrases for C1 reading"
+    },
+    {
+      "article_id": "5c45b0a34b4fc30eb0",
+      "title": "Gale Warning issued September 14 at 4:20PM EDT until September 15 at 8:00PM EDT by NWS Marquette MI",
+      "provider": "US National Weather Service",
+      "level": "C1",
+      "reason": "RuntimeError: Unable to produce 3 valid useful phrases for C1 reading"
+    }
+  ],
   "practice_story_count": 4,
   "practice_fallback_count": 0,
   "translation_quality": {
@@ -24,13 +39,11 @@
     "nllb_retries": 1,
     "quality_failures": 0,
     "rejection_reasons": {
-      "repeated-junk-string": 1,
-      "suspiciously-long": 1,
-      "missing-number:0.5,1": 1
+      "repeated-junk-string": 1
     }
   },
-  "completed_at": "2026-09-13T18:54:40.069217+00:00",
-  "latest_date": "2026-09-13",
+  "completed_at": "2026-09-14T20:37:35.152883+00:00",
+  "latest_date": "2026-09-14",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -49,43 +62,43 @@
   "fallback_image_count": 8,
   "fallback_images": [
     {
-      "article_id": "570aadb7787b4f30b1",
-      "title": "Gale Watch issued September 13 at 1:41PM CDT until September 15 at 7:00AM CDT by NWS Milwaukee/Sullivan WI",
+      "article_id": "184ca4e96ab7bf71f3",
+      "title": "Alexander Zverev beats Ben Shelton to win U.S. Open, extending 23-year drought for American men",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "5b024f79deca4a880c",
-      "title": "Small Craft Advisory issued September 13 at 1:41PM CDT until September 14 at 10:00PM CDT by NWS Milwaukee/Sullivan WI",
+      "article_id": "4f29f4504bf0bc2735",
+      "title": "World leaders gathered for the annual BRICS summit. Here are the takeaways",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "6a83f3f22f392249b4",
-      "title": "Six dead, 130 missing after Indonesian ferry capsizes in Java Sea",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "c31b46c9d04d1b9c2f",
-      "title": "Residents and officials meet on dredging concerns",
+      "article_id": "77672302f7d92cbad1",
+      "title": "Afghan woman deported from US in first use of 'alien terrorist' court",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "dd3983ede12302c340",
-      "title": "Flash Flood Warning issued September 13 at 11:35AM MST until September 13 at 1:30PM MST by NWS Flagstaff AZ",
+      "article_id": "793e75662344bc7fbb",
+      "title": "Turkish police detain dozens in raids on gay bars and homes of LGBTQ+ activists",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "007848f9f8062c2ea6",
-      "title": "Special Weather Statement issued September 13 at 1:35PM CDT by NWS Jackson MS",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "c86bc4cacee3cf8920",
-      "title": "Making a Clinic Appointment",
+      "article_id": "3f41a87c65702b7c65",
+      "title": "Body of missing runner found in South Africa",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "3fe61f2cafec14b8bf",
-      "title": "The Bus Card",
+      "article_id": "c0553084acf3fec1ef",
+      "title": "Pennsylvania says an unvaccinated woman has died from measles-related complications",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "0f5d69dcd197a14994",
+      "title": "Returning the Wrong Shirt",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "ec74f794944eaf1db7",
+      "title": "The Lunch Box",
       "reason": "Selected image was unavailable: ValueError"
     }
   ]
