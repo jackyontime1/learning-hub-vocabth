@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-09-14T20:37:35.152779+00:00",
-  "build_date_utc": "2026-09-14",
-  "expected_toronto_date": "2026-09-14",
+  "updated_at": "2026-09-15T19:48:52.155323+00:00",
+  "build_date_utc": "2026-09-15",
+  "expected_toronto_date": "2026-09-15",
   "demo_fallback_blocked": true,
   "providers": {
     "arxiv": {
@@ -15,12 +15,12 @@
       "error_count": 0,
       "soft_limit": 2,
       "available": true,
-      "last_success": "2026-09-14T20:21:14.364896+00:00",
+      "last_success": "2026-09-15T19:44:24.903649+00:00",
       "cooldown_until": "",
       "last_error": "",
       "disabled_reason": "",
       "skip_reasons": {
-        "source older than 48 hours": 12
+        "not selected for daily edition": 12
       }
     },
     "commons": {
@@ -34,7 +34,7 @@
       "error_count": 0,
       "soft_limit": 10,
       "available": false,
-      "last_success": "2026-09-14T20:37:33.990661+00:00",
+      "last_success": "2026-09-15T19:48:51.114031+00:00",
       "cooldown_until": "",
       "last_error": "",
       "disabled_reason": "",
@@ -90,8 +90,8 @@
       "last_error": "",
       "disabled_reason": "",
       "skip_reasons": {
-        "Selected image was unavailable: ValueError": 5,
-        "No usable free image candidate": 3
+        "Selected image was unavailable: ValueError": 6,
+        "No usable free image candidate": 2
       }
     },
     "nasa": {
@@ -105,7 +105,7 @@
       "error_count": 0,
       "soft_limit": 2,
       "available": true,
-      "last_success": "2026-09-14T20:21:12.108731+00:00",
+      "last_success": "2026-09-15T19:44:23.991342+00:00",
       "cooldown_until": "",
       "last_error": "",
       "disabled_reason": "",
@@ -124,7 +124,7 @@
       "error_count": 0,
       "soft_limit": 2,
       "available": true,
-      "last_success": "2026-09-14T20:21:12.829442+00:00",
+      "last_success": "2026-09-15T19:44:24.330799+00:00",
       "cooldown_until": "",
       "last_error": "",
       "disabled_reason": "",
@@ -141,7 +141,7 @@
       "error_count": 0,
       "soft_limit": 10,
       "available": false,
-      "last_success": "2026-09-14T20:37:33.412934+00:00",
+      "last_success": "2026-09-15T19:48:50.466888+00:00",
       "cooldown_until": "",
       "last_error": "",
       "disabled_reason": "",
@@ -168,20 +168,20 @@
       "provider": "rss_bbc-news-science",
       "enabled": true,
       "attempted": true,
-      "selected_count": 0,
-      "skipped_count": 16,
+      "selected_count": 3,
+      "skipped_count": 14,
       "request_count": 1,
       "success_count": 1,
       "error_count": 0,
       "soft_limit": 30,
       "available": true,
-      "last_success": "2026-09-14T20:21:10.981508+00:00",
+      "last_success": "2026-09-15T19:44:22.922555+00:00",
       "cooldown_until": "",
       "last_error": "",
       "disabled_reason": "",
       "skip_reasons": {
-        "duplicate article": 2,
-        "source older than 48 hours": 11,
+        "source older than 48 hours": 8,
+        "duplicate article": 3,
         "not selected for daily edition": 3
       }
     },
@@ -190,18 +190,18 @@
       "enabled": true,
       "attempted": true,
       "selected_count": 0,
-      "skipped_count": 3,
+      "skipped_count": 4,
       "request_count": 1,
       "success_count": 1,
       "error_count": 0,
       "soft_limit": 30,
       "available": true,
-      "last_success": "2026-09-14T20:21:10.648389+00:00",
+      "last_success": "2026-09-15T19:44:22.746769+00:00",
       "cooldown_until": "",
       "last_error": "",
       "disabled_reason": "",
       "skip_reasons": {
-        "source older than 48 hours": 1,
+        "source older than 48 hours": 2,
         "not selected for daily edition": 2
       }
     },
@@ -209,20 +209,20 @@
       "provider": "rss_bbc-news-world",
       "enabled": true,
       "attempted": true,
-      "selected_count": 3,
-      "skipped_count": 25,
+      "selected_count": 0,
+      "skipped_count": 15,
       "request_count": 1,
       "success_count": 1,
       "error_count": 0,
       "soft_limit": 30,
       "available": true,
-      "last_success": "2026-09-14T20:21:10.624782+00:00",
+      "last_success": "2026-09-15T19:44:22.630002+00:00",
       "cooldown_until": "",
       "last_error": "",
       "disabled_reason": "",
       "skip_reasons": {
-        "source older than 48 hours": 3,
-        "not selected for daily edition": 22
+        "source older than 48 hours": 1,
+        "not selected for daily edition": 14
       }
     },
     "rss_cbc-news-business": {
@@ -230,20 +230,20 @@
       "enabled": true,
       "attempted": true,
       "selected_count": 0,
-      "skipped_count": 20,
+      "skipped_count": 19,
       "request_count": 1,
       "success_count": 1,
       "error_count": 0,
       "soft_limit": 30,
       "available": true,
-      "last_success": "2026-09-14T20:21:10.476938+00:00",
+      "last_success": "2026-09-15T19:44:22.478356+00:00",
       "cooldown_until": "",
       "last_error": "",
       "disabled_reason": "",
       "skip_reasons": {
         "duplicate article": 2,
-        "source older than 48 hours": 14,
-        "not selected for daily edition": 4
+        "source older than 48 hours": 11,
+        "not selected for daily edition": 6
       }
     },
     "rss_cbc-news-canada": {
@@ -257,33 +257,33 @@
       "error_count": 0,
       "soft_limit": 30,
       "available": true,
-      "last_success": "2026-09-14T20:21:10.394385+00:00",
+      "last_success": "2026-09-15T19:44:22.335734+00:00",
       "cooldown_until": "",
       "last_error": "",
       "disabled_reason": "",
       "skip_reasons": {
-        "source older than 48 hours": 1,
-        "not selected for daily edition": 18
+        "not selected for daily edition": 19
       }
     },
     "rss_cbc-news-world": {
       "provider": "rss_cbc-news-world",
       "enabled": true,
       "attempted": true,
-      "selected_count": 1,
-      "skipped_count": 19,
+      "selected_count": 2,
+      "skipped_count": 17,
       "request_count": 1,
       "success_count": 1,
       "error_count": 0,
       "soft_limit": 30,
       "available": true,
-      "last_success": "2026-09-14T20:21:10.461015+00:00",
+      "last_success": "2026-09-15T19:44:22.405319+00:00",
       "cooldown_until": "",
       "last_error": "",
       "disabled_reason": "",
       "skip_reasons": {
-        "source older than 48 hours": 2,
-        "not selected for daily edition": 17
+        "source older than 48 hours": 1,
+        "duplicate article": 1,
+        "not selected for daily edition": 15
       }
     },
     "rss_npr-business": {
@@ -291,37 +291,38 @@
       "enabled": true,
       "attempted": true,
       "selected_count": 0,
-      "skipped_count": 9,
+      "skipped_count": 8,
       "request_count": 1,
       "success_count": 1,
       "error_count": 0,
       "soft_limit": 30,
       "available": true,
-      "last_success": "2026-09-14T20:21:11.395955+00:00",
+      "last_success": "2026-09-15T19:44:23.161308+00:00",
       "cooldown_until": "",
       "last_error": "",
       "disabled_reason": "",
       "skip_reasons": {
-        "source older than 48 hours": 7,
-        "not selected for daily edition": 2
+        "source older than 48 hours": 5,
+        "not selected for daily edition": 3
       }
     },
     "rss_npr-health": {
       "provider": "rss_npr-health",
       "enabled": true,
       "attempted": true,
-      "selected_count": 1,
-      "skipped_count": 9,
+      "selected_count": 0,
+      "skipped_count": 10,
       "request_count": 1,
       "success_count": 1,
       "error_count": 0,
       "soft_limit": 30,
       "available": true,
-      "last_success": "2026-09-14T20:21:11.553048+00:00",
+      "last_success": "2026-09-15T19:44:23.259717+00:00",
       "cooldown_until": "",
       "last_error": "",
       "disabled_reason": "",
       "skip_reasons": {
+        "duplicate article": 1,
         "source older than 48 hours": 5,
         "not selected for daily edition": 4
       }
@@ -330,19 +331,19 @@
       "provider": "rss_npr-world",
       "enabled": true,
       "attempted": true,
-      "selected_count": 1,
-      "skipped_count": 9,
+      "selected_count": 0,
+      "skipped_count": 10,
       "request_count": 1,
       "success_count": 1,
       "error_count": 0,
       "soft_limit": 30,
       "available": true,
-      "last_success": "2026-09-14T20:21:11.305428+00:00",
+      "last_success": "2026-09-15T19:44:23.107760+00:00",
       "cooldown_until": "",
       "last_error": "",
       "disabled_reason": "",
       "skip_reasons": {
-        "not selected for daily edition": 9
+        "not selected for daily edition": 10
       }
     },
     "unsplash": {
@@ -367,7 +368,7 @@
       "enabled": true,
       "attempted": false,
       "selected_count": 2,
-      "skipped_count": 10,
+      "skipped_count": 9,
       "request_count": 0,
       "success_count": 0,
       "error_count": 0,
@@ -378,7 +379,7 @@
       "last_error": "",
       "disabled_reason": "",
       "skip_reasons": {
-        "candidate rejected: RuntimeError: Unable to produce 3 valid useful phrases for C1 reading": 2,
+        "candidate rejected: RuntimeError: Full Thai translation unavailable for article 5a507c506001f688a7": 1,
         "not selected for daily edition": 8
       }
     },
@@ -393,7 +394,7 @@
       "error_count": 0,
       "soft_limit": 2,
       "available": true,
-      "last_success": "2026-09-14T20:21:12.989394+00:00",
+      "last_success": "2026-09-15T19:44:24.517309+00:00",
       "cooldown_until": "",
       "last_error": "",
       "disabled_reason": "",

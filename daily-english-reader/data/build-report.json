@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-09-14T20:21:09.850013+00:00",
-  "expected_toronto_date": "2026-09-14",
+  "started_at": "2026-09-15T19:44:21.596167+00:00",
+  "expected_toronto_date": "2026-09-15",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -18,32 +18,32 @@
   "schema_version": 10,
   "candidate_rejections": [
     {
-      "article_id": "4f358d44eaee0ff0c6",
-      "title": "Gale Warning issued September 14 at 4:20PM EDT until September 15 at 8:00PM EDT by NWS Marquette MI",
+      "article_id": "5a507c506001f688a7",
+      "title": "Special Weather Statement issued September 15 at 2:43PM CDT by NWS Norman OK",
       "provider": "US National Weather Service",
-      "level": "C1",
-      "reason": "RuntimeError: Unable to produce 3 valid useful phrases for C1 reading"
-    },
-    {
-      "article_id": "5c45b0a34b4fc30eb0",
-      "title": "Gale Warning issued September 14 at 4:20PM EDT until September 15 at 8:00PM EDT by NWS Marquette MI",
-      "provider": "US National Weather Service",
-      "level": "C1",
-      "reason": "RuntimeError: Unable to produce 3 valid useful phrases for C1 reading"
+      "level": "B1",
+      "reason": "RuntimeError: Full Thai translation unavailable for article 5a507c506001f688a7"
     }
   ],
   "practice_story_count": 4,
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
-    "nllb_retries": 1,
-    "quality_failures": 0,
+    "nllb_retries": 3,
+    "quality_failures": 1,
     "rejection_reasons": {
-      "repeated-junk-string": 1
+      "repeated-2-gram": 1,
+      "repeated-3-gram": 1,
+      "missing-number:20,7": 1,
+      "missing-number:20": 1,
+      "missing-number:196": 1,
+      "missing-unit:\\bdegrees?\\b|°[CF]\\b": 1,
+      "missing-number:20,25,30,35": 1,
+      "missing-unit:\\bmiles?\\b": 1
     }
   },
-  "completed_at": "2026-09-14T20:37:35.152883+00:00",
-  "latest_date": "2026-09-14",
+  "completed_at": "2026-09-15T19:48:52.155435+00:00",
+  "latest_date": "2026-09-15",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -62,43 +62,43 @@
   "fallback_image_count": 8,
   "fallback_images": [
     {
-      "article_id": "184ca4e96ab7bf71f3",
-      "title": "Alexander Zverev beats Ben Shelton to win U.S. Open, extending 23-year drought for American men",
+      "article_id": "f38800375dd2e31335",
+      "title": "Flash flooding interrupts half-marathon, submerges cars",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "4f29f4504bf0bc2735",
-      "title": "World leaders gathered for the annual BRICS summit. Here are the takeaways",
+      "article_id": "54420b6af9701ce563",
+      "title": "What we know about Carney's push for a 'unique alliance' with the EU",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "92e169199c6f2b8aa0",
+      "title": "Red Flag Warning issued September 15 at 12:40PM PDT until September 16 at 8:00PM PDT by NWS Elko NV",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "77672302f7d92cbad1",
-      "title": "Afghan woman deported from US in first use of 'alien terrorist' court",
+      "article_id": "69609930f1b3b437ef",
+      "title": "Conservationist honoured for protecting rare animals",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "793e75662344bc7fbb",
-      "title": "Turkish police detain dozens in raids on gay bars and homes of LGBTQ+ activists",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "3f41a87c65702b7c65",
-      "title": "Body of missing runner found in South Africa",
+      "article_id": "2787fe91418fd49c7f",
+      "title": "Republican Mitch McConnell returns to U.S. Senate after 3-month absence",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "c0553084acf3fec1ef",
-      "title": "Pennsylvania says an unvaccinated woman has died from measles-related complications",
+      "article_id": "e7a812c911ef161a03",
+      "title": "Will El Niño bring winter snow to the UK?",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "0f5d69dcd197a14994",
-      "title": "Returning the Wrong Shirt",
+      "article_id": "818b148c51f89cf32d",
+      "title": "Checking a Bank Transfer",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "ec74f794944eaf1db7",
-      "title": "The Lunch Box",
+      "article_id": "3b7d8f833b07a5daf5",
+      "title": "A Low Phone Battery",
       "reason": "Selected image was unavailable: ValueError"
     }
   ]
