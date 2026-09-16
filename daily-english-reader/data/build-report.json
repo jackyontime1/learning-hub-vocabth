@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-09-15T19:44:21.596167+00:00",
-  "expected_toronto_date": "2026-09-15",
+  "started_at": "2026-09-16T19:36:05.395788+00:00",
+  "expected_toronto_date": "2026-09-16",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -16,34 +16,19 @@
     "C1": 2
   },
   "schema_version": 10,
-  "candidate_rejections": [
-    {
-      "article_id": "5a507c506001f688a7",
-      "title": "Special Weather Statement issued September 15 at 2:43PM CDT by NWS Norman OK",
-      "provider": "US National Weather Service",
-      "level": "B1",
-      "reason": "RuntimeError: Full Thai translation unavailable for article 5a507c506001f688a7"
-    }
-  ],
+  "candidate_rejections": [],
   "practice_story_count": 4,
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
-    "nllb_retries": 3,
-    "quality_failures": 1,
+    "nllb_retries": 1,
+    "quality_failures": 0,
     "rejection_reasons": {
-      "repeated-2-gram": 1,
-      "repeated-3-gram": 1,
-      "missing-number:20,7": 1,
-      "missing-number:20": 1,
-      "missing-number:196": 1,
-      "missing-unit:\\bdegrees?\\b|°[CF]\\b": 1,
-      "missing-number:20,25,30,35": 1,
-      "missing-unit:\\bmiles?\\b": 1
+      "repeated-junk-string": 1
     }
   },
-  "completed_at": "2026-09-15T19:48:52.155435+00:00",
-  "latest_date": "2026-09-15",
+  "completed_at": "2026-09-16T19:40:51.959607+00:00",
+  "latest_date": "2026-09-16",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -59,32 +44,32 @@
     "easy_news": 2,
     "daily_life_practice_story": 4
   },
-  "fallback_image_count": 8,
+  "fallback_image_count": 9,
   "fallback_images": [
     {
-      "article_id": "f38800375dd2e31335",
-      "title": "Flash flooding interrupts half-marathon, submerges cars",
+      "article_id": "7d99cdeef50e2982ad",
+      "title": "Charlie Kirk's family alleges 'stunning failures' by Utah officials led to his shooting",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "54420b6af9701ce563",
-      "title": "What we know about Carney's push for a 'unique alliance' with the EU",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "92e169199c6f2b8aa0",
-      "title": "Red Flag Warning issued September 15 at 12:40PM PDT until September 16 at 8:00PM PDT by NWS Elko NV",
+      "article_id": "0179f8cf81d5dfce59",
+      "title": "Republican senator warns Carney against tightening Canada's links to European Union",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "69609930f1b3b437ef",
-      "title": "Conservationist honoured for protecting rare animals",
+      "article_id": "23cfed4bc2977be163",
+      "title": "Photos show widespread damage at US sites from Iranian attacks",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "2787fe91418fd49c7f",
-      "title": "Republican Mitch McConnell returns to U.S. Senate after 3-month absence",
+      "article_id": "8d233ea6892b0dbc08",
+      "title": "EU chief backs plan for Canada to become 'associate member'",
       "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "d4e59184f71c3db8d0",
+      "title": "Severe Thunderstorm Warning issued September 16 at 12:31PM MST until September 16 at 1:00PM MST by NWS Tucson AZ",
+      "reason": "No usable free image candidate"
     },
     {
       "article_id": "e7a812c911ef161a03",
@@ -92,13 +77,18 @@
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "818b148c51f89cf32d",
-      "title": "Checking a Bank Transfer",
+      "article_id": "54b919dc483cda5942",
+      "title": "Asking About a Restaurant Order",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "3b7d8f833b07a5daf5",
-      "title": "A Low Phone Battery",
+      "article_id": "b3ef5534fde6a9cd82",
+      "title": "Meeting a New Neighbor",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "4881fe10cd110aae72",
+      "title": "Laundry Before the Rain",
       "reason": "Selected image was unavailable: ValueError"
     }
   ]
