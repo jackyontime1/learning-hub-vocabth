@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-09-16T19:36:05.395788+00:00",
-  "expected_toronto_date": "2026-09-16",
+  "started_at": "2026-09-17T19:45:38.714250+00:00",
+  "expected_toronto_date": "2026-09-17",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -21,14 +21,12 @@
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
-    "nllb_retries": 1,
+    "nllb_retries": 0,
     "quality_failures": 0,
-    "rejection_reasons": {
-      "repeated-junk-string": 1
-    }
+    "rejection_reasons": {}
   },
-  "completed_at": "2026-09-16T19:40:51.959607+00:00",
-  "latest_date": "2026-09-16",
+  "completed_at": "2026-09-17T19:56:37.802277+00:00",
+  "latest_date": "2026-09-17",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -44,51 +42,41 @@
     "easy_news": 2,
     "daily_life_practice_story": 4
   },
-  "fallback_image_count": 9,
+  "fallback_image_count": 7,
   "fallback_images": [
-    {
-      "article_id": "7d99cdeef50e2982ad",
-      "title": "Charlie Kirk's family alleges 'stunning failures' by Utah officials led to his shooting",
-      "reason": "No usable free image candidate"
-    },
     {
       "article_id": "0179f8cf81d5dfce59",
       "title": "Republican senator warns Carney against tightening Canada's links to European Union",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "23cfed4bc2977be163",
-      "title": "Photos show widespread damage at US sites from Iranian attacks",
+      "article_id": "fe9f89892662e93659",
+      "title": "Russian missile and drone strikes on Ukraine injure at least 16, including children",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "8d233ea6892b0dbc08",
-      "title": "EU chief backs plan for Canada to become 'associate member'",
+      "article_id": "5d9d724977eecd2f0c",
+      "title": "Part-human part-mouse brain developed in science breakthrough",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "d4e59184f71c3db8d0",
-      "title": "Severe Thunderstorm Warning issued September 16 at 12:31PM MST until September 16 at 1:00PM MST by NWS Tucson AZ",
+      "article_id": "910238f43dc83d5f47",
+      "title": "Uncontrolled AI could lead to 'silicon species' rivalling humans, warns Microsoft",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "e7a812c911ef161a03",
-      "title": "Will El Niño bring winter snow to the UK?",
+      "article_id": "ca8d135278d5b4bbe6",
+      "title": "How are rising prices affecting you? NPR wants to know",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "54b919dc483cda5942",
-      "title": "Asking About a Restaurant Order",
-      "reason": "Selected image was unavailable: ValueError"
+      "article_id": "4f29b02b4c1b1f1ab0",
+      "title": "How Ed Sheeran's tour became a flashpoint over Gaza and free speech",
+      "reason": "No usable free image candidate"
     },
     {
-      "article_id": "b3ef5534fde6a9cd82",
-      "title": "Meeting a New Neighbor",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "4881fe10cd110aae72",
-      "title": "Laundry Before the Rain",
+      "article_id": "ea6817aefc053dea84",
+      "title": "A Phone Call from the Driver",
       "reason": "Selected image was unavailable: ValueError"
     }
   ]
