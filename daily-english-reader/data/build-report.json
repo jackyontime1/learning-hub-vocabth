@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-09-17T19:45:38.714250+00:00",
-  "expected_toronto_date": "2026-09-17",
+  "started_at": "2026-09-18T19:04:24.447567+00:00",
+  "expected_toronto_date": "2026-09-18",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -16,17 +16,28 @@
     "C1": 2
   },
   "schema_version": 10,
-  "candidate_rejections": [],
+  "candidate_rejections": [
+    {
+      "article_id": "d47d2954c81320d935",
+      "title": "Supreme Court says it invalidated Liberal MP's 1-vote win due to Elections Canada error",
+      "provider": "CBC News",
+      "level": "C1",
+      "reason": "RuntimeError: Unable to produce 3 valid useful phrases for C1 reading"
+    }
+  ],
   "practice_story_count": 4,
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
-    "nllb_retries": 0,
+    "nllb_retries": 2,
     "quality_failures": 0,
-    "rejection_reasons": {}
+    "rejection_reasons": {
+      "missing-number:2030": 1,
+      "repeated-junk-string": 1
+    }
   },
-  "completed_at": "2026-09-17T19:56:37.802277+00:00",
-  "latest_date": "2026-09-17",
+  "completed_at": "2026-09-18T19:17:31.789565+00:00",
+  "latest_date": "2026-09-18",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -45,38 +56,38 @@
   "fallback_image_count": 7,
   "fallback_images": [
     {
-      "article_id": "0179f8cf81d5dfce59",
-      "title": "Republican senator warns Carney against tightening Canada's links to European Union",
+      "article_id": "238c0730eff20c9019",
+      "title": "Special Weather Statement issued September 18 at 2:02PM CDT by NWS Corpus Christi TX",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "fe9f89892662e93659",
-      "title": "Russian missile and drone strikes on Ukraine injure at least 16, including children",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "5d9d724977eecd2f0c",
-      "title": "Part-human part-mouse brain developed in science breakthrough",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "910238f43dc83d5f47",
-      "title": "Uncontrolled AI could lead to 'silicon species' rivalling humans, warns Microsoft",
+      "article_id": "fe8e96df82dd980a06",
+      "title": "Alex Ovechkin says he's 'for peace and love' after appearing in ad for Putin-aligned party",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "ca8d135278d5b4bbe6",
-      "title": "How are rising prices affecting you? NPR wants to know",
+      "article_id": "313d00aed4a8a2d74a",
+      "title": "See tiny organisms on show in microscopic video competition",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "4f29b02b4c1b1f1ab0",
-      "title": "How Ed Sheeran's tour became a flashpoint over Gaza and free speech",
+      "article_id": "3175f4705f065a07be",
+      "title": "Inside Singapore's 'Fort Knox' for city's $2bn dirty money auction",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "c6283b018bcce816b2",
+      "title": "She pressed charges against a Mountie for sex assault, but says court delays robbed her of justice",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "ea6817aefc053dea84",
-      "title": "A Phone Call from the Driver",
+      "article_id": "8b993579becbbb97eb",
+      "title": "Will even one of the U.N.'s 17 'sustainable development goals' be met by 2030?",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "57efec1e304e1ea796",
+      "title": "Sending a Parcel",
       "reason": "Selected image was unavailable: ValueError"
     }
   ]
