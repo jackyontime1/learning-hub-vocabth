@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-09-18T19:04:24.447567+00:00",
-  "expected_toronto_date": "2026-09-18",
+  "started_at": "2026-09-19T18:39:08.399930+00:00",
+  "expected_toronto_date": "2026-09-19",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -18,26 +18,26 @@
   "schema_version": 10,
   "candidate_rejections": [
     {
-      "article_id": "d47d2954c81320d935",
-      "title": "Supreme Court says it invalidated Liberal MP's 1-vote win due to Elections Canada error",
-      "provider": "CBC News",
-      "level": "C1",
-      "reason": "RuntimeError: Unable to produce 3 valid useful phrases for C1 reading"
+      "article_id": "2e5722f718ee2ecea2",
+      "title": "Ever wonder how the Fed's interest rate actually works? We've got answers",
+      "provider": "NPR",
+      "level": "B1",
+      "reason": "RuntimeError: Full Thai translation unavailable for article 2e5722f718ee2ecea2"
     }
   ],
   "practice_story_count": 4,
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
-    "nllb_retries": 2,
-    "quality_failures": 0,
+    "nllb_retries": 1,
+    "quality_failures": 1,
     "rejection_reasons": {
-      "missing-number:2030": 1,
+      "unexpected-non-thai-script": 2,
       "repeated-junk-string": 1
     }
   },
-  "completed_at": "2026-09-18T19:17:31.789565+00:00",
-  "latest_date": "2026-09-18",
+  "completed_at": "2026-09-19T18:48:43.133640+00:00",
+  "latest_date": "2026-09-19",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -56,14 +56,19 @@
   "fallback_image_count": 7,
   "fallback_images": [
     {
-      "article_id": "238c0730eff20c9019",
-      "title": "Special Weather Statement issued September 18 at 2:02PM CDT by NWS Corpus Christi TX",
+      "article_id": "273c6a4cda994f7fe4",
+      "title": "GlobalEye surveillance plane under the microscope as Conservatives call for twin probes",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "fe8e96df82dd980a06",
-      "title": "Alex Ovechkin says he's 'for peace and love' after appearing in ad for Putin-aligned party",
-      "reason": "No usable free image candidate"
+      "article_id": "c09efab8b6bcb883ac",
+      "title": "As Europe warms, Italy sees West Nile virus spread",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "49423c7bd4742a092d",
+      "title": "Gas prices are dropping. You can thank the 'winter blend' for that",
+      "reason": "Selected image was unavailable: ValueError"
     },
     {
       "article_id": "313d00aed4a8a2d74a",
@@ -71,23 +76,18 @@
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "3175f4705f065a07be",
-      "title": "Inside Singapore's 'Fort Knox' for city's $2bn dirty money auction",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "c6283b018bcce816b2",
-      "title": "She pressed charges against a Mountie for sex assault, but says court delays robbed her of justice",
-      "reason": "No usable free image candidate"
-    },
-    {
       "article_id": "8b993579becbbb97eb",
       "title": "Will even one of the U.N.'s 17 'sustainable development goals' be met by 2030?",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "57efec1e304e1ea796",
-      "title": "Sending a Parcel",
+      "article_id": "f3951043e5f7e1b792",
+      "title": "Severe Thunderstorm Warning issued September 19 at 1:35PM CDT until September 19 at 1:45PM CDT by NWS Midland/Odessa TX",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "59a2a759b9e4da4f21",
+      "title": "Leaving a Phone for Repair",
       "reason": "Selected image was unavailable: ValueError"
     }
   ]
