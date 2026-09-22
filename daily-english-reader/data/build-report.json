@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-09-21T20:27:58.212874+00:00",
-  "expected_toronto_date": "2026-09-21",
+  "started_at": "2026-09-22T19:46:57.580293+00:00",
+  "expected_toronto_date": "2026-09-22",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -18,28 +18,29 @@
   "schema_version": 10,
   "candidate_rejections": [
     {
-      "article_id": "dd09966cd83fccbb32",
-      "title": "Severe Thunderstorm Warning issued September 21 at 3:26PM CDT until September 21 at 4:00PM CDT by NWS Lubbock TX",
+      "article_id": "fd3606ceefdbc5b919",
+      "title": "Small Craft Advisory issued September 22 at 11:41AM AKDT until September 23 at 5:00PM AKDT by NWS Juneau AK",
       "provider": "US National Weather Service",
       "level": "B1",
-      "reason": "RuntimeError: Full Thai translation unavailable for article dd09966cd83fccbb32"
+      "reason": "RuntimeError: Full Thai translation unavailable for article fd3606ceefdbc5b919"
     }
   ],
   "practice_story_count": 4,
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
-    "nllb_retries": 4,
+    "nllb_retries": 3,
     "quality_failures": 1,
     "rejection_reasons": {
-      "missing-number:10": 1,
-      "missing-number:3:25": 1,
-      "unexpected-non-thai-script": 1,
-      "repeated-junk-string": 2
+      "missing-number:10,12": 2,
+      "repeated-2-gram": 2,
+      "repeated-3-gram": 2,
+      "missing-number:11": 1,
+      "missing-number:25,9": 1
     }
   },
-  "completed_at": "2026-09-21T20:46:47.842696+00:00",
-  "latest_date": "2026-09-21",
+  "completed_at": "2026-09-22T20:00:42.870759+00:00",
+  "latest_date": "2026-09-22",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -55,41 +56,46 @@
     "easy_news": 2,
     "daily_life_practice_story": 4
   },
-  "fallback_image_count": 7,
+  "fallback_image_count": 8,
   "fallback_images": [
     {
-      "article_id": "8a7de35a85c60b1668",
-      "title": "How Russia's parliamentary election might affect the war in Ukraine",
+      "article_id": "98cc43e19045b264ed",
+      "title": "Iran must stop arming Houthis in Yemen, G7 says ahead of UN General Assembly",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "6f43a23e92f231abca",
-      "title": "Houthis say they targeted Saudi capital with ballistic missiles",
+      "article_id": "a0db5d40d0cb56d8de",
+      "title": "Cyclist who dressed as man to avoid Taliban wins silver medal",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "c620afc2b9b21a1d96",
+      "title": "Tilbury LNG facility in Delta, B.C., gets greenlight for expansion",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "99ff17926cfe1c5eea",
+      "title": "Ukraine anger as EU removes Russian oligarchs from sanctions list",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "2bc6eaadbbed528970",
-      "title": "Jailed teacher convicted of sexual abuse secretly released early in Indonesia, BBC finds",
+      "article_id": "0550791f96ba9e07e1",
+      "title": "Special Weather Statement issued September 22 at 2:43PM CDT by NWS Huntsville AL",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "00ba545a56d0fc1623",
-      "title": "Lindsay Clancy's ex-husband says he forgave her so he would not be 'eaten up inside forever'",
+      "article_id": "b3cafdcb0f6ad689b7",
+      "title": "Special Weather Statement issued September 22 at 2:45PM CDT by NWS Huntsville AL",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "9c90ba3a192723b4f6",
-      "title": "Severe Thunderstorm Warning issued September 21 at 3:23PM CDT until September 21 at 4:00PM CDT by NWS Lubbock TX",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "be77909975ac9d5469",
-      "title": "Making a Clinic Appointment",
+      "article_id": "200f9c9cc3851c2605",
+      "title": "Returning the Wrong Shirt",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "9520336a90434b2098",
-      "title": "The Lunch Box",
+      "article_id": "530e16fba3ed9e77a5",
+      "title": "A Low Phone Battery",
       "reason": "Selected image was unavailable: ValueError"
     }
   ]
