@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-09-23T19:42:53.474346+00:00",
-  "expected_toronto_date": "2026-09-23",
+  "started_at": "2026-09-24T20:01:30.956731+00:00",
+  "expected_toronto_date": "2026-09-24",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -16,19 +16,34 @@
     "C1": 2
   },
   "schema_version": 10,
-  "candidate_rejections": [],
+  "candidate_rejections": [
+    {
+      "article_id": "437ee9e26addc2fc73",
+      "title": "Israel's prime minister to give an address at the U.N.",
+      "provider": "NPR",
+      "level": "B1",
+      "reason": "RuntimeError: Unable to produce 3 valid useful phrases for B1 reading"
+    },
+    {
+      "article_id": "74e13775d2d7c667c2",
+      "title": "Here's what happened on day 2 of the UN General Assembly",
+      "provider": "NPR",
+      "level": "B2",
+      "reason": "RuntimeError: Unable to produce 3 valid useful phrases for B2 reading"
+    }
+  ],
   "practice_story_count": 4,
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
-    "nllb_retries": 2,
+    "nllb_retries": 1,
     "quality_failures": 0,
     "rejection_reasons": {
-      "repeated-junk-string": 2
+      "missing-number:760000": 1
     }
   },
-  "completed_at": "2026-09-23T19:57:27.488869+00:00",
-  "latest_date": "2026-09-23",
+  "completed_at": "2026-09-24T20:09:44.859543+00:00",
+  "latest_date": "2026-09-24",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -44,31 +59,26 @@
     "easy_news": 2,
     "daily_life_practice_story": 4
   },
-  "fallback_image_count": 9,
+  "fallback_image_count": 6,
   "fallback_images": [
     {
-      "article_id": "399adb02a48c0b041c",
-      "title": "Grow the Harness, Not the Context: From Strategy-Free Scaffolds to Reusable Specialist Agents",
+      "article_id": "7953f8d28bfbe84857",
+      "title": "Did El Niño turn Hurricane Polo into the most powerful storm of the season?",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "c313b3fc14e43fdb42",
+      "title": "Trump administration drops 760,000 Americans from ACA coverage, citing fraud",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "bb7c0482fbfef3a5b5",
-      "title": "Questions swirl as members of Belleville, Ont., synagogue return after shooting",
-      "reason": "No usable free image candidate"
+      "article_id": "108ec08a67fba07193",
+      "title": "Are we back in big tech's 'move fast and break things' era?",
+      "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "f4fb2a196aed46f9a4",
-      "title": "Type-Safe Is Not Error-Free: A Constrained Decision Head Follows the Option Name, Not the Rubric Bound to It",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "1911ddea6db44878f0",
-      "title": "Teen charged after stunting incident caught on video on Kenmount Road in St. John's",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "788cdbf24921a9944f",
-      "title": "Fact check: Could Trump replace Canada's potash with Belarus?",
+      "article_id": "a819aca5060f519313",
+      "title": "Special Weather Statement issued September 24 at 2:56PM CDT by NWS Dodge City KS",
       "reason": "No usable free image candidate"
     },
     {
@@ -77,18 +87,8 @@
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "ce683c6b5e7915353e",
-      "title": "Checking a Bank Transfer",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "48dd034e895ead5f26",
-      "title": "Meeting a New Neighbor",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "de3853012b195bdf63",
-      "title": "Laundry Before the Rain",
+      "article_id": "397f8dbb9cb8d0a2da",
+      "title": "Asking About a Restaurant Order",
       "reason": "Selected image was unavailable: ValueError"
     }
   ]
