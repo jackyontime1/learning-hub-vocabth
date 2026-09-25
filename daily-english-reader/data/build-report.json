@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-09-24T20:01:30.956731+00:00",
-  "expected_toronto_date": "2026-09-24",
+  "started_at": "2026-09-25T20:03:48.760761+00:00",
+  "expected_toronto_date": "2026-09-25",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -18,32 +18,27 @@
   "schema_version": 10,
   "candidate_rejections": [
     {
-      "article_id": "437ee9e26addc2fc73",
-      "title": "Israel's prime minister to give an address at the U.N.",
-      "provider": "NPR",
-      "level": "B1",
-      "reason": "RuntimeError: Unable to produce 3 valid useful phrases for B1 reading"
-    },
-    {
-      "article_id": "74e13775d2d7c667c2",
-      "title": "Here's what happened on day 2 of the UN General Assembly",
-      "provider": "NPR",
-      "level": "B2",
-      "reason": "RuntimeError: Unable to produce 3 valid useful phrases for B2 reading"
+      "article_id": "8e5546c87e32c58765",
+      "title": "Coastal Flood Advisory issued September 25 at 3:48PM EDT until September 25 at 8:00PM EDT by NWS Newport/Morehead City NC",
+      "provider": "US National Weather Service",
+      "level": "C1",
+      "reason": "RuntimeError: Full Thai translation unavailable for article 8e5546c87e32c58765"
     }
   ],
   "practice_story_count": 4,
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
-    "nllb_retries": 1,
-    "quality_failures": 0,
+    "nllb_retries": 2,
+    "quality_failures": 1,
     "rejection_reasons": {
-      "missing-number:760000": 1
+      "missing-month:June": 1,
+      "repeated-junk-string": 1,
+      "missing-number:8": 2
     }
   },
-  "completed_at": "2026-09-24T20:09:44.859543+00:00",
-  "latest_date": "2026-09-24",
+  "completed_at": "2026-09-25T20:09:57.258372+00:00",
+  "latest_date": "2026-09-25",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -62,13 +57,8 @@
   "fallback_image_count": 6,
   "fallback_images": [
     {
-      "article_id": "7953f8d28bfbe84857",
-      "title": "Did El Niño turn Hurricane Polo into the most powerful storm of the season?",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "c313b3fc14e43fdb42",
-      "title": "Trump administration drops 760,000 Americans from ACA coverage, citing fraud",
+      "article_id": "b53101124cef6c7010",
+      "title": "Netanyahu rages against critics, including Mamdani, at the U.N. General Assembly",
       "reason": "No usable free image candidate"
     },
     {
@@ -77,18 +67,23 @@
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "a819aca5060f519313",
-      "title": "Special Weather Statement issued September 24 at 2:56PM CDT by NWS Dodge City KS",
-      "reason": "No usable free image candidate"
+      "article_id": "599cdfdb2b35544a15",
+      "title": "Xi got Trump's red carpet welcome - but not everything he wanted",
+      "reason": "Selected image was unavailable: HTTPError"
     },
     {
-      "article_id": "d14e59d34bc1593e5d",
-      "title": "Is produce from a home garden safer than store bought? 'It depends'",
+      "article_id": "f7800b46f26e252caf",
+      "title": "Why this Pokémon set is dropping in value",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "397f8dbb9cb8d0a2da",
-      "title": "Asking About a Restaurant Order",
+      "article_id": "21cf83772703188eb7",
+      "title": "Special Weather Statement issued September 25 at 2:00PM MDT by NWS Pueblo CO",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "fdc02874efbd74e407",
+      "title": "A Phone Call from the Driver",
       "reason": "Selected image was unavailable: ValueError"
     }
   ]
