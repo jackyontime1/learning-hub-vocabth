@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-09-25T20:03:48.760761+00:00",
-  "expected_toronto_date": "2026-09-25",
+  "started_at": "2026-09-26T19:15:56.951791+00:00",
+  "expected_toronto_date": "2026-09-26",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -18,27 +18,39 @@
   "schema_version": 10,
   "candidate_rejections": [
     {
-      "article_id": "8e5546c87e32c58765",
-      "title": "Coastal Flood Advisory issued September 25 at 3:48PM EDT until September 25 at 8:00PM EDT by NWS Newport/Morehead City NC",
+      "article_id": "10ffa6c0c3555c4eca",
+      "title": "Watch: Bangkok declared flood disaster zone",
+      "provider": "BBC News",
+      "level": "B2",
+      "reason": "RuntimeError: Unable to produce 3 valid useful phrases for B2 reading"
+    },
+    {
+      "article_id": "2e048ac8c762dbf7e7",
+      "title": "Gale Warning issued September 26 at 2:51PM EDT until September 26 at 10:00PM EDT by NWS Baltimore MD/Washington DC",
       "provider": "US National Weather Service",
       "level": "C1",
-      "reason": "RuntimeError: Full Thai translation unavailable for article 8e5546c87e32c58765"
+      "reason": "RuntimeError: Unable to produce 3 valid useful phrases for C1 reading"
+    },
+    {
+      "article_id": "22423efc1ef295a448",
+      "title": "There's a global pandemic treaty that's signed -- and in 'limbo.' What's the holdup?",
+      "provider": "NPR",
+      "level": "C1",
+      "reason": "RuntimeError: Unable to produce 3 valid useful phrases for C1 reading"
     }
   ],
   "practice_story_count": 4,
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
-    "nllb_retries": 2,
-    "quality_failures": 1,
+    "nllb_retries": 1,
+    "quality_failures": 0,
     "rejection_reasons": {
-      "missing-month:June": 1,
-      "repeated-junk-string": 1,
-      "missing-number:8": 2
+      "repeated-junk-string": 1
     }
   },
-  "completed_at": "2026-09-25T20:09:57.258372+00:00",
-  "latest_date": "2026-09-25",
+  "completed_at": "2026-09-26T19:34:48.585408+00:00",
+  "latest_date": "2026-09-26",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -57,19 +69,19 @@
   "fallback_image_count": 6,
   "fallback_images": [
     {
-      "article_id": "b53101124cef6c7010",
-      "title": "Netanyahu rages against critics, including Mamdani, at the U.N. General Assembly",
+      "article_id": "20f4c46abee7ee24f0",
+      "title": "Trump and Xi strike cordial tone at summit. And, Netanyahu gives defiant UNGA speech",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "108ec08a67fba07193",
-      "title": "Are we back in big tech's 'move fast and break things' era?",
-      "reason": "Selected image was unavailable: ValueError"
+      "article_id": "84d1de365671e12bf6",
+      "title": "Marineland belugas that died in Chicago had chronic inflammatory disease, preliminary necropsy findings show",
+      "reason": "No usable free image candidate"
     },
     {
-      "article_id": "599cdfdb2b35544a15",
-      "title": "Xi got Trump's red carpet welcome - but not everything he wanted",
-      "reason": "Selected image was unavailable: HTTPError"
+      "article_id": "b53101124cef6c7010",
+      "title": "Netanyahu rages against critics, including Mamdani, at the U.N. General Assembly",
+      "reason": "No usable free image candidate"
     },
     {
       "article_id": "f7800b46f26e252caf",
@@ -77,13 +89,13 @@
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "21cf83772703188eb7",
-      "title": "Special Weather Statement issued September 25 at 2:00PM MDT by NWS Pueblo CO",
+      "article_id": "1b845884032ae2cc68",
+      "title": "Inside iconic horror game Silent Hill's Scottish makeover",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "fdc02874efbd74e407",
-      "title": "A Phone Call from the Driver",
+      "article_id": "2b0bc8d604ea5ab178",
+      "title": "Sending a Parcel",
       "reason": "Selected image was unavailable: ValueError"
     }
   ]
