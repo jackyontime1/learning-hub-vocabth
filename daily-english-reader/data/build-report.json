@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-09-26T19:15:56.951791+00:00",
-  "expected_toronto_date": "2026-09-26",
+  "started_at": "2026-09-27T19:47:43.802508+00:00",
+  "expected_toronto_date": "2026-09-27",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -16,29 +16,7 @@
     "C1": 2
   },
   "schema_version": 10,
-  "candidate_rejections": [
-    {
-      "article_id": "10ffa6c0c3555c4eca",
-      "title": "Watch: Bangkok declared flood disaster zone",
-      "provider": "BBC News",
-      "level": "B2",
-      "reason": "RuntimeError: Unable to produce 3 valid useful phrases for B2 reading"
-    },
-    {
-      "article_id": "2e048ac8c762dbf7e7",
-      "title": "Gale Warning issued September 26 at 2:51PM EDT until September 26 at 10:00PM EDT by NWS Baltimore MD/Washington DC",
-      "provider": "US National Weather Service",
-      "level": "C1",
-      "reason": "RuntimeError: Unable to produce 3 valid useful phrases for C1 reading"
-    },
-    {
-      "article_id": "22423efc1ef295a448",
-      "title": "There's a global pandemic treaty that's signed -- and in 'limbo.' What's the holdup?",
-      "provider": "NPR",
-      "level": "C1",
-      "reason": "RuntimeError: Unable to produce 3 valid useful phrases for C1 reading"
-    }
-  ],
+  "candidate_rejections": [],
   "practice_story_count": 4,
   "practice_fallback_count": 0,
   "translation_quality": {
@@ -46,11 +24,11 @@
     "nllb_retries": 1,
     "quality_failures": 0,
     "rejection_reasons": {
-      "repeated-junk-string": 1
+      "missing-number:10": 1
     }
   },
-  "completed_at": "2026-09-26T19:34:48.585408+00:00",
-  "latest_date": "2026-09-26",
+  "completed_at": "2026-09-27T20:00:52.464982+00:00",
+  "latest_date": "2026-09-27",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -66,26 +44,31 @@
     "easy_news": 2,
     "daily_life_practice_story": 4
   },
-  "fallback_image_count": 6,
+  "fallback_image_count": 8,
   "fallback_images": [
     {
-      "article_id": "20f4c46abee7ee24f0",
-      "title": "Trump and Xi strike cordial tone at summit. And, Netanyahu gives defiant UNGA speech",
+      "article_id": "26dbd9186d7d63000d",
+      "title": "Canada's Leylah Fernandez wins Singapore Open for 1st title of season",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "84d1de365671e12bf6",
-      "title": "Marineland belugas that died in Chicago had chronic inflammatory disease, preliminary necropsy findings show",
+      "article_id": "e10f6147b798b0e77f",
+      "title": "Bill Gates joins call for AI safeguards, wants to discuss concerns with Trump",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "503459344a7f921000",
+      "title": "Albertans divided on immigration, while half still undecided on 9 non-separation questions: poll",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "b53101124cef6c7010",
-      "title": "Netanyahu rages against critics, including Mamdani, at the U.N. General Assembly",
+      "article_id": "dcd29120208e404d81",
+      "title": "Playing 'La Bamba' for an hour? Must be a Mexican fandango!",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "f7800b46f26e252caf",
-      "title": "Why this Pokémon set is dropping in value",
+      "article_id": "fbb92bd83737063b85",
+      "title": "Is Congo's Ebola outbreak coming under control?",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
@@ -94,8 +77,13 @@
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "2b0bc8d604ea5ab178",
-      "title": "Sending a Parcel",
+      "article_id": "d03f6150a4aadc2863",
+      "title": "Leaving a Phone for Repair",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "ff638b2dfde79a0815",
+      "title": "The Bus Card",
       "reason": "Selected image was unavailable: ValueError"
     }
   ]
