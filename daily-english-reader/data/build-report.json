@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-09-27T19:47:43.802508+00:00",
-  "expected_toronto_date": "2026-09-27",
+  "started_at": "2026-09-28T22:06:03.629519+00:00",
+  "expected_toronto_date": "2026-09-28",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -16,19 +16,32 @@
     "C1": 2
   },
   "schema_version": 10,
-  "candidate_rejections": [],
+  "candidate_rejections": [
+    {
+      "article_id": "ca4b2e3d9fd3c0567c",
+      "title": "Small Craft Advisory issued September 28 at 3:05PM PDT until September 29 at 9:00AM PDT by NWS Eureka CA",
+      "provider": "US National Weather Service",
+      "level": "B1",
+      "reason": "RuntimeError: Unable to produce 3 valid useful phrases for B1 reading"
+    },
+    {
+      "article_id": "6dbcd8f65ae0e3192f",
+      "title": "Small Craft Advisory issued September 28 at 3:05PM PDT until September 29 at 9:00AM PDT by NWS Eureka CA",
+      "provider": "US National Weather Service",
+      "level": "B1",
+      "reason": "RuntimeError: Unable to produce 3 valid useful phrases for B1 reading"
+    }
+  ],
   "practice_story_count": 4,
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
-    "nllb_retries": 1,
+    "nllb_retries": 0,
     "quality_failures": 0,
-    "rejection_reasons": {
-      "missing-number:10": 1
-    }
+    "rejection_reasons": {}
   },
-  "completed_at": "2026-09-27T20:00:52.464982+00:00",
-  "latest_date": "2026-09-27",
+  "completed_at": "2026-09-28T22:17:26.924738+00:00",
+  "latest_date": "2026-09-28",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -44,46 +57,41 @@
     "easy_news": 2,
     "daily_life_practice_story": 4
   },
-  "fallback_image_count": 8,
+  "fallback_image_count": 7,
   "fallback_images": [
     {
-      "article_id": "26dbd9186d7d63000d",
-      "title": "Canada's Leylah Fernandez wins Singapore Open for 1st title of season",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "e10f6147b798b0e77f",
-      "title": "Bill Gates joins call for AI safeguards, wants to discuss concerns with Trump",
+      "article_id": "1fc5f4d70c64041c05",
+      "title": "Rescue teams search Nepal mountain for 12 swept away by avalanche",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "503459344a7f921000",
-      "title": "Albertans divided on immigration, while half still undecided on 9 non-separation questions: poll",
+      "article_id": "2b0e2413993740e070",
+      "title": "Multiple generations honoured at MTV VMAs as Taylor Swift, Madonna win, Dolly Parton and Nirvana remembered",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "dcd29120208e404d81",
-      "title": "Playing 'La Bamba' for an hour? Must be a Mexican fandango!",
+      "article_id": "0d732620f02961888c",
+      "title": "McNulty first American to win elite road race world title since Lance Armstrong in 1993",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "fbb92bd83737063b85",
-      "title": "Is Congo's Ebola outbreak coming under control?",
+      "article_id": "cff59ba6d99642f6f1",
+      "title": "Woman charged with stealing from patients and staff at hospitals across Ontario",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "1b845884032ae2cc68",
-      "title": "Inside iconic horror game Silent Hill's Scottish makeover",
+      "article_id": "1b7d16f9d079a26634",
+      "title": "Watch: From launch to fiery splashdown, SpaceX's Starship completes orbit test",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "d03f6150a4aadc2863",
-      "title": "Leaving a Phone for Repair",
+      "article_id": "1e03d849a889e910e6",
+      "title": "What we know about the suspected U.K. terror plot. And, why the Gulf remains in limbo",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "ff638b2dfde79a0815",
-      "title": "The Bus Card",
+      "article_id": "73cc8c33c2b754c887",
+      "title": "The Lunch Box",
       "reason": "Selected image was unavailable: ValueError"
     }
   ]
