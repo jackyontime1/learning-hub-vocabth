@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-09-28T22:06:03.629519+00:00",
-  "expected_toronto_date": "2026-09-28",
+  "started_at": "2026-09-29T20:52:09.129092+00:00",
+  "expected_toronto_date": "2026-09-29",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -18,30 +18,32 @@
   "schema_version": 10,
   "candidate_rejections": [
     {
-      "article_id": "ca4b2e3d9fd3c0567c",
-      "title": "Small Craft Advisory issued September 28 at 3:05PM PDT until September 29 at 9:00AM PDT by NWS Eureka CA",
+      "article_id": "bbb821e617dfa49969",
+      "title": "Small Craft Advisory issued September 29 at 1:45PM PDT until September 30 at 5:00AM PDT by NWS Seattle WA",
       "provider": "US National Weather Service",
       "level": "B1",
       "reason": "RuntimeError: Unable to produce 3 valid useful phrases for B1 reading"
     },
     {
-      "article_id": "6dbcd8f65ae0e3192f",
-      "title": "Small Craft Advisory issued September 28 at 3:05PM PDT until September 29 at 9:00AM PDT by NWS Eureka CA",
+      "article_id": "816b5304955caa8605",
+      "title": "Small Craft Advisory issued September 29 at 1:45PM PDT until September 29 at 5:00PM PDT by NWS Seattle WA",
       "provider": "US National Weather Service",
-      "level": "B1",
-      "reason": "RuntimeError: Unable to produce 3 valid useful phrases for B1 reading"
+      "level": "C1",
+      "reason": "RuntimeError: Full Thai translation unavailable for article 816b5304955caa8605"
     }
   ],
   "practice_story_count": 4,
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
-    "nllb_retries": 0,
-    "quality_failures": 0,
-    "rejection_reasons": {}
+    "nllb_retries": 1,
+    "quality_failures": 1,
+    "rejection_reasons": {
+      "missing-number:5": 2
+    }
   },
-  "completed_at": "2026-09-28T22:17:26.924738+00:00",
-  "latest_date": "2026-09-28",
+  "completed_at": "2026-09-29T20:59:39.344283+00:00",
+  "latest_date": "2026-09-29",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -60,28 +62,23 @@
   "fallback_image_count": 7,
   "fallback_images": [
     {
-      "article_id": "1fc5f4d70c64041c05",
-      "title": "Rescue teams search Nepal mountain for 12 swept away by avalanche",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "2b0e2413993740e070",
-      "title": "Multiple generations honoured at MTV VMAs as Taylor Swift, Madonna win, Dolly Parton and Nirvana remembered",
+      "article_id": "8b01301aeae85bd58e",
+      "title": "Flash Flood Warning issued September 29 at 1:47PM MST until September 29 at 2:30PM MST by NWS Tucson AZ",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "0d732620f02961888c",
-      "title": "McNulty first American to win elite road race world title since Lance Armstrong in 1993",
+      "article_id": "78d9f3688a3903c57a",
+      "title": "Will Meta’s data centre raise Alberta power bills? Experts say it could",
+      "reason": "Selected image was unavailable: HTTPError"
+    },
+    {
+      "article_id": "6583dfd806b4fa881c",
+      "title": "Lindsay Clancy appears in court as her lawyer pushes for murder case dismissal",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "cff59ba6d99642f6f1",
-      "title": "Woman charged with stealing from patients and staff at hospitals across Ontario",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "1b7d16f9d079a26634",
-      "title": "Watch: From launch to fiery splashdown, SpaceX's Starship completes orbit test",
+      "article_id": "ce55940c696d0375dc",
+      "title": "Marine Weather Statement issued September 29 at 4:48PM AST by NWS San Juan PR",
       "reason": "No usable free image candidate"
     },
     {
@@ -90,8 +87,13 @@
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "73cc8c33c2b754c887",
-      "title": "The Lunch Box",
+      "article_id": "6a44573d1f8f248ed3",
+      "title": "Making a Clinic Appointment",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "497028f514569198df",
+      "title": "A Low Phone Battery",
       "reason": "Selected image was unavailable: ValueError"
     }
   ]
