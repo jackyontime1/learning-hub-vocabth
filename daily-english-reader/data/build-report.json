@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-09-29T20:52:09.129092+00:00",
-  "expected_toronto_date": "2026-09-29",
+  "started_at": "2026-09-30T20:51:34.481559+00:00",
+  "expected_toronto_date": "2026-09-30",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -16,34 +16,22 @@
     "C1": 2
   },
   "schema_version": 10,
-  "candidate_rejections": [
-    {
-      "article_id": "bbb821e617dfa49969",
-      "title": "Small Craft Advisory issued September 29 at 1:45PM PDT until September 30 at 5:00AM PDT by NWS Seattle WA",
-      "provider": "US National Weather Service",
-      "level": "B1",
-      "reason": "RuntimeError: Unable to produce 3 valid useful phrases for B1 reading"
-    },
-    {
-      "article_id": "816b5304955caa8605",
-      "title": "Small Craft Advisory issued September 29 at 1:45PM PDT until September 29 at 5:00PM PDT by NWS Seattle WA",
-      "provider": "US National Weather Service",
-      "level": "C1",
-      "reason": "RuntimeError: Full Thai translation unavailable for article 816b5304955caa8605"
-    }
-  ],
+  "candidate_rejections": [],
   "practice_story_count": 4,
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
-    "nllb_retries": 1,
-    "quality_failures": 1,
+    "nllb_retries": 2,
+    "quality_failures": 0,
     "rejection_reasons": {
-      "missing-number:5": 2
+      "repeated-word-run": 1,
+      "repeated-2-gram": 1,
+      "repeated-3-gram": 1,
+      "repeated-junk-string": 1
     }
   },
-  "completed_at": "2026-09-29T20:59:39.344283+00:00",
-  "latest_date": "2026-09-29",
+  "completed_at": "2026-09-30T21:09:29.097869+00:00",
+  "latest_date": "2026-09-30",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -59,41 +47,51 @@
     "easy_news": 2,
     "daily_life_practice_story": 4
   },
-  "fallback_image_count": 7,
+  "fallback_image_count": 9,
   "fallback_images": [
     {
-      "article_id": "8b01301aeae85bd58e",
-      "title": "Flash Flood Warning issued September 29 at 1:47PM MST until September 29 at 2:30PM MST by NWS Tucson AZ",
+      "article_id": "577c2b48e761a77d37",
+      "title": "Flood Warning issued September 30 at 3:47PM CDT until October 3 at 9:00AM CDT by NWS Kansas City/Pleasant Hill MO",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "78d9f3688a3903c57a",
-      "title": "Will Meta’s data centre raise Alberta power bills? Experts say it could",
-      "reason": "Selected image was unavailable: HTTPError"
-    },
-    {
-      "article_id": "6583dfd806b4fa881c",
-      "title": "Lindsay Clancy appears in court as her lawyer pushes for murder case dismissal",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "ce55940c696d0375dc",
-      "title": "Marine Weather Statement issued September 29 at 4:48PM AST by NWS San Juan PR",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "1e03d849a889e910e6",
-      "title": "What we know about the suspected U.K. terror plot. And, why the Gulf remains in limbo",
+      "article_id": "a43be714deb3c36539",
+      "title": "Rural voters support MAHA movement, but feel little impact, poll finds",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "6a44573d1f8f248ed3",
-      "title": "Making a Clinic Appointment",
+      "article_id": "fb80945d91fe2f0625",
+      "title": "Couple describes relief at rescue after whale destroys their yacht",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "497028f514569198df",
-      "title": "A Low Phone Battery",
+      "article_id": "4fbce46800ca2143be",
+      "title": "Ukraine's prized steel industry left in ruins by Russian missile campaign",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "397d9c635c5e633a14",
+      "title": "Retired general who led troops in Iraq warns U.S. exit may give Iran, ISIS an opening",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "19d63f8955532c93b3",
+      "title": "They were promised protection. Instead, these kids with disabilities died in foster care",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "be5f0628fc83aa445c",
+      "title": "Returning the Wrong Shirt",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "cc14b94808b38e22f7",
+      "title": "Meeting a New Neighbor",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "8357db1ed2a2524129",
+      "title": "Laundry Before the Rain",
       "reason": "Selected image was unavailable: ValueError"
     }
   ]
