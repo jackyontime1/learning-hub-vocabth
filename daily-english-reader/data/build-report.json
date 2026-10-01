@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-09-30T20:51:34.481559+00:00",
-  "expected_toronto_date": "2026-09-30",
+  "started_at": "2026-10-01T21:04:24.995426+00:00",
+  "expected_toronto_date": "2026-10-01",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -24,14 +24,14 @@
     "nllb_retries": 2,
     "quality_failures": 0,
     "rejection_reasons": {
+      "repeated-junk-string": 1,
       "repeated-word-run": 1,
       "repeated-2-gram": 1,
-      "repeated-3-gram": 1,
-      "repeated-junk-string": 1
+      "repeated-3-gram": 1
     }
   },
-  "completed_at": "2026-09-30T21:09:29.097869+00:00",
-  "latest_date": "2026-09-30",
+  "completed_at": "2026-10-01T21:19:56.477923+00:00",
+  "latest_date": "2026-10-01",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -50,13 +50,13 @@
   "fallback_image_count": 9,
   "fallback_images": [
     {
-      "article_id": "577c2b48e761a77d37",
-      "title": "Flood Warning issued September 30 at 3:47PM CDT until October 3 at 9:00AM CDT by NWS Kansas City/Pleasant Hill MO",
-      "reason": "No usable free image candidate"
+      "article_id": "9bec40135a25ad3024",
+      "title": "N.S. volunteer fire departments sound alarm over fuel costs",
+      "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "a43be714deb3c36539",
-      "title": "Rural voters support MAHA movement, but feel little impact, poll finds",
+      "article_id": "2ba87c263aadb3ed3a",
+      "title": "Scaling Laws for Looped Mixture of Experts",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
@@ -65,13 +65,13 @@
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "4fbce46800ca2143be",
-      "title": "Ukraine's prized steel industry left in ruins by Russian missile campaign",
-      "reason": "Selected image was unavailable: ValueError"
+      "article_id": "f8da01cbba6e098210",
+      "title": "Netanyahu says Flydubai attacker had 'Islamist radical indoctrination'",
+      "reason": "No usable free image candidate"
     },
     {
-      "article_id": "397d9c635c5e633a14",
-      "title": "Retired general who led troops in Iraq warns U.S. exit may give Iran, ISIS an opening",
+      "article_id": "5be96ba1d739589229",
+      "title": "One year after the end of the EV tax credit, is the future still electric?",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
@@ -80,19 +80,19 @@
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "be5f0628fc83aa445c",
-      "title": "Returning the Wrong Shirt",
+      "article_id": "266e3353c9273638d7",
+      "title": "A Meeting with the Teacher",
+      "reason": "Selected image was unavailable: HTTPError"
+    },
+    {
+      "article_id": "11849ac334d8d164c7",
+      "title": "Checking a Bank Transfer",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "cc14b94808b38e22f7",
-      "title": "Meeting a New Neighbor",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "8357db1ed2a2524129",
-      "title": "Laundry Before the Rain",
-      "reason": "Selected image was unavailable: ValueError"
+      "article_id": "c32f917c89a2d78deb",
+      "title": "At the Pharmacy",
+      "reason": "Selected image was unavailable: HTTPError"
     }
   ]
 }
