@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-10-01T21:04:24.995426+00:00",
-  "expected_toronto_date": "2026-10-01",
+  "started_at": "2026-10-02T20:48:22.678302+00:00",
+  "expected_toronto_date": "2026-10-02",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -16,22 +16,25 @@
     "C1": 2
   },
   "schema_version": 10,
-  "candidate_rejections": [],
+  "candidate_rejections": [
+    {
+      "article_id": "c7e1b3479e2c3ef0c0",
+      "title": "What we know about Christa Pike’s condition after failed execution",
+      "provider": "BBC News",
+      "level": "C1",
+      "reason": "RuntimeError: Unable to produce 3 valid useful phrases for C1 reading"
+    }
+  ],
   "practice_story_count": 4,
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
-    "nllb_retries": 2,
+    "nllb_retries": 0,
     "quality_failures": 0,
-    "rejection_reasons": {
-      "repeated-junk-string": 1,
-      "repeated-word-run": 1,
-      "repeated-2-gram": 1,
-      "repeated-3-gram": 1
-    }
+    "rejection_reasons": {}
   },
-  "completed_at": "2026-10-01T21:19:56.477923+00:00",
-  "latest_date": "2026-10-01",
+  "completed_at": "2026-10-02T21:01:47.716078+00:00",
+  "latest_date": "2026-10-02",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -47,52 +50,42 @@
     "easy_news": 2,
     "daily_life_practice_story": 4
   },
-  "fallback_image_count": 9,
+  "fallback_image_count": 7,
   "fallback_images": [
     {
-      "article_id": "9bec40135a25ad3024",
-      "title": "N.S. volunteer fire departments sound alarm over fuel costs",
+      "article_id": "cdd7b013e632beb625",
+      "title": "Actor and advocate Michael J. Fox promoted to companion level in Order of Canada",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "2ba87c263aadb3ed3a",
-      "title": "Scaling Laws for Looped Mixture of Experts",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "fb80945d91fe2f0625",
-      "title": "Couple describes relief at rescue after whale destroys their yacht",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "f8da01cbba6e098210",
-      "title": "Netanyahu says Flydubai attacker had 'Islamist radical indoctrination'",
+      "article_id": "11be9c3a108f5e03d7",
+      "title": "CBS Sports describes Tony Romo's permanent exit as mutual parting",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "5be96ba1d739589229",
-      "title": "One year after the end of the EV tax credit, is the future still electric?",
+      "article_id": "f0aed5b5e60aadbc96",
+      "title": "Russian dissident Garry Kasparov says US warned him of danger to his life",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "19d63f8955532c93b3",
-      "title": "They were promised protection. Instead, these kids with disabilities died in foster care",
+      "article_id": "8a59ffacf261587025",
+      "title": "Explosions heard in Ethiopia's capital after drone flights banned",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "266e3353c9273638d7",
-      "title": "A Meeting with the Teacher",
-      "reason": "Selected image was unavailable: HTTPError"
+      "article_id": "c79826b2a687269e37",
+      "title": "How to see the Orionid meteor shower this weekend",
+      "reason": "No usable free image candidate"
     },
     {
-      "article_id": "11849ac334d8d164c7",
-      "title": "Checking a Bank Transfer",
+      "article_id": "f4d039d614117a9f5d",
+      "title": "Cornell rape case gets special prosecutor. And, Renee Good's family sues the government",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "c32f917c89a2d78deb",
-      "title": "At the Pharmacy",
-      "reason": "Selected image was unavailable: HTTPError"
+      "article_id": "ac4fe5f1c38c3c13b0",
+      "title": "Asking About a Restaurant Order",
+      "reason": "Selected image was unavailable: ValueError"
     }
   ]
 }
