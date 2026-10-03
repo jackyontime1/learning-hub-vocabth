@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-10-02T20:48:22.678302+00:00",
-  "expected_toronto_date": "2026-10-02",
+  "started_at": "2026-10-03T19:16:29.201281+00:00",
+  "expected_toronto_date": "2026-10-03",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -18,23 +18,29 @@
   "schema_version": 10,
   "candidate_rejections": [
     {
-      "article_id": "c7e1b3479e2c3ef0c0",
-      "title": "What we know about Christa Pike’s condition after failed execution",
+      "article_id": "06d01044adc44b7b0b",
+      "title": "Putin warns West that Russia is ready to use every weapon to protect Kaliningrad",
       "provider": "BBC News",
-      "level": "C1",
-      "reason": "RuntimeError: Unable to produce 3 valid useful phrases for C1 reading"
+      "level": "B2",
+      "reason": "RuntimeError: Full Thai translation unavailable for article 06d01044adc44b7b0b"
     }
   ],
   "practice_story_count": 4,
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
-    "nllb_retries": 0,
-    "quality_failures": 0,
-    "rejection_reasons": {}
+    "nllb_retries": 2,
+    "quality_failures": 1,
+    "rejection_reasons": {
+      "unexpected-non-thai-script": 1,
+      "missing-number:2029,2030": 1,
+      "repeated-word-run": 1,
+      "repeated-2-gram": 1,
+      "repeated-3-gram": 1
+    }
   },
-  "completed_at": "2026-10-02T21:01:47.716078+00:00",
-  "latest_date": "2026-10-02",
+  "completed_at": "2026-10-03T19:22:02.094686+00:00",
+  "latest_date": "2026-10-03",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -53,29 +59,29 @@
   "fallback_image_count": 7,
   "fallback_images": [
     {
-      "article_id": "cdd7b013e632beb625",
-      "title": "Actor and advocate Michael J. Fox promoted to companion level in Order of Canada",
+      "article_id": "dc8eeea223b6af56df",
+      "title": "In Gaza, a UN cash-for-work program gives Palestinians some income — and hope",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "11be9c3a108f5e03d7",
-      "title": "CBS Sports describes Tony Romo's permanent exit as mutual parting",
+      "article_id": "5b3b8223715872a7d0",
+      "title": "New York's governor removes district attorney from Cornell rape allegations case, appoints special prosecutor",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "c588783d508fffe30a",
+      "title": "Woman, 2 children dead after serious collision near Foam Lake, Sask.",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "f0aed5b5e60aadbc96",
-      "title": "Russian dissident Garry Kasparov says US warned him of danger to his life",
+      "article_id": "a1a4cb7677c109dcc5",
+      "title": "Russia hits second major bridge in Ukraine's capital Kyiv",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "8a59ffacf261587025",
-      "title": "Explosions heard in Ethiopia's capital after drone flights banned",
+      "article_id": "055655cc54c1849e37",
+      "title": "A new California law bans child marriage. What's the global outlook on the practice?",
       "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "c79826b2a687269e37",
-      "title": "How to see the Orionid meteor shower this weekend",
-      "reason": "No usable free image candidate"
     },
     {
       "article_id": "f4d039d614117a9f5d",
@@ -83,8 +89,8 @@
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "ac4fe5f1c38c3c13b0",
-      "title": "Asking About a Restaurant Order",
+      "article_id": "e01a2537abb6bf33f6",
+      "title": "A Phone Call from the Driver",
       "reason": "Selected image was unavailable: ValueError"
     }
   ]
