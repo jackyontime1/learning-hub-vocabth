@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-10-03T19:16:29.201281+00:00",
-  "expected_toronto_date": "2026-10-03",
+  "started_at": "2026-10-04T19:41:55.263562+00:00",
+  "expected_toronto_date": "2026-10-04",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -18,29 +18,27 @@
   "schema_version": 10,
   "candidate_rejections": [
     {
-      "article_id": "06d01044adc44b7b0b",
-      "title": "Putin warns West that Russia is ready to use every weapon to protect Kaliningrad",
-      "provider": "BBC News",
-      "level": "B2",
-      "reason": "RuntimeError: Full Thai translation unavailable for article 06d01044adc44b7b0b"
+      "article_id": "6b42114cf75daad23a",
+      "title": "Canada scores a dairy win on U.S. soil as farmers grumble about Trump's trade war",
+      "provider": "CBC News",
+      "level": "C1",
+      "reason": "RuntimeError: Unable to produce 3 valid useful phrases for C1 reading"
     }
   ],
   "practice_story_count": 4,
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
-    "nllb_retries": 2,
-    "quality_failures": 1,
+    "nllb_retries": 1,
+    "quality_failures": 0,
     "rejection_reasons": {
-      "unexpected-non-thai-script": 1,
-      "missing-number:2029,2030": 1,
-      "repeated-word-run": 1,
-      "repeated-2-gram": 1,
-      "repeated-3-gram": 1
+      "repeated-3-gram": 1,
+      "repeated-junk-string": 1,
+      "missing-number:24": 1
     }
   },
-  "completed_at": "2026-10-03T19:22:02.094686+00:00",
-  "latest_date": "2026-10-03",
+  "completed_at": "2026-10-04T19:56:08.573049+00:00",
+  "latest_date": "2026-10-04",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -56,41 +54,51 @@
     "easy_news": 2,
     "daily_life_practice_story": 4
   },
-  "fallback_image_count": 7,
+  "fallback_image_count": 9,
   "fallback_images": [
-    {
-      "article_id": "dc8eeea223b6af56df",
-      "title": "In Gaza, a UN cash-for-work program gives Palestinians some income — and hope",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "5b3b8223715872a7d0",
-      "title": "New York's governor removes district attorney from Cornell rape allegations case, appoints special prosecutor",
-      "reason": "Selected image was unavailable: ValueError"
-    },
     {
       "article_id": "c588783d508fffe30a",
       "title": "Woman, 2 children dead after serious collision near Foam Lake, Sask.",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "a1a4cb7677c109dcc5",
-      "title": "Russia hits second major bridge in Ukraine's capital Kyiv",
+      "article_id": "b06a20768a3aa575b0",
+      "title": "She died covering war for Fox News. Her parents blame the network — and a star reporter",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "055655cc54c1849e37",
-      "title": "A new California law bans child marriage. What's the global outlook on the practice?",
+      "article_id": "5c35ef00c202972c01",
+      "title": "Toronto Sixers rally past Vancouver Warriors to repeat as Canada Super60 women's cricket champions",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "f4d039d614117a9f5d",
-      "title": "Cornell rape case gets special prosecutor. And, Renee Good's family sues the government",
+      "article_id": "00f89d7890bb4ede67",
+      "title": "What to know about Brazil's election pitting Lula against Flávio Bolsonaro",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "e01a2537abb6bf33f6",
-      "title": "A Phone Call from the Driver",
+      "article_id": "36c8a41927ffb9e89f",
+      "title": "Special Weather Statement issued October 4 at 3:29PM EDT by NWS Jacksonville FL",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "9aea70e47f649a8619",
+      "title": "Flash Flood Warning issued October 4 at 3:41PM AST until October 4 at 3:45PM AST by NWS San Juan PR",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "aaf61fc877a9a16782",
+      "title": "Changing a Train Ticket",
+      "reason": "Selected image was unavailable: HTTPError"
+    },
+    {
+      "article_id": "7c6db224cc8d1047e5",
+      "title": "Sending a Parcel",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "686ce2b6e197da37a7",
+      "title": "The Bus Card",
       "reason": "Selected image was unavailable: ValueError"
     }
   ]
