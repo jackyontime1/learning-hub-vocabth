@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-10-05T22:42:29.262765+00:00",
-  "expected_toronto_date": "2026-10-05",
+  "started_at": "2026-10-06T21:02:01.572431+00:00",
+  "expected_toronto_date": "2026-10-06",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -18,11 +18,11 @@
   "schema_version": 10,
   "candidate_rejections": [
     {
-      "article_id": "fdaa03d9bf8f9d1123",
-      "title": "Lula and Bolsonaro head to run-off in Brazil's presidential election",
+      "article_id": "2a9356a13f6b324142",
+      "title": "18-year-old from Yorkton, Sask., faces terrorism-related charges",
       "provider": "CBC News",
-      "level": "B1",
-      "reason": "RuntimeError: Full Thai translation unavailable for article fdaa03d9bf8f9d1123"
+      "level": "C1",
+      "reason": "RuntimeError: Full Thai translation unavailable for article 2a9356a13f6b324142"
     }
   ],
   "practice_story_count": 4,
@@ -32,15 +32,14 @@
     "nllb_retries": 3,
     "quality_failures": 1,
     "rejection_reasons": {
-      "unexpected-non-thai-script": 2,
-      "repeated-junk-string": 1,
-      "missing-number:3": 1,
-      "repeated-2-gram": 1,
-      "repeated-3-gram": 1
+      "repeated-junk-string": 2,
+      "missing-number:2025": 2,
+      "unexpected-non-thai-script": 1,
+      "missing-month:August": 1
     }
   },
-  "completed_at": "2026-10-05T22:49:52.008875+00:00",
-  "latest_date": "2026-10-05",
+  "completed_at": "2026-10-06T21:20:24.917839+00:00",
+  "latest_date": "2026-10-06",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -56,46 +55,36 @@
     "easy_news": 2,
     "daily_life_practice_story": 4
   },
-  "fallback_image_count": 8,
+  "fallback_image_count": 6,
   "fallback_images": [
     {
-      "article_id": "b0785cfb1f5a4c7e3e",
-      "title": "Supreme Court's top judge starts judicial year by stressing need to protect democratic institutions",
+      "article_id": "b3307b6ea70b95928b",
+      "title": "Richard Martel joins Conservative Senate group, returns to Conservative caucus",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "8bad4e9fa8c1fc8ff3",
-      "title": "Cold reality: Canadian troops struggle in Alaska as military relearns Arctic warfare",
+      "article_id": "61dcc885b31a33958a",
+      "title": "Lawyer for one of Cornell 7 calls for special prosecutor to be removed over previous comments",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "9e1554e6e917985c9f",
-      "title": "Cornell president calls alleged gang rape 'deeply disturbing,' pledges greater transparency",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "077e8b8fa8c6fbef4d",
-      "title": "France braces for national day of school protests after injuries and mass arrests",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "40f075daef0ae6ae35",
-      "title": "Imran Khan supporters march in Pakistan to demand his release after talks failed",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "03c1c5f5ed767dd5a4",
-      "title": "Marine Weather Statement issued October 5 at 6:13PM EDT by NWS Jacksonville FL",
+      "article_id": "5302133a7bba8ca9a2",
+      "title": "'Ghost particles' from space telescope wins physics Nobel",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "2e4d2a8f9363ac4610",
-      "title": "Leaving a Phone for Repair",
+      "article_id": "9a0e98b8526832cdfd",
+      "title": "The small African nation ready for Messi's big night",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "29b913276bb407e5e6",
-      "title": "The Lunch Box",
+      "article_id": "151a1209ffd53324f3",
+      "title": "What happened during Christa Pike's failed execution",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "0929fb219e8f27663e",
+      "title": "A Low Phone Battery",
       "reason": "Selected image was unavailable: ValueError"
     }
   ]
