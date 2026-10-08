@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-10-07T21:21:08.136909+00:00",
-  "expected_toronto_date": "2026-10-07",
+  "started_at": "2026-10-08T21:23:44.782349+00:00",
+  "expected_toronto_date": "2026-10-08",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -16,20 +16,44 @@
     "C1": 2
   },
   "schema_version": 10,
-  "candidate_rejections": [],
+  "candidate_rejections": [
+    {
+      "article_id": "c070c00e4c0a9fc9a9",
+      "title": "Nana Patekar, star of Salaam Bombay!, Bollywood films, dead at 75",
+      "provider": "CBC News",
+      "level": "B1",
+      "reason": "RuntimeError: Full Thai translation unavailable for article c070c00e4c0a9fc9a9"
+    },
+    {
+      "article_id": "e7cafeba97fb65717c",
+      "title": "RoboJEPA: Scaling Robotic Latent World Models",
+      "provider": "arXiv",
+      "level": "C1",
+      "reason": "RuntimeError: Full Thai translation unavailable for article e7cafeba97fb65717c"
+    },
+    {
+      "article_id": "9e848b7a85f281bb1d",
+      "title": "Sask. man testifies he blacked out before killing his long-term partner, has no memory of it",
+      "provider": "CBC News",
+      "level": "C1",
+      "reason": "RuntimeError: Full Thai translation unavailable for article 9e848b7a85f281bb1d"
+    }
+  ],
   "practice_story_count": 4,
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
-    "nllb_retries": 1,
-    "quality_failures": 0,
+    "nllb_retries": 4,
+    "quality_failures": 3,
     "rejection_reasons": {
-      "repeated-junk-string": 1,
-      "suspiciously-long": 1
+      "missing-number:75": 2,
+      "repeated-junk-string": 2,
+      "missing-number:12": 2,
+      "missing-number:2024": 2
     }
   },
-  "completed_at": "2026-10-07T21:34:55.808887+00:00",
-  "latest_date": "2026-10-07",
+  "completed_at": "2026-10-08T21:53:47.889827+00:00",
+  "latest_date": "2026-10-08",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -45,51 +69,41 @@
     "easy_news": 2,
     "daily_life_practice_story": 4
   },
-  "fallback_image_count": 9,
+  "fallback_image_count": 7,
   "fallback_images": [
     {
-      "article_id": "c4b179383da83f5e81",
-      "title": "Sherpa: Teaching LLMs to Teach Adaptively",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "e07661d8d602bc53bb",
-      "title": "Owner of lost Spanish greyhound says Sask. needs provincewide standards for capturing missing dogs",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "dbdc9684fdf96b2bcd",
-      "title": "Spanish pensioner whose eviction sparked nationwide protests dies, union says",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "ff48d64ad8995c3b11",
-      "title": "Emera, Canadian Utilities merger to create one of North America's largest utilities",
+      "article_id": "ade857bb8a1a52bfdf",
+      "title": "Who will win the 2026 Nobel Prize in economics?",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "f22cb519268fa2e238",
-      "title": "DIY fertilizer is a blessing as farmers face steep prices due to the Iran war",
+      "article_id": "97cbab3b053f15d143",
+      "title": "Fruit of the Loom, Hanes investigated over potential toxic chemicals in children's underwear",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "e6471753f4b8376ad2",
-      "title": "Changing a Work Shift",
-      "reason": "Selected image was unavailable: HTTPError"
-    },
-    {
-      "article_id": "4d283347e15b091f72",
-      "title": "Making a Clinic Appointment",
+      "article_id": "3af7f008ebab8175ac",
+      "title": "Ontario museum facing nearly $3K in city fines over homeless encampments on property",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "c44d3534201fcf50b7",
-      "title": "Meeting a New Neighbor",
+      "article_id": "6522c74eef4845310f",
+      "title": "The bendy elm crowned UK Tree of the Year",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "e401713e27002242e9",
-      "title": "Laundry Before the Rain",
+      "article_id": "ecb413790da3111369",
+      "title": "South Korea test-flies its first domestically developed hypersonic weapon",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "2ae2fcb5a466780b41",
+      "title": "Is it better to buy or rent?",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "0d72235f60ec6be062",
+      "title": "Returning the Wrong Shirt",
       "reason": "Selected image was unavailable: ValueError"
     }
   ]
