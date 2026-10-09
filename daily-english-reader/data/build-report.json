@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-10-08T21:23:44.782349+00:00",
-  "expected_toronto_date": "2026-10-08",
+  "started_at": "2026-10-09T20:58:25.992349+00:00",
+  "expected_toronto_date": "2026-10-09",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -18,42 +18,27 @@
   "schema_version": 10,
   "candidate_rejections": [
     {
-      "article_id": "c070c00e4c0a9fc9a9",
-      "title": "Nana Patekar, star of Salaam Bombay!, Bollywood films, dead at 75",
-      "provider": "CBC News",
-      "level": "B1",
-      "reason": "RuntimeError: Full Thai translation unavailable for article c070c00e4c0a9fc9a9"
-    },
-    {
-      "article_id": "e7cafeba97fb65717c",
-      "title": "RoboJEPA: Scaling Robotic Latent World Models",
-      "provider": "arXiv",
+      "article_id": "f61639a06a05bee7d0",
+      "title": "Russian strikes on Ukraine's public buses leave 30 dead as blackouts worsen in Kyiv",
+      "provider": "NPR",
       "level": "C1",
-      "reason": "RuntimeError: Full Thai translation unavailable for article e7cafeba97fb65717c"
-    },
-    {
-      "article_id": "9e848b7a85f281bb1d",
-      "title": "Sask. man testifies he blacked out before killing his long-term partner, has no memory of it",
-      "provider": "CBC News",
-      "level": "C1",
-      "reason": "RuntimeError: Full Thai translation unavailable for article 9e848b7a85f281bb1d"
+      "reason": "RuntimeError: Full Thai translation unavailable for article f61639a06a05bee7d0"
     }
   ],
   "practice_story_count": 4,
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
-    "nllb_retries": 4,
-    "quality_failures": 3,
+    "nllb_retries": 2,
+    "quality_failures": 1,
     "rejection_reasons": {
-      "missing-number:75": 2,
-      "repeated-junk-string": 2,
-      "missing-number:12": 2,
-      "missing-number:2024": 2
+      "repeated-junk-string": 1,
+      "missing-number:1,2": 1,
+      "missing-number:1,2,30,4": 1
     }
   },
-  "completed_at": "2026-10-08T21:53:47.889827+00:00",
-  "latest_date": "2026-10-08",
+  "completed_at": "2026-10-09T21:12:54.683876+00:00",
+  "latest_date": "2026-10-09",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -72,23 +57,23 @@
   "fallback_image_count": 7,
   "fallback_images": [
     {
-      "article_id": "ade857bb8a1a52bfdf",
-      "title": "Who will win the 2026 Nobel Prize in economics?",
+      "article_id": "20af4ccba7979baf2b",
+      "title": "Health Secretary Kennedy touts an initiative to study vaccine safety",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "97cbab3b053f15d143",
-      "title": "Fruit of the Loom, Hanes investigated over potential toxic chemicals in children's underwear",
+      "article_id": "4c3d70f5af3f8a31e2",
+      "title": "3 people killed in Houthi attack on main airport in Riyadh, Saudi officials say",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "5df32f7e66d71f570b",
+      "title": "When Hammers star Brandon Scanlin told his mom he's coming home to play AHL hockey 'she almost started crying'",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "3af7f008ebab8175ac",
-      "title": "Ontario museum facing nearly $3K in city fines over homeless encampments on property",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "6522c74eef4845310f",
-      "title": "The bendy elm crowned UK Tree of the Year",
+      "article_id": "1b839f89256a085076",
+      "title": "Thieves steal 30,000 bottles of wine worth €5m in Italy, reports say",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
@@ -97,13 +82,13 @@
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "2ae2fcb5a466780b41",
-      "title": "Is it better to buy or rent?",
+      "article_id": "1b2a1f66039d2cacda",
+      "title": "Mark Zuckerberg has an image problem - so why is Meta's business booming?",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "0d72235f60ec6be062",
-      "title": "Returning the Wrong Shirt",
+      "article_id": "18bed7fc4edbbd7a3d",
+      "title": "Checking a Bank Transfer",
       "reason": "Selected image was unavailable: ValueError"
     }
   ]
