@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-10-09T20:58:25.992349+00:00",
-  "expected_toronto_date": "2026-10-09",
+  "started_at": "2026-10-10T20:06:55.463482+00:00",
+  "expected_toronto_date": "2026-10-10",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -18,27 +18,34 @@
   "schema_version": 10,
   "candidate_rejections": [
     {
-      "article_id": "f61639a06a05bee7d0",
-      "title": "Russian strikes on Ukraine's public buses leave 30 dead as blackouts worsen in Kyiv",
-      "provider": "NPR",
+      "article_id": "22b99112b9f95319b4",
+      "title": "Man named Hitler Mussolini elected mayor in Peru",
+      "provider": "BBC News",
+      "level": "B2",
+      "reason": "RuntimeError: Full Thai translation unavailable for article 22b99112b9f95319b4"
+    },
+    {
+      "article_id": "730227de6759760e17",
+      "title": "Isaias becomes major category three storm before landfall",
+      "provider": "BBC News",
       "level": "C1",
-      "reason": "RuntimeError: Full Thai translation unavailable for article f61639a06a05bee7d0"
+      "reason": "RuntimeError: Unable to produce 3 valid useful phrases for C1 reading"
     }
   ],
   "practice_story_count": 4,
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
-    "nllb_retries": 2,
+    "nllb_retries": 1,
     "quality_failures": 1,
     "rejection_reasons": {
+      "mojibake": 2,
       "repeated-junk-string": 1,
-      "missing-number:1,2": 1,
-      "missing-number:1,2,30,4": 1
+      "missing-number:229,25,45": 1
     }
   },
-  "completed_at": "2026-10-09T21:12:54.683876+00:00",
-  "latest_date": "2026-10-09",
+  "completed_at": "2026-10-10T20:12:30.548455+00:00",
+  "latest_date": "2026-10-10",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -57,38 +64,38 @@
   "fallback_image_count": 7,
   "fallback_images": [
     {
+      "article_id": "2c5e966a75db8083c4",
+      "title": "Marine Weather Statement issued October 10 at 4:01PM EDT by NWS Melbourne FL",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "fc3c62039a9f90f107",
+      "title": "Several injured in attack on airport in Saudi capital Riyadh",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
       "article_id": "20af4ccba7979baf2b",
       "title": "Health Secretary Kennedy touts an initiative to study vaccine safety",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "4c3d70f5af3f8a31e2",
-      "title": "3 people killed in Houthi attack on main airport in Riyadh, Saudi officials say",
+      "article_id": "f8bc30c76eee195681",
+      "title": "Thai Queen makes first solo flight in fighter jet",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "5df32f7e66d71f570b",
-      "title": "When Hammers star Brandon Scanlin told his mom he's coming home to play AHL hockey 'she almost started crying'",
+      "article_id": "b316039b86bd9f8952",
+      "title": "Dust Storm Warning issued October 10 at 1:03PM MST until October 10 at 1:45PM MST by NWS Phoenix AZ",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "1b839f89256a085076",
-      "title": "Thieves steal 30,000 bottles of wine worth €5m in Italy, reports say",
-      "reason": "Selected image was unavailable: ValueError"
+      "article_id": "c7ea434f8a33fe49c0",
+      "title": "Special Weather Statement issued October 10 at 2:02PM MDT by NWS Cheyenne WY",
+      "reason": "No usable free image candidate"
     },
     {
-      "article_id": "ecb413790da3111369",
-      "title": "South Korea test-flies its first domestically developed hypersonic weapon",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "1b2a1f66039d2cacda",
-      "title": "Mark Zuckerberg has an image problem - so why is Meta's business booming?",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "18bed7fc4edbbd7a3d",
-      "title": "Checking a Bank Transfer",
+      "article_id": "613aa3b7bec333127a",
+      "title": "Asking About a Restaurant Order",
       "reason": "Selected image was unavailable: ValueError"
     }
   ]
