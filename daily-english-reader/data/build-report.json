@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-10-10T20:06:55.463482+00:00",
-  "expected_toronto_date": "2026-10-10",
+  "started_at": "2026-10-11T20:22:01.414107+00:00",
+  "expected_toronto_date": "2026-10-11",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -18,16 +18,16 @@
   "schema_version": 10,
   "candidate_rejections": [
     {
-      "article_id": "22b99112b9f95319b4",
-      "title": "Man named Hitler Mussolini elected mayor in Peru",
-      "provider": "BBC News",
-      "level": "B2",
-      "reason": "RuntimeError: Full Thai translation unavailable for article 22b99112b9f95319b4"
+      "article_id": "7f558c9b4a4f91927c",
+      "title": "Don't be scared: Being afraid is outright fun, and maybe useful",
+      "provider": "NPR",
+      "level": "B1",
+      "reason": "RuntimeError: Full Thai translation unavailable for article 7f558c9b4a4f91927c"
     },
     {
-      "article_id": "730227de6759760e17",
-      "title": "Isaias becomes major category three storm before landfall",
-      "provider": "BBC News",
+      "article_id": "10a698d794406a229f",
+      "title": "Small Craft Advisory issued October 11 at 4:13PM EDT until October 11 at 5:00PM EDT by NWS Marquette MI",
+      "provider": "US National Weather Service",
       "level": "C1",
       "reason": "RuntimeError: Unable to produce 3 valid useful phrases for C1 reading"
     }
@@ -36,16 +36,18 @@
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
-    "nllb_retries": 1,
+    "nllb_retries": 2,
     "quality_failures": 1,
     "rejection_reasons": {
-      "mojibake": 2,
-      "repeated-junk-string": 1,
-      "missing-number:229,25,45": 1
+      "missing-number:500": 2,
+      "missing-unit:\\bmiles?\\b": 2,
+      "missing-unit:\\bdollars?\\b|[$]": 2,
+      "missing-number:2022": 1,
+      "missing-month:September": 1
     }
   },
-  "completed_at": "2026-10-10T20:12:30.548455+00:00",
-  "latest_date": "2026-10-10",
+  "completed_at": "2026-10-11T20:39:21.439252+00:00",
+  "latest_date": "2026-10-11",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -64,38 +66,38 @@
   "fallback_image_count": 7,
   "fallback_images": [
     {
-      "article_id": "2c5e966a75db8083c4",
-      "title": "Marine Weather Statement issued October 10 at 4:01PM EDT by NWS Melbourne FL",
+      "article_id": "3652bd3ff1be456708",
+      "title": "‘Every rock has a story’: retired geologist opens rock library in Whitehorse",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "fc3c62039a9f90f107",
-      "title": "Several injured in attack on airport in Saudi capital Riyadh",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "20af4ccba7979baf2b",
-      "title": "Health Secretary Kennedy touts an initiative to study vaccine safety",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "f8bc30c76eee195681",
-      "title": "Thai Queen makes first solo flight in fighter jet",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "b316039b86bd9f8952",
-      "title": "Dust Storm Warning issued October 10 at 1:03PM MST until October 10 at 1:45PM MST by NWS Phoenix AZ",
+      "article_id": "4bcea0530e7da3b922",
+      "title": "Headmaster detained after BBC investigation into alleged sexual abuse of students",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "c7ea434f8a33fe49c0",
-      "title": "Special Weather Statement issued October 10 at 2:02PM MDT by NWS Cheyenne WY",
+      "article_id": "ebd4e33883404e6006",
+      "title": "Nord Stream trial: How German police followed the evidence - to Ukraine",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "e563a485b36515f902",
+      "title": "She was a global star: Teen bikes 700 miles carrying injured dad. Where is she now?",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "25bd89bb4ca23db429",
+      "title": "Special Weather Statement issued October 11 at 2:18PM MDT by NWS Salt Lake City UT",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "613aa3b7bec333127a",
-      "title": "Asking About a Restaurant Order",
+      "article_id": "af799aab03a108952d",
+      "title": "A Phone Call from the Driver",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "0368d502f2eeb0e468",
+      "title": "The Bus Card",
       "reason": "Selected image was unavailable: ValueError"
     }
   ]
