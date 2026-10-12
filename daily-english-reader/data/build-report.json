@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-10-11T20:22:01.414107+00:00",
-  "expected_toronto_date": "2026-10-11",
+  "started_at": "2026-10-12T23:02:38.407719+00:00",
+  "expected_toronto_date": "2026-10-12",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -18,6 +18,13 @@
   "schema_version": 10,
   "candidate_rejections": [
     {
+      "article_id": "aec37ce263520490a6",
+      "title": "Small Craft Advisory issued October 12 at 2:34PM AKDT until October 13 at 5:00PM AKDT by NWS Juneau AK",
+      "provider": "US National Weather Service",
+      "level": "B1",
+      "reason": "RuntimeError: Full Thai translation unavailable for article aec37ce263520490a6"
+    },
+    {
       "article_id": "7f558c9b4a4f91927c",
       "title": "Don't be scared: Being afraid is outright fun, and maybe useful",
       "provider": "NPR",
@@ -25,29 +32,46 @@
       "reason": "RuntimeError: Full Thai translation unavailable for article 7f558c9b4a4f91927c"
     },
     {
-      "article_id": "10a698d794406a229f",
-      "title": "Small Craft Advisory issued October 11 at 4:13PM EDT until October 11 at 5:00PM EDT by NWS Marquette MI",
+      "article_id": "16f8f6274764a61727",
+      "title": "Beach Hazards Statement issued October 12 at 2:53PM PDT until October 12 at 10:00PM PDT by NWS San Francisco CA",
       "provider": "US National Weather Service",
       "level": "C1",
-      "reason": "RuntimeError: Unable to produce 3 valid useful phrases for C1 reading"
+      "reason": "RuntimeError: Full Thai translation unavailable for article 16f8f6274764a61727"
+    },
+    {
+      "article_id": "2c975b24d75343b2be",
+      "title": "Marine Weather Statement issued October 12 at 6:27PM AST by NWS San Juan PR",
+      "provider": "US National Weather Service",
+      "level": "C1",
+      "reason": "RuntimeError: Full Thai translation unavailable for article 2c975b24d75343b2be"
     }
   ],
   "practice_story_count": 4,
   "practice_fallback_count": 0,
   "translation_quality": {
-    "cache_rejections": 0,
-    "nllb_retries": 2,
-    "quality_failures": 1,
+    "cache_rejections": 1,
+    "nllb_retries": 4,
+    "quality_failures": 4,
     "rejection_reasons": {
+      "repeated-2-gram": 2,
+      "repeated-3-gram": 2,
+      "missing-number:20,25,6": 1,
+      "missing-number:20,6": 1,
+      "empty-translation": 1,
       "missing-number:500": 2,
       "missing-unit:\\bmiles?\\b": 2,
       "missing-unit:\\bdollars?\\b|[$]": 2,
-      "missing-number:2022": 1,
-      "missing-month:September": 1
+      "repeated-word-run": 1,
+      "missing-number:10,13": 2,
+      "unexpected-non-thai-script": 1,
+      "repeated-junk-string": 1,
+      "suspiciously-long": 1,
+      "missing-number:6:27": 1,
+      "missing-time-period": 1
     }
   },
-  "completed_at": "2026-10-11T20:39:21.439252+00:00",
-  "latest_date": "2026-10-11",
+  "completed_at": "2026-10-12T23:25:33.829837+00:00",
+  "latest_date": "2026-10-12",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -63,22 +87,27 @@
     "easy_news": 2,
     "daily_life_practice_story": 4
   },
-  "fallback_image_count": 7,
+  "fallback_image_count": 8,
   "fallback_images": [
     {
-      "article_id": "3652bd3ff1be456708",
-      "title": "‘Every rock has a story’: retired geologist opens rock library in Whitehorse",
+      "article_id": "40a60aa25ca0c84131",
+      "title": "Economic frustration helps fuel Alberta separatism — and these 4 charts suggest why",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "4bcea0530e7da3b922",
-      "title": "Headmaster detained after BBC investigation into alleged sexual abuse of students",
+      "article_id": "44bba16c587ba8b7dd",
+      "title": "Coming closure of another Winnipeg Giant Tiger store will mean 'less food in the fridge,' shopper says",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "ebd4e33883404e6006",
-      "title": "Nord Stream trial: How German police followed the evidence - to Ukraine",
-      "reason": "Selected image was unavailable: ValueError"
+      "article_id": "704bb1592d3c35eda3",
+      "title": "Stinky 'skunk' plant cleared from river",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "da2df94515b8dc5c2d",
+      "title": "Ukraine strikes Yandex data centre in third attack on Russian tech giant",
+      "reason": "No usable free image candidate"
     },
     {
       "article_id": "e563a485b36515f902",
@@ -86,18 +115,18 @@
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "25bd89bb4ca23db429",
-      "title": "Special Weather Statement issued October 11 at 2:18PM MDT by NWS Salt Lake City UT",
+      "article_id": "4e32ab341b1735e057",
+      "title": "Here's what to know if you're unsure about your measles immunity status",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "af799aab03a108952d",
-      "title": "A Phone Call from the Driver",
+      "article_id": "2cacf5cab70a1da9c4",
+      "title": "Sending a Parcel",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "0368d502f2eeb0e468",
-      "title": "The Bus Card",
+      "article_id": "53de6c57dbb43a113d",
+      "title": "The Lunch Box",
       "reason": "Selected image was unavailable: ValueError"
     }
   ]
