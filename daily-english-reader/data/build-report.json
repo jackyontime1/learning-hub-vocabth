@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-10-12T23:02:38.407719+00:00",
-  "expected_toronto_date": "2026-10-12",
+  "started_at": "2026-10-13T21:20:17.082880+00:00",
+  "expected_toronto_date": "2026-10-13",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -18,60 +18,31 @@
   "schema_version": 10,
   "candidate_rejections": [
     {
-      "article_id": "aec37ce263520490a6",
-      "title": "Small Craft Advisory issued October 12 at 2:34PM AKDT until October 13 at 5:00PM AKDT by NWS Juneau AK",
-      "provider": "US National Weather Service",
-      "level": "B1",
-      "reason": "RuntimeError: Full Thai translation unavailable for article aec37ce263520490a6"
-    },
-    {
-      "article_id": "7f558c9b4a4f91927c",
-      "title": "Don't be scared: Being afraid is outright fun, and maybe useful",
-      "provider": "NPR",
-      "level": "B1",
-      "reason": "RuntimeError: Full Thai translation unavailable for article 7f558c9b4a4f91927c"
-    },
-    {
-      "article_id": "16f8f6274764a61727",
-      "title": "Beach Hazards Statement issued October 12 at 2:53PM PDT until October 12 at 10:00PM PDT by NWS San Francisco CA",
-      "provider": "US National Weather Service",
-      "level": "C1",
-      "reason": "RuntimeError: Full Thai translation unavailable for article 16f8f6274764a61727"
-    },
-    {
-      "article_id": "2c975b24d75343b2be",
-      "title": "Marine Weather Statement issued October 12 at 6:27PM AST by NWS San Juan PR",
-      "provider": "US National Weather Service",
-      "level": "C1",
-      "reason": "RuntimeError: Full Thai translation unavailable for article 2c975b24d75343b2be"
+      "article_id": "da2a577d4ac4326c91",
+      "title": "American ranchers wrestle with soaring costs - and their loyalty to Trump",
+      "provider": "BBC News",
+      "level": "B2",
+      "reason": "RuntimeError: Full Thai translation unavailable for article da2a577d4ac4326c91"
     }
   ],
   "practice_story_count": 4,
   "practice_fallback_count": 0,
   "translation_quality": {
-    "cache_rejections": 1,
-    "nllb_retries": 4,
-    "quality_failures": 4,
+    "cache_rejections": 0,
+    "nllb_retries": 3,
+    "quality_failures": 1,
     "rejection_reasons": {
-      "repeated-2-gram": 2,
-      "repeated-3-gram": 2,
-      "missing-number:20,25,6": 1,
-      "missing-number:20,6": 1,
-      "empty-translation": 1,
-      "missing-number:500": 2,
-      "missing-unit:\\bmiles?\\b": 2,
-      "missing-unit:\\bdollars?\\b|[$]": 2,
       "repeated-word-run": 1,
-      "missing-number:10,13": 2,
-      "unexpected-non-thai-script": 1,
-      "repeated-junk-string": 1,
-      "suspiciously-long": 1,
-      "missing-number:6:27": 1,
-      "missing-time-period": 1
+      "repeated-2-gram": 1,
+      "repeated-3-gram": 1,
+      "missing-number:40": 1,
+      "missing-percent-unit": 1,
+      "missing-number:4:89": 1,
+      "missing-number:550": 1
     }
   },
-  "completed_at": "2026-10-12T23:25:33.829837+00:00",
-  "latest_date": "2026-10-12",
+  "completed_at": "2026-10-13T21:41:05.787324+00:00",
+  "latest_date": "2026-10-13",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -90,28 +61,13 @@
   "fallback_image_count": 8,
   "fallback_images": [
     {
-      "article_id": "40a60aa25ca0c84131",
-      "title": "Economic frustration helps fuel Alberta separatism — and these 4 charts suggest why",
+      "article_id": "f883d45e48e5fe951d",
+      "title": "DNA and vehicle-tracking help French investigators recover stolen Renoirs",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "44bba16c587ba8b7dd",
-      "title": "Coming closure of another Winnipeg Giant Tiger store will mean 'less food in the fridge,' shopper says",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "704bb1592d3c35eda3",
-      "title": "Stinky 'skunk' plant cleared from river",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "da2df94515b8dc5c2d",
-      "title": "Ukraine strikes Yandex data centre in third attack on Russian tech giant",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "e563a485b36515f902",
-      "title": "She was a global star: Teen bikes 700 miles carrying injured dad. Where is she now?",
+      "article_id": "ba845cb27407e679e5",
+      "title": "This Punjabi rapper was murdered in 2022. His new tour is testing the market for holographic concerts",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
@@ -120,13 +76,28 @@
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "2cacf5cab70a1da9c4",
-      "title": "Sending a Parcel",
+      "article_id": "ed8ee99e5809a6c16d",
+      "title": "Ontario police warn of 'The Com' online network manipulating children into criminal acts",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "53de6c57dbb43a113d",
-      "title": "The Lunch Box",
+      "article_id": "307f22837ca669742d",
+      "title": "Government spent millions on Trump ads. And, federal agents raid Ilhan Omar's home",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "d3eb83e8a351de6225",
+      "title": "What ice cream has to do with this year's Nobel Prize in economics",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "8ca6ebdfc5d69b01cd",
+      "title": "Leaving a Phone for Repair",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "204c2527e989e9b957",
+      "title": "A Low Phone Battery",
       "reason": "Selected image was unavailable: ValueError"
     }
   ]
