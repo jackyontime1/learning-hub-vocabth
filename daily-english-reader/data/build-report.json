@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-10-14T20:14:27.960803+00:00",
-  "expected_toronto_date": "2026-10-14",
+  "started_at": "2026-10-15T19:55:50.603831+00:00",
+  "expected_toronto_date": "2026-10-15",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -16,29 +16,17 @@
     "C1": 2
   },
   "schema_version": 10,
-  "candidate_rejections": [
-    {
-      "article_id": "03f181c08f0163340c",
-      "title": "Hybrid Reasoning Agents",
-      "provider": "arXiv",
-      "level": "C1",
-      "reason": "RuntimeError: Full Thai translation unavailable for article 03f181c08f0163340c"
-    }
-  ],
+  "candidate_rejections": [],
   "practice_story_count": 4,
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
-    "nllb_retries": 3,
-    "quality_failures": 1,
-    "rejection_reasons": {
-      "missing-number:3:10": 1,
-      "unexpected-non-thai-script": 2,
-      "repeated-junk-string": 1
-    }
+    "nllb_retries": 0,
+    "quality_failures": 0,
+    "rejection_reasons": {}
   },
-  "completed_at": "2026-10-14T20:35:40.589136+00:00",
-  "latest_date": "2026-10-14",
+  "completed_at": "2026-10-15T20:12:07.026779+00:00",
+  "latest_date": "2026-10-15",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -54,46 +42,41 @@
     "easy_news": 2,
     "daily_life_practice_story": 4
   },
-  "fallback_image_count": 8,
+  "fallback_image_count": 7,
   "fallback_images": [
+    {
+      "article_id": "ba543df244e042e47e",
+      "title": "One Task, Many Interfaces: Simple Cross-Interface Consistency Training Improves LLM Agent Robustness",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "d611a6768dfa77bb7f",
+      "title": "Retired US generals call on Pentagon to cancel 'barbaric' execution livestream",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "74aa994000040483a8",
+      "title": "Image of mournful elephant mom wins 2026 Wildlife Photographer of the Year",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "36eed5182d7479d828",
+      "title": "Burnham - Rosebank and Jackdaw oil and gas decisions coming 'shortly'",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "54ae01608e592570ef",
+      "title": "These workers help train robots who could one day steal their jobs",
+      "reason": "Selected image was unavailable: ValueError"
+    },
     {
       "article_id": "aae8ee253e268078e2",
       "title": "3rd victim dies following crash at B.C. mall on Truth and Reconciliation Day: police",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "3b8bf0a43cc610c8fe",
-      "title": "LoopWAM: Closed-Loop Generalist Policy Improvement from Deployment Rollouts",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "e92c2eaf2c1c6cf3d2",
-      "title": "Uniting across political lines, former Alberta premiers urge ‘no’ vote on immigration questions",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "d188a89b77fd3f6c2c",
-      "title": "What Matters in Quality-Aware VLA Pretraining: A Benchmark and Empirical Study",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "a39699ee8209bbcadb",
-      "title": "Severe Thunderstorm Warning issued October 14 at 3:11PM CDT until October 14 at 3:45PM CDT by NWS Norman OK",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "f3b9c6a16e7b588a22",
-      "title": "Severe Thunderstorm Warning issued October 14 at 3:10PM CDT until October 14 at 3:45PM CDT by NWS Lubbock TX",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "a41d309fc3468285bf",
-      "title": "Meeting a New Neighbor",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "f15b5532e6f9bec2c9",
-      "title": "Laundry Before the Rain",
+      "article_id": "76861ec496e85bd1df",
+      "title": "Making a Clinic Appointment",
       "reason": "Selected image was unavailable: ValueError"
     }
   ]
