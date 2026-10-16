@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-10-15T19:55:50.603831+00:00",
-  "expected_toronto_date": "2026-10-15",
+  "started_at": "2026-10-16T19:35:40.901209+00:00",
+  "expected_toronto_date": "2026-10-16",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -16,17 +16,45 @@
     "C1": 2
   },
   "schema_version": 10,
-  "candidate_rejections": [],
+  "candidate_rejections": [
+    {
+      "article_id": "b74c32cfdd5d7d596a",
+      "title": "Dust Advisory issued October 16 at 12:34PM MST until October 16 at 3:30PM MST by NWS Tucson AZ",
+      "provider": "US National Weather Service",
+      "level": "B1",
+      "reason": "RuntimeError: Full Thai translation unavailable for article b74c32cfdd5d7d596a"
+    },
+    {
+      "article_id": "dd59a36927b4eb3fde",
+      "title": "Ukraine says its Starshield access is back",
+      "provider": "NPR",
+      "level": "B1",
+      "reason": "RuntimeError: Full Thai translation unavailable for article dd59a36927b4eb3fde"
+    },
+    {
+      "article_id": "efd84551c41cde7784",
+      "title": "IN PHOTOS | Heavy rain floods homes, streets in Istanbul, killing 3",
+      "provider": "CBC News",
+      "level": "C1",
+      "reason": "RuntimeError: Full Thai translation unavailable for article efd84551c41cde7784"
+    }
+  ],
   "practice_story_count": 4,
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
-    "nllb_retries": 0,
-    "quality_failures": 0,
-    "rejection_reasons": {}
+    "nllb_retries": 4,
+    "quality_failures": 3,
+    "rejection_reasons": {
+      "missing-number:12:34": 2,
+      "missing-number:100": 2,
+      "unexpected-non-thai-script": 2,
+      "repeated-junk-string": 2,
+      "missing-number:34": 1
+    }
   },
-  "completed_at": "2026-10-15T20:12:07.026779+00:00",
-  "latest_date": "2026-10-15",
+  "completed_at": "2026-10-16T19:58:44.403705+00:00",
+  "latest_date": "2026-10-16",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -45,38 +73,38 @@
   "fallback_image_count": 7,
   "fallback_images": [
     {
-      "article_id": "ba543df244e042e47e",
-      "title": "One Task, Many Interfaces: Simple Cross-Interface Consistency Training Improves LLM Agent Robustness",
+      "article_id": "d5e7e45bcf7fb67da0",
+      "title": "Severe Thunderstorm Warning issued October 16 at 3:33PM EDT until October 16 at 4:00PM EDT by NWS State College PA",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "d611a6768dfa77bb7f",
-      "title": "Retired US generals call on Pentagon to cancel 'barbaric' execution livestream",
+      "article_id": "ba0658b0407d6ed1d1",
+      "title": "How Putin may react to the rift between the U.S. and Ukraine",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "74aa994000040483a8",
-      "title": "Image of mournful elephant mom wins 2026 Wildlife Photographer of the Year",
+      "article_id": "78ef1bb23df1f0d854",
+      "title": "'It's really hard to believe' - How Oregon primary school shooting unfolded",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "1ad1941523268737fc",
+      "title": "What to know about the deadly U.K. tiger attack — and the 'offensive' video shared by Trump",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "2d1cd5579caff184e0",
+      "title": "What this bankruptcy says about AI startups",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "567a125c4df1c7ca70",
+      "title": "Special Weather Statement issued October 16 at 3:26PM EDT by NWS Charleston WV",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "36eed5182d7479d828",
-      "title": "Burnham - Rosebank and Jackdaw oil and gas decisions coming 'shortly'",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "54ae01608e592570ef",
-      "title": "These workers help train robots who could one day steal their jobs",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "aae8ee253e268078e2",
-      "title": "3rd victim dies following crash at B.C. mall on Truth and Reconciliation Day: police",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "76861ec496e85bd1df",
-      "title": "Making a Clinic Appointment",
+      "article_id": "2657257a97a88aac7e",
+      "title": "Returning the Wrong Shirt",
       "reason": "Selected image was unavailable: ValueError"
     }
   ]
