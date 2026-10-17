@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-10-16T19:35:40.901209+00:00",
-  "expected_toronto_date": "2026-10-16",
+  "started_at": "2026-10-17T18:32:50.029448+00:00",
+  "expected_toronto_date": "2026-10-17",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -18,43 +18,35 @@
   "schema_version": 10,
   "candidate_rejections": [
     {
-      "article_id": "b74c32cfdd5d7d596a",
-      "title": "Dust Advisory issued October 16 at 12:34PM MST until October 16 at 3:30PM MST by NWS Tucson AZ",
+      "article_id": "5d46e5658052f78268",
+      "title": "Small Craft Advisory issued October 17 at 11:25AM PDT until October 17 at 6:00PM PDT by NWS Seattle WA",
       "provider": "US National Weather Service",
       "level": "B1",
-      "reason": "RuntimeError: Full Thai translation unavailable for article b74c32cfdd5d7d596a"
+      "reason": "RuntimeError: Unable to produce 3 valid useful phrases for B1 reading"
     },
     {
-      "article_id": "dd59a36927b4eb3fde",
-      "title": "Ukraine says its Starshield access is back",
-      "provider": "NPR",
-      "level": "B1",
-      "reason": "RuntimeError: Full Thai translation unavailable for article dd59a36927b4eb3fde"
-    },
-    {
-      "article_id": "efd84551c41cde7784",
-      "title": "IN PHOTOS | Heavy rain floods homes, streets in Istanbul, killing 3",
+      "article_id": "56a00e9b0305e44929",
+      "title": "Israeli settlers attack Palestinians, American journalist during West Bank olive harvest",
       "provider": "CBC News",
-      "level": "C1",
-      "reason": "RuntimeError: Full Thai translation unavailable for article efd84551c41cde7784"
+      "level": "B2",
+      "reason": "RuntimeError: Full Thai translation unavailable for article 56a00e9b0305e44929"
     }
   ],
   "practice_story_count": 4,
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
-    "nllb_retries": 4,
-    "quality_failures": 3,
+    "nllb_retries": 3,
+    "quality_failures": 1,
     "rejection_reasons": {
-      "missing-number:12:34": 2,
-      "missing-number:100": 2,
-      "unexpected-non-thai-script": 2,
-      "repeated-junk-string": 2,
-      "missing-number:34": 1
+      "repeated-junk-string": 3,
+      "missing-number:25": 2,
+      "suspiciously-long": 1,
+      "missing-number:1500,30": 1
     }
   },
-  "completed_at": "2026-10-16T19:58:44.403705+00:00",
-  "latest_date": "2026-10-16",
+  "completed_at": "2026-10-17T18:55:11.225487+00:00",
+  "latest_date": "2026-10-17",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -73,9 +65,9 @@
   "fallback_image_count": 7,
   "fallback_images": [
     {
-      "article_id": "d5e7e45bcf7fb67da0",
-      "title": "Severe Thunderstorm Warning issued October 16 at 3:33PM EDT until October 16 at 4:00PM EDT by NWS State College PA",
-      "reason": "No usable free image candidate"
+      "article_id": "ea6412cc40a33a8321",
+      "title": "Homes burn in Southern California amid fast-moving fire, prompting evacuation orders",
+      "reason": "Selected image was unavailable: ValueError"
     },
     {
       "article_id": "ba0658b0407d6ed1d1",
@@ -83,28 +75,28 @@
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "78ef1bb23df1f0d854",
-      "title": "'It's really hard to believe' - How Oregon primary school shooting unfolded",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "1ad1941523268737fc",
-      "title": "What to know about the deadly U.K. tiger attack — and the 'offensive' video shared by Trump",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "2d1cd5579caff184e0",
-      "title": "What this bankruptcy says about AI startups",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "567a125c4df1c7ca70",
-      "title": "Special Weather Statement issued October 16 at 3:26PM EDT by NWS Charleston WV",
+      "article_id": "6bca7a8b8149dab0a9",
+      "title": "The uncertain future of Canada's 30 rescued belugas",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "2657257a97a88aac7e",
-      "title": "Returning the Wrong Shirt",
+      "article_id": "7bcc3276fc0ca78c16",
+      "title": "This West Bank teen feared he wouldn't survive the year. Now, he's dead",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "bef972aba848f294e5",
+      "title": "Why hasn't the UK had any named storms yet?",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "fb49b190b002453e1a",
+      "title": "From ‘killing the golden goose’ to better than ever: Has Alberta's relationship with Ottawa changed?",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "049cd148f0c605c9c8",
+      "title": "Checking a Bank Transfer",
       "reason": "Selected image was unavailable: ValueError"
     }
   ]
