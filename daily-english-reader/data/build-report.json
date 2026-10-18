@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-10-17T18:32:50.029448+00:00",
-  "expected_toronto_date": "2026-10-17",
+  "started_at": "2026-10-18T18:40:56.860949+00:00",
+  "expected_toronto_date": "2026-10-18",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -18,35 +18,34 @@
   "schema_version": 10,
   "candidate_rejections": [
     {
-      "article_id": "5d46e5658052f78268",
-      "title": "Small Craft Advisory issued October 17 at 11:25AM PDT until October 17 at 6:00PM PDT by NWS Seattle WA",
-      "provider": "US National Weather Service",
-      "level": "B1",
-      "reason": "RuntimeError: Unable to produce 3 valid useful phrases for B1 reading"
+      "article_id": "2162d0b73aaa666d27",
+      "title": "Nursery owner in China jailed for life after hundreds of children poisoned",
+      "provider": "BBC News",
+      "level": "B2",
+      "reason": "RuntimeError: Full Thai translation unavailable for article 2162d0b73aaa666d27"
     },
     {
-      "article_id": "56a00e9b0305e44929",
-      "title": "Israeli settlers attack Palestinians, American journalist during West Bank olive harvest",
-      "provider": "CBC News",
-      "level": "B2",
-      "reason": "RuntimeError: Full Thai translation unavailable for article 56a00e9b0305e44929"
+      "article_id": "144cd30bab88b184d7",
+      "title": "Carney says 4 service members killed and dozens injured in fire at Alberta military base",
+      "provider": "NPR",
+      "level": "C1",
+      "reason": "RuntimeError: Full Thai translation unavailable for article 144cd30bab88b184d7"
     }
   ],
   "practice_story_count": 4,
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
-    "nllb_retries": 3,
-    "quality_failures": 1,
+    "nllb_retries": 2,
+    "quality_failures": 2,
     "rejection_reasons": {
-      "repeated-junk-string": 3,
-      "missing-number:25": 2,
-      "suspiciously-long": 1,
-      "missing-number:1500,30": 1
+      "missing-number:30000": 2,
+      "missing-number:112": 2,
+      "missing-unit:\\bmiles?\\b": 2
     }
   },
-  "completed_at": "2026-10-17T18:55:11.225487+00:00",
-  "latest_date": "2026-10-17",
+  "completed_at": "2026-10-18T18:54:40.917825+00:00",
+  "latest_date": "2026-10-18",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -62,17 +61,17 @@
     "easy_news": 2,
     "daily_life_practice_story": 4
   },
-  "fallback_image_count": 7,
+  "fallback_image_count": 9,
   "fallback_images": [
     {
-      "article_id": "ea6412cc40a33a8321",
-      "title": "Homes burn in Southern California amid fast-moving fire, prompting evacuation orders",
+      "article_id": "1c425f99b4d6c12559",
+      "title": "Student protests widen into greater social unrest in France",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "ba0658b0407d6ed1d1",
-      "title": "How Putin may react to the rift between the U.S. and Ukraine",
-      "reason": "Selected image was unavailable: ValueError"
+      "article_id": "eed83b194285c0a15e",
+      "title": "Trial of German steakhouse heiress that sparked a huge spy scandal",
+      "reason": "No usable free image candidate"
     },
     {
       "article_id": "6bca7a8b8149dab0a9",
@@ -80,8 +79,8 @@
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "7bcc3276fc0ca78c16",
-      "title": "This West Bank teen feared he wouldn't survive the year. Now, he's dead",
+      "article_id": "cf52d7285fda0cae40",
+      "title": "Weddings are expensive. How about a grocery store cake?",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
@@ -95,8 +94,18 @@
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "049cd148f0c605c9c8",
-      "title": "Checking a Bank Transfer",
+      "article_id": "8ae9438a90c00dc5d3",
+      "title": "Asking About a Restaurant Order",
+      "reason": "Selected image was unavailable: HTTPError"
+    },
+    {
+      "article_id": "0c85be6c388c74a854",
+      "title": "Calling About a Water Leak",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "4c7a51760a2b1b8347",
+      "title": "The Bus Card",
       "reason": "Selected image was unavailable: ValueError"
     }
   ]
