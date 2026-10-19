@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-10-18T18:40:56.860949+00:00",
-  "expected_toronto_date": "2026-10-18",
+  "started_at": "2026-10-19T21:07:56.594044+00:00",
+  "expected_toronto_date": "2026-10-19",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -18,34 +18,33 @@
   "schema_version": 10,
   "candidate_rejections": [
     {
-      "article_id": "2162d0b73aaa666d27",
-      "title": "Nursery owner in China jailed for life after hundreds of children poisoned",
-      "provider": "BBC News",
-      "level": "B2",
-      "reason": "RuntimeError: Full Thai translation unavailable for article 2162d0b73aaa666d27"
+      "article_id": "a0065477ea962c877e",
+      "title": "Severe Thunderstorm Warning issued October 19 at 3:07PM MDT until October 19 at 3:45PM MDT by NWS El Paso Tx/Santa Teresa NM",
+      "provider": "US National Weather Service",
+      "level": "B1",
+      "reason": "RuntimeError: Full Thai translation unavailable for article a0065477ea962c877e"
     },
     {
-      "article_id": "144cd30bab88b184d7",
-      "title": "Carney says 4 service members killed and dozens injured in fire at Alberta military base",
-      "provider": "NPR",
-      "level": "C1",
-      "reason": "RuntimeError: Full Thai translation unavailable for article 144cd30bab88b184d7"
+      "article_id": "ff2d698a2e5f37be83",
+      "title": "Small Craft Advisory issued October 19 at 12:52PM AKDT until October 21 at 4:00PM AKDT by NWS Juneau AK",
+      "provider": "US National Weather Service",
+      "level": "B2",
+      "reason": "RuntimeError: Unable to produce 3 valid useful phrases for B2 reading"
     }
   ],
   "practice_story_count": 4,
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
-    "nllb_retries": 2,
-    "quality_failures": 2,
+    "nllb_retries": 1,
+    "quality_failures": 1,
     "rejection_reasons": {
-      "missing-number:30000": 2,
-      "missing-number:112": 2,
-      "missing-unit:\\bmiles?\\b": 2
+      "missing-number:25": 1,
+      "missing-number:3:07": 1
     }
   },
-  "completed_at": "2026-10-18T18:54:40.917825+00:00",
-  "latest_date": "2026-10-18",
+  "completed_at": "2026-10-19T21:21:27.707840+00:00",
+  "latest_date": "2026-10-19",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -61,51 +60,46 @@
     "easy_news": 2,
     "daily_life_practice_story": 4
   },
-  "fallback_image_count": 9,
+  "fallback_image_count": 8,
   "fallback_images": [
     {
-      "article_id": "1c425f99b4d6c12559",
-      "title": "Student protests widen into greater social unrest in France",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "eed83b194285c0a15e",
-      "title": "Trial of German steakhouse heiress that sparked a huge spy scandal",
+      "article_id": "8bebe23136abdd3dd6",
+      "title": "Pope Leo returns to Vatican after lung cancer surgery",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "6bca7a8b8149dab0a9",
-      "title": "The uncertain future of Canada's 30 rescued belugas",
+      "article_id": "e43042939de6e0304d",
+      "title": "Trump endorses embattled Israeli Prime Minister Benjamin Netanyahu for reelection",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "cf52d7285fda0cae40",
-      "title": "Weddings are expensive. How about a grocery store cake?",
+      "article_id": "785203ee67ff818670",
+      "title": "Ukrainians dying because US restricting intelligence sharing, Zelensky adviser tells BBC",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "d81ad84e0d5e68fb97",
+      "title": "Australian MP critically injured after being hit by car in apparent attack",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "bef972aba848f294e5",
-      "title": "Why hasn't the UK had any named storms yet?",
+      "article_id": "ee2101b1858617affc",
+      "title": "US airman dies as daredevil descent goes wrong before Texas college football game",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "f16ec78642624d834e",
+      "title": "Former journalist Pamela Wallin resigns from Senate",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "f07594194355accc30",
+      "title": "A Phone Call from the Driver",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "fb49b190b002453e1a",
-      "title": "From ‘killing the golden goose’ to better than ever: Has Alberta's relationship with Ottawa changed?",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "8ae9438a90c00dc5d3",
-      "title": "Asking About a Restaurant Order",
-      "reason": "Selected image was unavailable: HTTPError"
-    },
-    {
-      "article_id": "0c85be6c388c74a854",
-      "title": "Calling About a Water Leak",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "4c7a51760a2b1b8347",
-      "title": "The Bus Card",
+      "article_id": "a92158b643d0fd4d8a",
+      "title": "The Lunch Box",
       "reason": "Selected image was unavailable: ValueError"
     }
   ]
