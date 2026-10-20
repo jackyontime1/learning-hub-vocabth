@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-10-19T21:07:56.594044+00:00",
-  "expected_toronto_date": "2026-10-19",
+  "started_at": "2026-10-20T20:02:10.571791+00:00",
+  "expected_toronto_date": "2026-10-20",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -18,18 +18,11 @@
   "schema_version": 10,
   "candidate_rejections": [
     {
-      "article_id": "a0065477ea962c877e",
-      "title": "Severe Thunderstorm Warning issued October 19 at 3:07PM MDT until October 19 at 3:45PM MDT by NWS El Paso Tx/Santa Teresa NM",
-      "provider": "US National Weather Service",
-      "level": "B1",
-      "reason": "RuntimeError: Full Thai translation unavailable for article a0065477ea962c877e"
-    },
-    {
-      "article_id": "ff2d698a2e5f37be83",
-      "title": "Small Craft Advisory issued October 19 at 12:52PM AKDT until October 21 at 4:00PM AKDT by NWS Juneau AK",
-      "provider": "US National Weather Service",
-      "level": "B2",
-      "reason": "RuntimeError: Unable to produce 3 valid useful phrases for B2 reading"
+      "article_id": "edf5ff83c9293ccf1c",
+      "title": "Trump sued over Canadian tariffs in latest legal challenge",
+      "provider": "BBC News",
+      "level": "C1",
+      "reason": "RuntimeError: Full Thai translation unavailable for article edf5ff83c9293ccf1c"
     }
   ],
   "practice_story_count": 4,
@@ -39,12 +32,13 @@
     "nllb_retries": 1,
     "quality_failures": 1,
     "rejection_reasons": {
-      "missing-number:25": 1,
-      "missing-number:3:07": 1
+      "repeated-junk-string": 1,
+      "missing-number:1930": 1,
+      "missing-month:August": 1
     }
   },
-  "completed_at": "2026-10-19T21:21:27.707840+00:00",
-  "latest_date": "2026-10-19",
+  "completed_at": "2026-10-20T20:19:56.270169+00:00",
+  "latest_date": "2026-10-20",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -60,27 +54,27 @@
     "easy_news": 2,
     "daily_life_practice_story": 4
   },
-  "fallback_image_count": 8,
+  "fallback_image_count": 10,
   "fallback_images": [
     {
-      "article_id": "8bebe23136abdd3dd6",
-      "title": "Pope Leo returns to Vatican after lung cancer surgery",
+      "article_id": "c32737f545e4d36730",
+      "title": "‘End of an era’: Labrador pilot Tony Powell has died",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "e43042939de6e0304d",
-      "title": "Trump endorses embattled Israeli Prime Minister Benjamin Netanyahu for reelection",
+      "article_id": "2bcda3da153ae1bbae",
+      "title": "CoopUQ: Robust Multi-Robot Social Navigation via Uncertainty-Aware Cooperative Forecasting",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "785203ee67ff818670",
-      "title": "Ukrainians dying because US restricting intelligence sharing, Zelensky adviser tells BBC",
+      "article_id": "4534a7f8799cb96145",
+      "title": "OpenAI CEO Sam Altman wins dismissal of sister's lawsuit",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "d81ad84e0d5e68fb97",
-      "title": "Australian MP critically injured after being hit by car in apparent attack",
-      "reason": "Selected image was unavailable: ValueError"
+      "article_id": "955163ed5cb1278147",
+      "title": "Kenya cult leader's children still being starved weeks before trial, son says",
+      "reason": "No usable free image candidate"
     },
     {
       "article_id": "ee2101b1858617affc",
@@ -88,18 +82,28 @@
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "f16ec78642624d834e",
-      "title": "Former journalist Pamela Wallin resigns from Senate",
+      "article_id": "e72d3d8412c9d89e94",
+      "title": "Vanessa Kerry is the new WHO envoy for health resilience. What's on her to-do list?",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "f07594194355accc30",
-      "title": "A Phone Call from the Driver",
+      "article_id": "90880e8880ee81678a",
+      "title": "Changing a Train Ticket",
+      "reason": "Selected image was unavailable: HTTPError"
+    },
+    {
+      "article_id": "f76a9bb41dbed1eef8",
+      "title": "Sending a Parcel",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "a92158b643d0fd4d8a",
-      "title": "The Lunch Box",
+      "article_id": "08aed9edbb01bf852d",
+      "title": "Returning a Library Book",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "f3605eb8f0fdafdf2c",
+      "title": "A Low Phone Battery",
       "reason": "Selected image was unavailable: ValueError"
     }
   ]
