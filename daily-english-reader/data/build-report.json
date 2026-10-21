@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-10-20T20:02:10.571791+00:00",
-  "expected_toronto_date": "2026-10-20",
+  "started_at": "2026-10-21T20:13:46.863248+00:00",
+  "expected_toronto_date": "2026-10-21",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -16,29 +16,21 @@
     "C1": 2
   },
   "schema_version": 10,
-  "candidate_rejections": [
-    {
-      "article_id": "edf5ff83c9293ccf1c",
-      "title": "Trump sued over Canadian tariffs in latest legal challenge",
-      "provider": "BBC News",
-      "level": "C1",
-      "reason": "RuntimeError: Full Thai translation unavailable for article edf5ff83c9293ccf1c"
-    }
-  ],
+  "candidate_rejections": [],
   "practice_story_count": 4,
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
-    "nllb_retries": 1,
-    "quality_failures": 1,
+    "nllb_retries": 3,
+    "quality_failures": 0,
     "rejection_reasons": {
-      "repeated-junk-string": 1,
-      "missing-number:1930": 1,
-      "missing-month:August": 1
+      "missing-number:30": 1,
+      "missing-number:45": 1,
+      "repeated-junk-string": 1
     }
   },
-  "completed_at": "2026-10-20T20:19:56.270169+00:00",
-  "latest_date": "2026-10-20",
+  "completed_at": "2026-10-21T20:28:37.984157+00:00",
+  "latest_date": "2026-10-21",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -54,56 +46,51 @@
     "easy_news": 2,
     "daily_life_practice_story": 4
   },
-  "fallback_image_count": 10,
+  "fallback_image_count": 9,
   "fallback_images": [
     {
-      "article_id": "c32737f545e4d36730",
-      "title": "‘End of an era’: Labrador pilot Tony Powell has died",
+      "article_id": "1d19799f7627a65966",
+      "title": "Hamilton launching tariff response team with $390K from Ontario amid Stelco layoffs",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "2bcda3da153ae1bbae",
-      "title": "CoopUQ: Robust Multi-Robot Social Navigation via Uncertainty-Aware Cooperative Forecasting",
+      "article_id": "f0bd2b05057aa0645a",
+      "title": "Trump and Zelensky at loggerheads despite new optimism",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "4534a7f8799cb96145",
-      "title": "OpenAI CEO Sam Altman wins dismissal of sister's lawsuit",
+      "article_id": "18bf4fb58b1ad0fa6b",
+      "title": "Storm Austen to bring severe gales to UK as weather warning issued",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "6d814e3962a2798791",
+      "title": "Why is Elon Musk plotting a mega-merger of SpaceX and Tesla?",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "955163ed5cb1278147",
-      "title": "Kenya cult leader's children still being starved weeks before trial, son says",
+      "article_id": "e6147d16db970dc3ff",
+      "title": "Special Weather Statement issued October 21 at 1:57PM MDT by NWS Salt Lake City UT",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "ee2101b1858617affc",
-      "title": "US airman dies as daredevil descent goes wrong before Texas college football game",
+      "article_id": "6aa81113fb92ea9b20",
+      "title": "Severe Thunderstorm Warning issued October 21 at 1:05PM MST until October 21 at 1:30PM MST by NWS Flagstaff AZ",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "e72d3d8412c9d89e94",
-      "title": "Vanessa Kerry is the new WHO envoy for health resilience. What's on her to-do list?",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "90880e8880ee81678a",
-      "title": "Changing a Train Ticket",
+      "article_id": "798c87085e5ce63644",
+      "title": "Leaving a Phone for Repair",
       "reason": "Selected image was unavailable: HTTPError"
     },
     {
-      "article_id": "f76a9bb41dbed1eef8",
-      "title": "Sending a Parcel",
+      "article_id": "8b20057d38998be903",
+      "title": "Meeting a New Neighbor",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "08aed9edbb01bf852d",
-      "title": "Returning a Library Book",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "f3605eb8f0fdafdf2c",
-      "title": "A Low Phone Battery",
+      "article_id": "8566e790f85f3483af",
+      "title": "Laundry Before the Rain",
       "reason": "Selected image was unavailable: ValueError"
     }
   ]
