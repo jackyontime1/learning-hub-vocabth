@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-10-22T20:11:54.489377+00:00",
-  "expected_toronto_date": "2026-10-22",
+  "started_at": "2026-10-23T19:59:29.043930+00:00",
+  "expected_toronto_date": "2026-10-23",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -18,16 +18,30 @@
   "schema_version": 10,
   "candidate_rejections": [
     {
-      "article_id": "c1378b75f901a464a1",
-      "title": "Air Quality Alert issued October 22 at 3:08PM CDT by NWS Norman OK",
-      "provider": "US National Weather Service",
-      "level": "B2",
-      "reason": "RuntimeError: Full Thai translation unavailable for article c1378b75f901a464a1"
+      "article_id": "de2193315b109572e1",
+      "title": "October's full Hunter's Moon to light up night sky this weekend",
+      "provider": "BBC News",
+      "level": "B1",
+      "reason": "RuntimeError: Full Thai translation unavailable for article de2193315b109572e1"
     },
     {
-      "article_id": "2c2c8eedf482a47096",
-      "title": "Small Craft Advisory issued October 22 at 12:06PM AKDT until October 22 at 7:00PM AKDT by NWS Juneau AK",
-      "provider": "US National Weather Service",
+      "article_id": "964780f149d5e25726",
+      "title": "Jackdaw decision 'taken outwith Scotland about Scotland's energy'",
+      "provider": "BBC News",
+      "level": "B2",
+      "reason": "RuntimeError: Unable to produce 3 valid useful phrases for B2 reading"
+    },
+    {
+      "article_id": "f7b4026cad3231e4a2",
+      "title": "The haunting call of Canada's common loon is becoming less common amid widespread declines, study suggests",
+      "provider": "CBC News",
+      "level": "C1",
+      "reason": "RuntimeError: Full Thai translation unavailable for article f7b4026cad3231e4a2"
+    },
+    {
+      "article_id": "828c99553d7b243197",
+      "title": "Wolf euthanized after rare attack near Cameco site in northern Sask.",
+      "provider": "CBC News",
       "level": "C1",
       "reason": "RuntimeError: Unable to produce 3 valid useful phrases for C1 reading"
     }
@@ -36,18 +50,21 @@
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
-    "nllb_retries": 3,
-    "quality_failures": 1,
+    "nllb_retries": 5,
+    "quality_failures": 2,
     "rejection_reasons": {
-      "missing-unit:\\bmiles?\\b": 2,
+      "missing-number:04,07,08": 2,
+      "repeated-junk-string": 3,
       "repeated-word-run": 1,
       "repeated-2-gram": 1,
       "repeated-3-gram": 1,
-      "unexpected-non-thai-script": 1
+      "suspiciously-long": 1,
+      "missing-number:10,12,40": 1,
+      "missing-number:40": 1
     }
   },
-  "completed_at": "2026-10-22T20:30:50.356499+00:00",
-  "latest_date": "2026-10-22",
+  "completed_at": "2026-10-23T20:26:01.880211+00:00",
+  "latest_date": "2026-10-23",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -63,31 +80,26 @@
     "easy_news": 2,
     "daily_life_practice_story": 4
   },
-  "fallback_image_count": 7,
+  "fallback_image_count": 8,
   "fallback_images": [
     {
-      "article_id": "0a18e6ec6066df80d0",
-      "title": "Severe Thunderstorm Warning issued October 22 at 1:11PM PDT until October 22 at 1:15PM PDT by NWS Las Vegas NV",
+      "article_id": "e6d0172e42571b589e",
+      "title": "Melania Trump, Pope Leo broker humanitarian ceasefire for ravaged Ukraine city Oleshky",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "fd5d0c48df848049cc",
-      "title": "Think Harder Where It Matters: Item-Level Adaptive Recursion for Sequential Recommendation",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "56568f81793de66f19",
-      "title": "How much does pregnancy cost? Be prepared with these tips",
+      "article_id": "89dd6678be7a13a2c5",
+      "title": "Authorities investigating whether first Kenya and Nigeria Ebola cases crossed paths",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "d1320097004d148c82",
-      "title": "Can a dream help you solve a problem? Here's how to try tonight",
+      "article_id": "a39306f6d4867dc744",
+      "title": "After nearly 6 years, ex-Myanmar leader Aung San Suu Kyi's son hears her voice",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "123f0b0f45184ae725",
-      "title": "Tornado Warning issued October 22 at 1:07PM MST until October 22 at 1:30PM MST by NWS Flagstaff AZ",
+      "article_id": "6d814e3962a2798791",
+      "title": "Why is Elon Musk plotting a mega-merger of SpaceX and Tesla?",
       "reason": "No usable free image candidate"
     },
     {
@@ -96,9 +108,19 @@
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "df8a9bd68783631c74",
-      "title": "Completing a School Form",
+      "article_id": "0ab318b69ceff9fd8b",
+      "title": "Special Weather Statement issued October 23 at 1:58PM MDT by NWS Pueblo CO",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "f027747fa7c2116e9e",
+      "title": "Changing a Work Shift",
       "reason": "Selected image was unavailable: HTTPError"
+    },
+    {
+      "article_id": "2130351807cea9a1d1",
+      "title": "Making a Clinic Appointment",
+      "reason": "Selected image was unavailable: ValueError"
     }
   ]
 }
