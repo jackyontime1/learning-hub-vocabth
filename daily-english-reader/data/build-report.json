@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-10-23T19:59:29.043930+00:00",
-  "expected_toronto_date": "2026-10-23",
+  "started_at": "2026-10-24T18:50:33.717033+00:00",
+  "expected_toronto_date": "2026-10-24",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -23,48 +23,23 @@
       "provider": "BBC News",
       "level": "B1",
       "reason": "RuntimeError: Full Thai translation unavailable for article de2193315b109572e1"
-    },
-    {
-      "article_id": "964780f149d5e25726",
-      "title": "Jackdaw decision 'taken outwith Scotland about Scotland's energy'",
-      "provider": "BBC News",
-      "level": "B2",
-      "reason": "RuntimeError: Unable to produce 3 valid useful phrases for B2 reading"
-    },
-    {
-      "article_id": "f7b4026cad3231e4a2",
-      "title": "The haunting call of Canada's common loon is becoming less common amid widespread declines, study suggests",
-      "provider": "CBC News",
-      "level": "C1",
-      "reason": "RuntimeError: Full Thai translation unavailable for article f7b4026cad3231e4a2"
-    },
-    {
-      "article_id": "828c99553d7b243197",
-      "title": "Wolf euthanized after rare attack near Cameco site in northern Sask.",
-      "provider": "CBC News",
-      "level": "C1",
-      "reason": "RuntimeError: Unable to produce 3 valid useful phrases for C1 reading"
     }
   ],
   "practice_story_count": 4,
   "practice_fallback_count": 0,
   "translation_quality": {
-    "cache_rejections": 0,
-    "nllb_retries": 5,
-    "quality_failures": 2,
+    "cache_rejections": 1,
+    "nllb_retries": 2,
+    "quality_failures": 1,
     "rejection_reasons": {
+      "empty-translation": 1,
       "missing-number:04,07,08": 2,
-      "repeated-junk-string": 3,
-      "repeated-word-run": 1,
-      "repeated-2-gram": 1,
-      "repeated-3-gram": 1,
-      "suspiciously-long": 1,
-      "missing-number:10,12,40": 1,
-      "missing-number:40": 1
+      "repeated-junk-string": 1,
+      "suspiciously-long": 1
     }
   },
-  "completed_at": "2026-10-23T20:26:01.880211+00:00",
-  "latest_date": "2026-10-23",
+  "completed_at": "2026-10-24T18:56:37.751439+00:00",
+  "latest_date": "2026-10-24",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -83,43 +58,43 @@
   "fallback_image_count": 8,
   "fallback_images": [
     {
-      "article_id": "e6d0172e42571b589e",
-      "title": "Melania Trump, Pope Leo broker humanitarian ceasefire for ravaged Ukraine city Oleshky",
+      "article_id": "e9c9f1f57da24892fe",
+      "title": "Frost Advisory issued October 24 at 2:42PM EDT until October 25 at 9:00AM EDT by NWS Upton NY",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "89dd6678be7a13a2c5",
-      "title": "Authorities investigating whether first Kenya and Nigeria Ebola cases crossed paths",
+      "article_id": "a9a885951e425a57bb",
+      "title": "Hacking attempts rise after flaws found in program affecting 70% of websites",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "a39306f6d4867dc744",
-      "title": "After nearly 6 years, ex-Myanmar leader Aung San Suu Kyi's son hears her voice",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "6d814e3962a2798791",
-      "title": "Why is Elon Musk plotting a mega-merger of SpaceX and Tesla?",
+      "article_id": "b504193153c6d2930f",
+      "title": "Calgary family finds box of Pokémon cards valued at roughly $48,000",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "f7601903a1494bb746",
-      "title": "A GOP congressman voted to cut Medicaid. It covers 62% of his district. Can he win?",
+      "article_id": "8174e4f477286b2623",
+      "title": "New regulations on flags flown at Alberta schools to take effect in January",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "0ab318b69ceff9fd8b",
-      "title": "Special Weather Statement issued October 23 at 1:58PM MDT by NWS Pueblo CO",
+      "article_id": "b9fe7e1fb444974cb2",
+      "title": "Is your Medicare Advantage plan ending next year? Here's what to know",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "4533cc3f986f5d2ea5",
+      "title": "Deadly shooting near Paris is a 'racist terrorist attack', Macron says",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "f027747fa7c2116e9e",
-      "title": "Changing a Work Shift",
+      "article_id": "5e32b6bbf242b09d90",
+      "title": "Missing the Last Bus",
       "reason": "Selected image was unavailable: HTTPError"
     },
     {
-      "article_id": "2130351807cea9a1d1",
-      "title": "Making a Clinic Appointment",
+      "article_id": "585fe4e396d786772a",
+      "title": "Returning the Wrong Shirt",
       "reason": "Selected image was unavailable: ValueError"
     }
   ]
