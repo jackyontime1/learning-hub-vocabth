@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-10-25T19:06:22.226492+00:00",
-  "expected_toronto_date": "2026-10-25",
+  "started_at": "2026-10-26T21:03:36.561313+00:00",
+  "expected_toronto_date": "2026-10-26",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -16,15 +16,7 @@
     "C1": 2
   },
   "schema_version": 10,
-  "candidate_rejections": [
-    {
-      "article_id": "72dbdc5b68eb1765b8",
-      "title": "What people aged 50 and older need to know about flu shots",
-      "provider": "NPR",
-      "level": "B1",
-      "reason": "RuntimeError: Unable to produce 3 valid useful phrases for B1 reading"
-    }
-  ],
+  "candidate_rejections": [],
   "practice_story_count": 4,
   "practice_fallback_count": 0,
   "translation_quality": {
@@ -33,8 +25,8 @@
     "quality_failures": 0,
     "rejection_reasons": {}
   },
-  "completed_at": "2026-10-25T19:17:27.952609+00:00",
-  "latest_date": "2026-10-25",
+  "completed_at": "2026-10-26T21:13:47.685490+00:00",
+  "latest_date": "2026-10-26",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -53,43 +45,43 @@
   "fallback_image_count": 8,
   "fallback_images": [
     {
-      "article_id": "72478300c825d6dbaa",
-      "title": "Trade tariffs cause whiplash at Port Milwaukee",
+      "article_id": "a9032be4681a8b1b21",
+      "title": "From agriculture to AI-griculture: How tech is changing farming",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "6e56affc07f5896dd4",
+      "title": "'Maxxing' selected as Dictionary.com word of the year",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "3b765b7e0281dbc7d4",
+      "title": "Who should win the men's Ballon d'Or? BBC Sport pundits have their say",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "95796f2f79464177cf",
-      "title": "Tennessee may try to execute Christa Pike again. The state could face legal hurdles",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "5cb35f32a770c42a9b",
-      "title": "El Salvador president says bodies found in Haiti are not those of hostages",
+      "article_id": "6ef4c539460a93c73e",
+      "title": "Part of Antarctica named after former BBC science correspondent",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "7ed6cd634021923898",
-      "title": "Musk says SpaceX restricted Ukraine's Starlink connection as service restored",
+      "article_id": "72dbdc5b68eb1765b8",
+      "title": "What people aged 50 and older need to know about flu shots",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "0d8ae83b706d363680",
-      "title": "More dads taking paid family leave for a new baby, sometimes as much as moms are",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "e5637329ffc5a529d0",
-      "title": "A Meeting with the Teacher",
+      "article_id": "d0f8a959b3325b6088",
+      "title": "Asking About a Restaurant Order",
       "reason": "Selected image was unavailable: HTTPError"
     },
     {
-      "article_id": "62505e84d00a8666c2",
-      "title": "Checking a Bank Transfer",
+      "article_id": "4a1d60781ebce3aec6",
+      "title": "Calling About a Water Leak",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "b5afbae07499cf2d72",
-      "title": "The Bus Card",
+      "article_id": "9a97da44df12cc3931",
+      "title": "The Lunch Box",
       "reason": "Selected image was unavailable: ValueError"
     }
   ]
