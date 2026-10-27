@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-10-26T21:03:36.561313+00:00",
-  "expected_toronto_date": "2026-10-26",
+  "started_at": "2026-10-27T20:45:11.053481+00:00",
+  "expected_toronto_date": "2026-10-27",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -16,17 +16,37 @@
     "C1": 2
   },
   "schema_version": 10,
-  "candidate_rejections": [],
+  "candidate_rejections": [
+    {
+      "article_id": "0c882ae78320d169bb",
+      "title": "Nanotyrannus skeleton sells for $47.3m in New York auction",
+      "provider": "BBC News",
+      "level": "C1",
+      "reason": "RuntimeError: Full Thai translation unavailable for article 0c882ae78320d169bb"
+    },
+    {
+      "article_id": "4607ea59de41ffbb3d",
+      "title": "IN PHOTOS | Rise and fall of Hunter's Moon",
+      "provider": "CBC News",
+      "level": "C1",
+      "reason": "RuntimeError: Full Thai translation unavailable for article 4607ea59de41ffbb3d"
+    }
+  ],
   "practice_story_count": 4,
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
-    "nllb_retries": 0,
-    "quality_failures": 0,
-    "rejection_reasons": {}
+    "nllb_retries": 3,
+    "quality_failures": 2,
+    "rejection_reasons": {
+      "repeated-junk-string": 1,
+      "missing-number:47.3": 1,
+      "missing-number:10,47.3": 1,
+      "unexpected-non-thai-script": 2
+    }
   },
-  "completed_at": "2026-10-26T21:13:47.685490+00:00",
-  "latest_date": "2026-10-26",
+  "completed_at": "2026-10-27T21:10:13.407638+00:00",
+  "latest_date": "2026-10-27",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -42,46 +62,56 @@
     "easy_news": 2,
     "daily_life_practice_story": 4
   },
-  "fallback_image_count": 8,
+  "fallback_image_count": 10,
   "fallback_images": [
     {
-      "article_id": "a9032be4681a8b1b21",
-      "title": "From agriculture to AI-griculture: How tech is changing farming",
+      "article_id": "40e36b9cb133f8dcc0",
+      "title": "Meet Canada's 5 Eurovision finalists",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "6e56affc07f5896dd4",
-      "title": "'Maxxing' selected as Dictionary.com word of the year",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "3b765b7e0281dbc7d4",
-      "title": "Who should win the men's Ballon d'Or? BBC Sport pundits have their say",
+      "article_id": "702f5c0aebc1cfdba6",
+      "title": "Preserve to Expand: Source-Aware Adaptation and Model Merging for Multilingual LLM-Based ASR",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "6ef4c539460a93c73e",
-      "title": "Part of Antarctica named after former BBC science correspondent",
+      "article_id": "278e3d71e34e9d398c",
+      "title": "Coastal Flood Advisory issued October 27 at 4:16PM EDT until October 29 at 2:00PM EDT by NWS Newport/Morehead City NC",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "edd7c69c1c5cf2c888",
+      "title": "Egypt court fines journalist Lina Attalah and orders news site's closure",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "c200c6640439e4373e",
+      "title": "The Bank of Canada's inflation dilemma",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "72dbdc5b68eb1765b8",
-      "title": "What people aged 50 and older need to know about flu shots",
+      "article_id": "f48e3c2ad557762f2b",
+      "title": "Oxford Street bans traffic",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "d0f8a959b3325b6088",
-      "title": "Asking About a Restaurant Order",
+      "article_id": "9440247074ef44d5e2",
+      "title": "Moving a Dentist Appointment",
       "reason": "Selected image was unavailable: HTTPError"
     },
     {
-      "article_id": "4a1d60781ebce3aec6",
-      "title": "Calling About a Water Leak",
+      "article_id": "1c93f9211f8b54fcd1",
+      "title": "A Phone Call from the Driver",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "9a97da44df12cc3931",
-      "title": "The Lunch Box",
+      "article_id": "2b0e6a8c4dd0487314",
+      "title": "Returning a Library Book",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "bb5fd222c1979fb132",
+      "title": "A Low Phone Battery",
       "reason": "Selected image was unavailable: ValueError"
     }
   ]
