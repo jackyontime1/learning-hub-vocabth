@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-10-28T21:09:37.769684+00:00",
-  "expected_toronto_date": "2026-10-28",
+  "started_at": "2026-10-29T21:12:10.243367+00:00",
+  "expected_toronto_date": "2026-10-29",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -16,21 +16,25 @@
     "C1": 2
   },
   "schema_version": 10,
-  "candidate_rejections": [],
+  "candidate_rejections": [
+    {
+      "article_id": "3132a27c5b7ede6330",
+      "title": "Small Craft Advisory issued October 29 at 2:00PM PDT until October 29 at 9:00PM PDT by NWS Eureka CA",
+      "provider": "US National Weather Service",
+      "level": "B2",
+      "reason": "RuntimeError: Unable to produce 3 valid useful phrases for B2 reading"
+    }
+  ],
   "practice_story_count": 4,
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
-    "nllb_retries": 1,
+    "nllb_retries": 0,
     "quality_failures": 0,
-    "rejection_reasons": {
-      "repeated-word-run": 1,
-      "repeated-2-gram": 1,
-      "repeated-3-gram": 1
-    }
+    "rejection_reasons": {}
   },
-  "completed_at": "2026-10-28T21:24:19.440029+00:00",
-  "latest_date": "2026-10-28",
+  "completed_at": "2026-10-29T21:24:48.939712+00:00",
+  "latest_date": "2026-10-29",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -46,32 +50,32 @@
     "easy_news": 2,
     "daily_life_practice_story": 4
   },
-  "fallback_image_count": 9,
+  "fallback_image_count": 7,
   "fallback_images": [
     {
-      "article_id": "337809719814ac94cd",
-      "title": "Attention as Lattice Gauge Theory: Relations Interact Only Through Wilson Loops",
+      "article_id": "3309b91dddc27c4a18",
+      "title": "Tariffs, diesel and computer chips are driving up costs for automakers",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "b04aff320cf5893514",
-      "title": "Pushing Dexterity and Safety for In-Hand Object Pose Reaching That Works Remarkably Well",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "51b93dab2054ae74b8",
-      "title": "A 'Green Army' is out to thwart El Niño flooding",
+      "article_id": "4a8b32a51f1a1fc4f0",
+      "title": "More Canadian provinces are ending time changes. What does it mean for your health?",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "0faf7a9e0a8ec3fdeb",
-      "title": "King acknowledges 'suffering of the past' as Caribbean tour begins",
-      "reason": "Selected image was unavailable: ValueError"
+      "article_id": "058a6f29b289ebf417",
+      "title": "Special Weather Statement issued October 29 at 5:06PM EDT by NWS Indianapolis IN",
+      "reason": "No usable free image candidate"
     },
     {
-      "article_id": "2bc0e50119c79466ca",
-      "title": "Severe Thunderstorm Warning issued October 28 at 4:05PM CDT until October 28 at 4:30PM CDT by NWS Twin Cities/Chanhassen MN",
+      "article_id": "592b9d5e6340448ebc",
+      "title": "Brazilian political drama unfolds as defeated Flavio Bolsonaro arrives in Miami",
       "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "f20ab721a67e324f58",
+      "title": "Lost your spark? The \"silent sister\" of depression, and a quiz to spot her",
+      "reason": "Selected image was unavailable: ValueError"
     },
     {
       "article_id": "e69f139fa9b3734cd5",
@@ -79,19 +83,9 @@
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "2944fa8bbe94abbbbd",
-      "title": "Sending a Parcel",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "9b904173c3889ae95a",
-      "title": "Meeting a New Neighbor",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "3ea8dfa59f5c07ca56",
-      "title": "Laundry Before the Rain",
-      "reason": "Selected image was unavailable: ValueError"
+      "article_id": "581f9448ef7366d909",
+      "title": "Leaving a Phone for Repair",
+      "reason": "Selected image was unavailable: HTTPError"
     }
   ]
 }
