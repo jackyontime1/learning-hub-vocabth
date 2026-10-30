@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-10-29T21:12:10.243367+00:00",
-  "expected_toronto_date": "2026-10-29",
+  "started_at": "2026-10-30T20:51:31.290656+00:00",
+  "expected_toronto_date": "2026-10-30",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -16,15 +16,7 @@
     "C1": 2
   },
   "schema_version": 10,
-  "candidate_rejections": [
-    {
-      "article_id": "3132a27c5b7ede6330",
-      "title": "Small Craft Advisory issued October 29 at 2:00PM PDT until October 29 at 9:00PM PDT by NWS Eureka CA",
-      "provider": "US National Weather Service",
-      "level": "B2",
-      "reason": "RuntimeError: Unable to produce 3 valid useful phrases for B2 reading"
-    }
-  ],
+  "candidate_rejections": [],
   "practice_story_count": 4,
   "practice_fallback_count": 0,
   "translation_quality": {
@@ -33,8 +25,8 @@
     "quality_failures": 0,
     "rejection_reasons": {}
   },
-  "completed_at": "2026-10-29T21:24:48.939712+00:00",
-  "latest_date": "2026-10-29",
+  "completed_at": "2026-10-30T20:55:35.440844+00:00",
+  "latest_date": "2026-10-30",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -53,24 +45,24 @@
   "fallback_image_count": 7,
   "fallback_images": [
     {
-      "article_id": "3309b91dddc27c4a18",
-      "title": "Tariffs, diesel and computer chips are driving up costs for automakers",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "4a8b32a51f1a1fc4f0",
-      "title": "More Canadian provinces are ending time changes. What does it mean for your health?",
+      "article_id": "058b757a1a3009a745",
+      "title": "Dirty tricks or much ado about nothing? Why Alaska, for once, is front and centre in midterms",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "058a6f29b289ebf417",
-      "title": "Special Weather Statement issued October 29 at 5:06PM EDT by NWS Indianapolis IN",
-      "reason": "No usable free image candidate"
+      "article_id": "c7cd511205128d7864",
+      "title": "Pope Leo XIV becomes first pontiff to vote in a US election",
+      "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "592b9d5e6340448ebc",
-      "title": "Brazilian political drama unfolds as defeated Flavio Bolsonaro arrives in Miami",
-      "reason": "No usable free image candidate"
+      "article_id": "eecfc0f92dadcb457e",
+      "title": "Why the war in Iran might cost Trump and the Republicans at the ballot box",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "be4e67b6f8af8a3d36",
+      "title": "Spain transport minister says he won't resign over high-speed rail disaster",
+      "reason": "Selected image was unavailable: ValueError"
     },
     {
       "article_id": "f20ab721a67e324f58",
@@ -78,13 +70,13 @@
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "e69f139fa9b3734cd5",
-      "title": "How could Israel break election deadlock? Here are four scenarios",
+      "article_id": "5bbcf068183717d961",
+      "title": "The two most interesting risks to Anthropic",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "581f9448ef7366d909",
-      "title": "Leaving a Phone for Repair",
+      "article_id": "7af124e48b6d650d3a",
+      "title": "Completing a School Form",
       "reason": "Selected image was unavailable: HTTPError"
     }
   ]
