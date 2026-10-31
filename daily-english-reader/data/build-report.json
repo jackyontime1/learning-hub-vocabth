@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-10-30T20:51:31.290656+00:00",
-  "expected_toronto_date": "2026-10-30",
+  "started_at": "2026-10-31T20:01:34.217913+00:00",
+  "expected_toronto_date": "2026-10-31",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -21,12 +21,14 @@
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
-    "nllb_retries": 0,
+    "nllb_retries": 1,
     "quality_failures": 0,
-    "rejection_reasons": {}
+    "rejection_reasons": {
+      "unexpected-non-thai-script": 1
+    }
   },
-  "completed_at": "2026-10-30T20:55:35.440844+00:00",
-  "latest_date": "2026-10-30",
+  "completed_at": "2026-10-31T20:09:58.753552+00:00",
+  "latest_date": "2026-10-31",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -45,13 +47,8 @@
   "fallback_image_count": 7,
   "fallback_images": [
     {
-      "article_id": "058b757a1a3009a745",
-      "title": "Dirty tricks or much ado about nothing? Why Alaska, for once, is front and centre in midterms",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "c7cd511205128d7864",
-      "title": "Pope Leo XIV becomes first pontiff to vote in a US election",
+      "article_id": "9d35d5976c8aa3f21d",
+      "title": "Feds tap Delta, B.C., port expansion as 'project of national interest'",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
@@ -60,13 +57,13 @@
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "be4e67b6f8af8a3d36",
-      "title": "Spain transport minister says he won't resign over high-speed rail disaster",
+      "article_id": "75fc1bc9979cb42023",
+      "title": "Crypto firm Binance covers 90% of losses after $6.3bn hack",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "f20ab721a67e324f58",
-      "title": "Lost your spark? The \"silent sister\" of depression, and a quiz to spot her",
+      "article_id": "c2cbc96598516a265e",
+      "title": "What killed 500-plus penguins? How scientists solved the mystery",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
@@ -75,9 +72,14 @@
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "7af124e48b6d650d3a",
-      "title": "Completing a School Form",
+      "article_id": "7533c37bb2dcb60f61",
+      "title": "Changing a Work Shift",
       "reason": "Selected image was unavailable: HTTPError"
+    },
+    {
+      "article_id": "0adc64b11da02c7464",
+      "title": "Making a Clinic Appointment",
+      "reason": "Selected image was unavailable: ValueError"
     }
   ]
 }
