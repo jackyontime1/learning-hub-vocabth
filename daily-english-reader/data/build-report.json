@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-10-31T20:01:34.217913+00:00",
-  "expected_toronto_date": "2026-10-31",
+  "started_at": "2026-11-01T20:33:08.789487+00:00",
+  "expected_toronto_date": "2026-11-01",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -16,19 +16,35 @@
     "C1": 2
   },
   "schema_version": 10,
-  "candidate_rejections": [],
+  "candidate_rejections": [
+    {
+      "article_id": "36291b70a1ab7b5d68",
+      "title": "CCTV and zip ties: How US mail-in votes are secured and counted",
+      "provider": "BBC News",
+      "level": "C1",
+      "reason": "RuntimeError: Unable to produce 3 valid useful phrases for C1 reading"
+    },
+    {
+      "article_id": "809d142b6d90ea7d88",
+      "title": "It's ACA open enrollment time. Here are the changes for health insurance shoppers",
+      "provider": "NPR",
+      "level": "C1",
+      "reason": "RuntimeError: Full Thai translation unavailable for article 809d142b6d90ea7d88"
+    }
+  ],
   "practice_story_count": 4,
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
-    "nllb_retries": 1,
-    "quality_failures": 0,
+    "nllb_retries": 2,
+    "quality_failures": 1,
     "rejection_reasons": {
-      "unexpected-non-thai-script": 1
+      "unexpected-non-thai-script": 1,
+      "missing-number:760000": 2
     }
   },
-  "completed_at": "2026-10-31T20:09:58.753552+00:00",
-  "latest_date": "2026-10-31",
+  "completed_at": "2026-11-01T20:46:43.079539+00:00",
+  "latest_date": "2026-11-01",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -44,41 +60,51 @@
     "easy_news": 2,
     "daily_life_practice_story": 4
   },
-  "fallback_image_count": 7,
+  "fallback_image_count": 9,
   "fallback_images": [
     {
-      "article_id": "9d35d5976c8aa3f21d",
-      "title": "Feds tap Delta, B.C., port expansion as 'project of national interest'",
+      "article_id": "70271dd38d5ccd52b8",
+      "title": "Mr. PG stuffie hikes to Mount Everest base camp with this B.C. adventurer",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "352b4ec797cc243a15",
+      "title": "G20 'family photo' cancelled after protests over presence of Russian minister",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "eecfc0f92dadcb457e",
-      "title": "Why the war in Iran might cost Trump and the Republicans at the ballot box",
+      "article_id": "aee96406d15dd85471",
+      "title": "Flood Advisory issued November 1 at 3:20PM EST until November 1 at 4:15PM EST by NWS Miami FL",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "75fc1bc9979cb42023",
-      "title": "Crypto firm Binance covers 90% of losses after $6.3bn hack",
+      "article_id": "ec41617b1bb69dd209",
+      "title": "Flood Advisory issued November 1 at 3:32PM EST until November 1 at 4:30PM EST by NWS Miami FL",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "c2cbc96598516a265e",
-      "title": "What killed 500-plus penguins? How scientists solved the mystery",
+      "article_id": "3a926887f9841b4e59",
+      "title": "Mixed economic forecast weighs heavy ahead of midterms",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "af9b782865f744501a",
+      "title": "Don't like daylight saving time? Nova Scotia once lost 11 days in a single night",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "5bbcf068183717d961",
-      "title": "The two most interesting risks to Anthropic",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "7533c37bb2dcb60f61",
-      "title": "Changing a Work Shift",
+      "article_id": "8b7ddd1778cd7be520",
+      "title": "Missing the Last Bus",
       "reason": "Selected image was unavailable: HTTPError"
     },
     {
-      "article_id": "0adc64b11da02c7464",
-      "title": "Making a Clinic Appointment",
+      "article_id": "c2b529fd23f7657c69",
+      "title": "Returning the Wrong Shirt",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "98e76fd25878820cfc",
+      "title": "The Bus Card",
       "reason": "Selected image was unavailable: ValueError"
     }
   ]
