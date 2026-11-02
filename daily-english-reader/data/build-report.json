@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-11-01T20:33:08.789487+00:00",
-  "expected_toronto_date": "2026-11-01",
+  "started_at": "2026-11-02T23:36:20.781461+00:00",
+  "expected_toronto_date": "2026-11-02",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -18,33 +18,56 @@
   "schema_version": 10,
   "candidate_rejections": [
     {
-      "article_id": "36291b70a1ab7b5d68",
-      "title": "CCTV and zip ties: How US mail-in votes are secured and counted",
-      "provider": "BBC News",
-      "level": "C1",
-      "reason": "RuntimeError: Unable to produce 3 valid useful phrases for C1 reading"
+      "article_id": "94411543a02118bbe8",
+      "title": "Do you know signs of a stroke? BE FAST are the words to remember",
+      "provider": "NPR",
+      "level": "B1",
+      "reason": "RuntimeError: Full Thai translation unavailable for article 94411543a02118bbe8"
+    },
+    {
+      "article_id": "5857c770434701b56e",
+      "title": "Tornado Warning issued November 2 at 5:31PM CST until November 2 at 6:00PM CST by NWS Norman OK",
+      "provider": "US National Weather Service",
+      "level": "B1",
+      "reason": "RuntimeError: Full Thai translation unavailable for article 5857c770434701b56e"
     },
     {
       "article_id": "809d142b6d90ea7d88",
       "title": "It's ACA open enrollment time. Here are the changes for health insurance shoppers",
       "provider": "NPR",
-      "level": "C1",
+      "level": "B1",
       "reason": "RuntimeError: Full Thai translation unavailable for article 809d142b6d90ea7d88"
+    },
+    {
+      "article_id": "bae0c9071e7f0994a5",
+      "title": "Haley Stevens backs Mike Rogers. And, Gulf states brace for potential attack on Iran",
+      "provider": "NPR",
+      "level": "B2",
+      "reason": "RuntimeError: Full Thai translation unavailable for article bae0c9071e7f0994a5"
     }
   ],
   "practice_story_count": 4,
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
-    "nllb_retries": 2,
-    "quality_failures": 1,
+    "nllb_retries": 5,
+    "quality_failures": 4,
     "rejection_reasons": {
-      "unexpected-non-thai-script": 1,
-      "missing-number:760000": 2
+      "missing-number:911": 2,
+      "repeated-2-gram": 1,
+      "repeated-3-gram": 1,
+      "missing-number:35,5:30,7": 1,
+      "missing-time-period": 1,
+      "missing-unit:\\bmiles?\\b": 1,
+      "missing-number:5:30,6": 1,
+      "missing-number:760000": 2,
+      "missing-number:5:31": 1,
+      "repeated-junk-string": 1,
+      "missing-month:August": 1
     }
   },
-  "completed_at": "2026-11-01T20:46:43.079539+00:00",
-  "latest_date": "2026-11-01",
+  "completed_at": "2026-11-02T23:54:25.611617+00:00",
+  "latest_date": "2026-11-02",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -63,48 +86,48 @@
   "fallback_image_count": 9,
   "fallback_images": [
     {
-      "article_id": "70271dd38d5ccd52b8",
-      "title": "Mr. PG stuffie hikes to Mount Everest base camp with this B.C. adventurer",
+      "article_id": "19a239a5057d7f6fd2",
+      "title": "Russian bomb attack on aid centre in southern Ukraine kills 26, officials say",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "f5529fb5fe5437050b",
+      "title": "Armed police start patrols in Sydney after Bondi Beach attack",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "868d7f940b4f60e8ae",
+      "title": "Two economists studied California's billionaire tax. They reached wildly different conclusions",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "9a9d9cfaa9f6c7141e",
+      "title": "US midterms campaign 'shattering' spending records to be most expensive ever",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "5cc6eaedb6d82ecce1",
+      "title": "Special Weather Statement issued November 2 at 5:31PM CST by NWS Dodge City KS",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "352b4ec797cc243a15",
-      "title": "G20 'family photo' cancelled after protests over presence of Russian minister",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "aee96406d15dd85471",
-      "title": "Flood Advisory issued November 1 at 3:20PM EST until November 1 at 4:15PM EST by NWS Miami FL",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "ec41617b1bb69dd209",
-      "title": "Flood Advisory issued November 1 at 3:32PM EST until November 1 at 4:30PM EST by NWS Miami FL",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "3a926887f9841b4e59",
-      "title": "Mixed economic forecast weighs heavy ahead of midterms",
+      "article_id": "9aac29154e961e57fc",
+      "title": "Nathan Fielder lookalike contest coming to Toronto this month",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "af9b782865f744501a",
-      "title": "Don't like daylight saving time? Nova Scotia once lost 11 days in a single night",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "8b7ddd1778cd7be520",
-      "title": "Missing the Last Bus",
+      "article_id": "3dc887e9aa2ff9340f",
+      "title": "A Meeting with the Teacher",
       "reason": "Selected image was unavailable: HTTPError"
     },
     {
-      "article_id": "c2b529fd23f7657c69",
-      "title": "Returning the Wrong Shirt",
+      "article_id": "efb0fdde9c4f37331d",
+      "title": "Checking a Bank Transfer",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "98e76fd25878820cfc",
-      "title": "The Bus Card",
+      "article_id": "b81e0cbef1d8812fd2",
+      "title": "The Lunch Box",
       "reason": "Selected image was unavailable: ValueError"
     }
   ]
