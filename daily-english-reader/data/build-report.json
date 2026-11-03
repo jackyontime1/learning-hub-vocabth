@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-11-02T23:36:20.781461+00:00",
-  "expected_toronto_date": "2026-11-02",
+  "started_at": "2026-11-03T21:51:45.775390+00:00",
+  "expected_toronto_date": "2026-11-03",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -23,51 +23,23 @@
       "provider": "NPR",
       "level": "B1",
       "reason": "RuntimeError: Full Thai translation unavailable for article 94411543a02118bbe8"
-    },
-    {
-      "article_id": "5857c770434701b56e",
-      "title": "Tornado Warning issued November 2 at 5:31PM CST until November 2 at 6:00PM CST by NWS Norman OK",
-      "provider": "US National Weather Service",
-      "level": "B1",
-      "reason": "RuntimeError: Full Thai translation unavailable for article 5857c770434701b56e"
-    },
-    {
-      "article_id": "809d142b6d90ea7d88",
-      "title": "It's ACA open enrollment time. Here are the changes for health insurance shoppers",
-      "provider": "NPR",
-      "level": "B1",
-      "reason": "RuntimeError: Full Thai translation unavailable for article 809d142b6d90ea7d88"
-    },
-    {
-      "article_id": "bae0c9071e7f0994a5",
-      "title": "Haley Stevens backs Mike Rogers. And, Gulf states brace for potential attack on Iran",
-      "provider": "NPR",
-      "level": "B2",
-      "reason": "RuntimeError: Full Thai translation unavailable for article bae0c9071e7f0994a5"
     }
   ],
   "practice_story_count": 4,
   "practice_fallback_count": 0,
   "translation_quality": {
-    "cache_rejections": 0,
-    "nllb_retries": 5,
-    "quality_failures": 4,
+    "cache_rejections": 1,
+    "nllb_retries": 3,
+    "quality_failures": 1,
     "rejection_reasons": {
+      "empty-translation": 1,
       "missing-number:911": 2,
-      "repeated-2-gram": 1,
-      "repeated-3-gram": 1,
-      "missing-number:35,5:30,7": 1,
-      "missing-time-period": 1,
-      "missing-unit:\\bmiles?\\b": 1,
-      "missing-number:5:30,6": 1,
-      "missing-number:760000": 2,
-      "missing-number:5:31": 1,
       "repeated-junk-string": 1,
-      "missing-month:August": 1
+      "missing-number:2.0": 1
     }
   },
-  "completed_at": "2026-11-02T23:54:25.611617+00:00",
-  "latest_date": "2026-11-02",
+  "completed_at": "2026-11-03T22:11:49.169183+00:00",
+  "latest_date": "2026-11-03",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -83,17 +55,32 @@
     "easy_news": 2,
     "daily_life_practice_story": 4
   },
-  "fallback_image_count": 9,
+  "fallback_image_count": 8,
   "fallback_images": [
     {
-      "article_id": "19a239a5057d7f6fd2",
-      "title": "Russian bomb attack on aid centre in southern Ukraine kills 26, officials say",
+      "article_id": "b87c24f26fa3b8057e",
+      "title": "Tracing the Scientific Discovery Capacity of LLMs to Their Training Data",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "905e76c11d7e8001ac",
+      "title": "ufakzeka-kulak: Building and Evaluating a 31.6M-Parameter Turkish Speech Recognizer from Scratch",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "bb5f184e3f82878ad7",
+      "title": "Flood Advisory issued November 3 at 2:23PM MST until November 3 at 5:30PM MST by NWS Grand Junction CO",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "4c9cbae81eacb843e9",
+      "title": "Trump to remove Rwanda and South Africa from US trade deal",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "f5529fb5fe5437050b",
-      "title": "Armed police start patrols in Sydney after Bondi Beach attack",
-      "reason": "Selected image was unavailable: ValueError"
+      "article_id": "1a3bc9f428f56c2fb0",
+      "title": "Economic frustration set to boil over in U.S. midterm elections",
+      "reason": "No usable free image candidate"
     },
     {
       "article_id": "868d7f940b4f60e8ae",
@@ -101,33 +88,13 @@
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "9a9d9cfaa9f6c7141e",
-      "title": "US midterms campaign 'shattering' spending records to be most expensive ever",
+      "article_id": "7e9a0fc1456eba4003",
+      "title": "Asking About a Restaurant Order",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "5cc6eaedb6d82ecce1",
-      "title": "Special Weather Statement issued November 2 at 5:31PM CST by NWS Dodge City KS",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "9aac29154e961e57fc",
-      "title": "Nathan Fielder lookalike contest coming to Toronto this month",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "3dc887e9aa2ff9340f",
-      "title": "A Meeting with the Teacher",
-      "reason": "Selected image was unavailable: HTTPError"
-    },
-    {
-      "article_id": "efb0fdde9c4f37331d",
-      "title": "Checking a Bank Transfer",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "b81e0cbef1d8812fd2",
-      "title": "The Lunch Box",
+      "article_id": "ffbbda16bc646d1a03",
+      "title": "A Low Phone Battery",
       "reason": "Selected image was unavailable: ValueError"
     }
   ]
