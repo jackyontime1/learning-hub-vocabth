@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-11-03T21:51:45.775390+00:00",
-  "expected_toronto_date": "2026-11-03",
+  "started_at": "2026-11-04T21:56:14.272804+00:00",
+  "expected_toronto_date": "2026-11-04",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -16,30 +16,19 @@
     "C1": 2
   },
   "schema_version": 10,
-  "candidate_rejections": [
-    {
-      "article_id": "94411543a02118bbe8",
-      "title": "Do you know signs of a stroke? BE FAST are the words to remember",
-      "provider": "NPR",
-      "level": "B1",
-      "reason": "RuntimeError: Full Thai translation unavailable for article 94411543a02118bbe8"
-    }
-  ],
+  "candidate_rejections": [],
   "practice_story_count": 4,
   "practice_fallback_count": 0,
   "translation_quality": {
-    "cache_rejections": 1,
-    "nllb_retries": 3,
-    "quality_failures": 1,
+    "cache_rejections": 0,
+    "nllb_retries": 1,
+    "quality_failures": 0,
     "rejection_reasons": {
-      "empty-translation": 1,
-      "missing-number:911": 2,
-      "repeated-junk-string": 1,
-      "missing-number:2.0": 1
+      "repeated-junk-string": 1
     }
   },
-  "completed_at": "2026-11-03T22:11:49.169183+00:00",
-  "latest_date": "2026-11-03",
+  "completed_at": "2026-11-04T22:12:26.143354+00:00",
+  "latest_date": "2026-11-04",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -55,46 +44,51 @@
     "easy_news": 2,
     "daily_life_practice_story": 4
   },
-  "fallback_image_count": 8,
+  "fallback_image_count": 9,
   "fallback_images": [
     {
-      "article_id": "b87c24f26fa3b8057e",
-      "title": "Tracing the Scientific Discovery Capacity of LLMs to Their Training Data",
+      "article_id": "6888d72ec43d59349e",
+      "title": "Visibility-Aware Reference Generation for Benchmarking Visual 3D Reconstruction in Vegetation-Rich Environments",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "905e76c11d7e8001ac",
-      "title": "ufakzeka-kulak: Building and Evaluating a 31.6M-Parameter Turkish Speech Recognizer from Scratch",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "bb5f184e3f82878ad7",
-      "title": "Flood Advisory issued November 3 at 2:23PM MST until November 3 at 5:30PM MST by NWS Grand Junction CO",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "4c9cbae81eacb843e9",
-      "title": "Trump to remove Rwanda and South Africa from US trade deal",
+      "article_id": "a9de5c0407f3e12213",
+      "title": "Canada looking to Germany for 8 submarines up front and 4 later: sources",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "1a3bc9f428f56c2fb0",
-      "title": "Economic frustration set to boil over in U.S. midterm elections",
+      "article_id": "00c5e1479fa912e92b",
+      "title": "Future of N.S. 'quaint fishing village' uncertain as DFO plans to block off wharfs",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "868d7f940b4f60e8ae",
-      "title": "Two economists studied California's billionaire tax. They reached wildly different conclusions",
+      "article_id": "8f83c5dbc8f977e0ef",
+      "title": "'I'm not a quitter': Kim Kardashian on retaking the bar exam",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "66edbc913a7e62418f",
+      "title": "Democrats seize full control of Congress. And, which candidates made history last night",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "7e9a0fc1456eba4003",
-      "title": "Asking About a Restaurant Order",
+      "article_id": "a41502d0e306eb48e4",
+      "title": "Sask. soldier killed in CFB Wainwright fire remembered as funny, passionate at military funeral",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "2808a4a2bc36713039",
+      "title": "A Phone Call from the Driver",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "ffbbda16bc646d1a03",
-      "title": "A Low Phone Battery",
+      "article_id": "e74219db85d3d2e1e0",
+      "title": "Meeting a New Neighbor",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "e5e24555f40adb2a9d",
+      "title": "Laundry Before the Rain",
       "reason": "Selected image was unavailable: ValueError"
     }
   ]
