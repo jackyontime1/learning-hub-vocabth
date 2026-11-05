@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-11-04T21:56:14.272804+00:00",
-  "expected_toronto_date": "2026-11-04",
+  "started_at": "2026-11-05T22:03:08.464001+00:00",
+  "expected_toronto_date": "2026-11-05",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -16,19 +16,58 @@
     "C1": 2
   },
   "schema_version": 10,
-  "candidate_rejections": [],
+  "candidate_rejections": [
+    {
+      "article_id": "eeb7ed89e25e18ee0f",
+      "title": "Small Craft Advisory issued November 5 at 4:53PM EST until November 5 at 10:00PM EST by NWS Buffalo NY",
+      "provider": "US National Weather Service",
+      "level": "B2",
+      "reason": "RuntimeError: Full Thai translation unavailable for article eeb7ed89e25e18ee0f"
+    },
+    {
+      "article_id": "4f3027434f8255a7f3",
+      "title": "Small Craft Advisory issued November 5 at 1:37PM PST until November 7 at 3:00AM PST by NWS Eureka CA",
+      "provider": "US National Weather Service",
+      "level": "B2",
+      "reason": "RuntimeError: Unable to produce 3 valid useful phrases for B2 reading"
+    },
+    {
+      "article_id": "67ee35b69791fe9466",
+      "title": "Men involved in Old Montreal fire that killed 2 plead guilty to reduced manslaughter charge",
+      "provider": "CBC News",
+      "level": "C1",
+      "reason": "RuntimeError: Full Thai translation unavailable for article 67ee35b69791fe9466"
+    },
+    {
+      "article_id": "6d3781e53d6c3b5be0",
+      "title": "Small Craft Advisory issued November 5 at 1:37PM PST until November 7 at 3:00AM PST by NWS Eureka CA",
+      "provider": "US National Weather Service",
+      "level": "C1",
+      "reason": "RuntimeError: Unable to produce 3 valid useful phrases for C1 reading"
+    },
+    {
+      "article_id": "5aa671c95d21de76f0",
+      "title": "7 takeaways from the Carney government's 2nd budget",
+      "provider": "CBC News",
+      "level": "C1",
+      "reason": "RuntimeError: Full Thai translation unavailable for article 5aa671c95d21de76f0"
+    }
+  ],
   "practice_story_count": 4,
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
-    "nllb_retries": 1,
-    "quality_failures": 0,
+    "nllb_retries": 3,
+    "quality_failures": 3,
     "rejection_reasons": {
-      "repeated-junk-string": 1
+      "missing-unit:\\bknots?\\b": 2,
+      "missing-unit:\\bdegrees?\\b|°[CF]\\b": 2,
+      "missing-number:1.8,11.2,3.6": 1,
+      "missing-number:2031,65.3,9.5": 1
     }
   },
-  "completed_at": "2026-11-04T22:12:26.143354+00:00",
-  "latest_date": "2026-11-04",
+  "completed_at": "2026-11-05T22:24:45.790238+00:00",
+  "latest_date": "2026-11-05",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -44,27 +83,27 @@
     "easy_news": 2,
     "daily_life_practice_story": 4
   },
-  "fallback_image_count": 9,
+  "fallback_image_count": 7,
   "fallback_images": [
     {
-      "article_id": "6888d72ec43d59349e",
-      "title": "Visibility-Aware Reference Generation for Benchmarking Visual 3D Reconstruction in Vegetation-Rich Environments",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "a9de5c0407f3e12213",
-      "title": "Canada looking to Germany for 8 submarines up front and 4 later: sources",
+      "article_id": "408753a73609a3e1f0",
+      "title": "First-time homebuyers remain scarce, but a record share of them pay all cash",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "00c5e1479fa912e92b",
-      "title": "Future of N.S. 'quaint fishing village' uncertain as DFO plans to block off wharfs",
+      "article_id": "8252d9beef21b2bc03",
+      "title": "Unmanaged menopause symptoms cost Canada's economy $3.5B, experts tell MPs",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "8f83c5dbc8f977e0ef",
-      "title": "'I'm not a quitter': Kim Kardashian on retaking the bar exam",
+      "article_id": "fe63eb402a1575c345",
+      "title": "Motorcade honours B.C. soldier killed in fire at CFB Wainwright",
       "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "158def20159ffb30f5",
+      "title": "Telus says 'small number' of calls interrupted in Eastern Canada on Thursday",
+      "reason": "Selected image was unavailable: ValueError"
     },
     {
       "article_id": "66edbc913a7e62418f",
@@ -72,23 +111,13 @@
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "a41502d0e306eb48e4",
-      "title": "Sask. soldier killed in CFB Wainwright fire remembered as funny, passionate at military funeral",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "2808a4a2bc36713039",
-      "title": "A Phone Call from the Driver",
+      "article_id": "ae7512e80d87cd79df",
+      "title": "What's next for Democrats after the midterms. And, a look at the outstanding races",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "e74219db85d3d2e1e0",
-      "title": "Meeting a New Neighbor",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "e5e24555f40adb2a9d",
-      "title": "Laundry Before the Rain",
+      "article_id": "1f52800a55e29633c3",
+      "title": "Sending a Parcel",
       "reason": "Selected image was unavailable: ValueError"
     }
   ]
