@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-11-05T22:03:08.464001+00:00",
-  "expected_toronto_date": "2026-11-05",
+  "started_at": "2026-11-06T21:33:14.213758+00:00",
+  "expected_toronto_date": "2026-11-06",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -18,56 +18,26 @@
   "schema_version": 10,
   "candidate_rejections": [
     {
-      "article_id": "eeb7ed89e25e18ee0f",
-      "title": "Small Craft Advisory issued November 5 at 4:53PM EST until November 5 at 10:00PM EST by NWS Buffalo NY",
-      "provider": "US National Weather Service",
+      "article_id": "6ffae0aa8482317bea",
+      "title": "Scientist World: Grow a Research World for AI-Scientists",
+      "provider": "arXiv",
       "level": "B2",
-      "reason": "RuntimeError: Full Thai translation unavailable for article eeb7ed89e25e18ee0f"
-    },
-    {
-      "article_id": "4f3027434f8255a7f3",
-      "title": "Small Craft Advisory issued November 5 at 1:37PM PST until November 7 at 3:00AM PST by NWS Eureka CA",
-      "provider": "US National Weather Service",
-      "level": "B2",
-      "reason": "RuntimeError: Unable to produce 3 valid useful phrases for B2 reading"
-    },
-    {
-      "article_id": "67ee35b69791fe9466",
-      "title": "Men involved in Old Montreal fire that killed 2 plead guilty to reduced manslaughter charge",
-      "provider": "CBC News",
-      "level": "C1",
-      "reason": "RuntimeError: Full Thai translation unavailable for article 67ee35b69791fe9466"
-    },
-    {
-      "article_id": "6d3781e53d6c3b5be0",
-      "title": "Small Craft Advisory issued November 5 at 1:37PM PST until November 7 at 3:00AM PST by NWS Eureka CA",
-      "provider": "US National Weather Service",
-      "level": "C1",
-      "reason": "RuntimeError: Unable to produce 3 valid useful phrases for C1 reading"
-    },
-    {
-      "article_id": "5aa671c95d21de76f0",
-      "title": "7 takeaways from the Carney government's 2nd budget",
-      "provider": "CBC News",
-      "level": "C1",
-      "reason": "RuntimeError: Full Thai translation unavailable for article 5aa671c95d21de76f0"
+      "reason": "RuntimeError: Full Thai translation unavailable for article 6ffae0aa8482317bea"
     }
   ],
   "practice_story_count": 4,
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
-    "nllb_retries": 3,
-    "quality_failures": 3,
+    "nllb_retries": 2,
+    "quality_failures": 1,
     "rejection_reasons": {
-      "missing-unit:\\bknots?\\b": 2,
-      "missing-unit:\\bdegrees?\\b|°[CF]\\b": 2,
-      "missing-number:1.8,11.2,3.6": 1,
-      "missing-number:2031,65.3,9.5": 1
+      "missing-unit:\\bdollars?\\b|[$]": 2,
+      "repeated-junk-string": 1
     }
   },
-  "completed_at": "2026-11-05T22:24:45.790238+00:00",
-  "latest_date": "2026-11-05",
+  "completed_at": "2026-11-06T21:53:10.235978+00:00",
+  "latest_date": "2026-11-06",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -83,41 +53,36 @@
     "easy_news": 2,
     "daily_life_practice_story": 4
   },
-  "fallback_image_count": 7,
+  "fallback_image_count": 6,
   "fallback_images": [
     {
-      "article_id": "408753a73609a3e1f0",
-      "title": "First-time homebuyers remain scarce, but a record share of them pay all cash",
+      "article_id": "c53382e981f54cd039",
+      "title": "Ohio and Texas went from red to blue in the midterms but may not stay that way in 2028",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "8252d9beef21b2bc03",
-      "title": "Unmanaged menopause symptoms cost Canada's economy $3.5B, experts tell MPs",
+      "article_id": "a0d3d4a5c9d8c2e160",
+      "title": "Meghan Markle's father arrested and charged with possessing child sexual abuse material",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "fe63eb402a1575c345",
-      "title": "Motorcade honours B.C. soldier killed in fire at CFB Wainwright",
+      "article_id": "938a24051952053d79",
+      "title": "Alberta becomes 1st province to allow optometrists to perform minor surgeries",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "3b18b99be3727b142a",
+      "title": "Republicans ran away from Trump's Canadian tariffs, but not far enough",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "165d8cb34f7f413e57",
+      "title": "Past White House adviser Raj Panjabi has written a playbook for 'living room' crises",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "158def20159ffb30f5",
-      "title": "Telus says 'small number' of calls interrupted in Eastern Canada on Thursday",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "66edbc913a7e62418f",
-      "title": "Democrats seize full control of Congress. And, which candidates made history last night",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "ae7512e80d87cd79df",
-      "title": "What's next for Democrats after the midterms. And, a look at the outstanding races",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "1f52800a55e29633c3",
-      "title": "Sending a Parcel",
+      "article_id": "8e3e4f8beb7d8d9e41",
+      "title": "Leaving a Phone for Repair",
       "reason": "Selected image was unavailable: ValueError"
     }
   ]
