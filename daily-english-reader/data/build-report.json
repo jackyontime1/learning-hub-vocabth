@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-11-06T21:33:14.213758+00:00",
-  "expected_toronto_date": "2026-11-06",
+  "started_at": "2026-11-07T20:16:44.768363+00:00",
+  "expected_toronto_date": "2026-11-07",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -18,26 +18,55 @@
   "schema_version": 10,
   "candidate_rejections": [
     {
-      "article_id": "6ffae0aa8482317bea",
-      "title": "Scientist World: Grow a Research World for AI-Scientists",
-      "provider": "arXiv",
+      "article_id": "94e75f20c78d21501d",
+      "title": "Canada's military is using Palantir software. What are the risks?",
+      "provider": "CBC News",
       "level": "B2",
-      "reason": "RuntimeError: Full Thai translation unavailable for article 6ffae0aa8482317bea"
+      "reason": "RuntimeError: Full Thai translation unavailable for article 94e75f20c78d21501d"
+    },
+    {
+      "article_id": "3b6967e1ab26760a94",
+      "title": "Worst of beef price hikes may be over, but don’t expect cheaper steak anytime soon",
+      "provider": "CBC News",
+      "level": "B2",
+      "reason": "RuntimeError: Full Thai translation unavailable for article 3b6967e1ab26760a94"
+    },
+    {
+      "article_id": "795607d9740874d94a",
+      "title": "Pope Leo begins a 12-day, 3-country South America tour after his cancer surgery",
+      "provider": "NPR",
+      "level": "B2",
+      "reason": "RuntimeError: Full Thai translation unavailable for article 795607d9740874d94a"
+    },
+    {
+      "article_id": "9bf93778e113aec226",
+      "title": "Calgary friends win $90M in country's largest-ever lotto jackpot",
+      "provider": "CBC News",
+      "level": "C1",
+      "reason": "RuntimeError: Full Thai translation unavailable for article 9bf93778e113aec226"
     }
   ],
   "practice_story_count": 4,
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
-    "nllb_retries": 2,
-    "quality_failures": 1,
+    "nllb_retries": 4,
+    "quality_failures": 4,
     "rejection_reasons": {
-      "missing-unit:\\bdollars?\\b|[$]": 2,
-      "repeated-junk-string": 1
+      "missing-number:14,63": 1,
+      "missing-number:63": 1,
+      "unexpected-non-thai-script": 1,
+      "repeated-junk-string": 1,
+      "missing-number:2026": 1,
+      "repeated-word-run": 1,
+      "repeated-2-gram": 1,
+      "repeated-3-gram": 1,
+      "missing-number:10,36": 1,
+      "missing-number:3": 2
     }
   },
-  "completed_at": "2026-11-06T21:53:10.235978+00:00",
-  "latest_date": "2026-11-06",
+  "completed_at": "2026-11-07T20:41:29.911911+00:00",
+  "latest_date": "2026-11-07",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -53,36 +82,31 @@
     "easy_news": 2,
     "daily_life_practice_story": 4
   },
-  "fallback_image_count": 6,
+  "fallback_image_count": 5,
   "fallback_images": [
     {
-      "article_id": "c53382e981f54cd039",
-      "title": "Ohio and Texas went from red to blue in the midterms but may not stay that way in 2028",
+      "article_id": "913f52d09e34b899b5",
+      "title": "Trump's global health strategy is emerging. What will the Democratic Congress say?",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "a0d3d4a5c9d8c2e160",
-      "title": "Meghan Markle's father arrested and charged with possessing child sexual abuse material",
+      "article_id": "35b0adfd1b2a921d46",
+      "title": "Small Craft Advisory issued November 7 at 3:06PM EST until November 8 at 7:00AM EST by NWS Marquette MI",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "938a24051952053d79",
-      "title": "Alberta becomes 1st province to allow optometrists to perform minor surgeries",
+      "article_id": "8af6afbea460714737",
+      "title": "A promising new medicine against heart disease fails unexpectedly",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "3b18b99be3727b142a",
-      "title": "Republicans ran away from Trump's Canadian tariffs, but not far enough",
+      "article_id": "6ba0c3f4dc3c17c95b",
+      "title": "One of the year's most prolific meteor showers to light up the night sky this weekend",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "165d8cb34f7f413e57",
-      "title": "Past White House adviser Raj Panjabi has written a playbook for 'living room' crises",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "8e3e4f8beb7d8d9e41",
-      "title": "Leaving a Phone for Repair",
+      "article_id": "a971959d0a69a61025",
+      "title": "His 1-year-old faced heart failure. His new book tells how to cope in a health crisis",
       "reason": "Selected image was unavailable: ValueError"
     }
   ]
