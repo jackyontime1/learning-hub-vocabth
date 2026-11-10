@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-11-08T20:31:32.072539+00:00",
-  "expected_toronto_date": "2026-11-08",
+  "started_at": "2026-11-10T00:17:46.286748+00:00",
+  "expected_toronto_date": "2026-11-09",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -18,32 +18,93 @@
   "schema_version": 10,
   "candidate_rejections": [
     {
-      "article_id": "9573fe04999649db88",
-      "title": "Hazardous Seas Warning issued November 8 at 12:17PM PST until November 9 at 4:00AM PST by NWS Portland OR",
+      "article_id": "a32493e8a467f1be1e",
+      "title": "Small Craft Advisory issued November 9 at 3:10PM AKST until November 10 at 5:00PM AKST by NWS Juneau AK",
       "provider": "US National Weather Service",
-      "level": "C1",
-      "reason": "RuntimeError: Unable to produce 3 valid useful phrases for C1 reading"
+      "level": "B1",
+      "reason": "RuntimeError: Full Thai translation unavailable for article a32493e8a467f1be1e"
     },
     {
-      "article_id": "d688a453001f135746",
-      "title": "Gale Warning issued November 8 at 12:17PM PST until November 9 at 7:00PM PST by NWS Portland OR",
+      "article_id": "a5054789134311b13c",
+      "title": "Small Craft Advisory issued November 9 at 3:10PM AKST until November 10 at 5:00PM AKST by NWS Juneau AK",
       "provider": "US National Weather Service",
+      "level": "B1",
+      "reason": "RuntimeError: Full Thai translation unavailable for article a5054789134311b13c"
+    },
+    {
+      "article_id": "bc4999c49682589907",
+      "title": "Small Craft Advisory issued November 9 at 3:10PM AKST until November 10 at 5:00PM AKST by NWS Juneau AK",
+      "provider": "US National Weather Service",
+      "level": "B1",
+      "reason": "RuntimeError: Full Thai translation unavailable for article bc4999c49682589907"
+    },
+    {
+      "article_id": "27636e01d9cced8988",
+      "title": "Small Craft Advisory issued November 9 at 3:10PM AKST until November 10 at 5:00AM AKST by NWS Juneau AK",
+      "provider": "US National Weather Service",
+      "level": "B1",
+      "reason": "RuntimeError: Full Thai translation unavailable for article 27636e01d9cced8988"
+    },
+    {
+      "article_id": "2bd366936b12721e64",
+      "title": "Gale Warning issued November 9 at 3:08PM AKST until November 10 at 5:00PM AKST by NWS Juneau AK",
+      "provider": "US National Weather Service",
+      "level": "B1",
+      "reason": "RuntimeError: Full Thai translation unavailable for article 2bd366936b12721e64"
+    },
+    {
+      "article_id": "a13b71dd82bdbd56b3",
+      "title": "Gale Warning issued November 9 at 3:10PM AKST until November 10 at 5:00PM AKST by NWS Juneau AK",
+      "provider": "US National Weather Service",
+      "level": "B1",
+      "reason": "RuntimeError: Full Thai translation unavailable for article a13b71dd82bdbd56b3"
+    },
+    {
+      "article_id": "53bac5a6db2b18b510",
+      "title": "Gale Warning issued November 9 at 3:08PM AKST until November 10 at 5:00PM AKST by NWS Juneau AK",
+      "provider": "US National Weather Service",
+      "level": "B1",
+      "reason": "RuntimeError: Full Thai translation unavailable for article 53bac5a6db2b18b510"
+    },
+    {
+      "article_id": "db1643ab6cdb90599a",
+      "title": "Gale Warning issued November 9 at 3:08PM AKST until November 10 at 5:00PM AKST by NWS Juneau AK",
+      "provider": "US National Weather Service",
+      "level": "B1",
+      "reason": "RuntimeError: Full Thai translation unavailable for article db1643ab6cdb90599a"
+    },
+    {
+      "article_id": "ac0d3affd120a6fb93",
+      "title": "Parents warned extremist groups are targeting a growing number of kids online across Prairies",
+      "provider": "CBC News",
       "level": "C1",
-      "reason": "RuntimeError: Unable to produce 3 valid useful phrases for C1 reading"
+      "reason": "RuntimeError: Full Thai translation unavailable for article ac0d3affd120a6fb93"
     }
   ],
   "practice_story_count": 4,
   "practice_fallback_count": 0,
   "translation_quality": {
-    "cache_rejections": 0,
-    "nllb_retries": 1,
-    "quality_failures": 0,
+    "cache_rejections": 1,
+    "nllb_retries": 10,
+    "quality_failures": 9,
     "rejection_reasons": {
-      "missing-number:35": 1
+      "missing-number:6": 6,
+      "missing-number:5": 1,
+      "missing-number:15,25,5": 1,
+      "empty-translation": 1,
+      "missing-number:18,22,30,35,45": 1,
+      "missing-number:18,22,30,40": 1,
+      "missing-number:14,18,45": 2,
+      "missing-number:24,30,40": 2,
+      "missing-number:19,24,26,45": 1,
+      "missing-number:19,24,26": 1,
+      "missing-unit:\\bdegrees?\\b|°[CF]\\b": 2,
+      "missing-number:11": 1,
+      "missing-month:December": 1
     }
   },
-  "completed_at": "2026-11-08T20:43:40.733200+00:00",
-  "latest_date": "2026-11-08",
+  "completed_at": "2026-11-10T00:46:35.936686+00:00",
+  "latest_date": "2026-11-09",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -59,51 +120,46 @@
     "easy_news": 2,
     "daily_life_practice_story": 4
   },
-  "fallback_image_count": 9,
+  "fallback_image_count": 8,
   "fallback_images": [
     {
-      "article_id": "0a7bfdd07c456cdbba",
-      "title": "One air ambulance service rethinks what it takes to practice medicine in the sky",
+      "article_id": "5f441ce2678c0ddf7e",
+      "title": "Congress is back after GOP's midterm defeat. And, Trump appoints new chief of staff",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "ad160ebe3be51a1d17",
-      "title": "Ousted Paraguayan president appears before prosecutors",
+      "article_id": "efa44fa1038beb6093",
+      "title": "Tyler Robinson, man accused of shooting Charlie Kirk, to face trial in 2028",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "6ba0c3f4dc3c17c95b",
-      "title": "One of the year's most prolific meteor showers to light up the night sky this weekend",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "929b2d437e47231d9a",
-      "title": "How a one-of-a-kind accessible pool ramp helped a Welland, Ont., woman finally feel safe in the water",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "8af6afbea460714737",
-      "title": "A promising new medicine against heart disease fails unexpectedly",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "0dba640193a2340c21",
-      "title": "Hadden Kelloway once considered leaving Sparwood, B.C. Now he's mayor",
+      "article_id": "e1ee3599da77b759b0",
+      "title": "Footage shows derailed carriages after fatal train crash in Egypt",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "798063bb260f1250c4",
-      "title": "Changing a Work Shift",
-      "reason": "Selected image was unavailable: HTTPError"
-    },
-    {
-      "article_id": "26d5bfc94125c6d5d6",
-      "title": "Making a Clinic Appointment",
+      "article_id": "8c3802d0bcf8fff6d1",
+      "title": "Russia's leading independent newspaper closes after eviction",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "f21243cc2130115d6d",
-      "title": "The Bus Card",
+      "article_id": "22b6c2c76249a44c94",
+      "title": "Red Deer, Alta., wins bid to host the 2028 Brier men’s national curling championship",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "f4cade0fa32872c4f5",
+      "title": "Fact check: Is this a photo of the Poland shooter?",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "c7a2182ec912929979",
+      "title": "Returning the Wrong Shirt",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "403dbd149a74e1a64e",
+      "title": "The Lunch Box",
       "reason": "Selected image was unavailable: ValueError"
     }
   ]
