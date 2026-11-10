@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-11-10T00:17:46.286748+00:00",
-  "expected_toronto_date": "2026-11-09",
+  "started_at": "2026-11-10T21:52:44.518405+00:00",
+  "expected_toronto_date": "2026-11-10",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -18,93 +18,25 @@
   "schema_version": 10,
   "candidate_rejections": [
     {
-      "article_id": "a32493e8a467f1be1e",
-      "title": "Small Craft Advisory issued November 9 at 3:10PM AKST until November 10 at 5:00PM AKST by NWS Juneau AK",
+      "article_id": "6553dff32fe8484318",
+      "title": "Special Weather Statement issued November 10 at 3:28PM CST by NWS Houston/Galveston TX",
       "provider": "US National Weather Service",
       "level": "B1",
-      "reason": "RuntimeError: Full Thai translation unavailable for article a32493e8a467f1be1e"
-    },
-    {
-      "article_id": "a5054789134311b13c",
-      "title": "Small Craft Advisory issued November 9 at 3:10PM AKST until November 10 at 5:00PM AKST by NWS Juneau AK",
-      "provider": "US National Weather Service",
-      "level": "B1",
-      "reason": "RuntimeError: Full Thai translation unavailable for article a5054789134311b13c"
-    },
-    {
-      "article_id": "bc4999c49682589907",
-      "title": "Small Craft Advisory issued November 9 at 3:10PM AKST until November 10 at 5:00PM AKST by NWS Juneau AK",
-      "provider": "US National Weather Service",
-      "level": "B1",
-      "reason": "RuntimeError: Full Thai translation unavailable for article bc4999c49682589907"
-    },
-    {
-      "article_id": "27636e01d9cced8988",
-      "title": "Small Craft Advisory issued November 9 at 3:10PM AKST until November 10 at 5:00AM AKST by NWS Juneau AK",
-      "provider": "US National Weather Service",
-      "level": "B1",
-      "reason": "RuntimeError: Full Thai translation unavailable for article 27636e01d9cced8988"
-    },
-    {
-      "article_id": "2bd366936b12721e64",
-      "title": "Gale Warning issued November 9 at 3:08PM AKST until November 10 at 5:00PM AKST by NWS Juneau AK",
-      "provider": "US National Weather Service",
-      "level": "B1",
-      "reason": "RuntimeError: Full Thai translation unavailable for article 2bd366936b12721e64"
-    },
-    {
-      "article_id": "a13b71dd82bdbd56b3",
-      "title": "Gale Warning issued November 9 at 3:10PM AKST until November 10 at 5:00PM AKST by NWS Juneau AK",
-      "provider": "US National Weather Service",
-      "level": "B1",
-      "reason": "RuntimeError: Full Thai translation unavailable for article a13b71dd82bdbd56b3"
-    },
-    {
-      "article_id": "53bac5a6db2b18b510",
-      "title": "Gale Warning issued November 9 at 3:08PM AKST until November 10 at 5:00PM AKST by NWS Juneau AK",
-      "provider": "US National Weather Service",
-      "level": "B1",
-      "reason": "RuntimeError: Full Thai translation unavailable for article 53bac5a6db2b18b510"
-    },
-    {
-      "article_id": "db1643ab6cdb90599a",
-      "title": "Gale Warning issued November 9 at 3:08PM AKST until November 10 at 5:00PM AKST by NWS Juneau AK",
-      "provider": "US National Weather Service",
-      "level": "B1",
-      "reason": "RuntimeError: Full Thai translation unavailable for article db1643ab6cdb90599a"
-    },
-    {
-      "article_id": "ac0d3affd120a6fb93",
-      "title": "Parents warned extremist groups are targeting a growing number of kids online across Prairies",
-      "provider": "CBC News",
-      "level": "C1",
-      "reason": "RuntimeError: Full Thai translation unavailable for article ac0d3affd120a6fb93"
+      "reason": "RuntimeError: Full Thai translation unavailable for article 6553dff32fe8484318"
     }
   ],
   "practice_story_count": 4,
   "practice_fallback_count": 0,
   "translation_quality": {
-    "cache_rejections": 1,
-    "nllb_retries": 10,
-    "quality_failures": 9,
+    "cache_rejections": 0,
+    "nllb_retries": 1,
+    "quality_failures": 1,
     "rejection_reasons": {
-      "missing-number:6": 6,
-      "missing-number:5": 1,
-      "missing-number:15,25,5": 1,
-      "empty-translation": 1,
-      "missing-number:18,22,30,35,45": 1,
-      "missing-number:18,22,30,40": 1,
-      "missing-number:14,18,45": 2,
-      "missing-number:24,30,40": 2,
-      "missing-number:19,24,26,45": 1,
-      "missing-number:19,24,26": 1,
-      "missing-unit:\\bdegrees?\\b|°[CF]\\b": 2,
-      "missing-number:11": 1,
-      "missing-month:December": 1
+      "missing-number:20": 2
     }
   },
-  "completed_at": "2026-11-10T00:46:35.936686+00:00",
-  "latest_date": "2026-11-09",
+  "completed_at": "2026-11-10T22:04:59.656605+00:00",
+  "latest_date": "2026-11-10",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -120,46 +52,56 @@
     "easy_news": 2,
     "daily_life_practice_story": 4
   },
-  "fallback_image_count": 8,
+  "fallback_image_count": 10,
   "fallback_images": [
     {
-      "article_id": "5f441ce2678c0ddf7e",
-      "title": "Congress is back after GOP's midterm defeat. And, Trump appoints new chief of staff",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "efa44fa1038beb6093",
-      "title": "Tyler Robinson, man accused of shooting Charlie Kirk, to face trial in 2028",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "e1ee3599da77b759b0",
-      "title": "Footage shows derailed carriages after fatal train crash in Egypt",
+      "article_id": "8d4d0688c6ce20400b",
+      "title": "Faisal Islam: What the boss of US tech giant Nvidia told me about China and national security",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "8c3802d0bcf8fff6d1",
-      "title": "Russia's leading independent newspaper closes after eviction",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "22b6c2c76249a44c94",
-      "title": "Red Deer, Alta., wins bid to host the 2028 Brier men’s national curling championship",
+      "article_id": "7b96303d4af30824f2",
+      "title": "Programming Prescience: Issues in Human Construction of Forecasting Bots",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "f4cade0fa32872c4f5",
-      "title": "Fact check: Is this a photo of the Poland shooter?",
+      "article_id": "26c8acdff89d55e386",
+      "title": "Arrests made in Mohamed Al Fayed probe in France, police say",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "c7a2182ec912929979",
-      "title": "Returning the Wrong Shirt",
+      "article_id": "f387011d4173fd6e09",
+      "title": "Nvidia hires major New York law firm to investigate Jensen Huang affair",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "72b1681d26ffc88b57",
+      "title": "Should you trust new AI agents with your money and data?",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "403dbd149a74e1a64e",
-      "title": "The Lunch Box",
+      "article_id": "a31c792208d29642b2",
+      "title": "Why honesty is not always the best policy",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "92898f5c8918a95a5a",
+      "title": "A Meeting with the Teacher",
+      "reason": "Selected image was unavailable: HTTPError"
+    },
+    {
+      "article_id": "e7f43072d4e0e6df23",
+      "title": "Checking a Bank Transfer",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "11b055e6c5aa0ce238",
+      "title": "Returning a Library Book",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "157fd9c7eb69afadcf",
+      "title": "A Low Phone Battery",
       "reason": "Selected image was unavailable: ValueError"
     }
   ]
