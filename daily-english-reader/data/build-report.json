@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-11-10T21:52:44.518405+00:00",
-  "expected_toronto_date": "2026-11-10",
+  "started_at": "2026-11-11T22:44:48.556365+00:00",
+  "expected_toronto_date": "2026-11-11",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -18,25 +18,51 @@
   "schema_version": 10,
   "candidate_rejections": [
     {
-      "article_id": "6553dff32fe8484318",
-      "title": "Special Weather Statement issued November 10 at 3:28PM CST by NWS Houston/Galveston TX",
+      "article_id": "e381970fc36f1cc0b7",
+      "title": "Deadline nears to claim piece of $11-million CIBC mutual funds settlement",
+      "provider": "CBC News",
+      "level": "B1",
+      "reason": "RuntimeError: Full Thai translation unavailable for article e381970fc36f1cc0b7"
+    },
+    {
+      "article_id": "1d61302b8a86b5918c",
+      "title": "Severe Thunderstorm Warning issued November 11 at 4:38PM CST until November 11 at 4:45PM CST by NWS Paducah KY",
       "provider": "US National Weather Service",
       "level": "B1",
-      "reason": "RuntimeError: Full Thai translation unavailable for article 6553dff32fe8484318"
+      "reason": "RuntimeError: Full Thai translation unavailable for article 1d61302b8a86b5918c"
+    },
+    {
+      "article_id": "61b17ba6ea6b71f153",
+      "title": "Severe Thunderstorm Warning issued November 11 at 5:33PM EST until November 11 at 6:15PM EST by NWS Indianapolis IN",
+      "provider": "US National Weather Service",
+      "level": "B1",
+      "reason": "RuntimeError: Full Thai translation unavailable for article 61b17ba6ea6b71f153"
+    },
+    {
+      "article_id": "e667aeaef9df69251e",
+      "title": "Marine Weather Statement issued November 11 at 5:28PM EST by NWS Northern Indiana",
+      "provider": "US National Weather Service",
+      "level": "B1",
+      "reason": "RuntimeError: Full Thai translation unavailable for article e667aeaef9df69251e"
     }
   ],
   "practice_story_count": 4,
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
-    "nllb_retries": 1,
-    "quality_failures": 1,
+    "nllb_retries": 5,
+    "quality_failures": 4,
     "rejection_reasons": {
-      "missing-number:20": 2
+      "missing-number:30": 1,
+      "missing-number:2025": 2,
+      "missing-number:4:38": 2,
+      "missing-number:5:33": 2,
+      "unexpected-non-thai-script": 1,
+      "missing-unit:\\bknots?\\b": 2
     }
   },
-  "completed_at": "2026-11-10T22:04:59.656605+00:00",
-  "latest_date": "2026-11-10",
+  "completed_at": "2026-11-11T23:05:01.303859+00:00",
+  "latest_date": "2026-11-11",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -55,53 +81,53 @@
   "fallback_image_count": 10,
   "fallback_images": [
     {
-      "article_id": "8d4d0688c6ce20400b",
-      "title": "Faisal Islam: What the boss of US tech giant Nvidia told me about China and national security",
+      "article_id": "0018a4ccedf30caae0",
+      "title": "FERN: Cross-Benchmark Table Retrieval for Text-to-SQL with Frozen Retrievers and Learned Ranking",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "7b96303d4af30824f2",
-      "title": "Programming Prescience: Issues in Human Construction of Forecasting Bots",
+      "article_id": "7cad5a4856ca2a94ba",
+      "title": "Missing 11-month-old baby found buried alive in a crate in South Carolina",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "aba88497971e5ace15",
+      "title": "US Treasury Secretary Scott Bessent relocated after alleged Iranian threats",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "26c8acdff89d55e386",
-      "title": "Arrests made in Mohamed Al Fayed probe in France, police say",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "f387011d4173fd6e09",
-      "title": "Nvidia hires major New York law firm to investigate Jensen Huang affair",
+      "article_id": "7a30d6adba21a9c218",
+      "title": "Pilot killed in plane crash during Remembrance Day event in Quebec's Beauce region",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "72b1681d26ffc88b57",
-      "title": "Should you trust new AI agents with your money and data?",
-      "reason": "Selected image was unavailable: ValueError"
+      "article_id": "7ab62efae6f84e8ecc",
+      "title": "Special Weather Statement issued November 11 at 5:34PM EST by NWS Louisville KY",
+      "reason": "No usable free image candidate"
     },
     {
-      "article_id": "a31c792208d29642b2",
-      "title": "Why honesty is not always the best policy",
-      "reason": "Selected image was unavailable: ValueError"
+      "article_id": "28f2c81b32155a9cd2",
+      "title": "Severe Thunderstorm Warning issued November 11 at 4:32PM CST until November 11 at 5:00PM CST by NWS Paducah KY",
+      "reason": "No usable free image candidate"
     },
     {
-      "article_id": "92898f5c8918a95a5a",
-      "title": "A Meeting with the Teacher",
+      "article_id": "7f2abc690abd773b49",
+      "title": "Asking About a Restaurant Order",
       "reason": "Selected image was unavailable: HTTPError"
     },
     {
-      "article_id": "e7f43072d4e0e6df23",
-      "title": "Checking a Bank Transfer",
+      "article_id": "5d134e467f41dc6bb7",
+      "title": "Calling About a Water Leak",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "11b055e6c5aa0ce238",
-      "title": "Returning a Library Book",
+      "article_id": "1bbf6db6cd9152b7f9",
+      "title": "Meeting a New Neighbor",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "157fd9c7eb69afadcf",
-      "title": "A Low Phone Battery",
+      "article_id": "ac93f8f94d96cebff5",
+      "title": "Laundry Before the Rain",
       "reason": "Selected image was unavailable: ValueError"
     }
   ]
