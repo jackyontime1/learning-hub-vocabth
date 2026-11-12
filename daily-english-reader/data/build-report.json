@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-11-11T22:44:48.556365+00:00",
-  "expected_toronto_date": "2026-11-11",
+  "started_at": "2026-11-12T22:17:29.558320+00:00",
+  "expected_toronto_date": "2026-11-12",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -23,46 +23,21 @@
       "provider": "CBC News",
       "level": "B1",
       "reason": "RuntimeError: Full Thai translation unavailable for article e381970fc36f1cc0b7"
-    },
-    {
-      "article_id": "1d61302b8a86b5918c",
-      "title": "Severe Thunderstorm Warning issued November 11 at 4:38PM CST until November 11 at 4:45PM CST by NWS Paducah KY",
-      "provider": "US National Weather Service",
-      "level": "B1",
-      "reason": "RuntimeError: Full Thai translation unavailable for article 1d61302b8a86b5918c"
-    },
-    {
-      "article_id": "61b17ba6ea6b71f153",
-      "title": "Severe Thunderstorm Warning issued November 11 at 5:33PM EST until November 11 at 6:15PM EST by NWS Indianapolis IN",
-      "provider": "US National Weather Service",
-      "level": "B1",
-      "reason": "RuntimeError: Full Thai translation unavailable for article 61b17ba6ea6b71f153"
-    },
-    {
-      "article_id": "e667aeaef9df69251e",
-      "title": "Marine Weather Statement issued November 11 at 5:28PM EST by NWS Northern Indiana",
-      "provider": "US National Weather Service",
-      "level": "B1",
-      "reason": "RuntimeError: Full Thai translation unavailable for article e667aeaef9df69251e"
     }
   ],
   "practice_story_count": 4,
   "practice_fallback_count": 0,
   "translation_quality": {
-    "cache_rejections": 0,
-    "nllb_retries": 5,
-    "quality_failures": 4,
+    "cache_rejections": 1,
+    "nllb_retries": 1,
+    "quality_failures": 1,
     "rejection_reasons": {
-      "missing-number:30": 1,
-      "missing-number:2025": 2,
-      "missing-number:4:38": 2,
-      "missing-number:5:33": 2,
-      "unexpected-non-thai-script": 1,
-      "missing-unit:\\bknots?\\b": 2
+      "empty-translation": 1,
+      "missing-number:2025": 2
     }
   },
-  "completed_at": "2026-11-11T23:05:01.303859+00:00",
-  "latest_date": "2026-11-11",
+  "completed_at": "2026-11-12T22:35:14.277474+00:00",
+  "latest_date": "2026-11-12",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -78,56 +53,41 @@
     "easy_news": 2,
     "daily_life_practice_story": 4
   },
-  "fallback_image_count": 10,
+  "fallback_image_count": 7,
   "fallback_images": [
     {
-      "article_id": "0018a4ccedf30caae0",
-      "title": "FERN: Cross-Benchmark Table Retrieval for Text-to-SQL with Frozen Retrievers and Learned Ranking",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "7cad5a4856ca2a94ba",
-      "title": "Missing 11-month-old baby found buried alive in a crate in South Carolina",
+      "article_id": "15c5790dfed60ad49e",
+      "title": "Israeli strike on Gaza hospital kills six Palestinians, health ministry says",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "aba88497971e5ace15",
-      "title": "US Treasury Secretary Scott Bessent relocated after alleged Iranian threats",
+      "article_id": "d9f44f00cc16754cd6",
+      "title": "Various beers under Molson Coors banner recalled Canada-wide",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "7a30d6adba21a9c218",
-      "title": "Pilot killed in plane crash during Remembrance Day event in Quebec's Beauce region",
+      "article_id": "1d71122901bb6ce1ec",
+      "title": "How AI visionary Jensen Huang was undone by his own bad decisions",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "7ab62efae6f84e8ecc",
-      "title": "Special Weather Statement issued November 11 at 5:34PM EST by NWS Louisville KY",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "28f2c81b32155a9cd2",
-      "title": "Severe Thunderstorm Warning issued November 11 at 4:32PM CST until November 11 at 5:00PM CST by NWS Paducah KY",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "7f2abc690abd773b49",
-      "title": "Asking About a Restaurant Order",
-      "reason": "Selected image was unavailable: HTTPError"
-    },
-    {
-      "article_id": "5d134e467f41dc6bb7",
-      "title": "Calling About a Water Leak",
+      "article_id": "c5056f66da889c4397",
+      "title": "Indonesia's vice-president resigns amid signs ruling alliance is fraying",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "1bbf6db6cd9152b7f9",
-      "title": "Meeting a New Neighbor",
+      "article_id": "02156e0af1d7f013b3",
+      "title": "Schools in Italy, Scotland and Northern Ireland hit by threats in suspected bomb hoax",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "ac93f8f94d96cebff5",
-      "title": "Laundry Before the Rain",
+      "article_id": "e1f59e463dc9f6778a",
+      "title": "An Israeli strike on a Gaza hospital kills 6 people, including a doctor and a child",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "4a3c7757b7f1f904bf",
+      "title": "A Phone Call from the Driver",
       "reason": "Selected image was unavailable: ValueError"
     }
   ]
