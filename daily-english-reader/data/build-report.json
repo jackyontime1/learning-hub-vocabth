@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-11-12T22:17:29.558320+00:00",
-  "expected_toronto_date": "2026-11-12",
+  "started_at": "2026-11-13T22:00:57.691811+00:00",
+  "expected_toronto_date": "2026-11-13",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -16,28 +16,22 @@
     "C1": 2
   },
   "schema_version": 10,
-  "candidate_rejections": [
-    {
-      "article_id": "e381970fc36f1cc0b7",
-      "title": "Deadline nears to claim piece of $11-million CIBC mutual funds settlement",
-      "provider": "CBC News",
-      "level": "B1",
-      "reason": "RuntimeError: Full Thai translation unavailable for article e381970fc36f1cc0b7"
-    }
-  ],
+  "candidate_rejections": [],
   "practice_story_count": 4,
   "practice_fallback_count": 0,
   "translation_quality": {
-    "cache_rejections": 1,
-    "nllb_retries": 1,
-    "quality_failures": 1,
+    "cache_rejections": 0,
+    "nllb_retries": 2,
+    "quality_failures": 0,
     "rejection_reasons": {
-      "empty-translation": 1,
-      "missing-number:2025": 2
+      "repeated-junk-string": 1,
+      "repeated-word-run": 1,
+      "repeated-2-gram": 1,
+      "repeated-3-gram": 1
     }
   },
-  "completed_at": "2026-11-12T22:35:14.277474+00:00",
-  "latest_date": "2026-11-12",
+  "completed_at": "2026-11-13T22:17:31.609189+00:00",
+  "latest_date": "2026-11-13",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -53,41 +47,46 @@
     "easy_news": 2,
     "daily_life_practice_story": 4
   },
-  "fallback_image_count": 7,
+  "fallback_image_count": 8,
   "fallback_images": [
     {
-      "article_id": "15c5790dfed60ad49e",
-      "title": "Israeli strike on Gaza hospital kills six Palestinians, health ministry says",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "d9f44f00cc16754cd6",
-      "title": "Various beers under Molson Coors banner recalled Canada-wide",
+      "article_id": "f01dc3fc031ea9eb92",
+      "title": "ProtoVis-Nav: Prototypical Visual Imagination for Visual-Spatial Aligned UAV Navigation",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "1d71122901bb6ce1ec",
-      "title": "How AI visionary Jensen Huang was undone by his own bad decisions",
+      "article_id": "8995c2e2fab625de6a",
+      "title": "Military cemetery decorum: The tradition behind Hegseth's Veterans Day reprimand",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "c5056f66da889c4397",
-      "title": "Indonesia's vice-president resigns amid signs ruling alliance is fraying",
+      "article_id": "a707d800df8e24cf73",
+      "title": "Hegseth, wife and aides spark scolding from guard at Tomb of the Unknown Soldier",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "f0e287916b6f115b1c",
+      "title": "'Punch in the gut': Homes sales fall to their lowest in 16 years",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "02156e0af1d7f013b3",
-      "title": "Schools in Italy, Scotland and Northern Ireland hit by threats in suspected bomb hoax",
+      "article_id": "12a930a9cd951431c0",
+      "title": "Nvidia CEO steps down. And, Sen. Chris Van Hollen to run for majority leader",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "c84aece86a0930043b",
+      "title": "Happy World Kindness Day! Check out our kind photos of kindness to humans -- and cats",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "e1f59e463dc9f6778a",
-      "title": "An Israeli strike on a Gaza hospital kills 6 people, including a doctor and a child",
-      "reason": "Selected image was unavailable: ValueError"
+      "article_id": "f0037f840a0cba032f",
+      "title": "Changing a Train Ticket",
+      "reason": "Selected image was unavailable: HTTPError"
     },
     {
-      "article_id": "4a3c7757b7f1f904bf",
-      "title": "A Phone Call from the Driver",
+      "article_id": "33b79a7e6545873e08",
+      "title": "Sending a Parcel",
       "reason": "Selected image was unavailable: ValueError"
     }
   ]
