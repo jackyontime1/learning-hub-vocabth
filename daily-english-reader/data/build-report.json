@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-11-13T22:00:57.691811+00:00",
-  "expected_toronto_date": "2026-11-13",
+  "started_at": "2026-11-14T20:46:08.386920+00:00",
+  "expected_toronto_date": "2026-11-14",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -16,22 +16,52 @@
     "C1": 2
   },
   "schema_version": 10,
-  "candidate_rejections": [],
+  "candidate_rejections": [
+    {
+      "article_id": "d0e55d9820f88753a7",
+      "title": "Gale Warning issued November 14 at 11:42AM AKST until November 15 at 5:00PM AKST by NWS Juneau AK",
+      "provider": "US National Weather Service",
+      "level": "B1",
+      "reason": "RuntimeError: Full Thai translation unavailable for article d0e55d9820f88753a7"
+    },
+    {
+      "article_id": "a84d73f9f7e36a5f1f",
+      "title": "Small Craft Advisory issued November 14 at 11:42AM AKST until November 15 at 5:00PM AKST by NWS Juneau AK",
+      "provider": "US National Weather Service",
+      "level": "B1",
+      "reason": "RuntimeError: Full Thai translation unavailable for article a84d73f9f7e36a5f1f"
+    },
+    {
+      "article_id": "d999f902b87dba0d49",
+      "title": "Small Craft Advisory issued November 14 at 11:42AM AKST until November 15 at 5:00PM AKST by NWS Juneau AK",
+      "provider": "US National Weather Service",
+      "level": "B1",
+      "reason": "RuntimeError: Full Thai translation unavailable for article d999f902b87dba0d49"
+    },
+    {
+      "article_id": "73de4352c16518cc2d",
+      "title": "Bluetongue virus confirmed on County Down farm",
+      "provider": "BBC News",
+      "level": "B2",
+      "reason": "RuntimeError: Full Thai translation unavailable for article 73de4352c16518cc2d"
+    }
+  ],
   "practice_story_count": 4,
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
-    "nllb_retries": 2,
-    "quality_failures": 0,
+    "nllb_retries": 5,
+    "quality_failures": 4,
     "rejection_reasons": {
-      "repeated-junk-string": 1,
-      "repeated-word-run": 1,
-      "repeated-2-gram": 1,
-      "repeated-3-gram": 1
+      "missing-number:14": 2,
+      "missing-number:5": 2,
+      "missing-number:4,6": 2,
+      "missing-number:2025": 2,
+      "missing-number:2026": 1
     }
   },
-  "completed_at": "2026-11-13T22:17:31.609189+00:00",
-  "latest_date": "2026-11-13",
+  "completed_at": "2026-11-14T20:52:27.093214+00:00",
+  "latest_date": "2026-11-14",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -47,31 +77,16 @@
     "easy_news": 2,
     "daily_life_practice_story": 4
   },
-  "fallback_image_count": 8,
+  "fallback_image_count": 7,
   "fallback_images": [
     {
-      "article_id": "f01dc3fc031ea9eb92",
-      "title": "ProtoVis-Nav: Prototypical Visual Imagination for Visual-Spatial Aligned UAV Navigation",
-      "reason": "No usable free image candidate"
+      "article_id": "b4fb67b3b59da89b84",
+      "title": "Change to Ontario's 'safer-supply' opioid prescriptions abruptly paused due to legal challenge",
+      "reason": "Selected image was unavailable: ValueError"
     },
     {
       "article_id": "8995c2e2fab625de6a",
       "title": "Military cemetery decorum: The tradition behind Hegseth's Veterans Day reprimand",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "a707d800df8e24cf73",
-      "title": "Hegseth, wife and aides spark scolding from guard at Tomb of the Unknown Soldier",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "f0e287916b6f115b1c",
-      "title": "'Punch in the gut': Homes sales fall to their lowest in 16 years",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "12a930a9cd951431c0",
-      "title": "Nvidia CEO steps down. And, Sen. Chris Van Hollen to run for majority leader",
       "reason": "No usable free image candidate"
     },
     {
@@ -80,13 +95,23 @@
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "f0037f840a0cba032f",
-      "title": "Changing a Train Ticket",
-      "reason": "Selected image was unavailable: HTTPError"
+      "article_id": "40e7b572c662a35935",
+      "title": "Courts, spies and MPs: How the Microsoft outage has been felt around the world",
+      "reason": "No usable free image candidate"
     },
     {
-      "article_id": "33b79a7e6545873e08",
-      "title": "Sending a Parcel",
+      "article_id": "996554b31ee968c9b7",
+      "title": "Small Craft Advisory issued November 14 at 11:42AM AKST until November 15 at 5:00PM AKST by NWS Juneau AK",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "dbb2d08f4465b2cbca",
+      "title": "Small Craft Advisory issued November 14 at 11:42AM AKST until November 15 at 5:00PM AKST by NWS Juneau AK",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "a37d02e9d1af502473",
+      "title": "Leaving a Phone for Repair",
       "reason": "Selected image was unavailable: ValueError"
     }
   ]
