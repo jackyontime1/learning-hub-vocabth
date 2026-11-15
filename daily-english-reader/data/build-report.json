@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-11-14T20:46:08.386920+00:00",
-  "expected_toronto_date": "2026-11-14",
+  "started_at": "2026-11-15T21:05:00.779095+00:00",
+  "expected_toronto_date": "2026-11-15",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -18,50 +18,25 @@
   "schema_version": 10,
   "candidate_rejections": [
     {
-      "article_id": "d0e55d9820f88753a7",
-      "title": "Gale Warning issued November 14 at 11:42AM AKST until November 15 at 5:00PM AKST by NWS Juneau AK",
+      "article_id": "8a6bfc6cedfbb86f69",
+      "title": "Small Craft Advisory issued November 15 at 12:49PM PST until November 16 at 10:00PM PST by NWS Seattle WA",
       "provider": "US National Weather Service",
       "level": "B1",
-      "reason": "RuntimeError: Full Thai translation unavailable for article d0e55d9820f88753a7"
-    },
-    {
-      "article_id": "a84d73f9f7e36a5f1f",
-      "title": "Small Craft Advisory issued November 14 at 11:42AM AKST until November 15 at 5:00PM AKST by NWS Juneau AK",
-      "provider": "US National Weather Service",
-      "level": "B1",
-      "reason": "RuntimeError: Full Thai translation unavailable for article a84d73f9f7e36a5f1f"
-    },
-    {
-      "article_id": "d999f902b87dba0d49",
-      "title": "Small Craft Advisory issued November 14 at 11:42AM AKST until November 15 at 5:00PM AKST by NWS Juneau AK",
-      "provider": "US National Weather Service",
-      "level": "B1",
-      "reason": "RuntimeError: Full Thai translation unavailable for article d999f902b87dba0d49"
-    },
-    {
-      "article_id": "73de4352c16518cc2d",
-      "title": "Bluetongue virus confirmed on County Down farm",
-      "provider": "BBC News",
-      "level": "B2",
-      "reason": "RuntimeError: Full Thai translation unavailable for article 73de4352c16518cc2d"
+      "reason": "RuntimeError: Unable to produce 3 valid useful phrases for B1 reading"
     }
   ],
   "practice_story_count": 4,
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
-    "nllb_retries": 5,
-    "quality_failures": 4,
+    "nllb_retries": 1,
+    "quality_failures": 0,
     "rejection_reasons": {
-      "missing-number:14": 2,
-      "missing-number:5": 2,
-      "missing-number:4,6": 2,
-      "missing-number:2025": 2,
-      "missing-number:2026": 1
+      "repeated-junk-string": 1
     }
   },
-  "completed_at": "2026-11-14T20:52:27.093214+00:00",
-  "latest_date": "2026-11-14",
+  "completed_at": "2026-11-15T21:19:57.273015+00:00",
+  "latest_date": "2026-11-15",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -80,38 +55,38 @@
   "fallback_image_count": 7,
   "fallback_images": [
     {
-      "article_id": "b4fb67b3b59da89b84",
-      "title": "Change to Ontario's 'safer-supply' opioid prescriptions abruptly paused due to legal challenge",
+      "article_id": "11561d373f0bde2fba",
+      "title": "US has lost measles elimination status, global health authorities say",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "8995c2e2fab625de6a",
-      "title": "Military cemetery decorum: The tradition behind Hegseth's Veterans Day reprimand",
+      "article_id": "65101381690c53e919",
+      "title": "Spanish goalkeeper barred 12 games for collision leading to death of Tenerife striker",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "c84aece86a0930043b",
-      "title": "Happy World Kindness Day! Check out our kind photos of kindness to humans -- and cats",
+      "article_id": "17ac3be976a8297608",
+      "title": "Watch: Cruise ship overturns after collision with tanker in New Orleans",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "a3aded8bc3067dee1a",
+      "title": "Carney pledges $560M to Brazil-led fund to protect rainforests",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "40e7b572c662a35935",
-      "title": "Courts, spies and MPs: How the Microsoft outage has been felt around the world",
+      "article_id": "122b77f48cffa8d9e3",
+      "title": "Special Weather Statement issued November 15 at 2:43PM CST by NWS Houston/Galveston TX",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "996554b31ee968c9b7",
-      "title": "Small Craft Advisory issued November 14 at 11:42AM AKST until November 15 at 5:00PM AKST by NWS Juneau AK",
+      "article_id": "1f85fb62e049d9f57e",
+      "title": "Jojo the gorilla has spent his life alone. Can he finally find a companion?",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "dbb2d08f4465b2cbca",
-      "title": "Small Craft Advisory issued November 14 at 11:42AM AKST until November 15 at 5:00PM AKST by NWS Juneau AK",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "a37d02e9d1af502473",
-      "title": "Leaving a Phone for Repair",
+      "article_id": "70bad8cfc2df3f54ff",
+      "title": "The Bus Card",
       "reason": "Selected image was unavailable: ValueError"
     }
   ]
