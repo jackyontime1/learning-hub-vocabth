@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-11-15T21:05:00.779095+00:00",
-  "expected_toronto_date": "2026-11-15",
+  "started_at": "2026-11-17T00:18:19.099206+00:00",
+  "expected_toronto_date": "2026-11-16",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -18,25 +18,37 @@
   "schema_version": 10,
   "candidate_rejections": [
     {
-      "article_id": "8a6bfc6cedfbb86f69",
-      "title": "Small Craft Advisory issued November 15 at 12:49PM PST until November 16 at 10:00PM PST by NWS Seattle WA",
+      "article_id": "e8302d5aad6f973d7f",
+      "title": "Small Craft Advisory issued November 16 at 2:52PM AKST until November 18 at 3:00AM AKST by NWS Juneau AK",
       "provider": "US National Weather Service",
-      "level": "B1",
-      "reason": "RuntimeError: Unable to produce 3 valid useful phrases for B1 reading"
+      "level": "C1",
+      "reason": "RuntimeError: Unable to produce 3 valid useful phrases for C1 reading"
+    },
+    {
+      "article_id": "aef433aca61ad4c3bf",
+      "title": "Small Craft Advisory issued November 16 at 2:52PM AKST until November 17 at 12:00PM AKST by NWS Juneau AK",
+      "provider": "US National Weather Service",
+      "level": "C1",
+      "reason": "RuntimeError: Unable to produce 3 valid useful phrases for C1 reading"
+    },
+    {
+      "article_id": "cb08a43dcd403b30e1",
+      "title": "How an Ottawa man played 365 rec sports games in less than a year",
+      "provider": "CBC News",
+      "level": "C1",
+      "reason": "RuntimeError: Unable to produce 3 valid useful phrases for C1 reading"
     }
   ],
   "practice_story_count": 4,
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
-    "nllb_retries": 1,
+    "nllb_retries": 0,
     "quality_failures": 0,
-    "rejection_reasons": {
-      "repeated-junk-string": 1
-    }
+    "rejection_reasons": {}
   },
-  "completed_at": "2026-11-15T21:19:57.273015+00:00",
-  "latest_date": "2026-11-15",
+  "completed_at": "2026-11-17T00:22:22.294959+00:00",
+  "latest_date": "2026-11-16",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -52,41 +64,46 @@
     "easy_news": 2,
     "daily_life_practice_story": 4
   },
-  "fallback_image_count": 7,
+  "fallback_image_count": 8,
   "fallback_images": [
     {
-      "article_id": "11561d373f0bde2fba",
-      "title": "US has lost measles elimination status, global health authorities say",
+      "article_id": "5009d37c36df06c980",
+      "title": "Flood Advisory issued November 16 at 7:59PM AST until November 16 at 10:00PM AST by NWS San Juan PR",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "66eef9ff26ac0da535",
+      "title": "What's the real cost of fast fashion? Ask the people making your jeans",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "65101381690c53e919",
-      "title": "Spanish goalkeeper barred 12 games for collision leading to death of Tenerife striker",
+      "article_id": "f2d217b442f646776c",
+      "title": "South Korea's top scorer in tax accountancy exam admits cheating",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "17ac3be976a8297608",
-      "title": "Watch: Cruise ship overturns after collision with tanker in New Orleans",
+      "article_id": "49cc1b8d08437e6588",
+      "title": "GTA 6 hacker pleads guilty after release from secure hospital",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "a3aded8bc3067dee1a",
-      "title": "Carney pledges $560M to Brazil-led fund to protect rainforests",
+      "article_id": "31c6ab5c764caf844d",
+      "title": "Why sleep matters when it comes to weight gain and loss",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "122b77f48cffa8d9e3",
-      "title": "Special Weather Statement issued November 15 at 2:43PM CST by NWS Houston/Galveston TX",
-      "reason": "No usable free image candidate"
+      "article_id": "cfe62ae944f9c81004",
+      "title": "Chris Van Hollen says he can beat Chuck Schumer. Here's his case",
+      "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "1f85fb62e049d9f57e",
-      "title": "Jojo the gorilla has spent his life alone. Can he finally find a companion?",
-      "reason": "No usable free image candidate"
+      "article_id": "31f43a3bfa5dd26ba5",
+      "title": "Making a Clinic Appointment",
+      "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "70bad8cfc2df3f54ff",
-      "title": "The Bus Card",
+      "article_id": "9a3cd2bbed185183b1",
+      "title": "The Lunch Box",
       "reason": "Selected image was unavailable: ValueError"
     }
   ]
