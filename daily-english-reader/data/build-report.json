@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-11-17T00:18:19.099206+00:00",
-  "expected_toronto_date": "2026-11-16",
+  "started_at": "2026-11-17T23:33:05.120581+00:00",
+  "expected_toronto_date": "2026-11-17",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -16,29 +16,7 @@
     "C1": 2
   },
   "schema_version": 10,
-  "candidate_rejections": [
-    {
-      "article_id": "e8302d5aad6f973d7f",
-      "title": "Small Craft Advisory issued November 16 at 2:52PM AKST until November 18 at 3:00AM AKST by NWS Juneau AK",
-      "provider": "US National Weather Service",
-      "level": "C1",
-      "reason": "RuntimeError: Unable to produce 3 valid useful phrases for C1 reading"
-    },
-    {
-      "article_id": "aef433aca61ad4c3bf",
-      "title": "Small Craft Advisory issued November 16 at 2:52PM AKST until November 17 at 12:00PM AKST by NWS Juneau AK",
-      "provider": "US National Weather Service",
-      "level": "C1",
-      "reason": "RuntimeError: Unable to produce 3 valid useful phrases for C1 reading"
-    },
-    {
-      "article_id": "cb08a43dcd403b30e1",
-      "title": "How an Ottawa man played 365 rec sports games in less than a year",
-      "provider": "CBC News",
-      "level": "C1",
-      "reason": "RuntimeError: Unable to produce 3 valid useful phrases for C1 reading"
-    }
-  ],
+  "candidate_rejections": [],
   "practice_story_count": 4,
   "practice_fallback_count": 0,
   "translation_quality": {
@@ -47,8 +25,8 @@
     "quality_failures": 0,
     "rejection_reasons": {}
   },
-  "completed_at": "2026-11-17T00:22:22.294959+00:00",
-  "latest_date": "2026-11-16",
+  "completed_at": "2026-11-17T23:42:40.515999+00:00",
+  "latest_date": "2026-11-17",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -67,24 +45,24 @@
   "fallback_image_count": 8,
   "fallback_images": [
     {
-      "article_id": "5009d37c36df06c980",
-      "title": "Flood Advisory issued November 16 at 7:59PM AST until November 16 at 10:00PM AST by NWS San Juan PR",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "66eef9ff26ac0da535",
-      "title": "What's the real cost of fast fashion? Ask the people making your jeans",
+      "article_id": "3056e155c259a5753f",
+      "title": "Palestinian woman, 72, shot dead by Israeli settlers in West Bank, health ministry says",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "f2d217b442f646776c",
-      "title": "South Korea's top scorer in tax accountancy exam admits cheating",
+      "article_id": "f7fdd314bb5d5d58c7",
+      "title": "WNBA commissioner search underway with Cathy Engelbert to retire at year's end",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "49cc1b8d08437e6588",
-      "title": "GTA 6 hacker pleads guilty after release from secure hospital",
-      "reason": "No usable free image candidate"
+      "article_id": "323d0e7873c4506baa",
+      "title": "Stolen 120-year-old church bell found discarded in rural Manitoba ditch",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "180696f0f2d2fc48d8",
+      "title": "Canada's national emergency alert system will sound off Wednesday for testing",
+      "reason": "Selected image was unavailable: ValueError"
     },
     {
       "article_id": "31c6ab5c764caf844d",
@@ -97,13 +75,13 @@
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "31f43a3bfa5dd26ba5",
-      "title": "Making a Clinic Appointment",
+      "article_id": "0fd96625ae94df56b4",
+      "title": "Returning the Wrong Shirt",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "9a3cd2bbed185183b1",
-      "title": "The Lunch Box",
+      "article_id": "3a6b708cd41d429ef5",
+      "title": "A Low Phone Battery",
       "reason": "Selected image was unavailable: ValueError"
     }
   ]
