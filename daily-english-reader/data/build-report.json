@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-11-17T23:33:05.120581+00:00",
-  "expected_toronto_date": "2026-11-17",
+  "started_at": "2026-11-18T22:58:36.396476+00:00",
+  "expected_toronto_date": "2026-11-18",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -16,17 +16,39 @@
     "C1": 2
   },
   "schema_version": 10,
-  "candidate_rejections": [],
+  "candidate_rejections": [
+    {
+      "article_id": "019e8928cbd434c2af",
+      "title": "More people are getting the flu. Should you get a flu shot before you travel?",
+      "provider": "NPR",
+      "level": "B1",
+      "reason": "RuntimeError: Full Thai translation unavailable for article 019e8928cbd434c2af"
+    },
+    {
+      "article_id": "e4a9465a740576fd58",
+      "title": "Winter Weather Advisory issued November 18 at 3:49PM MST until November 21 at 11:00AM MST by NWS Salt Lake City UT",
+      "provider": "US National Weather Service",
+      "level": "B2",
+      "reason": "RuntimeError: Unable to produce 3 valid useful phrases for B2 reading"
+    }
+  ],
   "practice_story_count": 4,
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
-    "nllb_retries": 0,
-    "quality_failures": 0,
-    "rejection_reasons": {}
+    "nllb_retries": 2,
+    "quality_failures": 1,
+    "rejection_reasons": {
+      "unexpected-non-thai-script": 1,
+      "missing-number:73": 2,
+      "repeated-word-run": 1,
+      "repeated-2-gram": 1,
+      "repeated-3-gram": 1,
+      "repeated-junk-string": 1
+    }
   },
-  "completed_at": "2026-11-17T23:42:40.515999+00:00",
-  "latest_date": "2026-11-17",
+  "completed_at": "2026-11-18T23:04:42.752832+00:00",
+  "latest_date": "2026-11-18",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -42,46 +64,51 @@
     "easy_news": 2,
     "daily_life_practice_story": 4
   },
-  "fallback_image_count": 8,
+  "fallback_image_count": 9,
   "fallback_images": [
     {
-      "article_id": "3056e155c259a5753f",
-      "title": "Palestinian woman, 72, shot dead by Israeli settlers in West Bank, health ministry says",
+      "article_id": "61a618c1ea1c2e8bc6",
+      "title": "Reading Scene States: Uncovering Safety Failures in Vision-Language Models",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "f7fdd314bb5d5d58c7",
-      "title": "WNBA commissioner search underway with Cathy Engelbert to retire at year's end",
+      "article_id": "fa09b39363576831a7",
+      "title": "Feedback-Linearised Trajectory Tracking via Model-Informed Robust Geometric DDPC",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "323d0e7873c4506baa",
-      "title": "Stolen 120-year-old church bell found discarded in rural Manitoba ditch",
+      "article_id": "0e55cc5849b38f89e4",
+      "title": "‘Not anymore’: N.L. judge denies bail to man who bragged about Canada's easy release",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "180696f0f2d2fc48d8",
-      "title": "Canada's national emergency alert system will sound off Wednesday for testing",
+      "article_id": "f5d096ad987d919b1b",
+      "title": "'It was really scary': Mother describes sheltering during Russia strikes on Kyiv bridge",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "847ffa0bbaaf91c915",
+      "title": "Nvidia board says it does not intend to reinstate Jensen Huang as CEO",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "788a80b79dd784012a",
+      "title": "Mary Peltola flips Alaska's Senate seat. And, Nvidia won't reinstate Jensen Huang",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "257592f136b9cbebdf",
+      "title": "Checking a Bank Transfer",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "31c6ab5c764caf844d",
-      "title": "Why sleep matters when it comes to weight gain and loss",
+      "article_id": "7eb5f8c773bf5d8309",
+      "title": "Meeting a New Neighbor",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "cfe62ae944f9c81004",
-      "title": "Chris Van Hollen says he can beat Chuck Schumer. Here's his case",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "0fd96625ae94df56b4",
-      "title": "Returning the Wrong Shirt",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "3a6b708cd41d429ef5",
-      "title": "A Low Phone Battery",
+      "article_id": "548aa857b5e69bb85b",
+      "title": "Laundry Before the Rain",
       "reason": "Selected image was unavailable: ValueError"
     }
   ]
