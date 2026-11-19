@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-11-18T22:58:36.396476+00:00",
-  "expected_toronto_date": "2026-11-18",
+  "started_at": "2026-11-19T23:05:31.724920+00:00",
+  "expected_toronto_date": "2026-11-19",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -18,16 +18,9 @@
   "schema_version": 10,
   "candidate_rejections": [
     {
-      "article_id": "019e8928cbd434c2af",
-      "title": "More people are getting the flu. Should you get a flu shot before you travel?",
-      "provider": "NPR",
-      "level": "B1",
-      "reason": "RuntimeError: Full Thai translation unavailable for article 019e8928cbd434c2af"
-    },
-    {
-      "article_id": "e4a9465a740576fd58",
-      "title": "Winter Weather Advisory issued November 18 at 3:49PM MST until November 21 at 11:00AM MST by NWS Salt Lake City UT",
-      "provider": "US National Weather Service",
+      "article_id": "da196c34e26707c4fe",
+      "title": "Indian driver wins $1.3m in life-changing lottery prize",
+      "provider": "BBC News",
       "level": "B2",
       "reason": "RuntimeError: Unable to produce 3 valid useful phrases for B2 reading"
     }
@@ -36,19 +29,12 @@
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
-    "nllb_retries": 2,
-    "quality_failures": 1,
-    "rejection_reasons": {
-      "unexpected-non-thai-script": 1,
-      "missing-number:73": 2,
-      "repeated-word-run": 1,
-      "repeated-2-gram": 1,
-      "repeated-3-gram": 1,
-      "repeated-junk-string": 1
-    }
+    "nllb_retries": 0,
+    "quality_failures": 0,
+    "rejection_reasons": {}
   },
-  "completed_at": "2026-11-18T23:04:42.752832+00:00",
-  "latest_date": "2026-11-18",
+  "completed_at": "2026-11-19T23:13:50.790835+00:00",
+  "latest_date": "2026-11-19",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -64,51 +50,46 @@
     "easy_news": 2,
     "daily_life_practice_story": 4
   },
-  "fallback_image_count": 9,
+  "fallback_image_count": 8,
   "fallback_images": [
     {
-      "article_id": "61a618c1ea1c2e8bc6",
-      "title": "Reading Scene States: Uncovering Safety Failures in Vision-Language Models",
+      "article_id": "7f99b5ef829d492aca",
+      "title": "What the U.S. might learn from Canada's privatized air traffic control",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "fa09b39363576831a7",
-      "title": "Feedback-Linearised Trajectory Tracking via Model-Informed Robust Geometric DDPC",
+      "article_id": "f58b42382aa5ae7741",
+      "title": "Flood Advisory issued November 19 at 2:54PM PST until November 19 at 5:00PM PST by NWS San Diego CA",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "0e55cc5849b38f89e4",
-      "title": "‘Not anymore’: N.L. judge denies bail to man who bragged about Canada's easy release",
+      "article_id": "dfdb03c686dba7a1d1",
+      "title": "Top House Democrat questions what Trump accomplished in Xi-Putin summit",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "61c10984669b849311",
+      "title": "India's religious make-up - what a new Pew study says about Hindus and Muslims",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "f5d096ad987d919b1b",
-      "title": "'It was really scary': Mother describes sheltering during Russia strikes on Kyiv bridge",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "847ffa0bbaaf91c915",
-      "title": "Nvidia board says it does not intend to reinstate Jensen Huang as CEO",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "788a80b79dd784012a",
-      "title": "Mary Peltola flips Alaska's Senate seat. And, Nvidia won't reinstate Jensen Huang",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "257592f136b9cbebdf",
-      "title": "Checking a Bank Transfer",
+      "article_id": "5981bcac0b7fe28df6",
+      "title": "World Toilet Day is a funny idea with a serious goal: A world awash in toilets",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "7eb5f8c773bf5d8309",
-      "title": "Meeting a New Neighbor",
-      "reason": "Selected image was unavailable: ValueError"
+      "article_id": "cb1511a4a5f978d904",
+      "title": "Special Weather Statement issued November 19 at 2:41PM PST by NWS Hanford CA",
+      "reason": "No usable free image candidate"
     },
     {
-      "article_id": "548aa857b5e69bb85b",
-      "title": "Laundry Before the Rain",
+      "article_id": "7049c1b2a3895a489c",
+      "title": "Asking About a Restaurant Order",
+      "reason": "Selected image was unavailable: HTTPError"
+    },
+    {
+      "article_id": "367ebc16d726c73bd3",
+      "title": "Calling About a Water Leak",
       "reason": "Selected image was unavailable: ValueError"
     }
   ]
