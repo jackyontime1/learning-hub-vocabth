@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-11-19T23:05:31.724920+00:00",
-  "expected_toronto_date": "2026-11-19",
+  "started_at": "2026-11-20T22:42:37.945059+00:00",
+  "expected_toronto_date": "2026-11-20",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -18,23 +18,27 @@
   "schema_version": 10,
   "candidate_rejections": [
     {
-      "article_id": "da196c34e26707c4fe",
-      "title": "Indian driver wins $1.3m in life-changing lottery prize",
-      "provider": "BBC News",
-      "level": "B2",
-      "reason": "RuntimeError: Unable to produce 3 valid useful phrases for B2 reading"
+      "article_id": "67b5ec8ba8c437c15a",
+      "title": "South Korea's top court overturns charges against ex-prime minister for his role in martial law",
+      "provider": "CBC News",
+      "level": "C1",
+      "reason": "RuntimeError: Full Thai translation unavailable for article 67b5ec8ba8c437c15a"
     }
   ],
   "practice_story_count": 4,
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
-    "nllb_retries": 0,
-    "quality_failures": 0,
-    "rejection_reasons": {}
+    "nllb_retries": 2,
+    "quality_failures": 1,
+    "rejection_reasons": {
+      "missing-number:15": 1,
+      "missing-number:2024": 2,
+      "missing-month:December": 2
+    }
   },
-  "completed_at": "2026-11-19T23:13:50.790835+00:00",
-  "latest_date": "2026-11-19",
+  "completed_at": "2026-11-20T22:46:33.066346+00:00",
+  "latest_date": "2026-11-20",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -50,26 +54,26 @@
     "easy_news": 2,
     "daily_life_practice_story": 4
   },
-  "fallback_image_count": 8,
+  "fallback_image_count": 7,
   "fallback_images": [
     {
-      "article_id": "7f99b5ef829d492aca",
-      "title": "What the U.S. might learn from Canada's privatized air traffic control",
+      "article_id": "f2e786bb6c64ac9d9b",
+      "title": "Tornado Warning issued November 20 at 2:39PM PST until November 20 at 3:15PM PST by NWS San Francisco CA",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "b5e95a3f9c25b17fdf",
+      "title": "The U.N.'s top court rules Myanmar committed genocide against the Rohingya",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "f58b42382aa5ae7741",
-      "title": "Flood Advisory issued November 19 at 2:54PM PST until November 19 at 5:00PM PST by NWS San Diego CA",
-      "reason": "No usable free image candidate"
+      "article_id": "333c087282db88e7c5",
+      "title": "Premier packaging: Quebec company turns election campaign posters into shipping boxes",
+      "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "dfdb03c686dba7a1d1",
-      "title": "Top House Democrat questions what Trump accomplished in Xi-Putin summit",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "61c10984669b849311",
-      "title": "India's religious make-up - what a new Pew study says about Hindus and Muslims",
+      "article_id": "166a49619d1d32078b",
+      "title": "How a small Toronto radio program is bringing Afghan women's voices to light",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
@@ -78,18 +82,13 @@
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "cb1511a4a5f978d904",
-      "title": "Special Weather Statement issued November 19 at 2:41PM PST by NWS Hanford CA",
+      "article_id": "1944a9590063b0aa10",
+      "title": "Tornado Warning issued November 20 at 2:42PM PST until November 20 at 3:00PM PST by NWS Hanford CA",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "7049c1b2a3895a489c",
-      "title": "Asking About a Restaurant Order",
-      "reason": "Selected image was unavailable: HTTPError"
-    },
-    {
-      "article_id": "367ebc16d726c73bd3",
-      "title": "Calling About a Water Leak",
+      "article_id": "654e7fcd390660dac4",
+      "title": "A Phone Call from the Driver",
       "reason": "Selected image was unavailable: ValueError"
     }
   ]
