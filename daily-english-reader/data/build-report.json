@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-11-21T21:42:04.899398+00:00",
-  "expected_toronto_date": "2026-11-21",
+  "started_at": "2026-11-22T21:51:21.407044+00:00",
+  "expected_toronto_date": "2026-11-22",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -18,35 +18,52 @@
   "schema_version": 10,
   "candidate_rejections": [
     {
-      "article_id": "e5306eafb03673df4d",
-      "title": "Small Craft Advisory issued November 21 at 1:29PM PST until November 21 at 4:00PM PST by NWS Seattle WA",
+      "article_id": "e72edef3d12a445ebf",
+      "title": "Special Weather Statement issued November 22 at 3:25PM CST by NWS Little Rock AR",
       "provider": "US National Weather Service",
       "level": "B1",
-      "reason": "RuntimeError: Unable to produce 3 valid useful phrases for B1 reading"
+      "reason": "RuntimeError: Full Thai translation unavailable for article e72edef3d12a445ebf"
     },
     {
-      "article_id": "83331b57b02ba6ecb1",
-      "title": "Small Craft Advisory issued November 21 at 1:29PM PST until November 22 at 10:00AM PST by NWS Seattle WA",
+      "article_id": "363db02e0ff3a59173",
+      "title": "Severe Thunderstorm Warning issued November 22 at 3:50PM CST until November 22 at 4:15PM CST by NWS Little Rock AR",
       "provider": "US National Weather Service",
       "level": "B1",
-      "reason": "RuntimeError: Unable to produce 3 valid useful phrases for B1 reading"
+      "reason": "RuntimeError: Full Thai translation unavailable for article 363db02e0ff3a59173"
+    },
+    {
+      "article_id": "006c006c70072438a3",
+      "title": "Russia-bound ship towed away after it was attacked in Gulf of Finland",
+      "provider": "BBC News",
+      "level": "B1",
+      "reason": "RuntimeError: Full Thai translation unavailable for article 006c006c70072438a3"
+    },
+    {
+      "article_id": "afc9af3be9b96489de",
+      "title": "Rohingya 'clearance operation' survivor in N.L. triumphant following genocide ruling",
+      "provider": "CBC News",
+      "level": "B2",
+      "reason": "RuntimeError: Full Thai translation unavailable for article afc9af3be9b96489de"
     }
   ],
   "practice_story_count": 4,
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
-    "nllb_retries": 2,
-    "quality_failures": 0,
+    "nllb_retries": 4,
+    "quality_failures": 4,
     "rejection_reasons": {
+      "missing-number:3:25": 2,
+      "missing-number:3:50": 2,
+      "missing-number:06,08": 1,
+      "missing-number:06": 1,
       "repeated-junk-string": 1,
-      "repeated-word-run": 1,
-      "repeated-2-gram": 1,
-      "repeated-3-gram": 1
+      "suspiciously-long": 1,
+      "missing-number:10000": 2
     }
   },
-  "completed_at": "2026-11-21T22:00:09.425368+00:00",
-  "latest_date": "2026-11-21",
+  "completed_at": "2026-11-22T22:11:22.625051+00:00",
+  "latest_date": "2026-11-22",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -62,32 +79,27 @@
     "easy_news": 2,
     "daily_life_practice_story": 4
   },
-  "fallback_image_count": 7,
+  "fallback_image_count": 8,
   "fallback_images": [
     {
-      "article_id": "c65f424ad8dfdc2998",
-      "title": "Trump threatens to penalize U.S. tech companies that build AI data centres in other countries",
+      "article_id": "6c49ea7b56f1be27df",
+      "title": "They were fined $811m for conning detained migrants, but the scams didn't stop",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "477e86808f3afe5184",
-      "title": "Coastal Flood Advisory issued November 21 at 1:40PM PST until November 22 at 3:00PM PST by NWS Seattle WA",
+      "article_id": "dddee042854eba845a",
+      "title": "Mamdani announces plan to close New York's Rikers Island jail by 2032",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "7aa231674b8bb9b04c",
-      "title": "Just how vulnerable are we to cyberattacks?",
-      "reason": "Selected image was unavailable: ValueError"
+      "article_id": "ed9609cdb37fb7e520",
+      "title": "Air Quality Alert issued November 22 at 12:46PM AKST by NWS Fairbanks AK",
+      "reason": "No usable free image candidate"
     },
     {
-      "article_id": "3e347fb58992aa6a59",
-      "title": "Should AI be judging our credit worthiness?",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "f7c4d2f1f0cfae670d",
-      "title": "Mild months ahead: What we know about this winter across southern Ontario",
-      "reason": "Selected image was unavailable: ValueError"
+      "article_id": "88c768b4dbd9a7852e",
+      "title": "French police officers sentenced for beating of music producer Michel Zecler",
+      "reason": "No usable free image candidate"
     },
     {
       "article_id": "0f22c1dd7115afacb5",
@@ -95,8 +107,18 @@
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "070461a57b92a0ca77",
-      "title": "Sending a Parcel",
+      "article_id": "4ecb337020e561fae7",
+      "title": "Special Weather Statement issued November 22 at 3:49PM CST by NWS Little Rock AR",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "81aaa7dab4e0c37e14",
+      "title": "Leaving a Phone for Repair",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "99a0895abfb33f83c1",
+      "title": "The Bus Card",
       "reason": "Selected image was unavailable: ValueError"
     }
   ]
