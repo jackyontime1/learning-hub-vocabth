@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-11-22T21:51:21.407044+00:00",
-  "expected_toronto_date": "2026-11-22",
+  "started_at": "2026-11-24T02:56:40.527594+00:00",
+  "expected_toronto_date": "2026-11-23",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -16,54 +16,20 @@
     "C1": 2
   },
   "schema_version": 10,
-  "candidate_rejections": [
-    {
-      "article_id": "e72edef3d12a445ebf",
-      "title": "Special Weather Statement issued November 22 at 3:25PM CST by NWS Little Rock AR",
-      "provider": "US National Weather Service",
-      "level": "B1",
-      "reason": "RuntimeError: Full Thai translation unavailable for article e72edef3d12a445ebf"
-    },
-    {
-      "article_id": "363db02e0ff3a59173",
-      "title": "Severe Thunderstorm Warning issued November 22 at 3:50PM CST until November 22 at 4:15PM CST by NWS Little Rock AR",
-      "provider": "US National Weather Service",
-      "level": "B1",
-      "reason": "RuntimeError: Full Thai translation unavailable for article 363db02e0ff3a59173"
-    },
-    {
-      "article_id": "006c006c70072438a3",
-      "title": "Russia-bound ship towed away after it was attacked in Gulf of Finland",
-      "provider": "BBC News",
-      "level": "B1",
-      "reason": "RuntimeError: Full Thai translation unavailable for article 006c006c70072438a3"
-    },
-    {
-      "article_id": "afc9af3be9b96489de",
-      "title": "Rohingya 'clearance operation' survivor in N.L. triumphant following genocide ruling",
-      "provider": "CBC News",
-      "level": "B2",
-      "reason": "RuntimeError: Full Thai translation unavailable for article afc9af3be9b96489de"
-    }
-  ],
+  "candidate_rejections": [],
   "practice_story_count": 4,
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
     "nllb_retries": 4,
-    "quality_failures": 4,
+    "quality_failures": 0,
     "rejection_reasons": {
-      "missing-number:3:25": 2,
-      "missing-number:3:50": 2,
-      "missing-number:06,08": 1,
-      "missing-number:06": 1,
-      "repeated-junk-string": 1,
-      "suspiciously-long": 1,
-      "missing-number:10000": 2
+      "repeated-junk-string": 3,
+      "missing-number:2022": 1
     }
   },
-  "completed_at": "2026-11-22T22:11:22.625051+00:00",
-  "latest_date": "2026-11-22",
+  "completed_at": "2026-11-24T03:18:21.846554+00:00",
+  "latest_date": "2026-11-23",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -82,43 +48,43 @@
   "fallback_image_count": 8,
   "fallback_images": [
     {
-      "article_id": "6c49ea7b56f1be27df",
-      "title": "They were fined $811m for conning detained migrants, but the scams didn't stop",
+      "article_id": "1b8278bee04bf3f54a",
+      "title": "Why the U.S. midterms might have ended JD Vance's presidential hopes",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "dddee042854eba845a",
-      "title": "Mamdani announces plan to close New York's Rikers Island jail by 2032",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "ed9609cdb37fb7e520",
-      "title": "Air Quality Alert issued November 22 at 12:46PM AKST by NWS Fairbanks AK",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "88c768b4dbd9a7852e",
-      "title": "French police officers sentenced for beating of music producer Michel Zecler",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "0f22c1dd7115afacb5",
-      "title": "Elon Musk looks to break up with MAGA. To what end?",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "4ecb337020e561fae7",
-      "title": "Special Weather Statement issued November 22 at 3:49PM CST by NWS Little Rock AR",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "81aaa7dab4e0c37e14",
-      "title": "Leaving a Phone for Repair",
+      "article_id": "2e4c16686c921c1ac2",
+      "title": "Quebec's legislative session in limbo as court mandates oath to the King",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "99a0895abfb33f83c1",
-      "title": "The Bus Card",
+      "article_id": "b217aab0c47b294b87",
+      "title": "'I want to destroy capitalism, not France': On the streets with the French ultra left",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "4ee074890e9f5c4be7",
+      "title": "GTA 6 hacker released on licence with warning 'don't let this happen again'",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "7ba7663a79802ac080",
+      "title": "Medicare looks a bit different in 2027, so don't miss open enrollment",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "158f62c3f95abfe512",
+      "title": "How will Mark Carney's appeal influence the Yorkton-Melville byelection?",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "2c5c1354acc8cbbf7f",
+      "title": "Completing a School Form",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "31c863723216ac1b96",
+      "title": "The Lunch Box",
       "reason": "Selected image was unavailable: ValueError"
     }
   ]
