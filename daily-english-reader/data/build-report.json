@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-11-24T02:56:40.527594+00:00",
-  "expected_toronto_date": "2026-11-23",
+  "started_at": "2026-11-25T00:49:11.512160+00:00",
+  "expected_toronto_date": "2026-11-24",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -16,20 +16,30 @@
     "C1": 2
   },
   "schema_version": 10,
-  "candidate_rejections": [],
+  "candidate_rejections": [
+    {
+      "article_id": "80a13d855f620399a1",
+      "title": "Heavy Freezing Spray Warning issued November 24 at 4:00PM AKST until November 25 at 5:00PM AKST by NWS Fairbanks AK",
+      "provider": "US National Weather Service",
+      "level": "B1",
+      "reason": "RuntimeError: Full Thai translation unavailable for article 80a13d855f620399a1"
+    }
+  ],
   "practice_story_count": 4,
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
-    "nllb_retries": 4,
-    "quality_failures": 0,
+    "nllb_retries": 2,
+    "quality_failures": 1,
     "rejection_reasons": {
-      "repeated-junk-string": 3,
-      "missing-number:2022": 1
+      "repeated-junk-string": 2,
+      "missing-number:6,7": 2,
+      "collapsed-paragraphs": 2,
+      "suspiciously-long": 1
     }
   },
-  "completed_at": "2026-11-24T03:18:21.846554+00:00",
-  "latest_date": "2026-11-23",
+  "completed_at": "2026-11-25T01:07:14.729668+00:00",
+  "latest_date": "2026-11-24",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -45,17 +55,22 @@
     "easy_news": 2,
     "daily_life_practice_story": 4
   },
-  "fallback_image_count": 8,
+  "fallback_image_count": 10,
   "fallback_images": [
     {
-      "article_id": "1b8278bee04bf3f54a",
-      "title": "Why the U.S. midterms might have ended JD Vance's presidential hopes",
+      "article_id": "a869aeec3bda8fc0dd",
+      "title": "Bank of Canada expects 2nd round of oil-linked inflation in 2027, Macklem says",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "2e4c16686c921c1ac2",
-      "title": "Quebec's legislative session in limbo as court mandates oath to the King",
-      "reason": "Selected image was unavailable: ValueError"
+      "article_id": "45276bf5c83981d85f",
+      "title": "Gale Warning issued November 24 at 7:38PM EST until November 26 at 7:00PM EST by NWS Wakefield VA",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "88408a7b692790bdd2",
+      "title": "Learning Neurovascular Codes for EEG-to-fMRI Synthesis",
+      "reason": "No usable free image candidate"
     },
     {
       "article_id": "b217aab0c47b294b87",
@@ -63,28 +78,33 @@
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "4ee074890e9f5c4be7",
-      "title": "GTA 6 hacker released on licence with warning 'don't let this happen again'",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "7ba7663a79802ac080",
-      "title": "Medicare looks a bit different in 2027, so don't miss open enrollment",
+      "article_id": "4fcc551862dabd04f5",
+      "title": "They attended Trump's meme coin dinner. It didn't go well",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "158f62c3f95abfe512",
-      "title": "How will Mark Carney's appeal influence the Yorkton-Melville byelection?",
+      "article_id": "791a0a64262e63ddb8",
+      "title": "Jensen Huang returns to Nvidia. And, Rep. Gomez resigns amid alleged sexual misconduct",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "2c5c1354acc8cbbf7f",
-      "title": "Completing a School Form",
+      "article_id": "c75c4c8e7436750737",
+      "title": "Changing a Work Shift",
+      "reason": "Selected image was unavailable: HTTPError"
+    },
+    {
+      "article_id": "cf5c6e4ce0cf6de955",
+      "title": "Making a Clinic Appointment",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "31c863723216ac1b96",
-      "title": "The Lunch Box",
+      "article_id": "539c735c39740a7d6d",
+      "title": "Returning a Library Book",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "8131158aba470a2e97",
+      "title": "A Low Phone Battery",
       "reason": "Selected image was unavailable: ValueError"
     }
   ]
