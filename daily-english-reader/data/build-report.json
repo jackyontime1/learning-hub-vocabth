@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-11-25T00:49:11.512160+00:00",
-  "expected_toronto_date": "2026-11-24",
+  "started_at": "2026-11-26T00:27:03.088365+00:00",
+  "expected_toronto_date": "2026-11-25",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -18,28 +18,26 @@
   "schema_version": 10,
   "candidate_rejections": [
     {
-      "article_id": "80a13d855f620399a1",
-      "title": "Heavy Freezing Spray Warning issued November 24 at 4:00PM AKST until November 25 at 5:00PM AKST by NWS Fairbanks AK",
-      "provider": "US National Weather Service",
-      "level": "B1",
-      "reason": "RuntimeError: Full Thai translation unavailable for article 80a13d855f620399a1"
+      "article_id": "ae8b031387cdebcb98",
+      "title": "South Africa's Ramaphosa wins court battle over impeachment threat",
+      "provider": "BBC News",
+      "level": "B2",
+      "reason": "RuntimeError: Full Thai translation unavailable for article ae8b031387cdebcb98"
     }
   ],
   "practice_story_count": 4,
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
-    "nllb_retries": 2,
+    "nllb_retries": 1,
     "quality_failures": 1,
     "rejection_reasons": {
-      "repeated-junk-string": 2,
-      "missing-number:6,7": 2,
-      "collapsed-paragraphs": 2,
-      "suspiciously-long": 1
+      "missing-number:443000,580000": 1,
+      "missing-number:580000": 1
     }
   },
-  "completed_at": "2026-11-25T01:07:14.729668+00:00",
-  "latest_date": "2026-11-24",
+  "completed_at": "2026-11-26T00:43:52.468873+00:00",
+  "latest_date": "2026-11-25",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -55,26 +53,16 @@
     "easy_news": 2,
     "daily_life_practice_story": 4
   },
-  "fallback_image_count": 10,
+  "fallback_image_count": 9,
   "fallback_images": [
     {
-      "article_id": "a869aeec3bda8fc0dd",
-      "title": "Bank of Canada expects 2nd round of oil-linked inflation in 2027, Macklem says",
-      "reason": "No usable free image candidate"
+      "article_id": "c4cdc73d83b712d470",
+      "title": "The human cost of the electric vehicle boom is at the center of a lawsuit in Congo",
+      "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "45276bf5c83981d85f",
-      "title": "Gale Warning issued November 24 at 7:38PM EST until November 26 at 7:00PM EST by NWS Wakefield VA",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "88408a7b692790bdd2",
-      "title": "Learning Neurovascular Codes for EEG-to-fMRI Synthesis",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "b217aab0c47b294b87",
-      "title": "'I want to destroy capitalism, not France': On the streets with the French ultra left",
+      "article_id": "da2970b1154cff6a43",
+      "title": "Canada partners with Qatar for consular services to Canadians in Afghanistan",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
@@ -83,28 +71,33 @@
       "reason": "Selected image was unavailable: ValueError"
     },
     {
+      "article_id": "c80085fea962546730",
+      "title": "Israeli judges recommend dropping most serious charges against Netanyahu",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "fcd60e06fb00c618d9",
+      "title": "Andy Taylor, guitarist of new wave icons Duran Duran, dead at 65",
+      "reason": "No usable free image candidate"
+    },
+    {
       "article_id": "791a0a64262e63ddb8",
       "title": "Jensen Huang returns to Nvidia. And, Rep. Gomez resigns amid alleged sexual misconduct",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "c75c4c8e7436750737",
-      "title": "Changing a Work Shift",
-      "reason": "Selected image was unavailable: HTTPError"
-    },
-    {
-      "article_id": "cf5c6e4ce0cf6de955",
-      "title": "Making a Clinic Appointment",
+      "article_id": "7dab3aeab0a5100772",
+      "title": "Returning the Wrong Shirt",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "539c735c39740a7d6d",
-      "title": "Returning a Library Book",
+      "article_id": "aa6b1983207ca18794",
+      "title": "Meeting a New Neighbor",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "8131158aba470a2e97",
-      "title": "A Low Phone Battery",
+      "article_id": "3b1bd04097ec5cfc5d",
+      "title": "Laundry Before the Rain",
       "reason": "Selected image was unavailable: ValueError"
     }
   ]
