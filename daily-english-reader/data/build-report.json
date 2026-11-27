@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-11-26T00:27:03.088365+00:00",
-  "expected_toronto_date": "2026-11-25",
+  "started_at": "2026-11-27T00:38:25.416980+00:00",
+  "expected_toronto_date": "2026-11-26",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -18,11 +18,18 @@
   "schema_version": 10,
   "candidate_rejections": [
     {
-      "article_id": "ae8b031387cdebcb98",
-      "title": "South Africa's Ramaphosa wins court battle over impeachment threat",
+      "article_id": "3904e0393a152b78f3",
+      "title": "Has global jihadism failed, or is it simply changing shape?",
+      "provider": "BBC News",
+      "level": "B1",
+      "reason": "RuntimeError: Full Thai translation unavailable for article 3904e0393a152b78f3"
+    },
+    {
+      "article_id": "316405b3b304383573",
+      "title": "Watch: Alaskan flying team airdrops Thanksgiving turkeys to remote communities",
       "provider": "BBC News",
       "level": "B2",
-      "reason": "RuntimeError: Full Thai translation unavailable for article ae8b031387cdebcb98"
+      "reason": "RuntimeError: Unable to produce 3 valid useful phrases for B2 reading"
     }
   ],
   "practice_story_count": 4,
@@ -32,12 +39,11 @@
     "nllb_retries": 1,
     "quality_failures": 1,
     "rejection_reasons": {
-      "missing-number:443000,580000": 1,
-      "missing-number:580000": 1
+      "missing-number:9": 2
     }
   },
-  "completed_at": "2026-11-26T00:43:52.468873+00:00",
-  "latest_date": "2026-11-25",
+  "completed_at": "2026-11-27T01:01:38.269475+00:00",
+  "latest_date": "2026-11-26",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -53,26 +59,31 @@
     "easy_news": 2,
     "daily_life_practice_story": 4
   },
-  "fallback_image_count": 9,
+  "fallback_image_count": 7,
   "fallback_images": [
     {
-      "article_id": "c4cdc73d83b712d470",
-      "title": "The human cost of the electric vehicle boom is at the center of a lawsuit in Congo",
-      "reason": "Selected image was unavailable: ValueError"
+      "article_id": "b9707178f0b65ea743",
+      "title": "How American Thanksgiving took root — and evolved — in Liberia",
+      "reason": "No usable free image candidate"
     },
     {
-      "article_id": "da2970b1154cff6a43",
-      "title": "Canada partners with Qatar for consular services to Canadians in Afghanistan",
-      "reason": "Selected image was unavailable: ValueError"
+      "article_id": "516b5ce69089274fab",
+      "title": "Cairn: Object-Centric 3D Trajectory Priors for Steering Frozen VLAs",
+      "reason": "No usable free image candidate"
     },
     {
-      "article_id": "4fcc551862dabd04f5",
-      "title": "They attended Trump's meme coin dinner. It didn't go well",
-      "reason": "Selected image was unavailable: ValueError"
+      "article_id": "4fa516c71aa84f3991",
+      "title": "FedEx airplane overruns runway at Miami airport, temporarily closing all but 1 runway",
+      "reason": "No usable free image candidate"
     },
     {
-      "article_id": "c80085fea962546730",
-      "title": "Israeli judges recommend dropping most serious charges against Netanyahu",
+      "article_id": "18e99f7e925bc97dd6",
+      "title": "US too focused on Middle East and not pushing Russia hard enough, Zelensky tells BBC",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "c8e90720c21b9e07ba",
+      "title": "Credit card perks are fueling airline profitability",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
@@ -81,23 +92,8 @@
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "791a0a64262e63ddb8",
-      "title": "Jensen Huang returns to Nvidia. And, Rep. Gomez resigns amid alleged sexual misconduct",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "7dab3aeab0a5100772",
-      "title": "Returning the Wrong Shirt",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "aa6b1983207ca18794",
-      "title": "Meeting a New Neighbor",
-      "reason": "Selected image was unavailable: ValueError"
-    },
-    {
-      "article_id": "3b1bd04097ec5cfc5d",
-      "title": "Laundry Before the Rain",
+      "article_id": "0f3a698c13107f509f",
+      "title": "Checking a Bank Transfer",
       "reason": "Selected image was unavailable: ValueError"
     }
   ]
