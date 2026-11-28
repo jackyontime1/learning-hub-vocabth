@@ -1,7 +1,7 @@
 {
   "status": "ready",
-  "started_at": "2026-11-27T00:38:25.416980+00:00",
-  "expected_toronto_date": "2026-11-26",
+  "started_at": "2026-11-28T00:05:14.699364+00:00",
+  "expected_toronto_date": "2026-11-27",
   "free_only": true,
   "demo_mode": false,
   "demo_fallback_blocked": true,
@@ -18,32 +18,42 @@
   "schema_version": 10,
   "candidate_rejections": [
     {
-      "article_id": "3904e0393a152b78f3",
-      "title": "Has global jihadism failed, or is it simply changing shape?",
+      "article_id": "5fa679ffb68ed57bca",
+      "title": "Behind China's spectacular rise, voices who defied it say they are being drowned out",
       "provider": "BBC News",
       "level": "B1",
-      "reason": "RuntimeError: Full Thai translation unavailable for article 3904e0393a152b78f3"
+      "reason": "RuntimeError: Full Thai translation unavailable for article 5fa679ffb68ed57bca"
     },
     {
-      "article_id": "316405b3b304383573",
-      "title": "Watch: Alaskan flying team airdrops Thanksgiving turkeys to remote communities",
-      "provider": "BBC News",
-      "level": "B2",
-      "reason": "RuntimeError: Unable to produce 3 valid useful phrases for B2 reading"
+      "article_id": "4fa516c71aa84f3991",
+      "title": "FedEx airplane overruns runway at Miami airport, temporarily closing all but 1 runway",
+      "provider": "CBC News",
+      "level": "B1",
+      "reason": "RuntimeError: Full Thai translation unavailable for article 4fa516c71aa84f3991"
+    },
+    {
+      "article_id": "4c051c50f85a3b2f78",
+      "title": "Small Craft Advisory issued November 27 at 6:48PM EST until November 28 at 11:00AM EST by NWS Newport/Morehead City NC",
+      "provider": "US National Weather Service",
+      "level": "C1",
+      "reason": "RuntimeError: Unable to produce 3 valid useful phrases for C1 reading"
     }
   ],
   "practice_story_count": 4,
   "practice_fallback_count": 0,
   "translation_quality": {
     "cache_rejections": 0,
-    "nllb_retries": 1,
-    "quality_failures": 1,
+    "nllb_retries": 3,
+    "quality_failures": 2,
     "rejection_reasons": {
-      "missing-number:9": 2
+      "repeated-junk-string": 1,
+      "missing-number:2017,2024": 1,
+      "missing-number:40": 2,
+      "missing-number:68000": 1
     }
   },
-  "completed_at": "2026-11-27T01:01:38.269475+00:00",
-  "latest_date": "2026-11-26",
+  "completed_at": "2026-11-28T00:23:58.111593+00:00",
+  "latest_date": "2026-11-27",
   "total_story_count": 70,
   "today_story_count": 10,
   "level_distribution": {
@@ -62,38 +72,38 @@
   "fallback_image_count": 7,
   "fallback_images": [
     {
-      "article_id": "b9707178f0b65ea743",
-      "title": "How American Thanksgiving took root — and evolved — in Liberia",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "516b5ce69089274fab",
-      "title": "Cairn: Object-Centric 3D Trajectory Priors for Steering Frozen VLAs",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "4fa516c71aa84f3991",
-      "title": "FedEx airplane overruns runway at Miami airport, temporarily closing all but 1 runway",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "18e99f7e925bc97dd6",
-      "title": "US too focused on Middle East and not pushing Russia hard enough, Zelensky tells BBC",
-      "reason": "No usable free image candidate"
-    },
-    {
-      "article_id": "c8e90720c21b9e07ba",
-      "title": "Credit card perks are fueling airline profitability",
+      "article_id": "7496ddd23187c3acb0",
+      "title": "Religious health-care facilities can continue to ban MAID on site, B.C. Supreme Court rules",
       "reason": "Selected image was unavailable: ValueError"
     },
     {
-      "article_id": "fcd60e06fb00c618d9",
-      "title": "Andy Taylor, guitarist of new wave icons Duran Duran, dead at 65",
+      "article_id": "d310fa4998b81a0c71",
+      "title": "Major Thanksgiving storm brings flooding, flight delays across US",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "4eeb3c45ac740a2398",
+      "title": "Thanksgiving storm on U.S. East Coast knocks out power, disrupts flights",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "0d1449e0bb56e722a0",
+      "title": "Inside Saudi Arabia, Houthi attacks test kingdom's image of security",
+      "reason": "Selected image was unavailable: ValueError"
+    },
+    {
+      "article_id": "e1d57f9f4bb17c22ed",
+      "title": "A seasonal highway closure may be holding back tourism in Alberta’s Foothills",
       "reason": "No usable free image candidate"
     },
     {
-      "article_id": "0f3a698c13107f509f",
-      "title": "Checking a Bank Transfer",
+      "article_id": "d3e584e583e6e54b85",
+      "title": "B.C. NDP MLAs sworn in, but David Eby absent",
+      "reason": "No usable free image candidate"
+    },
+    {
+      "article_id": "6e59db02d3344022eb",
+      "title": "Asking About a Restaurant Order",
       "reason": "Selected image was unavailable: ValueError"
     }
   ]
